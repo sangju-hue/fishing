@@ -1,0 +1,229 @@
+{
+ "updated_at": "2026-10-02 21:21",
+ "dates": {
+  "2026-10-06": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-07": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-08": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "하나호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-10": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-11": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-12": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-13": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-14": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-15": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-16": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-19": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-20": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-21": {
+   "형제피싱호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   },
+   "우리호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-03": {
+   "하나호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-04": {
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  },
+  "2026-10-05": {
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 21:21"
+   }
+  }
+ }
+}
