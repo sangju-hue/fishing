@@ -6547,7 +6547,7 @@
             "price": "",
             "channels": {
                 "phone": "010-8722-3427",
-                "homepage": "https://thefishing.kr/reservation/list.php?uid=1325&amp;type=2"
+                "homepage": "https://www.muchangpo.kr/index.php?mid=bk"
             },
             "tags": [],
             "manual": false,
@@ -6556,6 +6556,9 @@
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
                 "https://naksigo.com/boat/%ED%8C%80%EC%8A%A4%ED%85%94%EC%8A%A4%ED%98%B8?id=2450"
+            ],
+            "booking_names": [
+                "팀스텔스호[정호진선장]"
             ]
         },
         {
@@ -6711,7 +6714,7 @@
             "price": "",
             "channels": {
                 "phone": "010-8722-3427",
-                "homepage": "http://www.muchangpo.kr/"
+                "homepage": "https://www.muchangpo.kr/index.php?mid=bk"
             },
             "tags": [],
             "manual": false,
@@ -6720,6 +6723,9 @@
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
                 "https://naksigo.com/boat/%ED%88%AC%EC%A7%80%ED%98%B8?id=2439"
+            ],
+            "booking_names": [
+                "투지호[조남준선장]"
             ]
         },
         {
@@ -6944,7 +6950,7 @@
             "price": "",
             "channels": {
                 "phone": "010-8722-3427",
-                "homepage": "https://thefishing.kr/reservation/list.php?uid=6055&amp;type=2"
+                "homepage": "https://www.muchangpo.kr/index.php?mid=bk"
             },
             "tags": [],
             "manual": false,
@@ -6953,6 +6959,9 @@
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
                 "https://naksigo.com/boat/%ED%8C%80%EB%B0%B0%ED%8B%80%ED%98%B8?id=5537"
+            ],
+            "booking_names": [
+                "팀배틀호[천영진선장]"
             ]
         },
         {
@@ -7354,6 +7363,36 @@
                 "브이호"
             ],
             "catalog_status": "booking_verified"
+        },
+        {
+            "name": "댓길이호",
+            "port": "무창포항",
+            "channels": {
+                "homepage": "https://www.muchangpo.kr/index.php?mid=bk"
+            },
+            "booking_names": [
+                "댓길이호[김병삼선장]"
+            ]
+        },
+        {
+            "name": "대박피싱호",
+            "port": "무창포항",
+            "channels": {
+                "homepage": "https://www.muchangpo.kr/index.php?mid=bk"
+            },
+            "booking_names": [
+                "대박피싱호[김석철선장]"
+            ]
+        },
+        {
+            "name": "코스모스호",
+            "port": "무창포항",
+            "channels": {
+                "homepage": "http://www.muchangpofishing.co.kr/?mid=bk"
+            },
+            "booking_names": [
+                "코스모스"
+            ]
         }
     ],
     "scope": "서해 군산 이북 쭈꾸미 선사"
