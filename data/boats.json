@@ -1005,24 +1005,6 @@
             "catalog_status": "booking_verified"
         },
         {
-            "bid": 59,
-            "name": "길손호",
-            "operator": "아세아낚시",
-            "region": "인천",
-            "port": "만석부두",
-            "price": "",
-            "capacity": null,
-            "channels": {
-                "homepage": "http://www.aseafish.co.kr",
-                "phone": "010-6342-5776"
-            },
-            "notes": "미확인 — 아세아낚시 실체는 웹 검증됨(홈페이지 www.aseafish.co.kr, 전화 010-6342-5776, 인천 만석부두). 소속 배 3척은 사용자 제보 기준이며 웹 검증 미완료. 쭈꾸미 출조 여부 미확인.",
-            "catalog_sources": [
-                "http://www.aseafish.co.kr",
-                "https://naksigo.com/boat/%EA%B8%B8%EC%86%90%ED%98%B8?port=%EB%A7%8C%EC%84%9D%EB%B6%80%EB%91%90"
-            ]
-        },
-        {
             "bid": 60,
             "name": "덕적호",
             "operator": null,
@@ -1556,30 +1538,6 @@
             ],
             "booking_names": [
                 "금땡이호"
-            ],
-            "catalog_status": "booking_verified"
-        },
-        {
-            "bid": 102,
-            "name": "길손피싱호",
-            "operator": null,
-            "region": "충남 보령시",
-            "port": "오천항",
-            "price": "",
-            "capacity": null,
-            "channels": {
-                "homepage": "http://길손피싱.com/index.php?mid=bk",
-                "phone": "010-5408-5767"
-            },
-            "notes": "쭈꾸미·광어다운샷·백조기·우럭. 2023년 선사 목록 기준",
-            "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-            "catalog_sources": [
-                "http://길손피싱.com/",
-                "http://길손피싱.com/index.php?mid=bk",
-                "https://naksigo.com/boat/%EA%B8%B8%EC%86%90%ED%94%BC%EC%8B%B1%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD"
-            ],
-            "booking_names": [
-                "길손피싱호"
             ],
             "catalog_status": "booking_verified"
         },
@@ -4869,16 +4827,16 @@
         {
             "bid": 273,
             "name": "길손호",
-            "port": "오천항",
-            "region": "충남 보령",
+            "port": "인천 만석부두",
+            "region": "인천",
             "price": "",
             "channels": {
-                "homepage": "http://길손피싱.com/index.php?mid=bk",
+                "homepage": "https://xn--wk0bw08aj4ag56b.com/index.php?mid=bk",
                 "phone": "010-5408-5767"
             },
             "tags": [],
             "manual": false,
-            "operator": "인천 길손호 (구 오천항 길손피싱호)",
+            "operator": "길손피싱",
             "capacity": 12,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -4887,7 +4845,8 @@
                 "https://naksigo.com/boat/%EA%B8%B8%EC%86%90%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD"
             ],
             "booking_names": [
-                "길손호"
+                "길손호",
+                "길손호(낚시전용선)"
             ],
             "catalog_status": "booking_verified"
         },

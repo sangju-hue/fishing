@@ -55,6 +55,8 @@ SITES = [
      "boats": ["대물호", "두드림호", "위더스호"], "name_map": {}},
     {"key": "ssfish", "url": "https://www.ssfish.kr/index.php", "parser": "thefishing",
      "boats": ["무창포뉴천일호"], "name_map": {"뉴천일호": "무창포뉴천일호"}},
+    {"key": "gilson", "url": "https://xn--wk0bw08aj4ag56b.com/index.php?mid=bk", "parser": "daemul",
+     "boats": ["길손호"], "name_map": {"길손호(낚시전용선)": "길손호"}},
 ]
 
 _cj = http.cookiejar.CookieJar()
