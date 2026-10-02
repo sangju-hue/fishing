@@ -520,7 +520,8 @@
                 "수지호",
                 "플러스호"
             ],
-            "catalog_status": "booking_verified"
+            "catalog_status": "booking_verified",
+            "operator": "무창포 플러스피싱"
         },
         {
             "name": "짱가호",
@@ -534,7 +535,7 @@
             "tags": [],
             "manual": false,
             "bid": 25,
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
                 "http://www.ssfish.kr/",
@@ -1256,7 +1257,7 @@
         {
             "bid": 87,
             "name": "무창포뉴천일호",
-            "operator": null,
+            "operator": "무창포 선상낚시",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -1322,7 +1323,7 @@
         {
             "bid": 91,
             "name": "신나래호",
-            "operator": null,
+            "operator": "무창포 나래피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -1349,7 +1350,7 @@
         {
             "bid": 92,
             "name": "총각1호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -1367,7 +1368,7 @@
         {
             "bid": 93,
             "name": "총각호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -1392,7 +1393,7 @@
         {
             "bid": 94,
             "name": "테티스호",
-            "operator": null,
+            "operator": "무창포 선상낚시",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3426,7 +3427,7 @@
         {
             "bid": 211,
             "name": "화니호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3444,7 +3445,7 @@
         {
             "bid": 212,
             "name": "신주호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3455,7 +3456,7 @@
         {
             "bid": 213,
             "name": "호호호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3478,7 +3479,7 @@
         {
             "bid": 214,
             "name": "지프로호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3519,7 +3520,7 @@
         {
             "bid": 216,
             "name": "천일호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3536,7 +3537,7 @@
         {
             "bid": 218,
             "name": "엔조이호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3560,7 +3561,7 @@
         {
             "bid": 219,
             "name": "포인트호",
-            "operator": "총각피싱",
+            "operator": "무창포 총각피싱",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3583,7 +3584,7 @@
             },
             "name": "헤라호",
             "notes": "쭈꾸미·갑오징어(가을). 주의: 오천항에도 헤라호(헤라피싱) 존재 — 동명이인인지 동일 선체인지 미확인. 출처: ssfish.kr 메인 + 네이버 블로그 출조 후기",
-            "operator": "무창포선상낚시",
+            "operator": "무창포 선상낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3631,7 +3632,7 @@
             },
             "name": "블루포스호",
             "notes": "쭈꾸미·갑오징어(가을). 출처: ssfish.kr 메인 + band.us 밴드",
-            "operator": "무창포선상낚시",
+            "operator": "무창포 선상낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3657,7 +3658,7 @@
             },
             "name": "브라보피싱호",
             "notes": "참돔타이라바·광어다운샷·농어·쭈꾸미·갑오징어·백조기. 주의: 기존 '무창포 세훈낚시'와 동일 선체(상호변경)일 가능성 — 중복 등록 주의. 출처: bravofishing.kr + 바다타임 2026 조황",
-            "operator": "무창포브라보낚시",
+            "operator": "무창포 브라보낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3729,7 +3730,7 @@
             },
             "name": "킹덤호",
             "notes": "쭈꾸미(조황 기준). 주의: 오천항에도 킹덤호(kingdomfish.net) 존재 — 동명이인 미확인. 출처: bravofishing.kr",
-            "operator": "무창포브라보낚시",
+            "operator": "무창포 브라보낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3765,7 +3766,7 @@
             },
             "name": "장수호",
             "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
-            "operator": "무창포총각피싱",
+            "operator": "무창포 총각피싱",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3789,7 +3790,7 @@
             },
             "name": "세븐호",
             "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
-            "operator": "무창포총각피싱",
+            "operator": "무창포 총각피싱",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -6385,7 +6386,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "승리호",
+            "operator": "무창포 아폴로",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6480,7 +6481,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 효성낚시",
+            "operator": "무창포 나래피싱",
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
                 "https://naksigo.com/boat/%ED%9A%A8%EC%84%B1%EB%AC%B4%EC%B0%BD%ED%8F%AC%ED%98%B8"
@@ -6498,7 +6499,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 팀스텔스호",
+            "operator": "무창포 전투낚시",
             "capacity": 20,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6538,7 +6539,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "써니호·뉴써니호",
+            "operator": "무창포 소라피싱",
             "capacity": 22,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6641,7 +6642,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 아파치피싱",
+            "operator": "무창포 플러스피싱",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6665,7 +6666,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 투지호",
+            "operator": "무창포 전투낚시",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6687,7 +6688,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 히트호",
+            "operator": "무창포 프로낚시",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6773,7 +6774,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 플러스호",
+            "operator": "무창포 플러스피싱",
             "capacity": 20,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6989,7 +6990,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 힐링호",
+            "operator": "무창포 선상낚시",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7073,7 +7074,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 브라보피싱",
+            "operator": "무창포 브라보낚시",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7141,7 +7142,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 플러스호",
+            "operator": "무창포 플러스피싱",
             "capacity": 20,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7298,7 +7299,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포 브이호",
+            "operator": "무창포 프로낚시",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7320,7 +7321,8 @@
             "booking_names": [
                 "댓길이호[김병삼선장]"
             ],
-            "bid": 385
+            "bid": 385,
+            "operator": "무창포 전투낚시"
         },
         {
             "name": "대박피싱호",
@@ -7331,7 +7333,8 @@
             "booking_names": [
                 "대박피싱호[김석철선장]"
             ],
-            "bid": 386
+            "bid": 386,
+            "operator": "무창포 전투낚시"
         },
         {
             "name": "코스모스호",
@@ -7342,7 +7345,8 @@
             "booking_names": [
                 "코스모스"
             ],
-            "bid": 387
+            "bid": 387,
+            "operator": "무창포 프로낚시"
         },
         {
             "name": "가디언호",
@@ -7350,7 +7354,8 @@
             "channels": {
                 "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
             },
-            "bid": 388
+            "bid": 388,
+            "operator": "무창포 베테랑피싱"
         },
         {
             "name": "대양호",
@@ -7358,7 +7363,8 @@
             "channels": {
                 "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
             },
-            "bid": 389
+            "bid": 389,
+            "operator": "무창포 베테랑피싱"
         },
         {
             "name": "킹피싱호",
@@ -7366,7 +7372,8 @@
             "channels": {
                 "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
             },
-            "bid": 390
+            "bid": 390,
+            "operator": "무창포 아폴로"
         },
         {
             "name": "태평호",
