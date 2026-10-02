@@ -182,19 +182,28 @@ function statusRow(boat,date=selectedDate){
   for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
     if(info&&!info.stale){
       const code={available:"a",full:"f",cancelled:"c",maintenance:"m"}[info.status];
-      if(code)return [code,info.remaining??null];
+      if(code)return [code,info.remaining??null, info.fish??null];
     }
   }
   const legacyId=LEGACY_BOAT_IDS[date]?.[boat.name];
   const ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name);
   const legacy=(legacyId!=null?String(legacyId)===bid:!ambiguous)&&STATUS[date]?.[boat.name];
-  return legacy||null;
+  if(legacy)return [legacy[0],legacy[1],null];
+  return null;
 }
 function statusInfo(boat,date=selectedDate){
   const row=statusRow(boat,date);
   if(!row)return {cls:"unknown",short:"·",text:"⚪ 현황 미확인"};
-  if(row[0]==="a")return {cls:"available",short:row[1]==null?"가능":String(row[1]),text:row[1]==null?"🟢 예약 가능 · 잔여석 미확인":`🟢 ${row[1]}자리 남음`};
-  if(row[0]==="f")return {cls:"full",short:"마감",text:"🔴 마감"};
+  const isOctopus = row[2] === "문어";
+  const labelPrefix = isOctopus ? "문어" : "";
+  const prefixIcon = isOctopus ? "🐙" : "🟢";
+  
+  if(row[0]==="a")return {
+    cls:"available",
+    short:row[1]==null?(isOctopus?"문어":"가능"):(isOctopus?`문어(${row[1]})`:String(row[1])),
+    text:row[1]==null?`${prefixIcon} ${labelPrefix}예약 가능 · 잔여석 미확인`:`${prefixIcon} ${labelPrefix} ${row[1]}자리 남음`
+  };
+  if(row[0]==="f")return {cls:"full",short:isOctopus?"문어(마감)":"마감",text:isOctopus?"🐙 문어 마감":"🔴 마감"};
   if(row[0]==="m")return {cls:"maintenance",short:"점검",text:"⚫ 점검일"};
   return {cls:"cancelled",short:"취소",text:"⚪ 출항취소"};
 }
