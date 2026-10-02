@@ -69,13 +69,26 @@ let BOATS=[];
 let STATUS={};
 async function loadData(){
   try{
-    const [boatsRes,statusRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json')]);
+    const [boatsRes,statusRes,hpRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json'),fetch('data/status_homepages.json').catch(()=>null)]);
     const boatsData=await boatsRes.json();
     BOATS=boatsData.boats||boatsData;
     const statusData=await statusRes.json();
     const codeMap={available:'a',full:'f',cancelled:'c'};
     STATUS={};
     const dates=statusData.dates||{};
+    try{
+      if(hpRes&&hpRes.ok){
+        const hpData=await hpRes.json();
+        const hpDates=hpData.dates||{};
+        for(const [date,boats] of Object.entries(hpDates)){
+          const day=dates[date]||(dates[date]={});
+          for(const [name,info] of Object.entries(boats)){
+            if(day[name]&&day[name].source==='sunsang24')continue;
+            day[name]=info;
+          }
+        }
+      }
+    }catch(e){console.error('홈페이지 데이터 병합 실패:',e);}
     for(const [date,boats] of Object.entries(dates)){
       STATUS[date]={};
       for(const [name,info] of Object.entries(boats)){
