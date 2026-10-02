@@ -502,10 +502,11 @@ $("#applyInterval").addEventListener("click",async()=>{
 loadData().then(()=>{
   initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
   requestAnimationFrame(()=>{
-    const selected=$(".date-head.selected-col");
+    const btn=$(".date-head.selected-col");
+    const selected=btn ? btn.closest("th") : null;
     const wrap=$("#matrixWrap");
     const boatCol=$(".boat-col");
-    if(selected && wrap && boatCol) wrap.scrollLeft = selected.offsetLeft - boatCol.offsetWidth;
+    if(selected && wrap && boatCol) wrap.scrollLeft += selected.getBoundingClientRect().left - boatCol.getBoundingClientRect().right;
   });
 });
 </script>
