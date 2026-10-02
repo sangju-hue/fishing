@@ -1,0 +1,6725 @@
+{
+ "updated_at": "2026-10-02 20:40",
+ "dates": {
+  "2026-10-02": {
+   "태헌호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-03": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-04": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-05": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-06": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-07": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-08": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "하나호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "checked_at": "2026-10-02 20:40"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-09": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-10": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-11": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-12": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-13": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-14": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-15": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-16": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-17": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-18": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-19": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-20": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-21": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-22": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-23": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-24": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-25": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-26": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-27": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-28": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-29": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-30": {
+   "태헌호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-10-31": {
+   "태헌호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-01": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-02": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-03": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 6,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-04": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-05": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 12,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-06": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 10,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-07": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-08": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 4,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-09": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-10": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-11": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-12": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-13": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-14": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "포인트호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-15": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-16": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 2,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-17": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-18": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-19": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-20": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-21": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 3,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해마호": {
+    "status": "available",
+    "remaining": 5,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-22": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 14,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "웅비1호 (구 365호)": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 17:09"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 9,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-23": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-24": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-25": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-26": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-27": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-28": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-29": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 1,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 13,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  },
+  "2026-11-30": {
+   "오드리피싱": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "에버스타호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "해모수호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "K세븐호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "세븐호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "황금사자호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "빅보스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "뉴해양호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "블루오션2호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "비바호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "가즈아호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "꽃돼지호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "물돌이호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "프린스호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "이바다호": {
+    "status": "available",
+    "remaining": 21,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   },
+   "거양호": {
+    "status": "available",
+    "remaining": 11,
+    "source": "sunsang24",
+    "checked_at": "2026-10-02 20:35"
+   }
+  }
+ }
+}
