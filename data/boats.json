@@ -1,0 +1,3025 @@
+{
+ "updated_at": "2026-10-02 16:49",
+ "boats": [
+  {
+   "name": "태헌호",
+   "port": "비응항",
+   "region": "전북 군산",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://taeheon.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 0
+  },
+  {
+   "name": "오드리피싱",
+   "port": "야미도항",
+   "region": "전북 군산",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://af.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 1
+  },
+  {
+   "name": "에버스타호",
+   "port": "홍원항",
+   "region": "충남 서천",
+   "price": "",
+   "channels": {
+    "sunsang24": "http://everstar.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 2
+  },
+  {
+   "name": "수양호",
+   "port": "남항유어선부두",
+   "region": "인천 중구",
+   "price": "1만원",
+   "channels": {
+    "phone": "0507-1321-6988"
+   },
+   "tags": [
+    "체험형",
+    "네이버예약"
+   ],
+   "manual": false,
+   "bid": 3
+  },
+  {
+   "name": "하하호호 (인천제일바다낚시)",
+   "port": "남항 (연안부두로 35)",
+   "region": "인천 중구",
+   "price": "45,000원",
+   "channels": {},
+   "tags": [
+    "체험형",
+    "카톡상담"
+   ],
+   "manual": false,
+   "bid": 4
+  },
+  {
+   "name": "성주산호 (광복낚시)",
+   "port": "남항유어선부두",
+   "region": "인천 중구",
+   "price": "8만원",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 5
+  },
+  {
+   "name": "K세븐호",
+   "port": "영종도",
+   "region": "인천 중구",
+   "price": "20인승. 주꾸미/갑오징어",
+   "channels": {
+    "sunsang24": "http://7.sunsang24.com/ship/schedule_fleet/202610"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 6,
+   "capacity": 20
+  },
+  {
+   "name": "세븐호",
+   "port": "영종도",
+   "region": "인천 중구",
+   "price": "20인승. 주꾸미/갑오징어/루어",
+   "channels": {
+    "sunsang24": "http://7.sunsang24.com/ship/schedule_fleet/202610"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 7,
+   "capacity": 20
+  },
+  {
+   "name": "황금사자호",
+   "port": "영종도",
+   "region": "인천 중구",
+   "price": "8인승 소수정예. 05:00~15:00",
+   "channels": {
+    "sunsang24": "http://7.sunsang24.com/ship/schedule_fleet/202610"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 8,
+   "capacity": 8
+  },
+  {
+   "name": "전투호",
+   "port": "오이도",
+   "region": "경기 시흥시",
+   "price": "신조선. 시화나래휴게소 주차+셔틀",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 9
+  },
+  {
+   "name": "뉴승진호",
+   "port": "영흥도",
+   "region": "인천 옹진군",
+   "price": "자체 홈페이지 실시간 예약",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 10
+  },
+  {
+   "name": "24마린낚시",
+   "port": "전곡항 (화성시 서신면 전곡항로 317)",
+   "region": "경기 화성시",
+   "price": "10만원",
+   "channels": {
+    "phone": "010-2905-5505"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 11
+  },
+  {
+   "name": "나르샤호 (시티맨피싱)",
+   "port": "대천항 (보령시 대천항로 332)",
+   "region": "충남 보령시",
+   "price": "9만원",
+   "channels": {
+    "phone": "010-9816-6106"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 12
+  },
+  {
+   "name": "나폴리호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "'5성급 호텔배'. 초보/여성 추천",
+   "channels": {},
+   "tags": [
+    "더피싱"
+   ],
+   "manual": false,
+   "bid": 13
+  },
+  {
+   "name": "범블비호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "마릿수 조과 후기 다수",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 14
+  },
+  {
+   "name": "발키리호 (오천루어스쿨)",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "가성비/베테랑. 갑오징어 여밭 특화",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 15
+  },
+  {
+   "name": "샤크호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "선탑 공간 넓음",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 16
+  },
+  {
+   "name": "프랜드호 (프랜드피싱)",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "갑오징어 특화",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 17
+  },
+  {
+   "name": "블루호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 18
+  },
+  {
+   "name": "카즈미호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 19
+  },
+  {
+   "name": "히트호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 20
+  },
+  {
+   "name": "도지호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 21
+  },
+  {
+   "name": "유진호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 22
+  },
+  {
+   "name": "빅보스호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "10만원",
+   "channels": {
+    "sunsang24": "https://bigboss24.sunsang24.com/ship/schedule_fleet/202610"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 23
+  },
+  {
+   "name": "플러스호",
+   "port": "무창포항",
+   "region": "충남 보령시",
+   "price": "9만원",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 24
+  },
+  {
+   "name": "짱가호",
+   "port": "무창포항",
+   "region": "충남 보령시",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 25,
+   "operator": "총각피싱"
+  },
+  {
+   "name": "무창포 세훈낚시",
+   "port": "무창포항",
+   "region": "충남 보령시",
+   "price": "7만원",
+   "channels": {
+    "phone": "010-5910-2533"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 26
+  },
+  {
+   "name": "무창포 프로낚시",
+   "port": "무창포항",
+   "region": "충남 보령시",
+   "price": "10만원",
+   "channels": {
+    "phone": "010-7409-0070"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 27
+  },
+  {
+   "name": "뉴해양호",
+   "port": "홍원항",
+   "region": "충남 서천군",
+   "price": "9만원",
+   "channels": {
+    "sunsang24": "http://newhaeyang.sunsang24.com"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 28
+  },
+  {
+   "name": "헌터호",
+   "port": "홍원항",
+   "region": "충남 서천군",
+   "price": "",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 29
+  },
+  {
+   "name": "뉴패밀리호",
+   "port": "신진도",
+   "region": "충남 태안군",
+   "price": "05:30 출항(일정별 변동)",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 30
+  },
+  {
+   "name": "원피스호",
+   "port": "태안",
+   "region": "충남 태안군",
+   "price": "로드 대여/채비 구입 안내",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 31
+  },
+  {
+   "name": "꿈에그린호",
+   "port": "태안",
+   "region": "충남 태안군",
+   "price": "얼린 2L 생수 지참 공지",
+   "channels": {},
+   "tags": [],
+   "manual": false,
+   "bid": 32
+  },
+  {
+   "name": "하늘에펜션 3GO 패키지",
+   "port": "가경주항",
+   "region": "충남 태안군 (안면도)",
+   "price": "10만원",
+   "channels": {
+    "band": "https://band.us/n/aaa9beifq0B8n"
+   },
+   "tags": [
+    "밴드전용",
+    "패키지형"
+   ],
+   "manual": false,
+   "bid": 33
+  },
+  {
+   "name": "블루오션2호",
+   "port": "장고항",
+   "region": "충남 당진시",
+   "price": "20인승. 05:30~14:30, 오후짬낚시…",
+   "channels": {
+    "sunsang24": "http://blueocean2.sunsang24.com/ship/schedule_fleet/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 34,
+   "capacity": 20
+  },
+  {
+   "name": "웅비1호 (구 365호)",
+   "port": "비응항 (어선안전조업국 앞 부잔교, 대한낚시/비응5길40)",
+   "region": "전북 군산시",
+   "price": "10만원",
+   "channels": {
+    "sunsang24": "https://365ho.sunsang24.com/ship/schedule_fleet/202609",
+    "phone": "010-2343-7132"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 35
+  },
+  {
+   "name": "목포VIP낚시 (VIP호)",
+   "port": "북항 (목포시 죽교동 620-42)",
+   "region": "전남 목포시",
+   "price": "9만원",
+   "channels": {
+    "phone": "010-7656-1279"
+   },
+   "tags": [
+    "밴드전용"
+   ],
+   "manual": false,
+   "bid": 36
+  },
+  {
+   "name": "마리타임 (폰툰보트)",
+   "port": "여수",
+   "region": "전남 여수시",
+   "price": "40만원",
+   "channels": {},
+   "tags": [
+    "체험형"
+   ],
+   "manual": false,
+   "bid": 37
+  },
+  {
+   "name": "해모수호",
+   "port": "팔포항 (사천시 동금동 579-7)",
+   "region": "경남 사천시",
+   "price": "8만원",
+   "channels": {
+    "sunsang24": "http://haemosu.sunsang24.com",
+    "band": "https://band.us/@1242",
+    "phone": "010-8538-4272"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 38
+  },
+  {
+   "name": "포인트호",
+   "port": "삼천포 (사천시 동금동 579-6)",
+   "region": "경남 사천시",
+   "price": "7만원",
+   "channels": {
+    "sunsang24": "https://point3004.sunsang24.com/ship/board_detail/296405",
+    "band": "https://band.us/@point3004",
+    "phone": "010-4571-2363"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 39
+  },
+  {
+   "name": "새행복호",
+   "port": "삼천포",
+   "region": "경남 사천시",
+   "price": "바다타임 출조안내 게시판 등록",
+   "channels": {},
+   "tags": [
+    "커뮤니티 공지"
+   ],
+   "manual": false,
+   "bid": 40
+  },
+  {
+   "name": "재영피싱",
+   "port": "삼천포",
+   "region": "경남 사천시",
+   "price": "",
+   "channels": {
+    "phone": "010-7124-6194"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 41
+  },
+  {
+   "bid": 42,
+   "name": "빨강등대호",
+   "operator": null,
+   "region": "경기 시흥시",
+   "port": "오이도",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "우럭·노래미·농어 다잡아 시간배 (10시~14시, 2021년 기준 4만원 — 현재 요금 미확인)"
+  },
+  {
+   "bid": 43,
+   "name": "안산호",
+   "operator": "다잡아피싱",
+   "region": "경기 시흥시",
+   "port": "오이도",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미·갑오징어, 06:00~14:00 시간배(종일배 아님), 다잡아피싱 집결 명부 작성"
+  },
+  {
+   "bid": 44,
+   "name": "킹스타호",
+   "operator": null,
+   "region": "경기 시흥시",
+   "port": "오이도",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "phone": "010-5411-4989"
+   },
+   "notes": "쭈꾸미·갑오징어 종일배, 시화방조제 중간선착장(시흥시 정왕동 2377) 집결 / 오이도 쭈꾸미·갑오징어 출조. 집결: 레드펄스 시화점 → 셔틀 이용, 점심 도시락 제공. 요금 미확인. 참고: https://blog.naver.com/xhya/224055829653"
+  },
+  {
+   "bid": 45,
+   "name": "돈지호",
+   "operator": null,
+   "region": "경기 화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "농어 (전곡항 농어배로 언급, 채널 미확인)"
+  },
+  {
+   "bid": 46,
+   "name": "엠퍼러호",
+   "operator": null,
+   "region": "경기 화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "농어 전문, 정원 10명, 밴드로 빈자리 공지·예약 (밴드 URL 미확인)"
+  },
+  {
+   "bid": 47,
+   "name": "예지퀸호",
+   "operator": null,
+   "region": "경기 화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미·갑오징어·광어·우럭 시즌 출조, 2026-09-25 쭈꾸미 출조 영상 확인"
+  },
+  {
+   "bid": 48,
+   "name": "제비호",
+   "operator": null,
+   "region": "경기 화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미·갑오징어"
+  },
+  {
+   "bid": 49,
+   "name": "해성호",
+   "operator": null,
+   "region": "경기 화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "농어 (2026-06 출조 후기에서 전곡항 농어배로 언급, 채널 미확인) — 인천 아세아낚시 소속 여부 미확인"
+  },
+  {
+   "bid": 50,
+   "name": "뉴태진호",
+   "operator": null,
+   "region": "경남 거제시",
+   "port": "견내량선착장",
+   "price": "10만원 (2018년 기준)",
+   "capacity": null,
+   "channels": {
+    "phone": "010-9440-0689"
+   },
+   "notes": "미확인 — 2018년 fishapp 페이지에 대상어종(칼치·볼락·열기·주꾸미·오징어 등 생활낚시)으로 주꾸미 명시. 현재 쭈꾸미 출조 여부 미확인. 독자 홈페이지 보유(선상24 아님). 네비주소: 경남 거제시 둔덕면 술역리 내평마을 750-1. 선장직통 010-3836-8453."
+  },
+  {
+   "bid": 51,
+   "name": "폴스타피싱",
+   "operator": null,
+   "region": "경남 사천시",
+   "port": "삼천포 (항구 미확인)",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "https://band.us/n/aaa4A8h4bcU4J"
+   },
+   "notes": "미확인 — 밴드명 '삼천포 폴스타', 유튜브 '삼천포 왕 쭈꾸미 낚시'·'삼천포 알쭈꾸미 낚시(71수)' 영상에 #폴스타피싱으로 등장. 요금·전화번호·출항항구 미확인."
+  },
+  {
+   "bid": 52,
+   "name": "덕성호",
+   "operator": null,
+   "region": "경남 사천시",
+   "port": "실안동 (저도섬 출항)",
+   "price": "1인당 7만원 (종일 10만원)",
+   "capacity": null,
+   "channels": {
+    "phone": "010-2327-9816"
+   },
+   "notes": "바다타임에 2026-10-01~31 돌문어·주꾸미 출조 공지 확인됨(현재 운항 중). 출조시간은 아침 5~8시 또는 8~9시 중 선택 가능, 중식 제공. 선상24 미등록(바다타임 전용 공지)."
+  },
+  {
+   "bid": 53,
+   "name": "진해반도낚시",
+   "operator": null,
+   "region": "경남 창원시",
+   "port": "진해 (항구 미확인)",
+   "price": "6만원 (2021년 기준)",
+   "capacity": null,
+   "channels": {
+    "phone": "010-5273-6554"
+   },
+   "notes": "미확인 — 2021-12 바다타임 '주꾸미 매일출항' 공지 (출발지:진해 → 도착지:진해-거제, 매일 오전 6시). 최근 운항 여부 미확인. 선상24 미등록(바다타임 전용)."
+  },
+  {
+   "bid": 54,
+   "name": "은하1호",
+   "operator": null,
+   "region": "옹진군",
+   "port": "진두선착장",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "미확인. 영흥도 쭈꾸미 출조 선사로만 언급됨. 집결 낚시점 위치·요금·연락처 모두 미확인 / 광어다운샷·우럭 전문(9.79톤 22인승), 쭈꾸미·갑오징어 시즌 병행. 집결 04:30 (싸군마켓 출조점), 출항 05:00, 낚시종료 15:00. 요금 미확인."
+  },
+  {
+   "bid": 55,
+   "name": "해성호",
+   "operator": "아세아낚시",
+   "region": "인천",
+   "port": "만석부두 일대 (미확인)",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aseafish.co.kr",
+    "phone": "010-6342-5776"
+   },
+   "notes": "미확인 — 아세아낚시 실체는 웹 검증됨(홈페이지 www.aseafish.co.kr, 전화 010-6342-5776, 인천 만석부두). 소속 배 3척은 사용자 제보 기준이며 웹 검증 미완료. 쭈꾸미 출조 여부 미확인."
+  },
+  {
+   "bid": 56,
+   "name": "팀만수호",
+   "operator": null,
+   "region": "인천 옹진군",
+   "port": "영흥도(상세 선착장 미확인)",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미·갑오징어. 2026-09-20 출조 영상(곰스타낚시TV)으로 운항 확인. 출항 선착장·요금·전화번호 미확인."
+  },
+  {
+   "bid": 57,
+   "name": "선호",
+   "operator": "아세아낚시",
+   "region": "인천",
+   "port": "만석부두 일대 (미확인)",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aseafish.co.kr",
+    "phone": "010-6342-5776"
+   },
+   "notes": "미확인 — 아세아낚시 실체는 웹 검증됨(홈페이지 www.aseafish.co.kr, 전화 010-6342-5776, 인천 만석부두). 소속 배 3척은 사용자 제보 기준이며 웹 검증 미완료. 쭈꾸미 출조 여부 미확인."
+  },
+  {
+   "bid": 58,
+   "name": "빅토리호",
+   "operator": null,
+   "region": "인천 옹진군",
+   "port": "진두선착장",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "진두선착장 내 빅토리호 사무실 확인 (뉴승진호 출조 후기에서 승선명부 작성 장소로 언급). 낚시배 운항 여부는 미확인 — 운항 추정."
+  },
+  {
+   "bid": 59,
+   "name": "길손호",
+   "operator": "아세아낚시",
+   "region": "인천",
+   "port": "만석부두 일대 (미확인)",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aseafish.co.kr",
+    "phone": "010-6342-5776"
+   },
+   "notes": "미확인 — 아세아낚시 실체는 웹 검증됨(홈페이지 www.aseafish.co.kr, 전화 010-6342-5776, 인천 만석부두). 소속 배 3척은 사용자 제보 기준이며 웹 검증 미완료. 쭈꾸미 출조 여부 미확인."
+  },
+  {
+   "bid": 60,
+   "name": "덕적호",
+   "operator": null,
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "평일 45,000원",
+   "capacity": null,
+   "channels": {},
+   "notes": "오전배 06:30~11:20 / 오후배 12:00~17:00, 출항 1시간 전 도착. 사무실 '덕적바다낚시' (남항유어선부두 입구 오른쪽 안쪽). 전화번호 미확인. 후기: https://blog.naver.com/rycos82/224030045483"
+  },
+  {
+   "bid": 61,
+   "name": "은아호",
+   "operator": "은아낚시",
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "50000원",
+   "capacity": null,
+   "channels": {
+    "phone": "010-8654-1714"
+   },
+   "notes": "쭈꾸미. 선사명 '은아낚시' (인천 중구 축항대로 142, 남항부두). 60명 탑승, 오전배 06:30~11:30. 요금은 주말 50,000원 기준 (2025-10 출조 후기), 평일 요금 미확인. 낚싯대 대여 10,000원. / 배가 아닌 남항 집결낚시점(장비 대여·채비 구매). 주소: 인천 중구 항동7가 27-171"
+  },
+  {
+   "bid": 62,
+   "name": "해피호",
+   "operator": "국제유선",
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "평일 45,000원 / 주말 50,000원",
+   "capacity": null,
+   "channels": {},
+   "notes": "오전배 06:30~11:30 / 오후배 12:10~17:00. 종일배는 고속정 부킹호로 운영. 선상떡볶이·쭈라면 서비스, 낚싯대 대여 1만원. 공식 홈페이지·네이버예약 있다고 하나 URL 미확인. 후기: https://blog.naver.com/eunjun2009/224401084738 / 쭈꾸미·우럭·광어·백조기 체험. 오전 06:30~11:20 / 오후 12:10~17:00. 성인 평일 45,000원·주말 50,000원, 어린이 평일 35,000원·주말 40,000원 (2026-09-23 출조 후기 기준). 낚싯대 대여 10,000원. 57인승 규모."
+  },
+  {
+   "bid": 63,
+   "name": "매니아호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "매일경제 바다낚시 코너 국동항 출조 선박으로 게재 이력 있음 (갑오징어·감성돔·열기). 독자 채널 미확인"
+  },
+  {
+   "bid": 64,
+   "name": "베테랑호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "(여수 국동항 베테랑호 — 무창포 베테랑호와 동일 선박인지 미확인) 매일경제 바다낚시 코너에서 국동항 출조 선박으로 여러 회 게재 (갈치·문어·쭈꾸미, 갑오징어 등). 무창포베테랑호와 동일 선박인지 미확인"
+  },
+  {
+   "bid": 65,
+   "name": "블랙스타호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "출항지 불확실 — 매일경제 9월 2주에는 국동항, 2월 4주에는 삼천포항 출조로 게재. 독자 채널 미확인"
+  },
+  {
+   "bid": 66,
+   "name": "진영호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "(여수 국동항 진영호 — 남당항 진영호와 다른 배로 추정) 매일경제 바다낚시 코너 국동항 출조 선박으로 게재 이력 있음 (감성돔·쭈꾸미·참돔 / 갑오징어·감성돔·볼락). 독자 채널(홈페이지·밴드·전화) 미확인"
+  },
+  {
+   "bid": 67,
+   "name": "충무호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "매일경제 바다낚시 코너 국동항 출조 선박으로 게재 이력 있음 (문어·갈치·갑오징어). 독자 채널 미확인"
+  },
+  {
+   "bid": 68,
+   "name": "플라워1호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "국동항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "매일경제 바다낚시 코너 국동항 출조 선박으로 게재 이력 있음 (갑오징어·열기·볼락). 독자 채널 미확인"
+  },
+  {
+   "bid": 69,
+   "name": "바이킹호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "미확인",
+   "price": "8만원",
+   "capacity": null,
+   "channels": {},
+   "notes": "구 뉴스페이스호 인수·개명. 홍원항 모범낚시 선장(박·유 선장)이 2025.11.22 여수로 이전해 운영. 쭈꾸미 출조 확인(2025.12 후기: 왕쭈꾸미 선비 8만원, 점심 제공, 박선장·유선장 2인 승선). 2026년 운항 여부는 미확인. 후기 링크: https://blog.naver.com/choboggun/224098033625"
+  },
+  {
+   "bid": 70,
+   "name": "써니호",
+   "operator": null,
+   "region": "전남 여수시",
+   "port": "미확인",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "https://www.band.us/@yssunny",
+    "phone": "010-9342-2244"
+   },
+   "notes": "미확인 — 여수 낚시배로 밴드·전화번호 확인되나 쭈꾸미 출조 여부는 검증되지 않음"
+  },
+  {
+   "bid": 71,
+   "name": "다온호",
+   "operator": null,
+   "region": "전북 군산시",
+   "port": "미확인",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "naver": "https://blog.naver.com/miso-room"
+   },
+   "notes": "루미호와 같은 선사의 자매선(블로그 '루미호n다온호'). 쭈꾸미 출조 병행 추정이나 단독 확인 자료 없음. 2026년 운항 여부 미확인"
+  },
+  {
+   "bid": 72,
+   "name": "루미호",
+   "operator": null,
+   "region": "전북 군산시",
+   "port": "미확인",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "naver": "https://blog.naver.com/miso-room"
+   },
+   "notes": "선장 직영 블로그 '루미호n다온호' 운영. 쭈꾸미 출조 확인(2025.10.16~28, 쭈꾸미 물때 출조 및 갑오징어 병행). 2026년 운항 여부 미확인. 선상24 등록 여부 미확인. 출항 시간 미확인"
+  },
+  {
+   "bid": 73,
+   "name": "바다하리호",
+   "operator": null,
+   "region": "전북 군산시",
+   "port": "비응항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "농어·민어·쭈꾸미·돌문어·갑오징어·갈치·광어 (보트피싱 등록, 선상24 아님, 리뷰 0건)"
+  },
+  {
+   "bid": 74,
+   "name": "오렌지호",
+   "operator": null,
+   "region": "전북 군산시",
+   "port": "비응항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갑오징어·주꾸미·문어, 05:00 출항, 제육덮밥 제공 (2021년 출조 후기만 확인됨 — 현재 운항 미확인)"
+  },
+  {
+   "bid": 75,
+   "name": "해동호",
+   "operator": null,
+   "region": "전북 군산시",
+   "port": "야미도항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갯바위 종선배 2척 운용 (찌낚시), 민박·펜션 병행 (네이버 블로그 갯바위 후기로 확인 — 현재 운항 미확인)"
+  },
+  {
+   "bid": 76,
+   "name": "럭키스타호",
+   "operator": "격포새만금낚시",
+   "region": "전북 부안군",
+   "port": "격포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "격포새만금낚시 선사 소속 3척 중 1척 (사이트 설명문에서만 확인 — 상세 미확인)"
+  },
+  {
+   "bid": 77,
+   "name": "새천년호",
+   "operator": "격포새만금낚시",
+   "region": "전북 부안군",
+   "port": "격포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "농어·민어 외수질 전문 (격포새만금낚시 선사). 홈페이지 접속 실패 — 유튜브 격포새만금낚시 영상으로 확인"
+  },
+  {
+   "bid": 78,
+   "name": "씨헌터호",
+   "operator": "격포새만금낚시",
+   "region": "전북 부안군",
+   "port": "격포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "격포새만금낚시 선사 소속 3척 중 1척 (사이트 설명문에서만 확인 — 상세 미확인)"
+  },
+  {
+   "bid": 79,
+   "name": "대천항 스파이더호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "3~4만원",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미 오후 체험배(16:00~19:20) 형태, 가족·초보 체험형. 종일 출조 여부·예약 채널 미확인"
+  },
+  {
+   "bid": 80,
+   "name": "메이저호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갑오징어·쭈꾸미 (9.77톤, 사무장 탑승; 2025.10 네이버 블로그 출조 후기 확인)"
+  },
+  {
+   "bid": 81,
+   "name": "스파이더호",
+   "operator": "낚시쿤",
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "3~4만원 (오후 체험배 기준)",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.nqoon.kr",
+    "phone": "010-7453-6665"
+   },
+   "notes": "쭈꾸미·갑오징어·광어·우럭·농어외수질 (낚시쿤 선단; 관리자 010-9729-9649). 2026년 유튜브 쭈꾸미 오후배 체험 영상 확인"
+  },
+  {
+   "bid": 82,
+   "name": "아이언호",
+   "operator": "낚시쿤",
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.nqoon.kr"
+   },
+   "notes": "쭈꾸미 (낚시쿤 선단; 2020년 유튜브 쭈꾸미 출조 확인, 최근 운영 미확인)"
+  },
+  {
+   "bid": 83,
+   "name": "어복킹선단",
+   "operator": "어복킹선단",
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ubking.co.kr",
+    "phone": "010-7432-2253"
+   },
+   "notes": "선단 단위로만 확인됨. 소속 개별 선박명 미확인. 광어다운샷·우럭생활낚시·참돔타이라바 (예약 070-4255-2253). 매일 06:00 출항. 2018년 바다타임 글 기준 — 2026년 운영 여부 미확인"
+  },
+  {
+   "bid": 84,
+   "name": "올림피아호",
+   "operator": "낚시쿤",
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.nqoon.kr",
+    "phone": "010-9729-9649"
+   },
+   "notes": "쭈꾸미 (낚시쿤 선단; FTV THE HIT 333회 쭈꾸미 출조 방송 확인)"
+  },
+  {
+   "bid": 85,
+   "name": "제우스호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "대천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ochzeus.com"
+   },
+   "notes": "광어다운샷·외수질·라이트지깅 전문 (생미끼 금지 루어 전용). 05:00 출항"
+  },
+  {
+   "bid": 86,
+   "name": "무창포 피싱마린호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "https://www.band.us/band/67162971"
+   },
+   "notes": "밴드 '무창포 피싱마린호' 확인됨. 대상어종·전화번호·요금 모두 미확인 / 밴드 개설 확인. 요금·전화번호 미확인 — 밴드 가입 후 확인 필요"
+  },
+  {
+   "bid": 87,
+   "name": "무창포뉴천일호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://www.ssfish.kr/index.php",
+    "phone": "010-5340-8741"
+   },
+   "notes": "쭈꾸미 출조 조황 확인(TikTok, 선장 계정). ssfish.kr 예약 링크+전화 예약. 밴드 후기 이벤트 운영 확인(URL 미확인). 요금 미확인"
+  },
+  {
+   "bid": 88,
+   "name": "무창포힐링호",
+   "operator": "무창포 베테랑피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "http://band.us/@helling3342",
+    "phone": "010-3321-3342"
+   },
+   "notes": "무창포 베테랑피싱 선단 소속(충남 보령시 웅천읍 관당리 888-6). 쭈꾸미 조황 게시 확인(2023.10). 밴드+전화 예약. 요금 미확인"
+  },
+  {
+   "bid": 89,
+   "name": "배짱호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갑오징어(탄자니아) 출조 후기 확인(25/10/26). 전화번호·요금 미확인. 쭈꾸미 출조 여부 미확인"
+  },
+  {
+   "bid": 90,
+   "name": "베테랑호",
+   "operator": "무창포 베테랑피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "무창포베테랑피싱 선단. 봄쭈꾸미 출조 확인(TikTok @무창포베테랑피싱, 3/28 첫출항 공지). 전화번호·요금 미확인"
+  },
+  {
+   "bid": 91,
+   "name": "신나래호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "2022년 매일경제 서해 출조 선박 명단에 무창포항 출조 배로 기재. 대상어종·전화번호 미확인"
+  },
+  {
+   "bid": 92,
+   "name": "총각1호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804"
+   },
+   "notes": "총각피싱 선단. 농어 전문(4월 중순~11월 말), 10년 농어 한 종목, 부부선장"
+  },
+  {
+   "bid": 93,
+   "name": "총각호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804"
+   },
+   "notes": "총각피싱 선단. 8인승 작은 배로 체험낚시 가능"
+  },
+  {
+   "bid": 94,
+   "name": "테티스호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "2022년 매일경제 서해 출조 선박 명단에 무창포항 출조 배로 기재. 대상어종·전화번호 미확인"
+  },
+  {
+   "bid": 95,
+   "name": "25시수평선호",
+   "operator": "25시낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.naksi25.net"
+   },
+   "notes": "우럭·백조기·농어루어·참돔찌낚시 (25시낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 96,
+   "name": "K-1투어호",
+   "operator": "씨빙이루어낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://spdman7.fishmap.kr"
+   },
+   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 97,
+   "name": "갈매기호",
+   "operator": "동문낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.dongmunfish.com"
+   },
+   "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 98,
+   "name": "굿모닝호",
+   "operator": "스피드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ospeed.kr"
+   },
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 99,
+   "name": "금강3호",
+   "operator": "금강낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ocheonkumkang.com"
+   },
+   "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 100,
+   "name": "금강호",
+   "operator": "금강낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ocheonkumkang.com"
+   },
+   "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 101,
+   "name": "금땡이호",
+   "operator": "프랜드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.friendho.com"
+   },
+   "notes": "[순돌호·금땡이호] 광어다운샷·외수질 (프랜드피싱 선단; 제외 목록의 프랜드호와는 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 102,
+   "name": "길손피싱호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.xn--wk0bw08aj4ag56b.com"
+   },
+   "notes": "쭈꾸미·광어다운샷·백조기·우럭. 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 103,
+   "name": "나이스호",
+   "operator": "비엔나피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.vinaho.com"
+   },
+   "notes": "[비엔나호·나이스호] 우럭·백조기·쭈꾸미·갑오징어 (비엔나피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 104,
+   "name": "나폴리2",
+   "operator": "나폴리선단",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.napoliho.net"
+   },
+   "notes": "[나폴리2·뉴나폴리·나폴리7·나폴리9] 광어다운샷·문어·백조기·우럭 (나폴리선단; 제외 목록의 나폴리호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 105,
+   "name": "나폴리7",
+   "operator": "나폴리선단",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.napoliho.net"
+   },
+   "notes": "[나폴리2·뉴나폴리·나폴리7·나폴리9] 광어다운샷·문어·백조기·우럭 (나폴리선단; 제외 목록의 나폴리호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 106,
+   "name": "나폴리9",
+   "operator": "나폴리선단",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.napoliho.net"
+   },
+   "notes": "[나폴리2·뉴나폴리·나폴리7·나폴리9] 광어다운샷·문어·백조기·우럭 (나폴리선단; 제외 목록의 나폴리호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 107,
+   "name": "뉴나폴리",
+   "operator": "나폴리선단",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.napoliho.net"
+   },
+   "notes": "[나폴리2·뉴나폴리·나폴리7·나폴리9] 광어다운샷·문어·백조기·우럭 (나폴리선단; 제외 목록의 나폴리호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 108,
+   "name": "뉴마린스타호",
+   "operator": "뉴마린스타",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.boryeongharbor.com"
+   },
+   "notes": "[뉴마린스타호·마린스타1호] 광어다운샷·참돔타이라바·백조기·문어·우럭 (뉴마린스타). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 109,
+   "name": "뉴스카이호",
+   "operator": "스피드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ospeed.kr"
+   },
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 110,
+   "name": "뉴일복호",
+   "operator": "일복낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.xn--pn3bn6qm0l.kr"
+   },
+   "notes": "[일복호·뉴일복호·반도피싱호] 참돔타이라바·광어다운샷·우럭·백조기·농어외수질 (일복낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 111,
+   "name": "뉴청해호",
+   "operator": "오천배낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.5000fish.net"
+   },
+   "notes": "[오천서해호·뉴청해호] 광어다운샷·백조기·다잡아·타이라바·우럭·문어 (오천배낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 112,
+   "name": "대물호",
+   "operator": "오천항대물낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://xn--c20bm9by0le8h59d54l.com"
+   },
+   "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 113,
+   "name": "독수리호",
+   "operator": "월드레저",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.eagleho.com"
+   },
+   "notes": "우럭·백조기 (월드레저 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 114,
+   "name": "돌고래호",
+   "operator": "금강낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ocheonkumkang.com"
+   },
+   "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 115,
+   "name": "두드림호",
+   "operator": "오천항대물낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://xn--c20bm9by0le8h59d54l.com"
+   },
+   "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 116,
+   "name": "똥까호",
+   "operator": "진격의똥까&꾼'S",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ddonggga.com"
+   },
+   "notes": "광어다운샷 (진격의똥까&꾼'S 선단, 온라인 예약 시스템). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 117,
+   "name": "라벤더호",
+   "operator": "상상피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.sangsangho.com"
+   },
+   "notes": "[마운틴호·라벤더호] 쭈꾸미·백조기·광어다운샷·우럭생미끼 (상상피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 118,
+   "name": "랜드마크호",
+   "operator": "스피드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ospeed.kr"
+   },
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 119,
+   "name": "럭셔리호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 120,
+   "name": "레드피싱호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 121,
+   "name": "루키호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 122,
+   "name": "마린스타1호",
+   "operator": "뉴마린스타",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.boryeongharbor.com"
+   },
+   "notes": "[뉴마린스타호·마린스타1호] 광어다운샷·참돔타이라바·백조기·문어·우럭 (뉴마린스타). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 123,
+   "name": "마운틴호",
+   "operator": "상상피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.sangsangho.com"
+   },
+   "notes": "[마운틴호·라벤더호] 쭈꾸미·백조기·광어다운샷·우럭생미끼 (상상피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 124,
+   "name": "메가호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.megaho.net"
+   },
+   "notes": "쭈꾸미·갑오징어·광어다운샷·우럭·문어·백조기·다잡아. 2026.9.3 유튜브 쭈꾸미 출조 영상 확인 (현재 영업 중)"
+  },
+  {
+   "bid": 125,
+   "name": "명성호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 126,
+   "name": "바다용사호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 127,
+   "name": "반도피싱호",
+   "operator": "일복낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.xn--pn3bn6qm0l.kr"
+   },
+   "notes": "[일복호·뉴일복호·반도피싱호] 참돔타이라바·광어다운샷·우럭·백조기·농어외수질 (일복낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 128,
+   "name": "방주호",
+   "operator": "금강낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ocheonkumkang.com"
+   },
+   "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 129,
+   "name": "복성호2호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 130,
+   "name": "비엔나호",
+   "operator": "비엔나피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.vinaho.com"
+   },
+   "notes": "[비엔나호·나이스호] 우럭·백조기·쭈꾸미·갑오징어 (비엔나피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 131,
+   "name": "뽀빠이호",
+   "operator": "씨빙이루어낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://spdman7.fishmap.kr"
+   },
+   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 132,
+   "name": "성령5호",
+   "operator": "성령낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.sungryungho.com"
+   },
+   "notes": "[성령5호·성령7호] 우럭·광어다운샷·백조기 (성령낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 133,
+   "name": "성령7호",
+   "operator": "성령낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.sungryungho.com"
+   },
+   "notes": "[성령5호·성령7호] 우럭·광어다운샷·백조기 (성령낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 134,
+   "name": "순돌호",
+   "operator": "프랜드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.friendho.com"
+   },
+   "notes": "[순돌호·금땡이호] 광어다운샷·외수질 (프랜드피싱 선단; 제외 목록의 프랜드호와는 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 135,
+   "name": "스피드호",
+   "operator": "스피드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ospeed.kr"
+   },
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 136,
+   "name": "썬가드호",
+   "operator": "스피드피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ospeed.kr"
+   },
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 137,
+   "name": "씨빙이호",
+   "operator": "씨빙이루어낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://spdman7.fishmap.kr"
+   },
+   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 138,
+   "name": "씨앤미호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 139,
+   "name": "씨월드호",
+   "operator": "자연낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.nfishing.net"
+   },
+   "notes": "[첼린저호·씨월드호] 광어다운샷·참돔타이라바·우럭·문어·농어부시리지깅 (자연낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 140,
+   "name": "아침바다호",
+   "operator": "동문낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.dongmunfish.com"
+   },
+   "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 141,
+   "name": "야무진2호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 142,
+   "name": "야무진호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 143,
+   "name": "에이스호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 144,
+   "name": "영남3호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 145,
+   "name": "오디세이호",
+   "operator": "오디세이피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.joeunfish.com"
+   },
+   "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 146,
+   "name": "오션투어호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 147,
+   "name": "오천베스트호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "네이버 플레이스 '오천베스트호' 검색 — 온라인 실시간 예약 가능(블로그 확인). 출항지: 충청남도 보령시 오천면 오천해안로 274-13 일원. 9~11월 쭈꾸미·갑오징어 출조. 요금·전화번호 미확인"
+  },
+  {
+   "bid": 148,
+   "name": "오천서해호",
+   "operator": "오천배낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.5000fish.net"
+   },
+   "notes": "[오천서해호·뉴청해호] 광어다운샷·백조기·다잡아·타이라바·우럭·문어 (오천배낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 149,
+   "name": "월드스타호",
+   "operator": "금강낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.ocheonkumkang.com"
+   },
+   "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 150,
+   "name": "위더스호",
+   "operator": "오천항대물낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://xn--c20bm9by0le8h59d54l.com"
+   },
+   "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 151,
+   "name": "육소2호",
+   "operator": "씨빙이루어낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://spdman7.fishmap.kr"
+   },
+   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 152,
+   "name": "이지스호",
+   "operator": "오디세이피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.joeunfish.com"
+   },
+   "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 153,
+   "name": "일복호",
+   "operator": "일복낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.xn--pn3bn6qm0l.kr"
+   },
+   "notes": "[일복호·뉴일복호·반도피싱호] 참돔타이라바·광어다운샷·우럭·백조기·농어외수질 (일복낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 154,
+   "name": "장보고호",
+   "operator": "동문낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.dongmunfish.com"
+   },
+   "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 155,
+   "name": "정선호",
+   "operator": "헤라피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.herafishing.net"
+   },
+   "notes": "[헤라호·정선호] 우럭·참돔타이라바·광어다운샷 (헤라피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 156,
+   "name": "천해호",
+   "operator": "동문낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.dongmunfish.com"
+   },
+   "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 157,
+   "name": "첼린저호",
+   "operator": "자연낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.nfishing.net"
+   },
+   "notes": "[첼린저호·씨월드호] 광어다운샷·참돔타이라바·우럭·문어·농어부시리지깅 (자연낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 158,
+   "name": "캡틴호",
+   "operator": "자연낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.captainfishing.net"
+   },
+   "notes": "쭈꾸미·광어다운샷·우럭·백조기·참돔·농어. 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 159,
+   "name": "코리아호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.kingdomfish.net"
+   },
+   "notes": "[킹덤호·코리아호] 광어다운샷·우럭·백조기·문어. 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 160,
+   "name": "킹덤호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.kingdomfish.net"
+   },
+   "notes": "[킹덤호·코리아호] 광어다운샷·우럭·백조기·문어. 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 161,
+   "name": "타이푼호",
+   "operator": "블루피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.bluefishing.asia"
+   },
+   "notes": "[타이푼호·포세이돈호] 광어다운샷·문어·백조기 (블루피싱; 제외 목록의 블루호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 162,
+   "name": "태성호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 163,
+   "name": "팀베테랑호",
+   "operator": "야무진피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.yamujinfishing.com"
+   },
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 164,
+   "name": "팀오디세이호",
+   "operator": "오디세이피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.joeunfish.com"
+   },
+   "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 165,
+   "name": "평사호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 166,
+   "name": "포세이돈호",
+   "operator": "블루피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.bluefishing.asia"
+   },
+   "notes": "[타이푼호·포세이돈호] 광어다운샷·문어·백조기 (블루피싱; 제외 목록의 블루호와 별개 선박). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 167,
+   "name": "하나호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.hanaho.net"
+   },
+   "notes": "백조기·광어다운샷·우럭. 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 168,
+   "name": "한프로2호",
+   "operator": "한프로피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://hanprofishing.com"
+   },
+   "notes": "[한프로호·한프로2호] 우럭·광어다운샷 (한프로피싱 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 169,
+   "name": "한프로호",
+   "operator": "한프로피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://hanprofishing.com"
+   },
+   "notes": "[한프로호·한프로2호] 우럭·광어다운샷 (한프로피싱 선단). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 170,
+   "name": "해금강호",
+   "operator": "에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.aceho.net"
+   },
+   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 171,
+   "name": "해양호",
+   "operator": null,
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.hyfish.co.kr"
+   },
+   "notes": "쭈꾸미·갑오징어·백조기·우럭·광어다운샷. 2023년 선사 목록 기준 (2026년 운영 여부는 홈페이지 확인 필요)"
+  },
+  {
+   "bid": 172,
+   "name": "헤라호",
+   "operator": "헤라피싱",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.herafishing.net"
+   },
+   "notes": "[헤라호·정선호] 우럭·참돔타이라바·광어다운샷 (헤라피싱). 2023년 선사 목록 기준"
+  },
+  {
+   "bid": 173,
+   "name": "나대세호",
+   "operator": "씨유만석낚시 선단",
+   "region": "충남 서산시",
+   "port": "삼길포항",
+   "price": "10만원",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.mscufishing.com",
+    "phone": "041-669-6875"
+   },
+   "notes": "갑오징어 전문(2025-11 출조 후기), 9.77톤·승선인원 22명(선장·사무장 포함)·선실 없음. 선비 10만원(생새우 포함, 2026-06 기준), 간식(컵라면)·음료 제공. 만석호와 같은 선단으로 출조점·예약 채널(만석낚시CU, 041-669-6875) 공유."
+  },
+  {
+   "bid": 174,
+   "name": "만석호",
+   "operator": "씨유만석낚시 선단",
+   "region": "충남 서산시",
+   "port": "삼길포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.mscufishing.com",
+    "phone": "041-669-6875"
+   },
+   "notes": "쭈꾸미·갑오징어 전문('갑이배'), 시즌 시작과 동시에 예약이 꽉 차는 유명 배(2019·2025년 출조 후기 확인). 출조점: CU 대산삼길포점(삼길포1로 65), 승선명부 작성: 만석낚시CU, 승선: 해양파출소 뒤 신부잔교. 선단 홈페이지에서 소속 배 전체 예약 / 미확인 — 2019년 블로그 출조 후기에서 삼길포항 쭈꾸미 전문 배로 확인됨(시즌 시작과 동시에 예약이 꽉 차는 인기 배). 요금·예약 채널·전화번호는 웹에서 확인 불가"
+  },
+  {
+   "bid": 175,
+   "name": "승주호",
+   "operator": null,
+   "region": "충남 서산시",
+   "port": "삼길포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미·갑오징어 출조(조황 게시글 확인). 요금·연락처 미확인."
+  },
+  {
+   "bid": 176,
+   "name": "헤르메스호",
+   "operator": null,
+   "region": "충남 서산시",
+   "port": "삼길포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "삼길포 출조 후기 블로그에서 삼길포 운항 배로 언급된 단일 근거. 항구 확정 아님, 요금·연락처 미확인."
+  },
+  {
+   "bid": 177,
+   "name": "레드펄호",
+   "operator": null,
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "https://www.band.us/band/81443006",
+    "phone": "010-5793-4521"
+   },
+   "notes": "쭈꾸미·갑오징어 전문. 조선장 직통 010-5793-4521. 봄 종일 선비 6만원(2026년 3월 공지). 가을 요금 미확인. 네이버 '레드펄호' 검색 후 홈페이지 예약 가능"
+  },
+  {
+   "bid": 178,
+   "name": "모범낚시호",
+   "operator": "백두산낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "홍원항 백두산낚시 출조점. 쭈갑 병행(갑오징어·쭈꾸미). 9.77톤 22인승, 한강라면·물·음료·점심 제공. 봄 이벤트 선비 평일 5만원·주말 6만원(2026년 5월). 전화번호 미확인"
+  },
+  {
+   "bid": 179,
+   "name": "백두산호",
+   "operator": "백두산낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "홍원항 백두산낚시 출조점, 쭈꾸미 전문. 봄 알쭈꾸미 이벤트 선비 평일 5만원·주말 6만원(2026년 3월 이벤트). 가을 요금·전화번호 미확인"
+  },
+  {
+   "bid": 180,
+   "name": "수성호",
+   "operator": null,
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "2022년 매일경제 서해 출조 선박 명단에 홍원항 출조 배로 기재. 대상어종·전화번호·요금 미확인(홈페이지 접속 차단됨)"
+  },
+  {
+   "bid": 181,
+   "name": "우리호",
+   "operator": "형제낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://hhj.kr/",
+    "phone": "010-3213-3944"
+   },
+   "notes": "홍원항 형제낚시 선단, 7.93톤 18인승. 2026년 9월 쭈꾸미 조황 확인(장원 130~300수급). 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약"
+  },
+  {
+   "bid": 182,
+   "name": "월드피싱호",
+   "operator": "형제낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://hhj.kr/",
+    "phone": "010-3213-3944"
+   },
+   "notes": "홍원항 형제낚시 선단, 9.77톤 22인승. 2022년 매일경제 서해 출조 선박 명단에도 홍원항 출조 배로 기재. 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약"
+  },
+  {
+   "bid": 183,
+   "name": "프린스2호",
+   "operator": "홍원항 원조낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "홍원항 원조낚시 선단 소속, 출조점 충남 서천군 서면 홍원길 91-1. 6~8월 백조기·수조기 출조 확인. 가을 쭈꾸미 출조 및 전화번호·요금은 공개 정보 미확인"
+  },
+  {
+   "bid": 184,
+   "name": "형제낚시 우리호",
+   "operator": "형제낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "미확인 — 유튜브 쭈꾸미 조황 영상(2026.9, 130수)만 확인. 형제낚시 소속. 예약 채널·요금 미확인"
+  },
+  {
+   "bid": 185,
+   "name": "형제피싱호",
+   "operator": "형제낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://hhj.kr/",
+    "phone": "010-3213-3944"
+   },
+   "notes": "홍원항 형제낚시 선단, 9.77톤 22인승. 출조점 충남 서천군 서면 홍원길 54. 예약 010-3213-3944, 선장 010-8668-3944, 매장 041-952-3944. 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약"
+  },
+  {
+   "bid": 186,
+   "name": "홍원항 레드펄호",
+   "operator": null,
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "https://www.band.us/band/81443006",
+    "phone": "010-5793-4521"
+   },
+   "notes": "쭈꾸미·갑오징어 전문. 자체 홈페이지(네이버 '홍원항 레드펄호' 검색)에서 예약 가능. 봄 쭈꾸미 종일배 선비 6만원 확인. 가을 쭈꾸미 요금 미확인"
+  },
+  {
+   "bid": 187,
+   "name": "홍원항 모범낚시",
+   "operator": "백두산낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "미확인 — 자체 홈페이지(네이버 '홍원항 모범낚시' 검색) 예약 가능. 전화 또는 카톡 예약 가능(번호 미확인). 출조점: 홍원항 백두산낚시. 쭈꾸미·갑오징어 출조 확인(블로그 탑승 후기). 봄 갑오징어 평일 5만원/주말 6만원 — 가을 쭈꾸미 요금 미확인. 9.77톤 22인승"
+  },
+  {
+   "bid": 188,
+   "name": "홍원항 베테랑호",
+   "operator": null,
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "미확인 — 네이버 블로그 탑승 후기(2025.10, 쭈꾸미 조황)만 확인. 예약 채널·요금·전화번호 미확인"
+  },
+  {
+   "bid": 189,
+   "name": "홍원항 프린스2호",
+   "operator": "홍원항 원조낚시",
+   "region": "충남 서천군",
+   "port": "홍원항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "홍원항 원조낚시 선단 소속. 출조점 주소: 충남 서천군 서면 홍원길 91-1 (홍원항원조낚시), 승선 명부·신분증 확인 후 출항. 백조기 종일배(05:00~15:00) 6만원 확인됨(2026.6 블로그). 가을 쭈꾸미 요금·전화번호 미확인"
+  },
+  {
+   "bid": 190,
+   "name": "힐링피싱호",
+   "operator": null,
+   "region": "충남 태안군",
+   "port": "마검포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "쭈꾸미 전문, 11인승 소형선(2026-09-06 출조 후기). 05시경 출항~15시 입항(후기 기준), 쭈꾸미 라면 제공. 요금·연락처·예약 채널 미확인. / 미확인 — 2026.9 네이버 블로그에서 마검포항 11인승 쭈꾸미 출조 배로 확인됨. 요금·예약 채널은 웹에서 확인 불가"
+  },
+  {
+   "bid": 191,
+   "name": "은하호",
+   "operator": null,
+   "region": "충남 태안군",
+   "port": "미확인",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "안흥항 쭈꾸미·갑오징어 선상 출조 후기에 등장. 신진도항 출항일 가능성도 있어 정확한 출항항 미확인. 요금·연락처 미확인."
+  },
+  {
+   "bid": 192,
+   "name": "구라미끼호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "해신선단 협력선박. 대상 어종 미확인. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 193,
+   "name": "킹스타호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "해신선단 협력선박. 대상 어종 미확인. 오이도 킹스타호(010-5411-4989)와 동명이나 다른 선박으로 추정됨. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 194,
+   "name": "판타지호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "해신선단 협력선박. 쭈꾸미/갑오징어, 광어다운샷·우럭 병행 추정(미확인). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 195,
+   "name": "해신1호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 196,
+   "name": "해신2호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 197,
+   "name": "해신3호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 198,
+   "name": "해신7호",
+   "operator": "해신낚시",
+   "region": "충남 태안군",
+   "port": "백사장항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://haesin.net",
+    "phone": "010-4352-5230"
+   },
+   "notes": "갑오징어 전문 출조 확인(네이버 출조 후기 다수). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+  },
+  {
+   "bid": 199,
+   "name": "마그마호",
+   "operator": "블레스 선단",
+   "region": "충남 태안군",
+   "port": "신진도항",
+   "price": "10만원",
+   "capacity": null,
+   "channels": {},
+   "notes": "2026.9 블로그 출조 후기 기준 1인 10만원 종일배(새벽 4시 출항~16:20). 예약은 신진도 '블레스피싱' 낚시점에서 승선장부 작성(블레스 선단 blessho.com과 같은 계열로 보이나 운영 주체 확인 필요). 전화번호 미확인"
+  },
+  {
+   "bid": 200,
+   "name": "블레스호",
+   "operator": "블레스 선단",
+   "region": "충남 태안군",
+   "port": "신진도항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://blessho.com/",
+    "phone": "010-3956-7016"
+   },
+   "notes": "블레스 선단 독자 홈페이지 blessho.com에서 선박예약현황 직접 운영(2026 쭈갑시즌: 주꾸미 9/1~9/20 출조). 예약금은 입금확인 후 확정"
+  },
+  {
+   "bid": 201,
+   "name": "퀸블레스호",
+   "operator": "블레스 선단",
+   "region": "충남 태안군",
+   "port": "신진도항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://blessho.com/",
+    "phone": "010-3956-7016"
+   },
+   "notes": "블레스 선단. 2026 갑오징어 출조 9/21~11/31. 9.79톤 22인승 2023년 신조선"
+  },
+  {
+   "bid": 202,
+   "name": "퍼스트호",
+   "operator": "블레스 선단",
+   "region": "충남 태안군",
+   "port": "신진도항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://blessho.com/",
+    "phone": "010-3956-7016"
+   },
+   "notes": "블레스 선단 소속. 홈페이지에 선박예약현황 있음(2026 쭈갑시즌 주꾸미 9/1~9/20 공통 출조)"
+  },
+  {
+   "bid": 203,
+   "name": "해주호 (바다사랑 낚시펜션)",
+   "operator": "바다사랑 낚시펜션",
+   "region": "충남 태안군",
+   "port": "안면도 (출항 항구 미확인)",
+   "price": "5만원",
+   "capacity": null,
+   "channels": {
+    "phone": "010-2421-7144"
+   },
+   "notes": "안면도 바다사랑 낚시펜션 운영 배(해주호·바다사랑호·해주2호). 2026년 공지: 4시간 체험낚시 1인 5만원(낚시대 포함, 전화예약만), 종일배는 미운영. 쭈꾸미 시즌 체험 위주 운영"
+  },
+  {
+   "bid": 204,
+   "name": "성남호",
+   "operator": "안흥성남낚시",
+   "region": "충남 태안군",
+   "port": "안흥항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.sungnamho.com",
+    "phone": "041-675-1171"
+   },
+   "notes": "우럭·광어·쭈꾸미·갑오징어·고등어·갈치·대구(자체 홈페이지 키워드). 주소: 충남 태안군 안흥1길 35, 휴대전화 010-3410-1171. 요금 미확인."
+  },
+  {
+   "bid": 205,
+   "name": "청용호",
+   "operator": "가람낚시",
+   "region": "충남 태안군",
+   "port": "안흥항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://changdukho.com"
+   },
+   "notes": "광어 다운샷·우럭·쭈꾸미(매경 주간 바다낚시 기사에서 안흥항 출조 배로 수차례 언급, 온라인 예약 제공). 자체 홈페이지 접속 시 403으로 전화번호 미확인."
+  },
+  {
+   "bid": 206,
+   "name": "맥가이버호",
+   "operator": null,
+   "region": "충남 태안군",
+   "port": "영목항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "phone": "010-9115-3545"
+   },
+   "notes": "쭈꾸미·갑오징어 전문(2025-09 후기, 100마리+ 조과). 선장 유태훈, 집결: 영목항 여객선터미널. 요금 미확인. / 미확인 — 2025.9 네이버 블로그 쭈꾸미 출조 후기에서 영목항 신상배(초록색)로 확인됨(쭈꾸미·갑오징어). 후기 작성자가 '사이트에서 예약'이라 언급했으나 해당 사이트·전화번호는 웹에서 확인 불가"
+  },
+  {
+   "bid": 207,
+   "name": "상록호",
+   "operator": "차부낚시",
+   "region": "충남 태안군",
+   "port": "영목항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "naver": "https://naver.me/5PlQGCKQ"
+   },
+   "notes": "쭈꾸미·갑오징어 두족류 전문(유튜브 '영목항 차부낚시(상록호)', 2026-09 조황 영상 확인). 체험낚시(차부낚시) 성격. 요금·연락처·예약 채널 미확인. / 유튜브 쭈꾸미·갑오징어 출조 영상에 '영목항 차부피싱(상록호)' 예약 링크로 naver.me 링크 표기. 네이버 예약 링크로 추정되나 링크 직접 확인 불가(페이지 로드 실패)"
+  },
+  {
+   "bid": 208,
+   "name": "마이웨이호",
+   "operator": null,
+   "region": "충남 홍성군",
+   "port": "남당항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갑오징어·쭈꾸미 (오전 공략형). 2026년 네이버 블로그 갑오징어 출조 후기 확인"
+  },
+  {
+   "bid": 209,
+   "name": "진영호",
+   "operator": null,
+   "region": "충남 홍성군",
+   "port": "남당항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "갑오징어 (원산도 인근 포인트; 선착장 앞 주차). 2026.6 네이버 블로그 출조 후기 확인"
+  },
+  {
+   "bid": 210,
+   "name": "전곡항해적단",
+   "operator": null,
+   "region": "화성시",
+   "port": "전곡항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "미확인. 블로그 출조 후기에 '전곡항해적단' 집결·요트 쭈꾸미 낚시로만 언급됨. 예약 채널·요금·연락처 미확인"
+  },
+  {
+   "bid": 211,
+   "name": "화니호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 양희환). 18인승, 백조기 종일낚시 8만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 212,
+   "name": "신주호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 신동배). 18인승, 백조기 종일낚시 8만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 213,
+   "name": "호호호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 김영덕). 9인승, 백조기 오전반 5만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 214,
+   "name": "지프로호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 지성민). 16인승, 다잡아+농어 12만원 / 문어 11만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 215,
+   "name": "뉴아폴로호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 신주영). 18인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 216,
+   "name": "천일호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 박영직). 22인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 218,
+   "name": "엔조이호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 고병규). 22인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인."
+  },
+  {
+   "bid": 219,
+   "name": "포인트호",
+   "operator": "총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {},
+   "notes": "총각피싱 선단 (선장 황시영). 20인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 삼천포 포인트호와 동명이인. 쭈꾸미 출조 미확인."
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "https://ssfish.kr",
+    "phone": "010-6480-0115"
+   },
+   "name": "헤라호",
+   "notes": "쭈꾸미·갑오징어(가을). 주의: 오천항에도 헤라호(헤라피싱) 존재 — 동명이인인지 동일 선체인지 미확인. 출처: ssfish.kr 메인 + 네이버 블로그 출조 후기",
+   "operator": "무창포선상낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 220
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "https://ssfish.kr",
+    "phone": "010-6480-0115"
+   },
+   "name": "갤럭시호",
+   "notes": "쭈꾸미·갑오징어(가을). 출처: ssfish.kr 메인 listed",
+   "operator": "무창포선상낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 221
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "https://ssfish.kr",
+    "phone": "010-6480-0115"
+   },
+   "name": "블루포스호",
+   "notes": "쭈꾸미·갑오징어(가을). 출처: ssfish.kr 메인 + band.us 밴드",
+   "operator": "무창포선상낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 222
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bravofishing.kr",
+    "phone": "010-4759-7177"
+   },
+   "name": "브라보피싱호",
+   "notes": "참돔타이라바·광어다운샷·농어·쭈꾸미·갑오징어·백조기. 주의: 기존 '무창포 세훈낚시'와 동일 선체(상호변경)일 가능성 — 중복 등록 주의. 출처: bravofishing.kr + 바다타임 2026 조황",
+   "operator": "무창포브라보낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 223
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bravofishing.kr",
+    "phone": "010-4759-7177"
+   },
+   "name": "리더스호",
+   "notes": "쭈꾸미(조황 기준, 어종 다양). 출처: bravofishing.kr + 바다타임 2026 조황",
+   "operator": "무창포브라보낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 224
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bravofishing.kr",
+    "phone": "010-4759-7177"
+   },
+   "name": "레전드호",
+   "notes": "쭈꾸미·갑오징어(조황 기준). 출처: bravofishing.kr + 바다타임 2026 조황",
+   "operator": "무창포브라보낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 225
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bravofishing.kr",
+    "phone": "010-4759-7177"
+   },
+   "name": "킹덤호",
+   "notes": "쭈꾸미(조황 기준). 주의: 오천항에도 킹덤호(kingdomfish.net) 존재 — 동명이인 미확인. 출처: bravofishing.kr",
+   "operator": "무창포브라보낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 226
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bravofishing.kr",
+    "phone": "010-4759-7177"
+   },
+   "name": "고스트호",
+   "notes": "쭈꾸미(조황 기준). 출처: bravofishing.kr",
+   "operator": "무창포브라보낚시",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 227
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804"
+   },
+   "name": "장수호",
+   "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
+   "operator": "무창포총각피싱",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 228
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804"
+   },
+   "name": "세븐호",
+   "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
+   "operator": "무창포총각피싱",
+   "port": "무창포항",
+   "price": "",
+   "region": "무창포",
+   "bid": 229
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-8884-2204",
+    "sunsang24": "http://ocpro.sunsang24.com/"
+   },
+   "name": "비바호",
+   "notes": "쭈꾸미/갑오징어/백조기. 전화번호 010-5208-6537도 같은 선단에서 확인됨(2개 번호 존재). 출처: 선상24 ocpro + 블로그 후기",
+   "operator": "오천프로낚시",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 230
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-8884-2204",
+    "sunsang24": "http://ocpro.sunsang24.com/"
+   },
+   "name": "가즈아호",
+   "notes": "쭈꾸미 전문. 출처: 선상24 ocpro (2026-09 조황)",
+   "operator": "오천프로낚시",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 231
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-8019-8282"
+   },
+   "name": "발키리7호",
+   "notes": "갑오징어/쭈꾸미/백조기/광어다운샷/우럭. 출처: 네이버 블로그(2026-09 오천항 낚싯배 비교)",
+   "operator": "오천루어스쿨",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 232
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-5410-2027",
+    "sunsang24": "http://rkclgh.sunsang24.com/"
+   },
+   "name": "자이언트호",
+   "notes": "주꾸미/갑오징어/광어/우럭/참돔/농어. 까치선장. 2026-09 조황으로 운항 확정. 출처: 선상24 rkclgh + 네이버밴드",
+   "operator": "누리피싱",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 233
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "homepage": "http://www.blueseaho.com"
+   },
+   "name": "푸른바다테스호",
+   "notes": "갑오징어/쭈꾸미. 2026년 YouTube 출조 영상 확인. 출처: 유튜브(케이팝스토리TV) + 블로그",
+   "operator": "푸른바다",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 234
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-9371-0741",
+    "sunsang24": "http://pigho.sunsang24.com/"
+   },
+   "name": "꽃돼지호",
+   "notes": "주꾸미/갑오징어(+참돔). 출처: 선상24 pigho",
+   "operator": "오천항 꽃돼지",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 235
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-5496-0084",
+    "sunsang24": "http://muldori.sunsang24.com/"
+   },
+   "name": "물돌이호",
+   "notes": "쭈꾸미/갑오징어(9~11월). 2026시즌 복귀 공지. 출처: 선상24 muldori",
+   "operator": "물돌이",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 236
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-3667-5556",
+    "sunsang24": "http://princeho.sunsang24.com/"
+   },
+   "name": "프린스호",
+   "notes": "쭈꾸미/갑오징어. 2026 쭈갑 선비 10만원. 출처: 선상24 princeho",
+   "operator": "오천항 프린스",
+   "port": "오천항",
+   "price": "100000",
+   "region": "오천항",
+   "bid": 237
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-5151-2431",
+    "sunsang24": "http://ebada.sunsang24.com/"
+   },
+   "name": "이바다호",
+   "notes": "주꾸미/갑오징어. 2026-09 조황 활발. 출처: 선상24 ebada",
+   "operator": "이바다낚시",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 238
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-7934-5856",
+    "sunsang24": "http://haemosoo.sunsang24.com/"
+   },
+   "name": "해모수호",
+   "notes": "광어/우럭다운샷/쭈꾸미/문어·갑오징어/백조기. ebada.sunsang24.com에도 선단 소속으로 표시됨. 출처: 선상24 haemosoo/ebada",
+   "operator": "이바다낚시",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 239
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": ""
+   },
+   "name": "독한놈호",
+   "notes": "쭈꾸미/갑오징어. 선비 9만원. 공식 홈페이지·전화 미확인 — 네이버밴드(오늘도바다)/유튜브 후기 언급만. 출처: 밴드/유튜브",
+   "operator": "독한놈",
+   "port": "오천항",
+   "price": "90000",
+   "region": "오천항",
+   "bid": 240
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-5436-9009",
+    "sunsang24": "http://keoyang.sunsang24.com/"
+   },
+   "name": "거양호",
+   "notes": "쭈꾸미/갑오징어/광어/우럭/백조기/참돔타이라바. 출처: 선상24 keoyang",
+   "operator": "피싱아지트",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 241
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-2574-4277",
+    "sunsang24": "http://haemaho.sunsang24.com/"
+   },
+   "name": "해마호",
+   "notes": "광어다운샷/우럭/백조기/문어/외수질/쭈꾸미. 선사명 미확인(자체 운영). 출처: 선상24 haemaho",
+   "operator": "미확인",
+   "port": "오천항",
+   "price": "",
+   "region": "오천항",
+   "bid": 242
+  }
+ ]
+}
