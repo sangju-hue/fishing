@@ -1082,7 +1082,8 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "naver": "https://blog.naver.com/miso-room"
+    "naver": "https://blog.naver.com/miso-room",
+    "sunsang24": "https://roomi.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "루미호와 같은 선사의 자매선(블로그 '루미호n다온호'). 쭈꾸미 출조 병행 추정이나 단독 확인 자료 없음. 2026년 운항 여부 미확인",
    "catalog_sources": [
@@ -1098,7 +1099,8 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "naver": "https://blog.naver.com/miso-room"
+    "naver": "https://blog.naver.com/miso-room",
+    "sunsang24": "https://roomi.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "선장 직영 블로그 '루미호n다온호' 운영. 쭈꾸미 출조 확인(2025.10.16~28, 쭈꾸미 물때 출조 및 갑오징어 병행). 2026년 운항 여부 미확인. 선상24 등록 여부 미확인. 출항 시간 미확인",
    "catalog_sources": [
