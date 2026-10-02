@@ -230,3 +230,7 @@ python3 scrape_sunsang24.py --help
 - **schedule_no 추출 기능 추가**: 예약 딥링크를 생성하기 위해 HTML `data-schedule_no` 속성값을 파싱하여 JSON 상태에 함께 저장하도록 업그레이드됨.
 
 **현재 상태**: 위 변경 사항들은 `push_to_github.py`를 통해 GitHub에 성공적으로 푸시되었음.
+
+- **꿈에그린호 (태안)**: 사용자 요청에 따라 선상24 스크래핑 URL ()을 의 에 추가 완료 (2026-10-03).
+
+- **꿈에그린호 (태안)**: 사용자 요청에 따라 선상24 스크래핑 URL (https://dream.sunsang24.com) 을 boats.json에 추가 완료 (2026-10-03).

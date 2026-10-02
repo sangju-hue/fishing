@@ -695,7 +695,9 @@
             "port": "태안",
             "region": "충남 태안군",
             "price": "얼린 2L 생수 지참 공지",
-            "channels": {},
+            "channels": {
+                "sunsang24": "https://dream.sunsang24.com/ship/schedule_fleet"
+            },
             "tags": [],
             "manual": false,
             "bid": 32
