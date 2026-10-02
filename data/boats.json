@@ -586,7 +586,8 @@
                 "부자호",
                 "빅마린호"
             ],
-            "catalog_status": "booking_verified"
+            "catalog_status": "booking_verified",
+            "operator": "무창포 프로낚시"
         },
         {
             "name": "뉴해양호",
@@ -1232,7 +1233,7 @@
         {
             "bid": 86,
             "name": "무창포 피싱마린호",
-            "operator": null,
+            "operator": "무창포 선상낚시",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -1288,7 +1289,7 @@
         {
             "bid": 89,
             "name": "배짱호",
-            "operator": null,
+            "operator": "무창포 피싱위너",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3496,7 +3497,7 @@
         {
             "bid": 215,
             "name": "뉴아폴로호",
-            "operator": "총각피싱",
+            "operator": "무창포 아폴로",
             "region": "충남 보령시",
             "port": "무창포항",
             "price": "",
@@ -3608,7 +3609,7 @@
             },
             "name": "갤럭시호",
             "notes": "쭈꾸미·갑오징어(가을). 출처: ssfish.kr 메인 listed",
-            "operator": "무창포선상낚시",
+            "operator": "무창포 선상낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3682,7 +3683,7 @@
             },
             "name": "리더스호",
             "notes": "쭈꾸미(조황 기준, 어종 다양). 출처: bravofishing.kr + 바다타임 2026 조황",
-            "operator": "무창포브라보낚시",
+            "operator": "무창포 브라보낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3706,7 +3707,7 @@
             },
             "name": "레전드호",
             "notes": "쭈꾸미·갑오징어(조황 기준). 출처: bravofishing.kr + 바다타임 2026 조황",
-            "operator": "무창포브라보낚시",
+            "operator": "무창포 브라보낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -3748,7 +3749,7 @@
             },
             "name": "고스트호",
             "notes": "쭈꾸미(조황 기준). 출처: bravofishing.kr",
-            "operator": "무창포브라보낚시",
+            "operator": "무창포 브라보낚시",
             "port": "무창포항",
             "price": "",
             "region": "무창포",
@@ -6456,7 +6457,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "써니호·뉴써니호",
+            "operator": "무창포 소라피싱",
             "capacity": 22,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6732,7 +6733,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 현대피싱호",
+            "operator": "무창포 체이스낚시",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -6948,7 +6949,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 깜보호",
+            "operator": "무창포 피싱위너",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7017,7 +7018,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 이범호",
+            "operator": "무창포 전투낚시",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7036,7 +7037,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 킹피쉬호",
+            "operator": "무창포 킹피싱",
             "capacity": 18,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7185,7 +7186,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 조양호",
+            "operator": "무창포 피싱위너",
             "capacity": 21,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
@@ -7214,7 +7215,9 @@
                 "https://naksigo.com/boat/%ED%9A%A8%EC%84%B1?id=6949"
             ],
             "booking_names": [
-                "효성"
+                "효성",
+                "로빈호",
+                "효성(로빈호)"
             ],
             "catalog_status": "booking_verified"
         },
@@ -7230,7 +7233,7 @@
             },
             "tags": [],
             "manual": false,
-            "operator": "무창포항 체이스호",
+            "operator": "무창포 체이스낚시",
             "capacity": 22,
             "catalog_checked_at": "2026-10-02T22:41:47+09:00",
             "catalog_sources": [
