@@ -54,6 +54,8 @@ def parse_month(html, yyyymm):
         fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
         if not any(k in fish for k in JJUKKUMI):
             continue
+        sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
+        sno = sno_m.group(1) if sno_m else None
         rm = re.search(r'<li class="remain"(.*?)</li>', tr, re.S)
         status, remaining = "unknown", None
         if rm:
@@ -71,7 +73,7 @@ def parse_month(html, yyyymm):
                     status = "full"
                 elif "점검" in cell:
                     status = "maintenance"
-        out.setdefault(sdate, []).append((ship, fish, status, remaining))
+        out.setdefault(sdate, []).append((ship, fish, status, remaining, sno))
     return out
 
 
@@ -90,6 +92,8 @@ def parse_simple_list(html, yyyymm, ship_name):
         if not any(k in fish for k in JJUKKUMI):
             continue
         status, remaining = "unknown", None
+        sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
+        sno = sno_m.group(1) if sno_m else None
         sm2 = re.search(r'data-status_code="(END|CANCEL|CHECK)"', tr)
         if sm2:
             if sm2.group(1) == "END": status = "full"
@@ -103,7 +107,7 @@ def parse_simple_list(html, yyyymm, ship_name):
                 status = "full"
             elif "점검" in tr:
                 status = "maintenance"
-        out.setdefault(sdate, []).append((ship_name, fish, status, remaining))
+        out.setdefault(sdate, []).append((ship_name, fish, status, remaining, sno))
     return out
 
 
@@ -111,15 +115,26 @@ def parse_simple_list(html, yyyymm, ship_name):
 def aggregate(trips):
     """같은 날짜·같은 배의 여러 출조 집계."""
     avail = [t for t in trips if t[2] == "available"]
+    is_octopus = any("문어" in (t[1] or "") for t in trips)
+    fish_str = "문어" if is_octopus else None
+    sno = next((t[4] for t in trips if len(t)>4 and t[4]), None)
+    
     if avail:
-        return {"status": "available", "remaining": max(t[3] or 0 for t in avail)}
-    if any(t[2] == "full" for t in trips):
-        return {"status": "full", "remaining": 0}
-    if any(t[2] == "maintenance" for t in trips):
-        return {"status": "maintenance", "remaining": 0}
-    if trips and all(t[2] == "cancelled" for t in trips):
-        return {"status": "cancelled", "remaining": 0}
-    return {"status": "unknown", "remaining": None}
+        res = {"status": "available", "remaining": max(t[3] or 0 for t in avail)}
+    elif any(t[2] == "full" for t in trips):
+        res = {"status": "full", "remaining": 0}
+    elif any(t[2] == "maintenance" for t in trips):
+        res = {"status": "maintenance", "remaining": 0}
+    elif trips and all(t[2] == "cancelled" for t in trips):
+        res = {"status": "cancelled", "remaining": 0}
+    else:
+        return {"status": "unknown", "remaining": None}
+        
+    if fish_str:
+        res["fish"] = fish_str
+    if sno:
+        res["sno"] = sno
+    return res
 
 
 def subdomain(url):
@@ -178,7 +193,8 @@ def main():
                         if state['status']=='unknown':continue
                         cap=b.get('capacity')
                         if cap and (state['remaining'] or 0)>cap:continue
-                        results[(str(b['bid']),ds)]=dict(state,boat_id=b['bid'],source='sunsang24',source_url=url,checked_at=checked_at)
+                        surl = f'https://{sub}.sunsang24.com/mypage/reservation_ready/{state.pop("sno")}' if state.get("sno") else url
+                        results[(str(b['bid']),ds)]=dict(state,boat_id=b['bid'],source='sunsang24',source_url=surl,checked_at=checked_at)
             except Exception as e:errors.append(str(e))
         print(sub,len(results),'건',len(errors),'오류',flush=True)
         return group,results,errors

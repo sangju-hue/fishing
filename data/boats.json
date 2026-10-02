@@ -1032,13 +1032,15 @@
         },
         {
             "bid": 62,
-            "name": "해피호",
+            "name": "해피호(오전)",
             "operator": "국제유선",
             "region": "인천 중구",
             "port": "남항유어선부두",
             "price": "평일 45,000원 / 주말 50,000원",
             "capacity": null,
-            "channels": {},
+            "channels": {
+                "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
+            },
             "notes": "오전배 06:30~11:30 / 오후배 12:10~17:00. 종일배는 고속정 부킹호로 운영. 선상떡볶이·쭈라면 서비스, 낚싯대 대여 1만원. 공식 홈페이지·네이버예약 있다고 하나 URL 미확인. 후기: https://blog.naver.com/eunjun2009/224401084738 / 쭈꾸미·우럭·광어·백조기 체험. 오전 06:30~11:20 / 오후 12:10~17:00. 성인 평일 45,000원·주말 50,000원, 어린이 평일 35,000원·주말 40,000원 (2026-09-23 출조 후기 기준). 낚싯대 대여 10,000원. 57인승 규모."
         },
         {
@@ -7740,6 +7742,45 @@
                 "악바리호"
             ],
             "bid": 419
+        },
+        {
+            "bid": 767704,
+            "name": "해피호(오후)",
+            "operator": "국제유선",
+            "region": "인천 중구",
+            "port": "남항유어선부두",
+            "price": "평일 45,000원 / 주말 50,000원",
+            "capacity": null,
+            "channels": {
+                "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
+            },
+            "notes": "오전배 06:30~11:30 / 오후배 12:10~17:00. 종일배는 고속정 부킹호로 운영. 선상떡볶이·쭈라면 서비스, 낚싯대 대여 1만원. 공식 홈페이지·네이버예약 있다고 하나 URL 미확인. 후기: https://blog.naver.com/eunjun2009/224401084738 / 쭈꾸미·우럭·광어·백조기 체험. 오전 06:30~11:20 / 오후 12:10~17:00. 성인 평일 45,000원·주말 50,000원, 어린이 평일 35,000원·주말 40,000원 (2026-09-23 출조 후기 기준). 낚싯대 대여 10,000원. 57인승 규모."
+        },
+        {
+            "bid": 971087,
+            "name": "하나호",
+            "operator": "국제유선",
+            "region": "인천 중구",
+            "port": "남항유어선부두",
+            "price": "평일 45,000원 / 주말 50,000원",
+            "capacity": null,
+            "channels": {
+                "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
+            },
+            "notes": "국제유선 하나호"
+        },
+        {
+            "bid": 716002,
+            "name": "부킹호",
+            "operator": "국제유선",
+            "region": "인천 중구",
+            "port": "남항유어선부두",
+            "price": "평일 45,000원 / 주말 50,000원",
+            "capacity": null,
+            "channels": {
+                "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
+            },
+            "notes": "국제유선 종일배"
         }
     ],
     "updated_at": "2026-10-02T22:41:47+09:00"
