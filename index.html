@@ -163,10 +163,11 @@ const dateKey=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
 const hasOwnBookingPage=boat=>Boolean(boat.channels.homepage||boat.channels.sunsang24||boat.channels.naver);
 const onlineBoats=()=>BOATS.filter(hasOwnBookingPage);
 const offlineBoats=()=>BOATS.filter(boat=>!hasOwnBookingPage(boat));
-const primaryUrl=boat=>boat.channels.sunsang24||boat.channels.homepage||boat.channels.naver||boat.channels.band||"";
+const primaryUrl=boat=>boat.channels.homepage||boat.channels.sunsang24||boat.channels.naver||boat.channels.band||"";
 const websiteUrl=boat=>safeHref('homepage',boat.channels.homepage||boat.channels.sunsang24||boat.channels.naver||'');
 const channelNames={sunsang24:"선상24",band:"밴드",naver:"네이버예약",homepage:"홈페이지",phone:"전화"};
 function bookingUrl(boat,date=selectedDate){
+  if(boat.channels.homepage) return boat.channels.homepage;
   const raw=boat.channels.sunsang24||"";
   if(!raw)return primaryUrl(boat);
   if(raw.includes("/ship/board_detail/"))return raw;
@@ -426,7 +427,9 @@ function handleStatusClick(bid,date,status){
   
   if(boat){
     let targetUrl="";
-    if(boat.channels.sunsang24){
+    if(boat.channels.homepage){
+      targetUrl=boat.channels.homepage;
+    }else if(boat.channels.sunsang24){
       targetUrl=bookingUrl(boat,date);
     }else{
       let sourceUrl=null;
