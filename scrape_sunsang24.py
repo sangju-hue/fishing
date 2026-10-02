@@ -71,6 +71,35 @@ def parse_month(html, yyyymm):
     return out
 
 
+def parse_simple_list(html, yyyymm, ship_name):
+    """선단(fleet)에서 개별 배 일정(ship_one_list)의 HTML 파싱."""
+    u = unescape_js(html)
+    out = {}
+    prefix = yyyymm[:4] + "-" + yyyymm[4:]
+    for tr in u.split("<tr")[1:]:
+        dm = re.search(r'data-sdate="(\d{4}-\d{2}-\d{2})"', tr)
+        if not dm or not dm.group(1).startswith(prefix):
+            continue
+        sdate = dm.group(1)
+        fm = re.search(r'<div id="fish">(.*?)</div>', tr, re.S)
+        fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
+        if not any(k in fish for k in JJUKKUMI):
+            continue
+        status, remaining = "unknown", None
+        sm2 = re.search(r'data-status_code="(END|CANCEL)"', tr)
+        if sm2:
+            status = "full" if sm2.group(1) == "END" else "cancelled"
+        else:
+            nm = re.search(r"남은자리.*?<span[^>]*>(\d+)명</span>", tr, re.S)
+            if nm:
+                status, remaining = "available", int(nm.group(1))
+            elif "예약마감" in tr:
+                status = "full"
+        out.setdefault(sdate, []).append((ship_name, fish, status, remaining))
+    return out
+
+
+
 def aggregate(trips):
     """같은 날짜·같은 배의 여러 출조 집계.
     셀에 표시할 숫자는 '한 출조당 최대 잔여석'(max) — 합산하면 정원(예: 20명)을
@@ -121,6 +150,17 @@ def main():
             ym=month.strftime('%Y%m');url=f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}'
             try:
                 h,_=client.fetch(url);parsed=parse_month(h,ym)
+                if not any(parsed.values()):
+                    simple_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet_simple/{ym}'
+                    h_simple, _ = client.fetch(simple_url)
+                    ship_buttons = re.findall(r'<button class="btn btn-schedule-ship btn[^>]*data-ship-list-no="(\d+)".*?>\s*<strong>(.*?)</strong>', h_simple)
+                    for ship_no, ship_name in ship_buttons:
+                        if int(ship_no) == 0: continue
+                        list_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}/{ship_no}/ship_one_list'
+                        h_list, _ = client.fetch(list_url)
+                        parsed_list = parse_simple_list(h_list, ym, norm_ship(ship_name))
+                        for d, trips in parsed_list.items():
+                            parsed.setdefault(d, []).extend(trips)
                 named=any(t[0] for trips in parsed.values() for t in trips)
                 for ds,trips in parsed.items():
                     if not first.isoformat()<=ds<=end.isoformat():continue
