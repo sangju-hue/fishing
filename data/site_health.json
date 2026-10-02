@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T08:00:06+09:00",
+ "checked_at": "2026-10-03T08:04:06+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -169,6 +169,37 @@
    ],
    "errors": []
   },
+  "xn--2s2b21pgpc0m80y16e.com": {
+   "status": "ok",
+   "url": "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk",
+   "entries": 118,
+   "boats": [
+    "발키리호 (오천루어스쿨)",
+    "발키리7호"
+   ],
+   "boat_ids": {
+    "발키리호 (오천루어스쿨)": 15,
+    "발키리7호": 232
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "☆발키리7호☆",
+    "☆발키리호☆",
+    "공지사항"
+   ],
+   "pages_checked": 28,
+   "booking_urls": [
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "xn--xk3bm1aee249g.com": {
    "status": "ok",
    "url": "http://xn--xk3bm1aee249g.com/index.php?mid=bk",
@@ -230,37 +261,6 @@
     "http://www.sharkho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.sharkho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.sharkho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "xn--2s2b21pgpc0m80y16e.com": {
-   "status": "ok",
-   "url": "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk",
-   "entries": 118,
-   "boats": [
-    "발키리호 (오천루어스쿨)",
-    "발키리7호"
-   ],
-   "boat_ids": {
-    "발키리호 (오천루어스쿨)": 15,
-    "발키리7호": 232
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "☆발키리7호☆",
-    "☆발키리호☆",
-    "공지사항"
-   ],
-   "pages_checked": 28,
-   "booking_urls": [
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -521,6 +521,34 @@
    ],
    "errors": []
   },
+  "songdofish.com": {
+   "status": "ok",
+   "url": "http://songdofish.com/index.php",
+   "entries": 59,
+   "boats": [
+    "킹스타호"
+   ],
+   "boat_ids": {
+    "킹스타호": 44
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "킹스타5호",
+    "킹스타호"
+   ],
+   "pages_checked": 11,
+   "booking_urls": [
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "muchangpofishing.co.kr": {
    "status": "partial",
    "url": "http://muchangpofishing.co.kr/index.php?mid=bk",
@@ -567,34 +595,6 @@
     "https://muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "songdofish.com": {
-   "status": "ok",
-   "url": "http://songdofish.com/index.php",
-   "entries": 59,
-   "boats": [
-    "킹스타호"
-   ],
-   "boat_ids": {
-    "킹스타호": 44
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "킹스타5호",
-    "킹스타호"
-   ],
-   "pages_checked": 11,
-   "booking_urls": [
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -729,47 +729,6 @@
    "booking_urls": [],
    "errors": []
   },
-  "nqoon.kr": {
-   "status": "fetch_failed",
-   "url": "http://www.nqoon.kr",
-   "entries": 0,
-   "boats": [
-    "대천항 스파이더호",
-    "아이언호",
-    "올림피아호"
-   ],
-   "boat_ids": {
-    "대천항 스파이더호": 79,
-    "아이언호": 82,
-    "올림피아호": 84
-   },
-   "missing_boats": [
-    "대천항 스파이더호",
-    "아이언호",
-    "올림피아호"
-   ],
-   "observed_ship_labels": [],
-   "pages_checked": 0,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "http://www.nqoon.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://www.nqoon.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://nqoon.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "http://nqoon.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    }
-   ]
-  },
   "emperorfishing.com": {
    "status": "ok",
    "url": "http://www.emperorfishing.com/index.php?mid=bk",
@@ -797,40 +756,34 @@
    ],
    "errors": []
   },
-  "ubking.co.kr": {
-   "status": "fetch_failed",
-   "url": "http://www.ubking.co.kr",
-   "entries": 0,
+  "ssfishing.kr": {
+   "status": "ok",
+   "url": "http://ssfishing.kr",
+   "entries": 59,
    "boats": [
-    "어복킹선단"
+    "대천항 스파이더호"
    ],
    "boat_ids": {
-    "어복킹선단": 83
+    "대천항 스파이더호": 79
    },
-   "missing_boats": [
-    "어복킹선단"
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "공지사항",
+    "슈퍼스타  (도니선장,사니사무장)",
+    "스파이더호  010-7453-6665  (김선장)"
    ],
-   "observed_ship_labels": [],
-   "pages_checked": 0,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "http://www.ubking.co.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://www.ubking.co.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://ubking.co.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "http://ubking.co.kr",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    }
-   ]
+   "pages_checked": 11,
+   "booking_urls": [
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://ssfishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
   },
   "gilfish.co.kr": {
    "status": "ok",
@@ -859,30 +812,93 @@
    ],
    "errors": []
   },
-  "teammansu.kr": {
+  "olympiaho.com": {
    "status": "ok",
-   "url": "https://teammansu.kr/index.php?mid=bk",
+   "url": "http://www.olympiaho.com",
    "entries": 59,
    "boats": [
-    "팀만수호"
+    "올림피아호"
    ],
    "boat_ids": {
-    "팀만수호": 56
+    "올림피아호": 84
    },
    "missing_boats": [],
    "observed_ship_labels": [
-    "팀만수"
+    "올림피아호"
    ],
-   "pages_checked": 26,
+   "pages_checked": 11,
    "booking_urls": [
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "xn--vk1b02l9xl9paj8p25p.kr": {
+   "status": "no_data",
+   "url": "http://xn--vk1b02l9xl9paj8p25p.kr/index.php?mid=bk",
+   "entries": 0,
+   "boats": [
+    "메이저호"
+   ],
+   "boat_ids": {
+    "메이저호": 80
+   },
+   "missing_boats": [
+    "메이저호"
+   ],
+   "observed_ship_labels": [
+    "010-4172-1383(이선장,사무장)",
+    "공지사항"
+   ],
+   "pages_checked": 27,
+   "booking_urls": [],
+   "errors": []
+  },
+  "ochzeus.com": {
+   "status": "ok",
+   "url": "http://www.ochzeus.com",
+   "entries": 59,
+   "boats": [
+    "제우스호"
+   ],
+   "boat_ids": {
+    "제우스호": 85
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "공지사항",
+    "메이저호  010-4172-1383  (이선장,사무장)",
+    "몬스터호(처리선장)",
+    "볼트호  (황용기선장)  010-9330-7566",
+    "슈퍼스타  (도니선장,사니사무장)",
+    "스파이더호  010-7453-6665  (김선장)",
+    "제우스호  (양선장,사무장)",
+    "팀몬스터호  (우기선장,바니사무장)",
+    "할리호  (보미선장,사무장)010-7581-4000"
+   ],
+   "pages_checked": 18,
+   "booking_urls": [
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -936,67 +952,31 @@
    ],
    "errors": []
   },
-  "ochzeus.com": {
+  "teammansu.kr": {
    "status": "ok",
-   "url": "http://www.ochzeus.com",
+   "url": "https://teammansu.kr/index.php?mid=bk",
    "entries": 59,
    "boats": [
-    "제우스호"
+    "팀만수호"
    ],
    "boat_ids": {
-    "제우스호": 85
+    "팀만수호": 56
    },
    "missing_boats": [],
    "observed_ship_labels": [
-    "공지사항",
-    "메이저호  010-4172-1383  (이선장,사무장)",
-    "몬스터호(처리선장)",
-    "볼트호  (황용기선장)  010-9330-7566",
-    "슈퍼스타  (도니선장,사니사무장)",
-    "스파이더호  010-7453-6665  (김선장)",
-    "제우스호  (양선장,사무장)",
-    "팀몬스터호  (우기선장,바니사무장)",
-    "할리호  (보미선장,사무장)010-7581-4000"
+    "팀만수"
    ],
-   "pages_checked": 18,
+   "pages_checked": 26,
    "booking_urls": [
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
-   "errors": []
-  },
-  "xn--vk1b02l9xl9paj8p25p.kr": {
-   "status": "no_data",
-   "url": "http://xn--vk1b02l9xl9paj8p25p.kr/index.php?mid=bk",
-   "entries": 0,
-   "boats": [
-    "메이저호"
-   ],
-   "boat_ids": {
-    "메이저호": 80
-   },
-   "missing_boats": [
-    "메이저호"
-   ],
-   "observed_ship_labels": [
-    "010-4172-1383(이선장,사무장)",
-    "공지사항"
-   ],
-   "pages_checked": 27,
-   "booking_urls": [],
    "errors": []
   },
   "spdman7.fishmap.kr": {
@@ -1055,36 +1035,6 @@
    ],
    "errors": []
   },
-  "hyosungho.com": {
-   "status": "ok",
-   "url": "http://www.hyosungho.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "신나래호"
-   ],
-   "boat_ids": {
-    "신나래호": 91
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "신나래호",
-    "효성(로빈호)"
-   ],
-   "pages_checked": 29,
-   "booking_urls": [
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
   "chongkakho.com": {
    "status": "partial",
    "url": "http://www.chongkakho.com/",
@@ -1128,6 +1078,36 @@
     "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "hyosungho.com": {
+   "status": "ok",
+   "url": "http://www.hyosungho.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "신나래호"
+   ],
+   "boat_ids": {
+    "신나래호": 91
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "신나래호",
+    "효성(로빈호)"
+   ],
+   "pages_checked": 29,
+   "booking_urls": [
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -1275,6 +1255,33 @@
    ],
    "errors": []
   },
+  "xn--jj0bj3lvmq92n.kr": {
+   "status": "ok",
+   "url": "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "금땡이호"
+   ],
+   "boat_ids": {
+    "금땡이호": 101
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "금땡이호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "ocheonkumkang.com": {
    "status": "ok",
    "url": "https://www.ocheonkumkang.com/index.php?mid=bk",
@@ -1312,71 +1319,6 @@
     "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "xn--jj0bj3lvmq92n.kr": {
-   "status": "ok",
-   "url": "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "금땡이호"
-   ],
-   "boat_ids": {
-    "금땡이호": 101
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "금땡이호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "aceho.thefishing.kr": {
-   "status": "partial",
-   "url": "https://aceho.thefishing.kr/index.php?mid=gall",
-   "entries": 59,
-   "boats": [
-    "두드림호",
-    "에이스호",
-    "신도2호"
-   ],
-   "boat_ids": {
-    "두드림호": 115,
-    "에이스호": 143,
-    "신도2호": 321
-   },
-   "missing_boats": [
-    "두드림호",
-    "에이스호"
-   ],
-   "observed_ship_labels": [
-    "공지",
-    "문일호",
-    "민박예약  방울이",
-    "신도1호",
-    "신도2호"
-   ],
-   "pages_checked": 11,
-   "booking_urls": [
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -1438,6 +1380,44 @@
      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
     }
    ]
+  },
+  "aceho.thefishing.kr": {
+   "status": "partial",
+   "url": "https://aceho.thefishing.kr/index.php?mid=gall",
+   "entries": 59,
+   "boats": [
+    "두드림호",
+    "에이스호",
+    "신도2호"
+   ],
+   "boat_ids": {
+    "두드림호": 115,
+    "에이스호": 143,
+    "신도2호": 321
+   },
+   "missing_boats": [
+    "두드림호",
+    "에이스호"
+   ],
+   "observed_ship_labels": [
+    "공지",
+    "문일호",
+    "민박예약  방울이",
+    "신도1호",
+    "신도2호"
+   ],
+   "pages_checked": 11,
+   "booking_urls": [
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
   },
   "5000fish.net": {
    "status": "ok",
@@ -1750,44 +1730,6 @@
     "http://www.yamujinfishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
-  },
-  "herafishing.net": {
-   "status": "fetch_failed",
-   "url": "http://www.herafishing.net",
-   "entries": 0,
-   "boats": [
-    "정선호",
-    "헤라호"
-   ],
-   "boat_ids": {
-    "정선호": 155,
-    "헤라호": 172
-   },
-   "missing_boats": [
-    "정선호",
-    "헤라호"
-   ],
-   "observed_ship_labels": [],
-   "pages_checked": 0,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "http://www.herafishing.net",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://www.herafishing.net",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://herafishing.net",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "http://herafishing.net",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    }
-   ]
   },
   "bestho.kr": {
    "status": "ok",
@@ -2300,51 +2242,6 @@
    ],
    "errors": []
   },
-  "soosungho.kr": {
-   "status": "ok",
-   "url": "http://soosungho.kr/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "수성호"
-   ],
-   "boat_ids": {
-    "수성호": 180
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "홍원항  수성호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "qkektkfkd.com": {
-   "status": "no_data",
-   "url": "https://www.qkektkfkd.com/",
-   "entries": 0,
-   "boats": [
-    "해주호 (바다사랑 낚시펜션)"
-   ],
-   "boat_ids": {
-    "해주호 (바다사랑 낚시펜션)": 203
-   },
-   "missing_boats": [
-    "해주호 (바다사랑 낚시펜션)"
-   ],
-   "observed_ship_labels": [],
-   "pages_checked": 2,
-   "booking_urls": [],
-   "errors": []
-  },
   "bless.thefishing.kr": {
    "status": "ok",
    "url": "http://bless.thefishing.kr/",
@@ -2373,6 +2270,51 @@
     "https://bless.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://bless.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://bless.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "qkektkfkd.com": {
+   "status": "no_data",
+   "url": "https://www.qkektkfkd.com/",
+   "entries": 0,
+   "boats": [
+    "해주호 (바다사랑 낚시펜션)"
+   ],
+   "boat_ids": {
+    "해주호 (바다사랑 낚시펜션)": 203
+   },
+   "missing_boats": [
+    "해주호 (바다사랑 낚시펜션)"
+   ],
+   "observed_ship_labels": [],
+   "pages_checked": 2,
+   "booking_urls": [],
+   "errors": []
+  },
+  "soosungho.kr": {
+   "status": "ok",
+   "url": "http://soosungho.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "수성호"
+   ],
+   "boat_ids": {
+    "수성호": 180
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "홍원항  수성호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -2868,6 +2810,29 @@
    ],
    "errors": []
   },
+  "blueseaho.com": {
+   "status": "no_data",
+   "url": "http://www.blueseaho.com",
+   "entries": 0,
+   "boats": [
+    "푸른바다테스호"
+   ],
+   "boat_ids": {
+    "푸른바다테스호": 234
+   },
+   "missing_boats": [
+    "푸른바다테스호"
+   ],
+   "observed_ship_labels": [],
+   "pages_checked": 32,
+   "booking_urls": [],
+   "errors": [
+    {
+     "url": "http://www.blueseaho.com/reservation?year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=0&sel=day",
+     "error": "요청 날짜 이후 예약 표 없음"
+    }
+   ]
+  },
   "raraho.kr": {
    "status": "ok",
    "url": "http://raraho.kr/index.php?mid=bk",
@@ -3047,29 +3012,6 @@
    ],
    "errors": []
   },
-  "blueseaho.com": {
-   "status": "no_data",
-   "url": "http://www.blueseaho.com",
-   "entries": 0,
-   "boats": [
-    "푸른바다테스호"
-   ],
-   "boat_ids": {
-    "푸른바다테스호": 234
-   },
-   "missing_boats": [
-    "푸른바다테스호"
-   ],
-   "observed_ship_labels": [],
-   "pages_checked": 32,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "http://www.blueseaho.com/reservation?year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=0&sel=day",
-     "error": "요청 날짜 이후 예약 표 없음"
-    }
-   ]
-  },
   "daegyonaksi.com": {
    "status": "ok",
    "url": "http://www.daegyonaksi.com/index.php?mid=bk",
@@ -3247,6 +3189,33 @@
    ],
    "errors": []
   },
+  "xn--hq1b18vy6duxas6dhx8a.com": {
+   "status": "ok",
+   "url": "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "원산도영종호"
+   ],
+   "boat_ids": {
+    "원산도영종호": 269
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "원산도영종호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "hsho.co.kr": {
    "status": "ok",
    "url": "https://hsho.co.kr/index.php?mid=bk",
@@ -3301,33 +3270,6 @@
     "http://xn--c20b03d25ji7g57dh16a.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://xn--c20b03d25ji7g57dh16a.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://xn--c20b03d25ji7g57dh16a.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "xn--hq1b18vy6duxas6dhx8a.com": {
-   "status": "ok",
-   "url": "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "원산도영종호"
-   ],
-   "boat_ids": {
-    "원산도영종호": 269
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "원산도영종호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -3593,33 +3535,6 @@
    ],
    "errors": []
   },
-  "xn--vk1bno833a20equbi60c.com": {
-   "status": "ok",
-   "url": "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "대박1호"
-   ],
-   "boat_ids": {
-    "대박1호": 293
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "대박1호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
   "seohaenaksi.com": {
    "status": "ok",
    "url": "http://www.seohaenaksi.com/index.php?mid=bk",
@@ -3646,6 +3561,33 @@
     "http://www.seohaenaksi.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.seohaenaksi.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.seohaenaksi.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "xn--vk1bno833a20equbi60c.com": {
+   "status": "ok",
+   "url": "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "대박1호"
+   ],
+   "boat_ids": {
+    "대박1호": 293
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "대박1호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -3721,6 +3663,33 @@
    "booking_urls": [],
    "errors": []
   },
+  "niceho.com": {
+   "status": "ok",
+   "url": "http://www.niceho.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "나이스호"
+   ],
+   "boat_ids": {
+    "나이스호": 297
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "나이스호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "legend.thefishing.kr": {
    "status": "ok",
    "url": "http://legend.thefishing.kr/index.php?mid=bk",
@@ -3747,33 +3716,6 @@
     "http://legend.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://legend.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://legend.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "niceho.com": {
-   "status": "ok",
-   "url": "http://www.niceho.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "나이스호"
-   ],
-   "boat_ids": {
-    "나이스호": 297
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "나이스호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -3829,33 +3771,6 @@
     "http://vipfishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://vipfishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://vipfishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "bravoho.kr": {
-   "status": "ok",
-   "url": "http://bravoho.kr/index.php?mid=bk",
-   "entries": 58,
-   "boats": [
-    "부라보호"
-   ],
-   "boat_ids": {
-    "부라보호": 308
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "부라보호"
-   ],
-   "pages_checked": 26,
-   "booking_urls": [
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -3934,6 +3849,33 @@
    ],
    "errors": []
   },
+  "bravoho.kr": {
+   "status": "ok",
+   "url": "http://bravoho.kr/index.php?mid=bk",
+   "entries": 58,
+   "boats": [
+    "부라보호"
+   ],
+   "boat_ids": {
+    "부라보호": 308
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "부라보호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "susung.thefishing.kr": {
    "status": "ok",
    "url": "https://susung.thefishing.kr/index.php?mid=bk",
@@ -3958,31 +3900,6 @@
     "https://susung.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://susung.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://susung.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "cruiseho.com": {
-   "status": "ok",
-   "url": "http://www.cruiseho.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "크루즈호"
-   ],
-   "boat_ids": {
-    "크루즈호": 319
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "크루즈호"
-   ],
-   "pages_checked": 24,
-   "booking_urls": [
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -4011,6 +3928,31 @@
     "https://sindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://sindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://sindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "cruiseho.com": {
+   "status": "ok",
+   "url": "http://www.cruiseho.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "크루즈호"
+   ],
+   "boat_ids": {
+    "크루즈호": 319
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "크루즈호"
+   ],
+   "pages_checked": 24,
+   "booking_urls": [
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -4221,6 +4163,46 @@
    "booking_urls": [],
    "errors": []
   },
+  "sorafishing.com": {
+   "status": "ok",
+   "url": "http://www.sorafishing.com/index.php?mid=bk",
+   "entries": 118,
+   "boats": [
+    "뉴써니호",
+    "씨마호"
+   ],
+   "boat_ids": {
+    "뉴써니호": 345,
+    "씨마호": 363
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "★공지사항★",
+    "★알림판★",
+    "뉴써니호  9.77톤  22인승(차승우)",
+    "뉴오복호",
+    "리무진수도권출조  버스(김화열)",
+    "미입금  취소자",
+    "써니호  9.77톤  22인승(차승준)",
+    "씨마호  9.77톤  22인승(최태연)",
+    "유진호  9인승(조철희)",
+    "취소자"
+   ],
+   "pages_checked": 35,
+   "booking_urls": [
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
   "muchangpo.kr": {
    "status": "partial",
    "url": "https://www.muchangpo.kr/index.php?mid=bk",
@@ -4265,46 +4247,6 @@
     "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
-  "sorafishing.com": {
-   "status": "ok",
-   "url": "http://www.sorafishing.com/index.php?mid=bk",
-   "entries": 118,
-   "boats": [
-    "뉴써니호",
-    "씨마호"
-   ],
-   "boat_ids": {
-    "뉴써니호": 345,
-    "씨마호": 363
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "★공지사항★",
-    "★알림판★",
-    "뉴써니호  9.77톤  22인승(차승우)",
-    "뉴오복호",
-    "리무진수도권출조  버스(김화열)",
-    "미입금  취소자",
-    "써니호  9.77톤  22인승(차승준)",
-    "씨마호  9.77톤  22인승(최태연)",
-    "유진호  9인승(조철희)",
-    "취소자"
-   ],
-   "pages_checked": 35,
-   "booking_urls": [
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -4359,6 +4301,35 @@
     "http://www.hitho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.hitho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://www.hitho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "gunmo.kr": {
+   "status": "ok",
+   "url": "https://gunmo.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "껀모호"
+   ],
+   "boat_ids": {
+    "껀모호": 350
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "공지사항",
+    "껀모호",
+    "온라인  승선명부  링크ㅡ공지사항"
+   ],
+   "pages_checked": 28,
+   "booking_urls": [
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -4450,35 +4421,6 @@
    ],
    "errors": []
   },
-  "gunmo.kr": {
-   "status": "ok",
-   "url": "https://gunmo.kr/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "껀모호"
-   ],
-   "boat_ids": {
-    "껀모호": 350
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "공지사항",
-    "껀모호",
-    "온라인  승선명부  링크ㅡ공지사항"
-   ],
-   "pages_checked": 28,
-   "booking_urls": [
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
   "xn--pq1ba055x.com": {
    "status": "ok",
    "url": "http://xn--pq1ba055x.com/index.php?mid=bk",
@@ -4533,34 +4475,6 @@
    ],
    "errors": []
   },
-  "mbadafish.com": {
-   "status": "ok",
-   "url": "http://www.mbadafish.com/index.php?mid=bk",
-   "entries": 59,
-   "boats": [
-    "뉴지니피싱"
-   ],
-   "boat_ids": {
-    "뉴지니피싱": 383
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "뉴지니피싱",
-    "출조안내"
-   ],
-   "pages_checked": 27,
-   "booking_urls": [
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
-   ],
-   "errors": []
-  },
   "naraefishing.com": {
    "status": "ok",
    "url": "http://naraefishing.com/index.php?mid=bk",
@@ -4589,12 +4503,40 @@
     "http://naraefishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
+  },
+  "mbadafish.com": {
+   "status": "ok",
+   "url": "http://www.mbadafish.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "뉴지니피싱"
+   ],
+   "boat_ids": {
+    "뉴지니피싱": 383
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "뉴지니피싱",
+    "출조안내"
+   ],
+   "pages_checked": 27,
+   "booking_urls": [
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
   }
  },
  "summary": {
-  "sites": 148,
-  "entries": 10934,
-  "collected_boats": 190,
-  "missing_boats": 95
+  "sites": 147,
+  "entries": 11052,
+  "collected_boats": 192,
+  "missing_boats": 89
  }
 }
