@@ -230,7 +230,8 @@
             "catalog_status": "booking_verified"
         },
         {
-            "name": "나르샤호선단 시티맨호",
+            "name": "시티맨호",
+            "operator": "나르샤호",
             "port": "대천항 (보령시 대천항로 332)",
             "region": "충남 보령시",
             "price": "9만원",
@@ -245,7 +246,8 @@
             "catalog_status": "booking_verified"
         },
         {
-            "name": "나르샤호선단 포시즌호",
+            "name": "포시즌호",
+            "operator": "나르샤호",
             "port": "대천항 (보령시 대천항로 332)",
             "region": "충남 보령시",
             "price": "9만원",
@@ -260,7 +262,8 @@
             "catalog_status": "booking_verified"
         },
         {
-            "name": "나르샤호선단 창용호",
+            "name": "창용호",
+            "operator": "나르샤호",
             "port": "대천항 (보령시 대천항로 332)",
             "region": "충남 보령시",
             "price": "9만원",
