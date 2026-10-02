@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T07:00:02+09:00",
+ "checked_at": "2026-10-03T07:28:09+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -91,18 +91,20 @@
    "errors": []
   },
   "xn--910b11ohng.com": {
-   "status": "no_data",
+   "status": "ok",
    "url": "http://xn--910b11ohng.com/index.php?mid=bk",
-   "entries": 0,
+   "entries": 146,
    "boats": [
-    "나르샤호 (시티맨피싱)"
+    "시티맨호",
+    "포시즌호",
+    "창용호"
    ],
    "boat_ids": {
-    "나르샤호 (시티맨피싱)": 12
+    "시티맨호": 1201,
+    "포시즌호": 1202,
+    "창용호": 1203
    },
-   "missing_boats": [
-    "나르샤호 (시티맨피싱)"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "#공통공지사항#",
     "시티맨호(8.55T)  (前나르샤호선장운영)  (추첨식)",
@@ -110,7 +112,16 @@
     "포시즌호(9.77T)  (추첨식)"
    ],
    "pages_checked": 30,
-   "booking_urls": [],
+   "booking_urls": [
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
    "errors": []
   },
   "jnaksi.com": {
@@ -4657,8 +4668,8 @@
  },
  "summary": {
   "sites": 150,
-  "entries": 11026,
-  "collected_boats": 191,
-  "missing_boats": 97
+  "entries": 11172,
+  "collected_boats": 194,
+  "missing_boats": 96
  }
 }
