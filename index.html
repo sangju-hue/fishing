@@ -20,14 +20,42 @@
     @media (max-width:980px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.matrix-wrap{max-height:65vh}}
     @media (max-width:620px){.page{padding:12px 10px 40px}.topbar{align-items:flex-start}.controls{grid-template-columns:1fr}.month-filter{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}.month-filter button{min-width:0;padding:0 8px}.legend{gap:8px 12px}.matrix-meta{align-items:flex-start;flex-direction:column;gap:2px}.matrix-wrap{max-height:62vh;border-radius:9px}.matrix{min-width:calc(170px + var(--date-count,91) * 53px)}.matrix .boat-col{width:170px;min-width:170px;max-width:170px;padding:6px 8px}.boat-selector[aria-pressed="true"]{margin:-6px -8px;padding:6px 8px;width:calc(100% + 16px)}.cards,.operator-grid{grid-template-columns:1fr}.result-head,.directory-head{align-items:flex-start;flex-direction:column;gap:4px}.card-top{flex-direction:column}.status{white-space:normal}.channel{flex:0 1 auto}.directory-item{grid-template-columns:1fr}.directory-actions{justify-content:flex-start}.footer-note{text-align:left}}
     @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+    [hidden]{display:none!important}
+    .species-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+    .species-tab{border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--muted);font:inherit;font-weight:700;padding:11px 24px;cursor:pointer}
+    .species-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#17212b}
+    .species-tab:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+    .species-placeholder{padding:44px 24px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-align:center}
+    .species-placeholder h2{margin:0 0 12px;font-size:22px}.species-placeholder p{color:var(--muted);margin:0;line-height:1.7}
+    .scrape-settings{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:18px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);border-radius:10px;font-size:12px}
+    .scrape-settings select,.scrape-settings button{padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#10232e;color:var(--text)}
+    .scrape-settings button{cursor:pointer}.scrape-settings button:disabled{opacity:.6;cursor:wait}
+    .scrape-settings p{flex-basis:100%;margin:0;color:var(--muted)}
+    .boat-controls,.operator-controls{display:flex;align-items:center;gap:8px;padding-right:6px}.boat-controls input,.operator-controls input{flex:0 0 auto;width:15px;height:15px;accent-color:var(--sea)}
+    .boat-selector,.operator-selector{color:inherit;text-decoration:none}.operator-controls .operator-selector{min-width:0;padding-left:11px}.operator-controls{height:100%}.boat-controls .boat-selector{min-width:0}.boat-controls.is-selected{background:#163b42}.operator-controls.is-selected{background:#164c53}
   </style>
 </head>
 <body>
 <main class="page">
   <div class="topbar">
-    <p class="snapshot"><strong>2026-10-02 17:17 기준</strong> · 실제 현황은 예약처에서 다시 확인하세요.</p>
+    <p class="snapshot"><strong>데이터 불러오는 중</strong> · 실제 현황은 예약처에서 다시 확인하세요.</p>
   </div>
 
+  <section class="scrape-settings" aria-label="맥 스크래핑 설정">
+    <label for="scrapeInterval">스크래핑 주기</label>
+    <select id="scrapeInterval"><option value="1">1분</option><option value="5" selected>5분 (기본)</option><option value="10">10분</option><option value="30">30분</option><option value="60">1시간</option></select>
+    <button id="applyInterval" type="button">맥에 적용</button>
+    <span id="scrapeSettingStatus" role="status">설정하려면 수집 중인 맥에서 열어 주세요.</span>
+    <p>맥에서 수집 → GitHub에 업로드 · 수집 중에는 중복 실행하지 않습니다.</p>
+  </section>
+
+  <nav class="species-tabs" role="tablist" aria-label="어종 선택">
+    <button class="species-tab" id="tab-jjukkumi" type="button" role="tab" aria-selected="true" aria-controls="panel-jjukkumi" data-species="jjukkumi">쭈꾸미</button>
+    <button class="species-tab" id="tab-rockfish" type="button" role="tab" aria-selected="false" aria-controls="panel-rockfish" tabindex="-1" data-species="rockfish">우럭</button>
+    <button class="species-tab" id="tab-hairtail" type="button" role="tab" aria-selected="false" aria-controls="panel-hairtail" tabindex="-1" data-species="hairtail">갈치</button>
+    <button class="species-tab" id="tab-octopus" type="button" role="tab" aria-selected="false" aria-controls="panel-octopus" tabindex="-1" data-species="octopus">문어</button>
+  </nav>
+  <div id="panel-jjukkumi" role="tabpanel" aria-labelledby="tab-jjukkumi">
   <section class="controls" aria-label="선사 필터">
     <div class="field"><label for="search">배 이름 · 항구 검색</label><input id="search" type="search" placeholder="예: 오천항, 해모수호"></div>
     <div class="field"><label for="portFilter">항구</label><select id="portFilter"><option value="">전체 항구</option></select></div>
@@ -35,13 +63,13 @@
 
   <section aria-label="월간 예약 현황">
     <nav class="month-filter" aria-label="표시할 월 선택">
-      <button type="button" data-month="0" aria-pressed="false">전체</button>
+      <button type="button" data-month="0" class="active" aria-pressed="true">전체</button>
       <button type="button" data-month="9" aria-pressed="false">9월</button>
       <button type="button" data-month="10" aria-pressed="false">10월</button>
       <button type="button" data-month="11" aria-pressed="false">11월</button>
     </nav>
     <div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚪ 출항취소</span><span class="legend-item">· 미확인</span></div>
-    <div class="matrix-meta"><span id="matrixCount"></span><span>선사 이름은 선택, 초록 셀은 해당 날짜 예약으로, 미확인 셀은 해당 선사 예약처로 이동합니다.</span></div>
+    <div class="matrix-meta"><span id="matrixCount"></span><span>선사·배 이름은 홈페이지로 이동합니다. 체크박스로 배를 선택하고, 초록 셀로 해당 날짜 예약을 확인하세요.</span></div>
     <div class="matrix-wrap" id="matrixWrap" tabindex="0" aria-label="가로로 스크롤 가능한 월간 예약 현황표">
       <table class="matrix" id="matrixTable"></table>
     </div>
@@ -58,31 +86,44 @@
   </section>
 
   <section class="directory" aria-labelledby="directoryTitle">
-    <div class="directory-head"><h2 id="directoryTitle">자체 홈페이지가 없는 선사</h2><span class="count" id="directoryCount"></span></div>
+    <div class="directory-head"><h2 id="directoryTitle">예약 홈페이지가 미확인인 선사</h2><span class="count" id="directoryCount"></span></div>
     <div class="directory-list" id="directoryList"></div>
     <p class="footer-note">요금과 운항 여부가 미확인인 선사는 예약 전에 홈페이지·밴드·전화로 확인해 주세요.</p>
   </section>
+  </div>
+  <section id="panel-rockfish" class="species-placeholder" role="tabpanel" aria-labelledby="tab-rockfish" hidden><h2>우럭 예약 현황</h2><p>우럭 예약 현황을 준비하고 있습니다.</p></section>
+  <section id="panel-hairtail" class="species-placeholder" role="tabpanel" aria-labelledby="tab-hairtail" hidden><h2>갈치 예약 현황</h2><p>갈치 예약 현황을 준비하고 있습니다.</p></section>
+  <section id="panel-octopus" class="species-placeholder" role="tabpanel" aria-labelledby="tab-octopus" hidden><h2>문어 예약 현황</h2><p>문어 예약 현황을 준비하고 있습니다.</p></section>
 </main>
 <script>
 const TELEGRAM_BOT_USERNAME = "";
 let BOATS=[];
 let STATUS={};
+let HOMEPAGE_STATUS_BY_ID={};
+let SUNSANG_STATUS_BY_ID={};
+let LEGACY_BOAT_IDS={};
 async function loadData(){
   try{
     const [boatsRes,statusRes,hpRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json'),fetch('data/status_homepages.json').catch(()=>null)]);
     const boatsData=await boatsRes.json();
-    BOATS=boatsData.boats||boatsData;
+    BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
     const statusData=await statusRes.json();
+    SUNSANG_STATUS_BY_ID=statusData.by_boat_id||{};
     const codeMap={available:'a',full:'f',cancelled:'c'};
     STATUS={};
+    let updatedAt=statusData.updated_at||boatsData.updated_at;
+    if(updatedAt)document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,16)} 기준`;
     const dates=statusData.dates||{};
     try{
       if(hpRes&&hpRes.ok){
         const hpData=await hpRes.json();
+        if(hpData.updated_at&&(!updatedAt||new Date(hpData.updated_at)>new Date(updatedAt))){updatedAt=hpData.updated_at;document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,16)} 기준`;}
+        HOMEPAGE_STATUS_BY_ID=hpData.by_boat_id||{};
         const hpDates=hpData.dates||{};
         for(const [date,boats] of Object.entries(hpDates)){
           const day=dates[date]||(dates[date]={});
           for(const [name,info] of Object.entries(boats)){
+            if(info.stale || info.boat_id!=null)continue;
             if(day[name]&&day[name].source==='sunsang24')continue;
             day[name]=info;
           }
@@ -91,9 +132,10 @@ async function loadData(){
     }catch(e){console.error('홈페이지 데이터 병합 실패:',e);}
     for(const [date,boats] of Object.entries(dates)){
       STATUS[date]={};
+      LEGACY_BOAT_IDS[date]={};
       for(const [name,info] of Object.entries(boats)){
         const code=codeMap[info.status];
-        if(code)STATUS[date][name]=[code,info.remaining||0];
+        if(code&&!info.stale){STATUS[date][name]=[code,info.remaining??null];LEGACY_BOAT_IDS[date][name]=info.boat_id??null;}
       }
     }
   }catch(e){console.error('데이터 로드 실패:',e);}
@@ -101,12 +143,14 @@ async function loadData(){
 
 
 
-let selectedDate="2026-10-02";
-let activeMonth=-1;
+const koreaToday=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+const seasonYear=Number(koreaToday.slice(0,4))+(Number(koreaToday.slice(5,7))===12?1:0);
+let selectedDate=koreaToday>=`${seasonYear}-09-01`&&koreaToday<=`${seasonYear}-11-30`?koreaToday:`${seasonYear}-09-01`;
+let activeMonth=0;
 const selectedBoatIds=new Set();
 const alertDates=new Set();
 let alertFeedback="";
-const todayKey="2026-10-02";
+const todayKey=koreaToday;
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
 const dateKey=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
@@ -114,6 +158,7 @@ const hasOwnBookingPage=boat=>Boolean(boat.channels.homepage||boat.channels.suns
 const onlineBoats=()=>BOATS.filter(hasOwnBookingPage);
 const offlineBoats=()=>BOATS.filter(boat=>!hasOwnBookingPage(boat));
 const primaryUrl=boat=>boat.channels.sunsang24||boat.channels.homepage||boat.channels.naver||boat.channels.band||"";
+const websiteUrl=boat=>safeHref('homepage',boat.channels.homepage||boat.channels.sunsang24||boat.channels.naver||'');
 const channelNames={sunsang24:"선상24",band:"밴드",naver:"네이버예약",homepage:"홈페이지",phone:"전화"};
 function bookingUrl(boat,date=selectedDate){
   const raw=boat.channels.sunsang24||"";
@@ -121,20 +166,33 @@ function bookingUrl(boat,date=selectedDate){
   if(raw.includes("/ship/board_detail/"))return raw;
   try{
     const url=new URL(raw);
+    if(url.hostname==='www.sunsang24.com'||url.pathname.startsWith('/ship/detail/'))return url.href;
     return `https://${url.hostname}/ship/schedule_fleet/${date.slice(0,7).replace("-","")}#d${date}`;
   }catch(error){return raw}
 }
+function statusRow(boat,date=selectedDate){
+  const bid=String(boat.canonical_bid??boat.bid);
+  for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
+    if(info&&!info.stale){
+      const code={available:"a",full:"f",cancelled:"c"}[info.status];
+      if(code)return [code,info.remaining??null];
+    }
+  }
+  const legacyId=LEGACY_BOAT_IDS[date]?.[boat.name];
+  const ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name);
+  const legacy=(legacyId!=null?String(legacyId)===bid:!ambiguous)&&STATUS[date]?.[boat.name];
+  return legacy||null;
+}
 function statusInfo(boat,date=selectedDate){
-  const isLaterDuplicate=boat.bid>=42&&BOATS.some(item=>item.bid<42&&item.name===boat.name);
-  const row=!isLaterDuplicate&&STATUS[date]&&STATUS[date][boat.name];
+  const row=statusRow(boat,date);
   if(!row)return {cls:"unknown",short:"·",text:"⚪ 현황 미확인"};
-  if(row[0]==="a")return {cls:"available",short:String(row[1]),text:`🟢 ${row[1]}자리 남음`};
+  if(row[0]==="a")return {cls:"available",short:row[1]==null?"가능":String(row[1]),text:row[1]==null?"🟢 예약 가능 · 잔여석 미확인":`🟢 ${row[1]}자리 남음`};
   if(row[0]==="f")return {cls:"full",short:"마감",text:"🔴 마감"};
   return {cls:"cancelled",short:"취소",text:"⚪ 출항취소"};
 }
 const PORT_ALIASES=[
   [/^대천항(?:\s*\(|$)/,"대천항"],[/^전곡항(?:\s*\(|$)/,"전곡항"],[/^신진도$/,"신진도항"],
-  [/^비응항(?:\s*\(|$)/,"비응항"],[/^남항/,"남항"],[/^영흥도(?:\s*\(|$)/,"영흥도"],
+  [/^비응항(?:\s*\(|$)/,"비응항"],[/^남항/,"남항"],[/^(?:영흥도|진두선착장|진두항)/,"영흥도"],
   [/^삼천포(?:\s*\(|$)/,"삼천포"]
 ];
 function normalizePort(port){
@@ -146,10 +204,10 @@ function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
   const port=$("#portFilter").value;
   const text=[boat.name,boat.operator,boat.region,normalizePort(boat.port),boat.notes].filter(Boolean).join(" ").toLowerCase();
-  return (!q||text.includes(q))&&(!port||normalizePort(boat.port)===port);
+  return (!q||text.includes(q))&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
 }
-function matrixOperatorName(boat){return boat.operator||"기타"}
-function sortedBoats(){return onlineBoats().filter(matches).slice().sort((a,b)=>{
+function matrixOperatorName(boat){return boat.operator||boat.name}
+function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
   const operatorA=matrixOperatorName(a),operatorB=matrixOperatorName(b);
   if(operatorA==="기타"&&operatorB!=="기타")return 1;
   if(operatorB==="기타"&&operatorA!=="기타")return -1;
@@ -159,10 +217,11 @@ function groupedOnlineBoats(){
   const groups=new Map();
   sortedBoats().forEach(boat=>{
     const operator=matrixOperatorName(boat);
-    if(!groups.has(operator))groups.set(operator,[]);
-    groups.get(operator).push(boat);
+    const key=normalizePort(boat.port)+'\u0000'+operator;
+    if(!groups.has(key))groups.set(key,[operator,[]]);
+    groups.get(key)[1].push(boat);
   });
-  return [...groups];
+  return [...groups.values()];
 }
 function operatorName(boat){return boat.operator||"기타 선사"}
 function displayNames(boat){return [boat.name]}
@@ -184,24 +243,25 @@ function channelButtons(boat,keys=Object.keys(boat.channels)){
   }).join("")||'<span class="no-channel">등록된 예약 연락처 없음</span>';
 }
 function priceLine(boat){
-  if(!boat.price)return '<span>요금 · 정원 <strong>정보 없음</strong></span>';
-  if(boat.price.includes("인승"))return `<span>정원: <strong>${boat.capacity}명</strong></span>`;
-  return `<span>1인 요금: <strong>${boat.price}</strong></span>`;
+  const lines=[];
+  if(boat.price&&!boat.price.includes('인승'))lines.push(`<span>1인 요금: <strong>${escapeHtml(boat.price)}</strong></span>`);
+  if(boat.capacity)lines.push(`<span>정원: <strong>${escapeHtml(boat.capacity)}명</strong></span>`);
+  return lines.join('')||'<span>요금 · 정원 <strong>정보 없음</strong></span>';
 }
 function card(boat){
-  const status=boat.channels.sunsang24?statusInfo(boat):{cls:"unknown",short:"·",text:"⚪ 현황 미확인"},url=bookingUrl(boat),clickable=Boolean(url);
-  const tags=(boat.tags||[]).length?`<div class="tags">${boat.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</div>`:"";
-  return `<article class="boat-card${clickable?' clickable':''}"${clickable?` tabindex="0" role="link" data-url="${url}" aria-label="${boat.name} ${selectedDate} 예약 페이지 열기"`:""}>
-    <div class="card-top"><div class="boat-name">${boat.name}</div><span class="status ${status.cls}">${status.text}</span></div>
-    <div class="meta"><span><strong>${boat.region}</strong> · ${normalizePort(boat.port)}</span>${priceLine(boat)}</div>
+  const status=statusInfo(boat),url=websiteUrl(boat),clickable=Boolean(url);
+  const tags=(boat.tags||[]).length?`<div class="tags">${boat.tags.map(t=>`<span class="tag">${escapeHtml(t)}</span>`).join("")}</div>`:"";
+  return `<article class="boat-card${clickable?' clickable':''}"${clickable?` tabindex="0" role="link" data-url="${escapeHtml(url)}" aria-label="${escapeHtml(boat.name)} 홈페이지 열기"`:""}>
+    <div class="card-top"><div class="boat-name">${escapeHtml(boat.name)}</div><span class="status ${status.cls}">${status.text}</span></div>
+    <div class="meta"><span><strong>${escapeHtml(boat.region)}</strong> · ${escapeHtml(normalizePort(boat.port))}</span>${priceLine(boat)}</div>
     ${tags}<div class="channels">${channelButtons(boat)}</div>
   </article>`;
 }
 function renderCards(){
-  const selected=onlineBoats().filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>a.region.localeCompare(b.region,"ko")||a.name.localeCompare(b.name,"ko"));
+  const selected=BOATS.filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>a.region.localeCompare(b.region,"ko")||a.name.localeCompare(b.name,"ko"));
   $("#selectedTitle").textContent=`${Number(selectedDate.slice(5,7))}월 ${Number(selectedDate.slice(8,10))}일 선택 선사`;
-  $("#resultCount").textContent=selected.length?`선택 ${selected.length}곳 · 예약 데이터 ${selected.filter(b=>STATUS[selectedDate]&&STATUS[selectedDate][b.name]).length}곳`:"";
-  $("#boatCards").innerHTML=selected.length?selected.map(card).join(""):'<div class="empty">선사 이름을 클릭해서 선택해주세요</div>';
+  $("#resultCount").textContent=selected.length?`선택 ${selected.length}곳 · 예약 데이터 ${selected.filter(b=>statusRow(b,selectedDate)).length}곳`:"";
+  $("#boatCards").innerHTML=selected.length?selected.map(card).join(""):'<div class="empty">배 이름 옆 체크박스로 선택해주세요</div>';
   bindCardActions();
 }
 function bindCardActions(){
@@ -235,8 +295,8 @@ function renderDirectory(){
 function allDates(){
   const dates=[];
   for(let month=8;month<=10;month++){
-    const total=new Date(2026,month+1,0).getDate();
-    for(let d=1;d<=total;d++)dates.push({key:dateKey(2026,month,d),month,d,dow:new Date(2026,month,d).getDay()});
+    const total=new Date(seasonYear,month+1,0).getDate();
+    for(let d=1;d<=total;d++)dates.push({key:dateKey(seasonYear,month,d),month,d,dow:new Date(seasonYear,month,d).getDay()});
   }
   if(activeMonth===-1)return dates.filter(item=>item.month+1>=10);
   return activeMonth?dates.filter(item=>item.month+1===activeMonth):dates;
@@ -256,12 +316,18 @@ function renderMatrix(){
   groups.forEach(([operator,groupBoats],groupIndex)=>{
     const tone=groupIndex%2===0?"group-even":"group-odd";
     const allSelected=groupBoats.every(boat=>selectedBoatIds.has(boat.bid));
-    html+=`<tr class="operator-header-row ${tone}"><th class="boat-col" scope="rowgroup"><button class="operator-selector" type="button" data-group-index="${groupIndex}" aria-pressed="${allSelected}" aria-label="${escapeHtml(operator)} 소속 ${groupBoats.length}척 ${allSelected?'전체 선택 해제':'전체 선택'}"><span class="operator-title">${escapeHtml(operator)}</span><span class="operator-total">(${groupBoats.length}척)</span></button></th><td class="operator-fill" colspan="${dates.length}" aria-hidden="true"></td></tr>`;
+    const operatorBoat=groupBoats.find(boat=>websiteUrl(boat)),operatorUrl=operatorBoat?websiteUrl(operatorBoat):'';
+    const operatorLabel=`<span class="operator-title">${escapeHtml(operator)}</span><span class="operator-total">(${groupBoats.length}척)</span>`;
+    const operatorControl=operatorUrl?`<a class="operator-selector" href="${escapeHtml(operatorUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(operator)} 홈페이지 열기">${operatorLabel}</a>`:`<span class="operator-selector" title="홈페이지 미확인">${operatorLabel}</span>`;
+    html+=`<tr class="operator-header-row ${tone}"><th class="boat-col" scope="rowgroup"><div class="operator-controls${allSelected?' is-selected':''}">${operatorControl}<input type="checkbox" data-select-group="${groupIndex}" ${allSelected?'checked':''} aria-label="${escapeHtml(operator)} 소속 배 전체 선택"></div></th><td class="operator-fill" colspan="${dates.length}" aria-hidden="true"></td></tr>`;
     groupBoats.forEach((boat,boatIndex)=>{
       const isSelected=selectedBoatIds.has(boat.bid),isLast=boatIndex===groupBoats.length-1;
-      html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><button class="boat-selector" type="button" data-boat-id="${boat.bid}" aria-pressed="${isSelected}" aria-label="${escapeHtml(boat.name)} ${isSelected?'선택 해제':'선택'}"><span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}</span></button></th>`;
+      const boatUrl=websiteUrl(boat)||operatorUrl;
+      const boatLabel=`<span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}${boatUrl?'':' · 홈페이지 미확인'}</span>`;
+      const boatControl=boatUrl?`<a class="boat-selector" href="${escapeHtml(boatUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(boat.name)} 홈페이지 열기">${boatLabel}</a>`:`<span class="boat-selector">${boatLabel}</span>`;
+      html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><div class="boat-controls${isSelected?' is-selected':''}"><input type="checkbox" data-select-boat="${boat.bid}" ${isSelected?'checked':''} aria-label="${escapeHtml(boat.name)} 선택">${boatControl}</div></th>`;
       dates.forEach(item=>{
-        const info=boat.channels.sunsang24?statusInfo(boat,item.key):{cls:"unknown",short:"·",text:"⚪ 현황 미확인"},selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
+        const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
         html+=`<td class="${(selected+past).trim()}"><button class="status-cell ${info.cls}" type="button" data-date="${item.key}" data-boat-id="${boat.bid}" data-status="${info.cls}" aria-label="${escapeHtml(boat.name)}, ${item.month+1}월 ${item.d}일, ${info.text}${opensBooking?', 예약 페이지 열기':', 상세 보기'}">${info.short}</button></td>`;
       });
@@ -276,8 +342,8 @@ function renderMatrix(){
   $("#matrixCount").innerHTML=`<b>${boats.length}척</b> · ${groups.length}개 선사 그룹 · ${range} 현황`;
   document.querySelectorAll(".date-head[data-date]").forEach(btn=>btn.addEventListener("click",()=>selectDate(btn.dataset.date)));
   document.querySelectorAll("[data-alert-date]").forEach(input=>input.addEventListener("change",()=>toggleAlertDate(input)));
-  document.querySelectorAll(".operator-selector[data-group-index]").forEach(btn=>btn.addEventListener("click",()=>toggleOperator(groups[Number(btn.dataset.groupIndex)][1])));
-  document.querySelectorAll(".boat-selector[data-boat-id]").forEach(btn=>btn.addEventListener("click",()=>toggleBoat(Number(btn.dataset.boatId))));
+  document.querySelectorAll("[data-select-group]").forEach(input=>input.addEventListener("change",()=>toggleOperator(groups[Number(input.dataset.selectGroup)][1])));
+  document.querySelectorAll("[data-select-boat]").forEach(input=>input.addEventListener("change",()=>toggleBoat(Number(input.dataset.selectBoat))));
   document.querySelectorAll(".status-cell[data-date]").forEach(btn=>btn.addEventListener("click",()=>handleStatusClick(Number(btn.dataset.boatId),btn.dataset.date,btn.dataset.status)));
 }
 function toggleOperator(boats){
@@ -376,22 +442,63 @@ function selectDate(key){
     if(selected)selected.scrollIntoView({behavior:"smooth",block:"nearest",inline:"center"});
   });
 }
+const smallPorts=new Set();
 function initPorts(){
   const counts=new Map();
   BOATS.forEach(boat=>{const port=normalizePort(boat.port);counts.set(port,(counts.get(port)||0)+1)});
-  [...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],"ko")).forEach(([port,count])=>{
+  smallPorts.clear();
+  let otherCount=0;
+  for(const [port,count] of counts)if(count<=2&&!['오천항','영흥도','항구 확인 중'].includes(port)){smallPorts.add(port);otherCount+=count}
+  const priority=port=>port==='오천항'?0:port==='영흥도'?1:2;
+  [...counts].filter(([port])=>!smallPorts.has(port)).sort((a,b)=>priority(a[0])-priority(b[0])||b[1]-a[1]||a[0].localeCompare(b[0],"ko")).forEach(([port,count])=>{
     $("#portFilter").insertAdjacentHTML("beforeend",`<option value="${escapeHtml(port)}">${escapeHtml(port)} (${count})</option>`);
   });
+  if(otherCount)$("#portFilter").insertAdjacentHTML("beforeend",`<option value="__other__">기타 (${otherCount})</option>`);
 }
 document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListener("click",()=>{
   activeMonth=Number(btn.dataset.month);
   document.querySelectorAll(".month-filter button").forEach(item=>{const on=item===btn;item.classList.toggle("active",on);item.setAttribute("aria-pressed",String(on))});
-  if(activeMonth&&Number(selectedDate.slice(5,7))!==activeMonth)selectedDate=`2026-${pad(activeMonth)}-01`;
+  if(activeMonth&&Number(selectedDate.slice(5,7))!==activeMonth)selectedDate=`${seasonYear}-${pad(activeMonth)}-01`;
   renderMatrix();renderCards();renderAlertBar();
   $("#matrixWrap").scrollLeft=0;
 }));
 ["#search","#portFilter"].forEach(id=>$(id).addEventListener(id==="#search"?"input":"change",()=>{renderMatrix();renderCards();renderDirectory()}));
 $("#alertButton").addEventListener("click",openTelegramAlert);
+const speciesTabs=[...document.querySelectorAll(".species-tab")];
+function selectSpecies(tab){
+  speciesTabs.forEach(item=>{
+    const selected=item===tab;
+    item.setAttribute("aria-selected",String(selected));item.tabIndex=selected?0:-1;
+    document.getElementById(item.getAttribute("aria-controls")).hidden=!selected;
+  });
+}
+speciesTabs.forEach((tab,index)=>{
+  tab.addEventListener("click",()=>selectSpecies(tab));
+  tab.addEventListener("keydown",event=>{
+    let next;
+    if(event.key==="ArrowRight")next=(index+1)%speciesTabs.length;
+    if(event.key==="ArrowLeft")next=(index-1+speciesTabs.length)%speciesTabs.length;
+    if(event.key==="Home")next=0;
+    if(event.key==="End")next=speciesTabs.length-1;
+    if(next!=null){event.preventDefault();speciesTabs[next].focus();selectSpecies(speciesTabs[next]);}
+  });
+});
+$("#applyInterval").addEventListener("click",async()=>{
+  const button=$("#applyInterval"),message=$("#scrapeSettingStatus");
+  button.disabled=true;message.textContent="맥 수집기에 연결 중…";
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);
+  try{
+    const url="http://127.0.0.1:8788/settings";
+    const currentResponse=await fetch(url,{signal:controller.signal});
+    if(!currentResponse.ok)throw new Error("연결 실패");
+    const current=await currentResponse.json();
+    const response=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":current.csrf_token},body:JSON.stringify({interval_minutes:Number($("#scrapeInterval").value)}),signal:controller.signal});
+    if(!response.ok)throw new Error("설정 실패");
+    const saved=await response.json();
+    message.textContent=`${saved.interval_minutes===60?"1시간":saved.interval_minutes+"분"} 주기 적용 완료${saved.running?" · 현재 수집 중":""}`;
+  }catch(error){message.textContent="맥 수집기에 연결할 수 없습니다. 수집기 실행 상태와 브라우저의 로컬 네트워크 권한을 확인해 주세요.";}
+  finally{clearTimeout(timer);button.disabled=false;}
+});
 loadData().then(()=>{initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();});
 </script>
 </body>
