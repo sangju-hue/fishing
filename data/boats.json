@@ -2014,6 +2014,21 @@
             "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
         },
         {
+            "bid": 420,
+            "name": "기타 낚시배",
+            "port": "오천항",
+            "region": "충남 보령시",
+            "operator": "금강낚시",
+            "channels": {
+                "homepage": "https://www.ocheonkumkang.com/index.php?mid=bk",
+                "phone": "010-6665-4752"
+            },
+            "booking_names": [
+                "기타 낚시배",
+                "기타낚시배"
+            ]
+        },
+        {
             "bid": 129,
             "name": "복성호2호",
             "operator": "에이스낚시",
