@@ -230,30 +230,6 @@
             "catalog_status": "booking_verified"
         },
         {
-            "name": "24마린낚시",
-            "port": "전곡항 (화성시 서신면 전곡항로 317)",
-            "region": "경기 화성시",
-            "price": "10만원",
-            "channels": {
-                "phone": "010-2905-5505",
-                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
-            },
-            "tags": [],
-            "manual": false,
-            "bid": 11,
-            "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-            "catalog_sources": [
-                "https://24marine.sunsang24.com/ship/schedule_fleet",
-                "https://24marine.sunsang24.com:443/",
-                "https://naksigo.com/boat/24%EB%A7%88%EB%A6%B0%EB%82%9A%EC%8B%9C"
-            ],
-            "catalog_status": "booking_verified",
-            "booking_names": [
-                "24마린낚시"
-            ],
-            "operator": "24마린낚시"
-        },
-        {
             "name": "나르샤호 (시티맨피싱)",
             "port": "대천항 (보령시 대천항로 332)",
             "region": "충남 보령시",
