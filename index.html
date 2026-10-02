@@ -499,7 +499,15 @@ $("#applyInterval").addEventListener("click",async()=>{
   }catch(error){message.textContent="맥 수집기에 연결할 수 없습니다. 수집기 실행 상태와 브라우저의 로컬 네트워크 권한을 확인해 주세요.";}
   finally{clearTimeout(timer);button.disabled=false;}
 });
-loadData().then(()=>{initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();});
+loadData().then(()=>{
+  initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
+  requestAnimationFrame(()=>{
+    const selected=$(".date-head.selected-col");
+    const wrap=$("#matrixWrap");
+    const boatCol=$(".boat-col");
+    if(selected && wrap && boatCol) wrap.scrollLeft = selected.offsetLeft - boatCol.offsetWidth;
+  });
+});
 </script>
 </body>
 </html>
