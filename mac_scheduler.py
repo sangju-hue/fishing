@@ -16,7 +16,7 @@ from collect_homepages import BASE, atomic_json
 OPTIONS=(1,5,10,30,60)
 SETTINGS=os.path.join(BASE,'scrape_settings.json')
 RUNTIME=os.path.join(BASE,'data','scrape_runtime.json')
-ORIGINS={'https://sangju-hue.github.io','http://127.0.0.1:8787','http://localhost:8787'}
+ORIGINS={'https://sangju-hue.github.io','http://127.0.0.1:8789','http://localhost:8789'}
 KST=timezone(timedelta(hours=9))
 
 def read_interval():
