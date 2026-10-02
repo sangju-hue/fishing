@@ -2376,19 +2376,6 @@
             "catalog_status": "booking_verified"
         },
         {
-            "bid": 149,
-            "name": "월드스타호",
-            "operator": "금강낚시",
-            "region": "충남 보령시",
-            "port": "오천항",
-            "price": "",
-            "capacity": null,
-            "channels": {
-                "homepage": "http://www.ocheonkumkang.com"
-            },
-            "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
-        },
-        {
             "bid": 150,
             "name": "위더스호",
             "operator": "오천항대물낚시",
