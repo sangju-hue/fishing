@@ -23,7 +23,10 @@
             },
             "tags": [],
             "manual": false,
-            "bid": 1
+            "bid": 1,
+            "booking_names": [
+                "오드리피싱"
+            ]
         },
         {
             "name": "에버스타호",
@@ -1092,6 +1095,9 @@
             "notes": "루미호와 같은 선사의 자매선(블로그 '루미호n다온호'). 쭈꾸미 출조 병행 추정이나 단독 확인 자료 없음. 2026년 운항 여부 미확인",
             "catalog_sources": [
                 "https://naksigo.com/boat/%EB%8B%A4%EC%98%A8%ED%98%B8?id=233"
+            ],
+            "booking_names": [
+                "다온호"
             ]
         },
         {
@@ -7375,7 +7381,8 @@
             },
             "booking_names": [
                 "댓길이호[김병삼선장]"
-            ]
+            ],
+            "bid": 385
         },
         {
             "name": "대박피싱호",
@@ -7385,7 +7392,8 @@
             },
             "booking_names": [
                 "대박피싱호[김석철선장]"
-            ]
+            ],
+            "bid": 386
         },
         {
             "name": "코스모스호",
@@ -7395,28 +7403,32 @@
             },
             "booking_names": [
                 "코스모스"
-            ]
+            ],
+            "bid": 387
         },
         {
             "name": "가디언호",
             "port": "무창포항",
             "channels": {
                 "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
-            }
+            },
+            "bid": 388
         },
         {
             "name": "대양호",
             "port": "무창포항",
             "channels": {
                 "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
-            }
+            },
+            "bid": 389
         },
         {
             "name": "킹피싱호",
             "port": "무창포항",
             "channels": {
                 "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
-            }
+            },
+            "bid": 390
         },
         {
             "name": "태평호",
@@ -7427,7 +7439,8 @@
             "booking_names": [
                 "태평호",
                 "태평호"
-            ]
+            ],
+            "bid": 391
         },
         {
             "name": "화성606호",
@@ -7438,7 +7451,8 @@
             "booking_names": [
                 "화성606호",
                 "화성606호"
-            ]
+            ],
+            "bid": 392
         },
         {
             "name": "유로파호",
@@ -7449,7 +7463,8 @@
             "booking_names": [
                 "유로파호",
                 "유로파호"
-            ]
+            ],
+            "bid": 393
         },
         {
             "name": "해운호",
@@ -7460,7 +7475,8 @@
             "booking_names": [
                 "해운호",
                 "해운호"
-            ]
+            ],
+            "bid": 394
         },
         {
             "name": "호빵호",
@@ -7471,7 +7487,8 @@
             "booking_names": [
                 "호빵호(구 에버그린호)",
                 "호빵호"
-            ]
+            ],
+            "bid": 395
         },
         {
             "name": "신흥특호",
@@ -7482,7 +7499,8 @@
             "booking_names": [
                 "신흥특호",
                 "신흥특호"
-            ]
+            ],
+            "bid": 396
         },
         {
             "name": "옐로우피싱",
@@ -7493,7 +7511,8 @@
             "booking_names": [
                 "옐로우피싱",
                 "옐로우피싱"
-            ]
+            ],
+            "bid": 397
         },
         {
             "name": "채비야호",
@@ -7504,7 +7523,8 @@
             "booking_names": [
                 "채비야호",
                 "채비야호"
-            ]
+            ],
+            "bid": 398
         },
         {
             "name": "입질대박호",
@@ -7515,7 +7535,8 @@
             "booking_names": [
                 "입질대박호",
                 "입질대박호"
-            ]
+            ],
+            "bid": 399
         },
         {
             "name": "리틀대박호",
@@ -7526,7 +7547,8 @@
             "booking_names": [
                 "리틀대박호",
                 "리틀대박호"
-            ]
+            ],
+            "bid": 400
         },
         {
             "name": "스마트보트호",
@@ -7537,7 +7559,8 @@
             "booking_names": [
                 "스마트보트호(구 마루호)",
                 "스마트보트호"
-            ]
+            ],
+            "bid": 401
         },
         {
             "name": "에이스요트호",
@@ -7548,7 +7571,8 @@
             "booking_names": [
                 "에이스요트호",
                 "에이스요트호"
-            ]
+            ],
+            "bid": 402
         },
         {
             "name": "산타클로스호",
@@ -7559,7 +7583,200 @@
             "booking_names": [
                 "산타클로스호",
                 "산타클로스호"
-            ]
+            ],
+            "bid": 403
+        },
+        {
+            "name": "마스터호",
+            "port": "홍원항",
+            "channels": {
+                "sunsang24": "https://wonjofishing.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "마스터호",
+                "마스터호"
+            ],
+            "bid": 404
+        },
+        {
+            "name": "원조낚시",
+            "port": "홍원항",
+            "channels": {
+                "sunsang24": "https://wonjofishing.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "원조낚시",
+                "원조낚시"
+            ],
+            "bid": 405
+        },
+        {
+            "name": "이바다낚시",
+            "port": "오천항",
+            "channels": {
+                "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "이바다낚시",
+                "이바다낚시"
+            ],
+            "bid": 406
+        },
+        {
+            "name": "LH하우스",
+            "port": "오천항",
+            "channels": {
+                "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "LH하우스",
+                "LH하우스"
+            ],
+            "bid": 407
+        },
+        {
+            "name": "만수르호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "만수르호",
+                "만수르호"
+            ],
+            "bid": 408
+        },
+        {
+            "name": "에프원호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "에프원호",
+                "에프원호"
+            ],
+            "bid": 409
+        },
+        {
+            "name": "김대영호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "김대영호",
+                "김대영호"
+            ],
+            "bid": 410
+        },
+        {
+            "name": "아리울1호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "아리울1호",
+                "아리울1호"
+            ],
+            "bid": 411
+        },
+        {
+            "name": "아리울2호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "아리울2호",
+                "아리울2호"
+            ],
+            "bid": 412
+        },
+        {
+            "name": "히트피싱",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "히트피싱",
+                "히트피싱"
+            ],
+            "bid": 413
+        },
+        {
+            "name": "어비스호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "어비스호",
+                "어비스호"
+            ],
+            "bid": 414
+        },
+        {
+            "name": "강프로호",
+            "port": "비응항",
+            "channels": {
+                "sunsang24": "https://roomi.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "강프로호",
+                "강프로호"
+            ],
+            "bid": 415
+        },
+        {
+            "name": "오드리호",
+            "port": "야미도항",
+            "channels": {
+                "sunsang24": "https://af.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "오드리호",
+                "오드리호"
+            ],
+            "bid": 416
+        },
+        {
+            "name": "스마트호",
+            "port": "영목항",
+            "channels": {
+                "sunsang24": "https://macgyver.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "스마트호",
+                "스마트호"
+            ],
+            "bid": 417
+        },
+        {
+            "name": "레드맨호",
+            "port": "영목항",
+            "channels": {
+                "sunsang24": "https://macgyver.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "레드맨호",
+                "레드맨호"
+            ],
+            "bid": 418
+        },
+        {
+            "name": "악바리호",
+            "port": "영목항",
+            "channels": {
+                "sunsang24": "https://macgyver.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "악바리호",
+                "악바리호"
+            ],
+            "bid": 419
         }
     ],
     "scope": "서해 군산 이북 쭈꾸미 선사"
