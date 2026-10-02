@@ -245,7 +245,10 @@
                 "https://24marine.sunsang24.com:443/",
                 "https://naksigo.com/boat/24%EB%A7%88%EB%A6%B0%EB%82%9A%EC%8B%9C"
             ],
-            "catalog_status": "booking_verified"
+            "catalog_status": "booking_verified",
+            "booking_names": [
+                "24마린낚시"
+            ]
         },
         {
             "name": "나르샤호 (시티맨피싱)",
@@ -491,7 +494,7 @@
         },
         {
             "name": "빅보스호",
-            "port": "오천항",
+            "port": "전곡항",
             "region": "충남 보령시",
             "price": "10만원",
             "channels": {
@@ -7414,6 +7417,149 @@
             "channels": {
                 "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
             }
+        },
+        {
+            "name": "태평호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "태평호",
+                "태평호"
+            ]
+        },
+        {
+            "name": "화성606호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "화성606호",
+                "화성606호"
+            ]
+        },
+        {
+            "name": "유로파호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "유로파호",
+                "유로파호"
+            ]
+        },
+        {
+            "name": "해운호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "해운호",
+                "해운호"
+            ]
+        },
+        {
+            "name": "호빵호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "호빵호(구 에버그린호)",
+                "호빵호"
+            ]
+        },
+        {
+            "name": "신흥특호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "신흥특호",
+                "신흥특호"
+            ]
+        },
+        {
+            "name": "옐로우피싱",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "옐로우피싱",
+                "옐로우피싱"
+            ]
+        },
+        {
+            "name": "채비야호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "채비야호",
+                "채비야호"
+            ]
+        },
+        {
+            "name": "입질대박호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "입질대박호",
+                "입질대박호"
+            ]
+        },
+        {
+            "name": "리틀대박호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "리틀대박호",
+                "리틀대박호"
+            ]
+        },
+        {
+            "name": "스마트보트호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "스마트보트호(구 마루호)",
+                "스마트보트호"
+            ]
+        },
+        {
+            "name": "에이스요트호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "에이스요트호",
+                "에이스요트호"
+            ]
+        },
+        {
+            "name": "산타클로스호",
+            "port": "전곡항 (화성시 서신면 전곡항로 317)",
+            "channels": {
+                "sunsang24": "https://24marine.sunsang24.com/ship/schedule_fleet"
+            },
+            "booking_names": [
+                "산타클로스호",
+                "산타클로스호"
+            ]
         }
     ],
     "scope": "서해 군산 이북 쭈꾸미 선사"
