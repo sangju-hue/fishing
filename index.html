@@ -99,6 +99,7 @@
 const TELEGRAM_BOT_USERNAME = "";
 let BOATS=[];
 let STATUS={};
+let STATUS_URL={};
 let HOMEPAGE_STATUS_BY_ID={};
 let SUNSANG_STATUS_BY_ID={};
 let LEGACY_BOAT_IDS={};
@@ -133,9 +134,14 @@ async function loadData(){
     for(const [date,boats] of Object.entries(dates)){
       STATUS[date]={};
       LEGACY_BOAT_IDS[date]={};
+      STATUS_URL[date]={};
       for(const [name,info] of Object.entries(boats)){
         const code=codeMap[info.status];
-        if(code&&!info.stale){STATUS[date][name]=[code,info.remaining??null];LEGACY_BOAT_IDS[date][name]=info.boat_id??null;}
+        if(code&&!info.stale){
+          STATUS[date][name]=[code,info.remaining??null];
+          LEGACY_BOAT_IDS[date][name]=info.boat_id??null;
+          STATUS_URL[date][name]=info.source_url??null;
+        }
       }
     }
   }catch(e){console.error('데이터 로드 실패:',e);}
@@ -417,21 +423,34 @@ function openTelegramAlert(){
 function handleStatusClick(bid,date,status){
   selectedDate=date;
   const boat=BOATS.find(item=>item.bid===bid);
-  if(boat&&!boat.channels.sunsang24){
-    const url=primaryUrl(boat);
-    if(url)window.open(url,"_blank","noopener,noreferrer");
-    renderMatrix();renderCards();
-    return;
+  
+  if(boat){
+    let targetUrl="";
+    if(boat.channels.sunsang24){
+      targetUrl=bookingUrl(boat,date);
+    }else{
+      let sourceUrl=null;
+      for(const info of [SUNSANG_STATUS_BY_ID[date]?.[String(bid)],HOMEPAGE_STATUS_BY_ID[date]?.[String(bid)]]){
+        if(info&&!info.stale&&info.source_url) { sourceUrl=info.source_url; break; }
+      }
+      if(sourceUrl) targetUrl=sourceUrl;
+      else {
+        const ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name);
+        const legacyId=LEGACY_BOAT_IDS[date]?.[boat.name];
+        const validName=(legacyId!=null?String(legacyId)===String(bid):!ambiguous);
+        if(validName&&STATUS_URL[date]?.[boat.name]) targetUrl=STATUS_URL[date][boat.name];
+        else targetUrl=primaryUrl(boat);
+      }
+    }
+    if(targetUrl) window.open(targetUrl,"_blank","noopener,noreferrer");
   }
-  if(status==="available"){
-    if(boat)window.open(bookingUrl(boat,date),"_blank","noopener,noreferrer");
-    renderMatrix();renderCards();
-    return;
+
+  if(status!=="available"){
+    if(!selectedBoatIds.has(bid)&&alertDates.size&&(selectedBoatIds.size+1)*alertDates.size>4){
+      alertFeedback="알림은 배×날짜 조합을 최대 4개까지 선택할 수 있어요.";
+      renderAlertBar();
+    }else selectedBoatIds.add(bid);
   }
-  if(!selectedBoatIds.has(bid)&&alertDates.size&&(selectedBoatIds.size+1)*alertDates.size>4){
-    alertFeedback="알림은 배×날짜 조합을 최대 4개까지 선택할 수 있어요.";
-    renderAlertBar();
-  }else selectedBoatIds.add(bid);
   selectDate(date);
 }
 function selectDate(key){
