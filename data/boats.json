@@ -7393,6 +7393,27 @@
             "booking_names": [
                 "코스모스"
             ]
+        },
+        {
+            "name": "가디언호",
+            "port": "무창포항",
+            "channels": {
+                "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
+            }
+        },
+        {
+            "name": "대양호",
+            "port": "무창포항",
+            "channels": {
+                "sunsang24": "http://vtrfishing.sunsang24.com/ship/schedule_fleet"
+            }
+        },
+        {
+            "name": "킹피싱호",
+            "port": "무창포항",
+            "channels": {
+                "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
+            }
         }
     ],
     "scope": "서해 군산 이북 쭈꾸미 선사"
