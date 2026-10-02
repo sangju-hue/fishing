@@ -18,7 +18,7 @@ KST = timezone(timedelta(hours=9))
 REQ_GAP = 2.0              # 배 사이 요청 간격(초) — 과도한 크롤링 방지
 TIMEOUT = 25
 
-JJUKKUMI = ("쭈꾸미", "주꾸미", "쭈갑", "갑오징어")  # 갑오징어 병행 출조도 포함
+JJUKKUMI = ("쭈꾸미", "주꾸미", "쭈갑", "갑오징어", "문어")  # 갑오징어 병행 출조도 포함
 
 
 def fetch(url):
@@ -58,15 +58,19 @@ def parse_month(html, yyyymm):
         status, remaining = "unknown", None
         if rm:
             cell = rm.group(1)
-            sm2 = re.search(r'data-status_code="(END|CANCEL)"', cell)
+            sm2 = re.search(r'data-status_code="(END|CANCEL|CHECK)"', cell)
             if sm2:
-                status = "full" if sm2.group(1) == "END" else "cancelled"
+                if sm2.group(1) == "END": status = "full"
+                elif sm2.group(1) == "CANCEL": status = "cancelled"
+                elif sm2.group(1) == "CHECK": status = "maintenance"
             else:
                 nm = re.search(r"남은자리.*?<span[^>]*>(\d+)명</span>", cell, re.S)
                 if nm:
                     status, remaining = "available", int(nm.group(1))
                 elif "예약마감" in cell:
                     status = "full"
+                elif "점검" in cell:
+                    status = "maintenance"
         out.setdefault(sdate, []).append((ship, fish, status, remaining))
     return out
 
@@ -86,29 +90,33 @@ def parse_simple_list(html, yyyymm, ship_name):
         if not any(k in fish for k in JJUKKUMI):
             continue
         status, remaining = "unknown", None
-        sm2 = re.search(r'data-status_code="(END|CANCEL)"', tr)
+        sm2 = re.search(r'data-status_code="(END|CANCEL|CHECK)"', tr)
         if sm2:
-            status = "full" if sm2.group(1) == "END" else "cancelled"
+            if sm2.group(1) == "END": status = "full"
+            elif sm2.group(1) == "CANCEL": status = "cancelled"
+            elif sm2.group(1) == "CHECK": status = "maintenance"
         else:
             nm = re.search(r"남은자리.*?<span[^>]*>(\d+)명</span>", tr, re.S)
             if nm:
                 status, remaining = "available", int(nm.group(1))
             elif "예약마감" in tr:
                 status = "full"
+            elif "점검" in tr:
+                status = "maintenance"
         out.setdefault(sdate, []).append((ship_name, fish, status, remaining))
     return out
 
 
 
 def aggregate(trips):
-    """같은 날짜·같은 배의 여러 출조 집계.
-    셀에 표시할 숫자는 '한 출조당 최대 잔여석'(max) — 합산하면 정원(예: 20명)을
-    초과하는 숫자가 되어 오해를 부르므로, 실제 예약 가능한 단일 출조 기준으로 표시."""
+    """같은 날짜·같은 배의 여러 출조 집계."""
     avail = [t for t in trips if t[2] == "available"]
     if avail:
         return {"status": "available", "remaining": max(t[3] or 0 for t in avail)}
     if any(t[2] == "full" for t in trips):
         return {"status": "full", "remaining": 0}
+    if any(t[2] == "maintenance" for t in trips):
+        return {"status": "maintenance", "remaining": 0}
     if trips and all(t[2] == "cancelled" for t in trips):
         return {"status": "cancelled", "remaining": 0}
     return {"status": "unknown", "remaining": None}

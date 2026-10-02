@@ -222,7 +222,7 @@ def parse_niabbs(html, boats, aliases, today, end):
             cells=cells[1:]
         if len(cells)!=5 or current is None or not today<=current<=end:continue
         heading=cells[0].text().strip()
-        if not re.search('주꾸미|쭈꾸미|쭈갑|갑오징어',heading):continue
+        if not re.search('주꾸미|쭈꾸미|쭈갑|갑오징어|문어',heading):continue
         boat=match_boat(re.sub(r'^\s*(?:오전|오후)\s*','',heading),boats,aliases)
         remaining=re.search(r'잔여\s*(\d+)',cells[3].text())
         if boat and remaining:
