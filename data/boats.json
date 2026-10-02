@@ -1044,9 +1044,9 @@
         {
             "bid": 71,
             "name": "다온호",
-            "operator": null,
-            "region": "전북 군산시",
-            "port": "비응항",
+            "operator": "군산비응항루미호",
+            "region": "전북",
+            "port": "군산 비응항",
             "price": "",
             "capacity": null,
             "channels": {
@@ -1064,9 +1064,9 @@
         {
             "bid": 72,
             "name": "루미호",
-            "operator": null,
-            "region": "전북 군산시",
-            "port": "비응항",
+            "operator": "군산비응항루미호",
+            "region": "전북",
+            "port": "군산 비응항",
             "price": "",
             "capacity": null,
             "channels": {
@@ -7681,7 +7681,7 @@
         },
         {
             "name": "강프로호",
-            "port": "비응항",
+            "port": "군산 비응항",
             "channels": {
                 "sunsang24": "https://roomi.sunsang24.com/ship/schedule_fleet"
             },
@@ -7689,7 +7689,9 @@
                 "강프로호",
                 "강프로호"
             ],
-            "bid": 415
+            "bid": 415,
+            "operator": "군산비응항루미호",
+            "region": "전북"
         },
         {
             "name": "오드리호",
