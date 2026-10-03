@@ -122,6 +122,7 @@
 const TELEGRAM_BOT_USERNAME = "";
 let BOATS=[];
 let DATE_NOTICES={};
+let AUDIT_REASONS={};
 let STATUS={};
 let STATUS_URL={};
 let HOMEPAGE_STATUS_BY_ID={};
@@ -132,6 +133,7 @@ async function loadData(){
     const nocache = `?v=${Date.now()}`;
     const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'+nocache),fetch('data/status.json'+nocache),fetch('data/status_homepages.json'+nocache).catch(()=>null),fetch('data/site_health.json'+nocache).catch(()=>null)]);
     const boatsData=await boatsRes.json();
+    try{const audit=await fetch('data/scrape_audit_current.json'+nocache).then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
     BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
     if(healthRes&&healthRes.ok){
       try{
@@ -233,7 +235,8 @@ function statusInfo(boat,date=selectedDate){
     if (boat.tags && boat.tags.includes("전화예약")) {
       return {cls:"unknown phone-only", short:"전화", text:`📞 전화예약: ${boat.channels.phone || ''}`};
     }
-    return {cls:"unknown",short:"·",text:"⚪ 현황 미확인"};
+    const audit=AUDIT_REASONS[boat.bid];
+    return {cls:"unknown",short:"·",text:"⚪ 현황 미확인"+(audit?.date_reasons?.[date]?" · "+audit.date_reasons[date]:"")};
   }
   if(row[0]==="i")return {cls:"unspecified",short:"안내",text:"어종을 확인할 수 없는 일정: "+(row[2]||"어종 미표기")+" · 예약표에서 확인 필요"};
   if(row[0]==="d")return {cls:"completed",short:"완료",text:"출조 완료"};

@@ -39,42 +39,44 @@ def norm_ship(s):
     return re.sub(r"\s+", "", s or "")
 
 
+OTHER_FISH = ('광어','우럭','참돔','농어','백조기','갈치','부시리','방어','열기','대구','민어')
+
 def parse_month(html, yyyymm, include_other_fish=False):
     """{date: [(ship, fish, status, remaining)]} 반환. status: available|full|cancelled"""
-    u = unescape_js(html)
+    from homepage_engine import DOM
     out = {}
     prefix = yyyymm[:4] + "-" + yyyymm[4:]
-    for tr in u.split("<tr")[1:]:
-        dm = re.search(r'data-sdate="(\d{4}-\d{2}-\d{2})"', tr)
-        if not dm or not dm.group(1).startswith(prefix):
-            continue
-        sdate = dm.group(1)
-        sm = re.search(r'<td class="ship_info">.*?<div class="title">\s*(.*?)\s*</div>', tr, re.S)
-        ship = unescape(re.sub(r'<[^>]+>', '', sm.group(1))).strip() if sm else None
-        fm = re.search(r'<div id="fish">(.*?)</div>', tr, re.S)
-        fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
-        sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
-        sno = sno_m.group(1) if sno_m else None
-        rm = re.search(r'<li class="remain"(.*?)</li>', tr, re.S)
-        status, remaining = "unknown", None
-        if rm:
-            cell = rm.group(1)
-            sm2 = re.search(r'data-status_code="(END|CANCEL|CHECK)"', cell)
-            if sm2:
-                if sm2.group(1) == "END": status = "full"
-                elif sm2.group(1) == "CANCEL": status = "cancelled"
-                elif sm2.group(1) == "CHECK": status = "maintenance"
-            else:
-                nm = re.search(r"남은자리.*?<span[^>]*>(\d+)명</span>", cell, re.S)
-                if nm:
-                    status, remaining = "available", int(nm.group(1))
-                elif "예약마감" in cell:
-                    status = "full"
-                elif "점검" in cell:
-                    status = "maintenance"
-        if not include_other_fish and not any(k in fish for k in JJUKKUMI) and status not in ("cancelled","maintenance"):
-            continue
-        out.setdefault(sdate, []).append((ship, fish, status, remaining, sno))
+    root = DOM(unescape_js(html)).root
+    seen=set()
+    for dated in root.walk():
+        sdate=dated.attrs.get('data-sdate','')
+        if not sdate.startswith(prefix):continue
+        row=dated
+        while row.parent and row.tag!='tr':row=row.parent
+        if row.tag!='tr':continue
+        nodes=list(row.walk())
+        ship_cell=next((n for n in nodes if 'ship_info' in n.attrs.get('class','').split()),None)
+        title=next((n for n in ship_cell.walk() if 'title' in n.attrs.get('class','').split()),None) if ship_cell else None
+        ship=title.text().strip() if title else None
+        fish_node=next((n for n in nodes if n.attrs.get('id')=='fish'),None)
+        fish=fish_node.text().strip() if fish_node else ''
+        sno=dated.attrs.get('data-schedule_no') or next((n.attrs['data-schedule_no'] for n in nodes if n.attrs.get('data-schedule_no')),None)
+        remain=next((n for n in nodes if 'remain' in n.attrs.get('class','').split()),None)
+        state,remaining='unknown',None
+        if remain:
+            code=next((n.attrs['data-status_code'] for n in remain.walk() if n.attrs.get('data-status_code')),None)
+            state={'END':'full','CANCEL':'cancelled','CHECK':'maintenance'}.get(code,'unknown')
+            if state=='unknown':
+                text=re.sub(r'\s+','',remain.text())
+                number=re.search(r'남은자리(\d+)명',text)
+                if number:state,remaining='available',int(number.group(1))
+                elif '예약마감' in text:state='full'
+                elif '점검' in text:state='maintenance'
+        key=(sdate,ship,sno,fish,state,remaining)
+        if key in seen:continue
+        seen.add(key)
+        if not include_other_fish and not any(k in fish for k in JJUKKUMI) and state not in ('cancelled','maintenance'):continue
+        out.setdefault(sdate,[]).append((ship,fish,state,remaining,sno))
     return out
 
 
@@ -106,7 +108,7 @@ def parse_simple_list(html, yyyymm, ship_name):
                 status = "full"
             elif "점검" in tr:
                 status = "maintenance"
-        if not any(k in fish for k in JJUKKUMI) and status not in ("cancelled","maintenance"):
+        if status not in ("available","full","cancelled","maintenance"):
             continue
         out.setdefault(sdate, []).append((ship_name, fish, status, remaining, sno))
     return out
@@ -137,6 +139,18 @@ def aggregate(trips):
     if sno:
         res["sno"] = sno
     return res
+
+
+def booking_state(trips):
+    target=[t for t in trips if any(k in t[1] for k in JJUKKUMI)]
+    other=[t for t in trips if any(k in t[1] for k in OTHER_FISH)]
+    selected=target or other or trips
+    state=aggregate(selected)
+    if not target and state['status'] in ('available','full'):
+        state['actual_status']=state['status']
+        state['status']='other_fish' if other else 'unspecified'
+        state['fish']=' / '.join(dict.fromkeys(t[1] or '어종 미표기' for t in selected))
+    return state
 
 
 def subdomain(url):
@@ -170,7 +184,7 @@ def main():
     except (OSError,ValueError):data={'dates':{}}
     data.setdefault('by_boat_id',{})
     def collect(item):
-        sub,group=item;client=Client(1);results={};errors=[];observed=set();capacity_rejected=set();all_labels=set();excluded_fish={}
+        sub,group=item;client=Client(1);results={};errors=[];observed=set();capacity_rejected=set();all_labels=set();selectable_labels=set();excluded_fish={}
         names=[b['name'] for b in group]
         aliases={label:b['name'] for b in group for label in b.get('booking_names',[])}
         for month in months(first,end):
@@ -183,13 +197,14 @@ def main():
                         if trip[0]:all_labels.add(trip[0])
                         name=match_boat(trip[0],names,aliases)
                         if name and not any(k in trip[1] for k in JJUKKUMI):excluded_fish.setdefault(name,set()).add(trip[1] or '어종 미표기')
-                parsed={ds:[t for t in trips if any(k in t[1] for k in JJUKKUMI) or t[2] in ("cancelled","maintenance")] for ds,trips in all_trips.items()}
+                parsed={ds:[t for t in trips if t[2] in ("available","full","cancelled","maintenance")] for ds,trips in all_trips.items()}
                 matched={match_boat(t[0],names,aliases) for trips in parsed.values() for t in trips}
                 if any(name not in matched for name in names):
                     simple_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet_simple/{ym}'
                     h_simple, _ = client.fetch(simple_url)
                     from homepage_engine import DOM
                     ship_buttons=[(button.attrs.get('data-ship-list-no',''),next(button.walk('strong'),button).text().strip()) for button in DOM(h_simple).root.walk('button') if 'btn-schedule-ship' in button.attrs.get('class','').split()]
+                    selectable_labels.update(name for ship_no,name in ship_buttons if ship_no.isdigit() and int(ship_no)>0)
                     for ship_no, ship_name in ship_buttons:
                         if not ship_no.isdigit() or int(ship_no) == 0: continue
                         name=match_boat(ship_name,names,aliases)
@@ -205,7 +220,7 @@ def main():
                     if not first.isoformat()<=ds<=end.isoformat():continue
                     for b in group:
                         mine=[t for t in trips if match_boat(t[0],names,aliases)==b['name']] if named else trips if len(group)==1 else []
-                        state=aggregate(mine)
+                        state=booking_state(mine)
                         if state['status']=='unknown':continue
                         cap=b.get('capacity')
                         if cap and (state['remaining'] or 0)>cap:
@@ -216,7 +231,7 @@ def main():
         print(sub,len(results),'건',len(errors),'오류',flush=True)
         collected={bid for bid,ds in results}
         missing=[b['name'] for b in group if str(b['bid']) not in collected]
-        health={'status':'partial' if results and (errors or missing) else 'ok' if results else 'fetch_failed' if errors else 'no_data','url':f'https://{sub}.sunsang24.com/ship/schedule_fleet','entries':len(results),'boats':names,'boat_ids':{b['name']:b['bid'] for b in group},'missing_boats':missing,'observed_ship_labels':sorted(observed),'all_ship_labels':sorted(all_labels),'excluded_fish':{name:sorted(fish) for name,fish in excluded_fish.items()},'capacity_rejected':sorted(capacity_rejected),'errors':errors}
+        health={'status':'partial' if results and (errors or missing) else 'ok' if results else 'fetch_failed' if errors else 'no_data','url':f'https://{sub}.sunsang24.com/ship/schedule_fleet','entries':len(results),'boats':names,'boat_ids':{b['name']:b['bid'] for b in group},'missing_boats':missing,'observed_ship_labels':sorted(observed),'all_ship_labels':sorted(all_labels),'selectable_ship_labels':sorted(selectable_labels),'excluded_fish':{name:sorted(fish) for name,fish in excluded_fish.items()},'capacity_rejected':sorted(capacity_rejected),'errors':errors}
         return group,results,errors,sub,health
     total=0
     health_path=os.path.join(DATA,'site_health_sunsang24.json')

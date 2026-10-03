@@ -13,7 +13,7 @@ from season import KST
 
 
 def search_boat(boat):
-    query = f"{boat.get('port', '')} {boat['name']} 예약"
+    query = boat.get("search_query") or f"{boat.get('port', '')} {boat['name']} 예약"
     url = 'https://search.naver.com/search.naver?query=' + quote(query)
     result = {'boat_id': boat['bid'], 'name': boat['name'], 'port': boat.get('port'),
               'query': query, 'search_url': url, 'candidates': [], 'error': None}

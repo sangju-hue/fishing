@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T17:51:58+09:00",
+ "checked_at": "2026-10-03T20:14:27+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -50,6 +50,10 @@
    ],
    "all_ship_labels": [
     "오드리피싱"
+   ],
+   "selectable_ship_labels": [
+    "오드리피싱",
+    "오드리호"
    ],
    "excluded_fish": {
     "오드리피싱": [
@@ -131,7 +135,7 @@
   "doji": {
    "status": "ok",
    "url": "https://doji.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "도지호"
    ],
@@ -394,6 +398,19 @@
    ],
    "observed_ship_labels": [],
    "all_ship_labels": [],
+   "selectable_ship_labels": [
+    "돈지호",
+    "엠퍼러호",
+    "오르카호",
+    "왕선장호",
+    "유로파호",
+    "입질대박호",
+    "제비호",
+    "태평호",
+    "피싱핀",
+    "해성호",
+    "해운호"
+   ],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -517,27 +534,23 @@
    "errors": []
   },
   "iron": {
-   "status": "no_data",
+   "status": "ok",
    "url": "https://iron.sunsang24.com/ship/schedule_fleet",
-   "entries": 0,
+   "entries": 59,
    "boats": [
     "아이언호"
    ],
    "boat_ids": {
     "아이언호": 82
    },
-   "missing_boats": [
+   "missing_boats": [],
+   "observed_ship_labels": [
     "아이언호"
    ],
-   "observed_ship_labels": [],
    "all_ship_labels": [
     "아이언호"
    ],
-   "excluded_fish": {
-    "아이언호": [
-     "어종 미표기"
-    ]
-   },
+   "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
   },
@@ -1156,6 +1169,7 @@
    ],
    "observed_ship_labels": [],
    "all_ship_labels": [],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
