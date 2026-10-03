@@ -6588,21 +6588,24 @@
   },
   {
    "bid": 346,
-   "name": "효성무창포호",
+   "name": "효성(로빈호)",
    "port": "무창포항",
    "region": "충남 · 보령",
    "price": "",
    "channels": {
-    "phone": "010-3463-8194",
-    "homepage": "https://thefishing.kr/bus/south.php?uid=1849&amp;type=3&amp;page=6"
+    "homepage": "http://www.hyosungho.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "무창포 나래피싱",
+   "operator": "무창포 효성낚시",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%ED%9A%A8%EC%84%B1%EB%AC%B4%EC%B0%BD%ED%8F%AC%ED%98%B8"
-   ]
+   ],
+   "booking_names": [
+    "효성(로빈호)"
+   ],
+   "catalog_status": "booking_verified"
   },
   {
    "bid": 347,
@@ -7336,8 +7339,7 @@
    ],
    "booking_names": [
     "효성",
-    "로빈호",
-    "효성(로빈호)"
+    "로빈호"
    ],
    "catalog_status": "booking_verified"
   },
