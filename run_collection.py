@@ -1,8 +1,8 @@
 """Prevent concurrent collection, including manually invoked fishing.sh.
 
 수집 모드 (그룹이 끝날 때마다 바로 GitHub에 올려 화면에 먼저 반영):
-  fast (5분)  : 선상24 전체 → 무창포 → 오천항 → 영흥도 홈페이지 (오늘~30일)
-  slow (30분) : 무창포·오천항·영흥도 홈페이지 31일 이후 → 나머지 항구 홈페이지 전체
+  fast (5분)  : 선상24 전체 → 무창포·오천항·영흥도 홈페이지 한 번에 (오늘~14일)
+  slow (30분) : 무창포·오천항·영흥도 홈페이지 15일째 이후 → 나머지 항구 홈페이지 전체
   full        : fast + slow (수동수집, fishing.sh 기본값)
 """
 import argparse
@@ -17,7 +17,7 @@ from datetime import datetime, timezone, timedelta
 from collect_homepages import BASE, atomic_json, sites_from_catalog
 
 PRIORITY_GROUPS = (('무창포', '무창포'), ('오천항', '오천'), ('영흥도', '영흥'))
-NEAR_DAYS = 30
+NEAR_DAYS = 14
 PROGRESS = os.path.join(BASE, 'data', 'scrape_progress.json')
 PLAN = os.path.join(BASE, 'data', 'collection_plan.json')
 KST = timezone(timedelta(hours=9))
@@ -104,15 +104,16 @@ def fast(mode, started, groups):
         failed |= 1 if run('push_to_github.py') else 0
     else:
         failed = 1
-    for name, hosts in groups[:-1]:
-        failed |= collect_group(mode, started, name, hosts, '--near-days', str(NEAR_DAYS))
+    priority_hosts = [h for _, hosts in groups[:-1] for h in hosts]
+    # 그룹별로 나눠 돌면 그룹마다 가장 느린 사이트를 기다리므로, 주요 3곳을 한 번에 수집한다.
+    failed |= collect_group(mode, started, '주요 3곳', priority_hosts, '--near-days', str(NEAR_DAYS))
     return failed
 
 
 def slow(mode, started, groups):
     failed = 0
     priority_hosts = [h for _, hosts in groups[:-1] for h in hosts]
-    failed |= collect_group(mode, started, '주요 3곳(31일 이후)', priority_hosts, '--after-days', str(NEAR_DAYS))
+    failed |= collect_group(mode, started, f'주요 3곳({NEAR_DAYS + 1}일째 이후)', priority_hosts, '--after-days', str(NEAR_DAYS))
     name, hosts = groups[-1]
     failed |= collect_group(mode, started, name, hosts)
     return failed
