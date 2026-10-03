@@ -128,12 +128,12 @@ async function loadData(){
     const codeMap={available:'a',full:'f',cancelled:'c',maintenance:'m'};
     STATUS={};
     let updatedAt=statusData.updated_at||boatsData.updated_at;
-    if(updatedAt)document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,16)} 기준`;
+    if(updatedAt)document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,19)} 기준`;
     const dates=statusData.dates||{};
     try{
       if(hpRes&&hpRes.ok){
         const hpData=await hpRes.json();
-        if(hpData.updated_at&&(!updatedAt||new Date(hpData.updated_at)>new Date(updatedAt))){updatedAt=hpData.updated_at;document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,16)} 기준`;}
+        if(hpData.updated_at&&(!updatedAt||new Date(hpData.updated_at)>new Date(updatedAt))){updatedAt=hpData.updated_at;document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,19)} 기준`;}
         HOMEPAGE_STATUS_BY_ID=hpData.by_boat_id||{};
         const hpDates=hpData.dates||{};
         for(const [date,boats] of Object.entries(hpDates)){
