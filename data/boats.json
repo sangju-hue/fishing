@@ -1928,19 +1928,6 @@
       ]
     },
     {
-      "bid": 122,
-      "name": "마린스타1호",
-      "operator": "뉴마린스타",
-      "region": "충남 보령시",
-      "port": "오천항",
-      "price": "",
-      "capacity": null,
-      "channels": {
-        "homepage": "http://www.boryeongharbor.com"
-      },
-      "notes": "[뉴마린스타호·마린스타1호] 광어다운샷·참돔타이라바·백조기·문어·우럭 (뉴마린스타). 2023년 선사 목록 기준"
-    },
-    {
       "bid": 123,
       "name": "마운틴호",
       "operator": "상상피싱",
