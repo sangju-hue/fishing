@@ -72,7 +72,16 @@ def match_boat(label, boats, aliases=None):
             return variants[name]
     return None
 
+def conditional_notice(text):
+    for line in text.splitlines():
+        line=re.sub(r'^공지\s*','',line.strip())
+        compacted=compact(line)
+        if '오픈' in compacted and ('상황에따라' in compacted or '개인사정' in compacted) and '예약' in compacted:
+            return line
+    return None
+
 def status(text):
+    if conditional_notice(text):return ('conditional',None)
     text = compact(text)
     if '개인사정' in text and '받지않' in text: return ('maintenance', 0)
     if re.search(r'출조\s*취소|출조를\s*취소|운항\s*취소|결항|기상\s*악화|취소합니다', text): return ('cancelled', 0)
@@ -87,7 +96,7 @@ def status(text):
 def merge_trip(out, key, result):
     """단일 출조의 최대 잔여석: 오전/오후의 좌석을 더하지 않는다."""
     old=out.get(key)
-    rank={'cancelled':0,'full':1,'available':2}
+    rank={'cancelled':0,'full':1,'conditional':2,'available':3}
     if old is None or rank[result[0]]>rank[old[0]] or result[0]==old[0]=='available' and (result[1] or 0)>(old[1] or 0):
         out[key]=result
 
@@ -132,7 +141,8 @@ def parse_booking(html, boats, aliases=None, today=None, end=None):
         boat = match_boat(heading.text(), boats, aliases)
         if not boat: continue
         seen_boats.add(boat)
-        result = status(cells[2].text())
+        notice=conditional_notice(cells[1].text()+'\n'+cells[2].text())
+        result = ('conditional',None) if notice else status(cells[2].text())
         if result is None:
             for image in cells[2].walk('img'):
                 m = re.search(r'/r_x_(\d+)\.',image.attrs.get('src',''))

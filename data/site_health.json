@@ -3769,7 +3769,12 @@
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=5709&sel=day#list",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=4032&sel=day#list"
    ],
-   "errors": []
+   "errors": [],
+   "date_notices": {
+    "위너호": {
+     "2026-10-07": "선장님 개인사정으로 2026년도 쭈갑예약은 상황에 따라 오픈합니다."
+    }
+   }
   },
   "xn--9t4b11y99ab5f.kr": {
    "status": "ok",
