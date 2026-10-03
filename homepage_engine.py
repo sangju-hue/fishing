@@ -55,7 +55,8 @@ def match_boat(label, boats, aliases=None):
     raw = label.strip().strip('★☆◆◇◈●○ ')
     # Captain labels are separated by a space or underscore; do not accept a
     # different boat whose name merely starts with the same characters.
-    raw = re.split(r'_|(?<=호)\s+(?=[가-힣A-Za-z])', raw)[0]
+    if '오전' not in raw and '오후' not in raw:
+        raw = re.split(r'_|(?<=호)\s+(?=[가-힣A-Za-z])', raw)[0]
     label = compact(raw)
     label = re.sub(r'^(?:\(신조선\)|신조선)','',label)
     aliases = aliases or {}

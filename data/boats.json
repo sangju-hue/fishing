@@ -1431,7 +1431,7 @@
     },
     {
       "bid": 93,
-      "name": "총각호",
+      "name": "총각호 (오전)",
       "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "무창포항",
@@ -1450,7 +1450,9 @@
         "https://www.chongkakho.com/index.php?mid=bk"
       ],
       "booking_names": [
-        "총각호"
+        "총각호 (오전)",
+        "총각호지선아(9인승)오전반",
+        "총각호(9인승)오전반"
       ],
       "catalog_status": "booking_verified",
       "company": "무창포 총각피싱"
@@ -3542,7 +3544,7 @@
     },
     {
       "bid": 213,
-      "name": "호호호",
+      "name": "호호호 (오전)",
       "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "무창포항",
@@ -3559,7 +3561,9 @@
         "https://www.chongkakho.com/index.php?mid=bk"
       ],
       "booking_names": [
-        "호호호"
+        "호호호 (오전)",
+        "호호호김영덕(9인승)오전반",
+        "호호호(9인승)오전반"
       ],
       "catalog_status": "booking_verified",
       "company": "무창포 총각피싱"
@@ -3820,7 +3824,7 @@
         "phone": "010-2712-0804",
         "homepage": "https://www.chongkakho.com/index.php?mid=bk"
       },
-      "name": "장수호",
+      "name": "장수호 (오전)",
       "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
       "operator": "무창포 총각피싱",
       "port": "무창포항",
@@ -3834,7 +3838,9 @@
         "https://www.chongkakho.com/index.php?mid=bk"
       ],
       "booking_names": [
-        "장수호"
+        "장수호 (오전)",
+        "장수호홍선장(9인승)오전반",
+        "장수호(9인승)오전반"
       ],
       "catalog_status": "booking_verified",
       "company": "무창포 총각피싱"
@@ -7837,6 +7843,87 @@
         "문일호"
       ],
       "catalog_status": "booking_verified"
+    },
+    {
+      "bid": 971100,
+      "name": "호호호 (오후)",
+      "operator": "무창포 총각피싱",
+      "region": "충남 보령시",
+      "port": "무창포항",
+      "price": "",
+      "capacity": null,
+      "channels": {
+        "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+      },
+      "notes": "총각피싱 선단 (선장 김영덕). 9인승, 백조기 오전반 5만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인.",
+      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_sources": [
+        "http://www.chongkakho.com/",
+        "https://naksigo.com/boat/%ED%98%B8%ED%98%B8%ED%98%B8",
+        "https://www.chongkakho.com/index.php?mid=bk"
+      ],
+      "booking_names": [
+        "호호호 (오후)",
+        "호호호김영덕(9인승)오후반",
+        "호호호(9인승)오후반"
+      ],
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
+    },
+    {
+      "bid": 971101,
+      "name": "총각호 (오후)",
+      "operator": "무창포 총각피싱",
+      "region": "충남 보령시",
+      "port": "무창포항",
+      "price": "",
+      "capacity": null,
+      "channels": {
+        "phone": "010-2712-0804",
+        "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+      },
+      "notes": "총각피싱 선단. 8인승 작은 배로 체험낚시 가능",
+      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_sources": [
+        "http://www.chongkakho.com/",
+        "https://naksigo.com/boat/%EC%B4%9D%EA%B0%81%ED%98%B8?id=2407",
+        "https://naksigo.com/boat/%EC%B4%9D%EA%B0%81%ED%98%B8?id=6402",
+        "https://www.chongkakho.com/index.php?mid=bk"
+      ],
+      "booking_names": [
+        "총각호 (오후)",
+        "총각호지선아(9인승)오후반",
+        "총각호(9인승)오후반"
+      ],
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
+    },
+    {
+      "capacity": null,
+      "channels": {
+        "phone": "010-2712-0804",
+        "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+      },
+      "name": "장수호 (오후)",
+      "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
+      "operator": "무창포 총각피싱",
+      "port": "무창포항",
+      "price": "",
+      "region": "충남 보령시",
+      "bid": 971102,
+      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_sources": [
+        "http://www.chongkakho.com/",
+        "https://naksigo.com/boat/%EC%9E%A5%EC%88%98%ED%98%B8?id=6371",
+        "https://www.chongkakho.com/index.php?mid=bk"
+      ],
+      "booking_names": [
+        "장수호 (오후)",
+        "장수호홍선장(9인승)오후반",
+        "장수호(9인승)오후반"
+      ],
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
     }
   ],
   "updated_at": "2026-10-03T09:04:25+09:00"
