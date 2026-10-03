@@ -91,7 +91,8 @@ def status(text):
     text = compact(text)
     if re.search(r'출조(?:를)?완료|출항완료|운항완료',text):return ('completed',0)
     if '개인사정' in text and '받지않' in text: return ('maintenance', 0)
-    if re.search(r'출항\s*취소|출조\s*취소|출조를\s*취소|운항\s*취소|결항|기상\s*악화|취소합니다', text): return ('cancelled', 0)
+    if re.search(r'기상\s*악화', text): return ('weather', 0)
+    if re.search(r'출항\s*취소|출조\s*취소|출조를\s*취소|운항\s*취소|결항|취소합니다', text): return ('cancelled', 0)
     if re.search(r'예약완료|예약마감|예약불가|대기하기|정비일|휴무|출조없음', text): return ('full', 0)
     m = re.search(r'(?:남은자리|남은좌석|잔여석|잔여좌석|잔여인원)[:：]?(\d+)(?:명|석|자리)?', text)
     if not m: m = re.fullmatch(r'(\d+)(?:명|석|자리)',text)
@@ -103,7 +104,7 @@ def status(text):
 def merge_trip(out, key, result):
     """단일 출조의 최대 잔여석: 오전/오후의 좌석을 더하지 않는다."""
     old=out.get(key)
-    rank={'cancelled':0,'maintenance':1,'completed':1,'full':2,'conditional':3,'available':4}
+    rank={'cancelled':0,'maintenance':1,'weather':1,'completed':1,'full':2,'conditional':3,'available':4}
     if old is None or rank[result[0]]>rank[old[0]] or result[0]==old[0]=='available' and (result[1] or 0)>(old[1] or 0):
         out[key]=result
 

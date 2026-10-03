@@ -90,7 +90,7 @@
       <button type="button" data-month="10" aria-pressed="false">10월</button>
       <button type="button" data-month="11" aria-pressed="false">11월</button>
     </nav>
-    <div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🐙 문어</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚫ 배점검/출항취소</span><span class="legend-item">🟠 유동 = 사정에 따라 예약 오픈</span><span class="legend-item">완료 = 출조 완료</span><span class="legend-item">타종 = 다른 어종</span><span class="legend-item">안내 = 어종 확인 필요</span><span class="legend-item">· 미확인</span></div>
+    <div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🐙 문어</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚫ 배점검/출항취소/기상악화</span><span class="legend-item">🟠 유동 = 사정에 따라 예약 오픈</span><span class="legend-item">완료 = 출조 완료</span><span class="legend-item">타종 = 다른 어종</span><span class="legend-item">안내 = 어종 확인 필요</span><span class="legend-item">· 미확인</span></div>
     <div class="matrix-meta"><span id="matrixCount"></span><span>선사·배 이름은 홈페이지로 이동합니다. 체크박스로 배를 선택하고, 초록 셀로 해당 날짜 예약을 확인하세요.</span></div>
     <div class="matrix-wrap" id="matrixWrap" tabindex="0" aria-label="가로로 스크롤 가능한 월간 예약 현황표">
       <table class="matrix" id="matrixTable"></table>
@@ -146,7 +146,7 @@ async function loadData(){
     }
     const statusData=await statusRes.json();
     SUNSANG_STATUS_BY_ID=statusData.by_boat_id||{};
-    const codeMap={available:'a',full:'f',cancelled:'c',maintenance:'m',conditional:'p',completed:'d',other_fish:'o',unspecified:'i'};
+    const codeMap={available:'a',full:'f',cancelled:'c',maintenance:'m',weather:'w',conditional:'p',completed:'d',other_fish:'o',unspecified:'i'};
     STATUS={};
     let updatedAt=statusData.updated_at||boatsData.updated_at;
     if(updatedAt)document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,19)} 기준`;
@@ -218,7 +218,7 @@ function statusRow(boat,date=selectedDate){
   const bid=String(boat.canonical_bid??boat.bid);
   for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
     if(info&&!info.stale){
-      const code={available:"a",full:"f",cancelled:"c",maintenance:"m",conditional:"p",completed:"d",other_fish:"o",unspecified:"i"}[info.status];
+      const code={available:"a",full:"f",cancelled:"c",maintenance:"m",weather:"w",conditional:"p",completed:"d",other_fish:"o",unspecified:"i"}[info.status];
       if(code)return [code,info.remaining??null,info.fish??null,info.actual_status??null];
     }
   }
@@ -252,7 +252,8 @@ function statusInfo(boat,date=selectedDate){
     text:row[1]==null?`${prefixIcon} ${labelPrefix}예약 가능 · 잔여석 미확인`:`${prefixIcon} ${labelPrefix} ${row[1]}자리 남음`
   };
   if(row[0]==="f")return {cls:"full",short:isOctopus?"문어(마감)":"마감",text:isOctopus?"🐙 문어 마감":"🔴 마감"};
-  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:"⚫ 점검일"};
+  if(row[0]==="w")return {cls:"maintenance",short:"기상",text:"⚫ 기상악화"};
+  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:"⚫ 점검"};
   return {cls:"cancelled",short:"취소",text:"⚫ 출조취소"};
 }
 const PORT_ALIASES=[

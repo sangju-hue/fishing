@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T20:38:06+09:00",
+ "checked_at": "2026-10-03T20:54:22+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -22,6 +22,7 @@
    "all_ship_labels": [
     "태헌호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "태헌호": [
      "어종 미표기"
@@ -80,6 +81,7 @@
    "all_ship_labels": [
     "에버스타호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -107,6 +109,7 @@
     "세븐호",
     "황금사자호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -128,6 +131,7 @@
    "all_ship_labels": [
     "황금사자호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -135,7 +139,7 @@
   "doji": {
    "status": "ok",
    "url": "https://doji.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
     "도지호"
    ],
@@ -149,6 +153,7 @@
    "all_ship_labels": [
     "도지호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "도지호": [
      "광어,우럭"
@@ -174,6 +179,7 @@
    "all_ship_labels": [
     "빅보스호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -195,6 +201,7 @@
    "all_ship_labels": [
     "뉴해양호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -218,6 +225,7 @@
     "마검포 뉴패밀리호",
     "플라이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "뉴패밀리호": [
      "광어,우럭,농어",
@@ -245,6 +253,7 @@
    "all_ship_labels": [
     "꿈에그린호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -266,6 +275,7 @@
    "all_ship_labels": [
     "블루오션2호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -287,6 +297,7 @@
    "all_ship_labels": [
     "웅비1호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -294,7 +305,7 @@
   "ansan": {
    "status": "ok",
    "url": "https://ansan.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
     "안산호"
    ],
@@ -308,6 +319,7 @@
    "all_ship_labels": [
     "안산호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "안산호": [
      "광어,우럭"
@@ -333,6 +345,7 @@
    "all_ship_labels": [
     "킹스타호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "킹스타호": [
      "광어"
@@ -358,6 +371,7 @@
    "all_ship_labels": [
     "예지퀸호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -379,6 +393,7 @@
    "all_ship_labels": [
     "제비호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -437,6 +452,7 @@
     "은아낚시",
     "테슬란호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "은아호": [
      "출조안내"
@@ -470,6 +486,7 @@
     "다온호",
     "루미호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "강프로호": [
      "광어"
@@ -519,6 +536,16 @@
     "에프원호",
     "히트피싱"
    ],
+   "selectable_ship_labels": [
+    "김대영호",
+    "만수르호",
+    "바다하리호",
+    "아리울1호",
+    "아리울2호",
+    "어비스호",
+    "에프원호",
+    "히트피싱"
+   ],
    "excluded_fish": {
     "김대영호": [
      "갈치"
@@ -550,6 +577,7 @@
    "all_ship_labels": [
     "아이언호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -576,6 +604,12 @@
     "베테랑호"
    ],
    "all_ship_labels": [
+    "가디언호",
+    "공지사항",
+    "대양호",
+    "베테랑호"
+   ],
+   "selectable_ship_labels": [
     "가디언호",
     "공지사항",
     "대양호",
@@ -618,6 +652,7 @@
     "아침바다호",
     "천해호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -639,6 +674,7 @@
    "all_ship_labels": [
     "뉴스카이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -662,6 +698,7 @@
     "똥까호",
     "홈런호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "똥까호": [
      "광어,우럭"
@@ -687,6 +724,29 @@
    "all_ship_labels": [
     "비엔나호"
    ],
+   "selectable_ship_labels": [],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "jangbogo": {
+   "status": "ok",
+   "url": "https://jangbogo.sunsang24.com/ship/schedule_fleet",
+   "entries": 59,
+   "boats": [
+    "장보고호"
+   ],
+   "boat_ids": {
+    "장보고호": 154
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "장보고호"
+   ],
+   "all_ship_labels": [
+    "장보고호"
+   ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -718,6 +778,12 @@
     "에버스타호",
     "프린스2호"
    ],
+   "selectable_ship_labels": [
+    "마스터호",
+    "에버스타호",
+    "원조낚시",
+    "프린스2호"
+   ],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -739,6 +805,7 @@
    "all_ship_labels": [
     "팀베테랑호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -772,6 +839,7 @@
     "스마트호",
     "악바리호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "맥가이버호": [
      "기타"
@@ -797,6 +865,7 @@
    "all_ship_labels": [
     "마이웨이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -818,6 +887,7 @@
    "all_ship_labels": [
     "진영호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -842,6 +912,11 @@
    ],
    "all_ship_labels": [
     "뉴아폴로호",
+    "킹피싱호"
+   ],
+   "selectable_ship_labels": [
+    "뉴아폴로호",
+    "승리호",
     "킹피싱호"
    ],
    "excluded_fish": {
@@ -869,6 +944,7 @@
    "all_ship_labels": [
     "엔조이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -898,6 +974,7 @@
     "비바호",
     "오천 프로낚시"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "오천 프로낚시": [
      "출조안내"
@@ -923,6 +1000,7 @@
    "all_ship_labels": [
     "까치선장 자이언트호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -944,6 +1022,7 @@
    "all_ship_labels": [
     "꽃돼지호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -965,6 +1044,7 @@
    "all_ship_labels": [
     "물돌이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "물돌이호": [
      "광어,기타"
@@ -990,6 +1070,7 @@
    "all_ship_labels": [
     "프린스호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1021,6 +1102,12 @@
     "이바다호",
     "해모수호"
    ],
+   "selectable_ship_labels": [
+    "LH하우스",
+    "이바다낚시",
+    "이바다호",
+    "해모수호"
+   ],
    "excluded_fish": {
     "LH하우스": [
      "기타"
@@ -1046,6 +1133,7 @@
    "all_ship_labels": [
     "해모수호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1067,6 +1155,7 @@
    "all_ship_labels": [
     "거양호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "거양호": [
      "우럭"
@@ -1092,6 +1181,7 @@
    "all_ship_labels": [
     "해마호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "해마호": [
      "어종 미표기"
@@ -1117,6 +1207,7 @@
    "all_ship_labels": [
     "어쩌다어부호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "어쩌다어부호": [
      "우럭"
@@ -1143,6 +1234,10 @@
     "뉴바이킹호"
    ],
    "all_ship_labels": [
+    "누리호",
+    "뉴바이킹호"
+   ],
+   "selectable_ship_labels": [
     "누리호",
     "뉴바이킹호"
    ],
@@ -1191,6 +1286,7 @@
    "all_ship_labels": [
     "호랭이호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1212,6 +1308,7 @@
    "all_ship_labels": [
     "경인호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1235,6 +1332,7 @@
     "아리랑1호",
     "아리랑2호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1256,6 +1354,7 @@
    "all_ship_labels": [
     "바이킹호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "바이킹호": [
      "농어"
@@ -1283,6 +1382,7 @@
     "아라2호",
     "아라호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [
     "아라2호"
@@ -1306,6 +1406,7 @@
    "all_ship_labels": [
     "카리스마호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1327,6 +1428,7 @@
    "all_ship_labels": [
     "태평호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1348,6 +1450,7 @@
    "all_ship_labels": [
     "화성606호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1394,6 +1497,24 @@
     "호빵호(구 에버그린호)"
    ],
    "all_ship_labels": [],
+   "selectable_ship_labels": [
+    "24마린낚시",
+    "리틀대박호",
+    "빅보스호",
+    "산타클로스호",
+    "스마트보트호(구 마루호)",
+    "신흥특호",
+    "에이스요트호",
+    "옐로우피싱",
+    "유로파호",
+    "입질대박호",
+    "제비호",
+    "채비야호",
+    "태평호",
+    "해운호",
+    "호빵호(구 에버그린호)",
+    "화성606호"
+   ],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1415,6 +1536,7 @@
    "all_ship_labels": [
     "해운호"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
@@ -1449,6 +1571,7 @@
     "에프원호",
     "히트피싱"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "만수르호": [
      "참돔"
@@ -1489,6 +1612,7 @@
     "에프원호",
     "히트피싱"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "아리울2호": [
      "참돔"
@@ -1531,33 +1655,12 @@
     "에프원호",
     "히트피싱"
    ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "아리울1호": [
      "참돔"
     ]
    },
-   "capacity_rejected": [],
-   "errors": []
-  },
-  "jangbogo": {
-   "status": "ok",
-   "url": "https://jangbogo.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
-   "boats": [
-    "장보고호"
-   ],
-   "boat_ids": {
-    "장보고호": 154
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "장보고호"
-   ],
-   "all_ship_labels": [
-    "장보고호"
-   ],
-   "selectable_ship_labels": [],
-   "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
   }

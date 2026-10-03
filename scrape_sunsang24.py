@@ -64,10 +64,11 @@ def parse_month(html, yyyymm, include_other_fish=False):
         remain=next((n for n in nodes if 'remain' in n.attrs.get('class','').split()),None)
         state,remaining='unknown',None
         if remain:
+            remain_text=re.sub(r'\s+','',remain.text())
             code=next((n.attrs['data-status_code'] for n in remain.walk() if n.attrs.get('data-status_code')),None)
-            state={'END':'full','CANCEL':'cancelled','CHECK':'maintenance'}.get(code,'unknown')
+            state='weather' if re.search(r'기상\s*악화',remain_text) else {'END':'full','CANCEL':'cancelled','CHECK':'maintenance'}.get(code,'unknown')
             if state=='unknown':
-                text=re.sub(r'\s+','',remain.text())
+                text=remain_text
                 number=re.search(r'남은자리(\d+)명',text)
                 if number:state,remaining='available',int(number.group(1))
                 elif '예약마감' in text:state='full'
@@ -75,7 +76,7 @@ def parse_month(html, yyyymm, include_other_fish=False):
         key=(sdate,ship,sno,fish,state,remaining)
         if key in seen:continue
         seen.add(key)
-        if not include_other_fish and not any(k in fish for k in JJUKKUMI) and state not in ('cancelled','maintenance'):continue
+        if not include_other_fish and not any(k in fish for k in JJUKKUMI) and state not in ('cancelled','maintenance','weather'):continue
         out.setdefault(sdate,[]).append((ship,fish,state,remaining,sno))
     return out
 
@@ -100,6 +101,7 @@ def parse_simple_list(html, yyyymm, ship_name):
             if sm2.group(1) == "END": status = "full"
             elif sm2.group(1) == "CANCEL": status = "cancelled"
             elif sm2.group(1) == "CHECK": status = "maintenance"
+            if re.search(r'기상\s*악화', tr):status = 'weather'
         else:
             nm = re.search(r"남은자리.*?<span[^>]*>(\d+)명</span>", tr, re.S)
             if nm:
@@ -108,7 +110,7 @@ def parse_simple_list(html, yyyymm, ship_name):
                 status = "full"
             elif "점검" in tr:
                 status = "maintenance"
-        if status not in ("available","full","cancelled","maintenance"):
+        if status not in ("available","full","cancelled","maintenance","weather"):
             continue
         out.setdefault(sdate, []).append((ship_name, fish, status, remaining, sno))
     return out
@@ -129,6 +131,8 @@ def aggregate(trips):
         res = {"status": "full", "remaining": 0}
     elif any(t[2] == "maintenance" for t in trips):
         res = {"status": "maintenance", "remaining": 0}
+    elif any(t[2] == "weather" for t in trips):
+        res = {"status": "weather", "remaining": 0}
     elif trips and all(t[2] == "cancelled" for t in trips):
         res = {"status": "cancelled", "remaining": 0}
     else:
@@ -197,7 +201,7 @@ def main():
                         if trip[0]:all_labels.add(trip[0])
                         name=match_boat(trip[0],names,aliases)
                         if name and not any(k in trip[1] for k in JJUKKUMI):excluded_fish.setdefault(name,set()).add(trip[1] or '어종 미표기')
-                parsed={ds:[t for t in trips if t[2] in ("available","full","cancelled","maintenance")] for ds,trips in all_trips.items()}
+                parsed={ds:[t for t in trips if t[2] in ("available","full","cancelled","maintenance","weather")] for ds,trips in all_trips.items()}
                 matched={match_boat(t[0],names,aliases) for trips in parsed.values() for t in trips}
                 if any(name not in matched for name in names):
                     simple_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet_simple/{ym}'

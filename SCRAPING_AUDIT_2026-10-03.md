@@ -48,7 +48,7 @@
 |팀대물호|29|0|검증된 중복 항목으로 통합|http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk|
 |두드림호|0|29|배 이름·항구·선사명으로 네이버 검색했으나 해당 배의 현재 공식 예약 주소를 검증하지 못함|공식 주소 미확인|
 |위더스호|0|29|현재 선단 예약표에 등록 선박 이름이 없음. 표시 선박: #공지사항#, 팀대물호; 다른 배로 임의 연결할 수 없음|http://xn--c20bm9by0le8h59d54l.com|
-|이바다낚시|0|29|현재 선단 예약표에 등록 선박 이름이 없음. 표시 선박: LH하우스, 이바다호, 해모수호; 다른 배로 임의 연결할 수 없음|https://ebada.sunsang24.com/ship/schedule_fleet|
+|이바다낚시|0|29|예약 페이지는 조회되지만 해당 날짜·선박의 공개 예약 상태가 없음; 좌석 수나 마감을 추정하지 않음|https://ebada.sunsang24.com/ship/schedule_fleet|
 |뉴일복호|0|29|등록 도메인이 DNS에서 조회되지 않음(HTTP/HTTPS·www 유무 모두 접속 실패); 대체 공식 예약 주소 미확인|http://www.xn--pn3bn6qm0l.kr|
 |반도피싱호|0|29|현재 링크가 예약 달력이 아닌 조황/소개 게시물임|https://thefishing.kr/gallery/ship.php?wr_uid=144217|
 |일복호|0|29|현재 링크가 예약 달력이 아닌 조황/소개 게시물임|https://thefishing.kr/gallery/list.php?wr_uid=1836690|
@@ -108,7 +108,7 @@
 |아이언호|29|0|공개 예약 상태 또는 시즌 안내 반영|https://iron.sunsang24.com/ship/schedule_fleet|
 |어복킹선단|0|29|배 이름·항구·선사명으로 네이버 검색했으나 해당 배의 현재 공식 예약 주소를 검증하지 못함|공식 주소 미확인|
 |모범낚시호|29|0|공개 예약 상태 또는 시즌 안내 반영|https://mobum.thefishing.kr/index.php?mid=bk|
-|원조낚시|0|29|현재 선단 예약표에 등록 선박 이름이 없음. 표시 선박: 마스터호, 에버스타호, 프린스2호; 다른 배로 임의 연결할 수 없음|https://wonjofishing.sunsang24.com/ship/schedule_fleet|
+|원조낚시|0|29|예약 페이지는 조회되지만 해당 날짜·선박의 공개 예약 상태가 없음; 좌석 수나 마감을 추정하지 않음|https://wonjofishing.sunsang24.com/ship/schedule_fleet|
 |오드리호|0|29|현재 공식 홈페이지 선박 선택에 해당 배가 있으나 조회한 10~11월 개별 선박 월별 목록에 공개 예약 상태가 없음|https://af.sunsang24.com/ship/schedule_fleet|
 |해동호|0|29|배 이름·항구·선사명으로 네이버 검색했으나 해당 배의 현재 공식 예약 주소를 검증하지 못함|공식 주소 미확인|
 |만수르호|1|0|공개 예약 상태 또는 시즌 안내 반영|https://mansour.sunsang24.com/ship/schedule_fleet|
@@ -116,7 +116,7 @@
 |아리울2호|17|0|공개 예약 상태 또는 시즌 안내 반영|https://hitfleet.sunsang24.com/ship/schedule_fleet|
 |에프원호|1|0|공개 예약 상태 또는 시즌 안내 반영|https://hitfleet.sunsang24.com/ship/schedule_fleet|
 |오렌지호|0|29|배 이름·항구·선사명으로 네이버 검색했으나 해당 배의 현재 공식 예약 주소를 검증하지 못함|공식 주소 미확인|
-|히트피싱|0|29|현재 선단 예약표에 등록 선박 이름이 없음. 표시 선박: 김대영호, 만수르호, 바다하리호, 아리울1호, 아리울2호, 어비스호, 에프원호; 다른 배로 임의 연결할 수 없음|https://badahariho.sunsang24.com/ship/schedule_fleet|
+|히트피싱|0|29|예약 페이지는 조회되지만 해당 날짜·선박의 공개 예약 상태가 없음; 좌석 수나 마감을 추정하지 않음|https://badahariho.sunsang24.com/ship/schedule_fleet|
 |해주호 (바다사랑 낚시펜션)|0|29|현재 사이트는 낚시 펜션의 예약 안내이며 해주호의 날짜별 선박 예약표를 찾지 못함|https://www.qkektkfkd.com/|
 |푸른바다테스호|0|29|날짜를 하나씩 눌러야 조회되는 방식: 앞선 사용자 지시에 따라 일별 요청 수집 보류|http://www.blueseaho.com|
 |원피스호|0|29|날짜를 하나씩 눌러야 조회되는 방식: 앞선 사용자 지시에 따라 일별 요청 수집 보류|https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation|
