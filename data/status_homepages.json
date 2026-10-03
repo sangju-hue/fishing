@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-03T13:09:42+09:00",
+ "updated_at": "2026-10-03T13:36:58+09:00",
  "dates": {
   "2026-09-01": {
    "뉴마린스타호": {
@@ -659,14 +659,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -2131,6 +2123,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-04": {
@@ -2402,14 +2402,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -3938,6 +3930,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-05": {
@@ -4209,14 +4209,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -5729,6 +5721,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-06": {
@@ -6000,14 +6000,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -7528,6 +7520,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-07": {
@@ -7799,14 +7799,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -9335,6 +9327,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-08": {
@@ -9606,14 +9606,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -11134,6 +11126,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-09": {
@@ -11405,14 +11405,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -12933,6 +12925,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-10": {
@@ -13195,14 +13195,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -14731,6 +14723,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-11": {
@@ -14993,14 +14993,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -16521,6 +16513,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-12": {
@@ -16783,14 +16783,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 15,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -18303,6 +18295,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 15,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-13": {
@@ -18565,14 +18565,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -20085,6 +20077,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-14": {
@@ -20347,14 +20347,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 16,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -21851,6 +21843,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-15": {
@@ -22113,14 +22113,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 19,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -23633,6 +23625,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 19,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-16": {
@@ -23895,14 +23895,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -25415,6 +25407,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-17": {
@@ -25677,14 +25677,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -27205,6 +27197,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-18": {
@@ -27467,14 +27467,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -28995,6 +28987,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-19": {
@@ -29257,14 +29257,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -30777,6 +30769,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-20": {
@@ -31039,14 +31039,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -32559,6 +32551,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-21": {
@@ -32821,14 +32821,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -34341,6 +34333,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-22": {
@@ -34603,14 +34603,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -36123,6 +36115,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-23": {
@@ -36385,14 +36385,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -37913,6 +37905,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-24": {
@@ -38175,14 +38175,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "full",
@@ -39703,6 +39695,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-25": {
@@ -39965,14 +39965,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -41493,6 +41485,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-26": {
@@ -41755,14 +41755,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -43275,6 +43267,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-27": {
@@ -43537,14 +43537,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -45057,6 +45049,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-28": {
@@ -45319,14 +45319,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -46839,6 +46831,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-29": {
@@ -47101,14 +47101,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -48621,6 +48613,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-30": {
@@ -48883,14 +48883,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 16,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -50403,6 +50395,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 16,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-31": {
@@ -50665,14 +50665,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -52193,6 +52185,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-01": {
@@ -52447,14 +52447,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -53975,6 +53967,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-02": {
@@ -54229,14 +54229,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 18,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -55757,6 +55749,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-03": {
@@ -56011,14 +56011,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -57539,6 +57531,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-04": {
@@ -57793,14 +57793,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -59321,6 +59313,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-05": {
@@ -59575,14 +59575,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -61103,6 +61095,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-06": {
@@ -61357,14 +61357,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 7,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -62893,6 +62885,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 7,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-07": {
@@ -63139,14 +63139,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -64675,6 +64667,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-08": {
@@ -64929,14 +64929,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 1,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -66449,6 +66441,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-09": {
@@ -66703,14 +66703,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -68231,6 +68223,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-10": {
@@ -68485,14 +68485,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -70013,6 +70005,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-11": {
@@ -70267,14 +70267,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -71795,6 +71787,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-12": {
@@ -72049,14 +72049,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -73577,6 +73569,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-13": {
@@ -73831,14 +73831,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -75359,6 +75351,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-14": {
@@ -75613,14 +75613,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -77149,6 +77141,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-15": {
@@ -77403,14 +77403,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 18,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -78931,6 +78923,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 18,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-16": {
@@ -79185,14 +79185,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -80697,6 +80689,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-17": {
@@ -80951,14 +80951,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -82455,6 +82447,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-18": {
@@ -82709,14 +82709,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -84213,6 +84205,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-19": {
@@ -84467,14 +84467,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -85971,6 +85963,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-20": {
@@ -86225,14 +86225,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -87729,6 +87721,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-21": {
@@ -87983,14 +87983,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 8,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -89495,6 +89487,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-22": {
@@ -89749,14 +89749,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -91253,6 +91245,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-23": {
@@ -91507,14 +91507,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -93011,6 +93003,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-24": {
@@ -93257,14 +93257,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -94761,6 +94753,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-25": {
@@ -95007,14 +95007,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -96511,6 +96503,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-26": {
@@ -96757,14 +96757,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -98261,6 +98253,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-27": {
@@ -98507,14 +98507,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -100011,6 +100003,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-28": {
@@ -100257,14 +100257,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -101761,6 +101753,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-29": {
@@ -102007,14 +102007,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -103503,6 +103495,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-30": {
@@ -103749,14 +103749,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "유진호": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "헌터호": {
     "status": "available",
@@ -105253,6 +105245,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "유진호": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   }
  },
@@ -105915,14 +105915,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -107443,6 +107435,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-04": {
@@ -107714,14 +107714,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -109306,6 +109298,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-05": {
@@ -109577,14 +109577,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -111153,6 +111145,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-06": {
@@ -111424,14 +111424,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -113008,6 +113000,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-07": {
@@ -113279,14 +113279,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -114871,6 +114863,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-08": {
@@ -115142,14 +115142,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -116726,6 +116718,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-09": {
@@ -116997,14 +116997,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -118581,6 +118573,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-10": {
@@ -118843,14 +118843,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -120435,6 +120427,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-11": {
@@ -120697,14 +120697,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -122281,6 +122273,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-12": {
@@ -122543,14 +122543,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 15,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -124119,6 +124111,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 15,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-13": {
@@ -124381,14 +124381,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -125957,6 +125949,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-14": {
@@ -126219,14 +126219,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 16,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -127779,6 +127771,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 16,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-15": {
@@ -128041,14 +128041,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 19,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -129617,6 +129609,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 19,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-16": {
@@ -129879,14 +129879,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -131455,6 +131447,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-17": {
@@ -131717,14 +131717,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -133293,6 +133285,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-18": {
@@ -133555,14 +133555,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -135139,6 +135131,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-19": {
@@ -135401,14 +135401,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -136977,6 +136969,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-20": {
@@ -137239,14 +137239,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -138815,6 +138807,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-21": {
@@ -139077,14 +139077,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -140653,6 +140645,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-22": {
@@ -140915,14 +140915,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -142491,6 +142483,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-23": {
@@ -142753,14 +142753,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -144337,6 +144329,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-24": {
@@ -144599,14 +144599,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "full",
@@ -146183,6 +146175,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-25": {
@@ -146445,14 +146445,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -148029,6 +148021,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-26": {
@@ -148291,14 +148291,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -149867,6 +149859,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-27": {
@@ -150129,14 +150129,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -151705,6 +151697,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-28": {
@@ -151967,14 +151967,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -153543,6 +153535,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-29": {
@@ -153805,14 +153805,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -155381,6 +155373,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-30": {
@@ -155643,14 +155643,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 16,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -157219,6 +157211,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 16,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-10-31": {
@@ -157481,14 +157481,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -159065,6 +159057,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-01": {
@@ -159319,14 +159319,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -160903,6 +160895,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-02": {
@@ -161157,14 +161157,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 18,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -162741,6 +162733,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 18,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-03": {
@@ -162995,14 +162995,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -164579,6 +164571,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-04": {
@@ -164833,14 +164833,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -166417,6 +166409,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-05": {
@@ -166671,14 +166671,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -168255,6 +168247,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-06": {
@@ -168509,14 +168509,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 7,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -170101,6 +170093,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 7,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-07": {
@@ -170347,14 +170347,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -171939,6 +171931,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-08": {
@@ -172193,14 +172193,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 1,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -173769,6 +173761,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-09": {
@@ -174023,14 +174023,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -175607,6 +175599,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-10": {
@@ -175861,14 +175861,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -177445,6 +177437,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-11": {
@@ -177699,14 +177699,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -179283,6 +179275,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-12": {
@@ -179537,14 +179537,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -181121,6 +181113,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-13": {
@@ -181375,14 +181375,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -182959,6 +182951,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 17,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-14": {
@@ -183213,14 +183213,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -184805,6 +184797,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-15": {
@@ -185059,14 +185059,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 18,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -186643,6 +186635,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 18,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-16": {
@@ -186897,14 +186897,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -188465,6 +188457,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-17": {
@@ -188719,14 +188719,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -190279,6 +190271,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-18": {
@@ -190533,14 +190533,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -192093,6 +192085,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-19": {
@@ -192347,14 +192347,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -193907,6 +193899,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-20": {
@@ -194161,14 +194161,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -195721,6 +195713,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-21": {
@@ -195975,14 +195975,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 8,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -197543,6 +197535,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 8,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-22": {
@@ -197797,14 +197797,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -199357,6 +199349,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-23": {
@@ -199611,14 +199611,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -201171,6 +201163,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-24": {
@@ -201417,14 +201417,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -202977,6 +202969,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-25": {
@@ -203223,14 +203223,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -204783,6 +204775,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-26": {
@@ -205029,14 +205029,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -206589,6 +206581,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-27": {
@@ -206835,14 +206835,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -208395,6 +208387,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-28": {
@@ -208641,14 +208641,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -210201,6 +210193,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-29": {
@@ -210447,14 +210447,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -211999,6 +211991,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   },
   "2026-11-30": {
@@ -212245,14 +212245,6 @@
     "source_url": "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=5734&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 20
-   },
-   "22": {
-    "status": "available",
-    "remaining": 20,
-    "source": "homepage",
-    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
-    "checked_at": "2026-10-03T13:09:42+09:00",
-    "boat_id": 22
    },
    "29": {
     "status": "available",
@@ -213805,6 +213797,14 @@
     "source_url": "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=895&sel=day#list",
     "checked_at": "2026-10-03T13:09:42+09:00",
     "boat_id": 383
+   },
+   "22": {
+    "status": "available",
+    "remaining": 20,
+    "source": "homepage",
+    "source_url": "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1190&sel=day#list",
+    "checked_at": "2026-10-03T13:36:58+09:00",
+    "boat_id": 22
    }
   }
  }
