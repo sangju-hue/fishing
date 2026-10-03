@@ -1396,7 +1396,7 @@
     {
       "bid": 91,
       "name": "신나래호",
-      "operator": "무창포 나래피싱",
+      "operator": "무창포 효성낚시",
       "region": "충남 보령시",
       "port": "무창포항",
       "price": "",
@@ -1405,8 +1405,8 @@
         "homepage": "http://www.hyosungho.com/index.php?mid=bk",
         "phone": "010-3463-8194"
       },
-      "notes": "2022년 매일경제 서해 출조 선박 명단에 무창포항 출조 배로 기재. 대상어종·전화번호 미확인",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "notes": "효성낚시 예약표에 효성(로빈호)와 함께 선박 선택 항목으로 표시되어 같은 선사 그룹으로 분류(2026-10-03).",
+      "catalog_checked_at": "2026-10-03T21:08:00+09:00",
       "catalog_sources": [
         "http://naraefishing.com/index.php?mid=bk",
         "http://naraefishing.com/index.php?mid=bk&the=1",
@@ -1418,7 +1418,8 @@
       "booking_names": [
         "신나래호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "무창포 효성낚시"
     },
     {
       "bid": 92,
