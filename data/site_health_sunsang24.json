@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T14:43:14+09:00",
+ "checked_at": "2026-10-03T14:57:44+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -380,7 +380,7 @@
    "errors": []
   },
   "fishingfin": {
-   "status": "fetch_failed",
+   "status": "no_data",
    "url": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
    "entries": 0,
    "boats": [
@@ -396,10 +396,7 @@
    "all_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
-   "errors": [
-    "'NoneType' object has no attribute 'strip'",
-    "'NoneType' object has no attribute 'strip'"
-   ]
+   "errors": []
   },
   "bluefc": {
    "status": "ok",
@@ -470,22 +467,16 @@
   "badahariho": {
    "status": "partial",
    "url": "https://badahariho.sunsang24.com/ship/schedule_fleet",
-   "entries": 289,
+   "entries": 162,
    "boats": [
     "바다하리호",
-    "만수르호",
-    "에프원호",
     "김대영호",
-    "아리울2호",
     "히트피싱",
     "어비스호"
    ],
    "boat_ids": {
     "바다하리호": 73,
-    "만수르호": 408,
-    "에프원호": 409,
     "김대영호": 410,
-    "아리울2호": 412,
     "히트피싱": 413,
     "어비스호": 414
    },
@@ -513,16 +504,6 @@
    "excluded_fish": {
     "김대영호": [
      "갈치"
-    ],
-    "만수르호": [
-     "참돔"
-    ],
-    "아리울2호": [
-     "참돔"
-    ],
-    "에프원호": [
-     "시즌어종",
-     "참돔"
     ],
     "히트피싱": [
      "어종 미표기"
@@ -1135,25 +1116,32 @@
    "capacity_rejected": [],
    "errors": []
   },
-  "nv": {
+  "nurifish": {
    "status": "ok",
-   "url": "https://nv.sunsang24.com/ship/schedule_fleet",
-   "entries": 30,
+   "url": "https://nurifish.sunsang24.com/ship/schedule_fleet",
+   "entries": 59,
    "boats": [
-    "뉴바이킹호"
+    "뉴바이킹호",
+    "누리호"
    ],
    "boat_ids": {
-    "뉴바이킹호": 257
+    "뉴바이킹호": 257,
+    "누리호": 331
    },
    "missing_boats": [],
    "observed_ship_labels": [
+    "누리호",
     "뉴바이킹호"
    ],
    "all_ship_labels": [
     "누리호",
     "뉴바이킹호"
    ],
-   "excluded_fish": {},
+   "excluded_fish": {
+    "누리호": [
+     "출조안내"
+    ]
+   },
    "capacity_rejected": [],
    "errors": []
   },
@@ -1291,35 +1279,6 @@
    ],
    "errors": []
   },
-  "nurifish": {
-   "status": "ok",
-   "url": "https://nurifish.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
-   "boats": [
-    "뉴바이킹호",
-    "누리호"
-   ],
-   "boat_ids": {
-    "뉴바이킹호": 257,
-    "누리호": 331
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "누리호",
-    "뉴바이킹호"
-   ],
-   "all_ship_labels": [
-    "누리호",
-    "뉴바이킹호"
-   ],
-   "excluded_fish": {
-    "누리호": [
-     "출조안내"
-    ]
-   },
-   "capacity_rejected": [],
-   "errors": []
-  },
   "charisma": {
    "status": "ok",
    "url": "https://charisma.sunsang24.com/ship/schedule_fleet",
@@ -1341,15 +1300,54 @@
    "capacity_rejected": [],
    "errors": []
   },
-  "24marine": {
-   "status": "fetch_failed",
-   "url": "https://24marine.sunsang24.com/ship/schedule_fleet",
-   "entries": 0,
+  "tpho": {
+   "status": "ok",
+   "url": "https://tpho.sunsang24.com/ship/schedule_fleet",
+   "entries": 59,
    "boats": [
-    "태평호",
-    "화성606호",
+    "태평호"
+   ],
+   "boat_ids": {
+    "태평호": 391
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "태평호"
+   ],
+   "all_ship_labels": [
+    "태평호"
+   ],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "606": {
+   "status": "ok",
+   "url": "https://606.sunsang24.com/ship/schedule_fleet",
+   "entries": 59,
+   "boats": [
+    "화성606호"
+   ],
+   "boat_ids": {
+    "화성606호": 392
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "화성606호"
+   ],
+   "all_ship_labels": [
+    "화성606호"
+   ],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "24marine": {
+   "status": "ok",
+   "url": "https://24marine.sunsang24.com/ship/schedule_fleet",
+   "entries": 590,
+   "boats": [
     "유로파호",
-    "해운호",
     "호빵호",
     "신흥특호",
     "옐로우피싱",
@@ -1361,10 +1359,7 @@
     "산타클로스호"
    ],
    "boat_ids": {
-    "태평호": 391,
-    "화성606호": 392,
     "유로파호": 393,
-    "해운호": 394,
     "호빵호": 395,
     "신흥특호": 396,
     "옐로우피싱": 397,
@@ -1375,29 +1370,124 @@
     "에이스요트호": 402,
     "산타클로스호": 403
    },
-   "missing_boats": [
-    "태평호",
-    "화성606호",
-    "유로파호",
-    "해운호",
-    "호빵호",
-    "신흥특호",
-    "옐로우피싱",
-    "채비야호",
-    "입질대박호",
+   "missing_boats": [],
+   "observed_ship_labels": [
     "리틀대박호",
-    "스마트보트호",
+    "산타클로스호",
+    "스마트보트호(구 마루호)",
+    "신흥특호",
     "에이스요트호",
-    "산타클로스호"
+    "옐로우피싱",
+    "유로파호",
+    "입질대박호",
+    "채비야호",
+    "호빵호(구 에버그린호)"
    ],
-   "observed_ship_labels": [],
    "all_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
-   "errors": [
-    "'NoneType' object has no attribute 'strip'",
-    "'NoneType' object has no attribute 'strip'"
-   ]
+   "errors": []
+  },
+  "haeun": {
+   "status": "ok",
+   "url": "https://haeun.sunsang24.com/ship/schedule_fleet",
+   "entries": 59,
+   "boats": [
+    "해운호"
+   ],
+   "boat_ids": {
+    "해운호": 394
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "해운호"
+   ],
+   "all_ship_labels": [
+    "해운호"
+   ],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "mansour": {
+   "status": "ok",
+   "url": "https://mansour.sunsang24.com/ship/schedule_fleet",
+   "entries": 58,
+   "boats": [
+    "만수르호"
+   ],
+   "boat_ids": {
+    "만수르호": 408
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "김대영호",
+    "만수르호",
+    "바다하리호",
+    "아리울2호",
+    "어비스호",
+    "에프원호"
+   ],
+   "all_ship_labels": [
+    "김대영호",
+    "만수르호",
+    "바다하리호",
+    "아리울1호",
+    "아리울2호",
+    "어비스호",
+    "에프원호",
+    "히트피싱"
+   ],
+   "excluded_fish": {
+    "만수르호": [
+     "참돔"
+    ]
+   },
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "hitfleet": {
+   "status": "ok",
+   "url": "https://hitfleet.sunsang24.com/ship/schedule_fleet",
+   "entries": 69,
+   "boats": [
+    "에프원호",
+    "아리울2호"
+   ],
+   "boat_ids": {
+    "에프원호": 409,
+    "아리울2호": 412
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "김대영호",
+    "만수르호",
+    "바다하리호",
+    "아리울2호",
+    "어비스호",
+    "에프원호"
+   ],
+   "all_ship_labels": [
+    "김대영호",
+    "만수르호",
+    "바다하리호",
+    "아리울1호",
+    "아리울2호",
+    "어비스호",
+    "에프원호",
+    "히트피싱"
+   ],
+   "excluded_fish": {
+    "아리울2호": [
+     "참돔"
+    ],
+    "에프원호": [
+     "시즌어종",
+     "참돔"
+    ]
+   },
+   "capacity_rejected": [],
+   "errors": []
   },
   "ariul": {
    "status": "no_data",

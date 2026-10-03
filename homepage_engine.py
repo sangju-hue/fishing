@@ -52,6 +52,7 @@ def compact(text):
     return re.sub(r'\s+', '', text)
 
 def match_boat(label, boats, aliases=None):
+    if not isinstance(label,str) or not label.strip():return None
     raw = label.strip().strip('★☆◆◇◈●○ ')
     # Captain labels are separated by a space or underscore; do not accept a
     # different boat whose name merely starts with the same characters.
@@ -61,14 +62,19 @@ def match_boat(label, boats, aliases=None):
     label = re.sub(r'^(?:\(신조선\)|신조선)','',label)
     aliases = aliases or {}
     # Match the ship heading, never passenger names or notices in another cell.
-    variants = {compact(b): b for b in boats}
-    variants.update({compact(a): b for a,b in aliases.items() if b in boats})
+    exact={compact(b):b for b in boats}
+    if label in exact:return exact[label]
+    variants={compact(a.strip().strip('★☆◆◇◈●○ ')):b for a,b in aliases.items() if b in boats}
+    for b in boats:
+        if '(' in b and '오전' not in b and '오후' not in b:
+            variants.setdefault(compact(b.split('(')[0]),b)
+    variants.update(exact)
     if label in variants: return variants[label]
     label = re.split(r'\(|（|\d+인승|\d+[.]\d+톤|▶|전용선', label)[0]
     if label in variants: return variants[label]
     # Formatting often adds a capacity or description after the actual name.
     for name in sorted(variants, key=len, reverse=True):
-        if label.startswith(name) and re.match(r'^[\W\d]', label[len(name):]):
+        if label.startswith(name) and re.match(r'^\W', label[len(name):]):
             return variants[name]
     return None
 
@@ -293,6 +299,6 @@ def booking_notices(html, boats, aliases=None):
         for cell in cells[1:]:
             for line in cell.text().splitlines():
                 text=re.sub(r'^공지\s*', '', line.strip())
-                if 0<len(text)<=160 and (re.search(r'(?:\d{2,4}년|다음\s*시즌|내년).*뵙',text) or re.search(r'시즌\s*(?:종료|마감)|운항\s*(?:종료|중단)|장기\s*휴항',text)):
+                if 0<len(text)<=160 and (re.search(r'(?:\d{2,4}년|다음\s*시즌|내년).*뵙',text) or re.search(r'시즌\s*(?:종료|마감)|운항\s*(?:종료|중단)|장기\s*휴항|\d{2,4}년도?.*예약.*받지\s*않',text)):
                     found[boat]=text
     return found
