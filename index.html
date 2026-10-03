@@ -41,13 +41,18 @@
     <p class="snapshot"><strong>데이터 불러오는 중</strong> · 실제 현황은 예약처에서 다시 확인하세요.</p>
   </div>
 
-  <section class="scrape-settings" aria-label="맥 스크래핑 설정">
+  <section id="scrapeSettings" class="scrape-settings" aria-label="맥 스크래핑 설정" style="display: none;">
     <label for="scrapeInterval">스크래핑 주기</label>
     <select id="scrapeInterval"><option value="1">1분</option><option value="5" selected>5분 (기본)</option><option value="10">10분</option><option value="30">30분</option><option value="60">1시간</option></select>
     <button id="applyInterval" type="button">맥에 적용</button>
     <span id="scrapeSettingStatus" role="status">설정하려면 수집 중인 맥에서 열어 주세요.</span>
     <p>맥에서 수집 → GitHub에 업로드 · 수집 중에는 중복 실행하지 않습니다.</p>
   </section>
+  <script>
+    if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      document.getElementById('scrapeSettings').style.display = 'flex';
+    }
+  </script>
 
   <nav class="species-tabs" role="tablist" aria-label="어종 선택">
     <button class="species-tab" id="tab-jjukkumi" type="button" role="tab" aria-selected="true" aria-controls="panel-jjukkumi" data-species="jjukkumi">쭈꾸미</button>
