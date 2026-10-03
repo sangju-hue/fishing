@@ -8045,6 +8045,56 @@
     "https://winner.thefishing.kr/index.php?mid=bk"
    ],
    "catalog_checked_at": "2026-10-03"
+  },
+  {
+   "bid": 971113,
+   "name": "포세이돈호",
+   "operator": "오천 베스트호",
+   "company": "오천 베스트호",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bestho.kr/index.php?mid=bk",
+    "phone": "010-4710-7536"
+   },
+   "tags": [],
+   "manual": false,
+   "notes": "오천 베스트호 공식 예약표의 선박 선택/예약현황에서 확인(2026-10-03). 포세이돈호는 블루피싱 소속 동명 선박과 별개.",
+   "catalog_checked_at": "2026-10-03T23:00:00+09:00",
+   "catalog_sources": [
+    "http://bestho.kr/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "포세이돈호"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971114,
+   "name": "미래호",
+   "operator": "오천 베스트호",
+   "company": "오천 베스트호",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "http://bestho.kr/index.php?mid=bk",
+    "phone": "010-4710-7536"
+   },
+   "tags": [],
+   "manual": false,
+   "notes": "오천 베스트호 공식 예약표의 선박 선택/예약현황에서 확인(2026-10-03). 포세이돈호는 블루피싱 소속 동명 선박과 별개.",
+   "catalog_checked_at": "2026-10-03T23:00:00+09:00",
+   "catalog_sources": [
+    "http://bestho.kr/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "미래호"
+   ],
+   "catalog_status": "booking_verified"
   }
  ],
  "updated_at": "2026-10-03T23:00:00+09:00"
