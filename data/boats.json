@@ -1362,7 +1362,8 @@
         "https://naksigo.com/boat/%EB%B0%B0%EC%A7%B1%ED%98%B8",
         "https://winner.thefishing.kr/index.php?mid=bk",
         "http://winner.thefishing.kr/"
-      ]
+      ],
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 90,
@@ -5828,7 +5829,7 @@
       },
       "tags": [],
       "manual": false,
-      "operator": "뉴홀랜드호",
+      "operator": "무창포 피싱위너",
       "capacity": 14,
       "catalog_checked_at": "2026-10-03T08:54:18+09:00",
       "catalog_sources": [
@@ -5837,7 +5838,8 @@
       ],
       "booking_names": [
         "뉴홀랜드호_임상곤선장"
-      ]
+      ],
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 314,
@@ -6665,7 +6667,8 @@
       "booking_names": [
         "모데라토호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 353,
@@ -6972,7 +6975,8 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%EA%B9%9C%EB%B3%B4%ED%98%B8",
         "https://winner.thefishing.kr/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 369,
@@ -7025,24 +7029,6 @@
       "catalog_status": "booking_verified"
     },
     {
-      "bid": 373,
-      "name": "블랙호",
-      "port": "무창포항",
-      "region": "충남 보령시",
-      "price": "",
-      "channels": {
-        "phone": "010-6526-6525"
-      },
-      "tags": [],
-      "manual": false,
-      "operator": "무창포 피싱위너",
-      "capacity": 22,
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-      "catalog_sources": [
-        "https://naksigo.com/boat/%EB%B8%94%EB%9E%99%ED%98%B8?id=6905"
-      ]
-    },
-    {
       "bid": 374,
       "name": "에바다호",
       "port": "무창포항",
@@ -7078,13 +7064,14 @@
       },
       "tags": [],
       "manual": false,
-      "operator": "무창포항 페가수스호",
+      "operator": "무창포 피싱위너",
       "capacity": 21,
       "catalog_checked_at": "2026-10-03T08:54:18+09:00",
       "catalog_sources": [
         "https://naksigo.com/boat/%ED%8E%98%EA%B0%80%EC%88%98%EC%8A%A4%ED%98%B8?id=2433",
         "https://winner.thefishing.kr/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 376,
@@ -7173,7 +7160,8 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%EC%A1%B0%EC%96%91%ED%98%B8?id=2453",
         "https://winner.thefishing.kr/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 피싱위너"
     },
     {
       "bid": 380,
@@ -7924,6 +7912,44 @@
       ],
       "catalog_status": "booking_verified",
       "company": "무창포 총각피싱"
+    },
+    {
+      "bid": 971110,
+      "name": "위너호",
+      "port": "무창포항",
+      "region": "충남 보령시",
+      "price": "",
+      "channels": {
+        "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
+      },
+      "tags": [],
+      "manual": false,
+      "operator": "무창포 피싱위너",
+      "company": "무창포 피싱위너",
+      "capacity": null,
+      "booking_names": [
+        "위너호_나혜훈선장",
+        "위너호"
+      ]
+    },
+    {
+      "bid": 971111,
+      "name": "뉴빅토리호",
+      "port": "무창포항",
+      "region": "충남 보령시",
+      "price": "",
+      "channels": {
+        "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
+      },
+      "tags": [],
+      "manual": false,
+      "operator": "무창포 피싱위너",
+      "company": "무창포 피싱위너",
+      "capacity": null,
+      "booking_names": [
+        "뉴빅토리호_최남철선장 우서연사무장",
+        "뉴빅토리호"
+      ]
     }
   ],
   "updated_at": "2026-10-03T09:04:25+09:00"
