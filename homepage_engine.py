@@ -151,7 +151,7 @@ def parse_booking(html, boats, aliases=None, today=None, end=None):
         seen_boats.add(boat)
         notice=conditional_notice(cells[1].text()+'\n'+cells[2].text())
         completed=status(cells[1].text())
-        result = ('conditional',None) if notice else completed if completed and completed[0]=='completed' else status(cells[2].text())
+        result = ('conditional',None) if notice else completed if completed and completed[0] in ('completed','maintenance') else status(cells[2].text())
         if result is None:
             for image in cells[2].walk('img'):
                 m = re.search(r'/r_x_(\d+)\.',image.attrs.get('src',''))
