@@ -1637,17 +1637,6 @@
       "catalog_status": "booking_verified"
     },
     {
-      "bid": 103,
-      "name": "나이스호",
-      "operator": "비엔나피싱",
-      "region": "충남 보령시",
-      "port": "오천항",
-      "price": "",
-      "capacity": null,
-      "channels": {},
-      "notes": "[비엔나호·나이스호] 우럭·백조기·쭈꾸미·갑오징어 (비엔나피싱). 2023년 선사 목록 기준"
-    },
-    {
       "bid": 104,
       "name": "나폴리2",
       "operator": "나폴리선단",
