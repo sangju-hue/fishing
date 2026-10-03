@@ -6794,7 +6794,7 @@
     {
       "bid": 359,
       "name": "글로리호",
-      "port": "무창포항",
+      "port": "대청항",
       "region": "충남 보령시",
       "price": "",
       "channels": {
@@ -6802,8 +6802,8 @@
       },
       "tags": [],
       "manual": false,
-      "operator": "대천항 글로리 (구)모항 글로리",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "operator": "대청항 글로리 (구)모항 글로리",
+      "catalog_checked_at": "2026-10-03T21:13:00+09:00",
       "catalog_sources": [
         "http://www.gloryho.kr/",
         "http://www.gloryho.kr/index.php?mid=bk",
