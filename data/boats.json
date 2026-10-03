@@ -606,37 +606,6 @@
    "bid": 26
   },
   {
-   "name": "무창포 프로낚시",
-   "port": "무창포항",
-   "region": "충남 보령시",
-   "price": "10만원",
-   "channels": {
-    "phone": "010-7409-0070",
-    "homepage": "https://muchangpofishing.co.kr/index.php?mid=bk"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 27,
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
-   "catalog_sources": [
-    "http://muchangpofishing.co.kr/index.php?mid=bk",
-    "http://www.muchangpofishing.co.kr/",
-    "https://naksigo.com/boat/%EB%9A%B1%EB%B3%B4%ED%98%B8",
-    "https://naksigo.com/boat/%EB%AC%B4%EC%B0%BD%ED%8F%AC%20%ED%94%84%EB%A1%9C%EB%82%9A%EC%8B%9C",
-    "https://naksigo.com/boat/%EB%B6%80%EC%9E%90%ED%98%B8",
-    "https://naksigo.com/boat/%EB%B9%85%EB%A7%88%EB%A6%B0%ED%98%B8?id=5849",
-    "https://www.muchangpofishing.co.kr/index.php?mid=bk",
-    "https://muchangpofishing.co.kr/index.php?mid=bk"
-   ],
-   "booking_names": [
-    "뚱보호",
-    "부자호",
-    "빅마린호"
-   ],
-   "catalog_status": "booking_verified",
-   "operator": "무창포 프로낚시"
-  },
-  {
    "name": "뉴해양호",
    "port": "홍원항",
    "region": "충남 서천군",

@@ -569,7 +569,6 @@
    "url": "https://muchangpofishing.co.kr/index.php?mid=bk",
    "entries": 236,
    "boats": [
-    "무창포 프로낚시",
     "빅마린호",
     "뚱보호",
     "부자호",
@@ -577,7 +576,6 @@
     "코스모스호"
    ],
    "boat_ids": {
-    "무창포 프로낚시": 27,
     "빅마린호": 343,
     "뚱보호": 369,
     "부자호": 378,
@@ -585,7 +583,6 @@
     "코스모스호": 387
    },
    "missing_boats": [
-    "무창포 프로낚시",
     "브이호"
    ],
    "deferred_boats": [],
@@ -612,7 +609,10 @@
     "https://muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
-   "errors": []
+   "errors": [],
+   "boat_notices": {
+    "브이호": "27년시즌에 뵙겠습니다."
+   }
   },
   "redlight.kr": {
    "status": "no_data",

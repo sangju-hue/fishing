@@ -10,7 +10,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, urlencode, urljoin, parse_qsl,quote
-from homepage_engine import match_boat, DOM, parse_booking, parse_hanaho, parse_wz, parse_sunsang, parse_niabbs, booking_links, date_url
+from homepage_engine import booking_notices, match_boat, DOM, parse_booking, parse_hanaho, parse_wz, parse_sunsang, parse_niabbs, booking_links, date_url
 from season import season_window
 
 BASE=os.path.dirname(os.path.abspath(__file__))
@@ -88,11 +88,12 @@ def collect_site(host,g,today,end,gap=1):
     g=dict(g,boats=[b for b in g['boats'] if b not in deferred])
     if not g['boats']:
         return {},{},{'status':'deferred_daily','url':g['url'],'entries':0,'boats':deferred,'boat_ids':g['boat_ids'],'missing_boats':deferred,'deferred_boats':deferred,'pages_checked':0,'errors':[]}
-    client=Client(gap);out={};sources={};errors=[];visited=[];seen_boats=set();seen_dates=set();labels=set()
+    client=Client(gap);out={};sources={};errors=[];visited=[];seen_boats=set();seen_dates=set();labels=set();notices={}
     aliases=dict(ALIASES.get(host,{}));aliases.update(g.get('aliases',{}))
     def get(url):
         html,final=client.fetch(url);visited.append(final);return html,final
     def absorb(html,url,boats=None):
+        notices.update(booking_notices(html,boats or g['boats'],aliases))
         v,b,ds=parse_booking(html,boats or g['boats'],aliases,today,end)
         out.update(v);sources.update({k:url for k in v});seen_boats.update(b);seen_dates.update(ds)
         for row in DOM(html).root.walk('tr'):
@@ -200,7 +201,7 @@ def collect_site(host,g,today,end,gap=1):
     missing=[b for b in g['boats'] if not any(k[0]==b for k in out)]
     state='ok' if out and not missing and not errors else 'partial' if out else 'no_data' if visited else 'fetch_failed'
     if deferred:state='deferred_daily' if all(b in deferred for b in g['boats']) else 'partial'
-    health={'status':state,'url':g['url'],'entries':len(out),'boats':list(dict.fromkeys(g['boats']+deferred)),'boat_ids':g['boat_ids'],'missing_boats':list(dict.fromkeys(missing+deferred)),'deferred_boats':list(dict.fromkeys(deferred)),'observed_ship_labels':sorted(labels),'pages_checked':len(visited),'booking_urls':list(dict.fromkeys(sources.values())),'errors':errors}
+    health={'status':state,'url':g['url'],'entries':len(out),'boats':list(dict.fromkeys(g['boats']+deferred)),'boat_ids':g['boat_ids'],'missing_boats':list(dict.fromkeys(missing+deferred)),'deferred_boats':list(dict.fromkeys(deferred)),'boat_notices':notices,'observed_ship_labels':sorted(labels),'pages_checked':len(visited),'booking_urls':list(dict.fromkeys(sources.values())),'errors':errors}
     print(f'{host}: {state}, {len(out)}건, 미수집 {len(health["missing_boats"])}척, {len(visited)}페이지',flush=True)
     return out,sources,health
 

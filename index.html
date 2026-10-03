@@ -114,6 +114,7 @@ async function loadData(){
         const health=await healthRes.json(),deferredIds=new Set();
         Object.values(health.sites||{}).forEach(site=>(site.deferred_boats||[]).forEach(name=>{if(site.boat_ids?.[name]!=null)deferredIds.add(Number(site.boat_ids[name]))}));
         BOATS.forEach(boat=>{if(deferredIds.has(boat.bid))boat.collection_priority='deferred_daily'});
+        Object.values(health.sites||{}).forEach(site=>Object.entries(site.boat_notices||{}).forEach(([name,text])=>{const bid=site.boat_ids?.[name];const boat=BOATS.find(b=>b.bid===Number(bid));if(boat)boat.booking_notice=text}));
       }catch(e){console.error('수집 우선순위 읽기 실패:',e)}
     }
     const statusData=await statusRes.json();
@@ -351,6 +352,7 @@ function renderMatrix(){
       const boatLabel=`<span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}${boatUrl?'':' · 홈페이지 미확인'}${boat.collection_priority==='deferred_daily'?' · 일별 조회 보류':''}</span>`;
       const boatControl=boatUrl?`<a class="boat-selector" href="${escapeHtml(boatUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(boat.name)} 홈페이지 열기">${boatLabel}</a>`:`<span class="boat-selector">${boatLabel}</span>`;
       html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><div class="boat-controls${isSelected?' is-selected':''}"><input type="checkbox" data-select-boat="${boat.bid}" ${isSelected?'checked':''} aria-label="${escapeHtml(boat.name)} 선택">${boatControl}</div></th>`;
+      if(boat.booking_notice){html+=`<td colspan="${dates.length}" class="booking-notice" style="text-align:left;padding:12px 18px;font-weight:600">${escapeHtml(boat.booking_notice)}</td></tr>`;return;}
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;

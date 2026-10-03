@@ -269,3 +269,18 @@ def parse_niabbs(html, boats, aliases, today, end):
         if boat and remaining:
             n=int(remaining.group(1));merge_trip(out,(boat,current.isoformat()),('available',n) if n else ('full',0))
     return out
+
+def booking_notices(html, boats, aliases=None):
+    """Exact season/long-term closure announcements in a matched ship row only."""
+    found={}
+    for row in DOM(html).root.walk('tr'):
+        cells=[n for n in row.children if isinstance(n,Node) and n.tag=='td']
+        if len(cells)!=3:continue
+        boat=match_boat(next(cells[0].walk('span'),cells[0]).text(),boats,aliases)
+        if not boat:continue
+        for cell in cells[1:]:
+            for line in cell.text().splitlines():
+                text=re.sub(r'^공지\s*', '', line.strip())
+                if 0<len(text)<=160 and (re.search(r'(?:\d{2,4}년|다음\s*시즌|내년).*뵙',text) or re.search(r'시즌\s*(?:종료|마감)|운항\s*(?:종료|중단)|장기\s*휴항',text)):
+                    found[boat]=text
+    return found
