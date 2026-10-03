@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T15:34:11+09:00",
+ "checked_at": "2026-10-03T15:52:38+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -290,7 +290,7 @@
   "ansan": {
    "status": "ok",
    "url": "https://ansan.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "안산호"
    ],
