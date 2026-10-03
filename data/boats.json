@@ -7420,7 +7420,8 @@
    "name": "킹피싱호 (전화예약)",
    "port": "무창포항",
    "channels": {
-    "phone": "010-4421-4464"
+    "phone": "010-4421-4464",
+    "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
    },
    "bid": 390,
    "operator": "무창포 아폴로",
