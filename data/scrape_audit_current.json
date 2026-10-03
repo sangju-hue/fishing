@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-03T20:17:11+09:00",
+  "checked_at": "2026-10-03T20:32:13+09:00",
   "scope": "뉴마린스타 이후 목록의 오늘 이후 미확인 날짜",
   "summary": {
     "네이버 검색 후 현재 공식 주소 미확인": 22,
@@ -7213,12 +7213,5 @@
     "initial_unknown_dates": 2633,
     "resolved_dates": 917,
     "remaining_unknown_dates": 1716
-  },
-  "removed_entries": [
-    {
-      "bid": 122,
-      "name": "마린스타1호",
-      "reason": "2026-10-03 사용자 확인: 없는 배이므로 삭제"
-    }
-  ]
+  }
 }
