@@ -296,14 +296,6 @@
         "source_url": "https://dongmun.sunsang24.com/ship/schedule_fleet/202610",
         "checked_at": "2026-10-02T23:59:05+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/ship/schedule_fleet/202610",
-        "checked_at": "2026-10-02T23:59:05+09:00"
-      },
       "비엔나호": {
         "status": "full",
         "remaining": 0,
@@ -774,14 +766,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026357",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004806",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -1474,14 +1458,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026358",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004807",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -2178,14 +2154,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026359",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004808",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -2868,14 +2836,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026360",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004809",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -3570,14 +3530,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026361",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004810",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -4259,14 +4211,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026362",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 2,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004811",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -4958,14 +4902,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026363",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004812",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -5654,14 +5590,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026364",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004813",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -6339,14 +6267,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026365",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004814",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -7038,14 +6958,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026366",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 14,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004815",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 4,
@@ -7721,14 +7633,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026367",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004816",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -8395,14 +8299,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026368",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004817",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -9086,14 +8982,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026369",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 11,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004818",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -9788,14 +9676,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026370",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004819",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -10484,14 +10364,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026371",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004820",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -11178,14 +11050,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026372",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004821",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -11877,14 +11741,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026373",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004822",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -12564,14 +12420,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026374",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004823",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 4,
@@ -13248,14 +13096,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026375",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004824",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -13945,14 +13785,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026376",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004825",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -14632,14 +14464,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026377",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004826",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -15317,14 +15141,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026378",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004827",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -16019,14 +15835,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026379",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 1,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004828",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -16719,14 +16527,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026380",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004829",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 5,
@@ -17400,14 +17200,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026381",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004830",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -18087,14 +17879,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026382",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004831",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 9,
@@ -18769,14 +18553,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026383",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004832",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 11,
@@ -19446,14 +19222,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026384",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004833",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -20141,14 +19909,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026385",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004834",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -20815,14 +20575,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026386",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004835",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -21484,14 +21236,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026387",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 19,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004836",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 13,
@@ -22131,14 +21875,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026388",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004837",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 19,
@@ -22775,14 +22511,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026389",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 18,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004838",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -23431,14 +23159,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026390",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004839",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 13,
@@ -24077,14 +23797,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026391",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 8,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004840",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -24721,14 +24433,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026392",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004841",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -25377,14 +25081,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026393",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 18,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004842",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -26030,14 +25726,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026394",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004843",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 19,
@@ -26668,14 +26356,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026395",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004844",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 11,
@@ -27303,14 +26983,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026396",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004845",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -27951,14 +27623,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026397",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004846",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 18,
@@ -28595,14 +28259,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026398",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004847",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -29252,14 +28908,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026399",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "full",
-        "remaining": 0,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004848",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -29907,14 +29555,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026400",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 18,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004849",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -30555,14 +30195,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026401",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004850",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -31207,14 +30839,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026402",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004851",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 19,
@@ -31852,14 +31476,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026403",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004852",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -32509,14 +32125,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026404",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004853",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "available",
         "remaining": 20,
@@ -33155,14 +32763,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026405",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004854",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -33806,14 +33406,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026406",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004855",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -34465,14 +34057,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026407",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004856",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "full",
         "remaining": 0,
@@ -35091,14 +34675,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026408",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004857",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -35733,14 +35309,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026409",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004858",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "other_fish",
         "remaining": 20,
@@ -36363,14 +35931,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026410",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004859",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -36997,14 +36557,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026411",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004860",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "other_fish",
         "remaining": 20,
@@ -37629,14 +37181,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026412",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004861",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "other_fish",
         "remaining": 20,
@@ -38259,14 +37803,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026413",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 18,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004862",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {
@@ -38901,14 +38437,6 @@
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026414",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004863",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
       "똥까호": {
         "status": "other_fish",
         "remaining": 18,
@@ -39541,14 +39069,6 @@
         "boat_id": 156,
         "source": "sunsang24",
         "source_url": "https://dongmun.sunsang24.com/mypage/reservation_ready/2026415",
-        "checked_at": "2026-10-03T20:54:22+09:00"
-      },
-      "뉴스카이호": {
-        "status": "available",
-        "remaining": 20,
-        "boat_id": 109,
-        "source": "sunsang24",
-        "source_url": "https://newsky.sunsang24.com/mypage/reservation_ready/2004864",
         "checked_at": "2026-10-03T20:54:22+09:00"
       },
       "똥까호": {

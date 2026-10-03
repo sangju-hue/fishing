@@ -450,7 +450,7 @@
       "tags": [],
       "manual": false,
       "bid": 19,
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_checked_at": "2026-10-03T22:13:46+09:00",
       "catalog_sources": [
         "https://naksigo.com/boat/%EA%BA%84%EC%98%A4%ED%98%B8?id=6423",
         "https://naksigo.com/boat/%EC%B9%B4%EC%A6%88%EB%AF%B8%ED%98%B8",
@@ -460,7 +460,9 @@
         "꺄오호",
         "카즈미호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "operator": "오천항 카즈미호",
+      "company": "오천항 카즈미호"
     },
     {
       "name": "히트호",
@@ -1548,26 +1550,28 @@
     {
       "bid": 98,
       "name": "굿모닝호",
-      "operator": "스피드피싱",
+      "operator": "오천항 카즈미호",
       "region": "충남 보령시",
       "port": "오천항",
       "price": "",
       "capacity": null,
       "channels": {
-        "homepage": "http://xn--hg3b11w8xdjuj.com/index.php?mid=bk",
-        "phone": "010-2446-1322"
+        "homepage": "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk",
+        "phone": "010-2742-9712"
       },
-      "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "notes": "카즈미호 공식 예약표에서 굿모닝호(UID 6359) 확인. 동명이 있는 스피드피싱 항목과 구분.",
+      "catalog_checked_at": "2026-10-03T22:13:46+09:00",
       "catalog_sources": [
         "http://카즈미호.com/",
         "http://카즈미호.com/index.php?mid=bk",
-        "https://naksigo.com/boat/%EA%B5%BF%EB%AA%A8%EB%8B%9D%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD"
+        "https://naksigo.com/boat/%EA%B5%BF%EB%AA%A8%EB%8B%9D%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD",
+        "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk"
       ],
       "catalog_status": "booking_verified",
       "booking_names": [
         "굿모닝호"
-      ]
+      ],
+      "company": "오천항 카즈미호"
     },
     {
       "bid": 99,
@@ -1749,31 +1753,6 @@
       ]
     },
     {
-      "bid": 109,
-      "name": "뉴스카이호",
-      "operator": "스피드피싱",
-      "region": "충남 보령시",
-      "port": "오천항",
-      "price": "",
-      "capacity": null,
-      "channels": {
-        "homepage": "http://www.ospeed.kr",
-        "sunsang24": "https://newsky.sunsang24.com/ship/schedule_fleet",
-        "phone": "010-4102-5415"
-      },
-      "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-      "catalog_sources": [
-        "https://naksigo.com/boat/%EB%89%B4%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD",
-        "https://newsky.sunsang24.com/",
-        "https://newsky.sunsang24.com/ship/schedule_fleet"
-      ],
-      "booking_names": [
-        "뉴스카이호"
-      ],
-      "catalog_status": "booking_verified"
-    },
-    {
       "bid": 110,
       "name": "뉴일복호",
       "operator": "일복낚시",
@@ -1921,19 +1900,6 @@
         "sunsang24": "https://dongmun.sunsang24.com/ship/schedule_fleet"
       },
       "notes": "[마운틴호·라벤더호] 쭈꾸미·백조기·광어다운샷·우럭생미끼 (상상피싱). 2023년 선사 목록 기준"
-    },
-    {
-      "bid": 118,
-      "name": "랜드마크호",
-      "operator": "스피드피싱",
-      "region": "충남 보령시",
-      "port": "오천항",
-      "price": "",
-      "capacity": null,
-      "channels": {
-        "homepage": "http://www.ospeed.kr"
-      },
-      "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
     },
     {
       "bid": 119,
@@ -2219,31 +2185,20 @@
       "price": "",
       "capacity": null,
       "channels": {
-        "homepage": "http://www.ospeed.kr/",
+        "homepage": "http://ospeed.kr/index.php?mid=bk",
         "phone": "010-5436-0569"
       },
-      "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준 / 사용자 확인: 이전 이름 스피드호",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "notes": "사용자 확인: 이전 이름 스피드호. 현재 스피드피싱 공식 예약표의 어게인호 항목은 bid328에 연결.",
+      "catalog_checked_at": "2026-10-03T22:13:46+09:00",
       "catalog_sources": [
-        "https://naksigo.com/boat/%EC%8A%A4%ED%94%BC%EB%93%9C%ED%98%B8?id=6510"
+        "https://naksigo.com/boat/%EC%8A%A4%ED%94%BC%EB%93%9C%ED%98%B8?id=6510",
+        "http://ospeed.kr/index.php?mid=bk"
       ],
       "booking_names": [
         "어게인호"
       ],
-      "canonical_bid": 328
-    },
-    {
-      "bid": 136,
-      "name": "썬가드호",
-      "operator": "스피드피싱",
-      "region": "충남 보령시",
-      "port": "오천항",
-      "price": "",
-      "capacity": null,
-      "channels": {
-        "homepage": "http://www.ospeed.kr"
-      },
-      "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+      "canonical_bid": 328,
+      "company": "스피드피싱"
     },
     {
       "bid": 137,
@@ -4365,9 +4320,9 @@
       },
       "tags": [],
       "manual": false,
-      "operator": "오천항 꺄오호",
+      "operator": "오천항 카즈미호",
       "capacity": 21,
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_checked_at": "2026-10-03T22:13:46+09:00",
       "catalog_sources": [
         "http://카즈미호.com/",
         "https://naksigo.com/boat/%EA%BA%84%EC%98%A4%ED%98%B8?id=2485",
@@ -4376,7 +4331,8 @@
       "booking_names": [
         "꺄오호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "오천항 카즈미호"
     },
     {
       "bid": 248,
@@ -6315,18 +6271,20 @@
       },
       "tags": [],
       "manual": false,
-      "operator": "오천항 어게인호",
+      "operator": "스피드피싱",
       "capacity": 20,
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_checked_at": "2026-10-03T22:13:46+09:00",
       "catalog_sources": [
         "http://ospeed.kr/",
         "http://ospeed.kr/index.php?mid=bk",
         "https://naksigo.com/boat/%EC%96%B4%EA%B2%8C%EC%9D%B8%ED%98%B8"
       ],
       "booking_names": [
+        "어게인호(스피드선장)",
         "어게인호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "스피드피싱"
     },
     {
       "bid": 329,
@@ -8090,5 +8048,5 @@
       "catalog_checked_at": "2026-10-03"
     }
   ],
-  "updated_at": "2026-10-03T09:04:25+09:00"
+  "updated_at": "2026-10-03T22:13:46+09:00"
 }
