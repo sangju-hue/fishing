@@ -392,8 +392,7 @@
    "region": "충남 보령시",
    "price": "갑오징어 특화",
    "channels": {
-    "phone": "010-9484-8627",
-    "homepage": "http://www.friendho.com/"
+    "phone": "010-9484-8627"
    },
    "tags": [],
    "manual": false,
@@ -419,6 +418,9 @@
     "https://naksigo.com/boat/%EB%B8%94%EB%A3%A8%ED%98%B8?id=2516",
     "https://www.bluefishing.asia/index.php?mid=bk",
     "http://www.bluefishing.asia/"
+   ],
+   "booking_names": [
+    "★블루호★"
    ]
   },
   {
@@ -1601,7 +1603,7 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "http://xn--jj0bj3lvmq92n.kr/index.php?mid=bk",
+    "homepage": "http://friendho.com/index.php?mid=bk",
     "phone": "010-8542-2034"
    },
    "notes": "[순돌호·금땡이호] 광어다운샷·외수질 (프랜드피싱 선단; 제외 목록의 프랜드호와는 별개 선박). 2023년 선사 목록 기준",
@@ -1626,9 +1628,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.vinaho.com"
-   },
+   "channels": {},
    "notes": "[비엔나호·나이스호] 우럭·백조기·쭈꾸미·갑오징어 (비엔나피싱). 2023년 선사 목록 기준"
   },
   {
@@ -2085,7 +2085,6 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "http://www.vinaho.com",
     "sunsang24": "http://vinaho.sunsang24.com/ship/schedule_fleet",
     "phone": "010-4110-5674"
    },
@@ -2163,9 +2162,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.friendho.com"
-   },
+   "channels": {},
    "notes": "[순돌호·금땡이호] 광어다운샷·외수질 (프랜드피싱 선단; 제외 목록의 프랜드호와는 별개 선박). 2023년 선사 목록 기준"
   },
   {
@@ -4646,24 +4643,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 261,
-   "name": "블루피싱, 블루호",
-   "port": "오천항",
-   "region": "충남 보령시",
-   "price": "",
-   "channels": {
-    "homepage": "http://www.bluefishing.asia/"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "오천항 블루피싱, 블루호",
-   "capacity": 22,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EC%98%A4%EC%B2%9C%ED%95%AD%20%EB%B8%94%EB%A3%A8%ED%94%BC%EC%8B%B1%2C%20%EB%B8%94%EB%A3%A8%ED%98%B8"
-   ]
-  },
-  {
    "bid": 262,
    "name": "흑돼지호",
    "port": "오천항",
@@ -5030,7 +5009,8 @@
     "https://naksigo.com/boat/%ED%8C%80%ED%94%84%EB%9E%9C%EB%93%9C%ED%98%B8"
    ],
    "booking_names": [
-    "팀프랜드호"
+    "팀프랜드호",
+    "팀프랜드호(25년 신조선)"
    ],
    "catalog_status": "booking_verified"
   },
@@ -5283,8 +5263,7 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-9484-8627",
-    "homepage": "http://www.friendho.com/index.php?mid=bk&amp;year=2026&amp;month=08&amp;day=01"
+    "phone": "010-9484-8627"
    },
    "tags": [],
    "manual": false,
@@ -5897,6 +5876,9 @@
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%89%B4%ED%99%80%EB%9E%9C%EB%93%9C%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD",
     "https://winner.thefishing.kr/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "뉴홀랜드호_임상곤선장"
    ]
   },
   {
@@ -6217,8 +6199,7 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-2009-7663",
-    "homepage": "http://www.friendho.com/index.php?mid=bk&amp;tviuid=69417700"
+    "phone": "010-2009-7663"
    },
    "tags": [],
    "manual": false,
@@ -6348,8 +6329,7 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-8886-4132",
-    "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9"
+    "phone": "010-8886-4132"
    },
    "tags": [],
    "manual": false,
@@ -7171,8 +7151,7 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-6526-6525",
-    "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9"
+    "phone": "010-6526-6525"
    },
    "tags": [],
    "manual": false,
