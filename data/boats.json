@@ -3829,24 +3829,6 @@
   {
    "capacity": null,
    "channels": {
-    "homepage": "https://www.bravofishing.kr/index.php?mid=bk&amp;PA_N_UID=5950",
-    "phone": "010-4759-7177"
-   },
-   "name": "고스트호",
-   "notes": "쭈꾸미(조황 기준). 출처: bravofishing.kr",
-   "operator": "무창포 브라보낚시",
-   "port": "무창포항",
-   "price": "",
-   "region": "충남 보령시",
-   "bid": 227,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EA%B3%A0%EC%8A%A4%ED%8A%B8%ED%98%B8?port=%EB%AC%B4%EC%B0%BD%ED%8F%AC%ED%95%AD"
-   ]
-  },
-  {
-   "capacity": null,
-   "channels": {
     "phone": "010-2712-0804",
     "homepage": "https://www.chongkakho.com/index.php?mid=bk"
    },
