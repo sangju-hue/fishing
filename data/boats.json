@@ -7019,25 +7019,6 @@
       "catalog_status": "booking_verified"
     },
     {
-      "bid": 372,
-      "name": "해신호",
-      "port": "무창포항",
-      "region": "충남 보령시",
-      "price": "",
-      "channels": {
-        "phone": "010-5797-3030",
-        "homepage": "https://innak.kr/bbs/board.php?bo_table=D03_2021&amp;wr_id=42432"
-      },
-      "tags": [],
-      "manual": false,
-      "operator": "무창포 킹피싱",
-      "capacity": 18,
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-      "catalog_sources": [
-        "https://naksigo.com/boat/%ED%95%B4%EC%8B%A0%ED%98%B8?id=6511"
-      ]
-    },
-    {
       "bid": 373,
       "name": "블랙호",
       "port": "무창포항",
