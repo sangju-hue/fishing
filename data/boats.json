@@ -7438,11 +7438,16 @@
    "name": "킹피싱호",
    "port": "무창포항",
    "channels": {
-    "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
+    "phone": "010-7484-7166"
    },
    "bid": 390,
    "operator": "무창포 아폴로",
-   "region": "충남 보령시"
+   "region": "충남 보령시",
+   "tags": [
+    "전화예약"
+   ],
+   "notes": "전화예약 전용 (sunsang24 예약 불가)"
   },
   {
    "name": "태평호",
