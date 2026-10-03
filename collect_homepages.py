@@ -218,8 +218,11 @@ def main():
     parser.add_argument('--year',type=int,help='시즌 연도 (기본: 올해, 12월이면 다음 해)')
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
     parser.add_argument('--sites',nargs='*',help='점검할 도메인 (생략하면 전체)')
-    parser.add_argument('--workers',type=int,default=4)
+    parser.add_argument('--workers',type=int,default=8)
     parser.add_argument('--gap',type=float,default=1.0)
+    span=parser.add_mutually_exclusive_group()
+    span.add_argument('--near-days',type=int,help='오늘부터 N일까지만 수집')
+    span.add_argument('--after-days',type=int,help='오늘+N일 이후만 수집')
     args=parser.parse_args()
     if not 1<=args.workers<=8:parser.error('--workers: 1~8')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
@@ -230,6 +233,12 @@ def main():
         sites={k:v for k,v in sites.items() if k in selected}
     now=datetime.now(KST);year=args.year or now.year+(1 if now.month==12 else 0)
     today,collection_start,end=season_window(now,year);checked=now.isoformat(timespec='seconds')
+    # 이번 실행에서 실제로 조회·교체할 날짜 범위 (시즌 전체 보존 범위는 today~end 그대로)
+    range_start,range_end=collection_start,end
+    if args.near_days:range_end=min(end,collection_start+timedelta(days=args.near_days-1))
+    if args.after_days:range_start=collection_start+timedelta(days=args.after_days)
+    if range_start>range_end:
+        print(f'수집할 날짜 없음: {range_start}~{range_end}');return
     path=os.path.join(DATA,'status_homepages.json')
     try:data=json.load(open(path,encoding='utf-8'))
     except (FileNotFoundError,json.JSONDecodeError):data={'dates':{}}
@@ -237,7 +246,7 @@ def main():
     for ds,day in data.get('dates',{}).items():
         for info in day.values():
             if info.get('boat_id') is not None:data['by_boat_id'].setdefault(ds,{})[str(info['boat_id'])]=info.copy()
-    health={'checked_at':checked,'range':{'from':today.isoformat(),'to':end.isoformat()},'queried_range':{'from':collection_start.isoformat(),'to':end.isoformat()},'sites':{}}
+    health={'checked_at':checked,'range':{'from':today.isoformat(),'to':end.isoformat()},'queried_range':{'from':range_start.isoformat(),'to':range_end.isoformat()},'sites':{}}
     if args.sites:
         try:
             previous=json.load(open(os.path.join(DATA,'site_health.json'),encoding='utf-8'))
@@ -251,7 +260,7 @@ def main():
                     health['sites'][canonical]=h
         except (FileNotFoundError,json.JSONDecodeError):pass
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures={pool.submit(collect_site,host,g,collection_start,end,args.gap):host for host,g in sites.items()}
+        futures={pool.submit(collect_site,host,g,range_start,range_end,args.gap):host for host,g in sites.items()}
         for future in concurrent.futures.as_completed(futures):
             host=futures[future]
             try:out,sources,h=future.result()
@@ -261,13 +270,13 @@ def main():
             # Replace freshly read boats in this range; keep old data only for failures, marked stale.
             succeeded={k[0] for k in out}
             for ds,day in data['by_boat_id'].items():
-                if not collection_start.isoformat()<=ds<=end.isoformat():continue
+                if not range_start.isoformat()<=ds<=range_end.isoformat():continue
                 for boat,bid in sites[host]['boat_ids'].items():
                     if str(bid) in day:
                         if boat in succeeded:del day[str(bid)]
                         else:day[str(bid)]['stale']=True
             for ds,day in data.get('dates',{}).items():
-                if collection_start.isoformat()<=ds<=end.isoformat():
+                if range_start.isoformat()<=ds<=range_end.isoformat():
                     for boat in list(day):
                         if boat in succeeded and day[boat].get('source')!='sunsang24' and day[boat].get('boat_id') in (None,sites[host]['boat_ids'][boat]):del day[boat]
                         elif boat in sites[host]['boats'] and day[boat].get('source')=='homepage' and day[boat].get('boat_id') in (None,sites[host]['boat_ids'][boat]):day[boat]['stale']=True

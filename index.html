@@ -31,6 +31,17 @@
     .scrape-settings select,.scrape-settings button{padding:7px 10px;border:1px solid var(--line);border-radius:7px;background:#10232e;color:var(--text)}
     .scrape-settings button{cursor:pointer}.scrape-settings button:disabled{opacity:.6;cursor:wait}
     .scrape-settings p{flex-basis:100%;margin:0;color:var(--muted)}
+    .scrape-settings .scrape-title{font-weight:700;color:var(--text)}
+    .scrape-settings .scrape-state{padding:3px 8px;border-radius:999px;font-weight:700;background:#123a2a;color:#7ee2a8}
+    .scrape-settings .scrape-state.paused{background:#3a2a12;color:#f2c46d}
+    .scrape-settings .scrape-state.running{background:#12304a;color:#7cc4ff}
+    .scrape-settings button#scrapePause{border-color:#6b5222}.scrape-settings button#scrapeResume{border-color:#22604a}.scrape-settings button#scrapeRun{border-color:#25507a}
+    .scrape-settings details{flex-basis:100%;color:var(--muted)}
+    .scrape-settings summary{cursor:pointer;color:var(--text);font-weight:600}
+    .scrape-settings table{border-collapse:collapse;margin:8px 0;font-size:12px}
+    .scrape-settings th,.scrape-settings td{border:1px solid var(--line);padding:4px 8px;text-align:left}
+    .scrape-settings th{color:var(--text)}
+    .scrape-settings ul{margin:6px 0;padding-left:18px}
     .boat-controls,.operator-controls{display:flex;align-items:center;gap:8px;padding-right:6px}.boat-controls input,.operator-controls input{flex:0 0 auto;width:15px;height:15px;accent-color:var(--sea)}
     .boat-selector,.operator-selector{color:inherit;text-decoration:none}.operator-controls .operator-selector{min-width:0;padding-left:11px}.operator-controls{height:100%}.boat-controls .boat-selector{min-width:0}.boat-controls.is-selected{background:#163b42}.operator-controls.is-selected{background:#164c53}
   </style>
@@ -41,12 +52,18 @@
     <p class="snapshot"><strong>데이터 불러오는 중</strong> · 실제 현황은 예약처에서 다시 확인하세요.</p>
   </div>
 
-  <section id="scrapeSettings" class="scrape-settings" aria-label="맥 스크래핑 설정" style="display: none;">
-    <label for="scrapeInterval">스크래핑 주기</label>
-    <select id="scrapeInterval"><option value="1">1분</option><option value="5" selected>5분 (기본)</option><option value="10">10분</option><option value="30">30분</option><option value="60">1시간</option></select>
-    <button id="applyInterval" type="button">맥에 적용</button>
-    <span id="scrapeSettingStatus" role="status">설정하려면 수집 중인 맥에서 열어 주세요.</span>
-    <p>맥에서 수집 → GitHub에 업로드 · 수집 중에는 중복 실행하지 않습니다.</p>
+  <section id="scrapeSettings" class="scrape-settings" aria-label="맥 스크래핑 제어" style="display: none;">
+    <span class="scrape-title">자동 수집</span>
+    <span id="scrapeState" class="scrape-state">확인 중</span>
+    <button id="scrapePause" type="button">⏸ 수집중지</button>
+    <button id="scrapeResume" type="button">▶ 수집시작</button>
+    <button id="scrapeRun" type="button">🔄 수동수집</button>
+    <span id="scrapeSettingStatus" role="status">맥 수집기에 연결 중…</span>
+    <p>주요 3곳(무창포·오천항·영흥도) 30일: 5분마다 · 그 외: 30분마다 · 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
+    <details id="scrapePlan">
+      <summary>수집 방법 상세 보기</summary>
+      <div id="scrapePlanBody">불러오는 중…</div>
+    </details>
   </section>
   <script>
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
@@ -535,22 +552,73 @@ speciesTabs.forEach((tab,index)=>{
     if(next!=null){event.preventDefault();speciesTabs[next].focus();selectSpecies(speciesTabs[next]);}
   });
 });
-$("#applyInterval").addEventListener("click",async()=>{
-  const button=$("#applyInterval"),message=$("#scrapeSettingStatus");
-  button.disabled=true;message.textContent="맥 수집기에 연결 중…";
-  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);
-  try{
-    const url="http://127.0.0.1:8788/settings";
-    const currentResponse=await fetch(url,{signal:controller.signal});
-    if(!currentResponse.ok)throw new Error("연결 실패");
-    const current=await currentResponse.json();
-    const response=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":current.csrf_token},body:JSON.stringify({interval_minutes:Number($("#scrapeInterval").value)}),signal:controller.signal});
-    if(!response.ok)throw new Error("설정 실패");
-    const saved=await response.json();
-    message.textContent=`${saved.interval_minutes===60?"1시간":saved.interval_minutes+"분"} 주기 적용 완료${saved.running?" · 현재 수집 중":""}`;
-  }catch(error){message.textContent="맥 수집기에 연결할 수 없습니다. 수집기 실행 상태와 브라우저의 로컬 네트워크 권한을 확인해 주세요.";}
-  finally{clearTimeout(timer);button.disabled=false;}
-});
+  // 맥 수집기 제어 (localhost에서만 표시·동작)
+  const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
+  const fmtTime=s=>s?s.slice(11,19):"-";
+  const fmtWait=sec=>sec==null?"-":sec>=60?`${Math.floor(sec/60)}분 ${sec%60}초`:`${sec}초`;
+  const modeName={fast:"빠른 수집(주요 3곳 30일)",slow:"느린 수집(31일 이후·나머지)",full:"전체 수집"};
+  let scraperCsrf=null;
+  async function scraperFetch(path,options={}){
+    const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);
+    try{const r=await fetch(SCRAPER+path,{...options,signal:controller.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
+    finally{clearTimeout(timer)}
+  }
+  function renderPlan(plan){
+    if(!plan){$("#scrapePlanBody").textContent="수집 방법 정보가 아직 없습니다. 첫 수집이 시작되면 표시됩니다.";return}
+    const g=plan.groups||[],pri=g.slice(0,3),rest=g[3]||{sites:0,boats:0,pages_last:0};
+    const sum=(arr,k)=>arr.reduce((a,x)=>a+(x[k]||0),0);
+    const row=x=>`<tr><td>${escapeHtml(x.name)}</td><td>${x.sites}곳</td><td>${x.boats}척</td><td>${x.pages_last}장</td></tr>`;
+    $("#scrapePlanBody").innerHTML=`
+      <table><thead><tr><th>그룹</th><th>홈페이지</th><th>배</th><th>지난 수집 페이지</th></tr></thead><tbody>
+      <tr><td>선상24 (전 항구)</td><td>선단 ${plan.sunsang24.fleets}곳</td><td>${plan.sunsang24.boats}척</td><td>-</td></tr>
+      ${pri.map(row).join("")}
+      <tr><th>주요 3곳 합계</th><th>${sum(pri,"sites")}곳</th><th>${sum(pri,"boats")}척</th><th>${sum(pri,"pages_last")}장</th></tr>
+      ${row(rest)}
+      <tr><th>홈페이지 전체</th><th>${plan.total.sites}곳</th><th>${plan.total.boats}척</th><th>${sum(g,"pages_last")}장</th></tr>
+      </tbody></table>
+      <ul>
+        <li><b>빠른 수집 · ${plan.fast_minutes}분마다:</b> 선상24 전체 → 무창포 → 오천항 → 영흥도 홈페이지 (오늘부터 ${plan.near_days}일까지)</li>
+        <li><b>느린 수집 · ${plan.slow_minutes}분마다:</b> 주요 3곳의 ${plan.near_days+1}일째 이후 날짜 → 나머지 항구 ${rest.sites}곳 전체 날짜</li>
+        <li>그룹 하나가 끝날 때마다 바로 GitHub에 올려 화면에 반영합니다 (열린 화면은 1분마다 새 데이터 확인).</li>
+        <li>동시에 ${plan.workers}개 사이트를 수집하고, 같은 사이트에는 ${plan.gap_seconds}초 간격으로 요청합니다.</li>
+        <li>다음 수집 시각은 이전 수집 '시작' 기준입니다. 수집이 길어져 시각이 지나면 끝나는 즉시 다시 시작합니다.</li>
+        <li>빠른·느린 수집이 겹치면 빠른 수집 후 이어서 느린 수집을 합니다 (동시에 돌지 않음).</li>
+        <li>지난 수집 페이지 수는 시즌 전체 기준 참고치입니다. 배 수는 홈페이지가 등록된 배만 셉니다.</li>
+      </ul>
+      <p>정보 갱신: ${escapeHtml((plan.updated_at||"").replace("T"," ").slice(0,19))}</p>`;
+  }
+  function renderScraper(s){
+    const state=$("#scrapeState");
+    state.className="scrape-state"+(s.running?" running":s.paused?" paused":"");
+    state.textContent=s.running?"수집 중":s.paused?"중지됨":"켜짐";
+    let msg=s.running?`${modeName[s.current_mode]||"수집"} 진행 중${s.progress?.step?` · ${s.progress.step}`:""} (시작 ${fmtTime(s.last_started_at)})`:"";
+    if(s.running&&s.paused)msg+=" · 이 수집이 끝나면 멈춥니다";
+    if(!s.running)msg=s.paused?"자동 수집 중지 상태":`다음 빠른 수집 ${fmtWait(s.next_fast_in)} 후 · 느린 수집 ${fmtWait(s.next_slow_in)} 후`;
+    if(s.manual_pending)msg+=" · 수동수집 대기 중";
+    msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${s.last_result==="failed"?" (일부 실패)":""}`;
+    $("#scrapeSettingStatus").textContent=msg;
+    $("#scrapePause").disabled=s.paused;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
+    renderPlan(s.plan);
+  }
+  async function refreshScraper(){
+    try{const s=await scraperFetch("/settings");scraperCsrf=s.csrf_token;renderScraper(s)}
+    catch(e){$("#scrapeState").className="scrape-state paused";$("#scrapeState").textContent="연결 안 됨";$("#scrapeSettingStatus").textContent="맥 수집기에 연결할 수 없습니다. 수집기 실행 상태를 확인해 주세요."}
+  }
+  async function scraperControl(action,button){
+    button.disabled=true;
+    try{
+      if(!scraperCsrf)await refreshScraper();
+      const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify({action})});
+      renderScraper(s);
+    }catch(e){$("#scrapeSettingStatus").textContent="요청 실패: 맥 수집기 연결을 확인해 주세요.";scraperCsrf=null}
+    finally{setTimeout(refreshScraper,800)}
+  }
+  if(isLocalHost){
+    $("#scrapePause").addEventListener("click",e=>scraperControl("pause",e.currentTarget));
+    $("#scrapeResume").addEventListener("click",e=>scraperControl("resume",e.currentTarget));
+    $("#scrapeRun").addEventListener("click",e=>{if(confirm("지금 전체 수집(약 10분)을 실행할까요?"))scraperControl("run",e.currentTarget)});
+    refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
+  }
 loadData().then(()=>{
   initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
   requestAnimationFrame(()=>{
