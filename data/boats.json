@@ -5008,18 +5008,47 @@
       "price": "",
       "channels": {
         "phone": "010-5152-4226",
-        "homepage": "https://naksigo.com/boat/%EC%95%84%EB%A6%AC%EB%9E%911%ED%98%B8",
+        "homepage": "https://arirang.sunsang24.com/ship/schedule_fleet",
         "sunsang24": "https://arirang.sunsang24.com/ship/schedule_fleet"
       },
       "tags": [],
       "manual": false,
-      "operator": "아리랑1호",
+      "operator": "오천항 아리랑호",
       "capacity": 21,
-      "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+      "catalog_checked_at": "2026-10-03T22:29:47+09:00",
       "catalog_sources": [
         "https://naksigo.com/boat/%EC%95%84%EB%A6%AC%EB%9E%911%ED%98%B8",
         "https://arirang.sunsang24.com/ship/schedule_fleet"
-      ]
+      ],
+      "company": "오천항 아리랑호",
+      "booking_names": [
+        "아리랑1호"
+      ],
+      "catalog_status": "booking_verified"
+    },
+    {
+      "bid": 971112,
+      "name": "아리랑2호",
+      "operator": "오천항 아리랑호",
+      "company": "오천항 아리랑호",
+      "region": "충남 보령시",
+      "port": "오천항",
+      "price": "",
+      "capacity": null,
+      "channels": {
+        "homepage": "https://arirang.sunsang24.com/ship/schedule_fleet",
+        "sunsang24": "https://arirang.sunsang24.com/ship/schedule_fleet"
+      },
+      "tags": [],
+      "manual": false,
+      "catalog_checked_at": "2026-10-03T22:29:47+09:00",
+      "catalog_sources": [
+        "https://arirang.sunsang24.com/ship/schedule_fleet"
+      ],
+      "booking_names": [
+        "아리랑2호"
+      ],
+      "catalog_status": "booking_verified"
     },
     {
       "bid": 275,
@@ -8082,5 +8111,5 @@
       "catalog_checked_at": "2026-10-03"
     }
   ],
-  "updated_at": "2026-10-03T22:26:32+09:00"
+  "updated_at": "2026-10-03T22:29:47+09:00"
 }
