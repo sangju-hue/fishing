@@ -9,6 +9,7 @@ import os
 import re
 import time
 import urllib.request
+from html import unescape
 from datetime import date, datetime, timedelta, timezone
 from season import season_window
 
@@ -38,7 +39,7 @@ def norm_ship(s):
     return re.sub(r"\s+", "", s or "")
 
 
-def parse_month(html, yyyymm):
+def parse_month(html, yyyymm, include_other_fish=False):
     """{date: [(ship, fish, status, remaining)]} 반환. status: available|full|cancelled"""
     u = unescape_js(html)
     out = {}
@@ -49,10 +50,10 @@ def parse_month(html, yyyymm):
             continue
         sdate = dm.group(1)
         sm = re.search(r'<td class="ship_info">.*?<div class="title">\s*(.*?)\s*</div>', tr, re.S)
-        ship = norm_ship(sm.group(1)) if sm else None
+        ship = unescape(re.sub(r'<[^>]+>', '', sm.group(1))).strip() if sm else None
         fm = re.search(r'<div id="fish">(.*?)</div>', tr, re.S)
         fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
-        if not any(k in fish for k in JJUKKUMI):
+        if not include_other_fish and not any(k in fish for k in JJUKKUMI):
             continue
         sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
         sno = sno_m.group(1) if sno_m else None
@@ -115,9 +116,10 @@ def parse_simple_list(html, yyyymm, ship_name):
 def aggregate(trips):
     """같은 날짜·같은 배의 여러 출조 집계."""
     avail = [t for t in trips if t[2] == "available"]
-    is_octopus = any("문어" in (t[1] or "") for t in trips)
+    chosen = max(avail,key=lambda t:t[3] or 0) if avail else next((t for t in trips if t[2]=='full'),next((t for t in trips if t[2]=='maintenance'),trips[0] if trips else None))
+    is_octopus = chosen and "문어" in (chosen[1] or "")
     fish_str = "문어" if is_octopus else None
-    sno = next((t[4] for t in trips if len(t)>4 and t[4]), None)
+    sno = chosen[4] if chosen and len(chosen)>4 else None
     
     if avail:
         res = {"status": "available", "remaining": max(t[3] or 0 for t in avail)}
@@ -150,6 +152,7 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--year',type=int)
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
+    parser.add_argument('--subdomains',nargs='*',help='점검할 선상24 선단 (생략하면 전체)')
     args=parser.parse_args()
     now=datetime.now(KST)
     year=args.year or now.year+(now.month==12)
@@ -161,29 +164,42 @@ def main():
         if b.get('canonical_bid') is not None:continue
         sub=subdomain(b.get('channels',{}).get('sunsang24'))
         if sub:groups.setdefault(sub,[]).append(b)
+    if args.subdomains:groups={sub:g for sub,g in groups.items() if sub in args.subdomains}
     path=os.path.join(DATA,'status.json')
     try:data=json.load(open(path,encoding='utf-8'))
     except (OSError,ValueError):data={'dates':{}}
     data.setdefault('by_boat_id',{})
     def collect(item):
-        sub,group=item;client=Client(1);results={};errors=[]
+        sub,group=item;client=Client(1);results={};errors=[];observed=set();capacity_rejected=set();all_labels=set();excluded_fish={}
         names=[b['name'] for b in group]
         aliases={label:b['name'] for b in group for label in b.get('booking_names',[])}
         for month in months(first,end):
             ym=month.strftime('%Y%m');url=f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}'
             try:
-                h,_=client.fetch(url);parsed=parse_month(h,ym)
-                if not any(parsed.values()):
+                h,_=client.fetch(url);all_trips=parse_month(h,ym,include_other_fish=True)
+                for ds,trips in all_trips.items():
+                    if not first.isoformat()<=ds<=end.isoformat():continue
+                    for trip in trips:
+                        if trip[0]:all_labels.add(trip[0])
+                        name=match_boat(trip[0],names,aliases)
+                        if name and not any(k in trip[1] for k in JJUKKUMI):excluded_fish.setdefault(name,set()).add(trip[1] or '어종 미표기')
+                parsed={ds:[t for t in trips if any(k in t[1] for k in JJUKKUMI)] for ds,trips in all_trips.items()}
+                matched={match_boat(t[0],names,aliases) for trips in parsed.values() for t in trips}
+                if any(name not in matched for name in names):
                     simple_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet_simple/{ym}'
                     h_simple, _ = client.fetch(simple_url)
-                    ship_buttons = re.findall(r'<button class="btn btn-schedule-ship btn[^>]*data-ship-list-no="(\d+)".*?>\s*<strong>(.*?)</strong>', h_simple)
+                    from homepage_engine import DOM
+                    ship_buttons=[(button.attrs.get('data-ship-list-no',''),next(button.walk('strong'),button).text().strip()) for button in DOM(h_simple).root.walk('button') if 'btn-schedule-ship' in button.attrs.get('class','').split()]
                     for ship_no, ship_name in ship_buttons:
-                        if int(ship_no) == 0: continue
+                        if not ship_no.isdigit() or int(ship_no) == 0: continue
+                        name=match_boat(ship_name,names,aliases)
+                        if not name or name in matched:continue
                         list_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}/{ship_no}/ship_one_list'
                         h_list, _ = client.fetch(list_url)
-                        parsed_list = parse_simple_list(h_list, ym, norm_ship(ship_name))
+                        parsed_list = parse_simple_list(h_list, ym, ship_name)
                         for d, trips in parsed_list.items():
                             parsed.setdefault(d, []).extend(trips)
+                observed.update(t[0] for trips in parsed.values() for t in trips if t[0])
                 named=any(t[0] for trips in parsed.values() for t in trips)
                 for ds,trips in parsed.items():
                     if not first.isoformat()<=ds<=end.isoformat():continue
@@ -192,15 +208,25 @@ def main():
                         state=aggregate(mine)
                         if state['status']=='unknown':continue
                         cap=b.get('capacity')
-                        if cap and (state['remaining'] or 0)>cap:continue
+                        if cap and (state['remaining'] or 0)>cap:
+                            capacity_rejected.add(b['name']);continue
                         surl = f'https://{sub}.sunsang24.com/mypage/reservation_ready/{state.pop("sno")}' if state.get("sno") else url
                         results[(str(b['bid']),ds)]=dict(state,boat_id=b['bid'],source='sunsang24',source_url=surl,checked_at=checked_at)
             except Exception as e:errors.append(str(e))
         print(sub,len(results),'건',len(errors),'오류',flush=True)
-        return group,results,errors
+        collected={bid for bid,ds in results}
+        missing=[b['name'] for b in group if str(b['bid']) not in collected]
+        health={'status':'partial' if results and (errors or missing) else 'ok' if results else 'fetch_failed' if errors else 'no_data','url':f'https://{sub}.sunsang24.com/ship/schedule_fleet','entries':len(results),'boats':names,'boat_ids':{b['name']:b['bid'] for b in group},'missing_boats':missing,'observed_ship_labels':sorted(observed),'all_ship_labels':sorted(all_labels),'excluded_fish':{name:sorted(fish) for name,fish in excluded_fish.items()},'capacity_rejected':sorted(capacity_rejected),'errors':errors}
+        return group,results,errors,sub,health
     total=0
+    health_path=os.path.join(DATA,'site_health_sunsang24.json')
+    try:health=json.load(open(health_path,encoding='utf-8')) if args.subdomains else {}
+    except (OSError,ValueError):health={}
+    health.update(checked_at=checked_at,queried_range={'from':first.isoformat(),'to':end.isoformat()})
+    health.setdefault('sites',{})
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        for group,results,errors in pool.map(collect,groups.items()):
+        for group,results,errors,sub,h in pool.map(collect,groups.items()):
+            health['sites'][sub]=h
             # Refresh only dates queried this run; preserve historical season data.
             for ds,day in data['by_boat_id'].items():
                 if first.isoformat()<=ds<=end.isoformat():
@@ -226,6 +252,7 @@ def main():
     data['updated_at']=checked_at
     data['queried_range']={'from':first.isoformat(),'to':end.isoformat()}
     atomic_json(path,data)
+    atomic_json(health_path,health)
     print('선상24 수집 완료:',total,'건',flush=True)
 
 if __name__=='__main__':main()

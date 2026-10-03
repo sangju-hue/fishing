@@ -52,13 +52,18 @@ def compact(text):
     return re.sub(r'\s+', '', text)
 
 def match_boat(label, boats, aliases=None):
-    label = compact(label)
+    raw = label.strip().strip('★☆◆◇◈●○ ')
+    # Captain labels are separated by a space or underscore; do not accept a
+    # different boat whose name merely starts with the same characters.
+    raw = re.split(r'_|(?<=호)\s+(?=[가-힣A-Za-z])', raw)[0]
+    label = compact(raw)
     label = re.sub(r'^(?:\(신조선\)|신조선)','',label)
     aliases = aliases or {}
     # Match the ship heading, never passenger names or notices in another cell.
-    label = re.split(r'\(|（|\d+인승|\d+[.]\d+톤|▶|전용선', label)[0]
     variants = {compact(b): b for b in boats}
     variants.update({compact(a): b for a,b in aliases.items() if b in boats})
+    if label in variants: return variants[label]
+    label = re.split(r'\(|（|\d+인승|\d+[.]\d+톤|▶|전용선', label)[0]
     if label in variants: return variants[label]
     # Formatting often adds a capacity or description after the actual name.
     for name in sorted(variants, key=len, reverse=True):
@@ -90,6 +95,27 @@ def parse_booking(html, boats, aliases=None, today=None, end=None):
     end = end or today + timedelta(days=365)
     dom = DOM(html).root
     out, seen_boats, seen_dates = {}, set(), set()
+    # Fishmap mobile pages expose several dates in reservation blocks instead
+    # of desktop table rows. Read only the heading and ship_num status.
+    for block in dom.walk('div'):
+        if 'reservation' not in block.attrs.get('class','').split():continue
+        head=next(block.walk('h1'),None)
+        m=re.search(r'(\d{4})년\s*(\d{1,2})월\s*(\d{1,2})일',head.text() if head else '')
+        if not m:continue
+        try:d=date(*map(int,m.groups()))
+        except ValueError:continue
+        seen_dates.add(d.isoformat())
+        if not today<=d<=end:continue
+        for box in block.walk('div'):
+            if 'res_box' not in box.attrs.get('class','').split():continue
+            heading=next((n for n in box.walk('div') if 'ship_name' in n.attrs.get('class','').split()),None)
+            h2=next(heading.walk('h2'),heading) if heading else None
+            boat=match_boat(h2.text(),boats,aliases) if h2 else None
+            if not boat:continue
+            seen_boats.add(boat)
+            cell=next((n for n in box.walk('p') if 'ship_num' in n.attrs.get('class','').split()),None)
+            result=status(cell.text()) if cell else None
+            if result:merge_trip(out,(boat,d.isoformat()),result)
     for row in dom.walk('tr'):
         cells = [n for n in row.children if isinstance(n,Node) and n.tag == 'td']
         if len(cells) != 3: continue
@@ -211,19 +237,34 @@ def parse_sunsang(html, boats, today, end):
     return out
 
 def parse_niabbs(html, boats, aliases, today, end):
-    out={};current=None
+    out={};current=None;current_boat=None
     for row in DOM(html).root.walk('tr'):
         cells=[n for n in row.children if isinstance(n,Node) and n.tag=='td']
         if not cells:continue
-        marker=re.search(r'(\d{4})-(\d{2})\s+(\d{1,2})\s*\(',cells[0].text())
+        marker=re.search(r'(\d{4})-(\d{2})[\s-]+(\d{1,2})\s*\(',cells[0].text())
         if marker:
             try:current=date(*map(int,marker.groups()))
             except ValueError:current=None
+            current_boat=None
             cells=cells[1:]
+        if len(cells)==1 and current is not None and today<=current<=end:
+            cell=cells[0]
+            p=next(cell.walk('p'),None)
+            if p and re.search('주꾸미|쭈꾸미|쭈갑|갑오징어|문어',p.text()):
+                current_boat=match_boat(p.text(),boats,aliases)
+            if current_boat and re.match(r'\s*정원\s*[:：]',cell.text()):
+                remaining=re.search(r'잔여\s*[:：]?\s*(\d+)',cell.text())
+                if remaining:
+                    n=int(remaining.group(1));merge_trip(out,(current_boat,current.isoformat()),('available',n) if n else ('full',0))
+            continue
         if len(cells)!=5 or current is None or not today<=current<=end:continue
         heading=cells[0].text().strip()
         if not re.search('주꾸미|쭈꾸미|쭈갑|갑오징어|문어',heading):continue
-        boat=match_boat(re.sub(r'^\s*(?:오전|오후)\s*','',heading),boats,aliases)
+        period=re.match(r'^\s*(오전|오후)\s*',heading)
+        ship=re.sub(r'^\s*(?:오전|오후|종일|고속정)\s*','',heading)
+        base=re.split(r'\(|\d{1,2}:\d{2}|쭈꾸미|주꾸미|갑오징어|문어',ship)[0].strip()
+        split_name=f'{base}({period.group(1)})' if period else ''
+        boat=split_name if split_name in boats else match_boat(ship,boats,aliases)
         remaining=re.search(r'잔여\s*(\d+)',cells[3].text())
         if boat and remaining:
             n=int(remaining.group(1));merge_trip(out,(boat,current.isoformat()),('available',n) if n else ('full',0))

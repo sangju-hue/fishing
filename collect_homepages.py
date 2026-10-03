@@ -10,7 +10,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, urlencode, urljoin, parse_qsl,quote
-from homepage_engine import DOM, parse_booking, parse_hanaho, parse_wz, parse_sunsang, parse_niabbs, booking_links, date_url
+from homepage_engine import match_boat, DOM, parse_booking, parse_hanaho, parse_wz, parse_sunsang, parse_niabbs, booking_links, date_url
 from season import season_window
 
 BASE=os.path.dirname(os.path.abspath(__file__))
@@ -25,14 +25,14 @@ class Client:
     def __init__(self, gap=1):
         self.opener=urllib.request.build_opener(Redirects(),urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
         self.gap,self.last=gap,0
-    def fetch(self,url):
+    def fetch(self,url,data=None):
         p=urlsplit(url)
         host=(p.hostname or '').encode('idna').decode('ascii')
         netloc=host+(f':{p.port}' if p.port else '')
         url=urlunsplit((p.scheme,netloc,quote(p.path,safe='/%:@'),quote(p.query,safe='=&?/:@+%,;'),''))
         time.sleep(max(0,self.gap-(time.monotonic()-self.last)))
         self.last=time.monotonic()
-        req=urllib.request.Request(url,headers=HEADERS)
+        req=urllib.request.Request(url,data=urlencode(data).encode() if data is not None else None,headers=HEADERS)
         with self.opener.open(req,timeout=20) as r:
             final=r.url
             if 'kuipernet' in final:raise RuntimeError('WAF 차단')
@@ -55,10 +55,12 @@ def sites_from_catalog(boats):
         u=b.get('channels',{}).get('homepage')
         if not u:continue
         host=urlsplit(u).hostname.encode('idna').decode('ascii').removeprefix('www.')
-        g=out.setdefault(host,{'url':u,'boats':[],'boat_ids':{},'aliases':{}})
+        g=out.setdefault(host,{'url':u,'boats':[],'boat_ids':{},'aliases':{},'deferred_boats':[],'alternates':[]})
+        if b.get('collection_priority')=='deferred_daily':g['deferred_boats'].append(b['name'])
         if b['name'] not in g['boats']:g['boats'].append(b['name'])
         g['boat_ids'][b['name']]=b.get('bid')
         for label in b.get('booking_names',[]):g['aliases'][label]=b['name']
+        for alternate in b.get('booking_fallbacks',[]):g['alternates'].append((alternate,[b['name']]))
     return out
 
 # Verified formatting differences, not speculative boat renames.
@@ -82,6 +84,10 @@ ALTERNATES={
 def collect_site(host,g,today,end,gap=1):
     if today>end:
         return {},{},{'status':'out_of_season','entries':0,'boats':g['boats'],'missing_boats':[],'pages_checked':0,'errors':[]}
+    deferred=list(g.get('deferred_boats',[]))
+    g=dict(g,boats=[b for b in g['boats'] if b not in deferred])
+    if not g['boats']:
+        return {},{},{'status':'deferred_daily','url':g['url'],'entries':0,'boats':deferred,'boat_ids':g['boat_ids'],'missing_boats':deferred,'deferred_boats':deferred,'pages_checked':0,'errors':[]}
     client=Client(gap);out={};sources={};errors=[];visited=[];seen_boats=set();seen_dates=set();labels=set()
     aliases=dict(ALIASES.get(host,{}));aliases.update(g.get('aliases',{}))
     def get(url):
@@ -92,7 +98,16 @@ def collect_site(host,g,today,end,gap=1):
         for row in DOM(html).root.walk('tr'):
             cells=[n for n in row.children if hasattr(n,'tag') and n.tag=='td']
             if len(cells)==3 and any(re.match(r'admin-right-\d{8}-',n.attrs.get('id','')) for n in cells[2].walk('div')):
-                labels.add(next(cells[0].walk('span'),cells[0]).text().strip())
+                label=next(cells[0].walk('span'),cells[0]).text().strip()
+                labels.add(label)
+                boat=match_boat(label,boats or g['boats'],aliases)
+                for marker in cells[2].walk('div'):
+                    m=re.match(r'admin-right-(\d{4})(\d{2})(\d{2})-(\d+)-',marker.attrs.get('id',''))
+                    if m and boat:
+                        y,mo,d,uid=m.groups();key=(boat,f'{y}-{mo}-{d}')
+                        if key in v:
+                            parts=urlsplit(url);query=dict(parse_qsl(parts.query));query.update(mid='bk',year=y,month=mo,day=d,mode='list',sel='day',PA_N_UID=uid)
+                            sources[key]=urlunsplit((parts.scheme,parts.netloc,parts.path,urlencode(query),'list'))
         return ds
     root=None
     p=urlsplit(g['url']);hosts=[p.netloc,p.netloc.removeprefix('www.')]
@@ -111,7 +126,8 @@ def collect_site(host,g,today,end,gap=1):
                 except Exception as e:errors.append({'url':next_url,'error':str(e)})
         # Prefer actual booking/status pages over links in notices.
         queue=sorted(dict.fromkeys(queue),key=lambda u:0 if re.search(r'mid=bk|hid=status|/reservation|/ship/booking',u) else 1)
-        booking=(html,url) if root_dates or host=='sooyangho.co.kr' else None
+        niabbs=bool(re.search(r'/niabbs5m?/',url) and re.search(r'doc/sub[\w-]+_in(?:2)?\.htm',html))
+        booking=(html,url) if root_dates or host=='sooyangho.co.kr' or niabbs else None
         for next_url in (queue[:6] if not booking else []):
             try:
                 h,u=get(next_url);ds=absorb(h,u)
@@ -121,9 +137,13 @@ def collect_site(host,g,today,end,gap=1):
             except Exception as e:errors.append({'url':next_url,'error':str(e)})
         if booking:
             h,u=booking
-            if host=='sooyangho.co.kr':
+            if host=='sooyangho.co.kr' or niabbs:
+                monthly='doc/sub2_in2.htm' if host=='sooyangho.co.kr' else next(iter(re.findall(r'(doc/sub[\w-]+_in2\.htm)',h)),'doc/sub2_in2.htm')
+                # The mobile table labels capacity and remaining explicitly;
+                # the desktop table also contains a passenger list, not used.
+                base=re.sub(r'/niabbs5/', '/niabbs5m/',u)
                 for month in months(today,end):
-                    target=urljoin(u,'doc/sub2_in2.htm')+'?'+urlencode({'toYear':month.year,'toMonth':month.month})
+                    target=urljoin(base,monthly)+'?'+urlencode({'toYear':month.year,'toMonth':month.month})
                     try:
                         h,final=get(target);v=parse_niabbs(h,g['boats'],aliases,today,end);out.update(v);sources.update({k:final for k in v});seen_boats.update(k[0] for k in v)
                     except Exception as e:errors.append({'url':target,'error':str(e)})
@@ -151,10 +171,15 @@ def collect_site(host,g,today,end,gap=1):
                         actual=[date.fromisoformat(d) for d in ds if date.fromisoformat(d)>=cursor]
                         if not actual:
                             errors.append({'url':final,'error':'요청 날짜 이후 예약 표 없음'});break
+                        if cursor==today and len(set(actual))==1:
+                            # User deferred providers requiring one request per day.
+                            deferred.extend(g['boats']);break
                         cursor=max(actual)+timedelta(days=1)
                     except Exception as e:
                         errors.append({'url':target,'error':str(e)});cursor+=timedelta(days=8)
-    for alternate,boats in ALTERNATES.get(host,[]):
+    for alternate,boats in list(ALTERNATES.get(host,[]))+g.get('alternates',[]):
+        boats=[b for b in boats if b in g['boats'] and not any(k[0]==b for k in out)]
+        if not boats:continue
         if '.sunsang24.com' in alternate:
             for month in months(today,end):
                 target=alternate.rstrip('/')+'/'+month.strftime('%Y%m')
@@ -168,12 +193,15 @@ def collect_site(host,g,today,end,gap=1):
                 try:
                     h,u=get(target);ds=absorb(h,u,boats);actual=[date.fromisoformat(d) for d in ds if date.fromisoformat(d)>=cursor]
                     if not actual:break
+                    if cursor==today and len(set(actual))==1:
+                        deferred.extend(boats);break
                     cursor=max(actual)+timedelta(days=1)
                 except Exception as e:errors.append({'url':target,'error':str(e)});break
     missing=[b for b in g['boats'] if not any(k[0]==b for k in out)]
     state='ok' if out and not missing and not errors else 'partial' if out else 'no_data' if visited else 'fetch_failed'
-    health={'status':state,'url':g['url'],'entries':len(out),'boats':g['boats'],'boat_ids':g['boat_ids'],'missing_boats':missing,'observed_ship_labels':sorted(labels),'pages_checked':len(visited),'booking_urls':list(dict.fromkeys(sources.values())),'errors':errors}
-    print(f'{host}: {state}, {len(out)}건, 미수집 {len(missing)}척, {len(visited)}페이지',flush=True)
+    if deferred:state='deferred_daily' if all(b in deferred for b in g['boats']) else 'partial'
+    health={'status':state,'url':g['url'],'entries':len(out),'boats':list(dict.fromkeys(g['boats']+deferred)),'boat_ids':g['boat_ids'],'missing_boats':list(dict.fromkeys(missing+deferred)),'deferred_boats':list(dict.fromkeys(deferred)),'observed_ship_labels':sorted(labels),'pages_checked':len(visited),'booking_urls':list(dict.fromkeys(sources.values())),'errors':errors}
+    print(f'{host}: {state}, {len(out)}건, 미수집 {len(health["missing_boats"])}척, {len(visited)}페이지',flush=True)
     return out,sources,health
 
 def atomic_json(path,value):

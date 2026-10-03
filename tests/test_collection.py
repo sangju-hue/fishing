@@ -23,6 +23,36 @@ def sunsang_row(state,remaining=0):
     return f'<tr><td class="ship_info"><div class="title">테스트호</div></td><td><ul data-sdate="2027-10-03"><li class="remain"><span {code}>남은자리 {remaining}명</span></li></ul></td></tr>'
 
 class ParsingTests(unittest.TestCase):
+    def test_mobile_stacked_calendar_reads_only_remaining_row(self):
+        h='<table><tr><td>2027-10-03(일요일)</td></tr><tr><td><p>성주산호(쭈꾸미) 오전</p></td></tr><tr><td>예약확정 99명</td></tr><tr><td>정원 : 60 명 / 잔여 : <span>3</span> 명</td></tr></table>'
+        out=parse_niabbs(h,['성주산호'],{},date(2027,10,3),END)
+        self.assertEqual(out,{('성주산호','2027-10-03'):('available',3)})
+    def test_daily_only_provider_is_deferred_after_first_date(self):
+        from collect_homepages import collect_site
+        group={'url':'https://example.test/index.php?mid=bk','boats':['테스트호'],'boat_ids':{'테스트호':1},'aliases':{}}
+        with patch('collect_homepages.Client.fetch',return_value=(booking_row('20271003'),'https://example.test/index.php?mid=bk')) as fetch:
+            _,_,health=collect_site('example.test',group,date(2027,10,3),END,0)
+        self.assertEqual(health['deferred_boats'],['테스트호'])
+        self.assertLessEqual(fetch.call_count,2)
+    def test_booking_link_belongs_to_trip_with_displayed_remaining(self):
+        from scrape_sunsang24 import aggregate
+        result=aggregate([('테스트호','문어','available',2,'101'),('테스트호','쭈꾸미','available',7,'102')])
+        self.assertEqual(result['remaining'],7)
+        self.assertEqual(result['sno'],'102')
+        self.assertNotIn('fish',result)
+    def test_captain_suffix_is_not_part_of_boat_name(self):
+        self.assertEqual(match_boat('배짱호_임선장',['배짱호']),'배짱호')
+        self.assertEqual(match_boat('총각1호 김선장(18인승)',['총각1호']),'총각1호')
+        self.assertIsNone(match_boat('총각1호신조선',['총각1호']))
+    def test_mobile_status_does_not_read_passenger_or_notice(self):
+        h='<div class="reservation"><a name="20271003"></a><h1>2027년 10월 03일</h1><div class="res_box"><div class="ship_name"><h2>★테스트호★</h2></div><p class="ship_num">남은자리 4명</p><div class="ship_notice">잔여석 99명 승선자 명단</div></div></div>'
+        out,_,dates=parse_booking(h,['테스트호'],today=date(2027,10,3),end=END)
+        self.assertEqual(out,{('테스트호','2027-10-03'):('available',4)})
+        self.assertEqual(dates,{'2027-10-03'})
+    def test_morning_and_afternoon_keep_separate_ids(self):
+        h='<table><tr><td rowspan="2">2027-10 03 (일)</td></tr><tr><td>오전 해피호 06:30~11:20 쭈꾸미</td><td>요금</td><td>정원 58</td><td>잔여 7</td><td>명단</td></tr><tr><td>오후 해피호 12:00~17:20 쭈꾸미</td><td>요금</td><td>정원 58</td><td>잔여 2</td><td>명단</td></tr></table>'
+        out=parse_niabbs(h,['해피호(오전)','해피호(오후)'],{},date(2027,10,3),END)
+        self.assertEqual(out,{('해피호(오전)','2027-10-03'):('available',7),('해피호(오후)','2027-10-03'):('available',2)})
     def test_same_korean_domain_shares_one_collection(self):
         host='범블비호.com';encoded=host.encode('idna').decode('ascii')
         boats=[dict(bid=1,name='가호',channels={'homepage':'http://'+host}),dict(bid=2,name='나호',channels={'homepage':'http://www.'+encoded})]

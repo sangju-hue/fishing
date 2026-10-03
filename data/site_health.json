@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T08:40:04+09:00",
+ "checked_at": "2026-10-03T09:06:07+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -59,7 +59,7 @@
   },
   "yhseaking.com": {
    "status": "partial",
-   "url": "http://www.yhseaking.com/index.php?mid=bk",
+   "url": "https://www.yhseaking.com/index.php?mid=bk",
    "entries": 58,
    "boats": [
     "뉴승진호",
@@ -72,6 +72,7 @@
    "missing_boats": [
     "뉴승진호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "뉴승진호",
     "빅토리아호",
@@ -265,9 +266,9 @@
    "errors": []
   },
   "bluefishing.asia": {
-   "status": "no_data",
-   "url": "https://www.bluefishing.asia/m/index.php?mid=index",
-   "entries": 0,
+   "status": "partial",
+   "url": "https://www.bluefishing.asia/index.php?mid=bk",
+   "entries": 59,
    "boats": [
     "블루호",
     "블루피싱, 블루호"
@@ -277,12 +278,25 @@
     "블루피싱, 블루호": 261
    },
    "missing_boats": [
-    "블루호",
     "블루피싱, 블루호"
    ],
-   "observed_ship_labels": [],
-   "pages_checked": 5,
-   "booking_urls": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "★공지사항★",
+    "★블루호★",
+    "포세이돈호"
+   ],
+   "pages_checked": 28,
+   "booking_urls": [
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
    "errors": []
   },
   "friendho.com": {
@@ -313,6 +327,7 @@
     "프랜드2호",
     "송주호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "금땡이호",
@@ -551,7 +566,7 @@
   },
   "muchangpofishing.co.kr": {
    "status": "partial",
-   "url": "http://muchangpofishing.co.kr/index.php?mid=bk",
+   "url": "https://muchangpofishing.co.kr/index.php?mid=bk",
    "entries": 236,
    "boats": [
     "무창포 프로낚시",
@@ -573,6 +588,7 @@
     "무창포 프로낚시",
     "브이호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     ".",
     "★공지사항★",
@@ -611,6 +627,7 @@
    "missing_boats": [
     "빨강등대호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "빨강등대호(오전)",
     "빨강등대호(오후)",
@@ -703,9 +720,9 @@
    "errors": []
   },
   "kukjaenaksi.com": {
-   "status": "no_data",
+   "status": "ok",
    "url": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
-   "entries": 0,
+   "entries": 235,
    "boats": [
     "해피호(오전)",
     "해피호(오후)",
@@ -718,15 +735,14 @@
     "하나호": 971087,
     "부킹호": 716002
    },
-   "missing_boats": [
-    "해피호(오전)",
-    "해피호(오후)",
-    "하나호",
-    "부킹호"
-   ],
+   "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [],
-   "pages_checked": 1,
-   "booking_urls": [],
+   "pages_checked": 3,
+   "booking_urls": [
+    "https://www.kukjaenaksi.com/niabbs5m/doc/sub2_in2.htm?toYear=2026&toMonth=10",
+    "https://www.kukjaenaksi.com/niabbs5m/doc/sub2_in2.htm?toYear=2026&toMonth=11"
+   ],
    "errors": []
   },
   "emperorfishing.com": {
@@ -866,51 +882,33 @@
    ],
    "errors": []
   },
-  "xn--vk1b02l9xl9paj8p25p.kr": {
-   "status": "no_data",
-   "url": "http://xn--vk1b02l9xl9paj8p25p.kr/index.php?mid=bk",
-   "entries": 0,
-   "boats": [
-    "메이저호"
-   ],
-   "boat_ids": {
-    "메이저호": 80
-   },
-   "missing_boats": [
-    "메이저호"
-   ],
-   "observed_ship_labels": [
-    "010-4172-1383(이선장,사무장)",
-    "공지사항"
-   ],
-   "pages_checked": 27,
-   "booking_urls": [],
-   "errors": []
-  },
   "winner.thefishing.kr": {
    "status": "partial",
-   "url": "http://winner.thefishing.kr/",
-   "entries": 59,
+   "url": "https://winner.thefishing.kr/index.php?mid=bk",
+   "entries": 295,
    "boats": [
     "배짱호",
+    "뉴홀랜드호",
     "블랙호",
     "모데라토호",
     "깜보호",
+    "페가수스호",
     "조양호"
    ],
    "boat_ids": {
     "배짱호": 89,
+    "뉴홀랜드호": 313,
     "블랙호": 373,
     "모데라토호": 352,
     "깜보호": 368,
+    "페가수스호": 375,
     "조양호": 379
    },
    "missing_boats": [
-    "배짱호",
-    "블랙호",
-    "깜보호",
-    "조양호"
+    "뉴홀랜드호",
+    "블랙호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "깜보호_목지욱선장",
@@ -922,14 +920,14 @@
     "조양호_조양우선장",
     "페가수스호_조현길선장  신대식사무장"
    ],
-   "pages_checked": 13,
+   "pages_checked": 36,
    "booking_urls": [
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
@@ -939,15 +937,18 @@
   },
   "ochzeus.com": {
    "status": "ok",
-   "url": "http://www.ochzeus.com",
-   "entries": 59,
+   "url": "https://www.ochzeus.com/index.php?mid=bk",
+   "entries": 118,
    "boats": [
+    "메이저호",
     "제우스호"
    ],
    "boat_ids": {
+    "메이저호": 80,
     "제우스호": 85
    },
    "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "메이저호  010-4172-1383  (이선장,사무장)",
@@ -959,17 +960,17 @@
     "팀몬스터호  (우기선장,바니사무장)",
     "할리호  (보미선장,사무장)010-7581-4000"
    ],
-   "pages_checked": 18,
+   "pages_checked": 41,
    "booking_urls": [
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=0&sel=day",
@@ -998,15 +999,16 @@
     "뽀빠이호",
     "육소2호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 1,
    "booking_urls": [],
    "errors": []
   },
   "xn--9t4b11y99ab5f.kr": {
-   "status": "partial",
+   "status": "ok",
    "url": "http://xn--9t4b11y99ab5f.kr/",
-   "entries": 59,
+   "entries": 118,
    "boats": [
     "테티스호",
     "테티스"
@@ -1015,14 +1017,23 @@
     "테티스호": 94,
     "테티스": 356
    },
-   "missing_boats": [
-    "테티스호"
-   ],
+   "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "◈공지사항◈",
-    "테티스"
+    "갤럭시호",
+    "뉴천일호",
+    "블루포스호",
+    "짱가호",
+    "취소  미입금취소",
+    "킹마스터호",
+    "테티스",
+    "테티스호",
+    "피싱마린호",
+    "헤라호",
+    "힐링호"
    ],
-   "pages_checked": 11,
+   "pages_checked": 21,
    "booking_urls": [
     "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
@@ -1031,7 +1042,17 @@
     "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+    "http://xn--9t4b11y99ab5f.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -1066,24 +1087,29 @@
    "errors": []
   },
   "chongkakho.com": {
-   "status": "partial",
-   "url": "http://www.chongkakho.com/",
-   "entries": 146,
+   "status": "ok",
+   "url": "https://chongkakho.com/index.php?mid=bk",
+   "entries": 383,
    "boats": [
     "총각1호",
     "총각호",
+    "화니호",
     "호호호",
-    "장수호"
+    "지프로호",
+    "장수호",
+    "타이밍호"
    ],
    "boat_ids": {
     "총각1호": 92,
     "총각호": 93,
+    "화니호": 211,
     "호호호": 213,
-    "장수호": 228
+    "지프로호": 214,
+    "장수호": 228,
+    "타이밍호": 348
    },
-   "missing_boats": [
-    "총각1호"
-   ],
+   "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★  일일공지  ★",
     "장수호  홍선장(9인승)  오전반",
@@ -1098,16 +1124,16 @@
     "호호호(9인승)  오후반",
     "화니호  양희환(20인승)"
    ],
-   "pages_checked": 11,
+   "pages_checked": 36,
    "booking_urls": [
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://www.chongkakho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
   },
@@ -1126,6 +1152,7 @@
    "missing_boats": [
     "나이스호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 2,
    "booking_urls": [
@@ -1166,6 +1193,7 @@
    "missing_boats": [
     "마린스타1호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 5,
    "booking_urls": [
@@ -1192,6 +1220,7 @@
    "missing_boats": [
     "뉴일복호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 0,
    "booking_urls": [],
@@ -1304,6 +1333,7 @@
     "랜드마크호",
     "스피드호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★공지사항☆",
     "썬가드호",
@@ -1323,27 +1353,39 @@
    "errors": []
   },
   "xn--c20bm9by0le8h59d54l.com": {
-   "status": "no_data",
+   "status": "partial",
    "url": "http://xn--c20bm9by0le8h59d54l.com/",
-   "entries": 0,
+   "entries": 59,
    "boats": [
     "대물호",
-    "위더스호"
+    "위더스호",
+    "팀대물호"
    ],
    "boat_ids": {
     "대물호": 112,
-    "위더스호": 150
+    "위더스호": 150,
+    "팀대물호": 338
    },
    "missing_boats": [
     "대물호",
     "위더스호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "#공지사항#",
     "팀대물호"
    ],
    "pages_checked": 11,
-   "booking_urls": [],
+   "booking_urls": [
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
    "errors": []
   },
   "ddonggga.com": {
@@ -1359,6 +1401,7 @@
    "missing_boats": [
     "똥까호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 0,
    "booking_urls": [],
@@ -1399,6 +1442,7 @@
     "두드림호",
     "에이스호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지",
     "문일호",
@@ -1427,7 +1471,6 @@
     "레드피싱호",
     "명성호",
     "복성호2호",
-    "씨앤미호",
     "영남3호",
     "태성호",
     "평사호",
@@ -1437,7 +1480,6 @@
     "레드피싱호": 120,
     "명성호": 125,
     "복성호2호": 129,
-    "씨앤미호": 138,
     "영남3호": 144,
     "태성호": 162,
     "평사호": 165,
@@ -1447,12 +1489,12 @@
     "레드피싱호",
     "명성호",
     "복성호2호",
-    "씨앤미호",
     "영남3호",
     "태성호",
     "평사호",
     "해금강호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 0,
    "booking_urls": [],
@@ -1472,14 +1514,6 @@
     {
      "url": "http://aceho.net",
      "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://oc-ace.sunsang24.com/ship/schedule_fleet/202610",
-     "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://oc-ace.sunsang24.com/ship/schedule_fleet/202611",
-     "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
     }
    ]
   },
@@ -1543,56 +1577,39 @@
   },
   "thefishing.kr": {
    "status": "no_data",
-   "url": "https://thefishing.kr/site/site.php?uid=189&amp;type=5",
+   "url": "https://thefishing.kr/gallery/ship.php?wr_uid=144217",
    "entries": 0,
    "boats": [
-    "마운틴호",
-    "메가호",
     "반도피싱호",
     "이지스호",
     "일복호",
     "첼린저호",
-    "화니호",
-    "지프로호",
-    "핏불호",
     "20금강호",
     "영석호",
     "바다목장호",
-    "팀대물호",
     "효성무창포호"
    ],
    "boat_ids": {
-    "마운틴호": 123,
-    "메가호": 124,
     "반도피싱호": 127,
     "이지스호": 152,
     "일복호": 153,
     "첼린저호": 157,
-    "화니호": 211,
-    "지프로호": 214,
-    "핏불호": 286,
     "20금강호": 307,
     "영석호": 323,
     "바다목장호": 326,
-    "팀대물호": 338,
     "효성무창포호": 346
    },
    "missing_boats": [
-    "마운틴호",
-    "메가호",
     "반도피싱호",
     "이지스호",
     "일복호",
     "첼린저호",
-    "화니호",
-    "지프로호",
-    "핏불호",
     "20금강호",
     "영석호",
     "바다목장호",
-    "팀대물호",
     "효성무창포호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 7,
    "booking_urls": [],
@@ -1646,6 +1663,7 @@
    "missing_boats": [
     "성령7호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "뉴성령호   (성칠이선장)",
     "성령5호  (큰선장님)",
@@ -1677,6 +1695,7 @@
    "missing_boats": [
     "씨월드호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★공지★",
     "관리자메모",
@@ -1690,24 +1709,27 @@
   "yamujinfishing.com": {
    "status": "partial",
    "url": "http://www.yamujinfishing.com/index.php?mid=bk",
-   "entries": 236,
+   "entries": 295,
    "boats": [
     "럭셔리호",
     "야무진2호",
     "야무진호",
     "오션투어호",
-    "팀베테랑호"
+    "팀베테랑호",
+    "핏불호"
    ],
    "boat_ids": {
     "럭셔리호": 119,
     "야무진2호": 141,
     "야무진호": 142,
     "오션투어호": 146,
-    "팀베테랑호": 163
+    "팀베테랑호": 163,
+    "핏불호": 286
    },
    "missing_boats": [
     "팀베테랑호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "럭셔리호[용쥬르선장][추첨식]",
@@ -1808,6 +1830,7 @@
    "missing_boats": [
     "코리아호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "킹덤호"
@@ -1918,6 +1941,7 @@
    "missing_boats": [
     "한프로2호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지",
     "대천  한프로호  (삼두선장)"
@@ -1978,6 +2002,7 @@
    "missing_boats": [
     "베누스호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지사항",
     "베스트호",
@@ -2027,7 +2052,7 @@
   },
   "mobum.thefishing.kr": {
    "status": "partial",
-   "url": "http://mobum.thefishing.kr/",
+   "url": "https://mobum.thefishing.kr/index.php?mid=bk",
    "entries": 59,
    "boats": [
     "모범낚시호",
@@ -2040,17 +2065,18 @@
    "missing_boats": [
     "모범낚시호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "모범낚시호",
     "출조안내"
    ],
-   "pages_checked": 11,
+   "pages_checked": 27,
    "booking_urls": [
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
     "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
@@ -2101,6 +2127,7 @@
     "승주호": 175
    },
    "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "(신)블루오션호",
     "골드피싱(20)",
@@ -2119,14 +2146,183 @@
    ],
    "pages_checked": 11,
    "booking_urls": [
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=2956&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=2956&sel=day#list"
    ],
    "errors": []
   },
@@ -2163,17 +2359,13 @@
    "entries": 118,
    "boats": [
     "우리호",
-    "월드피싱호",
     "형제피싱호"
    ],
    "boat_ids": {
     "우리호": 181,
-    "월드피싱호": 182,
     "형제피싱호": 185
    },
-   "missing_boats": [
-    "월드피싱호"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "우리호",
     "형제피싱호"
@@ -2196,7 +2388,6 @@
    "url": "http://haesin.net",
    "entries": 295,
    "boats": [
-    "구라미끼호",
     "킹스타호",
     "판타지호",
     "해신1호",
@@ -2205,7 +2396,6 @@
     "해신7호"
    ],
    "boat_ids": {
-    "구라미끼호": 192,
     "킹스타호": 193,
     "판타지호": 194,
     "해신1호": 195,
@@ -2214,9 +2404,9 @@
     "해신7호": 198
    },
    "missing_boats": [
-    "구라미끼호",
     "해신3호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "2시간  쭈꾸미체험낚시-1",
     "2시간  쭈꾸미체험낚시-2",
@@ -2286,6 +2476,7 @@
    "missing_boats": [
     "해주호 (바다사랑 낚시펜션)"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 2,
    "booking_urls": [],
@@ -2434,17 +2625,15 @@
    "url": "https://010-9231-7011.kr/sunsang24/%ED%8F%AD%EB%B0%9C%EC%9D%80-%EC%95%84%EB%8B%88%EC%96%B4%EB%8F%84-%EA%B3%84%EC%86%8D-%EB%82%98%EC%98%A8%EB%8B%A4-%EA%B0%91%EC%98%A4%EC%A7%95%EC%96%B4-%EB%94%B0%EB%B0%95%EB%94%B0%EB%B0%95-%EC%86%90%EB%A7%9B-4/",
    "entries": 0,
    "boats": [
-    "천일호",
-    "페가수스호"
+    "천일호"
    ],
    "boat_ids": {
-    "천일호": 216,
-    "페가수스호": 375
+    "천일호": 216
    },
    "missing_boats": [
-    "천일호",
-    "페가수스호"
+    "천일호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 3,
    "booking_urls": [],
@@ -2456,23 +2645,31 @@
    ]
   },
   "mpoint.thefishing.kr": {
-   "status": "no_data",
-   "url": "http://mpoint.thefishing.kr/",
-   "entries": 0,
+   "status": "ok",
+   "url": "https://mpoint.thefishing.kr/index.php?mid=bk",
+   "entries": 59,
    "boats": [
     "포인트호"
    ],
    "boat_ids": {
     "포인트호": 219
    },
-   "missing_boats": [
-    "포인트호"
-   ],
+   "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "포인트피싱"
    ],
-   "pages_checked": 11,
-   "booking_urls": [],
+   "pages_checked": 27,
+   "booking_urls": [
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
    "errors": []
   },
   "sangrok.thefishing.kr": {
@@ -2518,6 +2715,7 @@
    "missing_boats": [
     "뉴아폴로호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "공지란;;",
     "뉴  아폴로호",
@@ -2586,6 +2784,7 @@
     "현대피싱호",
     "체이스호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     ".",
     "공지사항",
@@ -2620,6 +2819,7 @@
     "가즈아호",
     "해신호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 2,
    "booking_urls": [],
@@ -2646,6 +2846,7 @@
    "missing_boats": [
     "고스트호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     ",",
     "▣  공지사항  ▣",
@@ -2892,7 +3093,7 @@
    "errors": []
   },
   "blueseaho.com": {
-   "status": "no_data",
+   "status": "deferred_daily",
    "url": "http://www.blueseaho.com",
    "entries": 0,
    "boats": [
@@ -2904,15 +3105,13 @@
    "missing_boats": [
     "푸른바다테스호"
    ],
+   "deferred_boats": [
+    "푸른바다테스호"
+   ],
    "observed_ship_labels": [],
-   "pages_checked": 32,
+   "pages_checked": 3,
    "booking_urls": [],
-   "errors": [
-    {
-     "url": "http://www.blueseaho.com/reservation?year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=0&sel=day",
-     "error": "요청 날짜 이후 예약 표 없음"
-    }
-   ]
+   "errors": []
   },
   "xn--k1-x87k.kr": {
    "status": "ok",
@@ -2957,6 +3156,7 @@
    "missing_boats": [
     "영스타호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "원스타호"
    ],
@@ -3278,17 +3478,15 @@
    "url": "https://naksigo.com/boat/%EC%95%84%EB%A6%AC%EB%9E%911%ED%98%B8",
    "entries": 0,
    "boats": [
-    "아리랑1호",
-    "뉴홀랜드호"
+    "아리랑1호"
    ],
    "boat_ids": {
-    "아리랑1호": 274,
-    "뉴홀랜드호": 313
+    "아리랑1호": 274
    },
    "missing_boats": [
-    "아리랑1호",
-    "뉴홀랜드호"
+    "아리랑1호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "은진호"
    ],
@@ -3460,6 +3658,7 @@
    "missing_boats": [
     "뉴등대호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "해놈호",
     "협력선박"
@@ -3658,6 +3857,7 @@
    "missing_boats": [
     "푸르러호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 2,
    "booking_urls": [],
@@ -3841,6 +4041,7 @@
    "missing_boats": [
     "경영피싱호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "신조선  강팀호(20인승)강재원선장",
     "영암호9.77톤11인탑승강진원선장"
@@ -3997,6 +4198,7 @@
    "missing_boats": [
     "시실리2호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★공지사항☆",
     "썬가드호",
@@ -4072,6 +4274,7 @@
    "missing_boats": [
     "밥말리호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [],
    "pages_checked": 23,
    "booking_urls": [],
@@ -4132,37 +4335,6 @@
    ],
    "errors": []
   },
-  "onfishing.net": {
-   "status": "no_data",
-   "url": "https://onfishing.net/report/56358",
-   "entries": 0,
-   "boats": [
-    "타이밍호"
-   ],
-   "boat_ids": {
-    "타이밍호": 348
-   },
-   "missing_boats": [
-    "타이밍호"
-   ],
-   "observed_ship_labels": [
-    "★  일일공지  ★",
-    "장수호  홍선장(9인승)  오전반",
-    "장수호(9인승)  오후반",
-    "지프로호  지성민(22인승)",
-    "총각1호  김진태(18인승)",
-    "총각호  지선아(9인승)  오전반",
-    "총각호(9인승)  오후반",
-    "취소자",
-    "타이밍호  박주호(16인승)",
-    "호호호  김영덕(9인승)  오전반",
-    "호호호(9인승)  오후반",
-    "화니호  양희환(20인승)"
-   ],
-   "pages_checked": 11,
-   "booking_urls": [],
-   "errors": []
-  },
   "muchangpo.kr": {
    "status": "partial",
    "url": "https://www.muchangpo.kr/index.php?mid=bk",
@@ -4186,6 +4358,7 @@
    "missing_boats": [
     "이범호"
    ],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★공지사항★",
     "대박피싱호[김석철선장]",
@@ -4213,16 +4386,21 @@
   "sorafishing.com": {
    "status": "ok",
    "url": "http://www.sorafishing.com/index.php?mid=bk",
-   "entries": 118,
+   "entries": 235,
    "boats": [
     "뉴써니호",
-    "씨마호"
+    "씨마호",
+    "유진호",
+    "리무진 수도권 버스 출조"
    ],
    "boat_ids": {
     "뉴써니호": 345,
-    "씨마호": 363
+    "씨마호": 363,
+    "유진호": 971088,
+    "리무진 수도권 버스 출조": 971089
    },
    "missing_boats": [],
+   "deferred_boats": [],
    "observed_ship_labels": [
     "★공지사항★",
     "★알림판★",
@@ -4237,16 +4415,241 @@
    ],
    "pages_checked": 35,
    "booking_urls": [
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=0&sel=day"
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=2158&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=2158&sel=day#list"
    ],
    "errors": []
   },
@@ -4531,12 +4934,341 @@
     "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
    ],
    "errors": []
+  },
+  "ship.gomugomu.pro": {
+   "status": "deferred_daily",
+   "url": "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation",
+   "entries": 0,
+   "boats": [
+    "원피스호"
+   ],
+   "boat_ids": {
+    "원피스호": 31
+   },
+   "missing_boats": [
+    "원피스호"
+   ],
+   "deferred_boats": [
+    "원피스호"
+   ],
+   "pages_checked": 0,
+   "errors": []
+  },
+  "815fish.co.kr": {
+   "status": "ok",
+   "url": "https://www.815fish.co.kr/niabbs5/inc.php?inc=sub2&s=s",
+   "entries": 59,
+   "boats": [
+    "성주산호 (광복낚시)"
+   ],
+   "boat_ids": {
+    "성주산호 (광복낚시)": 5
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [],
+   "pages_checked": 3,
+   "booking_urls": [
+    "https://www.815fish.co.kr/niabbs5m/doc/sub2_in2.htm?toYear=2026&toMonth=10",
+    "https://www.815fish.co.kr/niabbs5m/doc/sub2_in2.htm?toYear=2026&toMonth=11"
+   ],
+   "errors": []
+  },
+  "djfishing.com": {
+   "status": "no_data",
+   "url": "https://www.djfishing.com/index.php?mid=bk",
+   "entries": 0,
+   "boats": [
+    "덕적호"
+   ],
+   "boat_ids": {
+    "덕적호": 60
+   },
+   "missing_boats": [
+    "덕적호"
+   ],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "고속정화인호(20인승)",
+    "시간낚시",
+    "우리바다호"
+   ],
+   "pages_checked": 19,
+   "booking_urls": [],
+   "errors": []
+  },
+  "xn--9y2bn0a278a2hhb2c6sc.kr": {
+   "status": "partial",
+   "url": "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "무창포힐링호"
+   ],
+   "boat_ids": {
+    "무창포힐링호": 88
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "◈공지사항◈",
+    "힐링호"
+   ],
+   "pages_checked": 27,
+   "booking_urls": [
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": [
+    {
+     "url": "https://xn--9y2bn0a278a2hhb2c6sc.kr/ https:/xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk",
+     "error": "HTTP Error 404: Not Found"
+    }
+   ]
+  },
+  "megaho.net": {
+   "status": "ok",
+   "url": "http://www.megaho.net/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "메가호"
+   ],
+   "boat_ids": {
+    "메가호": 124
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "메가호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "sangsangho.com": {
+   "status": "ok",
+   "url": "https://sangsangho.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "마운틴호"
+   ],
+   "boat_ids": {
+    "마운틴호": 123
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "공지  쭈꾸미/갑오징어",
+    "마운틴호",
+    "봄  왕쭈꾸미공지",
+    "왕백조기&부세조기  공지"
+   ],
+   "pages_checked": 30,
+   "booking_urls": [
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "seanme.thefishing.kr": {
+   "status": "ok",
+   "url": "https://seanme.thefishing.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "씨앤미호"
+   ],
+   "boat_ids": {
+    "씨앤미호": 138
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "씨앤미호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "xn--9y2b21onlp32ab1c.kr": {
+   "status": "ok",
+   "url": "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "힐링피싱호"
+   ],
+   "boat_ids": {
+    "힐링피싱호": 190
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "힐링피싱호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "bank.thefishing.kr": {
+   "status": "ok",
+   "url": "http://bank.thefishing.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "월드피싱호"
+   ],
+   "boat_ids": {
+    "월드피싱호": 182
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "월드피싱호"
+   ],
+   "pages_checked": 26,
+   "booking_urls": [
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "gulamiki.com": {
+   "status": "ok",
+   "url": "http://www.gulamiki.com/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "구라미끼호"
+   ],
+   "boat_ids": {
+    "구라미끼호": 192
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "구라미끼호",
+    "오션스타호"
+   ],
+   "pages_checked": 27,
+   "booking_urls": [
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "sinjindo.thefishing.kr": {
+   "status": "ok",
+   "url": "https://sinjindo.thefishing.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "은하호"
+   ],
+   "boat_ids": {
+    "은하호": 191
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "뉴용궁호",
+    "블랙홀2호",
+    "선양호",
+    "수덕호",
+    "은하호"
+   ],
+   "pages_checked": 30,
+   "booking_urls": [
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
+  },
+  "sinju.thefishing.kr": {
+   "status": "ok",
+   "url": "https://sinju.thefishing.kr/index.php?mid=bk",
+   "entries": 59,
+   "boats": [
+    "신주호"
+   ],
+   "boat_ids": {
+    "신주호": 212
+   },
+   "missing_boats": [],
+   "deferred_boats": [],
+   "observed_ship_labels": [
+    "신주호",
+    "오전  체험  낚시"
+   ],
+   "pages_checked": 28,
+   "booking_urls": [
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=0&sel=day",
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=0&sel=day"
+   ],
+   "errors": []
   }
  },
  "summary": {
-  "sites": 147,
-  "entries": 11052,
-  "collected_boats": 192,
-  "missing_boats": 89
+  "sites": 157,
+  "entries": 12821,
+  "collected_boats": 222,
+  "missing_boats": 68
  }
 }

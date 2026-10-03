@@ -8,7 +8,7 @@ import urllib.request
 import hashlib
 
 REPO = "sangju-hue/fishing"
-DATA_FILES = ("data/status.json", "data/status_homepages.json", "data/site_health.json")
+DATA_FILES = ("data/status.json", "data/status_homepages.json", "data/site_health.json", "data/site_health_sunsang24.json")
 BASE = os.path.dirname(os.path.abspath(__file__))
 TOKEN_FILE = os.path.join(BASE, ".github_token")
 
