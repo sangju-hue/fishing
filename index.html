@@ -185,6 +185,9 @@ function bookingUrl(boat,date=selectedDate){
   return BookingRoutes.forDate(raw,date);
 }
 function statusRow(boat,date=selectedDate){
+  if(boat.status_overrides&&boat.status_overrides[date]){
+    return [boat.status_overrides[date],null,null];
+  }
   const bid=String(boat.canonical_bid??boat.bid);
   for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
     if(info&&!info.stale){
