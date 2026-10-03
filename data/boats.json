@@ -2484,11 +2484,21 @@
       "name": "장보고호",
       "operator": "동문낚시",
       "region": "충남 보령시",
-      "port": "오천항",
+      "port": "남당항",
       "price": "",
       "capacity": null,
-      "channels": {},
-      "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준"
+      "channels": {
+        "sunsang24": "https://jangbogo.sunsang24.com/ship/schedule_fleet"
+      },
+      "notes": "[갈매기호·아침바다호·천해호·장보고호] 쭈갑·우럭·백조기·광어다운샷 (동문낚시, 출조 전문점). 2023년 선사 목록 기준",
+      "booking_names": [
+        "장보고호"
+      ],
+      "catalog_status": "booking_verified",
+      "catalog_checked_at": "2026-10-03T20:50:00+09:00",
+      "catalog_sources": [
+        "https://jangbogo.sunsang24.com/ship/schedule_fleet"
+      ]
     },
     {
       "bid": 155,
