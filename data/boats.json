@@ -583,7 +583,6 @@
       "tags": [],
       "manual": false,
       "bid": 25,
-      "operator": "무창포 총각피싱",
       "catalog_checked_at": "2026-10-02T22:41:47+09:00",
       "catalog_sources": [
         "http://www.ssfish.kr/",
@@ -1427,7 +1426,8 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%EC%B4%9D%EA%B0%811%ED%98%B8?id=2425",
         "https://chongkakho.com/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 93,
@@ -1452,7 +1452,8 @@
       "booking_names": [
         "총각호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 94,
@@ -3519,12 +3520,12 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%ED%99%94%EB%8B%88%ED%98%B8",
         "https://www.chongkakho.com/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 212,
       "name": "신주호",
-      "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "원산도 선촌항",
       "price": "",
@@ -3560,7 +3561,8 @@
       "booking_names": [
         "호호호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 214,
@@ -3578,7 +3580,8 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%EC%A7%80%ED%94%84%EB%A1%9C%ED%98%B8?id=5753",
         "https://www.chongkakho.com/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 215,
@@ -3608,7 +3611,6 @@
     {
       "bid": 216,
       "name": "천일호",
-      "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "무창포항",
       "price": "",
@@ -3625,7 +3627,6 @@
     {
       "bid": 218,
       "name": "엔조이호",
-      "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "무창포항",
       "price": "",
@@ -3649,7 +3650,6 @@
     {
       "bid": 219,
       "name": "포인트호",
-      "operator": "무창포 총각피싱",
       "region": "충남 보령시",
       "port": "무창포항",
       "price": "",
@@ -3836,7 +3836,8 @@
       "booking_names": [
         "장수호"
       ],
-      "catalog_status": "booking_verified"
+      "catalog_status": "booking_verified",
+      "company": "무창포 총각피싱"
     },
     {
       "capacity": null,
@@ -3845,8 +3846,7 @@
         "homepage": "https://seven.thefishing.kr/index.php?mid=bk"
       },
       "name": "세븐호",
-      "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
-      "operator": "무창포 총각피싱",
+      "notes": "어종 미확인(선상낚시).",
       "port": "무창포항",
       "price": "",
       "region": "충남 보령시",
@@ -6556,7 +6556,8 @@
       "catalog_sources": [
         "https://naksigo.com/boat/%ED%83%80%EC%9D%B4%EB%B0%8D%ED%98%B8",
         "https://www.chongkakho.com/index.php?mid=bk"
-      ]
+      ],
+      "company": "무창포 총각피싱"
     },
     {
       "bid": 349,
