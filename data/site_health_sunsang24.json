@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T13:09:08+09:00",
+ "checked_at": "2026-10-03T13:29:08+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -828,16 +828,20 @@
    "errors": []
   },
   "apollo": {
-   "status": "ok",
+   "status": "partial",
    "url": "https://apollo.sunsang24.com/ship/schedule_fleet",
    "entries": 59,
    "boats": [
-    "뉴아폴로호"
+    "뉴아폴로호",
+    "킹피싱호 (전화예약)"
    ],
    "boat_ids": {
-    "뉴아폴로호": 215
+    "뉴아폴로호": 215,
+    "킹피싱호 (전화예약)": 390
    },
-   "missing_boats": [],
+   "missing_boats": [
+    "킹피싱호 (전화예약)"
+   ],
    "observed_ship_labels": [
     "뉴아폴로호"
    ],
@@ -845,7 +849,11 @@
     "뉴아폴로호",
     "킹피싱호"
    ],
-   "excluded_fish": {},
+   "excluded_fish": {
+    "킹피싱호 (전화예약)": [
+     "시즌어종"
+    ]
+   },
    "capacity_rejected": [],
    "errors": []
   },
