@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T10:49:07+09:00",
+ "checked_at": "2026-10-03T11:09:07+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -1091,7 +1091,7 @@
   "haemaho": {
    "status": "ok",
    "url": "https://haemaho.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 57,
    "boats": [
     "해마호"
    ],
@@ -1105,7 +1105,11 @@
    "all_ship_labels": [
     "해마호"
    ],
-   "excluded_fish": {},
+   "excluded_fish": {
+    "해마호": [
+     "어종 미표기"
+    ]
+   },
    "capacity_rejected": [],
    "errors": []
   },
