@@ -793,10 +793,10 @@
    "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
    "entries": 59,
    "boats": [
-    "홍원항 베테랑호"
+    "홍원항 팀베테랑호"
    ],
    "boat_ids": {
-    "홍원항 베테랑호": 188
+    "홍원항 팀베테랑호": 188
    },
    "missing_boats": [],
    "observed_ship_labels": [
