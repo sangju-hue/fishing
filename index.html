@@ -505,7 +505,9 @@ document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListe
   renderMatrix();renderCards();renderAlertBar();
   $("#matrixWrap").scrollLeft=0;
 }));
-["#search","#portFilter"].forEach(id=>$(id).addEventListener(id==="#search"?"input":"change",()=>{renderMatrix();renderCards();renderDirectory()}));
+let searchT;
+$("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();renderDirectory()}, 250);});
+$("#portFilter").addEventListener("change",()=>{renderMatrix();renderCards();renderDirectory()});
 $("#alertButton").addEventListener("click",openTelegramAlert);
 const speciesTabs=[...document.querySelectorAll(".species-tab")];
 function selectSpecies(tab){
