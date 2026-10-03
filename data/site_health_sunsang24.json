@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T14:57:44+09:00",
+ "checked_at": "2026-10-03T15:14:11+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -131,7 +131,7 @@
   "doji": {
    "status": "ok",
    "url": "https://doji.sunsang24.com/ship/schedule_fleet",
-   "entries": 32,
+   "entries": 59,
    "boats": [
     "도지호"
    ],
@@ -198,7 +198,7 @@
   "cjh": {
    "status": "ok",
    "url": "https://cjh.sunsang24.com/ship/schedule_fleet",
-   "entries": 49,
+   "entries": 58,
    "boats": [
     "뉴패밀리호"
    ],
@@ -290,7 +290,7 @@
   "ansan": {
    "status": "ok",
    "url": "https://ansan.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
     "안산호"
    ],
@@ -431,7 +431,7 @@
   "roomi": {
    "status": "ok",
    "url": "https://roomi.sunsang24.com/ship/schedule_fleet",
-   "entries": 151,
+   "entries": 169,
    "boats": [
     "다온호",
     "루미호",
@@ -467,7 +467,7 @@
   "badahariho": {
    "status": "partial",
    "url": "https://badahariho.sunsang24.com/ship/schedule_fleet",
-   "entries": 162,
+   "entries": 177,
    "boats": [
     "바다하리호",
     "김대영호",
@@ -487,6 +487,7 @@
     "김대영호",
     "만수르호",
     "바다하리호",
+    "아리울1호",
     "아리울2호",
     "어비스호",
     "에프원호"
@@ -543,7 +544,7 @@
   "vtrfishing": {
    "status": "ok",
    "url": "https://vtrfishing.sunsang24.com/ship/schedule_fleet",
-   "entries": 146,
+   "entries": 147,
    "boats": [
     "베테랑호",
     "가디언호",
@@ -632,7 +633,7 @@
   "ddonggga": {
    "status": "ok",
    "url": "https://ddonggga.sunsang24.com/ship/schedule_fleet",
-   "entries": 51,
+   "entries": 59,
    "boats": [
     "똥까호"
    ],
@@ -860,9 +861,9 @@
    "errors": []
   },
   "ocpro": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://ocpro.sunsang24.com/ship/schedule_fleet",
-   "entries": 118,
+   "entries": 177,
    "boats": [
     "비바호",
     "가즈아호",
@@ -873,12 +874,11 @@
     "가즈아호": 231,
     "오천 프로낚시": 340
    },
-   "missing_boats": [
-    "오천 프로낚시"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "가즈아호",
-    "비바호"
+    "비바호",
+    "오천 프로낚시"
    ],
    "all_ship_labels": [
     "가즈아호",
@@ -938,7 +938,7 @@
   "muldori": {
    "status": "ok",
    "url": "https://muldori.sunsang24.com/ship/schedule_fleet",
-   "entries": 57,
+   "entries": 59,
    "boats": [
     "물돌이호"
    ],
@@ -984,7 +984,7 @@
   "ebada": {
    "status": "partial",
    "url": "https://ebada.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 69,
    "boats": [
     "이바다호",
     "이바다낚시",
@@ -996,10 +996,10 @@
     "LH하우스": 407
    },
    "missing_boats": [
-    "이바다낚시",
-    "LH하우스"
+    "이바다낚시"
    ],
    "observed_ship_labels": [
+    "LH하우스",
     "이바다호",
     "해모수호"
    ],
@@ -1038,20 +1038,16 @@
    "errors": []
   },
   "keoyang": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://keoyang.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
-    "거양호",
-    "오천거양호"
+    "거양호"
    ],
    "boat_ids": {
-    "거양호": 241,
-    "오천거양호": 295
+    "거양호": 241
    },
-   "missing_boats": [
-    "오천거양호"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "거양호"
    ],
@@ -1094,7 +1090,7 @@
   "fisherman": {
    "status": "ok",
    "url": "https://fisherman.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
     "어쩌다어부호"
    ],
@@ -1232,7 +1228,7 @@
   "viking": {
    "status": "ok",
    "url": "https://viking.sunsang24.com/ship/schedule_fleet",
-   "entries": 57,
+   "entries": 59,
    "boats": [
     "바이킹호"
    ],
@@ -1412,7 +1408,7 @@
   "mansour": {
    "status": "ok",
    "url": "https://mansour.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 59,
    "boats": [
     "만수르호"
    ],
@@ -1424,6 +1420,7 @@
     "김대영호",
     "만수르호",
     "바다하리호",
+    "아리울1호",
     "아리울2호",
     "어비스호",
     "에프원호"
@@ -1449,7 +1446,7 @@
   "hitfleet": {
    "status": "ok",
    "url": "https://hitfleet.sunsang24.com/ship/schedule_fleet",
-   "entries": 69,
+   "entries": 118,
    "boats": [
     "에프원호",
     "아리울2호"
@@ -1463,6 +1460,7 @@
     "김대영호",
     "만수르호",
     "바다하리호",
+    "아리울1호",
     "아리울2호",
     "어비스호",
     "에프원호"
@@ -1490,22 +1488,21 @@
    "errors": []
   },
   "ariul": {
-   "status": "no_data",
+   "status": "ok",
    "url": "https://ariul.sunsang24.com/ship/schedule_fleet",
-   "entries": 0,
+   "entries": 59,
    "boats": [
     "아리울1호"
    ],
    "boat_ids": {
     "아리울1호": 411
    },
-   "missing_boats": [
-    "아리울1호"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "김대영호",
     "만수르호",
     "바다하리호",
+    "아리울1호",
     "아리울2호",
     "어비스호",
     "에프원호"
