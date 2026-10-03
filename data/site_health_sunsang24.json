@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-03T14:09:10+09:00",
+ "checked_at": "2026-10-03T14:40:56+09:00",
  "queried_range": {
   "from": "2026-10-03",
   "to": "2026-11-30"
@@ -1292,13 +1292,15 @@
    "errors": []
   },
   "nurifish": {
-   "status": "no_data",
+   "status": "partial",
    "url": "https://nurifish.sunsang24.com/ship/schedule_fleet",
-   "entries": 0,
+   "entries": 30,
    "boats": [
+    "뉴바이킹호",
     "누리호"
    ],
    "boat_ids": {
+    "뉴바이킹호": 257,
     "누리호": 331
    },
    "missing_boats": [
