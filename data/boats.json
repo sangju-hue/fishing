@@ -240,6 +240,28 @@
       "catalog_status": "booking_verified"
     },
     {
+      "bid": 136,
+      "name": "썬가드호",
+      "operator": "스피드피싱",
+      "company": "스피드피싱",
+      "region": "충남 보령시",
+      "port": "오천항",
+      "price": "",
+      "capacity": null,
+      "channels": {
+        "homepage": "http://ospeed.kr/index.php?mid=bk"
+      },
+      "notes": "사용자 요청으로 스피드피싱 공식 예약표에서 확인 후 명부에 복구.",
+      "catalog_checked_at": "2026-10-03T22:23:02+09:00",
+      "catalog_sources": [
+        "http://ospeed.kr/index.php?mid=bk"
+      ],
+      "booking_names": [
+        "썬가드호"
+      ],
+      "catalog_status": "booking_verified"
+    },
+    {
       "name": "시티맨호",
       "operator": "나르샤호",
       "port": "대천항 (보령시 대천항로 332)",
@@ -8048,5 +8070,5 @@
       "catalog_checked_at": "2026-10-03"
     }
   ],
-  "updated_at": "2026-10-03T22:13:46+09:00"
+  "updated_at": "2026-10-03T22:23:02+09:00"
 }
