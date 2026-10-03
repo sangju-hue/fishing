@@ -53,8 +53,6 @@ def parse_month(html, yyyymm, include_other_fish=False):
         ship = unescape(re.sub(r'<[^>]+>', '', sm.group(1))).strip() if sm else None
         fm = re.search(r'<div id="fish">(.*?)</div>', tr, re.S)
         fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
-        if not include_other_fish and not any(k in fish for k in JJUKKUMI):
-            continue
         sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
         sno = sno_m.group(1) if sno_m else None
         rm = re.search(r'<li class="remain"(.*?)</li>', tr, re.S)
@@ -74,6 +72,8 @@ def parse_month(html, yyyymm, include_other_fish=False):
                     status = "full"
                 elif "점검" in cell:
                     status = "maintenance"
+        if not include_other_fish and not any(k in fish for k in JJUKKUMI) and status not in ("cancelled","maintenance"):
+            continue
         out.setdefault(sdate, []).append((ship, fish, status, remaining, sno))
     return out
 
@@ -90,8 +90,6 @@ def parse_simple_list(html, yyyymm, ship_name):
         sdate = dm.group(1)
         fm = re.search(r'<div id="fish">(.*?)</div>', tr, re.S)
         fish = re.sub(r"<[^>]+>", "", fm.group(1)).strip() if fm else ""
-        if not any(k in fish for k in JJUKKUMI):
-            continue
         status, remaining = "unknown", None
         sno_m = re.search(r'data-schedule_no="(\d+)"', tr)
         sno = sno_m.group(1) if sno_m else None
@@ -108,6 +106,8 @@ def parse_simple_list(html, yyyymm, ship_name):
                 status = "full"
             elif "점검" in tr:
                 status = "maintenance"
+        if not any(k in fish for k in JJUKKUMI) and status not in ("cancelled","maintenance"):
+            continue
         out.setdefault(sdate, []).append((ship_name, fish, status, remaining, sno))
     return out
 
@@ -183,7 +183,7 @@ def main():
                         if trip[0]:all_labels.add(trip[0])
                         name=match_boat(trip[0],names,aliases)
                         if name and not any(k in trip[1] for k in JJUKKUMI):excluded_fish.setdefault(name,set()).add(trip[1] or '어종 미표기')
-                parsed={ds:[t for t in trips if any(k in t[1] for k in JJUKKUMI)] for ds,trips in all_trips.items()}
+                parsed={ds:[t for t in trips if any(k in t[1] for k in JJUKKUMI) or t[2] in ("cancelled","maintenance")] for ds,trips in all_trips.items()}
                 matched={match_boat(t[0],names,aliases) for trips in parsed.values() for t in trips}
                 if any(name not in matched for name in names):
                     simple_url = f'https://{sub}.sunsang24.com/ship/schedule_fleet_simple/{ym}'

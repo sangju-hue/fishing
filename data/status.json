@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-03T14:40:56+09:00",
+ "updated_at": "2026-10-03T14:43:14+09:00",
  "dates": {
   "2026-10-02": {
    "포인트호": {
@@ -1153,7 +1153,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1566867",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584866",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-04": {
@@ -1812,7 +1820,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1566868",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584912",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-05": {
@@ -2473,7 +2489,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1647025",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584913",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-06": {
@@ -3134,7 +3158,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650350",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584914",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-07": {
@@ -3793,7 +3825,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650351",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584915",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-08": {
@@ -4445,7 +4485,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650352",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584916",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-09": {
@@ -5091,7 +5139,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1568034",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584917",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-10": {
@@ -5736,7 +5792,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1578623",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584918",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-11": {
@@ -6382,7 +6446,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650353",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584919",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-12": {
@@ -7016,7 +7088,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650354",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584920",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-13": {
@@ -7639,7 +7719,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650355",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584921",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-14": {
@@ -8271,7 +8359,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650356",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584922",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-15": {
@@ -8918,7 +9014,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650357",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584923",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-16": {
@@ -9574,7 +9678,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650358",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584924",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-17": {
@@ -10219,7 +10331,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1568020",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584867",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-18": {
@@ -10864,7 +10984,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1616425",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584925",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-19": {
@@ -11520,7 +11648,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650359",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584926",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-20": {
@@ -12176,7 +12312,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650360",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584927",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-21": {
@@ -12840,7 +12984,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650361",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584928",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-22": {
@@ -13496,7 +13648,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650362",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584929",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-23": {
@@ -14161,7 +14321,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650363",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584930",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-24": {
@@ -14808,7 +14976,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1569242",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584931",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-25": {
@@ -15439,7 +15615,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650364",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584932",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-26": {
@@ -16070,7 +16254,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650365",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584933",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-27": {
@@ -16702,7 +16894,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650366",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584934",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-28": {
@@ -17326,7 +17526,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650367",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584935",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-29": {
@@ -17957,7 +18165,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650368",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584936",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-30": {
@@ -18603,7 +18819,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650369",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584937",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-31": {
@@ -19242,7 +19466,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1569241",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "누리호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584938",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-11-01": {
@@ -19865,7 +20097,7 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1616426",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-11-02": {
@@ -38042,7 +38274,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1566867",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584866",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-04": {
@@ -38689,7 +38929,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1566868",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584912",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-05": {
@@ -39338,7 +39586,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1647025",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584913",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-06": {
@@ -39987,7 +40243,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650350",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584914",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-07": {
@@ -40634,7 +40898,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650351",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584915",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-08": {
@@ -41274,7 +41546,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650352",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584916",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-09": {
@@ -41914,7 +42194,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1568034",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584917",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-10": {
@@ -42553,7 +42841,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1578623",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584918",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-11": {
@@ -43193,7 +43489,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650353",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584919",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-12": {
@@ -43821,7 +44125,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650354",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584920",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-13": {
@@ -44438,7 +44750,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650355",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584921",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-14": {
@@ -45064,7 +45384,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650356",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584922",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-15": {
@@ -45705,7 +46033,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650357",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584923",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-16": {
@@ -46355,7 +46691,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650358",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584924",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-17": {
@@ -46994,7 +47338,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1568020",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584867",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-18": {
@@ -47633,7 +47985,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1616425",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584925",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-19": {
@@ -48283,7 +48643,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650359",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584926",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-20": {
@@ -48933,7 +49301,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650360",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584927",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-21": {
@@ -49591,7 +49967,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650361",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584928",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-22": {
@@ -50241,7 +50625,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650362",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584929",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-23": {
@@ -50900,7 +51292,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650363",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584930",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-24": {
@@ -51541,7 +51941,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1569242",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584931",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-25": {
@@ -52166,7 +52574,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650364",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584932",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-26": {
@@ -52791,7 +53207,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650365",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584933",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-27": {
@@ -53417,7 +53841,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650366",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584934",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-28": {
@@ -54035,7 +54467,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650367",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584935",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-29": {
@@ -54660,7 +55100,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650368",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584936",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-30": {
@@ -55300,7 +55748,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1650369",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584937",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-10-31": {
@@ -55933,7 +56389,15 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1569241",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
+   },
+   "331": {
+    "status": "cancelled",
+    "remaining": 0,
+    "boat_id": 331,
+    "source": "sunsang24",
+    "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1584938",
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-11-01": {
@@ -56556,7 +57020,7 @@
     "boat_id": 257,
     "source": "sunsang24",
     "source_url": "https://nurifish.sunsang24.com/mypage/reservation_ready/1616426",
-    "checked_at": "2026-10-03T14:40:56+09:00"
+    "checked_at": "2026-10-03T14:43:14+09:00"
    }
   },
   "2026-11-02": {
