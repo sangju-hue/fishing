@@ -1,1090 +1,1036 @@
 {
-  "checked_at": "2026-10-03T09:06:25+09:00",
-  "summary": {
-    "수집 확인": 35,
-    "추가 확인 필요": 87,
-    "개별 날짜 조회 보류": 1
+ "checked_at": "2026-10-03T09:06:25+09:00",
+ "summary": {
+  "수집 확인": 35,
+  "추가 확인 필요": 81,
+  "개별 날짜 조회 보류": 1
+ },
+ "boats": [
+  {
+   "bid": 5,
+   "name": "성주산호 (광복낚시)",
+   "port": "남항유어선부두",
+   "homepage": "https://www.815fish.co.kr/niabbs5/inc.php?inc=sub2&s=s",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
   },
-  "boats": [
-    {
-      "bid": 5,
-      "name": "성주산호 (광복낚시)",
-      "port": "남항유어선부두",
-      "homepage": "https://www.815fish.co.kr/niabbs5/inc.php?inc=sub2&s=s",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 10,
-      "name": "뉴승진호",
-      "port": "영흥도 진두항",
-      "homepage": "https://www.yhseaking.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 17,
-      "name": "프랜드호 (프랜드피싱)",
-      "port": "오천항",
-      "homepage": "http://www.friendho.com/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 18,
-      "name": "블루호",
-      "port": "오천항",
-      "homepage": "https://www.bluefishing.asia/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 26,
-      "name": "무창포 세훈낚시",
-      "port": "무창포항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 27,
-      "name": "무창포 프로낚시",
-      "port": "무창포항",
-      "homepage": "https://muchangpofishing.co.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 30,
-      "name": "뉴패밀리호",
-      "port": "마검포항",
-      "homepage": null,
-      "sunsang24": "https://cjh.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 31,
-      "name": "원피스호",
-      "port": "구매항",
-      "homepage": "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "개별 날짜 조회 보류"
-    },
-    {
-      "bid": 33,
-      "name": "하늘에펜션 3GO 패키지",
-      "port": "가경주항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 42,
-      "name": "빨강등대호",
-      "port": "오이도",
-      "homepage": "http://redlight.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 45,
-      "name": "돈지호",
-      "port": "전곡항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 49,
-      "name": "해성호",
-      "port": "전곡항",
-      "homepage": null,
-      "sunsang24": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 60,
-      "name": "덕적호",
-      "port": "남항유어선부두",
-      "homepage": "https://www.djfishing.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 61,
-      "name": "은아호",
-      "port": "남항유어선부두",
-      "homepage": null,
-      "sunsang24": "https://bluefc.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 62,
-      "name": "해피호(오전)",
-      "port": "남항유어선부두",
-      "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 74,
-      "name": "오렌지호",
-      "port": "비응항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 75,
-      "name": "해동호",
-      "port": "야미도항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 80,
-      "name": "메이저호",
-      "port": "대천항",
-      "homepage": "https://www.ochzeus.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 82,
-      "name": "아이언호",
-      "port": "대천항",
-      "homepage": null,
-      "sunsang24": "https://iron.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 83,
-      "name": "어복킹선단",
-      "port": "대천항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 88,
-      "name": "무창포힐링호",
-      "port": "무창포항",
-      "homepage": "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 89,
-      "name": "배짱호",
-      "port": "무창포항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 92,
-      "name": "총각1호",
-      "port": "무창포항",
-      "homepage": "https://chongkakho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 94,
-      "name": "테티스호",
-      "port": "무창포항",
-      "homepage": "http://xn--9t4b11y99ab5f.kr/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 96,
-      "name": "K-1투어호",
-      "port": "오천항",
-      "homepage": "http://spdman7.fishmap.kr",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 103,
-      "name": "나이스호",
-      "port": "오천항",
-      "homepage": "http://www.vinaho.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 110,
-      "name": "뉴일복호",
-      "port": "오천항",
-      "homepage": "http://www.xn--pn3bn6qm0l.kr",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 112,
-      "name": "대물호",
-      "port": "오천항",
-      "homepage": "http://xn--c20bm9by0le8h59d54l.com/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 115,
-      "name": "두드림호",
-      "port": "오천항",
-      "homepage": "https://aceho.thefishing.kr/index.php?mid=gall",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 116,
-      "name": "똥까호",
-      "port": "오천항",
-      "homepage": "http://www.ddonggga.com",
-      "sunsang24": "https://ddonggga.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 120,
-      "name": "레드피싱호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 122,
-      "name": "마린스타1호",
-      "port": "오천항",
-      "homepage": "http://www.boryeongharbor.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 123,
-      "name": "마운틴호",
-      "port": "오천항",
-      "homepage": "https://sangsangho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 124,
-      "name": "메가호",
-      "port": "오천항",
-      "homepage": "http://www.megaho.net/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 125,
-      "name": "명성호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 127,
-      "name": "반도피싱호",
-      "port": "오천항",
-      "homepage": "https://thefishing.kr/gallery/ship.php?wr_uid=144217",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 129,
-      "name": "복성호2호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 131,
-      "name": "뽀빠이호",
-      "port": "오천항",
-      "homepage": "http://spdman7.fishmap.kr",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 133,
-      "name": "성령7호",
-      "port": "오천항",
-      "homepage": "http://www.sungryungho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 138,
-      "name": "씨앤미호",
-      "port": "오천항",
-      "homepage": "https://seanme.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 139,
-      "name": "씨월드호",
-      "port": "오천항",
-      "homepage": "http://www.nfishing.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 143,
-      "name": "에이스호",
-      "port": "오천항",
-      "homepage": "https://aceho.thefishing.kr/index.php?mid=gall",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 144,
-      "name": "영남3호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 150,
-      "name": "위더스호",
-      "port": "오천항",
-      "homepage": "http://xn--c20bm9by0le8h59d54l.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 151,
-      "name": "육소2호",
-      "port": "오천항",
-      "homepage": "http://spdman7.fishmap.kr",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 152,
-      "name": "이지스호",
-      "port": "오천항",
-      "homepage": "https://thefishing.kr/reservation/new.php?uid=5970&amp;type=3",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 153,
-      "name": "일복호",
-      "port": "오천항",
-      "homepage": "https://thefishing.kr/gallery/list.php?wr_uid=1836690",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 154,
-      "name": "장보고호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 155,
-      "name": "정선호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 157,
-      "name": "첼린저호",
-      "port": "오천항",
-      "homepage": "https://thefishing.kr/reservation/list.php?uid=1511&amp;type=3",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 159,
-      "name": "코리아호",
-      "port": "오천항",
-      "homepage": "http://www.kingdomfish.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 162,
-      "name": "태성호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 163,
-      "name": "팀베테랑호",
-      "port": "오천항",
-      "homepage": "http://www.yamujinfishing.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 165,
-      "name": "평사호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 168,
-      "name": "한프로2호",
-      "port": "오천항",
-      "homepage": "http://hanprofishing.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 170,
-      "name": "해금강호",
-      "port": "오천항",
-      "homepage": "http://www.aceho.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 172,
-      "name": "헤라호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 178,
-      "name": "모범낚시호",
-      "port": "홍원항",
-      "homepage": "https://mobum.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 182,
-      "name": "월드피싱호",
-      "port": "홍원항",
-      "homepage": "http://bank.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 188,
-      "name": "홍원항 베테랑호",
-      "port": "홍원항",
-      "homepage": null,
-      "sunsang24": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 190,
-      "name": "힐링피싱호",
-      "port": "마검포항",
-      "homepage": "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 191,
-      "name": "은하호",
-      "port": "안흥외항",
-      "homepage": "https://sinjindo.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 192,
-      "name": "구라미끼호",
-      "port": "백사장항",
-      "homepage": "http://www.gulamiki.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 197,
-      "name": "해신3호",
-      "port": "백사장항",
-      "homepage": "http://haesin.net",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 203,
-      "name": "해주호 (바다사랑 낚시펜션)",
-      "port": "항구 확인 중",
-      "homepage": "https://www.qkektkfkd.com/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 210,
-      "name": "전곡항해적단",
-      "port": "전곡항",
-      "homepage": null,
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 211,
-      "name": "화니호",
-      "port": "무창포항",
-      "homepage": "https://www.chongkakho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 212,
-      "name": "신주호",
-      "port": "원산도 선촌항",
-      "homepage": "https://sinju.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 214,
-      "name": "지프로호",
-      "port": "무창포항",
-      "homepage": "https://www.chongkakho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 215,
-      "name": "뉴아폴로호",
-      "port": "무창포항",
-      "homepage": "http://kingfishing.net/index.php?mid=bk",
-      "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 216,
-      "name": "천일호",
-      "port": "무창포항",
-      "homepage": "https://010-9231-7011.kr/sunsang24/%ED%8F%AD%EB%B0%9C%EC%9D%80-%EC%95%84%EB%8B%88%EC%96%B4%EB%8F%84-%EA%B3%84%EC%86%8D-%EB%82%98%EC%98%A8%EB%8B%A4-%EA%B0%91%EC%98%A4%EC%A7%95%EC%96%B4-%EB%94%B0%EB%B0%95%EB%94%B0%EB%B0%95-%EC%86%90%EB%A7%9B-4/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 219,
-      "name": "포인트호",
-      "port": "무창포항",
-      "homepage": "https://mpoint.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 226,
-      "name": "킹덤호",
-      "port": "무창포항",
-      "homepage": "http://www.muchangpofishing.com/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 227,
-      "name": "고스트호",
-      "port": "무창포항",
-      "homepage": "https://www.bravofishing.kr/index.php?mid=bk&amp;PA_N_UID=5950",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 233,
-      "name": "자이언트호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "https://rkclgh.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 234,
-      "name": "푸른바다테스호",
-      "port": "오천항",
-      "homepage": "http://www.blueseaho.com",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 261,
-      "name": "블루피싱, 블루호",
-      "port": "오천항",
-      "homepage": "http://www.bluefishing.asia/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 264,
-      "name": "싸부호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "http://ssabu.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 274,
-      "name": "아리랑1호",
-      "port": "오천항",
-      "homepage": "https://naksigo.com/boat/%EC%95%84%EB%A6%AC%EB%9E%911%ED%98%B8",
-      "sunsang24": "https://arirang.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 279,
-      "name": "뉴등대호",
-      "port": "오천항",
-      "homepage": "https://www.lightho.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 281,
-      "name": "베누스호",
-      "port": "오천항",
-      "homepage": "http://www.poseidonho.com/?tviuid=66817533",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 286,
-      "name": "핏불호",
-      "port": "오천항",
-      "homepage": "http://www.yamujinfishing.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 288,
-      "name": "프랜드2호",
-      "port": "오천항",
-      "homepage": "http://www.friendho.com/index.php?mid=bk&amp;year=2026&amp;month=08&amp;day=01",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 295,
-      "name": "오천거양호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "http://keoyang.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 304,
-      "name": "푸르러호",
-      "port": "오천항",
-      "homepage": "https://www.fishapp.co.kr/pt/fish/fish_dtl?id=G0217574WB",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 307,
-      "name": "20금강호",
-      "port": "영흥도 진두항",
-      "homepage": "https://thefishing.kr/reservation/list.php?uid=1839&amp;type=3",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 313,
-      "name": "뉴홀랜드호",
-      "port": "오천항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 315,
-      "name": "경영피싱호",
-      "port": "영흥도 진두항",
-      "homepage": "https://fishtoday.kr/comp/%EC%98%81%ED%9D%A5%EB%8F%84%20%EA%B2%BD%EC%98%81%EB%B0%B0%EB%82%9A%EC%8B%9C",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 323,
-      "name": "영석호",
-      "port": "영흥도 진두항",
-      "homepage": "https://thefishing.kr/reservation/list.php?uid=3346",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 326,
-      "name": "바다목장호",
-      "port": "오천항",
-      "homepage": "https://thefishing.kr/gallery/ship.php?wr_uid=325125",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 327,
-      "name": "송주호",
-      "port": "오천항",
-      "homepage": "http://www.friendho.com/index.php?mid=bk&amp;tviuid=69417700",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 329,
-      "name": "영스타호",
-      "port": "영흥도 진두항",
-      "homepage": "http://www.paradiseho.com/index.php?mid=bk&amp;year=2027&amp;month=04&amp;day=25&amp;mode=list&amp;won=1&amp;PA_N_UID=0&amp;sel=day",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 330,
-      "name": "시실리2호",
-      "port": "오천항",
-      "homepage": "http://xn--oy2bo3o8ybmwrcnh.kr/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 331,
-      "name": "누리호",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "https://nurifish.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 333,
-      "name": "블랙호",
-      "port": "오천항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 335,
-      "name": "밥말리호",
-      "port": "오천항",
-      "homepage": "https://bobmarleyho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 338,
-      "name": "팀대물호",
-      "port": "오천항",
-      "homepage": "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 340,
-      "name": "오천 프로낚시",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "https://ocpro.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 342,
-      "name": "승리호",
-      "port": "무창포항",
-      "homepage": null,
-      "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 346,
-      "name": "효성무창포호",
-      "port": "무창포항",
-      "homepage": "https://thefishing.kr/bus/south.php?uid=1849&amp;type=3&amp;page=6",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 348,
-      "name": "타이밍호",
-      "port": "무창포항",
-      "homepage": "https://www.chongkakho.com/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 358,
-      "name": "현대피싱호",
-      "port": "무창포항",
-      "homepage": "http://www.muchangpofishing.com/index.php?mid=best&amp;mode=view&amp;wr_uid=1646412",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 368,
-      "name": "깜보호",
-      "port": "무창포항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 371,
-      "name": "이범호",
-      "port": "무창포항",
-      "homepage": "http://www.muchangpo.kr/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 372,
-      "name": "해신호",
-      "port": "무창포항",
-      "homepage": "https://innak.kr/bbs/board.php?bo_table=D03_2021&amp;wr_id=42432",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 373,
-      "name": "블랙호",
-      "port": "무창포항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 375,
-      "name": "페가수스호",
-      "port": "무창포항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 379,
-      "name": "조양호",
-      "port": "무창포항",
-      "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 381,
-      "name": "체이스호",
-      "port": "무창포항",
-      "homepage": "http://www.muchangpofishing.com/",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 384,
-      "name": "브이호",
-      "port": "무창포항",
-      "homepage": "https://muchangpofishing.co.kr/index.php?mid=bk",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 390,
-      "name": "킹피싱호",
-      "port": "무창포항",
-      "homepage": null,
-      "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 405,
-      "name": "원조낚시",
-      "port": "홍원항",
-      "homepage": null,
-      "sunsang24": "https://wonjofishing.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 406,
-      "name": "이바다낚시",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 407,
-      "name": "LH하우스",
-      "port": "오천항",
-      "homepage": null,
-      "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 411,
-      "name": "아리울1호",
-      "port": "비응항",
-      "homepage": null,
-      "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 413,
-      "name": "히트피싱",
-      "port": "비응항",
-      "homepage": null,
-      "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 416,
-      "name": "오드리호",
-      "port": "야미도항",
-      "homepage": null,
-      "sunsang24": "https://af.sunsang24.com/ship/schedule_fleet",
-      "naver_searched": true,
-      "result": "추가 확인 필요"
-    },
-    {
-      "bid": 767704,
-      "name": "해피호(오후)",
-      "port": "남항유어선부두",
-      "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 971087,
-      "name": "하나호",
-      "port": "남항유어선부두",
-      "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    },
-    {
-      "bid": 716002,
-      "name": "부킹호",
-      "port": "남항유어선부두",
-      "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
-      "sunsang24": null,
-      "naver_searched": true,
-      "result": "수집 확인"
-    }
-  ]
+  {
+   "bid": 10,
+   "name": "뉴승진호",
+   "port": "영흥도 진두항",
+   "homepage": "https://www.yhseaking.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 17,
+   "name": "프랜드호 (프랜드피싱)",
+   "port": "오천항",
+   "homepage": "http://www.friendho.com/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 18,
+   "name": "블루호",
+   "port": "오천항",
+   "homepage": "https://www.bluefishing.asia/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 26,
+   "name": "무창포 세훈낚시",
+   "port": "무창포항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 27,
+   "name": "무창포 프로낚시",
+   "port": "무창포항",
+   "homepage": "https://muchangpofishing.co.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 30,
+   "name": "뉴패밀리호",
+   "port": "마검포항",
+   "homepage": null,
+   "sunsang24": "https://cjh.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 31,
+   "name": "원피스호",
+   "port": "구매항",
+   "homepage": "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "개별 날짜 조회 보류"
+  },
+  {
+   "bid": 33,
+   "name": "하늘에펜션 3GO 패키지",
+   "port": "가경주항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 42,
+   "name": "빨강등대호",
+   "port": "오이도",
+   "homepage": "http://redlight.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 45,
+   "name": "돈지호",
+   "port": "전곡항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 49,
+   "name": "해성호",
+   "port": "전곡항",
+   "homepage": null,
+   "sunsang24": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 60,
+   "name": "덕적호",
+   "port": "남항유어선부두",
+   "homepage": "https://www.djfishing.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 61,
+   "name": "은아호",
+   "port": "남항유어선부두",
+   "homepage": null,
+   "sunsang24": "https://bluefc.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 62,
+   "name": "해피호(오전)",
+   "port": "남항유어선부두",
+   "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 74,
+   "name": "오렌지호",
+   "port": "비응항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 75,
+   "name": "해동호",
+   "port": "야미도항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 80,
+   "name": "메이저호",
+   "port": "대천항",
+   "homepage": "https://www.ochzeus.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 82,
+   "name": "아이언호",
+   "port": "대천항",
+   "homepage": null,
+   "sunsang24": "https://iron.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 83,
+   "name": "어복킹선단",
+   "port": "대천항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 88,
+   "name": "무창포힐링호",
+   "port": "무창포항",
+   "homepage": "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 89,
+   "name": "배짱호",
+   "port": "무창포항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 92,
+   "name": "총각1호",
+   "port": "무창포항",
+   "homepage": "https://chongkakho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 94,
+   "name": "테티스호",
+   "port": "무창포항",
+   "homepage": "http://xn--9t4b11y99ab5f.kr/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 96,
+   "name": "K-1투어호",
+   "port": "오천항",
+   "homepage": "http://spdman7.fishmap.kr",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 103,
+   "name": "나이스호",
+   "port": "오천항",
+   "homepage": "http://www.vinaho.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 110,
+   "name": "뉴일복호",
+   "port": "오천항",
+   "homepage": "http://www.xn--pn3bn6qm0l.kr",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 112,
+   "name": "대물호",
+   "port": "오천항",
+   "homepage": "http://xn--c20bm9by0le8h59d54l.com/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 115,
+   "name": "두드림호",
+   "port": "오천항",
+   "homepage": "https://aceho.thefishing.kr/index.php?mid=gall",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 116,
+   "name": "똥까호",
+   "port": "오천항",
+   "homepage": "http://www.ddonggga.com",
+   "sunsang24": "https://ddonggga.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 122,
+   "name": "마린스타1호",
+   "port": "오천항",
+   "homepage": "http://www.boryeongharbor.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 123,
+   "name": "마운틴호",
+   "port": "오천항",
+   "homepage": "https://sangsangho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 124,
+   "name": "메가호",
+   "port": "오천항",
+   "homepage": "http://www.megaho.net/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 127,
+   "name": "반도피싱호",
+   "port": "오천항",
+   "homepage": "https://thefishing.kr/gallery/ship.php?wr_uid=144217",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 131,
+   "name": "뽀빠이호",
+   "port": "오천항",
+   "homepage": "http://spdman7.fishmap.kr",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 133,
+   "name": "성령7호",
+   "port": "오천항",
+   "homepage": "http://www.sungryungho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 138,
+   "name": "씨앤미호",
+   "port": "오천항",
+   "homepage": "https://seanme.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 139,
+   "name": "씨월드호",
+   "port": "오천항",
+   "homepage": "http://www.nfishing.net",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 143,
+   "name": "에이스호",
+   "port": "오천항",
+   "homepage": "https://aceho.thefishing.kr/index.php?mid=gall",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 144,
+   "name": "영남3호",
+   "port": "오천항",
+   "homepage": "http://www.aceho.net",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 150,
+   "name": "위더스호",
+   "port": "오천항",
+   "homepage": "http://xn--c20bm9by0le8h59d54l.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 151,
+   "name": "육소2호",
+   "port": "오천항",
+   "homepage": "http://spdman7.fishmap.kr",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 152,
+   "name": "이지스호",
+   "port": "오천항",
+   "homepage": "https://thefishing.kr/reservation/new.php?uid=5970&amp;type=3",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 153,
+   "name": "일복호",
+   "port": "오천항",
+   "homepage": "https://thefishing.kr/gallery/list.php?wr_uid=1836690",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 154,
+   "name": "장보고호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 155,
+   "name": "정선호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 157,
+   "name": "첼린저호",
+   "port": "오천항",
+   "homepage": "https://thefishing.kr/reservation/list.php?uid=1511&amp;type=3",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 159,
+   "name": "코리아호",
+   "port": "오천항",
+   "homepage": "http://www.kingdomfish.net",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 163,
+   "name": "팀베테랑호",
+   "port": "오천항",
+   "homepage": "http://www.yamujinfishing.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 168,
+   "name": "한프로2호",
+   "port": "오천항",
+   "homepage": "http://hanprofishing.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 172,
+   "name": "헤라호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 178,
+   "name": "모범낚시호",
+   "port": "홍원항",
+   "homepage": "https://mobum.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 182,
+   "name": "월드피싱호",
+   "port": "홍원항",
+   "homepage": "http://bank.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 188,
+   "name": "홍원항 베테랑호",
+   "port": "홍원항",
+   "homepage": null,
+   "sunsang24": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 190,
+   "name": "힐링피싱호",
+   "port": "마검포항",
+   "homepage": "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 191,
+   "name": "은하호",
+   "port": "안흥외항",
+   "homepage": "https://sinjindo.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 192,
+   "name": "구라미끼호",
+   "port": "백사장항",
+   "homepage": "http://www.gulamiki.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 197,
+   "name": "해신3호",
+   "port": "백사장항",
+   "homepage": "http://haesin.net",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 203,
+   "name": "해주호 (바다사랑 낚시펜션)",
+   "port": "항구 확인 중",
+   "homepage": "https://www.qkektkfkd.com/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 210,
+   "name": "전곡항해적단",
+   "port": "전곡항",
+   "homepage": null,
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 211,
+   "name": "화니호",
+   "port": "무창포항",
+   "homepage": "https://www.chongkakho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 212,
+   "name": "신주호",
+   "port": "원산도 선촌항",
+   "homepage": "https://sinju.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 214,
+   "name": "지프로호",
+   "port": "무창포항",
+   "homepage": "https://www.chongkakho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 215,
+   "name": "뉴아폴로호",
+   "port": "무창포항",
+   "homepage": "http://kingfishing.net/index.php?mid=bk",
+   "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 216,
+   "name": "천일호",
+   "port": "무창포항",
+   "homepage": "https://010-9231-7011.kr/sunsang24/%ED%8F%AD%EB%B0%9C%EC%9D%80-%EC%95%84%EB%8B%88%EC%96%B4%EB%8F%84-%EA%B3%84%EC%86%8D-%EB%82%98%EC%98%A8%EB%8B%A4-%EA%B0%91%EC%98%A4%EC%A7%95%EC%96%B4-%EB%94%B0%EB%B0%95%EB%94%B0%EB%B0%95-%EC%86%90%EB%A7%9B-4/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 219,
+   "name": "포인트호",
+   "port": "무창포항",
+   "homepage": "https://mpoint.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 226,
+   "name": "킹덤호",
+   "port": "무창포항",
+   "homepage": "http://www.muchangpofishing.com/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 227,
+   "name": "고스트호",
+   "port": "무창포항",
+   "homepage": "https://www.bravofishing.kr/index.php?mid=bk&amp;PA_N_UID=5950",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 233,
+   "name": "자이언트호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "https://rkclgh.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 234,
+   "name": "푸른바다테스호",
+   "port": "오천항",
+   "homepage": "http://www.blueseaho.com",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 261,
+   "name": "블루피싱, 블루호",
+   "port": "오천항",
+   "homepage": "http://www.bluefishing.asia/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 264,
+   "name": "싸부호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "http://ssabu.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 274,
+   "name": "아리랑1호",
+   "port": "오천항",
+   "homepage": "https://naksigo.com/boat/%EC%95%84%EB%A6%AC%EB%9E%911%ED%98%B8",
+   "sunsang24": "https://arirang.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 279,
+   "name": "뉴등대호",
+   "port": "오천항",
+   "homepage": "https://www.lightho.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 281,
+   "name": "베누스호",
+   "port": "오천항",
+   "homepage": "http://www.poseidonho.com/?tviuid=66817533",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 286,
+   "name": "핏불호",
+   "port": "오천항",
+   "homepage": "http://www.yamujinfishing.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 288,
+   "name": "프랜드2호",
+   "port": "오천항",
+   "homepage": "http://www.friendho.com/index.php?mid=bk&amp;year=2026&amp;month=08&amp;day=01",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 295,
+   "name": "오천거양호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "http://keoyang.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 304,
+   "name": "푸르러호",
+   "port": "오천항",
+   "homepage": "https://www.fishapp.co.kr/pt/fish/fish_dtl?id=G0217574WB",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 307,
+   "name": "20금강호",
+   "port": "영흥도 진두항",
+   "homepage": "https://thefishing.kr/reservation/list.php?uid=1839&amp;type=3",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 313,
+   "name": "뉴홀랜드호",
+   "port": "오천항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 315,
+   "name": "경영피싱호",
+   "port": "영흥도 진두항",
+   "homepage": "https://fishtoday.kr/comp/%EC%98%81%ED%9D%A5%EB%8F%84%20%EA%B2%BD%EC%98%81%EB%B0%B0%EB%82%9A%EC%8B%9C",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 323,
+   "name": "영석호",
+   "port": "영흥도 진두항",
+   "homepage": "https://thefishing.kr/reservation/list.php?uid=3346",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 326,
+   "name": "바다목장호",
+   "port": "오천항",
+   "homepage": "https://thefishing.kr/gallery/ship.php?wr_uid=325125",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 327,
+   "name": "송주호",
+   "port": "오천항",
+   "homepage": "http://www.friendho.com/index.php?mid=bk&amp;tviuid=69417700",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 329,
+   "name": "영스타호",
+   "port": "영흥도 진두항",
+   "homepage": "http://www.paradiseho.com/index.php?mid=bk&amp;year=2027&amp;month=04&amp;day=25&amp;mode=list&amp;won=1&amp;PA_N_UID=0&amp;sel=day",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 330,
+   "name": "시실리2호",
+   "port": "오천항",
+   "homepage": "http://xn--oy2bo3o8ybmwrcnh.kr/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 331,
+   "name": "누리호",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "https://nurifish.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 333,
+   "name": "블랙호",
+   "port": "오천항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 335,
+   "name": "밥말리호",
+   "port": "오천항",
+   "homepage": "https://bobmarleyho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 338,
+   "name": "팀대물호",
+   "port": "오천항",
+   "homepage": "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 340,
+   "name": "오천 프로낚시",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "https://ocpro.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 342,
+   "name": "승리호",
+   "port": "무창포항",
+   "homepage": null,
+   "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 346,
+   "name": "효성무창포호",
+   "port": "무창포항",
+   "homepage": "https://thefishing.kr/bus/south.php?uid=1849&amp;type=3&amp;page=6",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 348,
+   "name": "타이밍호",
+   "port": "무창포항",
+   "homepage": "https://www.chongkakho.com/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 358,
+   "name": "현대피싱호",
+   "port": "무창포항",
+   "homepage": "http://www.muchangpofishing.com/index.php?mid=best&amp;mode=view&amp;wr_uid=1646412",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 368,
+   "name": "깜보호",
+   "port": "무창포항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 371,
+   "name": "이범호",
+   "port": "무창포항",
+   "homepage": "http://www.muchangpo.kr/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 372,
+   "name": "해신호",
+   "port": "무창포항",
+   "homepage": "https://innak.kr/bbs/board.php?bo_table=D03_2021&amp;wr_id=42432",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 373,
+   "name": "블랙호",
+   "port": "무창포항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=gall&amp;ca_name=%EB%8C%80%EB%AC%BC%EC%A1%B0%ED%99%A9",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 375,
+   "name": "페가수스호",
+   "port": "무창포항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 379,
+   "name": "조양호",
+   "port": "무창포항",
+   "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 381,
+   "name": "체이스호",
+   "port": "무창포항",
+   "homepage": "http://www.muchangpofishing.com/",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 384,
+   "name": "브이호",
+   "port": "무창포항",
+   "homepage": "https://muchangpofishing.co.kr/index.php?mid=bk",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 390,
+   "name": "킹피싱호",
+   "port": "무창포항",
+   "homepage": null,
+   "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 405,
+   "name": "원조낚시",
+   "port": "홍원항",
+   "homepage": null,
+   "sunsang24": "https://wonjofishing.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 406,
+   "name": "이바다낚시",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 407,
+   "name": "LH하우스",
+   "port": "오천항",
+   "homepage": null,
+   "sunsang24": "https://ebada.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 411,
+   "name": "아리울1호",
+   "port": "비응항",
+   "homepage": null,
+   "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 413,
+   "name": "히트피싱",
+   "port": "비응항",
+   "homepage": null,
+   "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 416,
+   "name": "오드리호",
+   "port": "야미도항",
+   "homepage": null,
+   "sunsang24": "https://af.sunsang24.com/ship/schedule_fleet",
+   "naver_searched": true,
+   "result": "추가 확인 필요"
+  },
+  {
+   "bid": 767704,
+   "name": "해피호(오후)",
+   "port": "남항유어선부두",
+   "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 971087,
+   "name": "하나호",
+   "port": "남항유어선부두",
+   "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  },
+  {
+   "bid": 716002,
+   "name": "부킹호",
+   "port": "남항유어선부두",
+   "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s",
+   "sunsang24": null,
+   "naver_searched": true,
+   "result": "수집 확인"
+  }
+ ]
 }

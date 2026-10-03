@@ -1956,17 +1956,6 @@
    ]
   },
   {
-   "bid": 120,
-   "name": "레드피싱호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
-  },
-  {
    "bid": 121,
    "name": "루키호",
    "operator": "야무진피싱",
@@ -2028,17 +2017,6 @@
     "https://naksigo.com/boat/%EB%A9%94%EA%B0%80%ED%98%B8",
     "http://www.megaho.net/index.php?mid=bk"
    ]
-  },
-  {
-   "bid": 125,
-   "name": "명성호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
    "bid": 126,
@@ -2110,17 +2088,6 @@
     "기타 낚시배",
     "기타낚시배"
    ]
-  },
-  {
-   "bid": 129,
-   "name": "복성호2호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
    "bid": 130,
@@ -2259,7 +2226,7 @@
   {
    "bid": 138,
    "name": "씨앤미호",
-   "operator": "에이스낚시",
+   "operator": "씨앤미호",
    "region": "충남 보령시",
    "port": "오천항",
    "price": "",
@@ -2267,8 +2234,8 @@
    "channels": {
     "homepage": "https://seanme.thefishing.kr/index.php?mid=bk"
    },
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "notes": "오천항 씨앤미호 공식 예약표에서 씨앤미호 단독 등록 확인. 에이스낚시와 별도 선사로 분리.",
+   "catalog_checked_at": "2026-10-03T21:55:29+09:00",
    "catalog_sources": [
     "https://seanme.thefishing.kr/index.php?mid=bk",
     "http://seanme.thefishing.kr/"
@@ -2362,28 +2329,39 @@
   {
    "bid": 143,
    "name": "에이스호",
-   "operator": "에이스낚시",
+   "operator": "오천항 에이스낚시",
    "region": "충남 보령시",
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "channels": {
+    "homepage": "https://aceho.thefishing.kr/index.php?mid=bk"
+   },
+   "notes": "오천항 에이스낚시 공식 예약 사이트에서 에이스호 선박으로 확인. 예약표에는 직접 예약 항목이 없어 상태 수집 대상 여부는 추후 재확인.",
+   "catalog_checked_at": "2026-10-03T23:15:00+09:00",
    "catalog_sources": [
-    "https://naksigo.com/boat/%EC%98%A4%EC%B2%9C%ED%95%AD%EC%97%90%EC%9D%B4%EC%8A%A4%ED%98%B8"
+    "https://aceho.thefishing.kr/index.php?mid=bk",
+    "https://search.naver.com/search.naver?query=%EC%98%A4%EC%B2%9C%ED%95%AD+%EC%97%90%EC%9D%B4%EC%8A%A4%ED%98%B8+%EB%82%9A%EC%8B%9C%EB%B0%B0"
    ]
   },
   {
    "bid": 144,
    "name": "영남3호",
-   "operator": "에이스낚시",
+   "operator": "오천항 자연낚시",
    "region": "충남 보령시",
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
+   "channels": {
+    "homepage": "https://nfishing.net/index.php?mid=bk"
+   },
+   "notes": "네이버 검색에서 오천항 자연낚시의 2026-10-01 영남3호 조황을 확인하여 현재 선사 소속으로 이동. 공식 예약표는 첼린저호와 협력선단 항목으로 운영되어 개별 배 상태는 미게시.",
+   "catalog_checked_at": "2026-10-03T23:15:00+09:00",
+   "catalog_sources": [
+    "https://nfishing.net/index.php?mid=bk",
+    "https://nfishing.net/index.php?mid=int",
+    "https://search.naver.com/search.naver?query=%EC%98%A4%EC%B2%9C%ED%95%AD+%EC%98%81%EB%82%A83%ED%98%B8+%EB%82%9A%EC%8B%9C%EB%B0%B0"
+   ]
   },
   {
    "bid": 145,
@@ -2713,17 +2691,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 162,
-   "name": "태성호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
-  },
-  {
    "bid": 164,
    "name": "팀오디세이호",
    "operator": "오디세이피싱",
@@ -2747,17 +2714,6 @@
    "booking_names": [
     "팀오디세이"
    ]
-  },
-  {
-   "bid": 165,
-   "name": "평사호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
    "bid": 166,
@@ -2829,17 +2785,6 @@
    "catalog_sources": [
     "http://hanprofishing.com/index.php?mid=int"
    ]
-  },
-  {
-   "bid": 170,
-   "name": "해금강호",
-   "operator": "에이스낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {},
-   "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
    "bid": 171,
