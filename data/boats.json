@@ -1541,9 +1541,13 @@
       "price": "",
       "capacity": null,
       "channels": {
-        "homepage": "http://spdman7.fishmap.kr"
+        "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
       },
-      "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+      "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
+      "catalog_sources": [
+        "https://spdman7.thefishing.kr/index.php?mid=bk"
+      ],
+      "catalog_checked_at": "2026-10-03T22:26:32+09:00"
     },
     {
       "bid": 97,
@@ -2148,9 +2152,13 @@
       "price": "",
       "capacity": null,
       "channels": {
-        "homepage": "http://spdman7.fishmap.kr"
+        "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
       },
-      "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+      "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
+      "catalog_sources": [
+        "https://spdman7.thefishing.kr/index.php?mid=bk"
+      ],
+      "catalog_checked_at": "2026-10-03T22:26:32+09:00"
     },
     {
       "bid": 132,
@@ -2235,7 +2243,7 @@
         "phone": "010-9718-1703"
       },
       "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준",
-      "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+      "catalog_checked_at": "2026-10-03T22:26:32+09:00",
       "catalog_sources": [
         "http://spdman7.thefishing.kr/",
         "https://naksigo.com/boat/%EC%94%A8%EB%B9%99%EC%9D%B4%ED%98%B8",
@@ -2496,9 +2504,13 @@
       "price": "",
       "capacity": null,
       "channels": {
-        "homepage": "http://spdman7.fishmap.kr"
+        "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
       },
-      "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
+      "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
+      "catalog_sources": [
+        "https://spdman7.thefishing.kr/index.php?mid=bk"
+      ],
+      "catalog_checked_at": "2026-10-03T22:26:32+09:00"
     },
     {
       "bid": 152,
@@ -8070,5 +8082,5 @@
       "catalog_checked_at": "2026-10-03"
     }
   ],
-  "updated_at": "2026-10-03T22:23:02+09:00"
+  "updated_at": "2026-10-03T22:26:32+09:00"
 }
