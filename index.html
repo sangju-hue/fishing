@@ -106,7 +106,8 @@ let SUNSANG_STATUS_BY_ID={};
 let LEGACY_BOAT_IDS={};
 async function loadData(){
   try{
-    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json'),fetch('data/status_homepages.json').catch(()=>null),fetch('data/site_health.json').catch(()=>null)]);
+    const nocache = `?v=${Date.now()}`;
+    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'+nocache),fetch('data/status.json'+nocache),fetch('data/status_homepages.json'+nocache).catch(()=>null),fetch('data/site_health.json'+nocache).catch(()=>null)]);
     const boatsData=await boatsRes.json();
     BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
     if(healthRes&&healthRes.ok){
