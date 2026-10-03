@@ -3829,24 +3829,6 @@
   {
    "capacity": null,
    "channels": {
-    "homepage": "http://www.muchangpofishing.com/",
-    "phone": "010-4759-7177"
-   },
-   "name": "킹덤호",
-   "notes": "쭈꾸미(조황 기준). 주의: 오천항에도 킹덤호(kingdomfish.net) 존재 — 동명이인 미확인. 출처: bravofishing.kr",
-   "operator": "무창포 브라보낚시",
-   "port": "무창포항",
-   "price": "",
-   "region": "충남 보령시",
-   "bid": 226,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%ED%82%B9%EB%8D%A4%ED%98%B8?id=6887"
-   ]
-  },
-  {
-   "capacity": null,
-   "channels": {
     "homepage": "https://www.bravofishing.kr/index.php?mid=bk&amp;PA_N_UID=5950",
     "phone": "010-4759-7177"
    },
@@ -6477,7 +6459,6 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "sunsang24": "https://apollo.sunsang24.com/ship/schedule_fleet",
     "phone": "010-7484-7166"
    },
    "tags": [],
@@ -7227,7 +7208,8 @@
     "https://naksigo.com/boat/%EB%89%B4%EC%B2%B4%EC%9D%B4%EC%8A%A4%ED%98%B8"
    ],
    "booking_names": [
-    "뉴체이스호"
+    "뉴체이스호",
+    "뉴체이스호(22인승)"
    ],
    "catalog_status": "booking_verified"
   },
@@ -7328,8 +7310,7 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-5011-0700",
-    "homepage": "http://www.muchangpofishing.com/"
+    "phone": "010-5011-0700"
    },
    "tags": [],
    "manual": false,
