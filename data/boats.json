@@ -1836,9 +1836,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "https://aceho.thefishing.kr/index.php?mid=gall"
-   },
+   "channels": {},
    "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
@@ -1915,9 +1913,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -1997,9 +1993,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -2079,9 +2073,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -2322,10 +2314,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "https://aceho.thefishing.kr/index.php?mid=gall",
-    "phone": "010-9404-0233"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
@@ -2340,9 +2329,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -2656,9 +2643,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -2707,9 +2692,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -2785,9 +2768,7 @@
    "port": "오천항",
    "price": "",
    "capacity": null,
-   "channels": {
-    "homepage": "http://www.aceho.net"
-   },
+   "channels": {},
    "notes": "[태성호·에이스호·해금강호·레드피싱호·복성호2호·평사호·씨앤미호·명성호·영남3호] 광어다운샷·우럭·농어외수질·백조기·문어 (에이스낚시). 2023년 선사 목록 기준"
   },
   {
@@ -7965,6 +7946,42 @@
     "http://www.sorafishing.com/index.php?mid=bk"
    ],
    "notes": "소라피싱 선박과 같은 예약표의 수도권 출조 버스. 승선 정원이 아닌 버스 잔여석."
+  },
+  {
+   "bid": 971090,
+   "name": "신도1호",
+   "operator": "오천항 에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://aceho.thefishing.kr/index.php?mid=bk",
+    "phone": "010-9404-0233"
+   },
+   "notes": "에이스낚시 소속. 2026-10-03 aceho.thefishing.kr 갱신에 따라 추가됨.",
+   "booking_names": [
+    "신도1호"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971091,
+   "name": "문일호",
+   "operator": "오천항 에이스낚시",
+   "region": "충남 보령시",
+   "port": "오천항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://aceho.thefishing.kr/index.php?mid=bk",
+    "phone": "010-9404-0233"
+   },
+   "notes": "에이스낚시 소속. 2026-10-03 aceho.thefishing.kr 갱신에 따라 추가됨.",
+   "booking_names": [
+    "문일호"
+   ],
+   "catalog_status": "booking_verified"
   }
  ],
  "updated_at": "2026-10-03T09:04:25+09:00"
