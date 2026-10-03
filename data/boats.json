@@ -596,18 +596,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "name": "무창포 세훈낚시",
-   "port": "무창포항",
-   "region": "충남 보령시",
-   "price": "7만원",
-   "channels": {
-    "phone": "010-5910-2533"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 26
-  },
-  {
    "name": "뉴해양호",
    "port": "홍원항",
    "region": "충남 서천군",
