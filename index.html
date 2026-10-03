@@ -224,6 +224,10 @@ function normalizePort(port){
   const alias=PORT_ALIASES.find(([pattern])=>pattern.test(value));
   return alias?alias[1]:value;
 }
+// Preferred ports first; remaining ports run north to south along the west coast.
+const PORT_ORDER=['무창포항','오천항','영흥도','영종도','인천 만석부두','만석부두','남항','오이도','전곡항','장고항','삼길포항','마검포항','백사장항','신진도항','안흥항','안흥외항','태안','남당항','가경주항','구매항','영목항','원산도 선촌항','대천항','홍원항','야미도항','비응항','군산 비응항'];
+function portRank(port){const i=PORT_ORDER.indexOf(normalizePort(port));return i<0?999:i;}
+function comparePorts(a,b){return portRank(a.port)-portRank(b.port)||normalizePort(a.port).localeCompare(normalizePort(b.port),'ko');}
 function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
   const port=$("#portFilter").value;
@@ -234,6 +238,7 @@ function matrixOperatorName(boat){return boat.operator||boat.name}
 function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
   const deferred=(a.collection_priority==='deferred_daily')-(b.collection_priority==='deferred_daily');
   if(deferred)return deferred;
+  const ports=comparePorts(a,b);if(ports)return ports;
   const operatorA=matrixOperatorName(a),operatorB=matrixOperatorName(b);
   if(operatorA==="기타"&&operatorB!=="기타")return 1;
   if(operatorB==="기타"&&operatorA!=="기타")return -1;
@@ -251,7 +256,7 @@ function groupedOnlineBoats(){
 }
 function operatorName(boat){return boat.operator||"기타 선사"}
 function displayNames(boat){return [boat.name]}
-function sortedOfflineBoats(){return offlineBoats().filter(matches).slice().sort((a,b)=>(a.collection_priority==='deferred_daily')-(b.collection_priority==='deferred_daily')||a.region.localeCompare(b.region,"ko")||((a.operator===null)-(b.operator===null))||operatorName(a).localeCompare(operatorName(b),"ko")||a.name.localeCompare(b.name,"ko"))}
+function sortedOfflineBoats(){return offlineBoats().filter(matches).slice().sort((a,b)=>(a.collection_priority==='deferred_daily')-(b.collection_priority==='deferred_daily')||comparePorts(a,b)||((a.operator===null)-(b.operator===null))||operatorName(a).localeCompare(operatorName(b),"ko")||a.name.localeCompare(b.name,"ko"))}
 function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]))}
 function safeHref(key,value){
   if(key==="phone")return `tel:${String(value).replace(/[^0-9+]/g,"")}`;
@@ -284,7 +289,7 @@ function card(boat){
   </article>`;
 }
 function renderCards(){
-  const selected=BOATS.filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>a.region.localeCompare(b.region,"ko")||a.name.localeCompare(b.name,"ko"));
+  const selected=BOATS.filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>comparePorts(a,b)||a.name.localeCompare(b.name,"ko"));
   $("#selectedTitle").textContent=`${Number(selectedDate.slice(5,7))}월 ${Number(selectedDate.slice(8,10))}일 선택 선사`;
   $("#resultCount").textContent=selected.length?`선택 ${selected.length}곳 · 예약 데이터 ${selected.filter(b=>statusRow(b,selectedDate)).length}곳`:"";
   $("#boatCards").innerHTML=selected.length?selected.map(card).join(""):'<div class="empty">배 이름 옆 체크박스로 선택해주세요</div>';
@@ -473,8 +478,8 @@ function initPorts(){
   smallPorts.clear();
   let otherCount=0;
   for(const [port,count] of counts)if(count<=2&&!['오천항','영흥도','항구 확인 중'].includes(port)){smallPorts.add(port);otherCount+=count}
-  const priority=port=>port==='오천항'?0:port==='영흥도'?1:2;
-  [...counts].filter(([port])=>!smallPorts.has(port)).sort((a,b)=>priority(a[0])-priority(b[0])||b[1]-a[1]||a[0].localeCompare(b[0],"ko")).forEach(([port,count])=>{
+  const priority=portRank;
+  [...counts].filter(([port])=>!smallPorts.has(port)).sort((a,b)=>priority(a[0])-priority(b[0])||a[0].localeCompare(b[0],"ko")).forEach(([port,count])=>{
     $("#portFilter").insertAdjacentHTML("beforeend",`<option value="${escapeHtml(port)}">${escapeHtml(port)} (${count})</option>`);
   });
   if(otherCount)$("#portFilter").insertAdjacentHTML("beforeend",`<option value="__other__">기타 (${otherCount})</option>`);
