@@ -47,6 +47,12 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_re_register_updates_display_name(self):
+        self.a.register(self.p)
+        self.a.register(dict(self.p,label='홍길동'))
+        self.assertEqual(self.a.snapshot()['subscriptions'][0]['label'],'홍길동')
+        self.assertEqual(len(self.a.state['subscriptions']),1)
+
     def test_owner_pause_resume_update_rollback(self):
         self.a.register(self.p)
         with self.assertRaises(ValueError):self.a.manage(dict(self.p,action='pause',owner='2'*32))

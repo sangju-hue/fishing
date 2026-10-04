@@ -105,6 +105,7 @@ class Alerts:
                 old['enabled']=True
                 if old.get('min_seats',1)!=minimum:old['notified']=False
                 old['min_seats']=minimum
+                old['label']=str(payload.get('label',old.get('label',''))).strip()
                 if persist:self.save()
                 return old
             if len(rows)>=5000 or sum(r['owner']==owner for r in rows)>=500:raise ValueError('등록 수 제한: 사용자당 500개, 전체 5000개')
