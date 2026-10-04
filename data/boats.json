@@ -567,7 +567,7 @@
    "tags": [],
    "manual": false,
    "bid": 25,
-   "operator": "무창포 총각피싱",
+   "operator": "무창포 선상낚시",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
     "http://www.ssfish.kr/",
@@ -3318,7 +3318,7 @@
   {
    "bid": 212,
    "name": "신주호",
-   "operator": "무창포 총각피싱",
+   "operator": "원산도 신주피싱",
    "region": "충남 보령시",
    "port": "원산도 선촌항",
    "price": "",
@@ -3402,9 +3402,9 @@
   {
    "bid": 216,
    "name": "천일호",
-   "operator": "무창포 총각피싱",
+   "operator": "삼천포 강백호",
    "region": "충남 보령시",
-   "port": "무창포항",
+   "port": "삼천포항",
    "price": "",
    "capacity": null,
    "channels": {
@@ -3419,7 +3419,7 @@
   {
    "bid": 218,
    "name": "엔조이호",
-   "operator": "무창포 총각피싱",
+   "operator": "무창포 엔조이호",
    "region": "충남 보령시",
    "port": "무창포항",
    "price": "",
@@ -3443,7 +3443,7 @@
   {
    "bid": 219,
    "name": "포인트호",
-   "operator": "무창포 총각피싱",
+   "operator": "무창포 포인트피싱",
    "region": "충남 보령시",
    "port": "무창포항",
    "price": "",
@@ -3635,12 +3635,12 @@
   {
    "capacity": null,
    "channels": {
-    "phone": "010-2712-0804",
+    "phone": "010-3370-7260",
     "homepage": "https://seven.thefishing.kr/index.php?mid=bk"
    },
    "name": "세븐호",
    "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
-   "operator": "무창포 총각피싱",
+   "operator": "무창포 세븐피싱",
    "port": "무창포항",
    "price": "",
    "region": "충남 보령시",
