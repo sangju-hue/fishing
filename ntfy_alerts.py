@@ -67,7 +67,7 @@ class Alerts:
         catalog=self.catalog() if catalog is None else catalog
         owner=payload.get('owner','');topic=payload.get('topic','');ds=payload.get('date','');bid=payload.get('bid')
         if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('사용자 식별값 오류')
-        if not isinstance(topic,str) or not re.fullmatch(r'[A-Za-z0-9_-]{16,64}',topic) or topic==self.config['inbox']:raise ValueError('토픽은 영문·숫자·_- 16~64자')
+        if not isinstance(topic,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,64}',topic) or topic==self.config['inbox']:raise ValueError('토픽은 영문·숫자·_- 1~64자')
         if not isinstance(bid,int) or isinstance(bid,bool) or bid not in catalog:raise ValueError('선박을 선택하세요')
         try:d=date.fromisoformat(ds)
         except (TypeError,ValueError):raise ValueError('날짜를 선택하세요')
