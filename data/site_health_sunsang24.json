@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T21:09:15+09:00",
+ "checked_at": "2026-10-04T21:12:23+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -1112,29 +1112,23 @@
    "errors": []
   },
   "keoyang": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://keoyang.sunsang24.com/ship/schedule_fleet",
    "entries": 58,
    "boats": [
-    "거양호",
-    "오천거양호"
+    "거양호"
    ],
    "boat_ids": {
-    "거양호": 241,
-    "오천거양호": 295
+    "거양호": 241
    },
-   "missing_boats": [
-    "오천거양호"
-   ],
+   "missing_boats": [],
    "observed_ship_labels": [
     "거양호"
    ],
    "all_ship_labels": [
     "거양호"
    ],
-   "selectable_ship_labels": [
-    "거양호"
-   ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "거양호": [
      "우럭"
