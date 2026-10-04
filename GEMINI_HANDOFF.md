@@ -566,3 +566,14 @@ python3 scrape_sunsang24.py --help
 - 실전 임시 토픽 통합 테스트: 암호화 등록/토픽 수정/삭제 -> Mac -> 목록 feed 모두 약 1.7~2초. 초기 연결 경합 테스트 실패 후 연결 준비 시점 확인하여 재검증. 운영 사용자 구독/폰에는 테스트 알림 보내지 않음.
 - Python 62 tests 통과(재연결 cursor, 분할 chunk, 중복수신, 갱신 중 변경 및 전송 실패 포함). Node 테스트 두 페이지 add/edit/delete, 최신 상태 재수신, stale 응답 차단, SSE 1개, 반복조회 제거 검증 통과.
 - 최종 보완: 스트림 open 때 캐시 1회 확인하여 연결 직후 등록 경합 누락 방지. keepalive는 조회하지 않음. 최종 실제 ntfy 등록/수정/삭제 각각 1.62/1.72/1.60초. Python 63 tests 통과. 공개 GitHub Pages SSE 코드 배포 확인. 운영 Mac은 수집 중으로 /tmp/fishing-apply-realtime.py가 수집 유휴 확인 후 적용 대기, snapshot.realtime_topics=True로 적용 확인 가능.
+
+## 2026-10-04 알림 설정 폼 수정 취소 버튼 추가
+- 알림 내역에서 수정 버튼 클릭 시, 폼에 "수정 취소" 버튼을 표시하여 수정 모드를 탈출하고 초기 상태로 돌아갈 수 있도록 기능 추가 (index.html).
+- 수정 사항 GitHub 푸시 완료.
+
+## 2026-10-04 내 알림 현황 박스 스타일 적용
+- `이 브라우저에서 신청한 알림` 영역도 `맥 전체 알림 운영 현황`과 동일하게 `<section class="ntfy-registrant">` 박스 스타일을 적용하여 시각적 일관성을 확보함.
+
+## 2026-10-04 오천프로낚시 링크 및 중복 오류 수정
+- `가즈아호`의 sunsang24 링크가 `http://ocpro.sunsang24.com/`로 되어 있던 것을 올바른 선단 예약 페이지인 `https://ocpro.sunsang24.com/ship/schedule_fleet`로 수정.
+- 배 이름이 `오천 프로낚시`로 등록되어 있던 중복/오류 데이터(bid: 340) 삭제.
