@@ -1,12 +1,12 @@
 {
- "checked_at": "2026-10-04T12:50:27+09:00",
+ "checked_at": "2026-10-04T14:33:32+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
  },
  "queried_range": {
-  "from": "2026-10-09",
-  "to": "2026-10-09"
+  "from": "2026-10-24",
+  "to": "2026-10-24"
  },
  "sites": {
   "sooyangho.co.kr": {
@@ -88,13 +88,13 @@
    ],
    "pages_checked": 25,
    "booking_urls": [
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3348&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2789&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3007&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4607&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6120&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6127&sel=day#list",
-    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6380&sel=day#list"
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3348&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2789&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3007&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4607&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6120&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6127&sel=day#list",
+    "http://www.sharkho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6380&sel=day#list"
    ],
    "errors": []
   },
@@ -119,7 +119,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.jaebul1ho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=840&sel=day#list"
+    "http://www.jaebul1ho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=840&sel=day#list"
    ],
    "errors": []
   },
@@ -146,8 +146,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://www.yhseaking.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1999&sel=day#list",
-    "https://www.yhseaking.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5746&sel=day#list"
+    "https://www.yhseaking.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1999&sel=day#list",
+    "https://www.yhseaking.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5746&sel=day#list"
    ],
    "errors": []
   },
@@ -172,7 +172,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://xn--xk3bm1aee249g.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3324&sel=day#list"
+    "http://xn--xk3bm1aee249g.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3324&sel=day#list"
    ],
    "errors": []
   },
@@ -202,9 +202,9 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3390&sel=day#list",
-    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6158&sel=day#list",
-    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6190&sel=day#list"
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3390&sel=day#list",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6158&sel=day#list",
+    "http://xn--910b11ohng.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6190&sel=day#list"
    ],
    "errors": []
   },
@@ -238,7 +238,7 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "https://www.jnaksi.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5206&sel=day#list"
+    "https://www.jnaksi.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5206&sel=day#list"
    ],
    "errors": []
   },
@@ -263,7 +263,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1615&sel=day#list"
+    "https://www.bluefishing.asia/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1615&sel=day#list"
    ],
    "errors": []
   },
@@ -290,8 +290,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=861&sel=day#list",
-    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3545&sel=day#list"
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=861&sel=day#list",
+    "http://www.xn--2s2b21pgpc0m80y16e.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3545&sel=day#list"
    ],
    "errors": []
   },
@@ -333,7 +333,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5734&sel=day#list"
+    "https://hitfishing.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5734&sel=day#list"
    ],
    "errors": []
   },
@@ -369,11 +369,11 @@
    ],
    "pages_checked": 25,
    "booking_urls": [
-    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1484&sel=day#list",
-    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1487&sel=day#list",
-    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2506&sel=day#list",
-    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1485&sel=day#list",
-    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4166&sel=day#list"
+    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1484&sel=day#list",
+    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1487&sel=day#list",
+    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2506&sel=day#list",
+    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1485&sel=day#list",
+    "https://www.napoliho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4166&sel=day#list"
    ],
    "errors": []
   },
@@ -396,7 +396,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1190&sel=day#list"
+    "https://www.eugeneho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1190&sel=day#list"
    ],
    "errors": []
   },
@@ -425,9 +425,9 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4576&sel=day#list",
-    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6131&sel=day#list",
-    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6359&sel=day#list"
+    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4576&sel=day#list",
+    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6131&sel=day#list",
+    "https://xn--hg3b11w8xdjuj.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6359&sel=day#list"
    ],
    "errors": []
   },
@@ -455,7 +455,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://hangu.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6102&sel=day#list"
+    "https://hangu.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6102&sel=day#list"
    ],
    "errors": []
   },
@@ -479,7 +479,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4924&sel=day#list"
+    "http://songdofish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4924&sel=day#list"
    ],
    "errors": []
   },
@@ -508,8 +508,8 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "http://plusfishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4708&sel=day#list",
-    "http://plusfishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3461&sel=day#list"
+    "http://plusfishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4708&sel=day#list",
+    "http://plusfishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3461&sel=day#list"
    ],
    "errors": []
   },
@@ -536,8 +536,8 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3931&sel=day#list",
-    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5330&sel=day#list"
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3931&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5330&sel=day#list"
    ],
    "errors": []
   },
@@ -642,7 +642,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.emperorfishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=107&sel=day#list"
+    "http://www.emperorfishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=107&sel=day#list"
    ],
    "errors": []
   },
@@ -665,7 +665,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://gilfish.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2482&sel=day#list"
+    "http://gilfish.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2482&sel=day#list"
    ],
    "errors": []
   },
@@ -688,7 +688,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2829&sel=day#list"
+    "https://teammansu.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2829&sel=day#list"
    ],
    "errors": []
   },
@@ -736,7 +736,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=226&sel=day#list"
+    "http://www.olympiaho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=226&sel=day#list"
    ],
    "errors": []
   },
@@ -785,15 +785,15 @@
    ],
    "pages_checked": 28,
    "booking_urls": [
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=530&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3609&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3885&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4721&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5332&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5318&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5797&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5804&sel=day#list",
-    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5775&sel=day#list"
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=530&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3609&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3885&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4721&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5332&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5318&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5797&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5804&sel=day#list",
+    "https://www.ssfish.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5775&sel=day#list"
    ],
    "errors": []
   },
@@ -828,7 +828,7 @@
    ],
    "pages_checked": 27,
    "booking_urls": [
-    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=732&sel=day#list"
+    "https://www.ochzeus.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=732&sel=day#list"
    ],
    "errors": []
   },
@@ -880,8 +880,8 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1849&sel=day#list",
-    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1861&sel=day#list"
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1849&sel=day#list",
+    "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1861&sel=day#list"
    ],
    "errors": []
   },
@@ -952,11 +952,7 @@
    "boat_notices": {
     "뉴홀랜드호": "선장님 개인사정으로 인해 2026년도 쭈갑예약 받지 않습니다."
    },
-   "date_notices": {
-    "위너호": {
-     "2026-10-09": "선장님 개인사정으로 2026년도 쭈갑예약은 상황에 따라 오픈합니다."
-    }
-   },
+   "date_notices": {},
    "observed_ship_labels": [
     "공지사항",
     "깜보호_목지욱선장",
@@ -970,14 +966,14 @@
    ],
    "pages_checked": 27,
    "booking_urls": [
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4619&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3416&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3986&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3970&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5709&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4032&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4620&sel=day#list",
-    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4466&sel=day#list"
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4619&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3416&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3986&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3970&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5709&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4032&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4620&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4466&sel=day#list"
    ],
    "errors": []
   },
@@ -1042,8 +1038,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://ospeed.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=911&sel=day#list",
-    "http://ospeed.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2832&sel=day#list"
+    "http://ospeed.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=911&sel=day#list",
+    "http://ospeed.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2832&sel=day#list"
    ],
    "errors": []
   },
@@ -1079,11 +1075,11 @@
    ],
    "pages_checked": 24,
    "booking_urls": [
-    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=254&sel=day#list",
-    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=255&sel=day#list",
-    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=256&sel=day#list",
-    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4834&sel=day#list",
-    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=259&sel=day#list"
+    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=254&sel=day#list",
+    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=255&sel=day#list",
+    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=256&sel=day#list",
+    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4834&sel=day#list",
+    "https://www.ocheonkumkang.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=259&sel=day#list"
    ],
    "errors": []
   },
@@ -1116,10 +1112,10 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1182&sel=day#list",
-    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5492&sel=day#list",
-    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5388&sel=day#list",
-    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5730&sel=day#list"
+    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1182&sel=day#list",
+    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5492&sel=day#list",
+    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5388&sel=day#list",
+    "http://www.friendho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5730&sel=day#list"
    ],
    "errors": []
   },
@@ -1171,16 +1167,16 @@
    ],
    "pages_checked": 29,
    "booking_urls": [
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=309&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=318&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1302&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6343&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3463&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5143&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5071&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5859&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6150&sel=day#list",
-    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6151&sel=day#list"
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=309&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=318&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1302&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6343&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3463&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5143&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5071&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5859&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6150&sel=day#list",
+    "https://chongkakho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6151&sel=day#list"
    ],
    "errors": []
   },
@@ -1206,8 +1202,8 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://www.5000fish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2024&sel=day#list",
-    "https://www.5000fish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2040&sel=day#list"
+    "https://www.5000fish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2024&sel=day#list",
+    "https://www.5000fish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2040&sel=day#list"
    ],
    "errors": []
   },
@@ -1231,7 +1227,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://eagleho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3487&sel=day#list"
+    "http://eagleho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3487&sel=day#list"
    ],
    "errors": []
   },
@@ -1254,7 +1250,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2065&sel=day#list"
+    "http://www.megaho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2065&sel=day#list"
    ],
    "errors": []
   },
@@ -1280,7 +1276,7 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2817&sel=day#list"
+    "https://sangsangho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2817&sel=day#list"
    ],
    "errors": []
   },
@@ -1305,7 +1301,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1297&sel=day#list"
+    "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1297&sel=day#list"
    ],
    "errors": []
   },
@@ -1338,7 +1334,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://www.nfishing.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1511&sel=day#list"
+    "http://www.nfishing.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1511&sel=day#list"
    ],
    "errors": []
   },
@@ -1372,9 +1368,9 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3080&sel=day#list",
-    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5334&sel=day#list",
-    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5587&sel=day#list"
+    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3080&sel=day#list",
+    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5334&sel=day#list",
+    "http://bestho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5587&sel=day#list"
    ],
    "errors": []
   },
@@ -1397,7 +1393,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5881&sel=day#list"
+    "https://seanme.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5881&sel=day#list"
    ],
    "errors": []
   },
@@ -1424,8 +1420,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.sungryungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=830&sel=day#list",
-    "http://www.sungryungho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6129&sel=day#list"
+    "http://www.sungryungho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=830&sel=day#list",
+    "http://www.sungryungho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6129&sel=day#list"
    ],
    "errors": []
   },
@@ -1483,7 +1479,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://spdman7.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=431&sel=day#list"
+    "https://spdman7.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=431&sel=day#list"
    ],
    "errors": []
   },
@@ -1511,7 +1507,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2810&sel=day#list"
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2810&sel=day#list"
    ],
    "errors": []
   },
@@ -1532,7 +1528,7 @@
    "observed_ship_labels": [],
    "pages_checked": 3,
    "booking_urls": [
-    "http://www.hanaho.net/ship/ajax_get_bk_diary.php?ymd=20261001&fymd=20261009"
+    "http://www.hanaho.net/ship/ajax_get_bk_diary.php?ymd=20261001&fymd=20261024"
    ],
    "errors": []
   },
@@ -1560,7 +1556,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://www.kingdomfish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1165&sel=day#list"
+    "https://www.kingdomfish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1165&sel=day#list"
    ],
    "errors": []
   },
@@ -1590,9 +1586,9 @@
    ],
    "pages_checked": 22,
    "booking_urls": [
-    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=788&sel=day#list",
-    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=799&sel=day#list",
-    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5970&sel=day#list"
+    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=788&sel=day#list",
+    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=799&sel=day#list",
+    "http://www.joeunfish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5970&sel=day#list"
    ],
    "errors": []
   },
@@ -1645,7 +1641,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://hermes.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5579&sel=day#list"
+    "https://hermes.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5579&sel=day#list"
    ],
    "errors": []
   },
@@ -1668,7 +1664,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.captainfishing.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2771&sel=day#list"
+    "http://www.captainfishing.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2771&sel=day#list"
    ],
    "errors": []
   },
@@ -1693,7 +1689,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://baekdusan.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3184&sel=day#list"
+    "https://baekdusan.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3184&sel=day#list"
    ],
    "errors": []
   },
@@ -1722,7 +1718,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.poseidonho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5334&sel=day#list"
+    "http://www.poseidonho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5334&sel=day#list"
    ],
    "errors": []
   },
@@ -1750,7 +1746,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5493&sel=day#list"
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5493&sel=day#list"
    ],
    "errors": []
   },
@@ -1790,9 +1786,9 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3570&sel=day#list",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2955&sel=day#list",
-    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2956&sel=day#list"
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3570&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2955&sel=day#list",
+    "http://www.mscufishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2956&sel=day#list"
    ],
    "errors": []
   },
@@ -1818,8 +1814,8 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://hhj.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4681&sel=day#list",
-    "http://hhj.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5785&sel=day#list"
+    "http://hhj.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4681&sel=day#list",
+    "http://hhj.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5785&sel=day#list"
    ],
    "errors": []
   },
@@ -1842,7 +1838,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.xn--hy1b43dez8adpc.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3394&sel=day#list"
+    "http://www.xn--hy1b43dez8adpc.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3394&sel=day#list"
    ],
    "errors": []
   },
@@ -1866,7 +1862,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4976&sel=day#list"
+    "https://mobum.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4976&sel=day#list"
    ],
    "errors": []
   },
@@ -1889,7 +1885,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6201&sel=day#list"
+    "https://soosungho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6201&sel=day#list"
    ],
    "errors": []
   },
@@ -1954,11 +1950,11 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1449&sel=day#list",
-    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6071&sel=day#list",
-    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6070&sel=day#list",
-    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3862&sel=day#list",
-    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6135&sel=day#list"
+    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1449&sel=day#list",
+    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6071&sel=day#list",
+    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6070&sel=day#list",
+    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3862&sel=day#list",
+    "http://haesin.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6135&sel=day#list"
    ],
    "errors": []
   },
@@ -1981,7 +1977,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6188&sel=day#list"
+    "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6188&sel=day#list"
    ],
    "errors": []
   },
@@ -2008,7 +2004,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://bless.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6314&sel=day#list"
+    "https://bless.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6314&sel=day#list"
    ],
    "errors": []
   },
@@ -2039,9 +2035,9 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3288&sel=day#list",
-    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4675&sel=day#list",
-    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6231&sel=day#list"
+    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3288&sel=day#list",
+    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4675&sel=day#list",
+    "https://blessho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6231&sel=day#list"
    ],
    "errors": []
   },
@@ -2064,7 +2060,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3078&sel=day#list"
+    "http://xn--9y2b21onlp32ab1c.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3078&sel=day#list"
    ],
    "errors": []
   },
@@ -2087,7 +2083,7 @@
    ],
    "pages_checked": 1,
    "booking_urls": [
-    "https://sungnam.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5915&sel=day#list"
+    "https://sungnam.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5915&sel=day#list"
    ],
    "errors": [
     {
@@ -2131,7 +2127,7 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3724&sel=day#list"
+    "https://sinjindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3724&sel=day#list"
    ],
    "errors": []
   },
@@ -2155,7 +2151,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1167&sel=day#list"
+    "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1167&sel=day#list"
    ],
    "errors": []
   },
@@ -2178,7 +2174,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://changdukho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=271&sel=day#list"
+    "http://changdukho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=271&sel=day#list"
    ],
    "errors": [
     {
@@ -2251,7 +2247,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://sangrok.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6167&sel=day#list"
+    "https://sangrok.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6167&sel=day#list"
    ],
    "errors": []
   },
@@ -2275,7 +2271,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6334&sel=day#list"
+    "https://sinju.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6334&sel=day#list"
    ],
    "errors": []
   },
@@ -2298,7 +2294,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.fishing1001.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1443&sel=day#list"
+    "http://www.fishing1001.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1443&sel=day#list"
    ],
    "errors": []
   },
@@ -2321,7 +2317,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4935&sel=day#list"
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4935&sel=day#list"
    ],
    "errors": []
   },
@@ -2346,7 +2342,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://seven.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6335&sel=day#list"
+    "https://seven.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6335&sel=day#list"
    ],
    "errors": []
   },
@@ -2380,10 +2376,10 @@
    ],
    "pages_checked": 24,
    "booking_urls": [
-    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1387&sel=day#list",
-    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1396&sel=day#list",
-    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1388&sel=day#list",
-    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6169&sel=day#list"
+    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1387&sel=day#list",
+    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1396&sel=day#list",
+    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1388&sel=day#list",
+    "https://www.bravofishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6169&sel=day#list"
    ],
    "errors": []
   },
@@ -2406,7 +2402,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://dokhan.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5846&sel=day#list"
+    "https://dokhan.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5846&sel=day#list"
    ],
    "errors": []
   },
@@ -2429,7 +2425,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://www.yhfish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=352&sel=day#list"
+    "https://www.yhfish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=352&sel=day#list"
    ],
    "errors": []
   },
@@ -2452,7 +2448,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.gaiaho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=582&sel=day#list"
+    "http://www.gaiaho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=582&sel=day#list"
    ],
    "errors": []
   },
@@ -2479,8 +2475,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://yongjin3ho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2410&sel=day#list",
-    "https://yongjin3ho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2407&sel=day#list"
+    "https://yongjin3ho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2410&sel=day#list",
+    "https://yongjin3ho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2407&sel=day#list"
    ],
    "errors": []
   },
@@ -2503,7 +2499,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://raraho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3924&sel=day#list"
+    "https://raraho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3924&sel=day#list"
    ],
    "errors": []
   },
@@ -2526,7 +2522,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://xn--lz2bu5mvsau18c.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5300&sel=day#list"
+    "https://xn--lz2bu5mvsau18c.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5300&sel=day#list"
    ],
    "errors": []
   },
@@ -2549,7 +2545,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://araho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5732&sel=day#list"
+    "https://araho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5732&sel=day#list"
    ],
    "errors": []
   },
@@ -2573,7 +2569,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://xn--k1-x87k.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5383&sel=day#list"
+    "https://xn--k1-x87k.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5383&sel=day#list"
    ],
    "errors": []
   },
@@ -2596,7 +2592,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.paradiseho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2113&sel=day#list"
+    "http://www.paradiseho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2113&sel=day#list"
    ],
    "errors": []
   },
@@ -2619,7 +2615,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://www.daegyonaksi.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4519&sel=day#list"
+    "https://www.daegyonaksi.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4519&sel=day#list"
    ],
    "errors": []
   },
@@ -2646,8 +2642,8 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.yhdfish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2441&sel=day#list",
-    "http://www.yhdfish.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5941&sel=day#list"
+    "http://www.yhdfish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2441&sel=day#list",
+    "http://www.yhdfish.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5941&sel=day#list"
    ],
    "errors": []
   },
@@ -2670,14 +2666,14 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.kumkangho.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1839&sel=day#list"
+    "http://www.kumkangho.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1839&sel=day#list"
    ],
    "errors": []
   },
   "youngdong2ho.net": {
-   "status": "ok",
+   "status": "partial",
    "url": "https://www.youngdong2ho.net/index.php?mid=bk",
-   "entries": 4,
+   "entries": 3,
    "boats": [
     "모닝스타호",
     "영동2호",
@@ -2690,7 +2686,9 @@
     "청운호": 298,
     "마린스타호": 314
    },
-   "missing_boats": [],
+   "missing_boats": [
+    "청운호"
+   ],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -2703,10 +2701,9 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=983&sel=day#list",
-    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=977&sel=day#list",
-    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=982&sel=day#list",
-    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6043&sel=day#list"
+    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=983&sel=day#list",
+    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=977&sel=day#list",
+    "https://www.youngdong2ho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=982&sel=day#list"
    ],
    "errors": []
   },
@@ -2739,10 +2736,10 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1677&sel=day#list",
-    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1960&sel=day#list",
-    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5270&sel=day#list",
-    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5818&sel=day#list"
+    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1677&sel=day#list",
+    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1960&sel=day#list",
+    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5270&sel=day#list",
+    "http://www.ybada.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5818&sel=day#list"
    ],
    "errors": []
   },
@@ -2765,7 +2762,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://blackpig.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6130&sel=day#list"
+    "https://blackpig.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6130&sel=day#list"
    ],
    "errors": []
   },
@@ -2789,7 +2786,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://www.taeyeongnaksi.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=933&sel=day#list"
+    "http://www.taeyeongnaksi.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=933&sel=day#list"
    ],
    "errors": []
   },
@@ -2813,7 +2810,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://hsho.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3293&sel=day#list"
+    "https://hsho.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3293&sel=day#list"
    ],
    "errors": []
   },
@@ -2838,7 +2835,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://xn--c20b03d25ji7g57dh16a.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3561&sel=day#list"
+    "http://xn--c20b03d25ji7g57dh16a.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3561&sel=day#list"
    ],
    "errors": []
   },
@@ -2861,7 +2858,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3101&sel=day#list"
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3101&sel=day#list"
    ],
    "errors": []
   },
@@ -2884,7 +2881,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://teamgod.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5295&sel=day#list"
+    "https://teamgod.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5295&sel=day#list"
    ],
    "errors": []
   },
@@ -2908,7 +2905,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://xn--wk0bw08aj4ag56b.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5987&sel=day#list"
+    "https://xn--wk0bw08aj4ag56b.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5987&sel=day#list"
    ],
    "errors": []
   },
@@ -2934,7 +2931,7 @@
    ],
    "pages_checked": 22,
    "booking_urls": [
-    "http://www.chanceho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2283&sel=day#list"
+    "http://www.chanceho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2283&sel=day#list"
    ],
    "errors": []
   },
@@ -2957,7 +2954,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1253&sel=day#list"
+    "http://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1253&sel=day#list"
    ],
    "errors": []
   },
@@ -2982,7 +2979,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.yhdfishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=358&sel=day#list"
+    "http://www.yhdfishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=358&sel=day#list"
    ],
    "errors": []
   },
@@ -3005,7 +3002,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--9t4b21xhpbo1f.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6156&sel=day#list"
+    "http://xn--9t4b21xhpbo1f.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6156&sel=day#list"
    ],
    "errors": []
   },
@@ -3038,10 +3035,10 @@
    ],
    "pages_checked": 25,
    "booking_urls": [
-    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2871&sel=day#list",
-    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2449&sel=day#list",
-    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2450&sel=day#list",
-    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5791&sel=day#list"
+    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2871&sel=day#list",
+    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2449&sel=day#list",
+    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2450&sel=day#list",
+    "http://www.shipowner.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5791&sel=day#list"
    ],
    "errors": []
   },
@@ -3085,7 +3082,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4051&sel=day#list"
+    "http://xn--vk1bno833a20equbi60c.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4051&sel=day#list"
    ],
    "errors": []
   },
@@ -3110,7 +3107,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.seohaenaksi.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2425&sel=day#list"
+    "http://www.seohaenaksi.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2425&sel=day#list"
    ],
    "errors": []
   },
@@ -3133,7 +3130,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--c20b03d25ji7g57dltdv3dor3b.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3959&sel=day#list"
+    "http://xn--c20b03d25ji7g57dltdv3dor3b.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3959&sel=day#list"
    ],
    "errors": []
   },
@@ -3156,7 +3153,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.irisho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1545&sel=day#list"
+    "http://www.irisho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1545&sel=day#list"
    ],
    "errors": []
   },
@@ -3179,7 +3176,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=176&sel=day#list"
+    "http://www.niceho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=176&sel=day#list"
    ],
    "errors": []
   },
@@ -3226,7 +3223,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://vipfishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4684&sel=day#list"
+    "http://vipfishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4684&sel=day#list"
    ],
    "errors": []
   },
@@ -3249,7 +3246,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3417&sel=day#list"
+    "http://bravoho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3417&sel=day#list"
    ],
    "errors": []
   },
@@ -3272,7 +3269,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://www.xn--1-v78ex87bqjp.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=981&sel=day#list"
+    "https://www.xn--1-v78ex87bqjp.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=981&sel=day#list"
    ],
    "errors": []
   },
@@ -3295,7 +3292,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://xn--2f5b291a.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3904&sel=day#list"
+    "http://xn--2f5b291a.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3904&sel=day#list"
    ],
    "errors": []
   },
@@ -3318,7 +3315,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://susung.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3277&sel=day#list"
+    "https://susung.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3277&sel=day#list"
    ],
    "errors": []
   },
@@ -3342,7 +3339,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://sindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6027&sel=day#list"
+    "https://sindo.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6027&sel=day#list"
    ],
    "errors": []
   },
@@ -3365,7 +3362,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=225&sel=day#list"
+    "http://www.cruiseho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=225&sel=day#list"
    ],
    "errors": []
   },
@@ -3389,7 +3386,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://xn--od1b68lz1wi4c.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6149&sel=day#list"
+    "http://xn--od1b68lz1wi4c.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6149&sel=day#list"
    ],
    "errors": []
   },
@@ -3414,7 +3411,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://legend.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1289&sel=day#list"
+    "http://legend.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1289&sel=day#list"
    ],
    "errors": []
   },
@@ -3438,7 +3435,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://www.lightho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=765&sel=day#list"
+    "https://www.lightho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=765&sel=day#list"
    ],
    "errors": []
   },
@@ -3461,7 +3458,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.xn--oi2bn5b095b4mc.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1264&sel=day#list"
+    "http://www.xn--oi2bn5b095b4mc.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1264&sel=day#list"
    ],
    "errors": []
   },
@@ -3521,9 +3518,9 @@
    ],
    "pages_checked": 23,
    "booking_urls": [
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6078&sel=day#list",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5628&sel=day#list",
-    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6372&sel=day#list"
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6078&sel=day#list",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5628&sel=day#list",
+    "https://aceho.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6372&sel=day#list"
    ],
    "errors": []
   },
@@ -3546,7 +3543,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://www.xn--hq1b31ko5fzpfdsxrtb.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1685&sel=day#list"
+    "http://www.xn--hq1b31ko5fzpfdsxrtb.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1685&sel=day#list"
    ],
    "errors": []
   },
@@ -3569,7 +3566,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.xn--3i4bl3g39q.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3346&sel=day#list"
+    "http://www.xn--3i4bl3g39q.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3346&sel=day#list"
    ],
    "errors": []
   },
@@ -3595,18 +3592,16 @@
    "errors": []
   },
   "xn--2j1b67o1mijvgr1m.com": {
-   "status": "no_data",
+   "status": "ok",
    "url": "http://xn--2j1b67o1mijvgr1m.com/index.php?mid=bk",
-   "entries": 0,
+   "entries": 1,
    "boats": [
     "오천 바다호"
    ],
    "boat_ids": {
     "오천 바다호": 334
    },
-   "missing_boats": [
-    "오천 바다호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -3614,7 +3609,9 @@
     "오천  바다호"
    ],
    "pages_checked": 19,
-   "booking_urls": [],
+   "booking_urls": [
+    "http://xn--2j1b67o1mijvgr1m.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4097&sel=day#list"
+   ],
    "errors": []
   },
   "youngjinho.net": {
@@ -3636,7 +3633,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "http://www.youngjinho.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=801&sel=day#list"
+    "http://www.youngjinho.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=801&sel=day#list"
    ],
    "errors": []
   },
@@ -3660,7 +3657,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://xn--vk1b951az7etxm.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4412&sel=day#list"
+    "https://xn--vk1b951az7etxm.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4412&sel=day#list"
    ],
    "errors": []
   },
@@ -3702,10 +3699,10 @@
    ],
    "pages_checked": 26,
    "booking_urls": [
-    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1538&sel=day#list",
-    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=543&sel=day#list",
-    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2170&sel=day#list",
-    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5376&sel=day#list"
+    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1538&sel=day#list",
+    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=543&sel=day#list",
+    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2170&sel=day#list",
+    "https://www.muchangpofishing.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5376&sel=day#list"
    ],
    "errors": []
   },
@@ -3728,7 +3725,7 @@
    ],
    "pages_checked": 4,
    "booking_urls": [
-    "http://www.hitho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3857&sel=day#list"
+    "http://www.hitho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3857&sel=day#list"
    ],
    "errors": []
   },
@@ -3751,7 +3748,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://newsunnyho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2165&sel=day#list"
+    "http://newsunnyho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2165&sel=day#list"
    ],
    "errors": []
   },
@@ -3788,11 +3785,11 @@
    ],
    "pages_checked": 24,
    "booking_urls": [
-    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1325&sel=day#list",
-    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1341&sel=day#list",
-    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6394&sel=day#list",
-    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1329&sel=day#list",
-    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=6055&sel=day#list"
+    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1325&sel=day#list",
+    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1341&sel=day#list",
+    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6394&sel=day#list",
+    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1329&sel=day#list",
+    "https://www.muchangpo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6055&sel=day#list"
    ],
    "errors": []
   },
@@ -3817,7 +3814,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3387&sel=day#list"
+    "https://gunmo.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3387&sel=day#list"
    ],
    "errors": []
   },
@@ -3855,10 +3852,10 @@
    ],
    "pages_checked": 26,
    "booking_urls": [
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2157&sel=day#list",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2167&sel=day#list",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3902&sel=day#list",
-    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=2158&sel=day#list"
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2157&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2167&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=3902&sel=day#list",
+    "http://www.sorafishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=2158&sel=day#list"
    ],
    "errors": []
   },
@@ -3885,7 +3882,7 @@
    ],
    "pages_checked": 22,
    "booking_urls": [
-    "http://www.kingfishing.net/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1413&sel=day#list"
+    "http://www.kingfishing.net/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1413&sel=day#list"
    ],
    "errors": []
   },
@@ -3911,7 +3908,7 @@
    ],
    "pages_checked": 22,
    "booking_urls": [
-    "http://www.apacheho.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=252&sel=day#list"
+    "http://www.apacheho.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=252&sel=day#list"
    ],
    "errors": []
   },
@@ -3935,7 +3932,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://mobok.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4971&sel=day#list"
+    "https://mobok.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4971&sel=day#list"
    ],
    "errors": []
   },
@@ -3961,7 +3958,7 @@
    ],
    "pages_checked": 21,
    "booking_urls": [
-    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1572&sel=day#list"
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1572&sel=day#list"
    ],
    "errors": []
   },
@@ -3984,7 +3981,7 @@
    ],
    "pages_checked": 19,
    "booking_urls": [
-    "https://xn--pq1ba055x.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=5962&sel=day#list"
+    "https://xn--pq1ba055x.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5962&sel=day#list"
    ],
    "errors": []
   },
@@ -4007,7 +4004,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4935&sel=day#list"
+    "https://mpoint.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4935&sel=day#list"
    ],
    "errors": []
   },
@@ -4032,7 +4029,7 @@
    ],
    "pages_checked": 22,
    "booking_urls": [
-    "http://www.muchangpofishing.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1595&sel=day#list"
+    "http://www.muchangpofishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1595&sel=day#list"
    ],
    "errors": []
   },
@@ -4056,7 +4053,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=895&sel=day#list"
+    "http://www.mbadafish.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=895&sel=day#list"
    ],
    "errors": []
   },
@@ -4080,7 +4077,7 @@
    ],
    "pages_checked": 20,
    "booking_urls": [
-    "https://yongsa.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=4606&sel=day#list"
+    "https://yongsa.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=4606&sel=day#list"
    ],
    "errors": []
   },
