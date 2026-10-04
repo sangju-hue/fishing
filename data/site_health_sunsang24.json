@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T21:39:12+09:00",
+ "checked_at": "2026-10-04T21:42:19+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -354,38 +354,6 @@
    "capacity_rejected": [],
    "errors": []
   },
-  "fishingfin": {
-   "status": "no_data",
-   "url": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
-   "entries": 0,
-   "boats": [
-    "해성호"
-   ],
-   "boat_ids": {
-    "해성호": 49
-   },
-   "missing_boats": [
-    "해성호"
-   ],
-   "observed_ship_labels": [],
-   "all_ship_labels": [],
-   "selectable_ship_labels": [
-    "돈지호",
-    "엠퍼러호",
-    "오르카호",
-    "왕선장호",
-    "유로파호",
-    "입질대박호",
-    "제비호",
-    "태평호",
-    "피싱핀",
-    "해성호",
-    "해운호"
-   ],
-   "excluded_fish": {},
-   "capacity_rejected": [],
-   "errors": []
-  },
   "yejiqueen": {
    "status": "ok",
    "url": "https://yejiqueen.sunsang24.com/ship/schedule_fleet",
@@ -426,6 +394,38 @@
     "제비호"
    ],
    "selectable_ship_labels": [],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "fishingfin": {
+   "status": "no_data",
+   "url": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
+   "entries": 0,
+   "boats": [
+    "해성호"
+   ],
+   "boat_ids": {
+    "해성호": 49
+   },
+   "missing_boats": [
+    "해성호"
+   ],
+   "observed_ship_labels": [],
+   "all_ship_labels": [],
+   "selectable_ship_labels": [
+    "돈지호",
+    "엠퍼러호",
+    "오르카호",
+    "왕선장호",
+    "유로파호",
+    "입질대박호",
+    "제비호",
+    "태평호",
+    "피싱핀",
+    "해성호",
+    "해운호"
+   ],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
