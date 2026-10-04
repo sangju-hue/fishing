@@ -103,6 +103,7 @@
     <div class="field"><label for="portFilter">항구</label><select id="portFilter"><option value="">전체 항구</option></select></div>
   </section>
 
+  <div id="rangeResults" hidden style="margin:0 0 12px;color:var(--sea)"><span id="rangeResultsText"></span> <button id="clearRangeResults" class="channel" type="button">전체 목록 보기</button></div>
   <section aria-label="월간 예약 현황">
     <nav class="month-filter" aria-label="표시할 월 선택">
       <button type="button" data-month="0" class="active" aria-pressed="true">전체</button>
@@ -209,6 +210,7 @@ const koreaToday=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"nu
 const seasonYear=Number(koreaToday.slice(0,4))+(Number(koreaToday.slice(5,7))===12?1:0);
 let selectedDate=koreaToday>=`${seasonYear}-09-01`&&koreaToday<=`${seasonYear}-11-30`?koreaToday:`${seasonYear}-09-01`;
 let activeMonth=0;
+let rangeResultFilter=null,rangeAvailableIds=new Set();
 const selectedBoatIds=new Set();
 const alertDates=new Set();
 let alertFeedback="";
@@ -294,7 +296,7 @@ function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
   const port=$("#portFilter").value;
   const text=[boat.name,boat.operator,boat.region,normalizePort(boat.port),boat.notes].filter(Boolean).join(" ").toLowerCase();
-  return (!q||text.includes(q))&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
+  return (!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&(!q||text.includes(q))&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
 }
 function matrixOperatorName(boat){return boat.operator||boat.name}
 function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
@@ -391,12 +393,16 @@ function allDates(){
     const total=new Date(seasonYear,month+1,0).getDate();
     for(let d=1;d<=total;d++)dates.push({key:dateKey(seasonYear,month,d),month,d,dow:new Date(seasonYear,month,d).getDay()});
   }
+  if(rangeResultFilter)return dates.filter(item=>item.key>=rangeResultFilter[0]&&item.key<=rangeResultFilter[1]);
   if(activeMonth===-1)return dates.filter(item=>item.month+1>=10);
   return activeMonth?dates.filter(item=>item.month+1===activeMonth):dates;
 }
 function renderMatrix(){
-  const dates=allDates(),groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
-  const monthGroups=activeMonth===-1?[{label:"10월",days:31},{label:"11월",days:30}]:activeMonth?[{label:`${activeMonth}월`,days:dates.length}]:[{label:"9월",days:30},{label:"10월",days:31},{label:"11월",days:30}];
+  const dates=allDates();
+  if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
+  const groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
+  const monthGroups=[];
+  dates.forEach(item=>{const label=`${item.month+1}월`,last=monthGroups.at(-1);if(last?.label===label)last.days++;else monthGroups.push({label,days:1})});
   let html='<thead><tr><th class="boat-col" scope="col" rowspan="2">선사 · 배 · 항구</th>';
   monthGroups.forEach(group=>html+=`<th class="month-group" scope="colgroup" colspan="${group.days}">${group.label}</th>`);
   html+='</tr><tr>';
@@ -432,7 +438,7 @@ function renderMatrix(){
   html+='</tbody>';
   $("#matrixTable").innerHTML=html;
   $("#matrixTable").style.setProperty("--date-count",dates.length);
-  const range=activeMonth===-1?"10월 1일–11월 30일, 61일":activeMonth?`${activeMonth}월 1일–${activeMonth}월 ${dates.length}일, ${dates.length}일`:`9월 1일–11월 30일, 91일`;
+  const range=rangeResultFilter?`${rangeResultFilter[0]}~${rangeResultFilter[1]}, ${dates.length}일 · 빈자리 있는 배만`:activeMonth===-1?"10월 1일–11월 30일, 61일":activeMonth?`${activeMonth}월 1일–${activeMonth}월 ${dates.length}일, ${dates.length}일`:`9월 1일–11월 30일, 91일`;
   $("#matrixCount").innerHTML=`<b>${boats.length}척</b> · ${groups.length}개 선사 그룹 · ${range} 현황`;
   document.querySelectorAll(".date-head[data-date]").forEach(btn=>btn.addEventListener("click",()=>selectDate(btn.dataset.date)));
   document.querySelectorAll("[data-alert-date]").forEach(input=>input.addEventListener("change",()=>toggleAlertDate(input)));
@@ -551,7 +557,10 @@ function initPorts(){
   });
   if(otherCount)$("#portFilter").insertAdjacentHTML("beforeend",`<option value="__other__">기타 (${otherCount})</option>`);
 }
+function clearRangeResultFilter(){rangeResultFilter=null;rangeAvailableIds.clear();$("#rangeResults").hidden=true}
+$("#clearRangeResults").addEventListener("click",()=>{clearRangeResultFilter();renderMatrix();renderCards();renderDirectory();renderAlertBar()});
 document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListener("click",()=>{
+  clearRangeResultFilter();
   activeMonth=Number(btn.dataset.month);
   document.querySelectorAll(".month-filter button").forEach(item=>{const on=item===btn;item.classList.toggle("active",on);item.setAttribute("aria-pressed",String(on))});
   if(activeMonth&&Number(selectedDate.slice(5,7))!==activeMonth)selectedDate=`${seasonYear}-${pad(activeMonth)}-01`;
@@ -632,14 +641,34 @@ speciesTabs.forEach((tab,index)=>{
     $("#scrapePause").disabled=s.paused;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
     const rf=$("#rngFrom"),rt=$("#rngTo"),yr=(s.last_started_at||new Date().toISOString()).slice(0,4),today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
     rf.min=rt.min=today>`${yr}-09-01`?today:`${yr}-09-01`;rf.max=rt.max=`${yr}-11-30`;
-    if(!rf.value)rf.value=rf.min;if(!rt.value)rt.value=rt.max;
+    if(!rf.value)rf.value=today;if(!rt.value)rt.value=today;
     if(s.pending_range)$("#scrapeSettingStatus").textContent+=` · 범위 수집 대기 중(${s.pending_range[0]}~${s.pending_range[1]})`;
     if(s.running&&s.current_mode==="range"&&s.active_range)$("#scrapeSettingStatus").textContent+=` · 범위 ${s.active_range[0]}~${s.active_range[1]}`;
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     renderPlan(s.plan);
   }
+  let observedFinish=null,rangeResultsLoading=false;
   async function refreshScraper(){
-    try{const s=await scraperFetch("/settings");scraperCsrf=s.csrf_token;renderScraper(s)}
+    try{
+      const s=await scraperFetch("/settings");scraperCsrf=s.csrf_token;renderScraper(s);
+      if(observedFinish===null){observedFinish=s.last_finished_at||"";return}
+      if(s.last_finished_at&&s.last_finished_at!==observedFinish){
+        if(s.last_mode==="range"&&s.last_range&&!rangeResultsLoading){
+          rangeResultsLoading=true;
+          try{
+            await loadData();
+            rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
+            $("#search").value="";$("#portFilter").value="";
+            document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
+            $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · 빈자리 있는 배만 표시${s.last_result==="failed"?" (일부 수집 실패)":""}`;
+            $("#rangeResults").hidden=false;
+            renderMatrix();renderCards();renderDirectory();renderAlertBar();
+            $("#matrixWrap").scrollLeft=0;$("#matrixWrap").scrollTop=0;
+          }finally{rangeResultsLoading=false}
+        }
+        observedFinish=s.last_finished_at;
+      }
+    }
     catch(e){$("#scrapeState").className="scrape-state paused";$("#scrapeState").textContent="연결 안 됨";$("#scrapeSettingStatus").textContent="맥 수집기에 연결할 수 없습니다. 수집기 실행 상태를 확인해 주세요."}
   }
   async function scraperControl(action,button){
