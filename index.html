@@ -248,7 +248,7 @@ function statusRow(boat,date=selectedDate){
   return null;
 }
 function statusInfo(boat,date=selectedDate){
-  if(boat.booking_notice)return {cls:"maintenance",short:"안내",text:"⚫ "+boat.booking_notice};
+  if(boat.booking_notice)return {cls:"maintenance",short:"점검",text:"⚫ "+boat.booking_notice};
   if(DATE_NOTICES[boat.bid]?.[date])return {cls:"conditional",short:"유동",text:"🟠 "+DATE_NOTICES[boat.bid][date]};
   const row=statusRow(boat,date);
   if(!row) {
@@ -419,6 +419,7 @@ function renderMatrix(){
       const boatLabel=`<span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}${boatUrl?'':' · 홈페이지 미확인'}${boat.collection_priority==='deferred_daily'?' · 일별 조회 보류':''}</span>`;
       const boatControl=boatUrl?`<a class="boat-selector" href="${escapeHtml(boatUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(boat.name)} 홈페이지 열기">${boatLabel}</a>`:`<span class="boat-selector">${boatLabel}</span>`;
       html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><div class="boat-controls${isSelected?' is-selected':''}"><input type="checkbox" data-select-boat="${boat.bid}" ${isSelected?'checked':''} aria-label="${escapeHtml(boat.name)} 선택">${boatControl}</div></th>`;
+      if(boat.booking_notice){html+=`<td colspan="${dates.length}" class="booking-notice"><span class="booking-notice-text">📢 ${escapeHtml(boat.booking_notice)}</span></td></tr>`;return;}
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
