@@ -23,3 +23,6 @@ scrape_settings.json
 scrape.log
 diagnostics/
 kumkang.html
+
+# ntfy private key, owners, topics and notification history
+.ntfy/

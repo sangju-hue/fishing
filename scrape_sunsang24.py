@@ -171,6 +171,7 @@ def main():
     parser.add_argument('--year',type=int)
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
     parser.add_argument('--subdomains',nargs='*',help='점검할 선상24 선단 (생략하면 전체)')
+    parser.add_argument("--boat-ids",nargs="+",type=int,help="지정 선박만 수집")
     parser.add_argument("--ports",nargs="+",help="수집할 항구 (생략하면 전체)")
     args=parser.parse_args()
     now=datetime.now(KST)
@@ -181,6 +182,7 @@ def main():
     groups={}
     for b in boats:
         if args.ports and b.get("port") not in args.ports:continue
+        if args.boat_ids and b["bid"] not in args.boat_ids:continue
         if b.get('canonical_bid') is not None:continue
         sub=subdomain(b.get('channels',{}).get('sunsang24'))
         if sub:groups.setdefault(sub,[]).append(b)
@@ -241,7 +243,7 @@ def main():
         return group,results,errors,sub,health
     total=0
     health_path=os.path.join(DATA,'site_health_sunsang24.json')
-    try:health=json.load(open(health_path,encoding='utf-8')) if args.subdomains or args.ports else {}
+    try:health=json.load(open(health_path,encoding='utf-8')) if args.subdomains or args.ports or args.boat_ids else {}
     except (OSError,ValueError):health={}
     health.update(checked_at=checked_at,queried_range={'from':first.isoformat(),'to':end.isoformat()})
     health.setdefault('sites',{})

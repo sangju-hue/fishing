@@ -56,6 +56,9 @@ class Scheduler:
         for key, (lo, hi) in LIMITS.items():
             v = saved.get(key, DEFAULTS[key])
             self.cfg[key] = v if isinstance(v, int) and not isinstance(v, bool) and lo <= v <= hi else DEFAULTS[key]
+        self.alerts = None
+        self.next_alerts = time.monotonic()
+        self.active_boat_ids = []
         self.manual_pending = False
         self.next_collection_kind = None
         self.pending_range_ports = []
@@ -96,6 +99,7 @@ class Scheduler:
                         next_slow_in=None if self.paused else max(0, round(self.next_slow - now)))
         snap['progress'] = read_json(PROGRESS, None) if snap['running'] else None
         snap['plan'] = read_json(PLAN, None)
+        if self.alerts:snap['ntfy']=self.alerts.snapshot()
         return snap
 
     def control(self, action, values=None):
@@ -164,6 +168,7 @@ class Scheduler:
 
     def due_mode(self):
         with self.lock:
+            self.active_boat_ids = []
             if self.manual_pending:
                 self.manual_pending = False
                 self.next_collection_kind = 'full_once'
@@ -174,6 +179,16 @@ class Scheduler:
                 self.pending_range_ports = []
                 self.next_collection_kind = 'range_once'
                 return 'range'
+            self.active_boat_ids = []
+            if self.alerts and time.monotonic() >= self.next_alerts:
+                ids, dates = self.alerts.targets()
+                self.next_alerts = time.monotonic() + 300
+                if ids and dates:
+                    self.active_boat_ids = ids
+                    self.active_range = [dates[0], dates[-1]]
+                    self.active_range_ports = []
+                    self.next_collection_kind = 'alerts_auto'
+                    return 'range'
             if self.auto_range:
                 _, first, last = season_window(datetime.now(KST))
                 start, end = max(self.auto_range[0], first.isoformat()), min(self.auto_range[1], last.isoformat())
@@ -221,6 +236,8 @@ class Scheduler:
                 cmd += ['--from-date', self.active_range[0], '--to-date', self.active_range[1]]
                 if self.active_range_ports:
                     cmd += ['--ports', *self.active_range_ports]
+                if self.active_boat_ids:
+                    cmd += ['--boat-ids', *map(str, self.active_boat_ids)]
             result = subprocess.run(cmd, cwd=BASE)
             outcome = 'ok' if result.returncode == 0 else 'failed'
         except Exception as e:
@@ -258,6 +275,8 @@ class Scheduler:
                     delay = None
                 else:
                     delay = max(0.5, min(self.next_fast, self.next_slow) - time.monotonic())
+            if self.alerts and self.alerts.targets()[0]:
+                delay=min(delay, max(0.5,self.next_alerts-time.monotonic())) if delay is not None else max(0.5,self.next_alerts-time.monotonic())
             self.wake.wait(delay)
             self.wake.clear()
 
@@ -301,16 +320,24 @@ def handler(scheduler, port):
         def do_POST(self):
             if not self.trusted() or self.headers.get('X-CSRF-Token') != scheduler.csrf:
                 return self.send(403, {'error': '허용되지 않은 요청'})
-            if self.path != '/control':
+            if self.path not in ('/control', '/alerts'):
                 return self.send(404, {'error': '없음'})
             try:
                 size = int(self.headers.get('Content-Length', '0'))
                 if not 0 < size <= 1024:
                     raise ValueError('잘못된 요청')
                 body = json.loads(self.rfile.read(size))
-                scheduler.control(body['action'], body)
-            except (ValueError, KeyError):
-                return self.send(400, {'error': 'pause, resume, run, config(범위 안의 정수) 만 지원합니다'})
+                if self.path == '/alerts':
+                    if not scheduler.alerts:raise ValueError('알림 연결 준비 중')
+                    if body['action']=='add':scheduler.alerts.register(body)
+                    elif body['action']=='remove':scheduler.alerts.remove(body)
+                    else:scheduler.alerts.admin(body['action'],body.get('id'))
+                    scheduler.wake.set()
+                else:scheduler.control(body['action'], body)
+            except (ValueError, KeyError) as e:
+                return self.send(400, {'error':str(e)})
+            except Exception:
+                return self.send(502, {'error':'ntfy 전송 실패: 연결 및 토픽 권한 확인'})
             self.send(200, scheduler.snapshot())
 
         def log_message(self, fmt, *args):
@@ -326,6 +353,12 @@ def main():
     args = p.parse_args()
     s = Scheduler()
     s.save_settings()
+    from ntfy_alerts import Alerts
+    s.alerts = Alerts(BASE)
+    def alert_changed():
+        s.next_alerts=time.monotonic();s.wake.set()
+    s.alerts.on_change=alert_changed
+    threading.Thread(target=s.alerts.loop, daemon=True).start()
     server = ThreadingHTTPServer(('127.0.0.1', args.port), handler(s, args.port))
     if not args.settings_only:
         threading.Thread(target=s.loop, daemon=True).start()

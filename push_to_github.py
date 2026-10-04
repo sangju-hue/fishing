@@ -41,7 +41,7 @@ def publish_files(files, message):
     old={x['path']:x['sha'] for x in call("GET","/git/trees/"+base_tree+"?recursive=1")['tree']}
     entries=[]
     for remote,local in files.items():
-        if remote=='.github_token' or remote.startswith('diagnostics/') or '..' in remote.split('/'):
+        if remote=='.github_token' or remote.startswith('.ntfy/') or remote=='scrape_settings.json' or remote.startswith('diagnostics/') or '..' in remote.split('/'):
             raise ValueError('업로드 대상 경로 오류')
         with open(local,'rb') as f:raw=f.read()
         sha=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()

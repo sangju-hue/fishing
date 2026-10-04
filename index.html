@@ -61,6 +61,12 @@
     .collection-floating{position:fixed;top:12px;left:50%;transform:translateX(-50%);z-index:1000;max-width:calc(100% - 32px);box-sizing:border-box;padding:10px 18px;border:1px solid #49becb;border-radius:10px;background:#123541;color:#fff;text-decoration:none;box-shadow:0 4px 14px #0006;font-weight:700}
     .collection-floating[hidden]{display:none}
     @media(max-width:850px){.collection-grid{grid-template-columns:1fr}}
+    .ntfy-settings{margin:0 0 18px;padding:18px;border:1px solid #346a72;border-radius:12px;background:var(--surface);font-size:13px}
+    .ntfy-settings h2{font-size:20px;margin:0 0 12px}.ntfy-settings p{color:var(--muted);line-height:1.6}.ntfy-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .ntfy-form label{display:grid;gap:6px;color:var(--muted)}.ntfy-settings input,.ntfy-settings select{box-sizing:border-box;width:100%;padding:9px;border:1px solid var(--line);border-radius:7px;color:var(--text);background:#10232e;min-width:0}
+    .ntfy-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.ntfy-form .ntfy-actions{grid-column:1/-1}.ntfy-settings button,.ntfy-settings a{padding:8px 10px;border:1px solid var(--line);border-radius:7px;background:#10232e;color:var(--text);font-size:12px;text-decoration:none;cursor:pointer}.ntfy-settings button:disabled{opacity:.5}
+    .ntfy-row{padding:12px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;overflow-wrap:anywhere}.ntfy-settings summary{cursor:pointer;font-weight:700;padding:8px 0}#ntfyMessage{color:var(--sea)}#ntfyAdmin[hidden]{display:none}
+    @media(max-width:620px){.ntfy-form{grid-template-columns:1fr}.ntfy-row{align-items:stretch;flex-direction:column}}
   </style>
 </head>
 <body>
@@ -117,6 +123,23 @@
       <p id="scrapeSettingStatus" role="status">맥 수집기에 연결 중…</p>
     </section>
     <p id="collectionSettingsHelp" hidden>날짜 1~60일, 분 1~120분. 설정 변경은 다음 회차부터 적용됩니다. 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
+  </section>
+  <section id="ntfySettings" class="ntfy-settings" aria-label="빈자리 알림 설정">
+    <h2>🔔 빈자리 알림 설정</h2>
+    <p>날짜와 배를 등록하고, 휴대폰 ntfy 앱에서 아래 서버·토픽을 동일하게 구독하세요. 사람마다 다른 토픽을 사용합니다.</p>
+    <form id="ntfyForm" class="ntfy-form">
+      <label>이름(구분용)<input id="ntfyLabel" maxlength="16" placeholder="예: 내 알림"></label>
+      <label>날짜<input id="ntfyDate" type="date" required></label>
+      <label>항구<select id="ntfyPort" required></select></label>
+      <label>배<select id="ntfyBoat" required></select></label>
+      <label>ntfy 서버<input value="https://ntfy.sh" readonly aria-label="ntfy 서버"></label>
+      <label>나의 토픽<input id="ntfyTopic" required minlength="16" maxlength="64" pattern="[A-Za-z0-9_-]{16,64}" autocomplete="off"></label>
+      <div class="ntfy-actions"><button id="ntfyNewTopic" type="button">새 토픽 생성</button><button id="ntfyCopy" type="button">토픽 복사</button><a id="ntfySubscribe" target="_blank" rel="noopener noreferrer">ntfy에서 구독</a><button id="ntfyRegister" type="submit">빈자리 알림 등록</button></div>
+    </form>
+    <p id="ntfyMessage" role="status">알림 연결 확인 중…</p>
+    <p>등록 시 이미 빈자리가 있어도 한 번 알립니다. 같은 빈자리에는 중복 알림을 보내지 않고, 다시 마감 후 자리가 나면 재알림합니다. 폰 앱에서 토픽 구독을 완료해야 받을 수 있습니다. 토픽은 다른 사람에게 공개하지 마세요.</p>
+    <details><summary>이 브라우저에서 신청한 알림</summary><div id="ntfyMine"></div></details>
+    <details id="ntfyAdmin" hidden><summary>맥 전체 알림 운영 현황</summary><p id="ntfyAdminStatus"></p><div id="ntfyAdminRows"></div></details>
   </section>
   <a id="collectionFloating" class="collection-floating" href="#collectionProgress" hidden aria-label="수집 진행 상황으로 이동"></a>
   <script>
@@ -636,11 +659,82 @@ speciesTabs.forEach((tab,index)=>{
   });
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
+/* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[];
+const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
+function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,mine:ntfyMine}))}catch(e){}}
+function ntfyLink(){const topic=document.querySelector('#ntfyTopic').value;document.querySelector('#ntfySubscribe').href=`https://ntfy.sh/${encodeURIComponent(topic)}`;ntfyRemember()}
+function ntfyMessage(text){document.querySelector('#ntfyMessage').textContent=text}
+function ntfyBoatOptions(){
+  const port=document.querySelector('#ntfyPort').value;
+  document.querySelector('#ntfyBoat').innerHTML=BOATS.filter(b=>normalizePort(b.port)===port&&!b.canonical_bid).sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(b=>`<option value="${b.bid}">${escapeHtml(b.name)}</option>`).join('');
+}
+function ntfyRenderMine(){
+  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${escapeHtml(r.boat)}<br>토픽: ${escapeHtml(r.topic)} · ${escapeHtml(r.state||'신청 전달됨')}</span><button type="button" data-ntfy-remove="${i}">해제 신청</button></div>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
+}
+async function ntfyRequest(payload){
+  if(ntfyLocal){
+    if(!scraperCsrf)await refreshScraper();
+    const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({...payload,action:payload.action==='delete'?'remove':payload.action})});
+    renderNtfyAdmin(s.ntfy);return true;
+  }
+  if(!ntfyConfig)throw Error('알림 연결 설정을 불러오지 못했습니다. 새로고침해 주세요.');
+  const key=await crypto.subtle.importKey('spki',Uint8Array.from(atob(ntfyConfig.public_key),c=>c.charCodeAt(0)),{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
+  const raw=new TextEncoder().encode(JSON.stringify(payload));
+  if(raw.length>318)throw Error('이름 또는 토픽이 너무 깁니다. 짧게 입력해 주세요.');
+  const encrypted=await crypto.subtle.encrypt({name:'RSA-OAEP'},key,raw);
+  const message='fish1:'+btoa(String.fromCharCode(...new Uint8Array(encrypted)));
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
+  try{
+    const response=await fetch(`${ntfyConfig.server}/${ntfyConfig.inbox}`,{method:'POST',headers:{'Content-Type':'text/plain'},body:message,signal:controller.signal});
+    if(!response.ok)throw Error(`신청 전달 실패 (${response.status}). 잠시 후 다시 시도해 주세요.`);
+  }finally{clearTimeout(timer)}
+  return false;
+}
+function renderNtfyAdmin(state){
+  if(!ntfyLocal)return;
+  document.querySelector('#ntfyAdmin').hidden=false;
+  if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
+  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 ${state.check_minutes}분마다 수집${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
+  const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
+  const rows=state.subscriptions||[];
+  const markup=rows.length?rows.map(r=>`<div class="ntfy-row"><span><strong>${escapeHtml(r.label||'사용자')} · ${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${escapeHtml(r.boat)}</strong><br>토픽: ${escapeHtml(r.topic)} · ${r.enabled?'켜짐':'중지'} · ${escapeHtml(status[r.last_status]||r.last_status)}${r.remaining!=null?' / '+r.remaining+'석':''}<br>확인: ${escapeHtml(r.last_checked_at||'-')} · 원본 수집: ${escapeHtml(r.source_checked_at||'-')}<br>최근 전송: ${escapeHtml(r.last_sent_at||'-')}${r.error?'<br>'+escapeHtml(r.error):''}</span><div class="ntfy-actions"><button type="button" data-ntfy-action="toggle" data-ntfy-id="${r.id}">${r.enabled?'중지':'재개'}</button><button type="button" data-ntfy-action="test" data-ntfy-id="${r.id}">테스트 알림</button><button type="button" data-ntfy-action="delete" data-ntfy-id="${r.id}">삭제</button></div></div>`).join(''):'등록된 알림이 없습니다.';
+  if(document.querySelector('#ntfyAdminRows').innerHTML!==markup)document.querySelector('#ntfyAdminRows').innerHTML=markup;
+  ntfyMine.forEach(r=>{const actual=rows.find(x=>x.topic===r.topic&&x.bid===r.bid&&x.date===r.date);if(actual)r.state=actual.enabled?'맥 등록 완료':'중지'});ntfyRenderMine();
+}
+async function initNtfy(){
+  try{const saved=JSON.parse(localStorage.getItem('fishingNtfy')||'{}');ntfyOwner=saved.owner||ntfyRandom();ntfyMine=saved.mine||[];document.querySelector('#ntfyTopic').value=saved.topic||'fishing-'+ntfyRandom()}catch(e){ntfyOwner=ntfyRandom();document.querySelector('#ntfyTopic').value='fishing-'+ntfyRandom()}
+  const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),year=today.slice(0,4),d=document.querySelector('#ntfyDate');d.value=today;d.min=today>`${year}-09-01`?today:`${year}-09-01`;d.max=`${year}-11-30`;
+  const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
+  document.querySelector('#ntfyPort').innerHTML=ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
+  ntfyBoatOptions();ntfyLink();ntfyRenderMine();
+  document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
+  document.querySelector('#ntfyTopic').addEventListener('input',ntfyLink);
+  document.querySelector('#ntfyNewTopic').addEventListener('click',()=>{document.querySelector('#ntfyTopic').value='fishing-'+ntfyRandom();ntfyLink();ntfyMessage('새 토픽을 만들었습니다. 폰 ntfy 앱에서도 새 토픽을 구독해 주세요.')});
+  document.querySelector('#ntfyCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.querySelector('#ntfyTopic').value);ntfyMessage('토픽을 복사했습니다. 폰 ntfy 앱에서 그대로 구독하세요.')}catch(e){ntfyMessage('토픽 입력란의 값을 직접 복사해 주세요.')}});
+  document.querySelector('#ntfyForm').addEventListener('submit',async e=>{
+    e.preventDefault();const bid=Number(document.querySelector('#ntfyBoat').value),boat=BOATS.find(b=>b.bid===bid),topic=document.querySelector('#ntfyTopic').value;
+    const payload={action:'add',owner:ntfyOwner,bid,date:d.value,topic,label:document.querySelector('#ntfyLabel').value.trim()};
+    const button=document.querySelector('#ntfyRegister');button.disabled=true;
+    try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:boat.name,port:normalizePort(boat.port),state:direct?'맥 등록 완료':'신청 전달됨 · 폰 등록 완료 알림 확인'};ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'맥에 등록했습니다. 폰에서 같은 토픽을 구독하세요.':'암호화한 신청을 전달했습니다. 맥이 처리하면 폰으로 등록 완료 알림이 옵니다. 맥이 꺼져 있으면 처리되지 않으니 완료 알림을 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
+  });
+  document.querySelector('#ntfyMine').addEventListener('click',async e=>{
+    const button=e.target.closest('[data-ntfy-remove]');if(!button)return;const i=Number(button.dataset.ntfyRemove),r=ntfyMine[i];button.disabled=true;
+    try{await ntfyRequest({action:'delete',owner:ntfyOwner,topic:r.topic,bid:r.bid,date:r.date});ntfyMine.splice(i,1);ntfyRemember();ntfyRenderMine();ntfyMessage('해제 신청을 전달했습니다. 맥에서 처리되면 알림이 중지됩니다.')}catch(err){ntfyMessage(err.message);button.disabled=false}
+  });
+  document.querySelector('#ntfyAdminRows').addEventListener('click',async e=>{
+    const button=e.target.closest('[data-ntfy-action]');if(!button)return;button.disabled=true;
+    try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
+  });
+  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyMessage('폰 ntfy 앱에서 서버 https://ntfy.sh 와 나의 토픽을 구독한 뒤 등록하세요.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+}
+
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
   const fmtTime=s=>s?s.slice(11,19):"-";
   const fmtWait=sec=>sec==null?"-":sec>=60?`${Math.floor(sec/60)}분 ${sec%60}초`:`${sec}초`;
   const modeName={fast:"빠른 수집(주요 3곳 가까운 날짜)",slow:"느린 수집(그 이후 날짜·나머지)",full:"전체 수집",range:"범위 수집"};
-  const collectionKindName={range_repeat:"범위 수집 반복",range_once:"범위 수집 1회",full_once:"전체 1회 수집",full_auto:"전체 자동 수집"};
+  const collectionKindName={range_repeat:"범위 수집 반복",range_once:"범위 수집 1회",full_once:"전체 1회 수집",full_auto:"전체 자동 수집",alerts_auto:"빈자리 알림 대상 수집"};
   let scraperCsrf=null,cfgDirty=false,progressRunning=false,progressVisible=true,scraperSettingsLoaded=false;
   function setCollectionCollapsed(collapsed){
     $("#collectionSettingsGrid").hidden=collapsed;
@@ -658,7 +752,7 @@ speciesTabs.forEach((tab,index)=>{
   }
   async function scraperFetch(path,options={}){
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);
-    try{const r=await fetch(SCRAPER+path,{...options,signal:controller.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
+    try{const r=await fetch(SCRAPER+path,{...options,signal:controller.signal});const data=await r.json();if(!r.ok)throw new Error(data.error||r.status);return data}
     finally{clearTimeout(timer)}
   }
   let lastPlanUpdate="";
@@ -732,6 +826,7 @@ speciesTabs.forEach((tab,index)=>{
     progressRunning=!!s.running;
     $("#collectionFloating").textContent=`${method} · ${step}${elapsed!==null?` · ${fmtWait(elapsed)}`:""}`;
     $("#collectionFloating").hidden=!isLocalHost||!progressRunning||progressVisible;
+    renderNtfyAdmin(s.ntfy);
     renderPlan(s.plan);
   }
   let observedFinish=null,rangeResultsLoading=false;
@@ -740,7 +835,7 @@ speciesTabs.forEach((tab,index)=>{
       const s=await scraperFetch("/settings");scraperCsrf=s.csrf_token;renderScraper(s);
       if(observedFinish===null){observedFinish=s.last_finished_at||"";return}
       if(s.last_finished_at&&s.last_finished_at!==observedFinish){
-        if(s.last_mode==="range"&&s.last_range&&!rangeResultsLoading){
+        if(s.last_mode==="range"&&s.last_collection_kind!=="alerts_auto"&&s.last_range&&!rangeResultsLoading){
           rangeResultsLoading=true;
           try{
             await loadData();
@@ -814,7 +909,7 @@ speciesTabs.forEach((tab,index)=>{
     refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
   }
 loadData().then(()=>{
-  initPorts();initRangePorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
+  initPorts();initRangePorts();initNtfy();renderMatrix();renderCards();renderDirectory();renderAlertBar();
   requestAnimationFrame(()=>{
     const btn=$(".date-head.selected-col");
     const selected=btn ? btn.closest("th") : null;

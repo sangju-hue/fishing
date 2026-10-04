@@ -136,13 +136,14 @@ def slow(mode, started, groups):
     return failed
 
 
-def by_range(mode, started, groups, start, end, ports=None):
+def by_range(mode, started, groups, start, end, ports=None, boat_ids=None):
     """지정 날짜 범위를 1회 수집. 선상24는 월 단위 응답이라 전체를 받고, 홈페이지는 범위만 수집한다."""
     failed = 0
     port_args = ['--ports', *ports] if ports else []
-    if ports:
-        groups = site_groups([b for b in load_boats() if b.get('port') in ports])
-    progress(mode, '선상24 선택 항구' if ports else '선상24 전체', started)
+    if boat_ids:port_args += ['--boat-ids', *map(str,boat_ids)]
+    if ports or boat_ids:
+        groups = site_groups([b for b in load_boats() if (not ports or b.get('port') in ports) and (not boat_ids or b['bid'] in boat_ids)])
+    progress(mode, '알림 대상 선상24' if boat_ids else '선상24 선택 항구' if ports else '선상24 전체', started)
     if run('scrape_sunsang24.py', '--incremental', *port_args) == 0:
         progress(mode, '선상24 업로드', started)
         failed |= 1 if run('push_to_github.py') else 0
@@ -159,6 +160,7 @@ def main():
     parser.add_argument('--mode', choices=('fast', 'slow', 'full', 'range'), default='full')
     parser.add_argument('--from-date')
     parser.add_argument('--to-date')
+    parser.add_argument('--boat-ids', nargs='+', type=int, help='지정 선박만 수집')
     parser.add_argument('--ports', nargs='+', help='수집할 항구 (생략하면 전체)')
     args = parser.parse_args()
     with open(os.path.join(BASE, '.scrape.lock'), 'a') as lock:
@@ -175,7 +177,7 @@ def main():
         groups = site_groups()
         failed = 0
         if args.mode == 'range':
-            failed |= by_range(args.mode, started, groups, args.from_date, args.to_date, args.ports)
+            failed |= by_range(args.mode, started, groups, args.from_date, args.to_date, args.ports, args.boat_ids)
         if args.mode in ('fast', 'full'):
             failed |= fast(args.mode, started, groups)
         if args.mode in ('slow', 'full'):

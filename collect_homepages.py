@@ -218,6 +218,7 @@ def main():
     parser.add_argument('--year',type=int,help='시즌 연도 (기본: 올해, 12월이면 다음 해)')
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
     parser.add_argument('--sites',nargs='*',help='점검할 도메인 (생략하면 전체)')
+    parser.add_argument('--boat-ids',nargs='+',type=int,help='지정 선박만 수집')
     parser.add_argument('--ports',nargs='+',help='수집할 항구 (생략하면 전체)')
     parser.add_argument('--workers',type=int,default=8)
     parser.add_argument('--gap',type=float,default=1.0)
@@ -231,7 +232,7 @@ def main():
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
     sites=sites_from_catalog(boats)
     all_sites=sites.copy()
-    if args.ports:sites=sites_from_catalog([b for b in boats if b.get("port") in args.ports])
+    if args.ports or args.boat_ids:sites=sites_from_catalog([b for b in boats if (not args.ports or b.get("port") in args.ports) and (not args.boat_ids or b["bid"] in args.boat_ids)])
     if args.sites:
         selected={h.encode('idna').decode('ascii').removeprefix('www.') for h in args.sites}
         sites={k:v for k,v in sites.items() if k in selected}
@@ -254,7 +255,7 @@ def main():
         for info in day.values():
             if info.get('boat_id') is not None:data['by_boat_id'].setdefault(ds,{})[str(info['boat_id'])]=info.copy()
     health={'checked_at':checked,'range':{'from':today.isoformat(),'to':end.isoformat()},'queried_range':{'from':range_start.isoformat(),'to':range_end.isoformat()},'sites':{}}
-    if args.sites or args.ports:
+    if args.sites or args.ports or args.boat_ids:
         try:
             previous=json.load(open(os.path.join(DATA,'site_health.json'),encoding='utf-8'))
             if previous.get('range')==health['range']:
