@@ -53,7 +53,7 @@ class Alerts:
         config=read(config_path,{})
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
-        self.config={'version':1,'supports_manage':True,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
         atomic_json(config_path,self.config)
         self.save()
 
@@ -133,11 +133,15 @@ class Alerts:
         return raw
 
     def register_request(self,payload):
-        if payload.get('bid')!=0:return [self.register(payload)]
-        catalog=self.catalog();port=payload.get('port')
-        if not isinstance(port,str) or not port:raise ValueError('항구를 선택하세요')
-        ids=[bid for bid,b in catalog.items() if b.get('canonical_bid') is None and (port=='*' or self.port_name(b.get('port'))==port)]
-        if not ids:raise ValueError('선택한 항구에 선박이 없습니다')
+        if 'ports' not in payload and 'bids' not in payload and payload.get('bid')!=0:return [self.register(payload)]
+        catalog=self.catalog();ports=payload.get('ports',[payload.get('port')]);bids=payload.get('bids',[])
+        if not isinstance(ports,list) or not ports or not all(isinstance(p,str) and p for p in ports):raise ValueError('항구를 선택하세요')
+        if not isinstance(bids,list) or not all(isinstance(i,int) and not isinstance(i,bool) for i in bids):raise ValueError('배 선택 오류')
+        eligible={bid for bid,b in catalog.items() if b.get('canonical_bid') is None and ('*' in ports or self.port_name(b.get('port')) in ports)}
+        ids=sorted(set(bids) if bids else eligible)
+        if not ids or not set(ids)<=eligible:raise ValueError('선택한 항구의 배를 선택하세요')
+        group=payload.get('group') or secrets.token_hex(8)
+        if not isinstance(group,str) or not re.fullmatch(r'[a-f0-9]{16}',group):raise ValueError('신청 묶음 오류')
         with self.lock:
             import copy
             before=copy.deepcopy(self.state['subscriptions'])
@@ -145,12 +149,17 @@ class Alerts:
             except Exception:
                 self.state['subscriptions']=before
                 raise
-            for row in rows:row['scope_port']=port;row['scope_all']=True
+            for row in rows:row.update(scope_port='*' if '*' in ports else ', '.join(ports),scope_ports=ports,scope_all=not bids,request_group=group)
             self.save();self.on_change();return rows
+
+    def matches(self,r,p):
+        if r['owner']!=p.get('owner') or r['topic']!=p.get('topic') or r['date']!=p.get('date'):return False
+        if p.get('group'):return r.get('request_group')==p['group']
+        return r['bid']==p.get('bid') or p.get('bid')==0 and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port'))
 
     def remove(self,payload):
         with self.lock:
-            self.state['subscriptions']=[r for r in self.state['subscriptions'] if not (r['owner']==payload.get('owner') and r['topic']==payload.get('topic') and r['date']==payload.get('date') and (r['bid']==payload.get('bid') or payload.get('bid')==0 and (payload.get('port')=='*' or self.port_name(r.get('port'))==payload.get('port'))))]
+            self.state['subscriptions']=[r for r in self.state['subscriptions'] if not self.matches(r,payload)]
             self.save()
 
     def manage(self,payload):
@@ -160,10 +169,10 @@ class Alerts:
             before=copy.deepcopy(self.state['subscriptions'])
             if action=='update':
                 old=payload.get('old')
-                if not isinstance(old,list) or len(old)!=4:raise ValueError('수정할 신청 정보 없음')
-                selector=dict(payload,bid=old[0],date=old[1],topic=old[2],port=old[3])
+                if not isinstance(old,list) or len(old) not in (4,5):raise ValueError('수정할 신청 정보 없음')
+                selector=dict(payload,bid=old[0],date=old[1],topic=old[2],port=old[3],group=old[4] if len(old)>4 else None)
             else:selector=payload
-            rows=[r for r in self.state['subscriptions'] if r['owner']==selector.get('owner') and r['topic']==selector.get('topic') and r['date']==selector.get('date') and (r['bid']==selector.get('bid') or selector.get('bid')==0 and (selector.get('port')=='*' or self.port_name(r.get('port'))==selector.get('port')))]
+            rows=[r for r in self.state['subscriptions'] if self.matches(r,selector)]
             if not rows:raise ValueError('본인이 신청한 알림을 찾지 못했습니다')
             if action in ('pause','resume'):
                 for r in rows:r['enabled']=action=='resume'
@@ -178,7 +187,7 @@ class Alerts:
 
     def group_key(self,row):
         import hashlib
-        key=[row['owner'],row['topic'],row['date'],row.get('created_at'),row.get('scope_port',self.port_name(row.get('port')))]
+        key=[row['owner'],row['topic'],row['date'],row.get('request_group') or row.get('created_at'),None if row.get('request_group') else row.get('scope_port',self.port_name(row.get('port')))]
         return hashlib.sha256(json.dumps(key,ensure_ascii=False).encode()).hexdigest()[:24]
 
     def admin_update(self,payload):
@@ -191,7 +200,7 @@ class Alerts:
             self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
             try:
                 p=dict(payload,owner=rows[0]['owner'])
-                if p.get('bid')==0 and all(r['date']==p.get('date') and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port')) for r in rows):
+                if 'ports' not in p and p.get('bid')==0 and all(r['date']==p.get('date') and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port')) for r in rows):
                     updated=[self.register(dict(p,bid=r['bid']),persist=False) for r in rows]
                     for r in updated:r.update(scope_all=True,scope_port=p['port'])
                 else:updated=self.register_request(p)
@@ -231,10 +240,21 @@ class Alerts:
             if not result.get('id'):raise ValueError('ntfy 전송 응답 오류')
 
     def decrypt(self,message):
-        if not isinstance(message,str) or not message.startswith('fish1:') or len(message)>600:raise ValueError('신청 형식 오류')
-        raw=base64.b64decode(message[6:],validate=True)
+        if not isinstance(message,str) or len(message)>24000:raise ValueError('신청 형식 오류')
+        if message.startswith('fish1:'):raw=base64.b64decode(message[6:],validate=True);parts=None
+        elif message.startswith('fish2:'):
+            parts=[base64.b64decode(x,validate=True) for x in message[6:].split('.')]
+            if len(parts)!=4:raise ValueError('신청 형식 오류')
+            raw=parts[0]
+        else:raise ValueError('신청 형식 오류')
         result=subprocess.run([OPENSSL,'pkeyutl','-decrypt','-inkey',self.key,'-pkeyopt','rsa_padding_mode:oaep','-pkeyopt','rsa_oaep_md:sha256','-pkeyopt','rsa_mgf1_md:sha256'],input=raw,capture_output=True,timeout=5)
         if result.returncode:raise ValueError('신청 암호화 확인 실패')
+        if parts:
+            import hmac,hashlib
+            secret=result.stdout
+            if len(secret)!=64 or len(parts[1])!=16 or not hmac.compare_digest(hmac.new(secret[32:],parts[1]+parts[2],hashlib.sha256).digest(),parts[3]):raise ValueError('신청 암호화 확인 실패')
+            result=subprocess.run([OPENSSL,'enc','-aes-256-cbc','-d','-K',secret[:32].hex(),'-iv',parts[1].hex()],input=parts[2],capture_output=True,timeout=5)
+            if result.returncode:raise ValueError('신청 암호화 확인 실패')
         return json.loads(result.stdout)
 
     def process_item(self,item):
@@ -249,6 +269,7 @@ class Alerts:
             if action=='add':
                 rows=self.register_request(p);row=rows[0]
                 description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
+                if 'ports' in p:description=f"선택 항구·배 {len(rows)}척"
                 try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
                 except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
             elif action=='delete':self.remove(p)
@@ -305,7 +326,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'realtime_topics':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'realtime_topics':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
         catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
