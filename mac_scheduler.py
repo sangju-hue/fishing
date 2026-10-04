@@ -53,11 +53,13 @@ class Scheduler:
         self.csrf = secrets.token_urlsafe(32)
         saved = read_json(SETTINGS, {})
         self.paused = bool(saved.get('paused', False))
+        self.start_required = bool(saved.get('start_required', False))
         self.cfg = {}
         for key, (lo, hi) in LIMITS.items():
             v = saved.get(key, DEFAULTS[key])
             self.cfg[key] = v if isinstance(v, int) and not isinstance(v, bool) and lo <= v <= hi else DEFAULTS[key]
         self.alerts = None
+        self.settings_only = False
         self.next_alerts = time.monotonic()
         self.active_boat_ids = []
         self.active_targets = {}
@@ -91,12 +93,12 @@ class Scheduler:
         self.next_slow = now
 
     def save_settings(self):
-        atomic_json(SETTINGS, dict(self.cfg, paused=self.paused, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes))
+        atomic_json(SETTINGS, dict(self.cfg, paused=self.paused, start_required=self.start_required, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes))
 
     def snapshot(self):
         with self.lock:
             now = time.monotonic()
-            snap = dict(self.state, **self.cfg, paused=self.paused, manual_pending=self.manual_pending, pending_range=self.pending_range, active_range=self.active_range, active_range_ports=self.active_range_ports, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes,
+            snap = dict(self.state, **self.cfg, settings_only=self.settings_only, start_required=self.start_required, paused=self.paused, manual_pending=self.manual_pending, pending_range=self.pending_range, active_range=self.active_range, active_range_ports=self.active_range_ports, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes,
                         next_range_in=max(0, round(self.next_range-now)) if self.auto_range else None,
                         next_fast_in=None if self.paused else max(0, round(self.next_fast - now)),
                         next_slow_in=None if self.paused else max(0, round(self.next_slow - now)))
@@ -106,6 +108,8 @@ class Scheduler:
         return snap
 
     def control(self, action, values=None):
+        if self.settings_only and action in ('resume','run','range','range_auto'):
+            raise ValueError('수집 강제 중지 상태입니다. 현재 설정 조회·저장만 가능합니다.')
         if action not in ACTIONS:
             raise ValueError('지원하지 않는 동작')
         if action == 'config':
@@ -135,6 +139,7 @@ class Scheduler:
                 if not isinstance(minutes, int) or isinstance(minutes, bool) or not 1 <= minutes <= 120:
                     raise ValueError('범위 수집 간격은 1~120분 사이 정수')
         with self.lock:
+            if action in ('resume','run','range','range_auto'):self.start_required=False
             if action == 'range':
                 self.pending_range = new_range
                 self.pending_range_ports = ports
@@ -167,10 +172,12 @@ class Scheduler:
                 self.save_settings()
             elif action == 'run':
                 self.manual_pending = True
+            if action in ('run','range'):self.save_settings()
         self.wake.set()
 
     def due_mode(self):
         with self.lock:
+            if self.start_required:return None
             self.active_boat_ids=[];self.active_targets={}
             if self.manual_pending:
                 self.manual_pending=False;self.next_collection_kind='full_once';self.last_queue='general';return 'full'
@@ -357,6 +364,8 @@ def main():
     p.add_argument('--settings-only', action='store_true', help='점검용: 수집 없이 설정 서버만 실행')
     args = p.parse_args()
     s = Scheduler()
+    s.settings_only = args.settings_only
+    if args.settings_only:s.paused=True
     s.save_settings()
     from ntfy_alerts import Alerts
     s.alerts = Alerts(BASE)

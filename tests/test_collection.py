@@ -168,6 +168,19 @@ class RangePortTests(unittest.TestCase):
             rc.by_range('range','now',[], '2026-10-05','2026-10-06',['없는항구'])
             group.assert_not_called()
 
+class ManualStartTests(unittest.TestCase):
+    def test_restore_waits_for_user_start_and_preserves_settings(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler,'SETTINGS',os.path.join(tmp,'settings.json')):
+            with open(mac_scheduler.SETTINGS,'w') as f:json.dump({'paused':True,'start_required':True,'near_days':14,'fast_minutes':10,'slow_minutes':30},f)
+            s=mac_scheduler.Scheduler()
+            class Alerts:
+                def target_pairs(self):raise AssertionError('must not collect before user starts')
+            s.alerts=Alerts()
+            self.assertIsNone(s.due_mode());self.assertFalse(s.settings_only)
+            s.control('run');self.assertEqual(s.due_mode(),'full')
+            restored=mac_scheduler.Scheduler();self.assertFalse(restored.start_required)
+            self.assertEqual(restored.cfg['fast_minutes'],10)
+
 class RepeatingRangeTests(unittest.TestCase):
     def test_interval_persistence_and_due_time(self):
         with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')):
