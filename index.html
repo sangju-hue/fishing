@@ -749,7 +749,7 @@ function ntfyShowTopics(data){
   ntfyUsedTopics=data.topics||[];ntfyTopicSettings=data.settings||{};
   const box=document.querySelector('#ntfyTopics');
   box.innerHTML=ntfyUsedTopics.length?ntfyUsedTopics.map(t=>{
-   const rows=ntfyTopicSettings[t]||[],detail=rows.length?rows.map(r=>`<p>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${Number(r.min_seats)||1}자리 이상 · ${r.enabled?'켜짐':'중지'}<br>${(r.boats||[]).map(escapeHtml).join(', ')}</p>`).join(''):'상세 설정을 불러오는 중입니다.';
+   const rows=ntfyTopicSettings[t]||[],detail=rows.length?rows.map(r=>`<p>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${Number(r.min_seats)||1}자리 이상 · ${r.enabled?'켜짐':'중지'}<br>${r.all_boats?'배 전체':(r.boats||[]).map(escapeHtml).join(', ')}</p>`).join(''):'상세 설정을 불러오는 중입니다.';
    return `<span class="ntfy-topic-entry"><button type="button" class="ntfy-topic-name" aria-expanded="false">${escapeHtml(t)}</button><span class="ntfy-topic-detail">${detail}</span></span>`;
   }).join(''):'사용 중인 토픽이 없습니다.';
   box.onclick=e=>{const button=e.target.closest('.ntfy-topic-name');if(!button)return;const entry=button.closest('.ntfy-topic-entry'),open=entry.dataset.open!=='true';entry.dataset.open=String(open);button.setAttribute('aria-expanded',String(open));};

@@ -65,11 +65,11 @@ class Alerts:
         groups={}
         for r in self.state['subscriptions']:
             if r['date']<today:continue
-            key=(r['topic'],r['date'],self.port_name(r.get('port')),r.get('min_seats',1),bool(r.get('enabled')))
+            key=(r['topic'],r['date'],self.port_name(r.get('port')),r.get('min_seats',1),bool(r.get('enabled')),bool(r.get('scope_all')))
             groups.setdefault(key,set()).add(r.get('boat',''))
         settings={}
-        for (topic,ds,port,minimum,enabled),boats in sorted(groups.items()):
-            settings.setdefault(topic,[]).append({'date':ds,'port':port,'boats':sorted(boats),'min_seats':minimum,'enabled':enabled})
+        for (topic,ds,port,minimum,enabled,all_boats),boats in sorted(groups.items()):
+            settings.setdefault(topic,[]).append({'date':ds,'port':port,'boats':[] if all_boats else sorted(boats),'all_boats':all_boats,'min_seats':minimum,'enabled':enabled})
         return {'topics':sorted(settings),'settings':settings}
 
     def save(self):
