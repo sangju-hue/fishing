@@ -381,7 +381,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
 
     def check(self):
         today=datetime.now(KST).date().isoformat()

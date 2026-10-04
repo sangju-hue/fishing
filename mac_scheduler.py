@@ -32,6 +32,7 @@ PLAN = os.path.join(BASE, 'data', 'collection_plan.json')
 ORIGINS = {'https://sangju-hue.github.io', 'http://127.0.0.1:8789', 'http://localhost:8789', 'http://127.0.0.1:8000', 'http://localhost:8000'}
 ACTIONS = ('pause', 'resume', 'run', 'config', 'range', 'range_auto', 'range_auto_stop')
 KST = timezone(timedelta(hours=9))
+ALERT_INTERVAL = 600
 
 
 def stamp():
@@ -101,6 +102,7 @@ class Scheduler:
             now = time.monotonic()
             snap = dict(self.state, **self.cfg, settings_only=self.settings_only, start_required=self.start_required, paused=self.paused, manual_pending=self.manual_pending, pending_range=self.pending_range, active_range=self.active_range, active_range_ports=self.active_range_ports, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes,
                         next_range_in=max(0, round(self.next_range-now)) if self.auto_range else None,
+                        next_alerts_in=max(0, round(self.next_alerts-now)),
                         next_fast_in=None if self.paused else max(0, round(self.next_fast - now)),
                         next_slow_in=None if self.paused else max(0, round(self.next_slow - now)))
         snap['progress'] = read_json(PROGRESS, None) if snap['running'] else None
@@ -182,6 +184,21 @@ class Scheduler:
         self.alert_activation_pending.set()
         self.wake.set()
 
+    def supplemental_alert_pairs(self):
+        """Use automatic results for covered targets; collect only uncovered pairs."""
+        # Full automation covers the season through its fast and slow queues.
+        if not self.paused and not self.auto_range:
+            return {}
+        pairs = self.alerts.target_pairs()
+        if not self.auto_range:
+            return pairs
+        catalog = self.alerts.catalog() if self.auto_range_ports else {}
+        start, end = self.auto_range
+        return {bid: remaining for bid, dates in pairs.items()
+                if (remaining := [ds for ds in dates if not (
+                    start <= ds <= end and (not self.auto_range_ports or
+                    (catalog.get(int(bid)) or {}).get('port') in self.auto_range_ports))])}
+
     def due_mode(self):
         with self.lock:
             if self.alert_activation_pending.is_set():
@@ -209,8 +226,8 @@ class Scheduler:
                 if due:general=min(due)[1]
             alert_due=bool(self.alerts and now>=self.next_alerts)
             if alert_due and (not general or self.last_queue!='alerts'):
-                pairs=self.alerts.target_pairs()
-                self.next_alerts=now+300
+                pairs=self.supplemental_alert_pairs()
+                self.next_alerts=now+ALERT_INTERVAL
                 if pairs:
                     dates=sorted({ds for values in pairs.values() for ds in values})
                     self.active_targets=pairs;self.active_boat_ids=sorted(map(int,pairs))
@@ -264,7 +281,7 @@ class Scheduler:
             if mode in ('fast','full'):self.next_fast=completed+(60 if outcome=='skipped' else self.cfg['fast_minutes']*60)
             if mode in ('slow','full'):self.next_slow=completed+(60 if outcome=='skipped' else self.cfg['slow_minutes']*60)
             kind=self.state.get('current_collection_kind')
-            if kind=='alerts_auto':self.next_alerts=completed+(60 if outcome=='skipped' else 300)
+            if kind=='alerts_auto':self.next_alerts=completed+(60 if outcome=='skipped' else ALERT_INTERVAL)
             if kind=='range_repeat':self.next_range=completed+(60 if outcome=='skipped' else self.range_interval_minutes*60)
             self.state["last_collection_kind"] = self.state.get("current_collection_kind")
             self.state["current_collection_kind"] = None

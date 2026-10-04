@@ -825,7 +825,7 @@ function renderNtfyAdmin(state){
   document.querySelector('#ntfyAdmin').hidden=false;
   ntfyMinimumReady=!!state?.supports_min_seats;ntfyManageReady=!!state?.supports_manage;ntfyMultiReady=!!state?.supports_multi;
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
-  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 수집 완료 후 ${state.check_minutes}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
+  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 자동 수집 결과로 알림 · 범위 밖 또는 자동 수집 꺼짐: 완료 후 ${state.check_minutes||10}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
   const rows=state.subscriptions||[];ntfyAdminRows=rows;
   const groups=new Map();rows.forEach(r=>{const key=r.group_id||r.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
@@ -954,7 +954,7 @@ async function initNtfy(){
   function renderScraper(s){
     const alertMonitoring=!s.settings_only&&!s.start_required&&(s.ntfy?.subscriptions||[]).some(r=>r.enabled&&r.date>=currentSeason().today);
     const alertWaiting=!s.running&&s.paused&&!s.auto_range&&alertMonitoring;
-    const alertInterval=(s.ntfy?.check_minutes||5)*60;
+    const alertInterval=(s.ntfy?.check_minutes||10)*60;
     const alertWait=s.next_alerts_in??(s.last_collection_kind==='alerts_auto'&&s.last_finished_at?Math.max(0,Math.ceil(alertInterval-(Date.now()-Date.parse(s.last_finished_at))/1000)):0);
     const alertNext=alertWait>0?`다음 알림 수집 ${fmtWait(alertWait)} 후`:'알림 수집 시작 대기';
     const recordedKind=s.current_collection_kind||(s.current_mode==="range"?(s.auto_range?"range_repeat":"range_once"):null);
@@ -993,7 +993,7 @@ async function initNtfy(){
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     const isRange=s.current_mode==="range",range=isRange?s.active_range:null;
     $("#progressScope").textContent=s.running?(range?`범위: ${range[0]} ~ ${range[1]} · ${s.active_range_ports?.length?s.active_range_ports.join(", "):s.active_range_ports?"전체 항구":"항구 정보 확인 중"}`:`방식: ${modeName[s.current_mode]||"수집"}`):s.pending_range?`대기 범위: ${s.pending_range.join(" ~ ")}`:"";
-    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":alertWaiting?`${alertNext} · 완료 후 ${s.ntfy?.check_minutes||5}분 간격`:s.last_finished_at?`마지막 수집 ${({failed:'실패',partial:'완료 · 일부 실패',skipped:'보류',ok:'완료'})[s.last_result]||'대기'}`:"수집 대기 중";
+    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":alertWaiting?`${alertNext} · 완료 후 ${s.ntfy?.check_minutes||10}분 간격`:s.last_finished_at?`마지막 수집 ${({failed:'실패',partial:'완료 · 일부 실패',skipped:'보류',ok:'완료'})[s.last_result]||'대기'}`:"수집 대기 중";
     $("#progressStep").textContent=step;
     const elapsed=s.running&&s.last_started_at?Math.max(0,Math.floor((Date.now()-Date.parse(s.last_started_at))/1000)):null;
     $("#progressElapsed").textContent=elapsed!==null?`시작 ${fmtTime(s.last_started_at)} · 경과 ${fmtWait(elapsed)}`:s.last_finished_at?`완료 시각 ${fmtTime(s.last_finished_at)}`:"";
