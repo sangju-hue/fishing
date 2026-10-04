@@ -133,8 +133,8 @@
       <label>항구<select id="ntfyPort" required></select></label>
       <label>배<select id="ntfyBoat" required></select></label>
       <label>ntfy 서버<input value="https://ntfy.sh" readonly aria-label="ntfy 서버"></label>
-      <label>나의 토픽<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="예: sam9" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label>
-      <div class="ntfy-actions"><button id="ntfyNewTopic" type="button">새 토픽 생성</button><button id="ntfyCopy" type="button">토픽 복사</button><a id="ntfySubscribe" target="_blank" rel="noopener noreferrer">ntfy에서 구독</a><button id="ntfyRegister" type="submit">빈자리 알림 등록</button></div>
+      <label>나의 토픽 (예: fish-why)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" value="fish1" placeholder="fish1" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label>
+      <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><a id="ntfySubscribe" target="_blank" rel="noopener noreferrer">ntfy에서 구독</a><button id="ntfyRegister" type="submit">빈자리 알림 등록</button></div>
       <p id="ntfySelection" style="grid-column:1/-1;margin:0"></p>
     </form>
     <p id="ntfyMessage" role="status">알림 연결 확인 중…</p>
@@ -707,7 +707,7 @@ function renderNtfyAdmin(state){
   ntfyMine.forEach(r=>{const actual=rows.find(x=>x.topic===r.topic&&(r.bid===0?(r.scopePort==='*'||normalizePort(x.port)===r.scopePort):x.bid===r.bid)&&x.date===r.date);if(actual)r.state=actual.enabled?'맥 등록 완료':'중지'});ntfyRenderMine();
 }
 async function initNtfy(){
-  try{const saved=JSON.parse(localStorage.getItem('fishingNtfy')||'{}');ntfyOwner=saved.owner||ntfyRandom();ntfyMine=saved.mine||[];document.querySelector('#ntfyTopic').value=saved.topic||'fishing-'+ntfyRandom()}catch(e){ntfyOwner=ntfyRandom();document.querySelector('#ntfyTopic').value='fishing-'+ntfyRandom()}
+  try{const saved=JSON.parse(localStorage.getItem('fishingNtfy')||'{}');ntfyOwner=saved.owner||ntfyRandom();ntfyMine=saved.mine||[];document.querySelector('#ntfyTopic').value=saved.topic&&(!/^fishing-[0-9a-f]{32}$/.test(saved.topic)||ntfyMine.length)?saved.topic:'fish1'}catch(e){ntfyOwner=ntfyRandom();document.querySelector('#ntfyTopic').value='fish1'}
   const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),year=today.slice(0,4),d=document.querySelector('#ntfyDate');d.value=today;d.min=today>`${year}-09-01`?today:`${year}-09-01`;d.max=`${year}-11-30`;
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
@@ -715,7 +715,6 @@ async function initNtfy(){
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyBoat').addEventListener('change',ntfySelection);
   document.querySelector('#ntfyTopic').addEventListener('input',ntfyLink);
-  document.querySelector('#ntfyNewTopic').addEventListener('click',()=>{document.querySelector('#ntfyTopic').value='fishing-'+ntfyRandom();ntfyLink();ntfyMessage('새 토픽을 만들었습니다. 폰 ntfy 앱에서도 새 토픽을 구독해 주세요.')});
   document.querySelector('#ntfyCopy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(document.querySelector('#ntfyTopic').value);ntfyMessage('토픽을 복사했습니다. 폰 ntfy 앱에서 그대로 구독하세요.')}catch(e){ntfyMessage('토픽 입력란의 값을 직접 복사해 주세요.')}});
   document.querySelector('#ntfyForm').addEventListener('submit',async e=>{
     e.preventDefault();const bid=Number(document.querySelector('#ntfyBoat').value),boat=BOATS.find(b=>b.bid===bid),topic=document.querySelector('#ntfyTopic').value;
