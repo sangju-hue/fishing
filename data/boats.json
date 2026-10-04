@@ -240,60 +240,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "name": "시티맨호",
-   "operator": "나르샤호",
-   "port": "대천항 (보령시 대천항로 332)",
-   "region": "충남 보령시",
-   "price": "9만원",
-   "channels": {
-    "phone": "010-9816-6106",
-    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 1201,
-   "booking_names": [
-    "시티맨호"
-   ],
-   "catalog_status": "booking_verified"
-  },
-  {
-   "name": "포시즌호",
-   "operator": "나르샤호",
-   "port": "대천항 (보령시 대천항로 332)",
-   "region": "충남 보령시",
-   "price": "9만원",
-   "channels": {
-    "phone": "010-9816-6106",
-    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 1202,
-   "booking_names": [
-    "포시즌호"
-   ],
-   "catalog_status": "booking_verified"
-  },
-  {
-   "name": "창용호",
-   "operator": "나르샤호",
-   "port": "대천항 (보령시 대천항로 332)",
-   "region": "충남 보령시",
-   "price": "9만원",
-   "channels": {
-    "phone": "010-9816-6106",
-    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 1203,
-   "booking_names": [
-    "창용호"
-   ],
-   "catalog_status": "booking_verified"
-  },
-  {
    "name": "나폴리호",
    "port": "오천항",
    "region": "충남 보령시",
@@ -1384,7 +1330,7 @@
   },
   {
    "bid": 93,
-   "name": "총각호",
+   "name": "총각호(오전)",
    "operator": "무창포 총각피싱",
    "region": "충남 보령시",
    "port": "무창포항",
@@ -1403,7 +1349,8 @@
     "https://www.chongkakho.com/index.php?mid=bk"
    ],
    "booking_names": [
-    "총각호"
+    "총각호(오전)",
+    "총각호  지선아(9인승)  오전반"
    ],
    "catalog_status": "booking_verified"
   },
@@ -1926,21 +1873,6 @@
     "homepage": "https://www.ocheonkumkang.com/index.php?mid=bk"
    },
    "notes": "[돌고래호·금강3호·금강호·월드스타호·방주호] 쭈꾸미·갑오징어·농어외수질·타이라바·광어다운샷·우럭·백조기·문어 (금강낚시). 2023년 선사 목록 기준"
-  },
-  {
-   "bid": 420,
-   "name": "기타 낚시배",
-   "port": "오천항",
-   "region": "충남 보령시",
-   "operator": "금강낚시",
-   "channels": {
-    "homepage": "https://www.ocheonkumkang.com/index.php?mid=bk",
-    "phone": "010-6665-4752"
-   },
-   "booking_names": [
-    "기타 낚시배",
-    "기타낚시배"
-   ]
   },
   {
    "bid": 130,
@@ -3226,7 +3158,7 @@
   },
   {
    "bid": 213,
-   "name": "호호호",
+   "name": "호호호(오전)",
    "operator": "무창포 총각피싱",
    "region": "충남 보령시",
    "port": "무창포항",
@@ -3243,7 +3175,8 @@
     "https://www.chongkakho.com/index.php?mid=bk"
    ],
    "booking_names": [
-    "호호호"
+    "호호호(오전)",
+    "호호호  김영덕(9인승)  오전반"
    ],
    "catalog_status": "booking_verified"
   },
@@ -3505,7 +3438,7 @@
     "phone": "010-2712-0804",
     "homepage": "https://www.chongkakho.com/index.php?mid=bk"
    },
-   "name": "장수호",
+   "name": "장수호(오전)",
    "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
    "operator": "무창포 총각피싱",
    "port": "무창포항",
@@ -3519,7 +3452,8 @@
     "https://www.chongkakho.com/index.php?mid=bk"
    ],
    "booking_names": [
-    "장수호"
+    "장수호(오전)",
+    "장수호  홍선장(9인승)  오전반"
    ],
    "catalog_status": "booking_verified"
   },
@@ -7278,6 +7212,88 @@
    "bid": 419
   },
   {
+   "bid": 420,
+   "name": "기타 낚시배",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "operator": "금강낚시",
+   "channels": {
+    "homepage": "https://www.ocheonkumkang.com/index.php?mid=bk",
+    "phone": "010-6665-4752"
+   },
+   "booking_names": [
+    "기타 낚시배",
+    "기타낚시배"
+   ]
+  },
+  {
+   "name": "시티맨호",
+   "operator": "나르샤호",
+   "port": "대천항 (보령시 대천항로 332)",
+   "region": "충남 보령시",
+   "price": "9만원",
+   "channels": {
+    "phone": "010-9816-6106",
+    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 1201,
+   "booking_names": [
+    "시티맨호"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "포시즌호",
+   "operator": "나르샤호",
+   "port": "대천항 (보령시 대천항로 332)",
+   "region": "충남 보령시",
+   "price": "9만원",
+   "channels": {
+    "phone": "010-9816-6106",
+    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 1202,
+   "booking_names": [
+    "포시즌호"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "창용호",
+   "operator": "나르샤호",
+   "port": "대천항 (보령시 대천항로 332)",
+   "region": "충남 보령시",
+   "price": "9만원",
+   "channels": {
+    "phone": "010-9816-6106",
+    "homepage": "http://xn--910b11ohng.com/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 1203,
+   "booking_names": [
+    "창용호"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 716002,
+   "name": "부킹호",
+   "operator": "국제유선",
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "평일 45,000원 / 주말 50,000원",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
+   },
+   "notes": "국제유선 종일배"
+  },
+  {
    "bid": 767704,
    "name": "해피호(오후)",
    "operator": "국제유선",
@@ -7302,19 +7318,6 @@
     "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
    },
    "notes": "국제유선 하나호"
-  },
-  {
-   "bid": 716002,
-   "name": "부킹호",
-   "operator": "국제유선",
-   "region": "인천 중구",
-   "port": "남항유어선부두",
-   "price": "평일 45,000원 / 주말 50,000원",
-   "capacity": null,
-   "channels": {
-    "homepage": "https://www.kukjaenaksi.com/niabbs5/inc.php?inc=sub2&s=s"
-   },
-   "notes": "국제유선 종일배"
   },
   {
    "bid": 971088,
@@ -7415,6 +7418,81 @@
    "booking_names": [
     "위너호_나혜훈선장"
    ]
+  },
+  {
+   "bid": 971100,
+   "name": "총각호(오후)",
+   "operator": "무창포 총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804",
+    "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+   },
+   "notes": "총각피싱 선단. 8인승 작은 배로 체험낚시 가능",
+   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_sources": [
+    "http://www.chongkakho.com/",
+    "https://naksigo.com/boat/%EC%B4%9D%EA%B0%81%ED%98%B8?id=2407",
+    "https://naksigo.com/boat/%EC%B4%9D%EA%B0%81%ED%98%B8?id=6402",
+    "https://www.chongkakho.com/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "총각호(오후)",
+    "총각호(9인승)  오후반"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971101,
+   "name": "호호호(오후)",
+   "operator": "무창포 총각피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+   },
+   "notes": "총각피싱 선단 (선장 김영덕). 9인승, 백조기 오전반 5만원. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인.",
+   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_sources": [
+    "http://www.chongkakho.com/",
+    "https://naksigo.com/boat/%ED%98%B8%ED%98%B8%ED%98%B8",
+    "https://www.chongkakho.com/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "호호호(오후)",
+    "호호호(9인승)  오후반"
+   ],
+   "catalog_status": "booking_verified"
+  },
+  {
+   "capacity": null,
+   "channels": {
+    "phone": "010-2712-0804",
+    "homepage": "https://www.chongkakho.com/index.php?mid=bk"
+   },
+   "name": "장수호(오후)",
+   "notes": "어종 미확인(선상낚시). 출처: chongkakho.com 예약 페이지 listed",
+   "operator": "무창포 총각피싱",
+   "port": "무창포항",
+   "price": "",
+   "region": "충남 보령시",
+   "bid": 971102,
+   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_sources": [
+    "http://www.chongkakho.com/",
+    "https://naksigo.com/boat/%EC%9E%A5%EC%88%98%ED%98%B8?id=6371",
+    "https://www.chongkakho.com/index.php?mid=bk"
+   ],
+   "booking_names": [
+    "장수호(오후)",
+    "장수호(9인승)  오후반"
+   ],
+   "catalog_status": "booking_verified"
   }
  ],
  "updated_at": "2026-10-03T09:04:25+09:00"
