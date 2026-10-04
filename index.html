@@ -788,8 +788,7 @@ async function ntfyRequest(payload){
   if(ntfyLocal){
     if(!scraperCsrf)await refreshScraper();
     const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({...payload,action:payload.action==='delete'?'remove':payload.action})});
-    document.dispatchEvent(new CustomEvent("bada:collector",{detail:{running:!!s.running,state:state.textContent,step,elapsed:$("#progressElapsed").textContent}}));
-    renderNtfyAdmin(s.ntfy);ntfyRefreshTopics();return true;
+    renderScraper(s);ntfyRefreshTopics();return true;
   }
   if(!ntfyConfig)throw Error('알림 연결 설정을 불러오지 못했습니다. 새로고침해 주세요.');
   if(!ntfyConfig.supports_receipts)throw Error('맥 알림 기능 업데이트 적용 중입니다. 잠시 후 새로고침해 주세요.');
