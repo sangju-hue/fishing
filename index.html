@@ -150,10 +150,9 @@ let SUNSANG_STATUS_BY_ID={};
 let LEGACY_BOAT_IDS={};
 async function loadData(){
   try{
-    const nocache = `?v=${Date.now()}`;
-    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'+nocache),fetch('data/status.json'+nocache),fetch('data/status_homepages.json'+nocache).catch(()=>null),fetch('data/site_health.json'+nocache).catch(()=>null)]);
+    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json'),fetch('data/status_homepages.json').catch(()=>null),fetch('data/site_health.json').catch(()=>null)]);
     const boatsData=await boatsRes.json();
-    try{const audit=await fetch('data/scrape_audit_current.json'+nocache).then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
+    try{const audit=await fetch('data/scrape_audit_current.json').then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
     BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
     if(healthRes&&healthRes.ok){
       try{
@@ -249,6 +248,7 @@ function statusRow(boat,date=selectedDate){
   return null;
 }
 function statusInfo(boat,date=selectedDate){
+  if(boat.booking_notice)return {cls:"maintenance",short:"안내",text:"⚫ "+boat.booking_notice};
   if(DATE_NOTICES[boat.bid]?.[date])return {cls:"conditional",short:"유동",text:"🟠 "+DATE_NOTICES[boat.bid][date]};
   const row=statusRow(boat,date);
   if(!row) {
@@ -419,7 +419,6 @@ function renderMatrix(){
       const boatLabel=`<span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}${boatUrl?'':' · 홈페이지 미확인'}${boat.collection_priority==='deferred_daily'?' · 일별 조회 보류':''}</span>`;
       const boatControl=boatUrl?`<a class="boat-selector" href="${escapeHtml(boatUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(boat.name)} 홈페이지 열기">${boatLabel}</a>`:`<span class="boat-selector">${boatLabel}</span>`;
       html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><div class="boat-controls${isSelected?' is-selected':''}"><input type="checkbox" data-select-boat="${boat.bid}" ${isSelected?'checked':''} aria-label="${escapeHtml(boat.name)} 선택">${boatControl}</div></th>`;
-      if(boat.booking_notice){html+=`<td colspan="${dates.length}" class="booking-notice"><span class="booking-notice-text">📢 ${escapeHtml(boat.booking_notice)}</span></td></tr>`;return;}
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
@@ -587,8 +586,11 @@ speciesTabs.forEach((tab,index)=>{
     try{const r=await fetch(SCRAPER+path,{...options,signal:controller.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
     finally{clearTimeout(timer)}
   }
+  let lastPlanUpdate="";
   function renderPlan(plan){
     if(!plan){$("#scrapePlanBody").textContent="수집 방법 정보가 아직 없습니다. 첫 수집이 시작되면 표시됩니다.";return}
+    if(lastPlanUpdate===plan.updated_at)return;
+    lastPlanUpdate=plan.updated_at;
     const g=plan.groups||[],pri=g.slice(0,3),rest=g[3]||{sites:0,boats:0,pages_last:0};
     const sum=(arr,k)=>arr.reduce((a,x)=>a+(x[k]||0),0);
     const row=x=>`<tr><td>${escapeHtml(x.name)}</td><td>${x.sites}곳</td><td>${x.boats}척</td><td>${x.pages_last}장</td></tr>`;
