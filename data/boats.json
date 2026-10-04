@@ -927,23 +927,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 60,
-   "name": "덕적호",
-   "operator": null,
-   "region": "인천 중구",
-   "port": "남항유어선부두",
-   "price": "평일 45,000원",
-   "capacity": null,
-   "channels": {
-    "homepage": "https://www.djfishing.com/index.php?mid=bk"
-   },
-   "notes": "오전배 06:30~11:20 / 오후배 12:00~17:00, 출항 1시간 전 도착. 사무실 '덕적바다낚시' (남항유어선부두 입구 오른쪽 안쪽). 전화번호 미확인. 후기: https://blog.naver.com/rycos82/224030045483",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
-   "catalog_sources": [
-    "https://www.djfishing.com/index.php?mid=bk"
-   ]
-  },
-  {
    "bid": 61,
    "name": "은아호",
    "operator": "은아낚시",
@@ -7123,7 +7106,41 @@
     "장수호(9인승)  오후반"
    ],
    "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971105,
+   "name": "고속정화인호(20인승)",
+   "operator": "덕적바다낚시",
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "",
+   "capacity": 20,
+   "channels": {
+    "homepage": "https://www.djfishing.com/index.php?mid=bk&PA_N_UID=5581"
+   },
+   "booking_names": [
+    "고속정화인호(20인승)"
+   ],
+   "notes": "사용자 지정 덕적바다낚시 실제 선박. 시간낚시 상품 제외.",
+   "catalog_checked_at": "2026-10-04T22:17:27+09:00"
+  },
+  {
+   "bid": 971106,
+   "name": "우리바다호",
+   "operator": "덕적바다낚시",
+   "region": "인천 중구",
+   "port": "남항유어선부두",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "homepage": "https://www.djfishing.com/index.php?mid=bk&PA_N_UID=4862"
+   },
+   "booking_names": [
+    "우리바다호"
+   ],
+   "notes": "사용자 지정 덕적바다낚시 실제 선박. 시간낚시 상품 제외.",
+   "catalog_checked_at": "2026-10-04T22:17:27+09:00"
   }
  ],
- "updated_at": "2026-10-04T22:12:28+09:00"
+ "updated_at": "2026-10-04T22:17:27+09:00"
 }
