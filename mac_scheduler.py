@@ -330,6 +330,7 @@ def handler(scheduler, port):
                 if self.path == '/alerts':
                     if not scheduler.alerts:raise ValueError('알림 연결 준비 중')
                     if body['action']=='add':scheduler.alerts.register_request(body)
+                    elif body['action']=='admin_update':scheduler.alerts.admin_update(body)
                     elif body['action']=='remove':scheduler.alerts.remove(body)
                     elif body['action'] in ('pause','resume','update'):scheduler.alerts.manage(body)
                     else:scheduler.alerts.admin(body['action'],body.get('id'))

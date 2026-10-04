@@ -173,6 +173,27 @@ class Alerts:
         key=[row['owner'],row['topic'],row['date'],row.get('created_at'),row.get('scope_port',self.port_name(row.get('port')))]
         return hashlib.sha256(json.dumps(key,ensure_ascii=False).encode()).hexdigest()[:24]
 
+    def admin_update(self,payload):
+        import copy
+        with self.lock:
+            keys=set(str(payload.get('id','')).split(','))
+            rows=[r for r in self.state['subscriptions'] if self.group_key(r) in keys]
+            if not rows or len({r['owner'] for r in rows})!=1:raise ValueError('수정할 신청 묶음 없음')
+            before=copy.deepcopy(self.state['subscriptions'])
+            self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
+            try:
+                p=dict(payload,owner=rows[0]['owner'])
+                if p.get('bid')==0 and all(r['date']==p.get('date') and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port')) for r in rows):
+                    updated=[self.register(dict(p,bid=r['bid']),persist=False) for r in rows]
+                    for r in updated:r.update(scope_all=True,scope_port=p['port'])
+                else:updated=self.register_request(p)
+                if not any(r['enabled'] for r in rows):
+                    for r in updated:r['enabled']=False
+            except Exception:
+                self.state['subscriptions']=before
+                raise
+            self.save();self.on_change()
+
     def admin(self,action,identifier):
         with self.lock:
             if action in ('group_delete','group_pause','group_resume'):

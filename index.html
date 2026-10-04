@@ -664,7 +664,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyEditing=null;
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyEditing=null,ntfyAdminRows=[];
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -714,14 +714,15 @@ function renderNtfyAdmin(state){
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
   document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 ${state.check_minutes}분마다 수집${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
-  const rows=state.subscriptions||[];
+  const rows=state.subscriptions||[];ntfyAdminRows=rows;
   const groups=new Map();rows.forEach(r=>{const key=r.group_id||r.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
   const registrants=new Map();for(const [key,list] of groups){const r=list[0],person=`${r.label||'이름 미입력'} · ${r.topic}`;if(!registrants.has(person))registrants.set(person,[]);registrants.get(person).push([key,list])}
   const expanded=new Set([...document.querySelectorAll('#ntfyAdminRows details[open]')].map(d=>d.dataset.person));
   const markup=rows.length?[...registrants].map(([person,items])=>{
     const list=items.flatMap(x=>x[1]),keys=items.map(x=>x[0]).join(','),enabled=list.filter(r=>r.enabled).length;
+    const editScopes=new Map();items.forEach(([key,rs])=>{const r=rs[0],scope=`${r.date} · ${r.scope_port||normalizePort(r.port)}`;if(!editScopes.has(scope))editScopes.set(scope,[]);editScopes.get(scope).push(key)});
     const scopes=[...new Set(list.map(r=>`${r.date} · ${r.scope_port==='*'?'항구 전체':r.scope_port||normalizePort(r.port)}`))];
-    return `<section class="ntfy-registrant"><h3>${escapeHtml(person)}</h3><div class="ntfy-row"><span>${scopes.map(escapeHtml).join('<br>')} · ${list.length}척<br>${enabled===list.length?'켜짐':enabled===0?'중지':'일부 중지'} · 빈자리 ${list.filter(r=>r.last_status==='available').length}척</span><div class="ntfy-actions"><button type="button" data-ntfy-action="${enabled?'group_pause':'group_resume'}" data-ntfy-id="${keys}">${enabled?'전체 중지':'전체 재시작'}</button><button type="button" data-ntfy-action="group_delete" data-ntfy-id="${keys}">신청 전체 취소</button></div></div><details data-person="${escapeHtml(person)}" ${expanded.has(person)?'open':''}><summary>개별 배 현황 보기 (${list.length}척)</summary>${list.map(r=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(normalizePort(r.port))} · ${escapeHtml(r.boat)}<br>${r.enabled?'켜짐':'중지'} · ${r.min_seats||1}자리 이상 · ${escapeHtml(status[r.last_status]||r.last_status)}${r.remaining!=null?' / '+r.remaining+'석':''}${r.error?' · '+escapeHtml(r.error):''}</span><button type="button" data-ntfy-action="delete" data-ntfy-id="${r.id}">개별 취소</button></div>`).join('')}</details></section>`;
+    return `<section class="ntfy-registrant"><h3>${escapeHtml(person)}</h3><div class="ntfy-row"><span>${scopes.map(escapeHtml).join('<br>')} · ${list.length}척<br>${enabled===list.length?'켜짐':enabled===0?'중지':'일부 중지'} · 빈자리 ${list.filter(r=>r.last_status==='available').length}척</span><div class="ntfy-actions">${[...editScopes].map(([scope,ids])=>`<button type="button" data-ntfy-action="edit" data-ntfy-id="${ids.join(',')}">${editScopes.size>1?escapeHtml(scope)+' 수정':'수정'}</button>`).join('')}<button type="button" data-ntfy-action="${enabled?'group_pause':'group_resume'}" data-ntfy-id="${keys}">${enabled?'전체 중지':'전체 재시작'}</button><button type="button" data-ntfy-action="group_delete" data-ntfy-id="${keys}">신청 전체 취소</button></div></div><details data-person="${escapeHtml(person)}" ${expanded.has(person)?'open':''}><summary>개별 배 현황 보기 (${list.length}척)</summary>${list.map(r=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(normalizePort(r.port))} · ${escapeHtml(r.boat)}<br>${r.enabled?'켜짐':'중지'} · ${r.min_seats||1}자리 이상 · ${escapeHtml(status[r.last_status]||r.last_status)}${r.remaining!=null?' / '+r.remaining+'석':''}${r.error?' · '+escapeHtml(r.error):''}</span><button type="button" data-ntfy-action="delete" data-ntfy-id="${r.id}">개별 취소</button></div>`).join('')}</details></section>`;
   }).join(''):'등록된 알림이 없습니다.';
 
   if(document.querySelector('#ntfyAdminRows').innerHTML!==markup)document.querySelector('#ntfyAdminRows').innerHTML=markup;
@@ -745,9 +746,9 @@ async function initNtfy(){
     if(!ntfyLocal&&ntfyUsedTopics.includes(topic)&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('다른 사용자가 사용 중인 토픽입니다. 다른 이름을 입력해 주세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim()};
-    if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort];}
+    if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort];}}
     const button=document.querySelector('#ntfyRegister');button.disabled=true;
-    try{const direct=await ntfyRequest(payload);const row={label:payload.label,bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};if(ntfyEditing){ntfyMine.splice(ntfyEditing.index,1);ntfyEditing=null;button.textContent='구독';}ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
+    try{if(ntfyEditing?.keys){await ntfyRequest(payload);ntfyEditing=null;button.textContent='구독';ntfyMessage('수정 완료');return}const direct=await ntfyRequest(payload);const row={label:payload.label,bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};if(ntfyEditing){ntfyMine.splice(ntfyEditing.index,1);ntfyEditing=null;button.textContent='구독';}ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
   });
   document.querySelector('#ntfyMine').addEventListener('click',async e=>{
     const button=e.target.closest('[data-ntfy-remove],[data-ntfy-manage],[data-ntfy-edit]');if(!button)return;
@@ -762,7 +763,11 @@ async function initNtfy(){
 
   });
   document.querySelector('#ntfyAdminRows').addEventListener('click',async e=>{
-    const button=e.target.closest('[data-ntfy-action]');if(!button)return;button.disabled=true;
+    const button=e.target.closest('[data-ntfy-action]');if(!button)return;
+    if(button.dataset.ntfyAction==='edit'){
+      const keys=button.dataset.ntfyId.split(','),list=ntfyAdminRows.filter(r=>keys.includes(r.group_id||r.id)),r=list[0];if(!r)return;
+      ntfyEditing={keys:button.dataset.ntfyId};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;document.querySelector('#ntfyPort').value=r.scope_port||normalizePort(r.port);ntfyBoatOptions();document.querySelector('#ntfyBoat').value=list.length>1||r.scope_all?'0':String(r.bid);document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('신청 묶음을 수정한 뒤 수정 저장을 누르세요.');return;
+    }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
   try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}

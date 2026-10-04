@@ -47,6 +47,16 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_admin_update_keeps_owner_and_rolls_back(self):
+        self.a.register(self.p)
+        key=self.a.snapshot()['subscriptions'][0]['group_id']
+        self.a.admin_update(dict(self.p,id=key,label='수정이름',min_seats=3))
+        r=self.a.state['subscriptions'][0]
+        self.assertEqual(r['owner'],self.p['owner']);self.assertEqual(r['label'],'수정이름')
+        key=self.a.group_key(r)
+        with self.assertRaises(ValueError):self.a.admin_update(dict(self.p,id=key,label=''))
+        self.assertEqual(self.a.state['subscriptions'][0]['label'],'수정이름')
+
     def test_group_cancel_preserves_other_registrant(self):
         self.write('boats.json',{'boats':[self.boat,dict(self.boat,bid=2,name='두번째호')]})
         self.a.register_request(dict(self.p,bid=0,port='오천항'))
