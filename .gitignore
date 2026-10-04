@@ -30,3 +30,5 @@ kumkang.html
 .publish.lock
 .publish_state.json
 .apply_pending
+
+preview.log
