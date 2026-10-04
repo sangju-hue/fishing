@@ -59,19 +59,6 @@ class Alerts:
         atomic_json(config_path,self.config)
         self.save()
 
-    def public_topics(self):
-        """Only alert conditions; never owners, keys, names or management IDs."""
-        today=datetime.now(KST).date().isoformat()
-        groups={}
-        for r in self.state['subscriptions']:
-            if r['date']<today:continue
-            key=(r['topic'],r['date'],self.port_name(r.get('port')),r.get('min_seats',1),bool(r.get('enabled')),bool(r.get('scope_all')))
-            groups.setdefault(key,set()).add(r.get('boat',''))
-        settings={}
-        for (topic,ds,port,minimum,enabled,all_boats),boats in sorted(groups.items()):
-            settings.setdefault(topic,[]).append({'date':ds,'port':port,'boats':[] if all_boats else sorted(boats),'all_boats':all_boats,'min_seats':minimum,'enabled':enabled})
-        return {'topics':sorted(settings),'settings':settings}
-
     def save(self):
         with self.lock:
             # Expired rules no longer reserve topics or consume capacity.
@@ -81,7 +68,7 @@ class Alerts:
             if serialized!=self._last_saved:
                 atomic_json(self.path,self.state);os.chmod(self.path,0o600);self._last_saved=serialized
             today=datetime.now(KST).date().isoformat()
-            public=self.public_topics()
+            public={'topics':[],'settings':{}}
             public_path=os.path.join(self.base,'data','ntfy_topics.json')
             old=read(public_path,{})
             if any(old.get(k)!=v for k,v in public.items()):
@@ -116,6 +103,7 @@ class Alerts:
         owner=payload.get('owner','');topic=payload.get('topic','');ds=payload.get('date','');bid=payload.get('bid')
         if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('사용자 식별값 오류')
         if not isinstance(topic,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,64}',topic) or topic==self.config['inbox']:raise ValueError('토픽은 영문·숫자·_- 1~64자')
+        if len(topic)<24 and not any(r.get('topic')==topic for r in self.state['subscriptions']):raise ValueError('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요')
         if not isinstance(bid,int) or isinstance(bid,bool) or bid not in catalog:raise ValueError('선박을 선택하세요')
         try:d=date.fromisoformat(ds)
         except (TypeError,ValueError):raise ValueError('날짜를 선택하세요')
@@ -393,7 +381,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'public_topics':self.public_topics(),'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
+            return {'realtime_topics':False,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
 
     def check(self):
         today=datetime.now(KST).date().isoformat()

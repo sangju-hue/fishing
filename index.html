@@ -72,7 +72,6 @@
     @media(max-width:620px){.ntfy-form{grid-template-columns:1fr}.ntfy-row{align-items:stretch;flex-direction:column}}
     .ntfy-topic-group{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.ntfy-topic-group aside{padding:10px;border:1px solid var(--line);border-radius:8px;min-width:0}.ntfy-topic-name{display:inline-block;margin:6px 5px 0 0;padding:4px 8px;border-radius:6px;background:#163b42;color:var(--text)}#ntfyTopicsTime{display:block;color:var(--muted);margin-top:6px}
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
-      .ntfy-topic-entry{display:inline-block;position:relative}.ntfy-topic-entry .ntfy-topic-detail{display:none;position:absolute;z-index:20;right:0;top:100%;width:min(320px,75vw);max-height:260px;overflow:auto;padding:12px;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 12px #0004}.ntfy-topic-detail p{margin:0 0 10px;font-size:13px;line-height:1.6}.ntfy-topic-entry[data-open="true"] .ntfy-topic-detail{display:block}@media(hover:hover){.ntfy-topic-entry:hover .ntfy-topic-detail{display:block}}#ntfyDuplicateDialog button{min-width:64px;min-height:44px}
     #ntfyInstructions{padding:16px 18px;border:2px solid var(--accent);border-radius:12px;background:var(--accentBg);color:var(--text);line-height:1.8;overflow-wrap:anywhere}#ntfyInstructions .notice-heading{display:block;margin-bottom:8px;color:var(--accent);font-size:16px}#ntfyInstructions .download-icon{display:inline-block;width:18px;height:20px;vertical-align:-4px;margin-right:4px;fill:currentColor;flex-shrink:0}#ntfyInstructions a{white-space:nowrap}
     #ntfyForm .ntfy-input-box{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px;border:1px solid var(--line);border-radius:12px;min-width:0}#ntfyForm .ntfy-seat-topic{grid-column:1/-1;display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;align-items:start}#ntfyForm .ntfy-used-topics{grid-column:1/-1;min-width:0;padding:0}#ntfyForm .ntfy-seat-topic small{font-size:11px;line-height:1.4}@media(max-width:620px){#ntfyForm .ntfy-input-box{grid-template-columns:1fr;padding:12px;gap:12px}#ntfyForm .ntfy-seat-topic{grid-template-columns:90px minmax(0,1fr);gap:12px}}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
@@ -199,17 +198,15 @@
   </section>
   <details id="ntfySettings" class="ntfy-settings" aria-label="빈자리 알림 설정(ntfy App 알림)">
     <summary style="font-size:20px">🔔 빈자리 알림 설정(ntfy App 알림)</summary>
-    <p id="ntfyInstructions"><strong class="notice-heading">중요 안내</strong>폰 ntfy 앱 (<a href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.6 2c.2 1.4-.5 2.7-1.3 3.6-.9.9-2.1 1.5-3.3 1.4-.2-1.3.5-2.6 1.3-3.5.9-.9 2.2-1.5 3.3-1.5ZM19.8 16.6c-.5 1.2-.8 1.8-1.5 2.9-.9 1.3-2.1 2.9-3.7 2.9-1.4 0-1.8-.9-3.7-.9s-2.4.9-3.7.9c-1.6 0-2.8-1.5-3.7-2.8C1 15.8.7 10.4 3.3 8.2c1.4-1.2 3.4-1.7 5-1.1 1.2.4 2.1.9 3.1.9.9 0 2-.6 3.6-1 1.4-.4 3.2-.1 4.5 1.1-3.6 2-3 6.6.3 8.5Z"/></svg>아이폰 다운로드</a> / <a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6.2 3.4 1.3 2.3A9.7 9.7 0 0 1 12 4.6c1.6 0 3.1.4 4.5 1.1l1.3-2.3.9.5-1.4 2.3A8.4 8.4 0 0 1 21 12H3a8.4 8.4 0 0 1 3.7-5.8L5.3 3.9l.9-.5ZM3 13h18v7H3v-7Z"/><circle cx="8" cy="9" r="1" fill="var(--accentBg)"/><circle cx="16" cy="9" r="1" fill="var(--accentBg)"/></svg>안드로이드 다운로드</a>)에서 <strong>반드시 '나의 토픽' 값을 동일하게 입력하고 구독해야</strong> 알림을 받을 수 있습니다.<br><br>나의 토픽 옆에 '사용 중인 토픽'을 확인하세요.<br>알림 설정은 모두 공개되며 다른 사람도 사용할 수 있습니다.</p>
-    <dialog id="ntfyDuplicateDialog" aria-labelledby="ntfyDuplicateTitle"><h3 id="ntfyDuplicateTitle">사용 중인 토픽입니다</h3><p>사용중인 토픽 입니다. 설정값은 저장되지 않으며 기존 토픽으로 알림이 갑니다. 계속 하시겠습니까?</p><button type="button" id="ntfyDuplicateYes">예</button> <button type="button" id="ntfyDuplicateNo">아니요</button></dialog>
+    <p id="ntfyInstructions"><strong class="notice-heading">중요 안내</strong>폰 ntfy 앱 (<a href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.6 2c.2 1.4-.5 2.7-1.3 3.6-.9.9-2.1 1.5-3.3 1.4-.2-1.3.5-2.6 1.3-3.5.9-.9 2.2-1.5 3.3-1.5ZM19.8 16.6c-.5 1.2-.8 1.8-1.5 2.9-.9 1.3-2.1 2.9-3.7 2.9-1.4 0-1.8-.9-3.7-.9s-2.4.9-3.7.9c-1.6 0-2.8-1.5-3.7-2.8C1 15.8.7 10.4 3.3 8.2c1.4-1.2 3.4-1.7 5-1.1 1.2.4 2.1.9 3.1.9.9 0 2-.6 3.6-1 1.4-.4 3.2-.1 4.5 1.1-3.6 2-3 6.6.3 8.5Z"/></svg>아이폰 다운로드</a> / <a href="https://play.google.com/store/apps/details?id=io.heckel.ntfy" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6.2 3.4 1.3 2.3A9.7 9.7 0 0 1 12 4.6c1.6 0 3.1.4 4.5 1.1l1.3-2.3.9.5-1.4 2.3A8.4 8.4 0 0 1 21 12H3a8.4 8.4 0 0 1 3.7-5.8L5.3 3.9l.9-.5ZM3 13h18v7H3v-7Z"/><circle cx="8" cy="9" r="1" fill="var(--accentBg)"/><circle cx="16" cy="9" r="1" fill="var(--accentBg)"/></svg>안드로이드 다운로드</a>)에서 <strong>반드시 '나의 토픽' 값을 동일하게 입력하고 구독해야</strong> 알림을 받을 수 있습니다.<br><br>토픽과 알림 설정은 공개하지 않습니다. 자동 생성된 긴 토픽을 사용하고 다른 사람에게 공유하지 마세요.<br>본인이 신청한 알림은 이 브라우저에서 확인·수정할 수 있습니다.</p>
     <form id="ntfyForm" class="ntfy-form">
       <div class="ntfy-input-box">
       <label>이름(구분용 · 필수)<input id="ntfyLabel" required maxlength="16" placeholder="예: 홍길동"></label>
       <label>날짜<input id="ntfyDate" type="date" required></label>
       <div>항구<details class="ntfy-picker" id="ntfyPortPicker"><summary>항구 전체</summary><div></div></details><select id="ntfyPort" multiple hidden autocomplete="off"></select></div>
       <div>배<details class="ntfy-picker" id="ntfyBoatPicker"><summary>배 전체</summary><div></div></details><select id="ntfyBoat" multiple hidden autocomplete="off"></select></div>
-        <div class="ntfy-seat-topic"><label>최소 빈자리<input id="ntfyMinSeats" type="number" min="1" max="100" step="1" value="1" required><small>2를 입력하면 2자리 이상일 때 알림</small></label><label>나의 토픽 (예: fish-why)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="토픽 입력 (예: fish-why)" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label></div>
+        <div class="ntfy-seat-topic"><label>최소 빈자리<input id="ntfyMinSeats" type="number" min="1" max="100" step="1" value="1" required><small>2를 입력하면 2자리 이상일 때 알림</small></label><label>나의 토픽 (비공개)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="자동 생성된 비공개 토픽" title="새 토픽은 영문, 숫자, -와 _로 24~64자 · 기존 토픽 유지 가능" autocomplete="off"></label></div>
       </div>
-      <aside class="ntfy-used-topics" aria-label="사용 중인 전체 토픽"><strong>사용 중인 토픽</strong><div id="ntfyTopics">목록 불러오는 중…</div><small id="ntfyTopicsTime"></small></aside>
       <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><button id="ntfyCancelEdit" type="button" hidden>수정 취소</button><button id="ntfyRegister" type="submit">구독</button></div>
       <p id="ntfySelection" style="grid-column:1/-1;margin:0"></p>
     </form>
@@ -717,7 +714,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyTopicSettings={},ntfyMinimumReady=false,ntfyManageReady=false,ntfyMultiReady=false,ntfyEditing=null,ntfyAdminRows=[],ntfyTopicStream=null,ntfyTopicsVersion=0;
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyMultiReady=false,ntfyEditing=null,ntfyAdminRows=[];
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,reply_topic:ntfyReplyTopic,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -738,53 +735,6 @@ function ntfyBoatOptions(){
  const valid=previous.filter(x=>[...document.querySelector('#ntfyBoat').options].some(o=>o.value===x));ntfySet('ntfyBoat',valid.length?valid:['*']);ntfyPicker('ntfyPort');ntfySelection();
 }
 function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0&&r.scope_all!==false?['*']:[String(r.bid)]);ntfySelection()}
-async function ntfyUseExistingTopic(topic){
- if(!ntfyUsedTopics.includes(topic)||ntfyEditing)return false;
- const dialog=document.querySelector('#ntfyDuplicateDialog');
- const accepted=await new Promise(resolve=>{
-  const finish=value=>{dialog.removeEventListener('cancel',cancel);dialog.close();resolve(value)};
-  const cancel=e=>{e.preventDefault();finish(false)};
-  dialog.addEventListener('cancel',cancel);document.querySelector('#ntfyDuplicateYes').onclick=()=>finish(true);document.querySelector('#ntfyDuplicateNo').onclick=()=>finish(false);dialog.showModal();
- });
- ntfyMessage(accepted?"새 설정은 저장하지 않았습니다. 폰 ntfy 앱에서 '"+topic+"' 토픽을 구독하면 기존 설정의 알림을 받을 수 있습니다.":'취소했습니다. 다른 토픽을 입력해 주세요.');
- return true;
-}
-function ntfyShowTopics(data){
-  const version=Date.parse(data.updated_at)||0;if(version<ntfyTopicsVersion)return;ntfyTopicsVersion=version;
-  ntfyUsedTopics=data.topics||[];ntfyTopicSettings=data.settings||{};
-  const box=document.querySelector('#ntfyTopics');
-  box.innerHTML=ntfyUsedTopics.length?ntfyUsedTopics.map(t=>{
-   const rows=ntfyTopicSettings[t]||[],detail=rows.length?rows.map(r=>`<p>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${Number(r.min_seats)||1}자리 이상 · ${r.enabled?'켜짐':'중지'}<br>${r.all_boats?'배 전체':(r.boats||[]).map(escapeHtml).join(', ')}</p>`).join(''):'상세 설정을 불러오는 중입니다.';
-   return `<span class="ntfy-topic-entry"><button type="button" class="ntfy-topic-name" aria-expanded="false">${escapeHtml(t)}</button><span class="ntfy-topic-detail">${detail}</span></span>`;
-  }).join(''):'사용 중인 토픽이 없습니다.';
-  box.onclick=e=>{const button=e.target.closest('.ntfy-topic-name');if(!button)return;const entry=button.closest('.ntfy-topic-entry'),open=entry.dataset.open!=='true';entry.dataset.open=String(open);button.setAttribute('aria-expanded',String(open));};
-  document.querySelector('#ntfyTopicsTime').textContent=`최신 확인: ${(data.updated_at||'').replace('T',' ').slice(0,19)}`;
-}
-function ntfyConnectTopics(){
-  if(!ntfyConfig||ntfyTopicStream)return;
-  ntfyTopicStream=new EventSource(`${ntfyConfig.server}/${ntfyConfig.inbox}-topics/sse?since=latest`);
-  ntfyTopicStream.onmessage=e=>{try{const item=JSON.parse(e.data);if(item.event==='message')ntfyShowTopics(JSON.parse(item.message));}catch(err){document.querySelector('#ntfyTopicsTime').textContent='토픽 목록 형식 확인 필요';}};
-  ntfyTopicStream.onerror=()=>{document.querySelector('#ntfyTopicsTime').textContent='실시간 목록 재연결 중';};
-}
-async function ntfyRefreshTopics(){
-  try{
-    let data;
-    if(ntfyLocal){
-      const s=await scraperFetch('/settings');if(!s.ntfy)throw Error();
-      const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
-      data={...(s.ntfy.public_topics||{topics:[...new Set((s.ntfy.subscriptions||[]).filter(r=>r.date>=today).map(r=>r.topic))].sort()}),updated_at:new Date().toISOString()};
-    }else{
-      if(ntfyConfig){
-        try{
-          const r=await fetch(`${ntfyConfig.server}/${ntfyConfig.inbox}-topics/json?poll=1&since=latest`,{cache:'no-store',signal:AbortSignal.timeout(6000)});
-          if(r.ok){const messages=(await r.text()).trim().split('\n').filter(Boolean).map(x=>JSON.parse(x)).filter(x=>x.event==='message');if(messages.length)data=JSON.parse(messages.at(-1).message);}
-        }catch(e){}
-      }
-      if(!data){const r=await fetch('data/ntfy_topics.json?topics='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();data=await r.json();}
-    }
-    ntfyShowTopics(data);
-  }catch(e){document.querySelector('#ntfyTopicsTime').textContent='최신 목록 연결 확인 중 · 자동 재시도';}
-}
 function ntfyRenderMine(){
   document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<section class="ntfy-registrant"><h3>${escapeHtml(r.label||'이름 미입력')} · ${escapeHtml(r.topic)}</h3><div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port==='*'?'항구 전체':r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div></section>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
 }
@@ -811,7 +761,7 @@ async function ntfyRequest(payload){
   if(ntfyLocal){
     if(!scraperCsrf)await refreshScraper();
     const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({...payload,action:payload.action==='delete'?'remove':payload.action})});
-    renderScraper(s);ntfyRefreshTopics();return true;
+    renderScraper(s);return true;
   }
   if(!ntfyConfig)throw Error('알림 연결 설정을 불러오지 못했습니다. 새로고침해 주세요.');
   if(!ntfyConfig.supports_receipts)throw Error('맥 알림 기능 업데이트 적용 중입니다. 잠시 후 새로고침해 주세요.');
@@ -869,9 +819,10 @@ async function initNtfy(){
   const season=currentSeason(),d=document.querySelector('#ntfyDate');d.value=season.start;d.min=season.start;d.max=season.last;
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
-  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['*']);ntfySelection();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
-  window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null;ntfyReplyStream?.close();ntfyReplyStream=null});
-  window.addEventListener('pageshow',()=>{ntfyConnectTopics();ntfyConnectReplies()});
+  if(!document.querySelector('#ntfyTopic').value)document.querySelector('#ntfyTopic').value='fish-'+ntfyRandom();
+  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['*']);ntfySelection();ntfyLink();ntfyRenderMine();
+  window.addEventListener('pagehide',()=>{ntfyReplyStream?.close();ntfyReplyStream=null});
+  window.addEventListener('pageshow',()=>{ntfyConnectReplies()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyForm').addEventListener('change',e=>{
     const input=e.target.closest('[data-picker]');if(!input)return;
@@ -892,7 +843,7 @@ async function initNtfy(){
     const port=ports.includes('*')?'*':ports.join(', ');
     if(!ports.length||!chosen.length){ntfyMessage('항구와 배를 선택해 주세요.');return}
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
-    await ntfyRefreshTopics();if(await ntfyUseExistingTopic(topic))return;
+    if(topic.length<24&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyEditing?.group||ntfySubmissionGroup()};
     if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort,r.group||null];}}
@@ -919,7 +870,7 @@ async function initNtfy(){
     }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectTopics();ntfyConnectReplies();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectReplies();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
