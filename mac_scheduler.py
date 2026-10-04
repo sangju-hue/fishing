@@ -21,6 +21,7 @@ from datetime import datetime, timezone, timedelta
 from datetime import date
 from collect_homepages import BASE, atomic_json
 from season import season_window
+from booking_state import OK,FAILED,PARTIAL,SKIPPED
 
 DEFAULTS = {'near_days': 14, 'fast_minutes': 5, 'slow_minutes': 30}
 LIMITS = {'near_days': (1, 60), 'fast_minutes': (1, 120), 'slow_minutes': (1, 120)}
@@ -59,6 +60,8 @@ class Scheduler:
         self.alerts = None
         self.next_alerts = time.monotonic()
         self.active_boat_ids = []
+        self.active_targets = {}
+        self.last_queue='general'
         self.manual_pending = False
         self.next_collection_kind = None
         self.pending_range_ports = []
@@ -81,7 +84,7 @@ class Scheduler:
                       'last_fast_at': None, 'last_slow_at': None}
         previous = read_json(RUNTIME, {})
         # 완료 기록만 복원. 이전 프로세스의 실행 중 표시는 현재 실행으로 오인하지 않는다.
-        for key in ('last_finished_at', 'last_result', 'last_mode', 'last_collection_kind', 'last_range', 'last_range_ports', 'last_fast_at', 'last_slow_at'):
+        for key in ('last_finished_at', 'last_result', 'last_mode', 'last_collection_kind', 'last_range', 'last_range_ports', 'last_fast_at', 'last_slow_at','last_success_at'):
             if key in previous:self.state[key] = previous[key]
         now = time.monotonic()
         self.next_fast = now  # 시작 직후 첫 수집
@@ -168,53 +171,38 @@ class Scheduler:
 
     def due_mode(self):
         with self.lock:
-            self.active_boat_ids = []
+            self.active_boat_ids=[];self.active_targets={}
             if self.manual_pending:
-                self.manual_pending = False
-                self.next_collection_kind = 'full_once'
-                return 'full'
+                self.manual_pending=False;self.next_collection_kind='full_once';self.last_queue='general';return 'full'
             if self.pending_range:
-                self.active_range, self.pending_range = self.pending_range, None
-                self.active_range_ports = self.pending_range_ports[:]
-                self.pending_range_ports = []
-                self.next_collection_kind = 'range_once'
-                return 'range'
-            self.active_boat_ids = []
-            if self.alerts and time.monotonic() >= self.next_alerts:
-                ids, dates = self.alerts.targets()
-                self.next_alerts = time.monotonic() + 300
-                if ids and dates:
-                    self.active_boat_ids = ids
-                    self.active_range = [dates[0], dates[-1]]
-                    self.active_range_ports = []
-                    self.next_collection_kind = 'alerts_auto'
-                    return 'range'
+                self.active_range,self.pending_range=self.pending_range,None
+                self.active_range_ports=self.pending_range_ports[:];self.pending_range_ports=[]
+                self.next_collection_kind='range_once';self.last_queue='general';return 'range'
+            now=time.monotonic();general=None
             if self.auto_range:
-                _, first, last = season_window(datetime.now(KST))
-                start, end = max(self.auto_range[0], first.isoformat()), min(self.auto_range[1], last.isoformat())
-                if start > end:
-                    self.auto_range = None
-                    self.save_settings()
-                else:
-                    if time.monotonic() >= self.next_range:
-                        self.next_collection_kind = "range_repeat"
-                        self.active_range = [start, end]
-                        self.active_range_ports = self.auto_range_ports[:]
-                        self.next_range = time.monotonic() + self.range_interval_minutes * 60
-                        return 'range'
-                    return None
-            if self.paused:
-                return None
-            now = time.monotonic()
-            fast_due, slow_due = now >= self.next_fast, now >= self.next_slow
-            if fast_due or slow_due:
-                self.next_collection_kind = "full_auto"
-            if fast_due and slow_due:
-                return 'full'
-            if fast_due:
-                return 'fast'
-            if slow_due:
-                return 'slow'
+                _,first,last=season_window(datetime.now(KST))
+                start,end=max(self.auto_range[0],first.isoformat()),min(self.auto_range[1],last.isoformat())
+                if start>end:self.auto_range=None;self.save_settings()
+                elif now>=self.next_range:general='range'
+            elif not self.paused:
+                due=[(at,mode) for at,mode in [(self.next_fast,'fast'),(self.next_slow,'slow')] if now>=at]
+                if due:general=min(due)[1]
+            alert_due=bool(self.alerts and now>=self.next_alerts)
+            if alert_due and (not general or self.last_queue!='alerts'):
+                pairs=self.alerts.target_pairs()
+                self.next_alerts=now+300
+                if pairs:
+                    dates=sorted({ds for values in pairs.values() for ds in values})
+                    self.active_targets=pairs;self.active_boat_ids=sorted(map(int,pairs))
+                    self.active_range=[dates[0],dates[-1]];self.active_range_ports=[]
+                    self.next_collection_kind='alerts_auto';self.last_queue='alerts';return 'range'
+            if general:
+                self.last_queue='general'
+                if general=='range':
+                    self.active_range=[start,end];self.active_range_ports=self.auto_range_ports[:]
+                    self.next_range=now+self.range_interval_minutes*60;self.next_collection_kind='range_repeat'
+                else:self.next_collection_kind='full_auto'
+                return general
             return None
 
     def run_once(self, mode):
@@ -224,27 +212,40 @@ class Scheduler:
             self.next_collection_kind = None
             if mode != 'range':
                 self.active_range = None
-            # 다음 예정은 '시작 시각' 기준. 수집이 길어져 지났으면 끝나는 즉시 다시 시작.
+            # The completion path schedules the next interval, including long runs.
             if mode in ('fast', 'full'):
                 self.next_fast = started_mono + self.cfg['fast_minutes'] * 60
             if mode in ('slow', 'full'):
                 self.next_slow = started_mono + self.cfg['slow_minutes'] * 60
         atomic_json(RUNTIME, self.snapshot_light())
+        target_file=None
         try:
             cmd = [sys.executable, os.path.join(BASE, 'run_collection.py'), '--mode', mode]
             if mode == 'range':
                 cmd += ['--from-date', self.active_range[0], '--to-date', self.active_range[1]]
                 if self.active_range_ports:
                     cmd += ['--ports', *self.active_range_ports]
-                if self.active_boat_ids:
-                    cmd += ['--boat-ids', *map(str, self.active_boat_ids)]
+                if self.active_targets:
+                    import tempfile
+                    fd,target_file=tempfile.mkstemp(prefix='fishing-targets-',suffix='.json')
+                    with os.fdopen(fd,'w') as f:json.dump(self.active_targets,f)
+                    cmd+=['--targets-file',target_file]
+                if self.active_boat_ids:cmd+=['--boat-ids',*map(str,self.active_boat_ids)]
             result = subprocess.run(cmd, cwd=BASE)
-            outcome = 'ok' if result.returncode == 0 else 'failed'
+            outcome={OK:'ok',PARTIAL:'partial',SKIPPED:'skipped'}.get(result.returncode,'failed')
         except Exception as e:
             print(type(e).__name__, str(e), flush=True)
             outcome = 'failed'
+        finally:
+            if target_file and os.path.exists(target_file):os.unlink(target_file)
         with self.lock:
             finished = stamp()
+            completed=time.monotonic()
+            if mode in ('fast','full'):self.next_fast=completed+(60 if outcome=='skipped' else self.cfg['fast_minutes']*60)
+            if mode in ('slow','full'):self.next_slow=completed+(60 if outcome=='skipped' else self.cfg['slow_minutes']*60)
+            kind=self.state.get('current_collection_kind')
+            if kind=='alerts_auto':self.next_alerts=completed+(60 if outcome=='skipped' else 300)
+            if kind=='range_repeat':self.next_range=completed+(60 if outcome=='skipped' else self.range_interval_minutes*60)
             self.state["last_collection_kind"] = self.state.get("current_collection_kind")
             self.state["current_collection_kind"] = None
             self.state.update(running=False, current_mode=None, last_finished_at=finished, last_result=outcome, last_mode=mode)
@@ -252,9 +253,10 @@ class Scheduler:
                 self.state['last_range'] = list(self.active_range)
                 self.state['last_range_ports'] = self.active_range_ports[:]
                 self.active_range = None
-            if mode in ('fast', 'full'):
+            if outcome=='ok':self.state['last_success_at']=finished
+            if outcome=='ok' and mode in ('fast', 'full'):
                 self.state['last_fast_at'] = finished
-            if mode in ('slow', 'full'):
+            if outcome=='ok' and mode in ('slow', 'full'):
                 self.state['last_slow_at'] = finished
         atomic_json(RUNTIME, self.snapshot_light())
 
@@ -324,9 +326,10 @@ def handler(scheduler, port):
                 return self.send(404, {'error': '없음'})
             try:
                 size = int(self.headers.get('Content-Length', '0'))
-                if not 0 < size <= 1024:
+                if not 0 < size <= (65536 if self.path=='/alerts' else 4096):
                     raise ValueError('잘못된 요청')
                 body = json.loads(self.rfile.read(size))
+                if not isinstance(body,dict):raise ValueError('잘못된 요청')
                 if self.path == '/alerts':
                     if not scheduler.alerts:raise ValueError('알림 연결 준비 중')
                     if body['action']=='add':scheduler.alerts.register_request(body)

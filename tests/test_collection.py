@@ -131,7 +131,7 @@ class SettingsTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             s.control('range', {'from_date': '2026-10-20', 'to_date': '2026-10-10'})
 
-    def test_overrun_schedules_next_from_start(self):
+    def test_overrun_schedules_rest_from_completion(self):
         s = mac_scheduler.Scheduler()
         s.cfg['fast_minutes'] = 5
         with patch.object(mac_scheduler.time, 'monotonic', side_effect=[100, 430]), \
@@ -139,8 +139,8 @@ class SettingsTests(unittest.TestCase):
              patch.object(mac_scheduler, 'atomic_json'):
             run.return_value.returncode = 0
             s.run_once('fast')
-        # 시작(100) 기준 5분(300초) 뒤인 400초로 계산됨
-        self.assertEqual(s.next_fast, 400)
+        # 완료(430) 후 5분(300초) 휴지시간
+        self.assertEqual(s.next_fast, 730)
 
 class RangePortTests(unittest.TestCase):
     def test_selected_ports_reach_collector_and_completion(self):
@@ -161,7 +161,7 @@ class RangePortTests(unittest.TestCase):
         boats=[dict(bid=1,name='가호',port='오천항',channels={'homepage':'https://one.test'}),dict(bid=2,name='나호',port='무창포항',channels={'homepage':'https://two.test'})]
         with patch.object(rc,'load_boats',return_value=boats), patch.object(rc,'progress'), patch.object(rc,'run',return_value=0) as run, patch.object(rc,'collect_group',return_value=0) as group:
             rc.by_range('range','now',[], '2026-10-05','2026-10-06',['오천항'])
-            self.assertEqual(run.call_args_list[0].args,('scrape_sunsang24.py','--incremental','--ports','오천항'))
+            self.assertEqual(run.call_args_list[0].args,('scrape_sunsang24.py','--incremental','--from-date','2026-10-05','--to-date','2026-10-06','--ports','오천항'))
             self.assertEqual(group.call_args.args[3],['one.test'])
             self.assertEqual(group.call_args.args[-2:],('--ports','오천항'))
             group.reset_mock()

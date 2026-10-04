@@ -1,0 +1,30 @@
+const assert=require('assert'),fs=require('fs'),{JSDOM}=require('../node_modules/jsdom'),{performance}=require('perf_hooks');
+const html=fs.readFileSync('index.html','utf8'),code=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(m=>m[1]).join('\n');
+const w=new JSDOM(html,{url:'https://fixture.test/',runScripts:'outside-only',pretendToBeVisual:true}).window;
+const errors=[];w.addEventListener('error',e=>errors.push(e.error));w.console.error=(...args)=>errors.push(args);
+w.setInterval=()=>1;w.EventSource=class{constructor(){}close(){}};w.matchMedia=()=>({matches:false,addEventListener(){}});
+const boats=Array.from({length:3},(_,i)=>({bid:i+1,name:'테스트'+i+'호',operator:'테스트선사',region:'충남',port:'오천항',channels:{homepage:'https://example.test/index.php?mid=bk'}}));
+let remaining=3;
+w.fetch=async(raw,options={})=>{
+ const path=String(raw).split('?')[0];let data={};
+ if(options.method==='HEAD')return {ok:true,headers:{get:k=>k==='ETag'?'test-v1':''}};
+ if(path==='data/boats.json')data={boats};
+ if(path==='data/status_homepages.json')data={schema_version:2,updated_at:new Date().toISOString(),by_boat_id:{'2026-10-09':{'1':{boat_id:1,status:'available',remaining,checked_at:new Date().toISOString()}}}};
+ if(path==='data/site_health.json')data={sites:{}};
+ if(path==='data/ntfy_public.json')data={supports_multi:true,supports_manage:true,supports_min_seats:true,supports_receipts:true,inbox:'fake',server:'https://example.test'};
+ if(path.includes('/json?'))return {ok:true,text:async()=>''};
+ return {ok:true,json:async()=>JSON.parse(JSON.stringify(data))};
+};
+w.eval(fs.readFileSync('booking_routes.js','utf8'));w.eval(code);w.eval('window.test={loadData,renderMatrix,selectDate,currentSeason,refreshCalendar};');
+(async()=>{
+ await new Promise(r=>setTimeout(r,80));
+ assert.equal(errors.length,0,JSON.stringify(errors));
+ const selector='button[data-boat-id="1"][data-date="2026-10-09"]',cell=w.document.querySelector(selector),thead=w.document.querySelector('#matrixTable thead');assert(cell);assert.equal(cell.textContent,'3');
+ remaining=4;await w.test.loadData();const t=performance.now();w.test.renderMatrix();const duration=performance.now()-t;
+ assert.strictEqual(w.document.querySelector(selector),cell,'keep existing cell DOM on status update');assert.equal(cell.textContent,'4');
+ w.test.selectDate('2026-10-09');assert.strictEqual(w.document.querySelector('#matrixTable thead'),thead,'keep header DOM on date selection');assert(cell.parentElement.classList.contains('selected-col'));
+ assert.equal(w.document.querySelector('#ntfyPort').options.length,2);assert.equal(w.document.querySelector('#ntfyBoat').options.length,4);
+ w.eval("const OriginalDate=Date;Date=class extends OriginalDate{constructor(...args){super(...(args.length?args:['2026-12-01T00:00:00+09:00']))}static now(){return new OriginalDate('2026-12-01T00:00:00+09:00').getTime()}};");
+ const season=w.test.currentSeason();assert.equal(season.year,2027);assert.equal(season.start,'2027-09-01');w.test.refreshCalendar();assert.equal(w.document.querySelector('#ntfyDate').max,'2027-11-30');assert.equal(w.document.querySelector('#ntfyDate').value,'2027-09-01');
+ w.close();console.log('PASS: complete page initialization, schema 2 display, cells/header preserved on update and date selection, alert selectors; small-fixture update '+Math.round(duration)+'ms');
+})().catch(e=>{console.error(e);w.close();process.exitCode=1});

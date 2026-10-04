@@ -28,6 +28,8 @@ class CustomBookingTests(unittest.TestCase):
     def test_cancelled_full_and_expired_are_distinct(self):
         for fields,want in [({'STATUS_CD':'113_210'},('cancelled',0)),({'STATUS_CD':'113_180'},('completed',0)),({'RESERVE_CONFIRM_CNT':8},('full',0)),({'FISH_KIND':'우럭'},('other_fish',None))]:
             self.assertEqual(self.parse([self.row(**fields)])[('뉴해양호','2026-10-09')],want)
+    def test_unspecified_fish_is_not_available(self):
+        self.assertEqual(self.parse([self.row(FISH_KIND='')])[('뉴해양호','2026-10-09')],('unspecified',None))
     def test_unpublished_past_deleted_and_wrong_ship_not_full(self):
         row=self.row();row.pop('PSGR_CNT')
         self.assertEqual(self.parse([row,self.row(DEL_FLAG='Y'),self.row(SHIP_NAME='다른호'),self.row(SCHD_DATE='20261003')]),{})

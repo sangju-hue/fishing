@@ -49,5 +49,5 @@ class DeletedRange(unittest.TestCase):
         import run_collection
         from unittest.mock import patch
         with patch.object(run_collection,'load_boats',return_value=[{'bid':2}]), patch.object(run_collection,'run') as run:
-            self.assertEqual(run_collection.by_range('range','now',[], '2026-10-09','2026-10-09',boat_ids=[1]),0)
+            self.assertEqual(run_collection.by_range('range','now',[], '2026-10-09','2026-10-09',boat_ids=[1]),3)
             run.assert_not_called()

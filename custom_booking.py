@@ -73,6 +73,8 @@ def parse_fishapp(payload, boats, aliases, start, end, url, wait_reserved=False)
             fish = row.get('FISH_KIND') or row.get('FISH_KIND1') or ''
             if fish and not re.search(r'쭈꾸미|주꾸미|쭈갑', fish):
                 value = ('other_fish', None)
+            elif not fish:
+                value=('unspecified',None)
             elif code != '113_110' or 'PSGR_CNT' not in row:
                 # No capacity means unpublished, not a full boat.
                 continue

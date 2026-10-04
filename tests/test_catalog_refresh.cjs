@@ -12,11 +12,11 @@ w.fetch=async(raw,options={})=>{
  const data=path==='data/boats.json'?{boats:version===1?old:current}:path==='data/site_health.json'?{sites:{}}:{};
  return {ok:true,json:async()=>JSON.parse(JSON.stringify(data))};
 };
-const loader=source.slice(source.indexOf('let BOATS=[];'),source.indexOf('const koreaToday='));
+const loader=source.slice(source.indexOf('let BOATS=[];'),source.indexOf('function currentSeason('));
 const normal=source.slice(source.indexOf('const PORT_ALIASES='),source.indexOf('// Preferred ports first;'));
 const init=source.slice(source.indexOf('const smallPorts='),source.indexOf('function initRangePorts('));
 const refresh=source.slice(source.indexOf('let dataSignature='),source.indexOf('function startAutoRefresh('));
-w.eval('const $=s=>document.querySelector(s);function escapeHtml(v){return String(v)};function renderMatrix(){};function renderCards(){};function renderAlertBar(){};'+loader+normal+init+refresh+';window.test={loadData,initPorts,checkForUpdates,setStamp:async()=>{dataSignature=await dataStamp()}};');
+w.eval('const $=s=>document.querySelector(s);function escapeHtml(v){return String(v)};function renderMatrix(){};function renderCards(){};function renderAlertBar(){};function refreshCatalogSelectors(){};'+loader+normal+init+refresh+';window.test={loadData,initPorts,checkForUpdates,setStamp:async()=>{dataSignature=await dataStamp()}};');
 (async()=>{
  await w.test.loadData();w.test.initPorts();
  const select=w.document.querySelector('#portFilter');select.value='인천';

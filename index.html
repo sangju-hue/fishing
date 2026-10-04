@@ -206,74 +206,73 @@ let STATUS_URL={};
 let HOMEPAGE_STATUS_BY_ID={};
 let SUNSANG_STATUS_BY_ID={};
 let LEGACY_BOAT_IDS={};
-async function loadData(){
-  try{
-    const cacheKey=Date.now();
-    const fetchData=path=>fetch(`${path}?v=${cacheKey}`,{cache:'no-store'});
-    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetchData('data/boats.json'),fetchData('data/status.json'),fetchData('data/status_homepages.json').catch(()=>null),fetchData('data/site_health.json').catch(()=>null)]);
-    const boatsData=await boatsRes.json();
-    try{const audit=await fetchData('data/scrape_audit_current.json').then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
-    BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
-    BOATS.forEach(boat=>{boat.ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name)});
-    if(healthRes&&healthRes.ok){
-      try{
-        const health=await healthRes.json(),deferredIds=new Set();
-        DATE_NOTICES={};Object.values(health.sites||{}).forEach(site=>Object.entries(site.date_notices||{}).forEach(([name,dates])=>{const bid=site.boat_ids?.[name];if(bid!=null)DATE_NOTICES[bid]=dates}));
-        Object.values(health.sites||{}).forEach(site=>(site.deferred_boats||[]).forEach(name=>{if(site.boat_ids?.[name]!=null)deferredIds.add(Number(site.boat_ids[name]))}));
-        BOATS.forEach(boat=>{if(deferredIds.has(boat.bid))boat.collection_priority='deferred_daily'});
-        Object.values(health.sites||{}).forEach(site=>Object.entries(site.boat_notices||{}).forEach(([name,text])=>{const bid=site.boat_ids?.[name];const boat=BOATS.find(b=>b.bid===Number(bid));if(boat)boat.booking_notice=text}));
-      }catch(e){console.error('수집 우선순위 읽기 실패:',e)}
+const DATA_FILES=['data/boats.json','data/status.json','data/status_homepages.json','data/site_health.json'];
+const jsonCache=new Map(),observationCache=new Map();let loadingData=null;
+const VALID_OBSERVATIONS=new Set(['available','full','cancelled','maintenance','weather','conditional','completed','other_fish','unspecified']);
+function observationFor(boat,date){
+  const bid=String(boat.canonical_bid??boat.bid),key=bid+'|'+date;if(observationCache.has(key))return observationCache.get(key);
+  const result=[SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]].filter(info=>info&&!info.stale&&VALID_OBSERVATIONS.has(info.status)&&(info.boat_id==null||String(info.boat_id)===bid)).sort((a,b)=>{
+    const time=x=>/Z$|[+-]\d\d:\d\d$/.test(x.checked_at||'')?(Date.parse(x.checked_at)||-Infinity):-Infinity;
+    return time(b)-time(a);
+  })[0]||null;observationCache.set(key,result);return result;
+}
+async function loadData(changedFiles=null){
+  if(loadingData)return loadingData;
+  loadingData=(async()=>{
+    const cacheKey=Date.now(),nextCache=new Map(jsonCache);
+    const fetchData=async path=>{
+      if(changedFiles&&!changedFiles.has(path)&&nextCache.has(path))return nextCache.get(path);
+      const r=await fetch(`${path}?v=${cacheKey}`,{cache:'no-store',signal:AbortSignal.timeout(20000)});
+      if(!r.ok)throw Error('데이터 응답 오류: '+path);
+      const value=await r.json();if(!value||typeof value!=='object')throw Error('데이터 형식 오류: '+path);
+      nextCache.set(path,value);return value;
+    };
+    const readManifest=async()=>{try{const r=await fetch(`data/snapshot.json?v=${Date.now()}`,{cache:'no-store',signal:AbortSignal.timeout(6000)});return r.ok?(await r.json()).version||null:null}catch(e){return null}};
+    const manifestBefore=await readManifest();
+    const [boatsData,statusData,hpData,health]=await Promise.all(DATA_FILES.map(fetchData));
+    const manifestAfter=await readManifest();if(manifestBefore!==manifestAfter)throw Error('새 배포 적용 중 · 다시 시도');
+    const catalog=boatsData.boats||boatsData;if(!Array.isArray(catalog))throw Error('명부 형식 오류');
+    for(const status of [statusData,hpData])if(status.by_boat_id!=null&&(Array.isArray(status.by_boat_id)||typeof status.by_boat_id!=='object'))throw Error('예약 데이터 형식 오류');
+    const boats=catalog.filter(b=>b.canonical_bid==null).map(b=>({...b})),counts=new Map(),dateNotices={},deferred=new Set();
+    boats.forEach(b=>counts.set(b.name,(counts.get(b.name)||0)+1));boats.forEach(b=>b.ambiguous=counts.get(b.name)>1);
+    const byId=new Map(boats.map(b=>[Number(b.bid),b]));
+    Object.values(health.sites||{}).forEach(site=>{
+      Object.entries(site.date_notices||{}).forEach(([name,dates])=>{const bid=site.boat_ids?.[name];if(bid!=null)dateNotices[bid]={...(dateNotices[bid]||{}),...dates}});
+      (site.deferred_boats||[]).forEach(name=>{if(site.boat_ids?.[name]!=null)deferred.add(Number(site.boat_ids[name]))});
+      Object.entries(site.boat_notices||{}).forEach(([name,text])=>{const boat=byId.get(Number(site.boat_ids?.[name]));if(boat)boat.booking_notice=text});
+    });
+    boats.forEach(b=>{if(deferred.has(b.bid))b.collection_priority='deferred_daily'});
+    const codes={available:'a',full:'f',cancelled:'c',maintenance:'m',weather:'w',conditional:'p',completed:'d',other_fish:'o',unspecified:'i'},legacy={},urls={},legacyIds={};
+    for(const data of [hpData,statusData])for(const [ds,rows] of Object.entries(data.dates||{}))for(const [name,info] of Object.entries(rows)){
+      if(!info.stale&&codes[info.status]){(legacy[ds]||={})[name]=[codes[info.status],info.remaining??null];(urls[ds]||={})[name]=info.source_url??null;(legacyIds[ds]||={})[name]=info.boat_id??null;}
     }
-    const statusData=await statusRes.json();
-    SUNSANG_STATUS_BY_ID=statusData.by_boat_id||{};
-    const codeMap={available:'a',full:'f',cancelled:'c',maintenance:'m',weather:'w',conditional:'p',completed:'d',other_fish:'o',unspecified:'i'};
-    STATUS={};
-    let updatedAt=statusData.updated_at||boatsData.updated_at;
-    if(updatedAt)document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,19)} 기준`;
-    const dates=statusData.dates||{};
-    try{
-      if(hpRes&&hpRes.ok){
-        const hpData=await hpRes.json();
-        if(hpData.updated_at&&(!updatedAt||new Date(hpData.updated_at)>new Date(updatedAt))){updatedAt=hpData.updated_at;document.querySelector(".snapshot strong").textContent=`${updatedAt.replace("T"," ").slice(0,19)} 기준`;}
-        HOMEPAGE_STATUS_BY_ID=hpData.by_boat_id||{};
-        const hpDates=hpData.dates||{};
-        for(const [date,boats] of Object.entries(hpDates)){
-          const day=dates[date]||(dates[date]={});
-          for(const [name,info] of Object.entries(boats)){
-            if(info.stale || info.boat_id!=null)continue;
-            if(day[name]&&day[name].source==='sunsang24')continue;
-            day[name]=info;
-          }
-        }
-      }
-    }catch(e){console.error('홈페이지 데이터 병합 실패:',e);}
-    for(const [date,boats] of Object.entries(dates)){
-      STATUS[date]={};
-      LEGACY_BOAT_IDS[date]={};
-      STATUS_URL[date]={};
-      for(const [name,info] of Object.entries(boats)){
-        const code=codeMap[info.status];
-        if(code&&!info.stale){
-          STATUS[date][name]=[code,info.remaining??null];
-          LEGACY_BOAT_IDS[date][name]=info.boat_id??null;
-          STATUS_URL[date][name]=info.source_url??null;
-        }
-      }
-    }
-  }catch(e){console.error('데이터 로드 실패:',e);}
+    // Only commit globals after every required file parsed successfully.
+    observationCache.clear();BOATS=boats;DATE_NOTICES=dateNotices;SUNSANG_STATUS_BY_ID=statusData.by_boat_id||{};HOMEPAGE_STATUS_BY_ID=hpData.by_boat_id||{};STATUS=legacy;STATUS_URL=urls;LEGACY_BOAT_IDS=legacyIds;
+    jsonCache.clear();nextCache.forEach((v,k)=>jsonCache.set(k,v));
+    const updatedAt=[statusData.updated_at,hpData.updated_at,boatsData.updated_at].filter(Boolean).sort().at(-1);
+    if(updatedAt)document.querySelector('.snapshot strong').textContent=`${updatedAt.replace('T',' ').slice(0,19)} 기준`;
+    if(!changedFiles||changedFiles.has('data/boats.json'))try{
+      const r=await fetch(`data/scrape_audit_current.json?v=${cacheKey}`,{cache:'no-store',signal:AbortSignal.timeout(4000)});if(r.ok){const audit=await r.json();AUDIT_REASONS=Object.fromEntries((audit.boats||[]).map(b=>[b.canonical_bid||b.bid,b]))}
+    }catch(e){}
+    return true;
+  })();
+  try{return await loadingData}finally{loadingData=null}
 }
 
-
-
-const koreaToday=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
-const seasonYear=Number(koreaToday.slice(0,4))+(Number(koreaToday.slice(5,7))===12?1:0);
+function currentSeason(){
+  const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+  const year=Number(today.slice(0,4))+(Number(today.slice(5,7))===12?1:0),first=`${year}-09-01`,last=`${year}-11-30`;
+  return {today,year,first,last,start:today>first?today:first};
+}
+let koreaToday=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+let seasonYear=Number(koreaToday.slice(0,4))+(Number(koreaToday.slice(5,7))===12?1:0);
 let selectedDate=koreaToday>=`${seasonYear}-09-01`&&koreaToday<=`${seasonYear}-11-30`?koreaToday:`${seasonYear}-09-01`;
 let activeMonth=0;
 let rangeResultFilter=null,rangeAvailableIds=new Set(),rangeResultPorts=new Set();
 const selectedBoatIds=new Set();
 const alertDates=new Set();
 let alertFeedback="";
-const todayKey=koreaToday;
+let todayKey=koreaToday;
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,"0");
 const dateKey=(y,m,d)=>`${y}-${pad(m+1)}-${pad(d)}`;
@@ -286,9 +285,7 @@ const channelNames={sunsang24:"선상24",band:"밴드",naver:"네이버예약",h
 function bookingUrl(boat,date=selectedDate){
   const bid=String(boat.canonical_bid??boat.bid);
   let raw='';
-  for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
-    if(info&&!info.stale&&info.source_url){raw=info.source_url;break}
-  }
+  const observation=observationFor(boat,date);if(observation?.source_url)raw=observation.source_url;
   if(!raw)raw=boat.booking_page||primaryUrl(boat);
   return BookingRoutes.forDate(raw,date);
 }
@@ -297,12 +294,8 @@ function statusRow(boat,date=selectedDate){
     return [boat.status_overrides[date],null,null];
   }
   const bid=String(boat.canonical_bid??boat.bid);
-  for(const info of [SUNSANG_STATUS_BY_ID[date]?.[bid],HOMEPAGE_STATUS_BY_ID[date]?.[bid]]){
-    if(info&&!info.stale){
-      const code={available:"a",full:"f",cancelled:"c",maintenance:"m",weather:"w",conditional:"p",completed:"d",other_fish:"o",unspecified:"i"}[info.status];
-      if(code)return [code,info.remaining??null,info.fish??null,info.actual_status??null];
-    }
-  }
+  const info=observationFor(boat,date);
+  if(info){const code={available:'a',full:'f',cancelled:'c',maintenance:'m',weather:'w',conditional:'p',completed:'d',other_fish:'o',unspecified:'i'}[info.status];return [code,info.remaining??null,info.fish??null,info.actual_status??null];}
   const legacyId=LEGACY_BOAT_IDS[date]?.[boat.name];
   const legacy=(legacyId!=null?String(legacyId)===bid:!boat.ambiguous)&&STATUS[date]?.[boat.name];
   if(legacy)return [legacy[0],legacy[1],null];
@@ -450,10 +443,34 @@ function allDates(){
   if(activeMonth===-1)return dates.filter(item=>item.month+1>=10);
   return activeMonth?dates.filter(item=>item.month+1===activeMonth):dates;
 }
+let matrixLayoutKey='',matrixButtons=new Map();
+function updateMatrixCells(boats,dates,groups){
+  const set=(el,name,value)=>{if(el.getAttribute(name)!==String(value))el.setAttribute(name,String(value))};
+  for(const boat of boats){
+    if(boat.booking_notice)continue;
+    for(const item of dates){
+      const button=matrixButtons.get(boat.bid+'|'+item.key);if(!button)continue;
+      const info=statusInfo(boat,item.key),td=button.parentElement,selected=item.key===selectedDate,past=item.key<todayKey,opens=info.cls==='available'||!boat.channels.sunsang24;
+      const signature=JSON.stringify([info.cls,info.short,info.text,selected,past]);
+      if(button.dataset.rendered===signature)continue;button.dataset.rendered=signature;
+      set(button,'class','status-cell '+info.cls);set(button,'data-status',info.cls);set(button,'title',info.text);
+      set(button,'aria-label',`${boat.name}, ${item.month+1}월 ${item.d}일, ${info.text}${opens?', 예약 페이지 열기':', 상세 보기'}`);
+      if(button.textContent!==String(info.short))button.textContent=info.short;
+      set(td,'class',`${selected?'selected-col ':''}${past?'past':''}`.trim());
+    }
+  }
+  document.querySelectorAll('.date-head[data-date]').forEach(el=>{el.classList.toggle('selected-col',el.dataset.date===selectedDate);el.classList.toggle('past',el.dataset.date<todayKey)});
+  document.querySelectorAll('[data-alert-date]').forEach(el=>el.checked=alertDates.has(el.dataset.alertDate));
+  document.querySelectorAll('[data-select-boat]').forEach(el=>{el.checked=selectedBoatIds.has(Number(el.dataset.selectBoat));el.closest('.boat-controls').classList.toggle('is-selected',el.checked)});
+  document.querySelectorAll('[data-select-group]').forEach(el=>{const list=groups[Number(el.dataset.selectGroup)]?.[1]||[];el.checked=!!list.length&&list.every(b=>selectedBoatIds.has(b.bid));el.closest('.operator-controls').classList.toggle('is-selected',el.checked)});
+}
 function renderMatrix(){
   const dates=allDates();
   if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>(!rangeResultPorts.size||rangeResultPorts.has(boat.port))&&dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
   const groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
+  const layout=JSON.stringify([dates.map(d=>d.key),boats.map(b=>[b.bid,b.name,b.operator,b.port,b.region,b.booking_notice,b.collection_priority,websiteUrl(b)]),rangeResultFilter,activeMonth]);
+  if(layout===matrixLayoutKey&&matrixButtons.size){updateMatrixCells(boats,dates,groups);return;}
+  matrixLayoutKey=layout;
   const monthGroups=[];
   dates.forEach(item=>{const label=`${item.month+1}월`,last=monthGroups.at(-1);if(last?.label===label)last.days++;else monthGroups.push({label,days:1})});
   let html='<thead><tr><th class="boat-col" scope="col" rowspan="2">선사 · 배 · 항구</th>';
@@ -490,6 +507,7 @@ function renderMatrix(){
   if(!boats.length)html+=`<tr class="empty-row"><td colspan="${dates.length+1}">조건에 맞는 선사가 없습니다.</td></tr>`;
   html+='</tbody>';
   $("#matrixTable").innerHTML=html;
+  matrixButtons=new Map([...document.querySelectorAll("#matrixTable .status-cell")].map(el=>[el.dataset.boatId+"|"+el.dataset.date,el]));
   $("#matrixTable").style.setProperty("--date-count",dates.length);
   const range=rangeResultFilter?`${rangeResultFilter[0]}~${rangeResultFilter[1]}, ${dates.length}일 · 빈자리 있는 배만`:activeMonth===-1?"10월 1일–11월 30일, 61일":activeMonth?`${activeMonth}월 1일–${activeMonth}월 ${dates.length}일, ${dates.length}일`:`9월 1일–11월 30일, 91일`;
   $("#matrixCount").innerHTML=`<b>${boats.length}척</b> · ${groups.length}개 선사 그룹 · ${range} 현황`;
@@ -614,7 +632,7 @@ function initPorts(){
 function initRangePorts(){
   const ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,"ko"));
   $("#rngPortOptions").innerHTML=ports.map(p=>`<label><input type="checkbox" class="rng-port" value="${escapeHtml(p)}" disabled> ${escapeHtml(p)}</label>`).join("");
-  $("#rngAllPorts").addEventListener("change",e=>document.querySelectorAll(".rng-port").forEach(c=>c.disabled=e.target.checked));
+  $("#rngAllPorts").onchange=e=>document.querySelectorAll(".rng-port").forEach(c=>c.disabled=e.target.checked);
 }
 function selectedRangePorts(){
   if($("#rngAllPorts").checked)return [];
@@ -660,7 +678,7 @@ speciesTabs.forEach((tab,index)=>{
 let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyMultiReady=false,ntfyEditing=null,ntfyAdminRows=[],ntfyTopicStream=null,ntfyTopicsVersion=0;
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
-function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
+function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,reply_topic:ntfyReplyTopic,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
 function ntfyLink(){ntfyRemember()}
 function ntfyMessage(text){document.querySelector('#ntfyMessage').textContent=text}
 function ntfyValues(id){return [...document.querySelector('#'+id).selectedOptions].map(o=>o.value)}
@@ -711,6 +729,25 @@ async function ntfyRefreshTopics(){
 function ntfyRenderMine(){
   document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<section class="ntfy-registrant"><h3>${escapeHtml(r.label||'이름 미입력')} · ${escapeHtml(r.topic)}</h3><div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port==='*'?'항구 전체':r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div></section>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
 }
+function ntfySubmissionGroup(){const form=document.querySelector('#ntfyForm'),key=JSON.stringify([document.querySelector('#ntfyDate').value,ntfyValues('ntfyPort'),ntfyValues('ntfyBoat'),document.querySelector('#ntfyTopic').value,document.querySelector('#ntfyLabel').value,document.querySelector('#ntfyMinSeats').value]);if(form.dataset.submissionKey!==key){form.dataset.submissionKey=key;form.dataset.submissionGroup=ntfyRandom().slice(0,16)}return form.dataset.submissionGroup;}
+let ntfyReplyTopic='',ntfyReplyStream=null;
+const ntfyReceipts=new Map(),ntfyWaiters=new Map();
+function ntfyReceiveReceipt(raw){
+  try{const message=typeof raw==='string'?JSON.parse(raw):raw;if(message.event!=='message')return;const r=JSON.parse(message.message);if(!/^[a-f0-9]{32}$/.test(r.request_id))return;ntfyReceipts.set(r.request_id,r);const waiter=ntfyWaiters.get(r.request_id);if(waiter){ntfyWaiters.delete(r.request_id);waiter(r)};}catch(e){}
+}
+async function ntfyRecoverReceipts(){
+  if(!ntfyConfig||!ntfyReplyTopic)return;
+  try{const r=await fetch(`${ntfyConfig.server}/${ntfyReplyTopic}/json?poll=1&since=all`,{cache:'no-store',signal:AbortSignal.timeout(6000)});if(r.ok)(await r.text()).split('\n').filter(Boolean).forEach(ntfyReceiveReceipt)}catch(e){}
+}
+function ntfyConnectReplies(){
+  if(ntfyLocal||!ntfyConfig?.supports_receipts||ntfyReplyStream)return;
+  ntfyReplyStream=new EventSource(`${ntfyConfig.server}/${ntfyReplyTopic}/sse?since=all`);
+  ntfyReplyStream.onmessage=e=>ntfyReceiveReceipt(e.data);ntfyReplyStream.onopen=ntfyRecoverReceipts;
+}
+function ntfyWaitReceipt(id){
+  if(ntfyReceipts.has(id))return Promise.resolve(ntfyReceipts.get(id));
+  return new Promise(resolve=>{const timer=setTimeout(()=>{ntfyWaiters.delete(id);resolve({ok:false,error:'맥의 처리 확인을 기다리는 중입니다. 같은 작업을 다시 누르면 결과를 재확인합니다.'})},45000);ntfyWaiters.set(id,r=>{clearTimeout(timer);resolve(r)});});
+}
 async function ntfyRequest(payload){
   if(ntfyLocal){
     if(!scraperCsrf)await refreshScraper();
@@ -718,6 +755,12 @@ async function ntfyRequest(payload){
     renderNtfyAdmin(s.ntfy);ntfyRefreshTopics();return true;
   }
   if(!ntfyConfig)throw Error('알림 연결 설정을 불러오지 못했습니다. 새로고침해 주세요.');
+  if(!ntfyConfig.supports_receipts)throw Error('맥 알림 기능 업데이트 적용 중입니다. 잠시 후 새로고침해 주세요.');
+  ntfyConnectReplies();
+  const pendingKey='fishingNtfyPending',fingerprint=JSON.stringify(payload);let pending;try{pending=JSON.parse(localStorage.getItem(pendingKey)||'null')}catch(e){}
+  const requestId=pending?.fingerprint===fingerprint?pending.requestId:ntfyRandom();
+  localStorage.setItem(pendingKey,JSON.stringify({fingerprint,requestId}));
+  payload={...payload,request_id:requestId,reply_topic:ntfyReplyTopic};
   const key=await crypto.subtle.importKey('spki',Uint8Array.from(atob(ntfyConfig.public_key),c=>c.charCodeAt(0)),{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
   const raw=new TextEncoder().encode(JSON.stringify(payload));let message;
   const b64=raw=>btoa(String.fromCharCode(...new Uint8Array(raw)));
@@ -736,14 +779,17 @@ async function ntfyRequest(payload){
     const response=await fetch(`${ntfyConfig.server}/${ntfyConfig.inbox}`,{method:'POST',headers:{'Content-Type':'text/plain'},body:message,signal:controller.signal});
     if(!response.ok)throw Error(`신청 전달 실패 (${response.status}). 잠시 후 다시 시도해 주세요.`);
   }finally{clearTimeout(timer)}
-  return false;
+  await ntfyRecoverReceipts();const result=await ntfyWaitReceipt(requestId);
+  if(ntfyReceipts.has(requestId))localStorage.removeItem(pendingKey);
+  if(!result.ok)throw Error(result.error||'신청 거절');
+  return true;
 }
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
   document.querySelector('#ntfyAdmin').hidden=false;
   ntfyMinimumReady=!!state?.supports_min_seats;ntfyManageReady=!!state?.supports_manage;ntfyMultiReady=!!state?.supports_multi;
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
-  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 ${state.check_minutes}분마다 수집${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
+  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 수집 완료 후 ${state.check_minutes}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
   const rows=state.subscriptions||[];ntfyAdminRows=rows;
   const groups=new Map();rows.forEach(r=>{const key=r.group_id||r.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
@@ -760,13 +806,13 @@ function renderNtfyAdmin(state){
   ntfyMine.forEach(r=>{const actual=rows.find(x=>x.topic===r.topic&&(r.group?x.request_group===r.group:(r.bid===0?(r.scopePort==='*'||normalizePort(x.port)===r.scopePort):x.bid===r.bid))&&x.date===r.date);if(actual)r.state=actual.enabled?'맥 등록 완료':'중지'});ntfyRenderMine();
 }
 async function initNtfy(){
-  try{const saved=JSON.parse(localStorage.getItem('fishingNtfy')||'{}');ntfyOwner=saved.owner||ntfyRandom();ntfyMine=saved.mine||[];document.querySelector('#ntfyMinSeats').value=saved.min_seats||1;document.querySelector('#ntfyTopic').value=saved.topic&&(!/^fishing-[0-9a-f]{32}$/.test(saved.topic)||ntfyMine.length)?saved.topic:'fish1'}catch(e){ntfyOwner=ntfyRandom();document.querySelector('#ntfyTopic').value='fish1'}
-  const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),year=today.slice(0,4),d=document.querySelector('#ntfyDate');d.value=today;d.min=today>`${year}-09-01`?today:`${year}-09-01`;d.max=`${year}-11-30`;
+  try{const saved=JSON.parse(localStorage.getItem('fishingNtfy')||'{}');ntfyOwner=saved.owner||ntfyRandom();ntfyReplyTopic=saved.reply_topic||'fishing-reply-'+ntfyRandom();ntfyMine=saved.mine||[];document.querySelector('#ntfyMinSeats').value=saved.min_seats||1;document.querySelector('#ntfyTopic').value=saved.topic&&(!/^fishing-[0-9a-f]{32}$/.test(saved.topic)||ntfyMine.length)?saved.topic:'fish1'}catch(e){ntfyOwner=ntfyRandom();ntfyReplyTopic='fishing-reply-'+ntfyRandom();document.querySelector('#ntfyTopic').value='fish1'}
+  const season=currentSeason(),d=document.querySelector('#ntfyDate');d.value=season.start;d.min=season.start;d.max=season.last;
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
   ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
-  window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null});
-  window.addEventListener('pageshow',()=>{ntfyConnectTopics()});
+  window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null;ntfyReplyStream?.close();ntfyReplyStream=null});
+  window.addEventListener('pageshow',()=>{ntfyConnectTopics();ntfyConnectReplies()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyForm').addEventListener('change',e=>{
     const input=e.target.closest('[data-picker]');if(!input)return;
@@ -789,10 +835,10 @@ async function initNtfy(){
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
     if(!ntfyLocal&&ntfyUsedTopics.includes(topic)&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('다른 사용자가 사용 중인 토픽입니다. 다른 이름을 입력해 주세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
-    const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyRandom().slice(0,16)};
+    const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyEditing?.group||ntfySubmissionGroup()};
     if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort,r.group||null];}}
-    const button=document.querySelector('#ntfyRegister');button.disabled=true;
-    try{if(ntfyEditing?.keys){await ntfyRequest(payload);ntfyEditing=null;button.textContent='구독';document.querySelector('#ntfyCancelEdit').hidden=true;ntfyMessage('수정 완료');return}const direct=await ntfyRequest(payload);const row={ports,bids,group:payload.group,label:payload.label,bid,date:d.value,topic,boat:bids.length?'선택 '+bids.length+'척':'배 전체',min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};if(ntfyEditing){ntfyMine.splice(ntfyEditing.index,1);ntfyEditing=null;button.textContent='구독';document.querySelector('#ntfyCancelEdit').hidden=true;}ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
+    const button=document.querySelector('#ntfyRegister');button.disabled=true;ntfyMessage('맥에서 신청을 처리하고 있습니다…');
+    try{if(ntfyEditing?.keys){await ntfyRequest(payload);ntfyEditing=null;button.textContent='구독';document.querySelector('#ntfyCancelEdit').hidden=true;ntfyMessage('수정 완료');return}const direct=await ntfyRequest(payload);const row={ports,bids,group:payload.group,label:payload.label,bid,date:d.value,topic,boat:bids.length?'선택 '+bids.length+'척':'배 전체',min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};if(ntfyEditing){ntfyMine.splice(ntfyEditing.index,1);ntfyEditing=null;button.textContent='구독';document.querySelector('#ntfyCancelEdit').hidden=true;}ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);delete document.querySelector('#ntfyForm').dataset.submissionKey;ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
   });
   document.querySelector('#ntfyMine').addEventListener('click',async e=>{
     const button=e.target.closest('[data-ntfy-remove],[data-ntfy-manage],[data-ntfy-edit]');if(!button)return;
@@ -810,11 +856,11 @@ async function initNtfy(){
     const button=e.target.closest('[data-ntfy-action]');if(!button)return;
     if(button.dataset.ntfyAction==='edit'){
       const keys=button.dataset.ntfyId.split(','),list=ntfyAdminRows.filter(r=>keys.includes(r.group_id||r.id)),r=list[0];if(!r)return;
-      ntfyEditing={keys:button.dataset.ntfyId};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;ntfyRestore({...r,ports:r.scope_ports||[r.scope_port||normalizePort(r.port)],bids:list.map(x=>x.bid)});document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyCancelEdit').hidden=false;document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('신청 묶음을 수정한 뒤 수정 저장을 누르세요.');return;
+      ntfyEditing={keys:button.dataset.ntfyId};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;ntfyRestore({...r,ports:r.scope_ports||[r.scope_port||normalizePort(r.port)],bids:list.every(x=>x.scope_all)?[]:list.map(x=>x.bid)});document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyCancelEdit').hidden=false;document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('신청 묶음을 수정한 뒤 수정 저장을 누르세요.');return;
     }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyConnectTopics();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyConnectTopics();ntfyConnectReplies();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
@@ -859,11 +905,11 @@ async function initNtfy(){
       <tr><th>홈페이지 전체</th><th>${plan.total.sites}곳</th><th>${plan.total.boats}척</th><th>${sum(g,"pages_last")}장</th></tr>
       </tbody></table>
       <ul>
-        <li><b>빠른 수집 · ${plan.fast_minutes}분마다:</b> 선상24 전체 → 무창포·오천항·영흥도 홈페이지 한 번에 (오늘부터 ${plan.near_days}일까지)</li>
-        <li><b>느린 수집 · ${plan.slow_minutes}분마다:</b> 주요 3곳의 ${plan.near_days+1}일째 이후 날짜 → 나머지 항구 ${rest.sites}곳 전체 날짜</li>
-        <li>그룹 하나가 끝날 때마다 바로 GitHub에 올려 화면에 반영합니다 (열린 화면은 1분마다 새 데이터 확인).</li>
+        <li><b>빠른 수집 · ${plan.fast_minutes}분마다:</b> 선상24 가까운 날짜 → 무창포·오천항·영흥도 홈페이지 한 번에 (오늘부터 ${plan.near_days}일까지)</li>
+        <li><b>느린 수집 · ${plan.slow_minutes}분마다:</b> 선상24 먼 날짜·주요 3곳의 ${plan.near_days+1}일째 이후 날짜 → 나머지 항구 ${rest.sites}곳 전체 날짜</li>
+        <li>한 번의 수집 결과를 모아 GitHub에 올려 화면에 반영합니다 (열린 화면은 1분마다 새 데이터 확인).</li>
         <li>동시에 ${plan.workers}개 사이트를 수집하고, 같은 사이트에는 ${plan.gap_seconds}초 간격으로 요청합니다.</li>
-        <li>다음 수집 시각은 이전 수집 '시작' 기준입니다. 수집이 길어져 시각이 지나면 끝나는 즉시 다시 시작합니다.</li>
+        <li>다음 수집은 완료 후 설정 간격을 두고 시작합니다. 알림과 일반 수집은 차례로 진행합니다.</li>
         <li>빠른·느린 수집이 겹치면 빠른 수집 후 이어서 느린 수집을 합니다 (동시에 돌지 않음).</li>
         <li>지난 수집 페이지 수는 시즌 전체 기준 참고치입니다. 배 수는 홈페이지가 등록된 배만 셉니다.</li>
       </ul>
@@ -880,11 +926,11 @@ async function initNtfy(){
     if(s.running&&s.paused)msg+=" · 이 수집 후 일반 자동 수집은 중지 상태";
     if(!s.running)msg=s.paused?"자동 수집 중지 상태":`다음 빠른 수집 ${fmtWait(s.next_fast_in)} 후 · 느린 수집 ${fmtWait(s.next_slow_in)} 후`;
     if(s.manual_pending)msg+=" · 수동수집 대기 중";
-    msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${s.last_result==="failed"?" (일부 실패)":""}`;
+    msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${({failed:' (수집 실패)',partial:' (일부 실패)',skipped:' (실행 보류)'})[s.last_result]||''}`;
     $("#scrapeSettingStatus").textContent=msg;
     $("#scrapePause").disabled=s.paused&&!s.auto_range;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
     const rf=$("#rngFrom"),rt=$("#rngTo"),yr=(s.last_started_at||new Date().toISOString()).slice(0,4),today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
-    rf.min=rt.min=today>`${yr}-09-01`?today:`${yr}-09-01`;rf.max=rt.max=`${yr}-11-30`;
+    const calendar=currentSeason();rf.min=rt.min=calendar.start;rf.max=rt.max=calendar.last;
     if(!scraperSettingsLoaded){
       const savedRange=s.active_range||s.pending_range||s.auto_range;
       if(savedRange){rf.value=savedRange[0];rt.value=savedRange[1]}
@@ -897,7 +943,7 @@ async function initNtfy(){
       }
       scraperSettingsLoaded=true;
     }
-    if(!rf.value)rf.value=today;if(!rt.value)rt.value=today;
+    if(!rf.value)rf.value=calendar.start;if(!rt.value)rt.value=calendar.start;
     $("#rngAutoStop").disabled=!s.auto_range;
     $("#rngAutoStatus").textContent=s.auto_range?`${s.auto_range[0]}~${s.auto_range[1]} · ${s.range_interval_minutes}분 자동 · ${s.auto_range_ports?.length?s.auto_range_ports.join(", "):"전체 항구"} · 다음 수집 ${fmtWait(s.next_range_in)} 후`:"자동 범위 수집 꺼짐";
     if(s.auto_range&&!s.running)$("#scrapeSettingStatus").textContent=`범위 자동 수집 켜짐 · 다음 수집 ${fmtWait(s.next_range_in)} 후`;
@@ -906,7 +952,7 @@ async function initNtfy(){
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     const isRange=s.current_mode==="range",range=isRange?s.active_range:null;
     $("#progressScope").textContent=s.running?(range?`범위: ${range[0]} ~ ${range[1]} · ${s.active_range_ports?.length?s.active_range_ports.join(", "):s.active_range_ports?"전체 항구":"항구 정보 확인 중"}`:`방식: ${modeName[s.current_mode]||"수집"}`):s.pending_range?`대기 범위: ${s.pending_range.join(" ~ ")}`:"";
-    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":s.last_finished_at?`마지막 수집 ${s.last_result==="failed"?"완료 · 일부 실패":"완료"}`:"수집 대기 중";
+    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":s.last_finished_at?`마지막 수집 ${({failed:'실패',partial:'완료 · 일부 실패',skipped:'보류',ok:'완료'})[s.last_result]||'대기'}`:"수집 대기 중";
     $("#progressStep").textContent=step;
     const elapsed=s.running&&s.last_started_at?Math.max(0,Math.floor((Date.now()-Date.parse(s.last_started_at))/1000)):null;
     $("#progressElapsed").textContent=elapsed!==null?`시작 ${fmtTime(s.last_started_at)} · 경과 ${fmtWait(elapsed)}`:s.last_finished_at?`완료 시각 ${fmtTime(s.last_finished_at)}`:"";
@@ -922,14 +968,14 @@ async function initNtfy(){
       const s=await scraperFetch("/settings");scraperCsrf=s.csrf_token;renderScraper(s);
       if(observedFinish===null){observedFinish=s.last_finished_at||"";return}
       if(s.last_finished_at&&s.last_finished_at!==observedFinish){
-        if(s.last_mode==="range"&&s.last_collection_kind!=="alerts_auto"&&s.last_range&&!rangeResultsLoading){
+        if(s.last_result!=="skipped"&&s.last_result!=="failed"&&s.last_mode==="range"&&s.last_collection_kind!=="alerts_auto"&&s.last_range&&!rangeResultsLoading){
           rangeResultsLoading=true;
           try{
-            await loadData();initPorts();
+            await loadData();initPorts();refreshCatalogSelectors();
             rangeResultPorts=new Set(s.last_range_ports||[]);rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
             $("#search").value="";$("#portFilter").value="";
             document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
-            $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · ${s.last_range_ports?.length?s.last_range_ports.join(", "):"전체 항구"} · 빈자리 있는 배만 표시${s.last_result==="failed"?" (일부 수집 실패)":""}`;
+            $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · ${s.last_range_ports?.length?s.last_range_ports.join(", "):"전체 항구"} · 빈자리 있는 배만 표시${({failed:' (수집 실패)',partial:' (일부 수집 실패)',skipped:' (실행 보류)'})[s.last_result]||''}`;
             $("#rangeResults").hidden=false;
             renderMatrix();renderCards();renderAlertBar();
             $("#matrixWrap").scrollLeft=0;$("#matrixWrap").scrollTop=0;
@@ -995,7 +1041,8 @@ async function initNtfy(){
     $("#scrapeRun").addEventListener("click",e=>{if(confirm("지금 전체 수집(약 10분)을 실행할까요?"))scraperControl("run",e.currentTarget)});
     refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
   }
-loadData().then(()=>{
+dataStamp().then(async stamp=>{
+  await loadData();dataSignature=stamp;
   initPorts();initRangePorts();initNtfy();renderMatrix();renderCards();renderAlertBar();
   requestAnimationFrame(()=>{
     const btn=$(".date-head.selected-col");
@@ -1005,12 +1052,12 @@ loadData().then(()=>{
     if(selected && wrap && boatCol) wrap.scrollLeft += selected.getBoundingClientRect().left - boatCol.getBoundingClientRect().right;
   });
   startAutoRefresh();
-});
+}).catch(e=>{document.querySelector('.snapshot strong').textContent='데이터 연결 실패 · 자동 재시도 중';startAutoRefresh();});
 // 자동 새로고침: 1분마다 데이터 파일의 변경 표시(ETag/Last-Modified)만 확인하고, 바뀌었을 때만 다시 불러온다.
 let dataSignature=null,refreshing=false;
 async function dataStamp(){
-  const files=['data/boats.json','data/status.json','data/status_homepages.json'];
-  const parts=await Promise.all(files.map(f=>fetch(f+`?h=${Date.now()}`,{method:'HEAD',cache:'no-store'}).then(r=>r.ok?(r.headers.get('ETag')||'')+(r.headers.get('Last-Modified')||'')+(r.headers.get('Content-Length')||''):'').catch(()=>'')));
+  const files=DATA_FILES;
+  const parts=await Promise.all(files.map(f=>fetch(f+`?h=${Date.now()}`,{method:'HEAD',cache:'no-store'}).then(r=>{if(!r.ok)throw Error('갱신 확인 실패');return (r.headers.get('ETag')||'')+(r.headers.get('Last-Modified')||'')+(r.headers.get('Content-Length')||'')})));
   return parts.join('|');
 }
 async function checkForUpdates(){
@@ -1019,21 +1066,37 @@ async function checkForUpdates(){
   try{
     const stamp=await dataStamp();
     if(!stamp.replace(/\|/g,''))return;
-    if(dataSignature===null){dataSignature=stamp;return}
+    if(dataSignature===null&&!BOATS.length){await loadData();initPorts();initRangePorts();initNtfy();renderMatrix();renderCards();renderAlertBar();dataSignature=stamp;return}
     if(stamp===dataSignature)return;
-    dataSignature=stamp;
+    const oldParts=(dataSignature||'').split('|'),newParts=stamp.split('|'),changed=new Set(DATA_FILES.filter((f,i)=>oldParts[i]!==newParts[i]));
     const wrap=$("#matrixWrap"),left=wrap?wrap.scrollLeft:0,top=wrap?wrap.scrollTop:0;
-    await loadData();initPorts();
+    await loadData(changed);initPorts();refreshCatalogSelectors();
     renderMatrix();renderCards();renderAlertBar();
+    dataSignature=stamp;
     if(wrap){wrap.scrollLeft=left;wrap.scrollTop=top}
     console.info('새 수집 결과 반영:',new Date().toLocaleTimeString('ko-KR'));
-  }catch(e){console.error('자동 새로고침 실패:',e)}
+  }catch(e){console.error('자동 새로고침 실패:',e);document.querySelector('.snapshot strong').textContent='갱신 실패 · 이전 데이터 표시 · 재시도 중'}
   finally{refreshing=false}
 }
+function refreshCatalogSelectors(){
+  const select=document.querySelector('#ntfyPort');if(!select)return;
+  const selected=ntfyValues('ntfyPort'),ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
+  select.innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
+  ntfySet('ntfyPort',selected.filter(p=>p==='*'||ports.includes(p)));ntfyBoatOptions();
+  const all=document.querySelector('#rngAllPorts'),checked=new Set([...document.querySelectorAll('.rng-port:checked')].map(x=>x.value));initRangePorts();
+  if(all&&!all.checked)document.querySelectorAll('.rng-port').forEach(x=>{x.checked=checked.has(x.value);x.disabled=false});
+}
+function refreshCalendar(){
+  const now=currentSeason();if(now.today===koreaToday)return;
+  const oldYear=seasonYear;koreaToday=todayKey=now.today;seasonYear=now.year;
+  if(oldYear!==seasonYear||selectedDate<now.start||selectedDate>now.last){selectedDate=now.start;rangeResultFilter=null;}
+  for(const id of ['ntfyDate','rngFrom','rngTo']){const el=document.querySelector('#'+id);if(el){el.min=now.start;el.max=now.last;if(!el.value||el.value<now.start||el.value>now.last)el.value=now.start;}}
+  renderMatrix();renderCards();
+}
 function startAutoRefresh(){
-  checkForUpdates();
-  setInterval(checkForUpdates,60*1000);
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkForUpdates()});
+  refreshCalendar();checkForUpdates();
+  setInterval(()=>{refreshCalendar();checkForUpdates()},60*1000);
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
 </body>

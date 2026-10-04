@@ -14,6 +14,7 @@ from datetime import date, datetime
 from urllib.parse import urlencode,urlsplit,urlunsplit,parse_qsl
 from collect_homepages import atomic_json
 from season import KST, season_window
+from booking_state import select_observation, observed_time
 
 SERVER='https://ntfy.sh'
 OPENSSL='/usr/bin/openssl'
@@ -44,7 +45,9 @@ class Alerts:
         self.base=base;self.directory=os.path.join(base,'.ntfy');os.makedirs(self.directory,mode=0o700,exist_ok=True)
         self.key=os.path.join(self.directory,'private.pem');self.path=os.path.join(self.directory,'state.json')
         self.topic_changed=threading.Event();self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
-        self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[])
+        self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[]);self.state.setdefault('receipts',{})
+        for receipt in self.state['receipts'].values():receipt.pop('retry_at',None)
+        self._file_cache={};self._last_check_signature=None;self._last_saved=None;self._check_day=None
         self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_feed_dirty=True;self.last_topic_feed=0;self.topics_error=''
         if not os.path.exists(self.key):
             subprocess.run([OPENSSL,'genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',self.key],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
@@ -53,13 +56,18 @@ class Alerts:
         config=read(config_path,{})
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
-        self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'supports_receipts':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
         atomic_json(config_path,self.config)
         self.save()
 
     def save(self):
         with self.lock:
-            atomic_json(self.path,self.state);os.chmod(self.path,0o600)
+            # Expired rules no longer reserve topics or consume capacity.
+            today=datetime.now(KST).date().isoformat()
+            self.state['subscriptions']=[r for r in self.state['subscriptions'] if r['date']>=today]
+            serialized=json.dumps(self.state,sort_keys=True,ensure_ascii=False)
+            if serialized!=self._last_saved:
+                atomic_json(self.path,self.state);os.chmod(self.path,0o600);self._last_saved=serialized
             today=datetime.now(KST).date().isoformat()
             topics=sorted({r['topic'] for r in self.state['subscriptions'] if r['date']>=today})
             public_path=os.path.join(self.base,'data','ntfy_topics.json')
@@ -108,6 +116,8 @@ class Alerts:
         if not isinstance(label,str) or not label.strip():raise ValueError('이름을 입력해 주세요. 예: 홍길동')
         if len(label.strip()) > 16:raise ValueError('이름은 16자까지')
         with self.lock:
+            today=datetime.now(KST).date().isoformat()
+            self.state['subscriptions']=[r for r in self.state['subscriptions'] if r['date']>=today]
             rows=self.state['subscriptions']
             if any(r['topic']==topic and r['owner']!=owner for r in rows):raise ValueError('다른 사용자가 사용 중인 토픽입니다. 새 토픽을 생성하세요')
             old=next((r for r in rows if r['owner']==owner and r['topic']==topic and r['bid']==bid and r['date']==ds),None)
@@ -118,7 +128,7 @@ class Alerts:
                 old['label']=str(payload.get('label',old.get('label',''))).strip()
                 if persist:self.save()
                 return old
-            if len(rows)>=5000 or sum(r['owner']==owner for r in rows)>=500:raise ValueError('등록 수 제한: 사용자당 500개, 전체 5000개')
+            if len(rows)>=50000 or sum(r['owner']==owner for r in rows)>=10000:raise ValueError('등록 수 제한: 사용자당 10000개, 전체 50000개')
             boat=catalog[bid]
             row={'id':secrets.token_hex(8),'owner':owner,'topic':topic,'bid':bid,'date':ds,'label':str(payload.get('label','')),'boat':boat['name'],'port':boat.get('port',''),'enabled':True,'min_seats':minimum,'created_at':stamp(),'last_checked_at':None,'last_sent_at':None,'last_status':'unknown','observed':None,'notified':False,'error':''}
             rows.append(row)
@@ -135,8 +145,8 @@ class Alerts:
     def register_request(self,payload):
         if 'ports' not in payload and 'bids' not in payload and payload.get('bid')!=0:return [self.register(payload)]
         catalog=self.catalog();ports=payload.get('ports',[payload.get('port')]);bids=payload.get('bids',[])
-        if not isinstance(ports,list) or not ports or not all(isinstance(p,str) and p for p in ports):raise ValueError('항구를 선택하세요')
-        if not isinstance(bids,list) or not all(isinstance(i,int) and not isinstance(i,bool) for i in bids):raise ValueError('배 선택 오류')
+        if not isinstance(ports,list) or len(ports)>1000 or not ports or not all(isinstance(p,str) and p for p in ports):raise ValueError('항구를 선택하세요')
+        if not isinstance(bids,list) or len(bids)>1000 or not all(isinstance(i,int) and not isinstance(i,bool) for i in bids):raise ValueError('배 선택 오류')
         eligible={bid for bid,b in catalog.items() if b.get('canonical_bid') is None and ('*' in ports or self.port_name(b.get('port')) in ports)}
         ids=sorted(set(bids) if bids else eligible)
         if not ids or not set(ids)<=eligible:raise ValueError('선택한 항구의 배를 선택하세요')
@@ -160,7 +170,7 @@ class Alerts:
     def remove(self,payload):
         with self.lock:
             self.state['subscriptions']=[r for r in self.state['subscriptions'] if not self.matches(r,payload)]
-            self.save()
+            self.save();self.on_change()
 
     def manage(self,payload):
         action=payload.get('action')
@@ -258,30 +268,57 @@ class Alerts:
         return json.loads(result.stdout)
 
     def process_item(self,item):
-        if item.get('event')=='open':
-            # Reconcile once per connection so requests at connection startup are not missed.
-            self.poll();return
+        if item.get('event')=='open':self.poll();return
         if item.get('event')!='message':return
         identifier=item.get('id')
         if identifier in self.state['seen']:return
+        p={};rows=[];response=None;request_id=None
         try:
             p=self.decrypt(item.get('message'));action=p.get('action')
-            if action=='add':
-                rows=self.register_request(p);row=rows[0]
-                description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
-                if 'ports' in p:description=f"선택 항구·배 {len(rows)}척"
-                try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
-                except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
-            elif action=='delete':self.remove(p)
-            elif action in ('pause','resume','update'):self.manage(p)
-            else:raise ValueError('지원하지 않는 신청')
+            request_id=p.get('request_id');reply=p.get('reply_topic')
+            if request_id is not None and (not isinstance(request_id,str) or not re.fullmatch(r'[a-f0-9]{32}',request_id) or not isinstance(reply,str) or not re.fullmatch(r'fishing-reply-[a-f0-9]{32}',reply)):raise ValueError('신청 응답 경로 오류')
+            with self.lock:
+                prior=self.state['receipts'].get(request_id) if request_id else None
+                if prior:
+                    if prior['owner']!=p.get('owner'):raise ValueError('신청 식별값 오류')
+                    response=prior['result'];prior['pending']=True
+                else:
+                    if action=='add':rows=self.register_request(p)
+                    elif action=='delete':self.remove(p)
+                    elif action in ('pause','resume','update'):self.manage(p)
+                    else:raise ValueError('지원하지 않는 신청')
+                    response={'request_id':request_id,'ok':True}
         except Exception as e:
-            # Never print an owner key, topic or ciphertext in logs.
-            self.state['last_request_error']=str(e) if isinstance(e,ValueError) else '신청 처리 오류'
-            self.state['last_request_error_at']=stamp()
+            error=str(e) if isinstance(e,ValueError) else '신청 처리 오류'
+            self.state['last_request_error']=error;self.state['last_request_error_at']=stamp()
+            response={'request_id':request_id,'ok':False,'error':error}
         with self.lock:
+            if request_id and re.fullmatch(r'[a-f0-9]{32}',str(request_id)) and re.fullmatch(r'fishing-reply-[a-f0-9]{32}',str(p.get('reply_topic',''))):
+                if request_id not in self.state['receipts']:
+                    self.state['receipts'][request_id]={'owner':p.get('owner'),'topic':p['reply_topic'],'result':response,'pending':True,'created_at':stamp()}
+                    self.state['receipts']=dict(list(self.state['receipts'].items())[-2000:])
             self.state['seen']=(self.state['seen']+[identifier])[-1500:];self.state['cursor']=identifier;self.save()
+        self.deliver_receipts()
+        # Existing phone registration confirmation remains compatible with old clients.
+        if rows:
+            row=rows[0]
+            try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} 선택 항구·배 {len(rows)}척 · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
+            except Exception:
+                with self.lock:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인';self.save()
         self.last_poll=stamp();self.online=True;self.error=''
+
+    def deliver_receipts(self):
+        with self.lock:
+            pending=[(key,dict(r)) for key,r in self.state['receipts'].items() if r.get('pending') and time.monotonic()>=r.get('retry_at',0)]
+        for key,r in pending:
+            try:self.publish(r['topic'],'신청 처리 결과',json.dumps(r['result'],ensure_ascii=False));success=True
+            except Exception:success=False
+            with self.lock:
+                current=self.state['receipts'].get(key)
+                if current:
+                    current['pending']=not success
+                    current['retry_at']=time.monotonic()+30
+                    self.save()
 
     def poll(self):
         cursor=self.state.get('cursor');params=urlencode({'poll':'1','since':cursor or 'all'})
@@ -309,13 +346,14 @@ class Alerts:
                 time.sleep(3)
 
     def topic_updates(self):
-        self.topic_changed.set()
+        self.topic_changed.set();retry=3
         while True:
             self.topic_changed.wait();self.topic_changed.clear()
             self.publish_topic_feed()
             self.publish_topics()
             if self.topics_feed_dirty or self.topics_dirty:
-                time.sleep(3);self.topic_changed.set()
+                self.topic_changed.wait(retry);retry=min(60,retry*2);self.topic_changed.set()
+            else:retry=3
 
     def targets(self):
         with self.lock:
@@ -323,54 +361,100 @@ class Alerts:
             rows=[r for r in self.state['subscriptions'] if r['enabled'] and r['date']>=today]
             return sorted({r['bid'] for r in rows}),sorted({r['date'] for r in rows})
 
+    def target_pairs(self):
+        with self.lock:
+            today=datetime.now(KST).date().isoformat();catalog=self.catalog();pairs={}
+            sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{})
+            for r in self.state['subscriptions']:
+                if not r['enabled'] or r['date']<today or r['bid'] not in catalog:continue
+                bid=catalog[r['bid']].get('canonical_bid') or r['bid']
+                info=select_observation((sun,hp),r['date'],bid)
+                age=datetime.now(KST).timestamp()-observed_time(info or {})
+                if 0<=age<240:continue
+                pairs.setdefault(str(bid),set()).add(r['date'])
+            return {k:sorted(v) for k,v in pairs.items()}
+
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'realtime_topics':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
-        catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
+        today=datetime.now(KST).date().isoformat()
+        with self.lock:
+            if self._check_day!=today:self.save();self._check_day=today
+            active=[r for r in self.state['subscriptions'] if r['enabled'] and r['date']>=today]
+            if not active:return
+            signature=tuple((r['id'],r['bid'],r['date'],r.get('min_seats',1),r.get('notified'),r.get('error')) for r in active)
+        def cached(filename):
+            path=os.path.join(self.base,'data',filename)
+            try:st=os.stat(path);version=(st.st_mtime_ns,st.st_size)
+            except OSError:version=None
+            old=self._file_cache.get(filename)
+            if old is None or old[0]!=version:self._file_cache[filename]=(version,read(path,{}))
+            return self._file_cache[filename][1]
+        raw=cached('boats.json');catalog={int(b['bid']):b for b in raw.get('boats',[])}
+        sun=cached('status.json');hp=cached('status_homepages.json');health=cached('site_health.json')
+        versions=tuple((k,v[0]) for k,v in sorted(self._file_cache.items()))
+        freshness=tuple(0<=datetime.now(KST).timestamp()-observed_time(select_observation((sun,hp),r['date'],(catalog.get(r['bid']) or {}).get('canonical_bid') or r['bid']) or {})<=900 for r in active)
+        fingerprint=(versions,signature,today,freshness)
+        if fingerprint==self._last_check_signature and not any(r.get('error') for r in active):return
+        self._last_check_signature=fingerprint
         notices={};date_notices={}
         for site in health.get('sites',{}).values():
             for name,text in site.get('boat_notices',{}).items():notices[str(site.get('boat_ids',{}).get(name))]=text
             for name,dates in site.get('date_notices',{}).items():date_notices[str(site.get('boat_ids',{}).get(name))]=dates
-        for r in self.state['subscriptions'][:]:
-            if r not in self.state['subscriptions'] or not r['enabled']:continue
-            if r['date']<datetime.now(KST).date().isoformat():r['last_status']='expired';continue
-            b=catalog.get(r['bid']);bid=str((b or {}).get('canonical_bid') or r['bid']);ds=r['date']
-            info=next((data.get('by_boat_id',{}).get(ds,{}).get(bid) for data in (sun,hp) if data.get('by_boat_id',{}).get(ds,{}).get(bid) and not data['by_boat_id'][ds][bid].get('stale')),None)
-            r['last_checked_at']=stamp()
-            if not b or not info:r['last_status']='unknown';continue
-            checked=info.get('checked_at')
-            try:fresh=(datetime.now(KST)-datetime.fromisoformat(checked)).total_seconds()<=900
-            except (ValueError,TypeError):fresh=False
-            if not fresh:r['last_status']='stale';continue
-            state=(b.get('status_overrides') or {}).get(ds) or info.get('status')
-            state={'a':'available','f':'full','c':'cancelled','m':'maintenance','w':'weather','p':'conditional'}.get(state,state)
-            if bid in notices:state='maintenance'
-            if ds in date_notices.get(bid,{}):state='conditional'
-            r['last_status']=state;r['remaining']=info.get('remaining');r['source_checked_at']=checked
-            count=info.get('remaining')
-            known_count=isinstance(count,int) and not isinstance(count,bool)
-            qualifies=state=='available' and known_count and count>=r.get('min_seats',1)
-            if r.get('observed')!=checked:
-                r['observed']=checked
-                if state!='available' or known_count and not qualifies:r['notified']=False
-            if qualifies and not r.get('notified'):
-                if info.get('remaining') is not None and info['remaining']<=0:continue
-                url=info.get('source_url') or b.get('booking_page') or b.get('channels',{}).get('homepage') or b.get('channels',{}).get('sunsang24')
-                url=booking_url(url,ds)
-                remaining=f"잔여 {info['remaining']}석" if info.get('remaining') is not None else '예약 가능 · 잔여석 미확인'
+        pending={}
+        with self.lock:
+            for r in self.state['subscriptions'][:]:
+                if r not in self.state['subscriptions'] or not r['enabled']:continue
+                if r['date']<datetime.now(KST).date().isoformat():r['last_status']='expired';continue
+                b=catalog.get(r['bid']);bid=str((b or {}).get('canonical_bid') or r['bid']);ds=r['date']
+                info=select_observation((sun,hp),ds,bid)
+                r['last_checked_at']=stamp()
+                if not b or not info:r['last_status']='unknown';continue
+                checked=info.get('checked_at')
+                try:fresh=0<=(datetime.now(KST).timestamp()-observed_time(info))<=900
+                except (ValueError,TypeError):fresh=False
+                if not fresh:r['last_status']='stale';continue
+                state=(b.get('status_overrides') or {}).get(ds) or info.get('status')
+                state={'a':'available','f':'full','c':'cancelled','m':'maintenance','w':'weather','p':'conditional'}.get(state,state)
+                if bid in notices:state='maintenance'
+                if ds in date_notices.get(bid,{}):state='conditional'
+                r['last_status']=state;r['remaining']=info.get('remaining');r['source_checked_at']=checked
+                count=info.get('remaining')
+                known_count=isinstance(count,int) and not isinstance(count,bool)
+                qualifies=state=='available' and known_count and count>=r.get('min_seats',1)
+                if r.get('observed')!=checked:
+                    r['observed']=checked
+                    if state!='available' or known_count and not qualifies:r['notified']=False
+                if qualifies and not r.get('notified'):
+                    if info.get('remaining') is not None and info['remaining']<=0:continue
+                    pending.setdefault((r['topic'],ds),[]).append((r,checked,b,info))
+            self.save()
+        for (topic,ds),items in pending.items():
+            # One delivery per topic/date; cancellation and updates are rechecked.
+            with self.lock:
+                items=[(r,checked,b,info) for r,checked,b,info in items if r in self.state['subscriptions'] and r['enabled'] and not r.get('notified') and r.get('observed')==checked]
+                if not items:continue
+                links=[booking_url(info.get('source_url') or b.get('booking_page') or b.get('channels',{}).get('homepage') or b.get('channels',{}).get('sunsang24'),ds) for r,checked,b,info in items]
+                lines=[f"{b.get('port','')} · {b['name']} · 잔여 {info['remaining']}석" for r,checked,b,info in items]
+                title=f"예약일 {ds[5:]} · {items[0][2]['name']} 빈자리" if len(items)==1 else f"예약일 {ds[5:]} · 빈자리 {len(items)}척"
+                # ntfy payload limits: summarize long lists; all selected rows remain visible on site.
+                message=f"{ds}\n"+'\n'.join(lines[:20])+(f"\n외 {len(lines)-20}척" if len(lines)>20 else '')+"\n예약처에서 최종 확인해 주세요."
                 try:
-                    self.publish(r['topic'],f"예약일 {ds[5:]} · {b['name']} 빈자리",f"{ds} · {b.get('port','')} · {b['name']}\n{remaining}\n예약처에서 최종 확인해 주세요.",url)
-                    r['notified']=True;r['last_sent_at']=stamp();r['error']=''
-                except Exception:r['error']='전송 실패: ntfy 연결·토픽 권한 확인 (다음 확인 때 재시도)'
-        self.save()
+                    self.publish(topic,title,message,links[0] if len(items)==1 else 'https://sangju-hue.github.io/fishing/')
+                    for r,checked,b,info in items:r['notified']=True;r['last_sent_at']=stamp();r['error']=''
+                except Exception:
+                    for r,checked,b,info in items:r['error']='전송 실패: ntfy 연결·토픽 권한 확인 (다음 확인 때 재시도)'
+                self.save()
+
+
 
     def loop(self):
         threading.Thread(target=self.stream_requests,daemon=True).start()
         threading.Thread(target=self.topic_updates,daemon=True).start()
         while True:
-            try:self.check()
+            try:self.deliver_receipts();self.check()
             except Exception:self.error='예약 데이터 확인 실패 · 재시도 대기'
             time.sleep(30)

@@ -167,7 +167,10 @@ def main():
     import concurrent.futures
     from collect_homepages import Client, atomic_json, months, resolve_boat_ids
     from homepage_engine import match_boat
+    from booking_state import load_targets,compact_status,collection_outcome,SKIPPED
     parser=argparse.ArgumentParser()
+    parser.add_argument('--from-date');parser.add_argument('--to-date');parser.add_argument('--near-days',type=int);parser.add_argument('--after-days',type=int)
+    parser.add_argument('--targets-file',help=argparse.SUPPRESS)
     parser.add_argument('--year',type=int)
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
     parser.add_argument('--subdomains',nargs='*',help='점검할 선상24 선단 (생략하면 전체)')
@@ -177,13 +180,23 @@ def main():
     now=datetime.now(KST)
     year=args.year or now.year+(now.month==12)
     start,first,end=season_window(now,year)
+    if args.near_days:end=min(end,first+timedelta(days=args.near_days-1))
+    if args.after_days:first+=timedelta(days=args.after_days)
+    if args.from_date or args.to_date:
+        try:first=max(first,date.fromisoformat(args.from_date));end=min(end,date.fromisoformat(args.to_date))
+        except (ValueError,TypeError):parser.error('시작/종료 날짜를 함께 지정하세요')
+    if first>end:return SKIPPED
     checked_at=now.isoformat(timespec='seconds')
-    boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
+    with open(os.path.join(DATA,'boats.json'), encoding='utf-8') as f:
+        boats = json.load(f)['boats']
+    targets=load_targets(args.targets_file,boats)
+    if targets is not None and not targets:return SKIPPED
+    if targets is not None:args.boat_ids=[int(bid) for bid in targets]
     if args.boat_ids:
         args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
         if not args.boat_ids:
             print("수집 대상 선박이 모두 삭제되어 건너뜁니다.")
-            return
+            return SKIPPED
     groups={}
     for b in boats:
         if args.ports and b.get("port") not in args.ports:continue
@@ -193,14 +206,17 @@ def main():
         if sub:groups.setdefault(sub,[]).append(b)
     if args.subdomains:groups={sub:g for sub,g in groups.items() if sub in args.subdomains}
     path=os.path.join(DATA,'status.json')
-    try:data=json.load(open(path,encoding='utf-8'))
+    try:
+        with open(path, encoding='utf-8') as f:
+            data = json.load(f)
     except (OSError,ValueError):data={'dates':{}}
-    data.setdefault('by_boat_id',{})
+    data.setdefault('by_boat_id',{});data.setdefault('dates',{})
     def collect(item):
         sub,group=item;client=Client(1);results={};errors=[];observed=set();capacity_rejected=set();all_labels=set();selectable_labels=set();excluded_fish={}
         names=[b['name'] for b in group]
         aliases={label:b['name'] for b in group for label in b.get('booking_names',[])}
         for month in months(first,end):
+            if targets is not None and not any(ds[:7]==month.strftime('%Y-%m') for b in group for ds in targets.get(str(b['bid']),[])):continue
             ym=month.strftime('%Y%m');url=f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}'
             try:
                 h,_=client.fetch(url);all_trips=parse_month(h,ym,include_other_fish=True)
@@ -232,6 +248,7 @@ def main():
                 for ds,trips in parsed.items():
                     if not first.isoformat()<=ds<=end.isoformat():continue
                     for b in group:
+                        if targets is not None and ds not in targets.get(str(b['bid']),[]):continue
                         mine=[t for t in trips if match_boat(t[0],names,aliases)==b['name']] if named else trips if len(group)==1 else []
                         state=booking_state(mine)
                         if state['status']=='unknown':continue
@@ -245,20 +262,26 @@ def main():
         collected={bid for bid,ds in results}
         missing=[b['name'] for b in group if str(b['bid']) not in collected]
         health={'status':'partial' if results and (errors or missing) else 'ok' if results else 'fetch_failed' if errors else 'no_data','url':f'https://{sub}.sunsang24.com/ship/schedule_fleet','entries':len(results),'boats':names,'boat_ids':{b['name']:b['bid'] for b in group},'missing_boats':missing,'observed_ship_labels':sorted(observed),'all_ship_labels':sorted(all_labels),'selectable_ship_labels':sorted(selectable_labels),'excluded_fish':{name:sorted(fish) for name,fish in excluded_fish.items()},'capacity_rejected':sorted(capacity_rejected),'errors':errors}
+        finished=datetime.now(KST).isoformat(timespec='seconds')
+        for entry in results.values():entry['checked_at']=finished
         return group,results,errors,sub,health
     total=0
     health_path=os.path.join(DATA,'site_health_sunsang24.json')
-    try:health=json.load(open(health_path,encoding='utf-8')) if args.subdomains or args.ports or args.boat_ids else {}
+    try:
+        with open(health_path, encoding='utf-8') as f:
+            health = json.load(f)
     except (OSError,ValueError):health={}
     health.update(checked_at=checked_at,queried_range={'from':first.isoformat(),'to':end.isoformat()})
     health.setdefault('sites',{})
+    outcomes=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for group,results,errors,sub,h in pool.map(collect,groups.items()):
-            health['sites'][sub]=h
+            health['sites'][sub]=h;outcomes.append(h)
             # Refresh only dates queried this run; preserve historical season data.
             for ds,day in data['by_boat_id'].items():
                 if first.isoformat()<=ds<=end.isoformat():
                     for b in group:
+                        if targets is not None and ds not in targets.get(str(b['bid']),[]):continue
                         key=str(b['bid'])
                         if key in day:
                             if errors:day[key]['stale']=True
@@ -266,6 +289,7 @@ def main():
             for ds,day in data.get('dates',{}).items():
                 if first.isoformat()<=ds<=end.isoformat():
                     for b in group:
+                        if targets is not None and ds not in targets.get(str(b['bid']),[]):continue
                         if day.get(b['name'],{}).get('source')=='sunsang24':
                             if errors:day[b['name']]['stale']=True
                             else:del day[b['name']]
@@ -275,12 +299,18 @@ def main():
                 b=lookup[bid];day=data.setdefault('dates',{}).setdefault(ds,{})
                 if day.get(b['name'],{}).get('boat_id') in (None,b['bid']):day[b['name']]=entry
             total+=len(results)
+    season_start,_,season_end=season_window(now,year)
     for key in ('dates','by_boat_id'):
-        data[key]={ds:day for ds,day in sorted(data[key].items()) if start.isoformat()<=ds<=end.isoformat() and day}
-    data['updated_at']=checked_at
+        data[key]={ds:day for ds,day in sorted(data[key].items()) if season_start.isoformat()<=ds<=season_end.isoformat() and day}
+    data['updated_at']=datetime.now(KST).isoformat(timespec='seconds')
     data['queried_range']={'from':first.isoformat(),'to':end.isoformat()}
+    with open(os.path.join(DATA,'boats.json'),encoding='utf-8') as f:current=json.load(f)['boats']
+    compact_status(data,current)
     atomic_json(path,data)
     atomic_json(health_path,health)
     print('선상24 수집 완료:',total,'건',flush=True)
+    return collection_outcome(outcomes)
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    import sys
+    sys.exit(main())

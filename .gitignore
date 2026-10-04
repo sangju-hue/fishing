@@ -26,3 +26,7 @@ kumkang.html
 
 # ntfy private key, owners, topics and notification history
 .ntfy/
+
+.publish.lock
+.publish_state.json
+.apply_pending
