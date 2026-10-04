@@ -238,6 +238,9 @@ class Alerts:
         return json.loads(result.stdout)
 
     def process_item(self,item):
+        if item.get('event')=='open':
+            # Reconcile once per connection so requests at connection startup are not missed.
+            self.poll();return
         if item.get('event')!='message':return
         identifier=item.get('id')
         if identifier in self.state['seen']:return

@@ -565,3 +565,4 @@ python3 scrape_sunsang24.py --help
 - 토픽 변경 시 threading.Event로 발행 작업 깨움. 변화 없으면 발행 없음, 실패만 재시도. GitHub 백업 발행도 수집 및 실시간 신청 수신과 별도 스레드.
 - 실전 임시 토픽 통합 테스트: 암호화 등록/토픽 수정/삭제 -> Mac -> 목록 feed 모두 약 1.7~2초. 초기 연결 경합 테스트 실패 후 연결 준비 시점 확인하여 재검증. 운영 사용자 구독/폰에는 테스트 알림 보내지 않음.
 - Python 62 tests 통과(재연결 cursor, 분할 chunk, 중복수신, 갱신 중 변경 및 전송 실패 포함). Node 테스트 두 페이지 add/edit/delete, 최신 상태 재수신, stale 응답 차단, SSE 1개, 반복조회 제거 검증 통과.
+- 최종 보완: 스트림 open 때 캐시 1회 확인하여 연결 직후 등록 경합 누락 방지. keepalive는 조회하지 않음. 최종 실제 ntfy 등록/수정/삭제 각각 1.62/1.72/1.60초. Python 63 tests 통과. 공개 GitHub Pages SSE 코드 배포 확인. 운영 Mac은 수집 중으로 /tmp/fishing-apply-realtime.py가 수집 유휴 확인 후 적용 대기, snapshot.realtime_topics=True로 적용 확인 가능.

@@ -72,6 +72,11 @@ class NtfyTests(unittest.TestCase):
         self.assertEqual(len(self.a.state['subscriptions']),1)
         self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person')
 
+    def test_stream_open_reconciles_once_keepalive_does_not_poll(self):
+        with patch.object(self.a,'poll') as poll:
+            self.a.process_item({'event':'open'});poll.assert_called_once()
+            self.a.process_item({'event':'keepalive'});poll.assert_called_once()
+
     def test_stream_reconnect_uses_saved_cursor_and_handles_split_chunks(self):
         class EndTest(BaseException):pass
         payload=dict(self.p)
