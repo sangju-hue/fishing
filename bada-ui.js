@@ -35,30 +35,43 @@
     summary.classList.toggle('is-running', s.running);
   });
   if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
-    let stream = null, expiryTimer = null, latest = 0;
+    const statusUrl = 'https://raw.githubusercontent.com/sangju-hue/fishing/collector-status/status.json';
+    let timer = null, expiryTimer = null, latest = 0, lastStatus = null, fetching = false;
     function unknown() {
-      document.dispatchEvent(new CustomEvent('bada:collector', {detail:{running:false,state:'상태 확인 불가',step:'맥 수집기 연결을 확인하고 있습니다'}}));
+      const checked = lastStatus ? ' · 마지막 확인 '+new Date(latest).toLocaleString('ko-KR') : '';
+      document.dispatchEvent(new CustomEvent('bada:collector', {detail:{running:false,state:'연결 확인 필요',step:'맥 수집기 연결을 확인해 주세요'+checked}}));
     }
-    function receive(raw) {
+    function receive(s) {
+      const at=Date.parse(s.updated_at),age=Date.now()-at;
+      if(!['running','waiting','stopped'].includes(s.state)||!Number.isFinite(at)||at<latest||age< -30000)throw Error('잘못된 수집 상태');
+      latest=at;lastStatus=s;clearTimeout(expiryTimer);
+      const valid=900000;
+      if(age>valid){unknown();return;}
+      document.dispatchEvent(new CustomEvent('bada:collector',{detail:{running:s.state==='running',state:{running:'수집 중',waiting:'대기',stopped:'중지'}[s.state],step:s.detail}}));
+      expiryTimer=setTimeout(unknown,valid-Math.max(0,age));
+    }
+    async function refreshStatus() {
+      clearTimeout(timer);timer=null;
+      if(document.hidden||fetching)return;
+      fetching=true;
       try {
-        const envelope=JSON.parse(raw);if(envelope.event!=='message')return;
-        const s=JSON.parse(envelope.message),at=Date.parse(s.updated_at),age=Date.now()-at;
-        if(!['running','waiting','stopped'].includes(s.state)||!Number.isFinite(at)||at<latest||age< -30000)return;
-        if(age>150000){unknown();return;}
-        latest=at;clearTimeout(expiryTimer);
-        document.dispatchEvent(new CustomEvent('bada:collector',{detail:{running:s.state==='running',state:{running:'수집 중',waiting:'대기',stopped:'중지'}[s.state],step:s.detail}}));
-        expiryTimer=setTimeout(unknown,150000-Math.max(0,age));
-      } catch(e) {}
+        const response=await fetch(statusUrl+'?v='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+        if(!response.ok)throw Error('수집 상태 응답 오류');
+        receive(await response.json());
+      } catch(e) {
+        // A brief network failure does not discard an unexpired observation.
+        if(!lastStatus||Date.now()-latest>900000)unknown();
+      } finally {
+        fetching=false;
+        if(!document.hidden)timer=setTimeout(refreshStatus,30000);
+      }
     }
-    function connect(config) {
-      if(stream||!config?.server||!config?.inbox)return;
-      stream=new EventSource(`${config.server}/${config.inbox}-collector/sse?since=latest`);
-      stream.onmessage=e=>receive(e.data);
-      stream.onerror=()=>{clearTimeout(expiryTimer);unknown();};
-    }
-    unknown();
-    document.addEventListener('bada:ntfy-config',e=>connect(e.detail));
-    if(window.badaNtfyConfig)connect(window.badaNtfyConfig);
+    document.addEventListener('visibilitychange',()=>{
+      if(document.hidden){clearTimeout(timer);timer=null;}else refreshStatus();
+    });
+    window.addEventListener('pagehide',()=>{clearTimeout(timer);clearTimeout(expiryTimer);});
+    window.addEventListener('pageshow',refreshStatus);
+    unknown();refreshStatus();
   }
   const settings = document.getElementById('summarySettings');
   settings.hidden = !['localhost', '127.0.0.1'].includes(location.hostname);
