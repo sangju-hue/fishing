@@ -276,6 +276,8 @@ def main():
     outcomes=[]
     with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
         for group,results,errors,sub,h in pool.map(collect,groups.items()):
+            h['checked_at']=datetime.now(KST).isoformat(timespec='seconds')
+            h['queried_range']={'from':first.isoformat(),'to':end.isoformat()}
             health['sites'][sub]=h;outcomes.append(h)
             # Refresh only dates queried this run; preserve historical season data.
             for ds,day in data['by_boat_id'].items():

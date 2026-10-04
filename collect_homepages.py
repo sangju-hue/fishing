@@ -398,8 +398,10 @@ def main():
             except Exception as e:
                 out={};sources={};h={'status':'error','error':str(e),'boats':sites[host]['boats'],'boat_ids':sites[host]['boat_ids'],'missing_boats':sites[host]['boats'],'entries':0}
             outcomes.append(h)
-            health['sites'][host]=merge_site_health(health['sites'].get(host,{}),h,sites[host],range_start,range_end,targets)
             entry_checked=datetime.now(KST).isoformat(timespec='seconds')
+            health['sites'][host]=merge_site_health(health['sites'].get(host,{}),h,sites[host],range_start,range_end,targets)
+            health['sites'][host]['last_attempt']={k:h[k] for k in ('status','entries','boats','boat_ids','missing_boats','deferred_boats','observed_ship_labels','errors','error') if k in h}
+            health['sites'][host]['last_attempt'].update(checked_at=entry_checked,queried_range={'from':range_start.isoformat(),'to':range_end.isoformat()})
             # Replace freshly read boats in this range; keep old data only for failures, marked stale.
             succeeded={k[0] for k in out}
             for ds,day in data['by_boat_id'].items():

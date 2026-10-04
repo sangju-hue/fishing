@@ -189,6 +189,7 @@
       <p id="progressStep" class="progress-step"></p>
       <p id="progressElapsed"></p>
       <p id="scrapeSettingStatus" role="status">맥 수집기에 연결 중…</p>
+      <details id="collectionDiagnostics" hidden><summary id="diagnosticsSummary">수집 결과 상세</summary><div id="diagnosticsRows"></div></details>
     </section>
     <p id="collectionSettingsHelp" hidden>날짜 1~60일, 분 1~120분. 설정 변경은 다음 회차부터 적용됩니다. 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
   </section>
@@ -953,6 +954,13 @@ async function initNtfy(){
       <p>정보 갱신: ${escapeHtml((plan.updated_at||"").replace("T"," ").slice(0,19))}</p>`;
   }
   function renderScraper(s){
+    const diagnostics=s.last_diagnostics,diagnosticBox=$("#collectionDiagnostics");
+    diagnosticBox.hidden=!diagnostics?.groups?.length;
+    if(diagnostics){
+      $("#diagnosticsSummary").textContent=`수집 결과 상세 · ${diagnostics.summary}`;
+      const markup=diagnostics.groups.map(g=>`<section><h4>${escapeHtml(g.label)} · ${g.items.length}곳</h4><ul>${g.items.map(item=>`<li><strong>${item.boats.map(escapeHtml).join(', ')||escapeHtml(item.site)}</strong> · ${escapeHtml(item.reason||'확인 필요')}${item.recovered.length?`<br>다른 경로의 최근 데이터 있음: ${item.recovered.map(escapeHtml).join(', ')}`:''}</li>`).join('')}</ul></section>`).join('');
+      if($("#diagnosticsRows").innerHTML!==markup)$("#diagnosticsRows").innerHTML=markup;
+    }
     const alertMonitoring=!s.settings_only&&!s.start_required&&(s.ntfy?.subscriptions||[]).some(r=>r.enabled&&r.date>=currentSeason().today);
     const alertWaiting=!s.running&&s.paused&&!s.auto_range&&alertMonitoring;
     const alertInterval=(s.ntfy?.check_minutes||10)*60;
@@ -998,6 +1006,10 @@ async function initNtfy(){
     $("#progressStep").textContent=step;
     const elapsed=s.running&&s.last_started_at?Math.max(0,Math.floor((Date.now()-Date.parse(s.last_started_at))/1000)):null;
     $("#progressElapsed").textContent=elapsed!==null?`시작 ${fmtTime(s.last_started_at)} · 경과 ${fmtWait(elapsed)}`:s.last_finished_at?`완료 시각 ${fmtTime(s.last_finished_at)}`:"";
+    if(s.last_result==='partial'&&diagnostics&&!s.running){
+      $("#progressStep").textContent=$("#progressStep").textContent.replace('일부 실패','확인 항목 있음');
+      $("#scrapeSettingStatus").textContent=$("#scrapeSettingStatus").textContent.replace('일부 실패',diagnostics.summary);
+    }
     progressRunning=!!s.running;
     $("#collectionFloating").textContent=`${method} · ${step}${elapsed!==null?` · ${fmtWait(elapsed)}`:""}`;
     $("#collectionFloating").hidden=!isLocalHost||!progressRunning||progressVisible;

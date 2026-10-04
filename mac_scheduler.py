@@ -89,7 +89,7 @@ class Scheduler:
                       'last_fast_at': None, 'last_slow_at': None}
         previous = read_json(RUNTIME, {})
         # 완료 기록만 복원. 이전 프로세스의 실행 중 표시는 현재 실행으로 오인하지 않는다.
-        for key in ('last_finished_at', 'last_result', 'last_mode', 'last_collection_kind', 'last_range', 'last_range_ports', 'last_fast_at', 'last_slow_at','last_success_at'):
+        for key in ('last_finished_at', 'last_result', 'last_mode', 'last_collection_kind', 'last_range', 'last_range_ports', 'last_fast_at', 'last_slow_at','last_success_at','last_diagnostics'):
             if key in previous:self.state[key] = previous[key]
         now = time.monotonic()
         self.next_fast = now  # 시작 직후 첫 수집
@@ -280,6 +280,8 @@ class Scheduler:
             outcome = 'failed'
         finally:
             if target_file and os.path.exists(target_file):os.unlink(target_file)
+        from collection_diagnostics import build_diagnostics
+        diagnostics=build_diagnostics(BASE,self.state.get('last_started_at'))
         with self.lock:
             finished = stamp()
             completed=time.monotonic()
@@ -290,7 +292,7 @@ class Scheduler:
             if kind=='range_repeat':self.next_range=completed+(60 if outcome=='skipped' else self.range_interval_minutes*60)
             self.state["last_collection_kind"] = self.state.get("current_collection_kind")
             self.state["current_collection_kind"] = None
-            self.state.update(running=False, current_mode=None, last_finished_at=finished, last_result=outcome, last_mode=mode)
+            self.state.update(running=False, current_mode=None, last_finished_at=finished, last_result=outcome, last_mode=mode,last_diagnostics=diagnostics)
             if mode == 'range':
                 self.state['last_range'] = list(self.active_range)
                 self.state['last_range_ports'] = self.active_range_ports[:]
@@ -400,6 +402,9 @@ def main():
     p.add_argument('--settings-only', action='store_true', help='점검용: 수집 없이 설정 서버만 실행')
     args = p.parse_args()
     s = Scheduler()
+    if not s.state.get('last_diagnostics'):
+        from collection_diagnostics import build_diagnostics
+        s.state['last_diagnostics']=build_diagnostics(BASE,read_json(RUNTIME,{}).get('last_started_at'))
     s.settings_only = args.settings_only
     if args.settings_only:s.paused=True
     s.save_settings()
