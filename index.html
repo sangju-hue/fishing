@@ -37,6 +37,9 @@
     .scrape-settings .scrape-state.running{background:#12304a;color:#7cc4ff}
     .scrape-settings button#scrapePause{border-color:#6b5222}.scrape-settings button#scrapeResume{border-color:#22604a}.scrape-settings button#scrapeRun{border-color:#25507a}
     .scrape-settings details{flex-basis:100%;color:var(--muted)}
+    .scrape-config{flex-basis:100%;display:flex;flex-wrap:wrap;align-items:center;gap:8px;color:var(--text)}
+    .scrape-config input{width:62px;padding:7px 8px;border:1px solid var(--line);border-radius:7px;background:#10232e;color:var(--text);text-align:right}
+    .scrape-config button{border-color:#4a3a7a}
     .scrape-settings summary{cursor:pointer;color:var(--text);font-weight:600}
     .scrape-settings table{border-collapse:collapse;margin:8px 0;font-size:12px}
     .scrape-settings th,.scrape-settings td{border:1px solid var(--line);padding:4px 8px;text-align:left}
@@ -59,7 +62,21 @@
     <button id="scrapeResume" type="button">▶ 수집시작</button>
     <button id="scrapeRun" type="button">🔄 수동수집</button>
     <span id="scrapeSettingStatus" role="status">맥 수집기에 연결 중…</span>
-    <p>주요 3곳(무창포·오천항·영흥도) 14일: 5분마다 · 그 외: 30분마다 · 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
+    <form id="scrapeConfig" class="scrape-config" autocomplete="off">
+      <span>주요 3곳(무창포·오천항·영흥도) 가까운</span>
+      <input id="cfgNearDays" type="number" min="1" max="60" step="1" required aria-label="날짜(일)"><span>일은</span>
+      <input id="cfgFastMin" type="number" min="1" max="120" step="1" required aria-label="빠른 수집 간격(분)"><span>분마다 · 그 외는</span>
+      <input id="cfgSlowMin" type="number" min="1" max="120" step="1" required aria-label="느린 수집 간격(분)"><span>분마다</span>
+      <button id="cfgSave" type="submit">설정 저장</button>
+    </form>
+    <form id="scrapeRange" class="scrape-config" autocomplete="off">
+      <span>범위 수집 1회:</span>
+      <input id="rngFrom" type="date" required aria-label="시작일" style="width:140px;text-align:left"><span>~</span>
+      <input id="rngTo" type="date" required aria-label="종료일" style="width:140px;text-align:left">
+      <button id="rngRun" type="submit">범위 수집</button>
+      <span>선상24는 월 단위라 전체, 홈페이지는 이 날짜 범위만 한 번 수집</span>
+    </form>
+    <p>날짜 1~60일, 분 1~120분. 저장하면 진행 중인 수집은 끝까지 하고 다음 회차부터 적용됩니다. 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
     <details id="scrapePlan">
       <summary>수집 방법 상세 보기</summary>
       <div id="scrapePlanBody">불러오는 중…</div>
@@ -560,8 +577,8 @@ speciesTabs.forEach((tab,index)=>{
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
   const fmtTime=s=>s?s.slice(11,19):"-";
   const fmtWait=sec=>sec==null?"-":sec>=60?`${Math.floor(sec/60)}분 ${sec%60}초`:`${sec}초`;
-  const modeName={fast:"빠른 수집(주요 3곳 14일)",slow:"느린 수집(15일째 이후·나머지)",full:"전체 수집"};
-  let scraperCsrf=null;
+  const modeName={fast:"빠른 수집(주요 3곳 가까운 날짜)",slow:"느린 수집(그 이후 날짜·나머지)",full:"전체 수집",range:"범위 수집"};
+  let scraperCsrf=null,cfgDirty=false;
   async function scraperFetch(path,options={}){
     const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),6000);
     try{const r=await fetch(SCRAPER+path,{...options,signal:controller.signal});if(!r.ok)throw new Error(r.status);return await r.json()}
@@ -602,6 +619,12 @@ speciesTabs.forEach((tab,index)=>{
     msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${s.last_result==="failed"?" (일부 실패)":""}`;
     $("#scrapeSettingStatus").textContent=msg;
     $("#scrapePause").disabled=s.paused;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
+    const rf=$("#rngFrom"),rt=$("#rngTo"),yr=(s.last_started_at||new Date().toISOString()).slice(0,4),today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
+    rf.min=rt.min=today>`${yr}-09-01`?today:`${yr}-09-01`;rf.max=rt.max=`${yr}-11-30`;
+    if(!rf.value)rf.value=rf.min;if(!rt.value)rt.value=rt.max;
+    if(s.pending_range)$("#scrapeSettingStatus").textContent+=` · 범위 수집 대기 중(${s.pending_range[0]}~${s.pending_range[1]})`;
+    if(s.running&&s.current_mode==="range"&&s.active_range)$("#scrapeSettingStatus").textContent+=` · 범위 ${s.active_range[0]}~${s.active_range[1]}`;
+    if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     renderPlan(s.plan);
   }
   async function refreshScraper(){
@@ -620,6 +643,31 @@ speciesTabs.forEach((tab,index)=>{
   if(isLocalHost){
     $("#scrapePause").addEventListener("click",e=>scraperControl("pause",e.currentTarget));
     $("#scrapeResume").addEventListener("click",e=>scraperControl("resume",e.currentTarget));
+    ["#cfgNearDays","#cfgFastMin","#cfgSlowMin"].forEach(id=>$(id).addEventListener("input",()=>{cfgDirty=true}));
+    $("#scrapeConfig").addEventListener("submit",async e=>{
+      e.preventDefault();
+      const btn=$("#cfgSave"),body={action:"config",near_days:+$("#cfgNearDays").value,fast_minutes:+$("#cfgFastMin").value,slow_minutes:+$("#cfgSlowMin").value};
+      btn.disabled=true;
+      try{
+        if(!scraperCsrf)await refreshScraper();
+        const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify(body)});
+        cfgDirty=false;renderScraper(s);$("#scrapeSettingStatus").textContent=`저장됨: 주요 3곳 ${s.near_days}일 ${s.fast_minutes}분 / 그 외 ${s.slow_minutes}분 (다음 회차부터 적용)`;
+      }catch(err){$("#scrapeSettingStatus").textContent="저장 실패: 값 범위(날짜 1~60, 분 1~120)와 수집기 연결을 확인해 주세요.";scraperCsrf=null}
+      finally{btn.disabled=false}
+    });
+    $("#scrapeRange").addEventListener("submit",async e=>{
+      e.preventDefault();
+      const a=$("#rngFrom").value,b=$("#rngTo").value;
+      if(a>b){$("#scrapeSettingStatus").textContent="시작일이 종료일보다 늦습니다.";return}
+      if(!confirm(`${a} ~ ${b} 범위를 한 번 수집할까요?`))return;
+      const btn=$("#rngRun");btn.disabled=true;
+      try{
+        if(!scraperCsrf)await refreshScraper();
+        const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify({action:"range",from_date:a,to_date:b})});
+        renderScraper(s);
+      }catch(err){$("#scrapeSettingStatus").textContent="범위 수집 요청 실패: 날짜 범위(올해 9~11월, 오늘 이후)와 수집기 연결을 확인해 주세요.";scraperCsrf=null}
+      finally{btn.disabled=false;setTimeout(refreshScraper,800)}
+    });
     $("#scrapeRun").addEventListener("click",e=>{if(confirm("지금 전체 수집(약 10분)을 실행할까요?"))scraperControl("run",e.currentTarget)});
     refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
   }

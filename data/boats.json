@@ -1533,23 +1533,6 @@
    ]
   },
   {
-   "bid": 96,
-   "name": "K-1투어호",
-   "operator": "씨빙이루어낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
-   },
-   "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
-   "catalog_sources": [
-    "https://spdman7.thefishing.kr/index.php?mid=bk"
-   ],
-   "catalog_checked_at": "2026-10-03T22:26:32+09:00"
-  },
-  {
    "bid": 97,
    "name": "갈매기호",
    "operator": "동문낚시",
@@ -2113,23 +2096,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 131,
-   "name": "뽀빠이호",
-   "operator": "씨빙이루어낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
-   },
-   "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
-   "catalog_sources": [
-    "https://spdman7.thefishing.kr/index.php?mid=bk"
-   ],
-   "catalog_checked_at": "2026-10-03T22:26:32+09:00"
-  },
-  {
    "bid": 132,
    "name": "성령5호",
    "operator": "성령낚시",
@@ -2486,7 +2452,7 @@
    "channels": {
     "homepage": "https://spdman7.thefishing.kr/index.php?mid=bk"
    },
-   "notes": "홈페이지 링크를 씨빙이루어낚시 공식 예약·현황 페이지로 통일. 현재 예약표에는 씨빙이호가 표시됨; 이 배의 현행 예약 여부는 별도 확인 필요.",
+   "notes": "씨빙이루어낚시 소속 확인(네이버 검색: 씨빙이호·육소2호·육소3호). 단, 예약 페이지 예약표에는 씨빙이호만 표시되어 이 배의 예약 현황은 수집되지 않음.",
    "catalog_sources": [
     "https://spdman7.thefishing.kr/index.php?mid=bk"
    ],
