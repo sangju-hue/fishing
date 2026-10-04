@@ -717,7 +717,7 @@ async function ntfyRefreshTopics(){
   }catch(e){document.querySelector('#ntfyTopicsTime').textContent='최신 목록 연결 확인 중 · 자동 재시도';}
 }
 function ntfyRenderMine(){
-  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>토픽: ${escapeHtml(r.topic)} · ${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
+  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<section class="ntfy-registrant"><h3>${escapeHtml(r.label||'이름 미입력')} · ${escapeHtml(r.topic)}</h3><div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port==='*'?'항구 전체':r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div></section>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
 }
 async function ntfyRequest(payload){
   if(ntfyLocal){
