@@ -657,3 +657,8 @@ python3 scrape_sunsang24.py --help
 - 후속 사용자 요청: ‘빨강등대호는 그냥 종일배만’. 오전/오후 신규 항목971103/971104 제거, 기존 ID42/빨강등대호를 booking_names=['종일배'], PA_N_UID=4885에 연결. 종일58건만 유지. 위 회차3개 계획보다 이 요청이 우선.
 - 종일배 제한을 반복 수집에서도 유지하도록 homepage_engine.date_url이 PA_N_UID를 0으로 덮어쓰지 않게 수정. 회차 선택 유지 테스트 추가, 최종77개 테스트 통과.
 - 데이터 병합 완료: 10항목579건을 status_homepages.json/site_health.json에 반영. 결과 파일과 운영 데이터의 날짜·선박ID·상태·잔여석 전건 대조 일치, stale 없음. 빨강등대 전58건의 예약주소 PA_N_UID=4885 확인. 종일배만으로 다시 실제 수집하여 건강도 ok.
+
+## 2026-10-04 후속 요청: 미게시/시즌전화/비선박 16개 삭제
+- 사용자 명시 요청으로 ID33/49/110/115/192/197/264/281/335/340/384/390/405/406/407/416 삭제.
+- 실제 별도 등록 배들은 유지. 특히 오드리호416 삭제와 오드리피싱1은 별개.
+- diagnostics/booking_repairs_2026-10-04/delete_requested.py 실행: 명부 삭제 완료, 수집 잠금 확보 후 두 status/두 health 데이터 정리. 삭제 원본은 requested_deletions/deleted_boats_backup.json 로컬 보존, 공개 금지.
