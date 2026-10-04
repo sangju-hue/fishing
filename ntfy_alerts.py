@@ -176,7 +176,8 @@ class Alerts:
     def admin(self,action,identifier):
         with self.lock:
             if action in ('group_delete','group_pause','group_resume'):
-                rows=[r for r in self.state['subscriptions'] if self.group_key(r)==identifier]
+                keys=set(str(identifier).split(','))
+                rows=[r for r in self.state['subscriptions'] if self.group_key(r) in keys]
                 if not rows:raise ValueError('신청 묶음 없음')
                 if action=='group_delete':self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
                 else:
