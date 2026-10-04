@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-03T22:23:22+09:00",
+ "updated_at": "2026-10-03T20:44:06+09:00",
  "dates": {
   "2026-09-01": {
    "뉴마린스타호": {
@@ -112418,7 +112418,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1297&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 324
+    "boat_id": 324,
+    "stale": true
    },
    "126": {
     "status": "full",
@@ -112426,7 +112427,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=4606&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 126
+    "boat_id": 126,
+    "stale": true
    },
    "157": {
     "status": "full",
@@ -114313,7 +114315,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1297&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 324
+    "boat_id": 324,
+    "stale": true
    },
    "126": {
     "status": "full",
@@ -114321,7 +114324,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=4606&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 126
+    "boat_id": 126,
+    "stale": true
    },
    "157": {
     "status": "full",
@@ -116240,7 +116244,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1297&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 324
+    "boat_id": 324,
+    "stale": true
    },
    "126": {
     "status": "full",
@@ -116248,7 +116253,8 @@
     "source": "homepage",
     "source_url": "http://www.biteho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4606&sel=day#list",
     "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 126
+    "boat_id": 126,
+    "stale": true
    },
    "157": {
     "status": "full",

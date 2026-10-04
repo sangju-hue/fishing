@@ -1,14 +1,14 @@
 {
- "checked_at": "2026-10-03T22:30:02+09:00",
+ "checked_at": "2026-10-04T10:13:27+09:00",
  "queried_range": {
-  "from": "2026-10-03",
+  "from": "2026-10-04",
   "to": "2026-11-30"
  },
  "sites": {
   "taeheon": {
    "status": "ok",
    "url": "https://taeheon.sunsang24.com/ship/schedule_fleet",
-   "entries": 29,
+   "entries": 28,
    "boats": [
     "태헌호"
    ],
@@ -34,7 +34,7 @@
   "af": {
    "status": "partial",
    "url": "https://af.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "오드리피싱",
     "오드리호"
@@ -67,7 +67,7 @@
   "everstar": {
    "status": "ok",
    "url": "https://everstar.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "에버스타호"
    ],
@@ -89,7 +89,7 @@
   "7": {
    "status": "ok",
    "url": "https://7.sunsang24.com/ship/schedule_fleet",
-   "entries": 118,
+   "entries": 116,
    "boats": [
     "K세븐호",
     "세븐호"
@@ -117,7 +117,7 @@
   "goldenlion": {
    "status": "ok",
    "url": "https://goldenlion.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "황금사자호"
    ],
@@ -139,7 +139,7 @@
   "doji": {
    "status": "ok",
    "url": "https://doji.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "도지호"
    ],
@@ -165,7 +165,7 @@
   "bigboss24": {
    "status": "ok",
    "url": "https://bigboss24.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "빅보스호"
    ],
@@ -187,7 +187,7 @@
   "newhaeyang": {
    "status": "ok",
    "url": "https://newhaeyang.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "뉴해양호"
    ],
@@ -209,7 +209,7 @@
   "cjh": {
    "status": "ok",
    "url": "https://cjh.sunsang24.com/ship/schedule_fleet",
-   "entries": 58,
+   "entries": 57,
    "boats": [
     "뉴패밀리호"
    ],
@@ -239,7 +239,7 @@
   "dream": {
    "status": "ok",
    "url": "https://dream.sunsang24.com/ship/schedule_fleet",
-   "entries": 32,
+   "entries": 31,
    "boats": [
     "꿈에그린호"
    ],
@@ -261,7 +261,7 @@
   "blueocean2": {
    "status": "ok",
    "url": "https://blueocean2.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "블루오션2호"
    ],
@@ -283,7 +283,7 @@
   "365ho": {
    "status": "ok",
    "url": "https://365ho.sunsang24.com/ship/schedule_fleet",
-   "entries": 51,
+   "entries": 50,
    "boats": [
     "웅비1호 (구 365호)"
    ],
@@ -305,7 +305,7 @@
   "ansan": {
    "status": "ok",
    "url": "https://ansan.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "안산호"
    ],
@@ -331,7 +331,7 @@
   "kingstar": {
    "status": "ok",
    "url": "https://kingstar.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "킹스타호"
    ],
@@ -357,7 +357,7 @@
   "yejiqueen": {
    "status": "ok",
    "url": "https://yejiqueen.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "예지퀸호"
    ],
@@ -379,7 +379,7 @@
   "jebi": {
    "status": "ok",
    "url": "https://jebi.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "제비호"
    ],
@@ -433,7 +433,7 @@
   "bluefc": {
    "status": "ok",
    "url": "https://bluefc.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "은아호"
    ],
@@ -464,7 +464,7 @@
   "roomi": {
    "status": "ok",
    "url": "https://roomi.sunsang24.com/ship/schedule_fleet",
-   "entries": 169,
+   "entries": 166,
    "boats": [
     "다온호",
     "루미호",
@@ -501,7 +501,7 @@
   "badahariho": {
    "status": "partial",
    "url": "https://badahariho.sunsang24.com/ship/schedule_fleet",
-   "entries": 177,
+   "entries": 174,
    "boats": [
     "바다하리호",
     "김대영호",
@@ -563,7 +563,7 @@
   "iron": {
    "status": "ok",
    "url": "https://iron.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "아이언호"
    ],
@@ -585,7 +585,7 @@
   "vtrfishing": {
    "status": "ok",
    "url": "https://vtrfishing.sunsang24.com/ship/schedule_fleet",
-   "entries": 147,
+   "entries": 144,
    "boats": [
     "베테랑호",
     "가디언호",
@@ -626,7 +626,7 @@
   "dongmun": {
    "status": "ok",
    "url": "https://dongmun.sunsang24.com/ship/schedule_fleet",
-   "entries": 236,
+   "entries": 232,
    "boats": [
     "갈매기호",
     "라벤더호",
@@ -657,32 +657,10 @@
    "capacity_rejected": [],
    "errors": []
   },
-  "newsky": {
-   "status": "ok",
-   "url": "https://newsky.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
-   "boats": [
-    "뉴스카이호"
-   ],
-   "boat_ids": {
-    "뉴스카이호": 109
-   },
-   "missing_boats": [],
-   "observed_ship_labels": [
-    "뉴스카이호"
-   ],
-   "all_ship_labels": [
-    "뉴스카이호"
-   ],
-   "selectable_ship_labels": [],
-   "excluded_fish": {},
-   "capacity_rejected": [],
-   "errors": []
-  },
   "ddonggga": {
    "status": "ok",
    "url": "https://ddonggga.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "똥까호"
    ],
@@ -710,7 +688,7 @@
   "vinaho": {
    "status": "ok",
    "url": "https://vinaho.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "비엔나호"
    ],
@@ -732,7 +710,7 @@
   "jangbogo": {
    "status": "ok",
    "url": "https://jangbogo.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "장보고호"
    ],
@@ -754,7 +732,7 @@
   "wonjofishing": {
    "status": "partial",
    "url": "https://wonjofishing.sunsang24.com/ship/schedule_fleet",
-   "entries": 118,
+   "entries": 116,
    "boats": [
     "프린스2호",
     "마스터호",
@@ -791,7 +769,7 @@
   "teamveteran": {
    "status": "ok",
    "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "홍원항 팀베테랑호"
    ],
@@ -813,7 +791,7 @@
   "macgyver": {
    "status": "ok",
    "url": "https://macgyver.sunsang24.com/ship/schedule_fleet",
-   "entries": 236,
+   "entries": 232,
    "boats": [
     "맥가이버호",
     "스마트호",
@@ -851,7 +829,7 @@
   "seungjin": {
    "status": "ok",
    "url": "https://seungjin.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "마이웨이호"
    ],
@@ -873,7 +851,7 @@
   "jinyoungfishing": {
    "status": "ok",
    "url": "https://jinyoungfishing.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "진영호"
    ],
@@ -895,7 +873,7 @@
   "apollo": {
    "status": "partial",
    "url": "https://apollo.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "뉴아폴로호",
     "킹피싱호 (전화예약)"
@@ -930,7 +908,7 @@
   "enjoy": {
    "status": "ok",
    "url": "https://enjoy.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "엔조이호"
    ],
@@ -952,7 +930,7 @@
   "ocpro": {
    "status": "ok",
    "url": "https://ocpro.sunsang24.com/ship/schedule_fleet",
-   "entries": 177,
+   "entries": 174,
    "boats": [
     "비바호",
     "가즈아호",
@@ -986,7 +964,7 @@
   "rkclgh": {
    "status": "ok",
    "url": "https://rkclgh.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "자이언트호"
    ],
@@ -1008,7 +986,7 @@
   "pigho": {
    "status": "ok",
    "url": "https://pigho.sunsang24.com/ship/schedule_fleet",
-   "entries": 46,
+   "entries": 45,
    "boats": [
     "꽃돼지호"
    ],
@@ -1030,7 +1008,7 @@
   "muldori": {
    "status": "ok",
    "url": "https://muldori.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "물돌이호"
    ],
@@ -1056,7 +1034,7 @@
   "princeho": {
    "status": "ok",
    "url": "https://princeho.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "프린스호"
    ],
@@ -1078,7 +1056,7 @@
   "ebada": {
    "status": "partial",
    "url": "https://ebada.sunsang24.com/ship/schedule_fleet",
-   "entries": 69,
+   "entries": 67,
    "boats": [
     "이바다호",
     "이바다낚시",
@@ -1119,7 +1097,7 @@
   "haemosoo": {
    "status": "ok",
    "url": "https://haemosoo.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "해모수호"
    ],
@@ -1141,7 +1119,7 @@
   "keoyang": {
    "status": "ok",
    "url": "https://keoyang.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "거양호"
    ],
@@ -1167,7 +1145,7 @@
   "haemaho": {
    "status": "ok",
    "url": "https://haemaho.sunsang24.com/ship/schedule_fleet",
-   "entries": 57,
+   "entries": 56,
    "boats": [
     "해마호"
    ],
@@ -1193,7 +1171,7 @@
   "fisherman": {
    "status": "ok",
    "url": "https://fisherman.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "어쩌다어부호"
    ],
@@ -1219,7 +1197,7 @@
   "nurifish": {
    "status": "ok",
    "url": "https://nurifish.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 57,
    "boats": [
     "뉴바이킹호",
     "누리호"
@@ -1272,7 +1250,7 @@
   "horeng2": {
    "status": "ok",
    "url": "https://horeng2.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "호랭이호"
    ],
@@ -1294,7 +1272,7 @@
   "gyeongin": {
    "status": "ok",
    "url": "https://gyeongin.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "경인호"
    ],
@@ -1316,7 +1294,7 @@
   "arirang": {
    "status": "ok",
    "url": "https://arirang.sunsang24.com/ship/schedule_fleet",
-   "entries": 118,
+   "entries": 116,
    "boats": [
     "아리랑1호",
     "아리랑2호"
@@ -1342,7 +1320,7 @@
   "viking": {
    "status": "ok",
    "url": "https://viking.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "바이킹호"
    ],
@@ -1368,7 +1346,7 @@
   "goaraho": {
    "status": "ok",
    "url": "https://goaraho.sunsang24.com/ship/schedule_fleet",
-   "entries": 26,
+   "entries": 25,
    "boats": [
     "아라2호"
    ],
@@ -1394,7 +1372,7 @@
   "charisma": {
    "status": "ok",
    "url": "https://charisma.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "카리스마호"
    ],
@@ -1416,7 +1394,7 @@
   "tpho": {
    "status": "ok",
    "url": "https://tpho.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "태평호"
    ],
@@ -1438,7 +1416,7 @@
   "606": {
    "status": "ok",
    "url": "https://606.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "화성606호"
    ],
@@ -1460,7 +1438,7 @@
   "24marine": {
    "status": "ok",
    "url": "https://24marine.sunsang24.com/ship/schedule_fleet",
-   "entries": 590,
+   "entries": 580,
    "boats": [
     "유로파호",
     "호빵호",
@@ -1524,7 +1502,7 @@
   "haeun": {
    "status": "ok",
    "url": "https://haeun.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "해운호"
    ],
@@ -1546,7 +1524,7 @@
   "mansour": {
    "status": "ok",
    "url": "https://mansour.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "만수르호"
    ],
@@ -1585,7 +1563,7 @@
   "hitfleet": {
    "status": "ok",
    "url": "https://hitfleet.sunsang24.com/ship/schedule_fleet",
-   "entries": 118,
+   "entries": 116,
    "boats": [
     "에프원호",
     "아리울2호"
@@ -1630,7 +1608,7 @@
   "ariul": {
    "status": "ok",
    "url": "https://ariul.sunsang24.com/ship/schedule_fleet",
-   "entries": 59,
+   "entries": 58,
    "boats": [
     "아리울1호"
    ],
