@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light dark">
+  <script src="theme.js"></script>
   <link rel="icon" href="data:,">
-  <title>쭈꾸미 낚시배 예약 현황</title>
+  <title>바다자리 · 낚시배 예약 현황</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
     :root{color-scheme:dark;--bg:#071118;--surface:#0d1c26;--surface2:#112734;--line:#23404f;--text:#f3f7f8;--muted:#a9bac2;--accent:#ff8a3d;--sea:#39c5d8;--green:#1b8059;--greenText:#d7ffea;--red:#a83d43;--redText:#ffe4e4;--gray:#52626b;--unknown:#e5e7eb;--focus:#ffe08a;--shadow:0 14px 40px rgba(0,0,0,.24)}
@@ -72,13 +73,75 @@
     .ntfy-topic-group{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.ntfy-topic-group aside{padding:10px;border:1px solid var(--line);border-radius:8px;min-width:0}.ntfy-topic-name{display:inline-block;margin:6px 5px 0 0;padding:4px 8px;border-radius:6px;background:#163b42;color:var(--text)}#ntfyTopicsTime{display:block;color:var(--muted);margin-top:6px}
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
   </style>
+  <link rel="stylesheet" href="bada.css">
 </head>
 <body>
 <main class="page">
-  <div class="topbar">
-    <p class="snapshot"><strong>데이터 불러오는 중</strong> · 실제 현황은 예약처에서 다시 확인하세요.</p>
+  <header class="site-header">
+    <a class="brand" href="#reservation"><span aria-hidden="true">≈</span> 바다자리</a>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <a class="active" href="#reservation">예약 현황</a>
+      <a href="#selectedBoats" data-reservation-link>관심 배</a>
+      <a href="#ntfySettings" data-alert-link>빈자리 알림</a>
+      <button type="button" id="operatorGuide">선사 안내</button>
+    </nav>
+    <a class="mobile-alert" href="#ntfySettings" data-alert-link>빈자리 알림</a>
+    <div class="theme-switch" role="group" aria-label="화면 선택">
+      <button type="button" data-theme="dark" aria-pressed="false">☾ 다크</button>
+      <button type="button" data-theme="white" aria-pressed="false">☼ 화이트</button>
+      <button type="button" data-theme="system" aria-pressed="true">▣ 시스템</button>
+    </div>
+  </header>
+  <section class="hero" aria-labelledby="pageTitle">
+    <div><p class="eyebrow">FIND YOUR NEXT FISHING DAY</p><h1 id="pageTitle">다음 출조, 빈자리부터 찾으세요.</h1><p class="hero-copy">어종과 날짜를 고르고, 여러 선사의 예약 현황을 한눈에 비교하세요.</p></div>
+    <div class="update-card"><p class="snapshot"><strong>데이터 불러오는 중</strong></p><p>실제 현황은 예약처에서 다시 확인하세요.</p></div>
+  </section>
+  <nav class="species-tabs" role="tablist" aria-label="어종 선택">
+    <button class="species-tab" id="tab-jjukkumi" type="button" role="tab" aria-selected="true" aria-controls="panel-jjukkumi" data-species="jjukkumi"><span class="species-photos"><img src="design/assets/Ocellated_octopus.jpg" alt="" decoding="async"><img src="design/assets/Sepia_esculenta_Kamo.jpg" alt="" decoding="async"></span><span class="species-copy"><strong>쭈.갑</strong><span>쭈꾸미 · 갑오징어</span><small class="species-action">현재 선택됨 →</small></span></button>
+    <button class="species-tab" id="tab-rockfish" type="button" role="tab" aria-selected="false" aria-controls="panel-rockfish" tabindex="-1" data-species="rockfish"><span class="species-photos"><img src="design/assets/Sebastes_schlegelii_by_OpenCage_2.jpg" alt="" decoding="async"></span><span class="species-copy"><strong>우럭</strong><span>예약 현황 준비 중</span><small class="species-action">둘러보기 →</small></span></button>
+    <button class="species-tab" id="tab-hairtail" type="button" role="tab" aria-selected="false" aria-controls="panel-hairtail" tabindex="-1" data-species="hairtail"><span class="species-photos"><img src="design/assets/Trichiurus_lepturus_by_OpenCage.jpg" alt="" decoding="async"></span><span class="species-copy"><strong>갈치</strong><span>예약 현황 준비 중</span><small class="species-action">둘러보기 →</small></span></button>
+    <button class="species-tab" id="tab-octopus" type="button" role="tab" aria-selected="false" aria-controls="panel-octopus" tabindex="-1" data-species="octopus"><span class="species-photos"><img src="design/assets/octopus.jpg" alt="" decoding="async"></span><span class="species-copy"><strong>문어</strong><span>예약 현황 준비 중</span><small class="species-action">둘러보기 →</small></span></button>
+  </nav>
+  <section class="collection-summary" aria-label="업데이트 상태">
+    <div class="summary-heading"><span class="collection-dot" aria-hidden="true">◉</span><strong id="summaryTitle">예약 현황을 확인하고 있어요</strong><span id="summaryState" class="summary-badge">확인 중</span><button id="summarySettings" type="button" hidden>수집 진행·설정 보기 ↗</button></div>
+    <p id="summaryDetail">데이터 불러오는 중</p><div class="summary-track" hidden><span></span></div><p class="summary-help">배와 날짜를 선택해 빈자리를 비교하세요. · 예약처에서 최종 확인</p>
+  </section>
+  <div id="panel-jjukkumi" role="tabpanel" aria-labelledby="tab-jjukkumi">
+  <section class="controls" aria-label="선사 필터">
+    <div class="field"><label for="search">배 이름 · 선사 · 항구 검색</label><input id="search" type="search" placeholder="예: 오천항, 해모수호"></div>
+    <div class="field"><label for="portFilter">항구</label><select id="portFilter"><option value="">전체 항구</option></select></div>
+  </section>
+
+  <div id="rangeResults" hidden style="margin:0 0 12px;color:var(--sea)"><span id="rangeResultsText"></span> <button id="clearRangeResults" class="channel" type="button">전체 목록 보기</button></div>
+  <section id="reservation" aria-label="월간 예약 현황">
+    <nav class="month-filter" aria-label="표시할 월 선택">
+      <button type="button" data-month="0" class="active" aria-pressed="true">전체</button>
+      <button type="button" data-month="9" aria-pressed="false">9월</button>
+      <button type="button" data-month="10" aria-pressed="false">10월</button>
+      <button type="button" data-month="11" aria-pressed="false">11월</button>
+    </nav>
+    <details class="legend-disclosure"><summary>예약 상태 안내 <span>숫자 잔여석 · 마감 · 미확인</span></summary><div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🐙 문어</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚫ 배점검/출항취소/기상악화</span><span class="legend-item">🟠 유동 = 사정에 따라 예약 오픈</span><span class="legend-item">완료 = 출조 완료</span><span class="legend-item">타종 = 다른 어종</span><span class="legend-item">안내 = 어종 확인 필요</span><span class="legend-item">· 미확인</span></div></details>
+    <div class="matrix-meta"><span id="matrixCount"></span><span>선사·배 이름은 홈페이지로 이동합니다. 체크박스로 배를 선택하고, 초록 셀로 해당 날짜 예약을 확인하세요.</span></div>
+    <div class="matrix-wrap" id="matrixWrap" tabindex="0" aria-label="가로로 스크롤 가능한 월간 예약 현황표">
+      <table class="matrix" id="matrixTable"></table>
+    </div>
+  </section>
+
+  <div class="alert-bar" id="alertBar" hidden aria-live="polite">
+    <button class="alert-button" id="alertButton" type="button"></button>
+    <span class="alert-note" id="alertMessage"></span>
   </div>
 
+  <section class="details" id="selectedBoats" aria-live="polite">
+    <a class="back-to-table" href="#reservation">‹ 예약 현황으로</a>
+    <div class="result-head"><h2 id="selectedTitle"></h2><span class="count" id="resultCount"></span></div>
+    <div class="cards" id="boatCards"></div>
+  </section>
+
+  </div>
+  <section id="panel-rockfish" class="species-placeholder" role="tabpanel" aria-labelledby="tab-rockfish" hidden><h2>우럭 예약 현황</h2><p>우럭 예약 현황을 준비하고 있습니다.</p></section>
+  <section id="panel-hairtail" class="species-placeholder" role="tabpanel" aria-labelledby="tab-hairtail" hidden><h2>갈치 예약 현황</h2><p>갈치 예약 현황을 준비하고 있습니다.</p></section>
+  <section id="panel-octopus" class="species-placeholder" role="tabpanel" aria-labelledby="tab-octopus" hidden><h2>문어 예약 현황</h2><p>문어 예약 현황을 준비하고 있습니다.</p></section>
   <section id="scrapeSettings" class="scrape-settings" aria-label="맥 스크래핑 제어" style="display: none;">
     <div id="collectionSettingsGrid" class="collection-grid" hidden>
     <section class="collection-box" aria-label="자동 수집 설정">
@@ -153,47 +216,15 @@
     }
   </script>
 
-  <nav class="species-tabs" role="tablist" aria-label="어종 선택">
-    <button class="species-tab" id="tab-jjukkumi" type="button" role="tab" aria-selected="true" aria-controls="panel-jjukkumi" data-species="jjukkumi">쭈꾸미</button>
-    <button class="species-tab" id="tab-rockfish" type="button" role="tab" aria-selected="false" aria-controls="panel-rockfish" tabindex="-1" data-species="rockfish">우럭</button>
-    <button class="species-tab" id="tab-hairtail" type="button" role="tab" aria-selected="false" aria-controls="panel-hairtail" tabindex="-1" data-species="hairtail">갈치</button>
-    <button class="species-tab" id="tab-octopus" type="button" role="tab" aria-selected="false" aria-controls="panel-octopus" tabindex="-1" data-species="octopus">문어</button>
-  </nav>
-  <div id="panel-jjukkumi" role="tabpanel" aria-labelledby="tab-jjukkumi">
-  <section class="controls" aria-label="선사 필터">
-    <div class="field"><label for="search">배 이름 · 항구 검색</label><input id="search" type="search" placeholder="예: 오천항, 해모수호"></div>
-    <div class="field"><label for="portFilter">항구</label><select id="portFilter"><option value="">전체 항구</option></select></div>
-  </section>
-
-  <div id="rangeResults" hidden style="margin:0 0 12px;color:var(--sea)"><span id="rangeResultsText"></span> <button id="clearRangeResults" class="channel" type="button">전체 목록 보기</button></div>
-  <section aria-label="월간 예약 현황">
-    <nav class="month-filter" aria-label="표시할 월 선택">
-      <button type="button" data-month="0" class="active" aria-pressed="true">전체</button>
-      <button type="button" data-month="9" aria-pressed="false">9월</button>
-      <button type="button" data-month="10" aria-pressed="false">10월</button>
-      <button type="button" data-month="11" aria-pressed="false">11월</button>
-    </nav>
-    <div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🐙 문어</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚫ 배점검/출항취소/기상악화</span><span class="legend-item">🟠 유동 = 사정에 따라 예약 오픈</span><span class="legend-item">완료 = 출조 완료</span><span class="legend-item">타종 = 다른 어종</span><span class="legend-item">안내 = 어종 확인 필요</span><span class="legend-item">· 미확인</span></div>
-    <div class="matrix-meta"><span id="matrixCount"></span><span>선사·배 이름은 홈페이지로 이동합니다. 체크박스로 배를 선택하고, 초록 셀로 해당 날짜 예약을 확인하세요.</span></div>
-    <div class="matrix-wrap" id="matrixWrap" tabindex="0" aria-label="가로로 스크롤 가능한 월간 예약 현황표">
-      <table class="matrix" id="matrixTable"></table>
-    </div>
-  </section>
-
-  <div class="alert-bar" id="alertBar" hidden aria-live="polite">
-    <button class="alert-button" id="alertButton" type="button"></button>
-    <span class="alert-note" id="alertMessage"></span>
-  </div>
-
-  <section class="details" aria-live="polite">
-    <div class="result-head"><h2 id="selectedTitle"></h2><span class="count" id="resultCount"></span></div>
-    <div class="cards" id="boatCards"></div>
-  </section>
-
-  </div>
-  <section id="panel-rockfish" class="species-placeholder" role="tabpanel" aria-labelledby="tab-rockfish" hidden><h2>우럭 예약 현황</h2><p>우럭 예약 현황을 준비하고 있습니다.</p></section>
-  <section id="panel-hairtail" class="species-placeholder" role="tabpanel" aria-labelledby="tab-hairtail" hidden><h2>갈치 예약 현황</h2><p>갈치 예약 현황을 준비하고 있습니다.</p></section>
-  <section id="panel-octopus" class="species-placeholder" role="tabpanel" aria-labelledby="tab-octopus" hidden><h2>문어 예약 현황</h2><p>문어 예약 현황을 준비하고 있습니다.</p></section>
+  <dialog id="guideDialog" aria-labelledby="guideTitle"><div class="dialog-heading"><h2 id="guideTitle">선사 안내</h2><button type="button" id="guideClose" aria-label="닫기">닫기</button></div><p class="guide-help">등록된 선사와 예약 채널을 확인하세요.</p><div id="guideList"></div></dialog>
+  <p class="footer-note">바다자리 · 예약 현황은 확인 시점의 정보입니다. 예약처에서 최종 확인해 주세요.</p>
+  <details class="photo-credits"><summary>어종 사진 출처</summary><ul>
+<li><a href="https://commons.wikimedia.org/wiki/File:Ocellated_octopus.jpg" target="_blank" rel="noopener noreferrer">쭈꾸미 · Daiju Azuma</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Sepia_esculenta_Kamo.jpg" target="_blank" rel="noopener noreferrer">갑오징어 · Totti</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Sebastes_schlegelii_by_OpenCage_2.jpg" target="_blank" rel="noopener noreferrer">우럭 · OpenCage</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Trichiurus_lepturus_by_OpenCage.jpg" target="_blank" rel="noopener noreferrer">갈치 · OpenCage</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Octopus_vulgaris_Cuvier,_1797_.jpg" target="_blank" rel="noopener noreferrer">문어 · Parent Géry</a> · <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li>
+</ul><p>원본 사진을 카드 영역에 맞춰 표시했습니다.</p></details>
 </main>
 <script src="booking_routes.js"></script>
 <script>
@@ -250,7 +281,7 @@ async function loadData(changedFiles=null){
     observationCache.clear();BOATS=boats;DATE_NOTICES=dateNotices;SUNSANG_STATUS_BY_ID=statusData.by_boat_id||{};HOMEPAGE_STATUS_BY_ID=hpData.by_boat_id||{};STATUS=legacy;STATUS_URL=urls;LEGACY_BOAT_IDS=legacyIds;
     jsonCache.clear();nextCache.forEach((v,k)=>jsonCache.set(k,v));
     const updatedAt=[statusData.updated_at,hpData.updated_at,boatsData.updated_at].filter(Boolean).sort().at(-1);
-    if(updatedAt)document.querySelector('.snapshot strong').textContent=`${updatedAt.replace('T',' ').slice(0,19)} 기준`;
+    if(updatedAt){document.querySelector('.snapshot strong').textContent=`↻ 최근 업데이트 ${updatedAt.replace('T',' ').slice(0,19)}`;document.dispatchEvent(new CustomEvent('bada:data',{detail:{updatedAt}}));}
     if(!changedFiles||changedFiles.has('data/boats.json'))try{
       const r=await fetch(`data/scrape_audit_current.json?v=${cacheKey}`,{cache:'no-store',signal:AbortSignal.timeout(4000)});if(r.ok){const audit=await r.json();AUDIT_REASONS=Object.fromEntries((audit.boats||[]).map(b=>[b.canonical_bid||b.bid,b]))}
     }catch(e){}
@@ -659,6 +690,7 @@ function selectSpecies(tab){
   speciesTabs.forEach(item=>{
     const selected=item===tab;
     item.setAttribute("aria-selected",String(selected));item.tabIndex=selected?0:-1;
+    item.querySelector(".species-action").textContent=selected?"현재 선택됨 →":"둘러보기 →";
     document.getElementById(item.getAttribute("aria-controls")).hidden=!selected;
   });
 }
@@ -752,6 +784,7 @@ async function ntfyRequest(payload){
   if(ntfyLocal){
     if(!scraperCsrf)await refreshScraper();
     const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({...payload,action:payload.action==='delete'?'remove':payload.action})});
+    document.dispatchEvent(new CustomEvent("bada:collector",{detail:{running:!!s.running,state:state.textContent,step,elapsed:$("#progressElapsed").textContent}}));
     renderNtfyAdmin(s.ntfy);ntfyRefreshTopics();return true;
   }
   if(!ntfyConfig)throw Error('알림 연결 설정을 불러오지 못했습니다. 새로고침해 주세요.');
@@ -959,6 +992,7 @@ async function initNtfy(){
     progressRunning=!!s.running;
     $("#collectionFloating").textContent=`${method} · ${step}${elapsed!==null?` · ${fmtWait(elapsed)}`:""}`;
     $("#collectionFloating").hidden=!isLocalHost||!progressRunning||progressVisible;
+    document.dispatchEvent(new CustomEvent("bada:collector",{detail:{running:!!s.running,state:state.textContent,step,elapsed:$("#progressElapsed").textContent}}));
     renderNtfyAdmin(s.ntfy);
     renderPlan(s.plan);
   }
@@ -1099,5 +1133,6 @@ function startAutoRefresh(){
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
+<script src="bada-ui.js"></script>
 </body>
 </html>
