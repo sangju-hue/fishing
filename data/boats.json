@@ -1233,6 +1233,28 @@
    "channels": {
     "band": "http://band.us/@helling3342",
     "phone": "010-3321-3342",
+    "homepage": "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk&PA_N_UID=5318"
+   },
+   "notes": "무창포 베테랑피싱 선단 소속(충남 보령시 웅천읍 관당리 888-6). 쭈꾸미 조황 게시 확인(2023.10). 밴드+전화 예약. 요금 미확인",
+   "booking_names": [
+    "힐링호"
+   ],
+   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "catalog_sources": [
+    "https://xn--9y2bn0a278a2hhb2c6sc.kr/index.php?mid=bk"
+   ]
+  },
+  {
+   "bid": 971103,
+   "name": "무창포힐링호(선상24)",
+   "operator": "무창포 베테랑피싱",
+   "region": "충남 보령시",
+   "port": "무창포항",
+   "price": "",
+   "capacity": null,
+   "channels": {
+    "band": "http://band.us/@helling3342",
+    "phone": "010-3321-3342",
     "homepage": "https://vtrfishing.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "무창포 베테랑피싱 선단 소속(충남 보령시 웅천읍 관당리 888-6). 쭈꾸미 조황 게시 확인(2023.10). 밴드+전화 예약. 요금 미확인",
