@@ -1133,11 +1133,9 @@
    "url": "http://www.aseafish.co.kr",
    "entries": 116,
    "boats": [
-    "해성호",
     "선호"
    ],
    "boat_ids": {
-    "해성호": 55,
     "선호": 57
    },
    "missing_boats": [],
@@ -2045,44 +2043,6 @@
     "http://www.hyosungho.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&sel=day&PA_N_UID=1861#list"
    ],
    "errors": []
-  },
-  "xn--pn3bn6qm0l.kr": {
-   "status": "fetch_failed",
-   "url": "https://www.xn--pn3bn6qm0l.kr/index.php?mid=bk",
-   "entries": 0,
-   "boats": [
-    "뉴일복호"
-   ],
-   "boat_ids": {
-    "뉴일복호": 110
-   },
-   "missing_boats": [
-    "뉴일복호"
-   ],
-   "deferred_boats": [],
-   "boat_notices": {},
-   "date_notices": {},
-   "observed_ship_labels": [],
-   "pages_checked": 0,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "https://www.xn--pn3bn6qm0l.kr/index.php?mid=bk",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "http://www.xn--pn3bn6qm0l.kr/index.php?mid=bk",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "https://xn--pn3bn6qm0l.kr/index.php?mid=bk",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    },
-    {
-     "url": "http://xn--pn3bn6qm0l.kr/index.php?mid=bk",
-     "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
-    }
-   ]
   },
   "winner.thefishing.kr": {
    "status": "ok",
@@ -3461,16 +3421,12 @@
    "url": "http://www.poseidonho.com/index.php?mid=bk",
    "entries": 14,
    "boats": [
-    "포세이돈호",
-    "베누스호"
+    "포세이돈호"
    ],
    "boat_ids": {
-    "포세이돈호": 166,
-    "베누스호": 281
+    "포세이돈호": 166
    },
-   "missing_boats": [
-    "베누스호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -4179,27 +4135,20 @@
    "url": "http://haesin.net/index.php?mid=bk",
    "entries": 290,
    "boats": [
-    "구라미끼호",
     "킹스타호",
     "판타지호",
     "해신1호",
     "해신2호",
-    "해신3호",
     "해신7호"
    ],
    "boat_ids": {
-    "구라미끼호": 192,
     "킹스타호": 193,
     "판타지호": 194,
     "해신1호": 195,
     "해신2호": 196,
-    "해신3호": 197,
     "해신7호": 198
    },
-   "missing_boats": [
-    "구라미끼호",
-    "해신3호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -7319,27 +7268,6 @@
    ],
    "errors": []
   },
-  "bobmarleyho.com": {
-   "status": "no_data",
-   "url": "https://bobmarleyho.com/index.php?mid=bk",
-   "entries": 0,
-   "boats": [
-    "밥말리호"
-   ],
-   "boat_ids": {
-    "밥말리호": 335
-   },
-   "missing_boats": [
-    "밥말리호"
-   ],
-   "deferred_boats": [],
-   "boat_notices": {},
-   "date_notices": {},
-   "observed_ship_labels": [],
-   "pages_checked": 23,
-   "booking_urls": [],
-   "errors": []
-  },
   "xn--2j1b67o1mijvgr1m.com": {
    "status": "ok",
    "url": "http://xn--2j1b67o1mijvgr1m.com/index.php?mid=bk",
@@ -7449,7 +7377,6 @@
     "히트호",
     "뚱보호",
     "부자호",
-    "브이호",
     "코스모스호"
    ],
    "boat_ids": {
@@ -7457,16 +7384,11 @@
     "히트호": 355,
     "뚱보호": 369,
     "부자호": 378,
-    "브이호": 384,
     "코스모스호": 387
    },
-   "missing_boats": [
-    "브이호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
-   "boat_notices": {
-    "브이호": "27년시즌에 뵙겠습니다."
-   },
+   "boat_notices": {},
    "date_notices": {},
    "observed_ship_labels": [
     ".",
@@ -8196,7 +8118,6 @@
    "url": "http://www.yamujinfishing.com/index.php?mid=bk",
    "entries": 69,
    "boats": [
-    "두드림호",
     "루키호",
     "야무진2호",
     "야무진호",
@@ -8205,7 +8126,6 @@
     "핏불호"
    ],
    "boat_ids": {
-    "두드림호": 115,
     "루키호": 121,
     "야무진2호": 141,
     "야무진호": 142,
@@ -8214,7 +8134,6 @@
     "핏불호": 286
    },
    "missing_boats": [
-    "두드림호",
     "팀베테랑호"
    ],
    "deferred_boats": [],
@@ -8353,32 +8272,6 @@
    "pages_checked": 3,
    "booking_urls": [],
    "errors": []
-  },
-  "skynsea.co.kr": {
-   "status": "no_data",
-   "url": "http://www.skynsea.co.kr/",
-   "entries": 0,
-   "boats": [
-    "하늘에펜션 3GO 패키지"
-   ],
-   "boat_ids": {
-    "하늘에펜션 3GO 패키지": 33
-   },
-   "missing_boats": [
-    "하늘에펜션 3GO 패키지"
-   ],
-   "deferred_boats": [],
-   "boat_notices": {},
-   "date_notices": {},
-   "observed_ship_labels": [],
-   "pages_checked": 5,
-   "booking_urls": [],
-   "errors": [
-    {
-     "url": "https://booking.ddnayo.com/?accommodationId=7070",
-     "error": "HTTP Error 401: Unauthorized"
-    }
-   ]
   },
   "xn--9y2bn0a278a2hhb2c6sc.kr": {
    "status": "partial",
@@ -8793,9 +8686,9 @@
   }
  },
  "summary": {
-  "sites": 145,
+  "sites": 142,
   "entries": 5386,
-  "collected_boats": 228,
-  "missing_boats": 26
+  "collected_boats": 227,
+  "missing_boats": 18
  }
 }

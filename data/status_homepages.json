@@ -1379,14 +1379,6 @@
     "checked_at": "2026-10-03T20:44:06+09:00",
     "boat_id": 191
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 192
-   },
    "청용호": {
     "status": "full",
     "remaining": 0,
@@ -2455,15 +2447,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "full",
@@ -4440,15 +4423,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 2,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "weather",
@@ -6466,15 +6440,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 1,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "full",
     "remaining": 0,
@@ -8482,15 +8447,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "full",
@@ -10508,15 +10464,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "full",
     "remaining": 0,
@@ -12525,15 +12472,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "full",
     "remaining": 0,
@@ -14541,15 +14479,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "full",
@@ -16567,15 +16496,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "full",
     "remaining": 0,
@@ -18584,15 +18504,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 11,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "available",
     "remaining": 17,
@@ -20583,15 +20494,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "available",
@@ -22584,15 +22486,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "available",
     "remaining": 14,
@@ -24583,15 +24476,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 5,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "available",
@@ -26584,15 +26468,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "테티스": {
     "status": "full",
     "remaining": 0,
@@ -28583,15 +28458,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "테티스": {
     "status": "full",
@@ -30649,15 +30515,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "무창포 피싱마린호": {
     "status": "full",
     "remaining": 0,
@@ -32657,15 +32514,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "무창포 피싱마린호": {
     "status": "available",
     "remaining": 10,
@@ -34656,15 +34504,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "무창포 피싱마린호": {
     "status": "available",
@@ -36657,15 +36496,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 10,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "무창포 피싱마린호": {
     "status": "available",
     "remaining": 20,
@@ -38657,15 +38487,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 9,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "무창포 피싱마린호": {
     "status": "full",
     "remaining": 0,
@@ -40656,15 +40477,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "무창포 피싱마린호": {
     "status": "full",
@@ -42664,15 +42476,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "무창포 피싱마린호": {
     "status": "full",
@@ -44731,15 +44534,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -46748,15 +46542,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 8,
@@ -48756,15 +48541,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -50766,15 +50542,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 6,
@@ -52774,15 +52541,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -54784,15 +54542,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 9,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -56793,15 +56542,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -58786,15 +58526,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -60771,15 +60502,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 13,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -62747,15 +62469,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -64725,15 +64438,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 18,
@@ -66702,15 +66406,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 7,
@@ -68678,15 +68373,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 8,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "full",
@@ -70664,15 +70350,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -72649,15 +72326,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -74625,15 +74293,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -76603,15 +76262,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 17,
@@ -78579,15 +78229,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -80557,15 +80198,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 19,
@@ -82534,15 +82166,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 10,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -84510,15 +84133,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "full",
@@ -86496,15 +86110,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "full",
     "remaining": 0,
@@ -88481,15 +88086,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 20,
@@ -90442,15 +90038,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 18,
@@ -92394,15 +91981,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "available",
@@ -94348,15 +93926,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 20,
@@ -96301,15 +95870,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 20,
@@ -98253,15 +97813,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "샤크호": {
     "status": "full",
@@ -100215,15 +99766,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 16,
@@ -102176,15 +101718,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "샤크호": {
     "status": "available",
     "remaining": 18,
@@ -104129,15 +103662,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "히트호": {
     "status": "available",
     "remaining": 20,
@@ -106073,15 +105597,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "히트호": {
     "status": "available",
@@ -108019,15 +107534,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "히트호": {
     "status": "available",
     "remaining": 20,
@@ -109963,15 +109469,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "히트호": {
     "status": "available",
@@ -111909,15 +111406,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "히트호": {
     "status": "full",
     "remaining": 0,
@@ -113854,15 +113342,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "히트호": {
     "status": "available",
     "remaining": 20,
@@ -115790,15 +115269,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "구라미끼호": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "히트호": {
     "status": "available",
@@ -118806,14 +118276,6 @@
     "checked_at": "2026-10-03T20:44:06+09:00",
     "boat_id": 191
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=03&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-03T20:44:06+09:00",
-    "boat_id": 192
-   },
    "205": {
     "status": "full",
     "remaining": 0,
@@ -119883,15 +119345,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "full",
@@ -121845,15 +121298,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 2,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "weather",
@@ -123856,15 +123300,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 1,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "full",
     "remaining": 0,
@@ -125857,15 +125292,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "full",
@@ -127868,15 +127294,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "full",
     "remaining": 0,
@@ -129870,15 +129287,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "full",
     "remaining": 0,
@@ -131871,15 +131279,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "full",
@@ -133882,15 +133281,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "full",
     "remaining": 0,
@@ -135884,15 +135274,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 11,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "available",
     "remaining": 17,
@@ -137868,15 +137249,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "available",
@@ -139854,15 +139226,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "available",
     "remaining": 14,
@@ -141838,15 +141201,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 5,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "available",
@@ -143824,15 +143178,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "356": {
     "status": "full",
     "remaining": 0,
@@ -145808,15 +145153,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "356": {
     "status": "full",
@@ -147859,15 +147195,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "219": {
     "status": "full",
     "remaining": 0,
@@ -149852,15 +149179,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "219": {
     "status": "available",
     "remaining": 7,
@@ -151836,15 +151154,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "219": {
     "status": "available",
@@ -153822,15 +153131,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 10,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "219": {
     "status": "full",
     "remaining": 0,
@@ -155807,15 +155107,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 9,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "219": {
     "status": "available",
     "remaining": 11,
@@ -157791,15 +157082,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "219": {
     "status": "available",
@@ -159784,15 +159066,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "219": {
     "status": "full",
@@ -161796,15 +161069,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -163798,15 +163062,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 8,
@@ -165791,15 +165046,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -167786,15 +167032,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 12,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 6,
@@ -169779,15 +169016,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -171774,15 +171002,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 9,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -173767,15 +172986,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "full",
@@ -175770,15 +174980,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -177772,15 +176973,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 13,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -179765,15 +178957,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -181760,15 +180943,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 18,
@@ -183754,15 +182928,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 7,
@@ -185747,15 +184912,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 8,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "full",
@@ -187750,15 +186906,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -189752,15 +188899,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -191745,15 +190883,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -193740,15 +192869,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 17,
@@ -195733,15 +194853,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -197728,15 +196839,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 19,
@@ -199722,15 +198824,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 10,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -201715,15 +200808,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "full",
@@ -203718,15 +202802,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 14,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "full",
     "remaining": 0,
@@ -205720,15 +204795,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 20,
@@ -207698,15 +206764,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 18,
@@ -209667,15 +208724,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "available",
@@ -211638,15 +210686,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 20,
@@ -213608,15 +212647,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 20,
@@ -215577,15 +214607,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 17,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "16": {
     "status": "full",
@@ -217556,15 +216577,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 16,
@@ -219534,15 +218546,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "16": {
     "status": "available",
     "remaining": 18,
@@ -221504,15 +220507,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "20": {
     "status": "available",
     "remaining": 20,
@@ -223465,15 +222459,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "20": {
     "status": "available",
@@ -225428,15 +224413,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "20": {
     "status": "available",
     "remaining": 20,
@@ -227389,15 +226365,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "20": {
     "status": "available",
@@ -229352,15 +228319,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "20": {
     "status": "full",
     "remaining": 0,
@@ -231314,15 +230272,6 @@
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
    },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
-   },
    "20": {
     "status": "available",
     "remaining": 20,
@@ -233267,15 +232216,6 @@
     "source_url": "http://bank.thefishing.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=6188&sel=day#list",
     "boat_id": 182,
     "checked_at": "2026-10-04T21:42:53+09:00"
-   },
-   "192": {
-    "status": "available",
-    "remaining": 21,
-    "source": "homepage",
-    "source_url": "http://www.gulamiki.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=1167&sel=day#list",
-    "checked_at": "2026-10-04T17:01:54+09:00",
-    "boat_id": 192,
-    "stale": true
    },
    "20": {
     "status": "available",

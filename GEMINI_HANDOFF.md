@@ -662,3 +662,4 @@ python3 scrape_sunsang24.py --help
 - 사용자 명시 요청으로 ID33/49/110/115/192/197/264/281/335/340/384/390/405/406/407/416 삭제.
 - 실제 별도 등록 배들은 유지. 특히 오드리호416 삭제와 오드리피싱1은 별개.
 - diagnostics/booking_repairs_2026-10-04/delete_requested.py 실행: 명부 삭제 완료, 수집 잠금 확보 후 두 status/두 health 데이터 정리. 삭제 원본은 requested_deletions/deleted_boats_backup.json 로컬 보존, 공개 금지.
+- 16개 삭제 후 예약 상태2개/건강도2개 정리 완료. 명부, canonical 참조, by_boat_id, dates.boat_id, 건강도 boat_ids에 삭제ID가 남지 않았음을 확인.
