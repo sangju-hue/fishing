@@ -20,3 +20,6 @@ dialog{width:min(760px,calc(100% - 24px));max-height:85vh;overflow:auto;color:va
 .photo-credits{font-size:11px;color:var(--muted);margin-top:12px}.photo-credits summary{cursor:pointer}.photo-credits li{margin:8px 0}.photo-credits p{margin:8px 0}
 
 .guide-search{position:sticky;top:0;background:var(--surface);padding:12px 0;z-index:1;margin-bottom:8px}.guide-search input{width:100%;min-height:44px}.guide-search p{font-size:12px;color:var(--muted);margin:8px 0 0}.directory-item[hidden]{display:none}
+
+.mobile-actions{display:none}#themeSettingsDialog{max-width:420px}#themeSettingsDialog .theme-switch{margin:0;width:100%;display:flex}#themeSettingsDialog .theme-switch button{flex:1;min-height:44px;border-color:var(--line)}
+@media(max-width:620px){.site-header>.theme-switch{display:none}.mobile-actions{display:flex;align-items:center;gap:8px;width:100%}.mobile-actions .mobile-alert,.mobile-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface2);color:var(--text);font-size:13px;white-space:nowrap;cursor:pointer}.mobile-actions #themeSettingsOpen{margin-left:auto;width:44px;padding:10px;flex-shrink:0}}

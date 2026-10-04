@@ -74,7 +74,7 @@
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
   </style>
-  <link rel="stylesheet" href="bada.css?v=20261005-guide-search">
+  <link rel="stylesheet" href="bada.css?v=20261005-mobile-menu">
 </head>
 <body>
 <main class="page">
@@ -84,9 +84,9 @@
       <a class="active" href="#reservation">예약 현황</a>
       <a href="#selectedBoats" data-reservation-link>관심 배</a>
       <a href="#ntfySettings" data-alert-link>빈자리 알림</a>
-      <button type="button" id="operatorGuide">선사 안내</button>
+      <button type="button" id="operatorGuide" data-guide-open>선사 안내</button>
     </nav>
-    <a class="mobile-alert" href="#ntfySettings" data-alert-link>빈자리 알림</a>
+    <nav class="mobile-actions" aria-label="모바일 메뉴"><a class="mobile-alert" href="#ntfySettings" data-alert-link>빈자리 알림</a><button type="button" id="operatorGuideMobile" data-guide-open>선사 안내</button><button type="button" id="themeSettingsOpen" aria-label="설정" aria-haspopup="dialog"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="m9 3-.5 2-2 .9-1.8-.6-2 3.4 1.5 1.4v2.2l-1.5 1.4 2 3.4 1.8-.6 2 .9.5 2h4l.5-2 2-.9 1.8.6 2-3.4-1.5-1.4v-2.2l1.5-1.4-2-3.4-1.8.6-2-.9-.5-2Z"/><circle cx="11" cy="11" r="3"/></svg></button></nav>
     <div class="theme-switch" role="group" aria-label="화면 선택">
       <button type="button" data-theme="dark" aria-pressed="false">☾ 다크</button>
       <button type="button" data-theme="white" aria-pressed="false">☼ 화이트</button>
@@ -221,6 +221,7 @@
   </script>
 
   <dialog id="guideDialog" aria-labelledby="guideTitle"><div class="dialog-heading"><h2 id="guideTitle">선사 안내</h2><button type="button" id="guideClose" aria-label="닫기">닫기</button></div><p class="guide-help">등록된 선사와 예약 채널을 확인하세요.</p><div class="guide-search field"><label for="guideSearch">선사·선박 검색</label><input type="search" id="guideSearch" placeholder="선사명 또는 배 이름 입력" autocomplete="off" aria-controls="guideList"><p id="guideCount" role="status"></p></div><div id="guideList"></div></dialog>
+  <dialog id="themeSettingsDialog" aria-labelledby="themeSettingsTitle"><div class="dialog-heading"><h2 id="themeSettingsTitle">설정</h2><button type="button" id="themeSettingsClose">닫기</button></div><p class="guide-help">화면 테마</p><div class="theme-switch" role="group" aria-label="화면 테마 선택"><button type="button" data-theme="dark" aria-pressed="false">☾ 다크</button><button type="button" data-theme="white" aria-pressed="false">☼ 화이트</button><button type="button" data-theme="system" aria-pressed="true">▣ 시스템</button></div></dialog>
   <p class="footer-note">바다자리 · 예약 현황은 확인 시점의 정보입니다. 예약처에서 최종 확인해 주세요.</p>
   <details class="photo-credits"><summary>어종 사진 출처</summary><ul>
 <li><a href="https://commons.wikimedia.org/wiki/File:Ocellated_octopus.jpg" target="_blank" rel="noopener noreferrer">쭈꾸미 · Daiju Azuma</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
@@ -1149,6 +1150,6 @@ function startAutoRefresh(){
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
-<script src="bada-ui.js?v=20261005-guide-search"></script>
+<script src="bada-ui.js?v=20261005-mobile-menu"></script>
 </body>
 </html>

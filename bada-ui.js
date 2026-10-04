@@ -1,6 +1,9 @@
 (() => {
   window.badaTheme.refresh();
   document.querySelectorAll('button[data-theme]').forEach(button => button.addEventListener('click', () => window.badaTheme.set(button.dataset.theme)));
+  const themeDialog=document.getElementById('themeSettingsDialog');
+  document.getElementById('themeSettingsOpen').addEventListener('click',()=>themeDialog.showModal());
+  document.getElementById('themeSettingsClose').addEventListener('click',()=>themeDialog.close());
   document.querySelectorAll('[data-alert-link]').forEach(link => link.addEventListener('click', () => {
     document.getElementById('ntfySettings').open = true;
   }));
@@ -75,7 +78,7 @@
     guideCount.textContent=BOATS.length ? count ? `${count}척 표시 · 전체 ${guideRows.length}척` : '검색 결과가 없습니다.' : '선사 정보를 불러오는 중입니다.';
   }
   guideSearch.addEventListener('input',filterGuide);
-  document.getElementById('operatorGuide').addEventListener('click', () => {
+  document.querySelectorAll('[data-guide-open]').forEach(button=>button.addEventListener('click', () => {
     const list = document.getElementById('guideList');
     list.replaceChildren();
     guideRows=[];guideSearch.value='';
@@ -93,6 +96,6 @@
     filterGuide();
     dialog.showModal();
     guideSearch.focus({preventScroll:true});
-  });
+  }));
   document.getElementById('guideClose').addEventListener('click', () => dialog.close());
 })();
