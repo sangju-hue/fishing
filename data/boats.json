@@ -5481,12 +5481,12 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "phone": "010-8886-4132",
-    "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
+    "homepage": "https://winner.thefishing.kr/index.php?mid=bk",
+    "phone": "010-8886-4132"
    },
    "tags": [],
    "manual": false,
-   "operator": "뉴홀랜드호",
+   "operator": "무창포 피싱위너",
    "capacity": 14,
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
@@ -6621,24 +6621,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 373,
-   "name": "블랙호",
-   "port": "무창포항",
-   "region": "충남 보령시",
-   "price": "",
-   "channels": {
-    "homepage": "https://winner.thefishing.kr/index.php"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "무창포 피싱위너",
-   "capacity": 22,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EB%B8%94%EB%9E%99%ED%98%B8?id=6905"
-   ]
-  },
-  {
    "bid": 374,
    "name": "에바다호",
    "port": "무창포항",
@@ -6674,7 +6656,7 @@
    },
    "tags": [],
    "manual": false,
-   "operator": "무창포항 페가수스호",
+   "operator": "무창포 피싱위너",
    "capacity": 21,
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
@@ -7410,6 +7392,24 @@
     "문일호"
    ],
    "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971092,
+   "name": "뉴빅토리호",
+   "operator": "무창포 피싱위너",
+   "port": "무창포항",
+   "channels": {
+    "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
+   }
+  },
+  {
+   "bid": 971093,
+   "name": "위너호",
+   "operator": "무창포 피싱위너",
+   "port": "무창포항",
+   "channels": {
+    "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
+   }
   }
  ],
  "updated_at": "2026-10-03T09:04:25+09:00"
