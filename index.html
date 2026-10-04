@@ -72,6 +72,7 @@
     @media(max-width:620px){.ntfy-form{grid-template-columns:1fr}.ntfy-row{align-items:stretch;flex-direction:column}}
     .ntfy-topic-group{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}.ntfy-topic-group aside{padding:10px;border:1px solid var(--line);border-radius:8px;min-width:0}.ntfy-topic-name{display:inline-block;margin:6px 5px 0 0;padding:4px 8px;border-radius:6px;background:#163b42;color:var(--text)}#ntfyTopicsTime{display:block;color:var(--muted);margin-top:6px}
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
+      .ntfy-topic-entry{display:inline-block;position:relative}.ntfy-topic-entry .ntfy-topic-detail{display:none;position:absolute;z-index:20;right:0;top:100%;width:min(320px,75vw);max-height:260px;overflow:auto;padding:12px;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;box-shadow:0 4px 12px #0004}.ntfy-topic-detail p{margin:0 0 10px;font-size:13px;line-height:1.6}.ntfy-topic-entry[data-open="true"] .ntfy-topic-detail{display:block}@media(hover:hover){.ntfy-topic-entry:hover .ntfy-topic-detail{display:block}}#ntfyDuplicateDialog button{min-width:64px;min-height:44px}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
   </style>
   <link rel="stylesheet" href="bada.css?v=20261005-mobile-menu">
@@ -196,6 +197,7 @@
   <details id="ntfySettings" class="ntfy-settings" aria-label="빈자리 알림 설정(ntfy App 알림)">
     <summary style="font-size:20px">🔔 빈자리 알림 설정(ntfy App 알림)</summary>
     <p id="ntfyInstructions">폰 ntfy 앱 (<a href="https://apps.apple.com/us/app/ntfy/id1625396347" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline">아이폰 다운로드</a> / <a href="https://f-droid.org/packages/io.heckel.ntfy/" target="_blank" rel="noopener noreferrer" style="color:var(--sea);text-decoration:underline">안드로이드 다운로드</a>)에서 반드시 '나의 토픽' 값을 동일하게 입력하고 구독해야 알림을 받을 수 있습니다.<br><br>나의 토픽 옆에 '사용 중인 토픽'을 확인하세요.<br><br>알림 설정은 모두 공개되며 다른 사람도 사용할 수 있습니다.</p>
+    <dialog id="ntfyDuplicateDialog" aria-labelledby="ntfyDuplicateTitle"><h3 id="ntfyDuplicateTitle">사용 중인 토픽입니다</h3><p>사용중인 토픽 입니다. 설정값은 저장되지 않으며 기존 토픽으로 알림이 갑니다. 계속 하시겠습니까?</p><button type="button" id="ntfyDuplicateYes">예</button> <button type="button" id="ntfyDuplicateNo">아니요</button></dialog>
     <form id="ntfyForm" class="ntfy-form">
       <label>이름(구분용 · 필수)<input id="ntfyLabel" required maxlength="16" placeholder="예: 홍길동"></label>
       <label>날짜<input id="ntfyDate" type="date" required></label>
@@ -710,7 +712,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyMultiReady=false,ntfyEditing=null,ntfyAdminRows=[],ntfyTopicStream=null,ntfyTopicsVersion=0;
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyTopicSettings={},ntfyMinimumReady=false,ntfyManageReady=false,ntfyMultiReady=false,ntfyEditing=null,ntfyAdminRows=[],ntfyTopicStream=null,ntfyTopicsVersion=0;
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,reply_topic:ntfyReplyTopic,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -731,10 +733,26 @@ function ntfyBoatOptions(){
  const valid=previous.filter(x=>[...document.querySelector('#ntfyBoat').options].some(o=>o.value===x));ntfySet('ntfyBoat',valid.length?valid:['*']);ntfyPicker('ntfyPort');ntfySelection();
 }
 function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0&&r.scope_all!==false?['*']:[String(r.bid)]);ntfySelection()}
+async function ntfyUseExistingTopic(topic){
+ if(!ntfyUsedTopics.includes(topic)||ntfyEditing)return false;
+ const dialog=document.querySelector('#ntfyDuplicateDialog');
+ const accepted=await new Promise(resolve=>{
+  const finish=value=>{dialog.removeEventListener('cancel',cancel);dialog.close();resolve(value)};
+  const cancel=e=>{e.preventDefault();finish(false)};
+  dialog.addEventListener('cancel',cancel);document.querySelector('#ntfyDuplicateYes').onclick=()=>finish(true);document.querySelector('#ntfyDuplicateNo').onclick=()=>finish(false);dialog.showModal();
+ });
+ ntfyMessage(accepted?"새 설정은 저장하지 않았습니다. 폰 ntfy 앱에서 '"+topic+"' 토픽을 구독하면 기존 설정의 알림을 받을 수 있습니다.":'취소했습니다. 다른 토픽을 입력해 주세요.');
+ return true;
+}
 function ntfyShowTopics(data){
   const version=Date.parse(data.updated_at)||0;if(version<ntfyTopicsVersion)return;ntfyTopicsVersion=version;
-  ntfyUsedTopics=data.topics||[];
-  document.querySelector('#ntfyTopics').innerHTML=ntfyUsedTopics.length?ntfyUsedTopics.map(t=>`<span class="ntfy-topic-name">${escapeHtml(t)}</span>`).join(''):'사용 중인 토픽이 없습니다.';
+  ntfyUsedTopics=data.topics||[];ntfyTopicSettings=data.settings||{};
+  const box=document.querySelector('#ntfyTopics');
+  box.innerHTML=ntfyUsedTopics.length?ntfyUsedTopics.map(t=>{
+   const rows=ntfyTopicSettings[t]||[],detail=rows.length?rows.map(r=>`<p>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${Number(r.min_seats)||1}자리 이상 · ${r.enabled?'켜짐':'중지'}<br>${(r.boats||[]).map(escapeHtml).join(', ')}</p>`).join(''):'상세 설정을 불러오는 중입니다.';
+   return `<span class="ntfy-topic-entry"><button type="button" class="ntfy-topic-name" aria-expanded="false">${escapeHtml(t)}</button><span class="ntfy-topic-detail">${detail}</span></span>`;
+  }).join(''):'사용 중인 토픽이 없습니다.';
+  box.onclick=e=>{const button=e.target.closest('.ntfy-topic-name');if(!button)return;const entry=button.closest('.ntfy-topic-entry'),open=entry.dataset.open!=='true';entry.dataset.open=String(open);button.setAttribute('aria-expanded',String(open));};
   document.querySelector('#ntfyTopicsTime').textContent=`최신 확인: ${(data.updated_at||'').replace('T',' ').slice(0,19)}`;
 }
 function ntfyConnectTopics(){
@@ -749,7 +767,7 @@ async function ntfyRefreshTopics(){
     if(ntfyLocal){
       const s=await scraperFetch('/settings');if(!s.ntfy)throw Error();
       const today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
-      data={topics:[...new Set((s.ntfy.subscriptions||[]).filter(r=>r.date>=today).map(r=>r.topic))].sort(),updated_at:new Date(Date.now()+9*3600e3).toISOString()};
+      data={...(s.ntfy.public_topics||{topics:[...new Set((s.ntfy.subscriptions||[]).filter(r=>r.date>=today).map(r=>r.topic))].sort()}),updated_at:new Date().toISOString()};
     }else{
       if(ntfyConfig){
         try{
@@ -869,7 +887,7 @@ async function initNtfy(){
     const port=ports.includes('*')?'*':ports.join(', ');
     if(!ports.length||!chosen.length){ntfyMessage('항구와 배를 선택해 주세요.');return}
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
-    if(!ntfyLocal&&ntfyUsedTopics.includes(topic)&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('다른 사용자가 사용 중인 토픽입니다. 다른 이름을 입력해 주세요.');return}
+    await ntfyRefreshTopics();if(await ntfyUseExistingTopic(topic))return;
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyEditing?.group||ntfySubmissionGroup()};
     if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort,r.group||null];}}

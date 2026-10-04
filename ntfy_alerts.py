@@ -59,6 +59,19 @@ class Alerts:
         atomic_json(config_path,self.config)
         self.save()
 
+    def public_topics(self):
+        """Only alert conditions; never owners, keys, names or management IDs."""
+        today=datetime.now(KST).date().isoformat()
+        groups={}
+        for r in self.state['subscriptions']:
+            if r['date']<today:continue
+            key=(r['topic'],r['date'],self.port_name(r.get('port')),r.get('min_seats',1),bool(r.get('enabled')))
+            groups.setdefault(key,set()).add(r.get('boat',''))
+        settings={}
+        for (topic,ds,port,minimum,enabled),boats in sorted(groups.items()):
+            settings.setdefault(topic,[]).append({'date':ds,'port':port,'boats':sorted(boats),'min_seats':minimum,'enabled':enabled})
+        return {'topics':sorted(settings),'settings':settings}
+
     def save(self):
         with self.lock:
             # Expired rules no longer reserve topics or consume capacity.
@@ -68,11 +81,11 @@ class Alerts:
             if serialized!=self._last_saved:
                 atomic_json(self.path,self.state);os.chmod(self.path,0o600);self._last_saved=serialized
             today=datetime.now(KST).date().isoformat()
-            topics=sorted({r['topic'] for r in self.state['subscriptions'] if r['date']>=today})
+            public=self.public_topics()
             public_path=os.path.join(self.base,'data','ntfy_topics.json')
             old=read(public_path,{})
-            if old.get('topics')!=topics:
-                atomic_json(public_path,{'topics':topics,'updated_at':datetime.now(KST).isoformat()})
+            if any(old.get(k)!=v for k,v in public.items()):
+                atomic_json(public_path,dict(public,updated_at=datetime.now(KST).isoformat()))
                 self.topics_dirty=True;self.topics_feed_dirty=True;self.topic_changed.set()
 
     def publish_topic_feed(self):
@@ -380,7 +393,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
+            return {'public_topics':self.public_topics(),'realtime_topics':True,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
 
     def check(self):
         today=datetime.now(KST).date().isoformat()
