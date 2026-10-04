@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T16:15:19+09:00",
+ "checked_at": "2026-10-04T16:18:42+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -1438,7 +1438,7 @@
   "24marine": {
    "status": "ok",
    "url": "https://24marine.sunsang24.com/ship/schedule_fleet",
-   "entries": 575,
+   "entries": 574,
    "boats": [
     "유로파호",
     "호빵호",
