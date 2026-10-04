@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T17:14:02+09:00",
+ "checked_at": "2026-10-04T17:21:22+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -8727,6 +8727,7 @@
    "url": "http://www.yamujinfishing.com/index.php?mid=bk",
    "entries": 69,
    "boats": [
+    "두드림호",
     "럭셔리호",
     "야무진2호",
     "야무진호",
@@ -8735,6 +8736,7 @@
     "핏불호"
    ],
    "boat_ids": {
+    "두드림호": 115,
     "럭셔리호": 119,
     "야무진2호": 141,
     "야무진호": 142,
@@ -8897,7 +8899,7 @@
  "summary": {
   "sites": 154,
   "entries": 5148,
-  "collected_boats": 219,
+  "collected_boats": 220,
   "missing_boats": 42
  }
 }
