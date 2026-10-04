@@ -577,3 +577,6 @@ python3 scrape_sunsang24.py --help
 ## 2026-10-04 오천프로낚시 링크 및 중복 오류 수정
 - `가즈아호`의 sunsang24 링크가 `http://ocpro.sunsang24.com/`로 되어 있던 것을 올바른 선단 예약 페이지인 `https://ocpro.sunsang24.com/ship/schedule_fleet`로 수정.
 - 배 이름이 `오천 프로낚시`로 등록되어 있던 중복/오류 데이터(bid: 340) 삭제.
+
+## 2026-10-04 무창포 킹피싱 소속 해신호 삭제
+- 실제 선단 목록에 없는 `해신호`(bid: 372)를 `boats.json`에서 삭제 (사용자 확인 반영).
