@@ -423,7 +423,7 @@ function renderMatrix(){
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
-        html+=`<td class="${(selected+past).trim()}"><button class="status-cell ${info.cls}" type="button" data-date="${item.key}" data-boat-id="${boat.bid}" data-status="${info.cls}" title="${escapeHtml(info.text)}" aria-label="${escapeHtml(boat.name)}, ${item.month+1}월 ${item.d}일, ${info.text}${opensBooking?', 예약 페이지 열기':', 상세 보기'}">${info.short}</button></td>`;
+        html+=`<td class="${(selected+past).trim()}"><button class="status-cell ${info.cls}" type="button" data-date="${item.key}" data-boat-id="${boat.bid}" data-status="${info.cls}" aria-label="${escapeHtml(boat.name)}, ${item.month+1}월 ${item.d}일, ${info.text}${opensBooking?', 예약 페이지 열기':', 상세 보기'}">${info.short}</button></td>`;
       });
       html+='</tr>';
     });
