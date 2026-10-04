@@ -92,7 +92,7 @@ def status(text):
     if re.search(r'출조(?:를)?완료|출항완료|운항완료',text):return ('completed',0)
     if '개인사정' in text and '받지않' in text: return ('maintenance', 0)
     if re.search(r'기상\s*악화', text): return ('weather', 0)
-    if re.search(r'출항\s*취소|출조\s*취소|출조를\s*취소|운항\s*취소|결항|취소합니다', text): return ('cancelled', 0)
+    if re.search(r'출항\s*취소|출조\s*취소|출조를\s*취소|운항\s*취소|결항|취소합니다|^취소$', text): return ('cancelled', 0)
     if re.search(r'예약완료|예약마감|예약불가|대기하기|정비일|휴무|출조없음', text): return ('full', 0)
     m = re.search(r'(?:남은자리|남은좌석|잔여석|잔여좌석|잔여인원)[:：]?(\d+)(?:명|석|자리)?', text)
     if not m: m = re.fullmatch(r'(\d+)(?:명|석|자리)',text)
@@ -150,13 +150,27 @@ def parse_booking(html, boats, aliases=None, today=None, end=None):
         if not boat: continue
         seen_boats.add(boat)
         notice=conditional_notice(cells[1].text()+'\n'+cells[2].text())
-        completed=status(cells[1].text())
-        result = ('conditional',None) if notice else completed if completed and completed[0] in ('completed','maintenance') else status(cells[2].text())
+        c1_status=status(cells[1].text())
+        c2_status=status(cells[2].text())
+        if notice:
+            result = ('conditional', None)
+        elif c1_status and c1_status[0] in ('cancelled', 'completed', 'maintenance', 'weather'):
+            result = c1_status
+        elif c2_status:
+            result = c2_status
+        else:
+            result = None
         if result is None:
             for image in cells[2].walk('img'):
+                alt = image.attrs.get('alt', '')
+                img_st = status(alt)
+                if img_st:
+                    result = img_st
+                    break
                 m = re.search(r'/r_x_(\d+)\.',image.attrs.get('src',''))
                 if m:
                     n=int(m.group(1));result=('available',n) if n else ('full',0)
+                    break
         if result is None:
             buttons=' '.join(n.text() for n in cells[0].walk('a'))
             result=status(buttons)

@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-04T10:44:17+09:00",
+ "updated_at": "2026-10-04T10:56:34+09:00",
  "dates": {
   "2026-09-01": {
    "뉴마린스타호": {
@@ -4841,46 +4841,6 @@
     "checked_at": "2026-10-04T10:44:17+09:00",
     "boat_id": 420
    },
-   "뉴빅토리호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4619&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 971111
-   },
-   "배짱호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3416&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 89
-   },
-   "조양호": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4032&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 379
-   },
-   "위너호": {
-    "status": "conditional",
-    "remaining": null,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4620&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 971110
-   },
-   "뉴홀랜드호": {
-    "status": "maintenance",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4466&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 313
-   },
    "오천서해호": {
     "status": "full",
     "remaining": 0,
@@ -6064,6 +6024,70 @@
     "source_url": "http://www.muchangpofishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1595&sel=day#list",
     "checked_at": "2026-10-04T10:44:17+09:00",
     "boat_id": 376
+   },
+   "뉴빅토리호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4619&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 971111
+   },
+   "배짱호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3416&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 89
+   },
+   "모데라토호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3986&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 352
+   },
+   "깜보호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3970&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 368
+   },
+   "페가수스호": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5709&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 375
+   },
+   "조양호": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4032&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 379
+   },
+   "위너호": {
+    "status": "conditional",
+    "remaining": null,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4620&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 971110
+   },
+   "뉴홀랜드호": {
+    "status": "maintenance",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4466&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 313
    }
   },
   "2026-10-06": {
@@ -117222,46 +117246,6 @@
     "checked_at": "2026-10-04T10:44:17+09:00",
     "boat_id": 420
    },
-   "971111": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4619&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 971111
-   },
-   "89": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3416&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 89
-   },
-   "379": {
-    "status": "full",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4032&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 379
-   },
-   "971110": {
-    "status": "conditional",
-    "remaining": null,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4620&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 971110
-   },
-   "313": {
-    "status": "maintenance",
-    "remaining": 0,
-    "source": "homepage",
-    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4466&sel=day#list",
-    "checked_at": "2026-10-04T10:44:17+09:00",
-    "boat_id": 313
-   },
    "148": {
     "status": "full",
     "remaining": 0,
@@ -118501,6 +118485,70 @@
     "source_url": "http://www.muchangpofishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1595&sel=day#list",
     "checked_at": "2026-10-04T10:44:17+09:00",
     "boat_id": 376
+   },
+   "971111": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4619&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 971111
+   },
+   "89": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3416&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 89
+   },
+   "352": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3986&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 352
+   },
+   "368": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3970&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 368
+   },
+   "375": {
+    "status": "cancelled",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5709&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 375
+   },
+   "379": {
+    "status": "full",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4032&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 379
+   },
+   "971110": {
+    "status": "conditional",
+    "remaining": null,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4620&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 971110
+   },
+   "313": {
+    "status": "maintenance",
+    "remaining": 0,
+    "source": "homepage",
+    "source_url": "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4466&sel=day#list",
+    "checked_at": "2026-10-04T10:56:34+09:00",
+    "boat_id": 313
    }
   },
   "2026-10-06": {

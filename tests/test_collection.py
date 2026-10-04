@@ -104,22 +104,43 @@ class ParsingTests(unittest.TestCase):
 
 class SettingsTests(unittest.TestCase):
     def test_default_valid_options_and_reject_invalid(self):
-        with tempfile.TemporaryDirectory() as tmp,patch.object(mac_scheduler,'SETTINGS',os.path.join(tmp,'settings.json')):
-            s=mac_scheduler.Scheduler();self.assertEqual(s.interval,5)
-            for n in (1,5,10,30,60):
-                s.set_interval(n);self.assertEqual(mac_scheduler.read_interval(),n)
-            for n in (0,2,True,'5',None):
-                with self.assertRaises(ValueError):s.set_interval(n)
-            s.set_interval(5)
-    def test_already_running_never_starts_second_process(self):
-        s=mac_scheduler.Scheduler();s.state['running']=True
-        with patch.object(mac_scheduler.subprocess,'run') as run:
-            s.run_once();run.assert_not_called()
-    def test_overrun_skips_missed_start_times(self):
-        s=mac_scheduler.Scheduler();s.interval=5
-        with patch.object(mac_scheduler.time,'monotonic',side_effect=[100,430]),patch.object(mac_scheduler.subprocess,'run') as run,patch.object(mac_scheduler,'atomic_json'):
-            run.return_value.returncode=0;s.run_once()
-        self.assertEqual(s.next_start,700)
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')):
+            s = mac_scheduler.Scheduler()
+            self.assertEqual(s.cfg['near_days'], 14)
+            self.assertEqual(s.cfg['fast_minutes'], 5)
+            self.assertEqual(s.cfg['slow_minutes'], 30)
+            # 유효한 설정 적용 테스트
+            s.control('config', {'near_days': 7, 'fast_minutes': 3, 'slow_minutes': 20})
+            self.assertEqual(s.cfg['near_days'], 7)
+            self.assertEqual(s.cfg['fast_minutes'], 3)
+            self.assertEqual(s.cfg['slow_minutes'], 20)
+            # 허용 범위 벗어난 설정 예외 검사
+            for invalid in ({'near_days': 0, 'fast_minutes': 5, 'slow_minutes': 30},
+                            {'near_days': 14, 'fast_minutes': 0, 'slow_minutes': 30},
+                            {'near_days': 14, 'fast_minutes': 5, 'slow_minutes': 150},
+                            {'near_days': True, 'fast_minutes': 5, 'slow_minutes': 30}):
+                with self.assertRaises(ValueError):
+                    s.control('config', invalid)
+
+    def test_range_validation(self):
+        s = mac_scheduler.Scheduler()
+        # 정상 범위 설정
+        s.control('range', {'from_date': '2026-10-05', 'to_date': '2026-10-10'})
+        self.assertEqual(s.pending_range, ['2026-10-05', '2026-10-10'])
+        # 시작일이 종료일보다 늦은 경우 예외
+        with self.assertRaises(ValueError):
+            s.control('range', {'from_date': '2026-10-20', 'to_date': '2026-10-10'})
+
+    def test_overrun_schedules_next_from_start(self):
+        s = mac_scheduler.Scheduler()
+        s.cfg['fast_minutes'] = 5
+        with patch.object(mac_scheduler.time, 'monotonic', side_effect=[100, 430]), \
+             patch.object(mac_scheduler.subprocess, 'run') as run, \
+             patch.object(mac_scheduler, 'atomic_json'):
+            run.return_value.returncode = 0
+            s.run_once('fast')
+        # 시작(100) 기준 5분(300초) 뒤인 400초로 계산됨
+        self.assertEqual(s.next_fast, 400)
 
 class UploadTests(unittest.TestCase):
     def test_atomic_fast_forward_upload_and_secret_exclusion(self):

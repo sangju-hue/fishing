@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T10:44:17+09:00",
+ "checked_at": "2026-10-04T10:56:34+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -924,9 +924,9 @@
    ]
   },
   "winner.thefishing.kr": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://winner.thefishing.kr/index.php?mid=bk",
-   "entries": 5,
+   "entries": 8,
    "boats": [
     "배짱호",
     "뉴홀랜드호",
@@ -947,11 +947,7 @@
     "위너호": 971110,
     "뉴빅토리호": 971111
    },
-   "missing_boats": [
-    "모데라토호",
-    "깜보호",
-    "페가수스호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {
     "뉴홀랜드호": "선장님 개인사정으로 인해 2026년도 쭈갑예약 받지 않습니다."
@@ -976,6 +972,9 @@
    "booking_urls": [
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4619&sel=day#list",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3416&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3986&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3970&sel=day#list",
+    "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5709&sel=day#list",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4032&sel=day#list",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4620&sel=day#list",
     "https://winner.thefishing.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=4466&sel=day#list"
@@ -4113,8 +4112,8 @@
  },
  "summary": {
   "sites": 150,
-  "entries": 222,
-  "collected_boats": 222,
-  "missing_boats": 40
+  "entries": 225,
+  "collected_boats": 225,
+  "missing_boats": 37
  }
 }
