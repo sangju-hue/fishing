@@ -843,7 +843,7 @@ async function initNtfy(){
     const port=ports.includes('*')?'*':ports.join(', ');
     if(!ports.length||!chosen.length){ntfyMessage('항구와 배를 선택해 주세요.');return}
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
-    if(topic.length<24&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요.');return}
+    if(topic.length<24&&!ntfyMine.some(r=>r.topic===topic)&&!(ntfyEditing&&ntfyAdminRows.some(r=>r.topic===topic))){ntfyMessage('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyEditing?.group||ntfySubmissionGroup()};
     if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort,r.group||null];}}
