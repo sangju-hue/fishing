@@ -154,6 +154,7 @@ async function loadData(){
     const boatsData=await boatsRes.json();
     try{const audit=await fetch('data/scrape_audit_current.json').then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
     BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
+    BOATS.forEach(boat=>{boat.ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name)});
     if(healthRes&&healthRes.ok){
       try{
         const health=await healthRes.json(),deferredIds=new Set();
@@ -242,8 +243,7 @@ function statusRow(boat,date=selectedDate){
     }
   }
   const legacyId=LEGACY_BOAT_IDS[date]?.[boat.name];
-  const ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name);
-  const legacy=(legacyId!=null?String(legacyId)===bid:!ambiguous)&&STATUS[date]?.[boat.name];
+  const legacy=(legacyId!=null?String(legacyId)===bid:!boat.ambiguous)&&STATUS[date]?.[boat.name];
   if(legacy)return [legacy[0],legacy[1],null];
   return null;
 }
