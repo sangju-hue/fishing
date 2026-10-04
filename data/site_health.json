@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-10-04T16:55:17+09:00",
+ "checked_at": "2026-10-04T17:01:54+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
  },
  "queried_range": {
-  "from": "2026-10-18",
+  "from": "2026-10-04",
   "to": "2026-11-30"
  },
  "sites": {
@@ -1724,7 +1724,7 @@
   "aseafish.co.kr": {
    "status": "ok",
    "url": "http://www.aseafish.co.kr",
-   "entries": 108,
+   "entries": 116,
    "boats": [
     "해성호",
     "선호"
@@ -1760,9 +1760,13 @@
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=5330&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=5330&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=5330&sel=day#list",
@@ -1784,9 +1788,13 @@
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5330&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=5330&sel=day#list",
+    "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=5330&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=3931&sel=day#list",
     "http://www.aseafish.co.kr/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=5330&sel=day#list",
@@ -6171,7 +6179,7 @@
    "errors": []
   },
   "mobum.thefishing.kr": {
-   "status": "ok",
+   "status": "partial",
    "url": "https://mobum.thefishing.kr/index.php?mid=bk",
    "entries": 58,
    "boats": [
@@ -6182,7 +6190,9 @@
     "모범낚시호": 178,
     "홍원항 모범낚시": 187
    },
-   "missing_boats": [],
+   "missing_boats": [
+    "홍원항 모범낚시"
+   ],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -13866,8 +13876,8 @@
  },
  "summary": {
   "sites": 154,
-  "entries": 10160,
-  "collected_boats": 222,
-  "missing_boats": 46
+  "entries": 10168,
+  "collected_boats": 221,
+  "missing_boats": 47
  }
 }
