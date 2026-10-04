@@ -201,8 +201,8 @@
     <form id="ntfyForm" class="ntfy-form">
       <label>이름(구분용 · 필수)<input id="ntfyLabel" required maxlength="16" placeholder="예: 홍길동"></label>
       <label>날짜<input id="ntfyDate" type="date" required></label>
-      <div>항구<details class="ntfy-picker" id="ntfyPortPicker"><summary>항구 전체</summary><div></div></details><select id="ntfyPort" multiple hidden></select></div>
-      <div>배<details class="ntfy-picker" id="ntfyBoatPicker"><summary>배 전체</summary><div></div></details><select id="ntfyBoat" multiple hidden></select></div>
+      <div>항구<details class="ntfy-picker" id="ntfyPortPicker"><summary>항구 전체</summary><div></div></details><select id="ntfyPort" multiple hidden autocomplete="off"></select></div>
+      <div>배<details class="ntfy-picker" id="ntfyBoatPicker"><summary>배 전체</summary><div></div></details><select id="ntfyBoat" multiple hidden autocomplete="off"></select></div>
       <label>최소 빈자리<input id="ntfyMinSeats" type="number" min="1" max="100" step="1" value="1" required><small>2를 입력하면 2자리 이상일 때 알림</small></label>
       <div class="ntfy-topic-group"><label>나의 토픽 (예: fish-why)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="토픽 입력 (예: fish-why)" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label><aside aria-label="사용 중인 전체 토픽"><strong>사용 중인 토픽</strong><div id="ntfyTopics">목록 불러오는 중…</div><small id="ntfyTopicsTime"></small></aside></div>
       <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><button id="ntfyCancelEdit" type="button" hidden>수정 취소</button><button id="ntfyRegister" type="submit">구독</button></div>
@@ -718,7 +718,7 @@ function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({o
 function ntfyLink(){ntfyRemember()}
 function ntfyMessage(text){document.querySelector('#ntfyMessage').textContent=text}
 function ntfyValues(id){return [...document.querySelector('#'+id).selectedOptions].map(o=>o.value)}
-function ntfySet(id,values){const wanted=new Set(values.map(String));[...document.querySelector('#'+id).options].forEach(o=>o.selected=wanted.has(o.value));ntfyPicker(id)}
+function ntfySet(id,values){const all=id==='ntfyPort'?'*':'0',wanted=new Set(values.map(String));if(wanted.has(all)){wanted.clear();wanted.add(all)}[...document.querySelector('#'+id).options].forEach(o=>o.selected=wanted.has(o.value));ntfyPicker(id)}
 function ntfyPicker(id){
  const select=document.querySelector('#'+id),picker=document.querySelector('#'+id+'Picker'),selected=[...select.selectedOptions];
  picker.querySelector('summary').textContent=selected.length?selected.map(o=>o.textContent).join(', '):'선택해 주세요';
@@ -846,7 +846,7 @@ async function initNtfy(){
   const season=currentSeason(),d=document.querySelector('#ntfyDate');d.value=season.start;d.min=season.start;d.max=season.last;
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
-  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
+  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['0']);ntfySelection();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
   window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null;ntfyReplyStream?.close();ntfyReplyStream=null});
   window.addEventListener('pageshow',()=>{ntfyConnectTopics();ntfyConnectReplies()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
