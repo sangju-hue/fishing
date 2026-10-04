@@ -190,11 +190,6 @@
     <div class="cards" id="boatCards"></div>
   </section>
 
-  <details class="directory" aria-labelledby="directoryTitle" style="padding-top: 34px;">
-    <summary class="directory-head" style="cursor: pointer; list-style: none; display: flex; outline: none;"><h2 id="directoryTitle">예약 홈페이지가 미확인인 선사 (클릭하여 펴기)</h2><span class="count" id="directoryCount"></span></summary>
-    <div class="directory-list" id="directoryList"></div>
-    <p class="footer-note">요금과 운항 여부가 미확인인 선사는 예약 전에 홈페이지·밴드·전화로 확인해 주세요.</p>
-  </details>
   </div>
   <section id="panel-rockfish" class="species-placeholder" role="tabpanel" aria-labelledby="tab-rockfish" hidden><h2>우럭 예약 현황</h2><p>우럭 예약 현황을 준비하고 있습니다.</p></section>
   <section id="panel-hairtail" class="species-placeholder" role="tabpanel" aria-labelledby="tab-hairtail" hidden><h2>갈치 예약 현황</h2><p>갈치 예약 현황을 준비하고 있습니다.</p></section>
@@ -438,27 +433,6 @@ function bindCardActions(){
     el.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}});
   });
 }
-function renderDirectory(){
-  const boats=sortedOfflineBoats();
-  const regions=new Map();
-  boats.forEach(boat=>{
-    if(!regions.has(boat.region))regions.set(boat.region,new Map());
-    const operators=regions.get(boat.region),operator=operatorName(boat);
-    if(!operators.has(operator))operators.set(operator,[]);
-    operators.get(operator).push(boat);
-  });
-  $("#directoryCount").textContent=`${boats.length}개 등록 항목 · ${[...regions.values()].reduce((total,groups)=>total+groups.size,0)}개 선사 그룹`;
-  $("#directoryList").innerHTML=boats.length?[...regions].map(([region,operators])=>`<section class="region-group" aria-labelledby="region-${escapeHtml(region)}">
-    <h3 class="region-heading" id="region-${escapeHtml(region)}">${escapeHtml(region)}</h3>
-    <div class="operator-grid">${[...operators].map(([operator,list])=>`<section class="operator-group">
-      <div class="operator-head"><span class="operator-name">${escapeHtml(operator)}</span><span class="operator-count">${list.reduce((total,boat)=>total+displayNames(boat).length,0)}척</span></div>
-      <div class="operator-boats">${list.map(boat=>displayNames(boat).map(name=>`<article class="directory-item">
-        <div class="directory-copy"><div class="directory-name">${escapeHtml(name)}</div><div class="directory-meta">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))} · ${escapeHtml(boat.price||"요금 미확인")}</div>${boat.notes?`<p class="directory-note">${escapeHtml(boat.notes)}</p>`:""}</div>
-        <div class="directory-actions">${channelButtons(boat,["homepage","naver","band","phone"])}</div>
-      </article>`).join("")).join("")}</div>
-    </section>`).join("")}</div>
-  </section>`).join(""):'<div class="empty">조건에 맞는 선사가 없습니다.</div>';
-}
 function allDates(){
   const dates=[];
   for(let month=8;month<=10;month++){
@@ -641,7 +615,7 @@ function selectedRangePorts(){
   return [...new Set(BOATS.filter(b=>selected.has(normalizePort(b.port))).map(b=>b.port))];
 }
 function clearRangeResultFilter(){rangeResultFilter=null;rangeResultPorts.clear();rangeAvailableIds.clear();$("#rangeResults").hidden=true}
-$("#clearRangeResults").addEventListener("click",()=>{clearRangeResultFilter();renderMatrix();renderCards();renderDirectory();renderAlertBar()});
+$("#clearRangeResults").addEventListener("click",()=>{clearRangeResultFilter();renderMatrix();renderCards();renderAlertBar()});
 document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListener("click",()=>{
   clearRangeResultFilter();
   activeMonth=Number(btn.dataset.month);
@@ -651,8 +625,8 @@ document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListe
   $("#matrixWrap").scrollLeft=0;
 }));
 let searchT;
-$("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();renderDirectory()}, 250);});
-$("#portFilter").addEventListener("change",()=>{renderMatrix();renderCards();renderDirectory()});
+$("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();}, 250);});
+$("#portFilter").addEventListener("change",()=>{renderMatrix();renderCards();});
 $("#alertButton").addEventListener("click",openTelegramAlert);
 const speciesTabs=[...document.querySelectorAll(".species-tab")];
 function selectSpecies(tab){
@@ -949,7 +923,7 @@ async function initNtfy(){
             document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
             $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · ${s.last_range_ports?.length?s.last_range_ports.join(", "):"전체 항구"} · 빈자리 있는 배만 표시${s.last_result==="failed"?" (일부 수집 실패)":""}`;
             $("#rangeResults").hidden=false;
-            renderMatrix();renderCards();renderDirectory();renderAlertBar();
+            renderMatrix();renderCards();renderAlertBar();
             $("#matrixWrap").scrollLeft=0;$("#matrixWrap").scrollTop=0;
           }finally{rangeResultsLoading=false}
         }
@@ -1014,7 +988,7 @@ async function initNtfy(){
     refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
   }
 loadData().then(()=>{
-  initPorts();initRangePorts();initNtfy();renderMatrix();renderCards();renderDirectory();renderAlertBar();
+  initPorts();initRangePorts();initNtfy();renderMatrix();renderCards();renderAlertBar();
   requestAnimationFrame(()=>{
     const btn=$(".date-head.selected-col");
     const selected=btn ? btn.closest("th") : null;
@@ -1042,7 +1016,7 @@ async function checkForUpdates(){
     dataSignature=stamp;
     const wrap=$("#matrixWrap"),left=wrap?wrap.scrollLeft:0,top=wrap?wrap.scrollTop:0;
     await loadData();
-    renderMatrix();renderCards();renderDirectory();renderAlertBar();
+    renderMatrix();renderCards();renderAlertBar();
     if(wrap){wrap.scrollLeft=left;wrap.scrollTop=top}
     console.info('새 수집 결과 반영:',new Date().toLocaleTimeString('ko-KR'));
   }catch(e){console.error('자동 새로고침 실패:',e)}

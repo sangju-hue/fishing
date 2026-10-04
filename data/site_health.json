@@ -5651,12 +5651,10 @@
    "url": "http://ddung.thefishing.kr/",
    "entries": 60,
    "boats": [
-    "해양호",
-    "뚱이호"
+    "해양호"
    ],
    "boat_ids": {
-    "해양호": 171,
-    "뚱이호": 282
+    "해양호": 171
    },
    "missing_boats": [],
    "deferred_boats": [],
@@ -13914,7 +13912,7 @@
  "summary": {
   "sites": 143,
   "entries": 10627,
-  "collected_boats": 229,
+  "collected_boats": 228,
   "missing_boats": 15
  }
 }

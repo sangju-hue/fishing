@@ -682,3 +682,8 @@ python3 scrape_sunsang24.py --help
 - 기존 대표338 팀대물호의 선사 오천대물낚시/정확한 URL/booking_names 팀대물호·대물호 반영. 과거112 대물호는 canonical_bid=338로 통합(같은 주소의 중복). 기존 알림112는 대표338으로 연결.
 - 오래된 위더스/두드림 선단 설명 제거. 변경 전 기록 teamdaemul_before.json 로컬 보관. 해당 시즌 실제 수집 후 병합 진행.
 - 팀대물10/4~11/30 58건 실제 수집·병합 완료, 전건 상태/잔여석 일치 및 개별 예약 PA_N_UID=2810 확인. 홈페이지 상태의 중복ID112 제거, 화면 대표338 하나 검증.
+
+## 2026-10-04 미확인 선사 접기 목록/뚱이호 제거
+- 사용자 요청으로 index.html ‘예약 홈페이지가 미확인인 선사 (클릭하여 펴기)’ details 영역 전체 제거. renderDirectory 함수와 호출도 제거해 삭제 DOM을 참조하지 않도록 정리.
+- 사용자 확인(카페 예약)으로 뚱이호282 삭제. 명부/두 예약 상태/두 건강도 정리 완료. 변경 전 배 기록은 diagnostics/booking_repairs_2026-10-04/ddung_deletion에 로컬 보관.
+- 인라인 JavaScript node --check 통과, 기존 jsdom ntfy SSE add/edit/delete/reconnect/stale response 테스트 통과. 주요 예약표와 알림 기능 유지.
