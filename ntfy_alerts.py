@@ -96,7 +96,9 @@ class Alerts:
         if catalog[bid].get('canonical_bid') is not None:raise ValueError('현재 명부의 대표 선박을 선택하세요')
         minimum=payload.get('min_seats',1)
         if not isinstance(minimum,int) or isinstance(minimum,bool) or not 1<=minimum<=100:raise ValueError('최소 빈자리는 1~100 사이 정수')
-        if len(str(payload.get('label',''))) > 16:raise ValueError('이름은 16자까지')
+        label=payload.get('label','')
+        if not isinstance(label,str) or not label.strip():raise ValueError('이름을 입력해 주세요. 예: 홍길동')
+        if len(label.strip()) > 16:raise ValueError('이름은 16자까지')
         with self.lock:
             rows=self.state['subscriptions']
             if any(r['topic']==topic and r['owner']!=owner for r in rows):raise ValueError('다른 사용자가 사용 중인 토픽입니다. 새 토픽을 생성하세요')

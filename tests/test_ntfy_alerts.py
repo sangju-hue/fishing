@@ -16,7 +16,7 @@ class NtfyTests(unittest.TestCase):
         self.boat={'bid':1,'name':'화니호','port':'오천항','channels':{'homepage':'https://example.com'}}
         self.write('boats.json',{'boats':[self.boat]});self.a=Alerts(self.base)
         self.ds=(datetime.now(KST)+timedelta(days=1)).date().isoformat()
-        self.p={'action':'add','owner':'1'*32,'topic':'fishing-user-'+('a'*16),'bid':1,'date':self.ds}
+        self.p={'label':'홍길동','action':'add','owner':'1'*32,'topic':'fishing-user-'+('a'*16),'bid':1,'date':self.ds}
     def tearDown(self):self.tmp.cleanup()
     def write(self,path,obj):
         with open(self.base+'/data/'+path,'w') as f:json.dump(obj,f)
@@ -47,6 +47,10 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_name_required(self):
+        for label in ('','   ',None):
+            with self.assertRaises(ValueError):self.a.register(dict(self.p,label=label))
+
     def test_re_register_updates_display_name(self):
         self.a.register(self.p)
         self.a.register(dict(self.p,label='홍길동'))
