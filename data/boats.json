@@ -4033,13 +4033,12 @@
    "region": "인천 · 영흥도",
    "price": "",
    "channels": {
-    "homepage": "http://www.ybada.com/index.php?mid=bk",
-    "phone": "010-8951-9722"
+    "homepage": "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "영흥도 짱구낚시",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "operator": "영흥도 경영피싱",
+   "catalog_checked_at": "2026-10-04T22:01:04+09:00",
    "catalog_sources": [
     "http://www.ybada.com/",
     "http://www.ybada.com/index.php?mid=bk",
@@ -4050,9 +4049,11 @@
     "https://naksigo.com/boat/%EC%98%81%EC%95%94%ED%98%B89.77%ED%86%A411%EC%9D%B8%ED%83%91%EC%8A%B9%EA%B0%95%EC%A7%84%EC%9B%90?id=5583"
    ],
    "booking_names": [
+    "영암호9.77톤11인탑승강진원선장",
     "영암호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "사용자 지정 경영피싱 공식 예약 주소와 선박 목록 확인"
   },
   {
    "bid": 260,
@@ -4211,14 +4212,13 @@
    "region": "인천 · 영흥도",
    "price": "",
    "channels": {
-    "homepage": "http://www.ybada.com/index.php?mid=bk",
-    "phone": "010-8951-9722"
+    "homepage": "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "영흥도 짱구낚시",
+   "operator": "영흥도 경영피싱",
    "capacity": 20,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T22:01:04+09:00",
    "catalog_sources": [
     "http://www.ybada.com",
     "http://www.ybada.com/",
@@ -4228,10 +4228,12 @@
     "https://naksigo.com/boat/%EC%8B%A0%EC%A1%B0%EC%84%A0%20%EA%B0%95%ED%8C%80%ED%98%B8?id=134"
    ],
    "booking_names": [
+    "신조선 강팀호(20인승)강재원선장",
     "강팀호",
-    "신조선  강팀호"
+    "신조선 강팀호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "사용자 지정 경영피싱 공식 예약 주소와 선박 목록 확인"
   },
   {
    "bid": 269,
@@ -5279,25 +5281,6 @@
     "마린스타호"
    ],
    "catalog_status": "booking_verified"
-  },
-  {
-   "bid": 315,
-   "name": "경영피싱호",
-   "port": "영흥도 진두항",
-   "region": "인천 · 영흥도",
-   "price": "",
-   "channels": {
-    "phone": "010-4656-4109",
-    "homepage": "https://fishtoday.kr/comp/%EC%98%81%ED%9D%A5%EB%8F%84%20%EA%B2%BD%EC%98%81%EB%B0%B0%EB%82%9A%EC%8B%9C"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "영흥도 경영배낚시",
-   "capacity": 22,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EA%B2%BD%EC%98%81%ED%94%BC%EC%8B%B1%ED%98%B8"
-   ]
   },
   {
    "bid": 316,
@@ -7161,5 +7144,5 @@
    "catalog_status": "booking_verified"
   }
  ],
- "updated_at": "2026-10-04T22:00:03+09:00"
+ "updated_at": "2026-10-04T22:01:04+09:00"
 }
