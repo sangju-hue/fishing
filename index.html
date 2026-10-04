@@ -105,7 +105,7 @@
   </nav>
   <section class="collection-summary" aria-label="업데이트 상태">
     <div class="summary-heading"><span class="collection-dot" aria-hidden="true">◉</span><strong id="summaryTitle">예약 현황을 확인하고 있어요</strong><span id="summaryState" class="summary-badge">확인 중</span><button id="summarySettings" type="button" hidden>수집 진행·설정 보기 ↗</button></div>
-    <p id="summaryDetail">데이터 불러오는 중</p><div class="summary-track" hidden><span></span></div><p class="summary-help">배와 날짜를 선택해 빈자리를 비교하세요. · 예약처에서 최종 확인</p>
+    <p id="summaryDetail">데이터 불러오는 중</p><p class="summary-help">배와 날짜를 선택해 빈자리를 비교하세요. · 예약처에서 최종 확인</p>
   </section>
   <div id="panel-jjukkumi" role="tabpanel" aria-labelledby="tab-jjukkumi">
   <section class="controls" aria-label="선사 필터">
@@ -1149,6 +1149,6 @@ function startAutoRefresh(){
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
-<script src="bada-ui.js?v=20261005-status"></script>
+<script src="bada-ui.js?v=20261005-no-progress"></script>
 </body>
 </html>

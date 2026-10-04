@@ -30,8 +30,6 @@
     activityDetail = [s.step, s.elapsed].filter(Boolean).join(' · ');
     updateDetail();
     summary.classList.toggle('is-running', s.running);
-    // The collector reports a step, not a measurable percentage. Show activity only.
-    document.querySelector('.summary-track').hidden = !s.running;
   });
   if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
     let stream = null, expiryTimer = null, latest = 0;
