@@ -1427,19 +1427,6 @@
    ]
   },
   {
-   "bid": 96,
-   "name": "K-1투어호",
-   "operator": "씨빙이루어낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://spdman7.fishmap.kr"
-   },
-   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
-  },
-  {
    "bid": 97,
    "name": "갈매기호",
    "operator": "동문낚시",
@@ -1472,8 +1459,7 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "phone": "010-2446-1322",
-    "homepage": "https://www.ospeed.kr"
+    "homepage": "https://xn--hg3b11w8xdjuj.com/index.php"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
@@ -1638,8 +1624,7 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "phone": "010-4102-5415",
-    "homepage": "https://www.ospeed.kr"
+    "sunsang24": "https://newsky.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
@@ -1817,24 +1802,6 @@
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
   },
   {
-   "bid": 119,
-   "name": "럭셔리호",
-   "operator": "야무진피싱",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk",
-    "phone": "010-2549-5282"
-   },
-   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EB%9F%AD%EC%85%94%EB%A6%AC%ED%98%B8"
-   ]
-  },
-  {
    "bid": 121,
    "name": "루키호",
    "operator": "야무진피싱",
@@ -1996,19 +1963,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 131,
-   "name": "뽀빠이호",
-   "operator": "씨빙이루어낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://spdman7.fishmap.kr"
-   },
-   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
-  },
-  {
    "bid": 132,
    "name": "성령5호",
    "operator": "성령낚시",
@@ -2033,24 +1987,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 133,
-   "name": "성령7호",
-   "operator": "성령낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://www.sungryungho.com/index.php?mid=bk",
-    "phone": "010-8825-7992"
-   },
-   "notes": "[성령5호·성령7호] 우럭·광어다운샷·백조기 (성령낚시). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EC%84%B1%EB%A0%B97%ED%98%B8"
-   ]
-  },
-  {
    "bid": 135,
    "name": "스피드호",
    "operator": "스피드피싱",
@@ -2067,19 +2003,6 @@
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%8A%A4%ED%94%BC%EB%93%9C%ED%98%B8?id=6510"
    ]
-  },
-  {
-   "bid": 136,
-   "name": "썬가드호",
-   "operator": "스피드피싱",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://www.ospeed.kr"
-   },
-   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
   },
   {
    "bid": 137,
@@ -2292,19 +2215,6 @@
     "homepage": "http://xn--c20bm9by0le8h59d54l.com"
    },
    "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준"
-  },
-  {
-   "bid": 151,
-   "name": "육소2호",
-   "operator": "씨빙이루어낚시",
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://spdman7.fishmap.kr"
-   },
-   "notes": "[씨빙이호·K-1투어호·뽀빠이호·육소2호] 광어다운샷·라이트/슬로우지깅·참돔타이라바·문어·백조기 (씨빙이루어낚시). 2023년 선사 목록 기준"
   },
   {
    "bid": 152,
