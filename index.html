@@ -664,7 +664,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyEditing=null,ntfyAdminRows=[];
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyEditing=null,ntfyAdminRows=[],ntfyTopicStream=null,ntfyTopicsVersion=0;
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -677,9 +677,16 @@ function ntfyBoatOptions(){
   ntfySelection();
 }
 function ntfyShowTopics(data){
+  const version=Date.parse(data.updated_at)||0;if(version<ntfyTopicsVersion)return;ntfyTopicsVersion=version;
   ntfyUsedTopics=data.topics||[];
   document.querySelector('#ntfyTopics').innerHTML=ntfyUsedTopics.length?ntfyUsedTopics.map(t=>`<span class="ntfy-topic-name">${escapeHtml(t)}</span>`).join(''):'사용 중인 토픽이 없습니다.';
   document.querySelector('#ntfyTopicsTime').textContent=`최신 확인: ${(data.updated_at||'').replace('T',' ').slice(0,19)}`;
+}
+function ntfyConnectTopics(){
+  if(!ntfyConfig||ntfyTopicStream)return;
+  ntfyTopicStream=new EventSource(`${ntfyConfig.server}/${ntfyConfig.inbox}-topics/sse?since=latest`);
+  ntfyTopicStream.onmessage=e=>{try{const item=JSON.parse(e.data);if(item.event==='message')ntfyShowTopics(JSON.parse(item.message));}catch(err){document.querySelector('#ntfyTopicsTime').textContent='토픽 목록 형식 확인 필요';}};
+  ntfyTopicStream.onerror=()=>{document.querySelector('#ntfyTopicsTime').textContent='실시간 목록 재연결 중';};
 }
 async function ntfyRefreshTopics(){
   try{
@@ -691,7 +698,7 @@ async function ntfyRefreshTopics(){
     }else{
       if(ntfyConfig){
         try{
-          const r=await fetch(`${ntfyConfig.server}/${ntfyConfig.inbox}-topics/json?poll=1&since=all`,{cache:'no-store',signal:AbortSignal.timeout(6000)});
+          const r=await fetch(`${ntfyConfig.server}/${ntfyConfig.inbox}-topics/json?poll=1&since=latest`,{cache:'no-store',signal:AbortSignal.timeout(6000)});
           if(r.ok){const messages=(await r.text()).trim().split('\n').filter(Boolean).map(x=>JSON.parse(x)).filter(x=>x.event==='message');if(messages.length)data=JSON.parse(messages.at(-1).message);}
         }catch(e){}
       }
@@ -749,8 +756,8 @@ async function initNtfy(){
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
   ntfyBoatOptions();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
-  setInterval(()=>{if(!document.hidden)ntfyRefreshTopics()},5000);
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden)ntfyRefreshTopics()});
+  window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null});
+  window.addEventListener('pageshow',()=>{ntfyConnectTopics()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyBoat').addEventListener('change',ntfySelection);
   document.querySelector('#ntfyTopic').addEventListener('input',ntfyLink);
@@ -786,7 +793,7 @@ async function initNtfy(){
     }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyConnectTopics();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);

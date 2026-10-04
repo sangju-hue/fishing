@@ -43,7 +43,7 @@ class Alerts:
     def __init__(self, base):
         self.base=base;self.directory=os.path.join(base,'.ntfy');os.makedirs(self.directory,mode=0o700,exist_ok=True)
         self.key=os.path.join(self.directory,'private.pem');self.path=os.path.join(self.directory,'state.json')
-        self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
+        self.topic_changed=threading.Event();self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
         self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[])
         self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_feed_dirty=True;self.last_topic_feed=0;self.topics_error=''
         if not os.path.exists(self.key):
@@ -65,15 +65,15 @@ class Alerts:
             public_path=os.path.join(self.base,'data','ntfy_topics.json')
             old=read(public_path,{})
             if old.get('topics')!=topics:
-                atomic_json(public_path,{'topics':topics,'updated_at':stamp()})
-                self.topics_dirty=True;self.topics_feed_dirty=True
+                atomic_json(public_path,{'topics':topics,'updated_at':datetime.now(KST).isoformat()})
+                self.topics_dirty=True;self.topics_feed_dirty=True;self.topic_changed.set()
 
     def publish_topic_feed(self):
-        if not self.topics_feed_dirty and time.monotonic()-self.last_topic_feed<300:return
+        if not self.topics_feed_dirty:return
         path=os.path.join(self.base,'data','ntfy_topics.json');before=read(path,{})
         try:
             self.publish(self.config['inbox']+'-topics','사용 중인 토픽 목록',json.dumps(before,ensure_ascii=False))
-            self.topics_feed_dirty=read(path,{})!=before;self.last_topic_feed=time.monotonic()
+            with self.lock:self.topics_feed_dirty=read(path,{})!=before;self.last_topic_feed=time.monotonic()
         except Exception:self.topics_error='실시간 토픽 목록 갱신 재시도 대기'
 
     def publish_topics(self):
@@ -85,7 +85,7 @@ class Alerts:
         before=read(path,{})
         try:
             push_to_github.publish_files({'data/ntfy_topics.json':path,'data/ntfy_public.json':os.path.join(self.base,'data','ntfy_public.json')},'update active ntfy topics and capabilities')
-            self.topics_dirty=read(path,{})!=before;self.topics_error=''
+            with self.lock:self.topics_dirty=read(path,{})!=before;self.topics_error=''
         except Exception:self.topics_error='GitHub 토픽 목록 갱신 재시도 대기'
 
 
@@ -237,31 +237,61 @@ class Alerts:
         if result.returncode:raise ValueError('신청 암호화 확인 실패')
         return json.loads(result.stdout)
 
+    def process_item(self,item):
+        if item.get('event')!='message':return
+        identifier=item.get('id')
+        if identifier in self.state['seen']:return
+        try:
+            p=self.decrypt(item.get('message'));action=p.get('action')
+            if action=='add':
+                rows=self.register_request(p);row=rows[0]
+                description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
+                try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
+                except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
+            elif action=='delete':self.remove(p)
+            elif action in ('pause','resume','update'):self.manage(p)
+            else:raise ValueError('지원하지 않는 신청')
+        except Exception as e:
+            # Never print an owner key, topic or ciphertext in logs.
+            self.state['last_request_error']=str(e) if isinstance(e,ValueError) else '신청 처리 오류'
+            self.state['last_request_error_at']=stamp()
+        with self.lock:
+            self.state['seen']=(self.state['seen']+[identifier])[-1500:];self.state['cursor']=identifier;self.save()
+        self.last_poll=stamp();self.online=True;self.error=''
+
     def poll(self):
         cursor=self.state.get('cursor');params=urlencode({'poll':'1','since':cursor or 'all'})
-        with urllib.request.urlopen(f"{SERVER}/{self.config['inbox']}/json?{params}",timeout=4) as response:raw=response.read(1024*1024).decode()
-        for line in raw.splitlines()[:500]:
-            item=json.loads(line)
-            if item.get('event')!='message':continue
-            identifier=item.get('id')
-            if identifier in self.state['seen']:continue
+        with urllib.request.urlopen(f"{SERVER}/{self.config['inbox']}/json?{params}",timeout=4) as response:
+            for line in response:
+                self.process_item(json.loads(line))
+
+    def stream_requests(self):
+        while True:
             try:
-                p=self.decrypt(item.get('message'));action=p.get('action')
-                if action=='add':
-                    rows=self.register_request(p);row=rows[0]
-                    description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
-                    try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
-                    except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
-                elif action=='delete':self.remove(p)
-                elif action in ('pause','resume','update'):self.manage(p)
-                else:raise ValueError('지원하지 않는 신청')
-            except Exception as e:
-                # Never print an owner key, topic or ciphertext in logs.
-                self.state['last_request_error']=str(e) if isinstance(e,ValueError) else '신청 처리 오류'
-                self.state['last_request_error_at']=stamp()
-            with self.lock:
-                self.state['seen']=(self.state['seen']+[identifier])[-1500:];self.state['cursor']=identifier;self.save()
-        self.last_poll=stamp();self.online=True;self.error=''
+                params=urlencode({'since':self.state.get('cursor') or 'all'})
+                with urllib.request.urlopen(f"{SERVER}/{self.config['inbox']}/json?{params}",timeout=75) as response:
+                    self.online=True;self.error=''
+                    pending=b''
+                    while True:
+                        chunk=response.read1(4096)
+                        if not chunk:break
+                        pending+=chunk
+                        if len(pending)>1024*1024:raise ValueError('신청 스트림 크기 초과')
+                        while b'\n' in pending:
+                            line,pending=pending.split(b'\n',1)
+                            if line.strip():self.process_item(json.loads(line))
+            except Exception:
+                self.online=False;self.error='ntfy 실시간 신청 연결 재시도 중'
+                time.sleep(3)
+
+    def topic_updates(self):
+        self.topic_changed.set()
+        while True:
+            self.topic_changed.wait();self.topic_changed.clear()
+            self.publish_topic_feed()
+            self.publish_topics()
+            if self.topics_feed_dirty or self.topics_dirty:
+                time.sleep(3);self.topic_changed.set()
 
     def targets(self):
         with self.lock:
@@ -272,7 +302,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'realtime_topics':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
         catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
@@ -314,13 +344,9 @@ class Alerts:
         self.save()
 
     def loop(self):
+        threading.Thread(target=self.stream_requests,daemon=True).start()
+        threading.Thread(target=self.topic_updates,daemon=True).start()
         while True:
-            try:
-                self.poll()
-            except Exception:
-                self.online=False;self.error='ntfy 신청 연결 실패 · 30초 후 재시도'
-            self.publish_topic_feed()
             try:self.check()
             except Exception:self.error='예약 데이터 확인 실패 · 재시도 대기'
-            self.publish_topics()
             time.sleep(30)

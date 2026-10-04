@@ -72,6 +72,49 @@ class NtfyTests(unittest.TestCase):
         self.assertEqual(len(self.a.state['subscriptions']),1)
         self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person')
 
+    def test_stream_reconnect_uses_saved_cursor_and_handles_split_chunks(self):
+        class EndTest(BaseException):pass
+        payload=dict(self.p)
+        raw=(json.dumps({'event':'message','id':'stream-1','message':'cipher'})+'\n').encode()
+        class Response:
+            def __enter__(self):return self
+            def __exit__(self,*args):pass
+            chunks=iter([raw[:13],raw[13:],b''])
+            def read1(self,n):return next(self.chunks)
+        calls=[]
+        def connect(url,**kwargs):
+            calls.append(url)
+            if len(calls)==1:raise OSError('断線')
+            if len(calls)==2:return Response()
+            raise EndTest()
+        with patch('ntfy_alerts.urllib.request.urlopen',side_effect=connect),patch('ntfy_alerts.time.sleep'),patch.object(self.a,'decrypt',return_value=payload),patch.object(self.a,'publish'):
+            with self.assertRaises(EndTest):self.a.stream_requests()
+        self.assertIn('since=stream-1',calls[-1]);self.assertEqual(len(self.a.state['subscriptions']),1)
+
+    def test_stream_item_add_update_delete_and_duplicate(self):
+        def item(identifier,payload):
+            with patch.object(self.a,'decrypt',return_value=payload),patch.object(self.a,'publish'):
+                self.a.process_item({'event':'message','id':identifier,'message':'encrypted'})
+        item('a',self.p);self.assertEqual(len(self.a.state['subscriptions']),1)
+        self.a.topic_changed.clear();self.a.topics_feed_dirty=False
+        item('a',self.p);self.assertFalse(self.a.topic_changed.is_set())
+        self.a.process_item({'event':'keepalive'});self.assertEqual(self.a.state['cursor'],'a')
+        changed=dict(self.p,action='update',old=[1,self.ds,self.p['topic'],'오천항'],topic='new-topic')
+        item('b',changed);self.assertTrue(self.a.topic_changed.is_set())
+        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'new-topic')
+        item('c',dict(changed,action='delete'));self.assertEqual(self.a.state['subscriptions'],[])
+        self.assertEqual(self.a.state['cursor'],'c')
+
+    def test_feed_failure_retries_and_concurrent_change_survives(self):
+        self.a.register(self.p)
+        with patch.object(self.a,'publish',side_effect=OSError):self.a.publish_topic_feed()
+        self.assertTrue(self.a.topics_feed_dirty)
+        def mutate(*args):self.a.remove(self.p)
+        with patch.object(self.a,'publish',side_effect=mutate):self.a.publish_topic_feed()
+        self.assertTrue(self.a.topics_feed_dirty)
+        with patch.object(self.a,'publish'):self.a.publish_topic_feed()
+        self.assertFalse(self.a.topics_feed_dirty)
+
     def test_topic_feed_refreshes_on_registration_and_delete(self):
         self.a.register(self.p)
         with patch.object(self.a,'publish') as send:
