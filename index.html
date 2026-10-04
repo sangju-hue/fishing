@@ -345,6 +345,11 @@ function normalizePort(port){
   const alias=PORT_ALIASES.find(([pattern])=>pattern.test(value));
   return alias?alias[1]:value;
 }
+// The reservation filter groups mainland Incheon piers into one choice.
+function filterPort(port){
+  const value=normalizePort(port);
+  return /^(?:남항|(?:인천\s*)?만석부두)$/.test(value)?"인천":value;
+}
 // Preferred ports first; remaining ports run north to south along the west coast.
 const PORT_ORDER=['무창포항','오천항','영흥도','영종도','인천 만석부두','만석부두','남항','오이도','전곡항','장고항','삼길포항','마검포항','백사장항','신진도항','안흥항','안흥외항','태안','남당항','가경주항','구매항','영목항','원산도 선촌항','대천항','홍원항','야미도항','비응항','군산 비응항'];
 function portRank(port){const i=PORT_ORDER.indexOf(normalizePort(port));return i<0?999:i;}
@@ -363,7 +368,7 @@ function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
   const port=$("#portFilter").value;
   const qOk=!q||boatSearchText(boat).includes(q)||(boat.operator&&searchOperators(q).has(boat.operator));
-  return (!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
+  return (!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!port||(port==='__other__'?smallPorts.has(filterPort(boat.port)):filterPort(boat.port)===port));
 }
 function matrixOperatorName(boat){return boat.operator||boat.name}
 function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
@@ -593,15 +598,14 @@ function selectDate(key){
 const smallPorts=new Set();
 function initPorts(){
   const counts=new Map();
-  BOATS.forEach(boat=>{const port=normalizePort(boat.port);counts.set(port,(counts.get(port)||0)+1)});
+  BOATS.forEach(boat=>{const port=filterPort(boat.port);counts.set(port,(counts.get(port)||0)+1)});
   smallPorts.clear();
   let otherCount=0;
-  for(const [port,count] of counts)if(count<=2&&!['오천항','영흥도','항구 확인 중'].includes(port)){smallPorts.add(port);otherCount+=count}
-  const priority=portRank;
-  [...counts].filter(([port])=>!smallPorts.has(port)).sort((a,b)=>priority(a[0])-priority(b[0])||a[0].localeCompare(b[0],"ko")).forEach(([port,count])=>{
-    $("#portFilter").insertAdjacentHTML("beforeend",`<option value="${escapeHtml(port)}">${escapeHtml(port)} (${count})</option>`);
-  });
-  if(otherCount)$("#portFilter").insertAdjacentHTML("beforeend",`<option value="__other__">기타 (${otherCount})</option>`);
+  for(const [port,count] of counts)if(count<=2&&!['오천항','영흥도','인천','항구 확인 중'].includes(port)){smallPorts.add(port);otherCount+=count}
+  const options=[...counts].filter(([port])=>!smallPorts.has(port)).map(([port,count])=>({value:port,label:port,count}));
+  if(otherCount)options.push({value:'__other__',label:'기타',count:otherCount});
+  options.sort((a,b)=>b.count-a.count||a.label.localeCompare(b.label,'ko'));
+  $("#portFilter").innerHTML='<option value="">전체 항구</option>'+options.map(({value,label,count})=>`<option value="${escapeHtml(value)}">${escapeHtml(label)} (${count})</option>`).join('');
 }
 function initRangePorts(){
   const ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,"ko"));

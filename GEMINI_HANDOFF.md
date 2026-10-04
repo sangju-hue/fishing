@@ -687,3 +687,10 @@ python3 scrape_sunsang24.py --help
 - 사용자 요청으로 index.html ‘예약 홈페이지가 미확인인 선사 (클릭하여 펴기)’ details 영역 전체 제거. renderDirectory 함수와 호출도 제거해 삭제 DOM을 참조하지 않도록 정리.
 - 사용자 확인(카페 예약)으로 뚱이호282 삭제. 명부/두 예약 상태/두 건강도 정리 완료. 변경 전 배 기록은 diagnostics/booking_repairs_2026-10-04/ddung_deletion에 로컬 보관.
 - 인라인 JavaScript node --check 통과, 기존 jsdom ntfy SSE add/edit/delete/reconnect/stale response 테스트 통과. 주요 예약표와 알림 기능 유지.
+
+## 2026-10-04 예약표 항구 필터 정렬/인천 통합
+- 사용자 요청: 항구 필터는 배 많은 순, 남항과 기타의 인천 항목은 인천으로 통합.
+- index.html 예약표 #portFilter 옵션을 대표 선박 수 내림차순으로 정렬(전체 항구는 첫 번째, 기타도 표시되는 합계 수로 정렬). 동률은 가나다순.
+- filterPort 별도 도입: 남항 표기/남항유어선부두/남항주소 및 만석부두·인천만석부두를 인천으로 묶어12척 포함. 인천은 기타에서 제외. 영흥도/영종도는 별도 유지. 원본 출항항구 정보와 기존 예약표 행 정렬은 유지.
+- 이 변경은 예약표 항구 필터에 적용. 범위 수집/알림 신청의 항구 선택과 서버 항구 정규화는 변경하지 않음.
+- 실제 catalog로 jsdom 검증: 옵션별 숫자 내림차순, 인천 선택 정확한12개ID 포함, 기타에 인천배 없음 확인. 기존 ntfy SSE UI 테스트와 전체 인라인 JS node --check 통과.
