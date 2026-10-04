@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T22:19:33+09:00",
+ "checked_at": "2026-10-04T22:22:43+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -32,7 +32,7 @@
    "errors": []
   },
   "af": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://af.sunsang24.com/ship/schedule_fleet",
    "entries": 58,
    "boats": [
@@ -48,10 +48,7 @@
    "all_ship_labels": [
     "오드리피싱"
    ],
-   "selectable_ship_labels": [
-    "오드리피싱",
-    "오드리호"
-   ],
+   "selectable_ship_labels": [],
    "excluded_fish": {
     "오드리피싱": [
      "광어,우럭,노래미"
@@ -705,8 +702,30 @@
    "capacity_rejected": [],
    "errors": []
   },
+  "teamveteran": {
+   "status": "ok",
+   "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
+   "entries": 58,
+   "boats": [
+    "팀베테랑호"
+   ],
+   "boat_ids": {
+    "팀베테랑호": 163
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "팀베테랑호"
+   ],
+   "all_ship_labels": [
+    "팀베테랑호"
+   ],
+   "selectable_ship_labels": [],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
   "wonjofishing": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://wonjofishing.sunsang24.com/ship/schedule_fleet",
    "entries": 116,
    "boats": [
@@ -728,27 +747,9 @@
     "에버스타호",
     "프린스2호"
    ],
-   "selectable_ship_labels": [
-    "마스터호",
-    "에버스타호",
-    "원조낚시",
-    "프린스2호"
-   ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
-   "errors": []
-  },
-  "teamveteran": {
-   "status": "ok",
-   "entries": 58,
-   "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
-   "boats": [
-    "팀베테랑호"
-   ],
-   "boat_ids": {
-    "팀베테랑호": 163
-   },
-   "missing_boats": [],
    "errors": []
   },
   "macgyver": {
@@ -881,7 +882,7 @@
   "ocpro": {
    "status": "ok",
    "url": "https://ocpro.sunsang24.com/ship/schedule_fleet",
-   "entries": 174,
+   "entries": 116,
    "boats": [
     "비바호",
     "가즈아호"
@@ -999,9 +1000,9 @@
    "errors": []
   },
   "ebada": {
-   "status": "partial",
+   "status": "ok",
    "url": "https://ebada.sunsang24.com/ship/schedule_fleet",
-   "entries": 128,
+   "entries": 116,
    "boats": [
     "이바다호",
     "해모수호"
@@ -1021,12 +1022,7 @@
     "이바다호",
     "해모수호"
    ],
-   "selectable_ship_labels": [
-    "LH하우스",
-    "이바다낚시",
-    "이바다호",
-    "해모수호"
-   ],
+   "selectable_ship_labels": [],
    "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
