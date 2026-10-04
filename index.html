@@ -74,7 +74,7 @@
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
   </style>
-  <link rel="stylesheet" href="bada.css">
+  <link rel="stylesheet" href="bada.css?v=20261005-status">
 </head>
 <body>
 <main class="page">
@@ -896,7 +896,7 @@ async function initNtfy(){
     }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyConnectTopics();ntfyConnectReplies();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectTopics();ntfyConnectReplies();ntfyRefreshTopics();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
@@ -1149,6 +1149,6 @@ function startAutoRefresh(){
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
-<script src="bada-ui.js"></script>
+<script src="bada-ui.js?v=20261005-status"></script>
 </body>
 </html>

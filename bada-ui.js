@@ -8,8 +8,12 @@
   const title = document.getElementById('summaryTitle'), state = document.getElementById('summaryState'), detail = document.getElementById('summaryDetail');
   const summary = document.querySelector('.collection-summary');
   let collectorConnected = false;
+  let activityDetail = '';
+  function updateDetail() {
+    detail.textContent = [activityDetail, document.querySelector('.snapshot strong').textContent].filter(Boolean).join(' · ');
+  }
   function showSnapshot() {
-    if (collectorConnected) return;
+    if (collectorConnected) { updateDetail(); return; }
     const text = document.querySelector('.snapshot strong').textContent;
     const failed = text.includes('실패');
     title.textContent = failed ? '연결을 다시 확인하고 있어요' : '최근 예약 정보를 확인하세요';
@@ -22,12 +26,39 @@
     collectorConnected = true;
     const s = event.detail;
     title.textContent = s.running ? '예약 정보를 업데이트하고 있어요' : '예약 정보 수집 상태';
-    state.textContent = s.state;
-    detail.textContent = [s.step, s.elapsed].filter(Boolean).join(' · ');
+    state.textContent = s.running ? '수집 중' : /대기/.test(s.state) ? '대기' : /중지/.test(s.state) ? '중지' : s.state;
+    activityDetail = [s.step, s.elapsed].filter(Boolean).join(' · ');
+    updateDetail();
     summary.classList.toggle('is-running', s.running);
     // The collector reports a step, not a measurable percentage. Show activity only.
     document.querySelector('.summary-track').hidden = !s.running;
   });
+  if (!['localhost', '127.0.0.1'].includes(location.hostname)) {
+    let stream = null, expiryTimer = null, latest = 0;
+    function unknown() {
+      document.dispatchEvent(new CustomEvent('bada:collector', {detail:{running:false,state:'상태 확인 불가',step:'맥 수집기 연결을 확인하고 있습니다'}}));
+    }
+    function receive(raw) {
+      try {
+        const envelope=JSON.parse(raw);if(envelope.event!=='message')return;
+        const s=JSON.parse(envelope.message),at=Date.parse(s.updated_at),age=Date.now()-at;
+        if(!['running','waiting','stopped'].includes(s.state)||!Number.isFinite(at)||at<latest||age< -30000)return;
+        if(age>150000){unknown();return;}
+        latest=at;clearTimeout(expiryTimer);
+        document.dispatchEvent(new CustomEvent('bada:collector',{detail:{running:s.state==='running',state:{running:'수집 중',waiting:'대기',stopped:'중지'}[s.state],step:s.detail}}));
+        expiryTimer=setTimeout(unknown,150000-Math.max(0,age));
+      } catch(e) {}
+    }
+    function connect(config) {
+      if(stream||!config?.server||!config?.inbox)return;
+      stream=new EventSource(`${config.server}/${config.inbox}-collector/sse?since=latest`);
+      stream.onmessage=e=>receive(e.data);
+      stream.onerror=()=>{clearTimeout(expiryTimer);unknown();};
+    }
+    unknown();
+    document.addEventListener('bada:ntfy-config',e=>connect(e.detail));
+    if(window.badaNtfyConfig)connect(window.badaNtfyConfig);
+  }
   const settings = document.getElementById('summarySettings');
   settings.hidden = !['localhost', '127.0.0.1'].includes(location.hostname);
   settings.addEventListener('click', () => {

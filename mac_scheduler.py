@@ -52,6 +52,7 @@ class Scheduler:
         self.lock = threading.Lock()
         self.wake = threading.Event()
         self.alert_activation_pending = threading.Event()
+        self.status_changed = threading.Event()
         self.csrf = secrets.token_urlsafe(32)
         saved = read_json(SETTINGS, {})
         self.paused = bool(saved.get('paused', False))
@@ -177,12 +178,14 @@ class Scheduler:
                 self.manual_pending = True
             if action in ('run','range'):self.save_settings()
         self.wake.set()
+        self.status_changed.set()
 
     def request_alert_collection(self):
         # Called while Alerts may hold its own lock: never acquire Scheduler's lock here.
         if self.settings_only:return
         self.alert_activation_pending.set()
         self.wake.set()
+        self.status_changed.set()
 
     def supplemental_alert_pairs(self):
         """Use automatic results for covered targets; collect only uncovered pairs."""
@@ -207,6 +210,7 @@ class Scheduler:
                     self.start_required=False
                     self.save_settings()
                 self.next_alerts=time.monotonic()
+                self.status_changed.set()
             if self.start_required:return None
             self.active_boat_ids=[];self.active_targets={}
             if self.manual_pending:
@@ -255,6 +259,7 @@ class Scheduler:
             if mode in ('slow', 'full'):
                 self.next_slow = started_mono + self.cfg['slow_minutes'] * 60
         atomic_json(RUNTIME, self.snapshot_light())
+        self.status_changed.set()
         target_file=None
         try:
             cmd = [sys.executable, os.path.join(BASE, 'run_collection.py'), '--mode', mode]
@@ -296,6 +301,7 @@ class Scheduler:
             if outcome=='ok' and mode in ('slow', 'full'):
                 self.state['last_slow_at'] = finished
         atomic_json(RUNTIME, self.snapshot_light())
+        self.status_changed.set()
 
     def snapshot_light(self):
         with self.lock:
@@ -400,9 +406,11 @@ def main():
     from ntfy_alerts import Alerts
     s.alerts = Alerts(BASE)
     def alert_changed():
-        s.next_alerts=time.monotonic();s.wake.set()
+        s.next_alerts=time.monotonic();s.wake.set();s.status_changed.set()
     s.alerts.on_change=alert_changed
     s.alerts.on_activate=s.request_alert_collection
+    from collector_status import status_loop
+    threading.Thread(target=status_loop,args=(s,),daemon=True).start()
     threading.Thread(target=s.alerts.loop, daemon=True).start()
     server = ThreadingHTTPServer(('127.0.0.1', args.port), handler(s, args.port))
     if not args.settings_only:
