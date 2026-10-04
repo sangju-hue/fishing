@@ -57,6 +57,7 @@ class Scheduler:
             v = saved.get(key, DEFAULTS[key])
             self.cfg[key] = v if isinstance(v, int) and not isinstance(v, bool) and lo <= v <= hi else DEFAULTS[key]
         self.manual_pending = False
+        self.next_collection_kind = None
         self.pending_range_ports = []
         self.active_range_ports = []
         self.auto_range_ports = saved.get("auto_range_ports", [])
@@ -161,11 +162,13 @@ class Scheduler:
         with self.lock:
             if self.manual_pending:
                 self.manual_pending = False
+                self.next_collection_kind = 'full_once'
                 return 'full'
             if self.pending_range:
                 self.active_range, self.pending_range = self.pending_range, None
                 self.active_range_ports = self.pending_range_ports[:]
                 self.pending_range_ports = []
+                self.next_collection_kind = 'range_once'
                 return 'range'
             if self.auto_range:
                 _, first, last = season_window(datetime.now(KST))
@@ -175,6 +178,7 @@ class Scheduler:
                     self.save_settings()
                 else:
                     if time.monotonic() >= self.next_range:
+                        self.next_collection_kind = "range_repeat"
                         self.active_range = [start, end]
                         self.active_range_ports = self.auto_range_ports[:]
                         self.next_range = time.monotonic() + self.range_interval_minutes * 60
@@ -184,6 +188,8 @@ class Scheduler:
                 return None
             now = time.monotonic()
             fast_due, slow_due = now >= self.next_fast, now >= self.next_slow
+            if fast_due or slow_due:
+                self.next_collection_kind = "full_auto"
             if fast_due and slow_due:
                 return 'full'
             if fast_due:
@@ -195,7 +201,8 @@ class Scheduler:
     def run_once(self, mode):
         started_mono = time.monotonic()
         with self.lock:
-            self.state.update(running=True, current_mode=mode, last_started_at=stamp())
+            self.state.update(running=True, current_mode=mode, current_collection_kind=self.next_collection_kind or ("range_once" if mode == "range" else "full_auto"), last_started_at=stamp())
+            self.next_collection_kind = None
             if mode != 'range':
                 self.active_range = None
             # 다음 예정은 '시작 시각' 기준. 수집이 길어져 지났으면 끝나는 즉시 다시 시작.
@@ -217,6 +224,8 @@ class Scheduler:
             outcome = 'failed'
         with self.lock:
             finished = stamp()
+            self.state["last_collection_kind"] = self.state.get("current_collection_kind")
+            self.state["current_collection_kind"] = None
             self.state.update(running=False, current_mode=None, last_finished_at=finished, last_result=outcome, last_mode=mode)
             if mode == 'range':
                 self.state['last_range'] = list(self.active_range)
