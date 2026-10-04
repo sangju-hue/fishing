@@ -725,8 +725,9 @@ function ntfyPicker(id){
 }
 function ntfySelection(){const ports=ntfyValues('ntfyPort'),bids=ntfyValues('ntfyBoat');document.querySelector('#ntfySelection').textContent=`선택 범위: ${ports.includes('*')?'항구 전체':ports.join(', ')} · ${bids.includes('*')?'배 전체 ('+(document.querySelector('#ntfyBoat').options.length-1)+'척)':bids.length+'척 선택'}`;ntfyPicker('ntfyBoat')}
 function ntfyBoatOptions(){
- const ports=ntfyValues('ntfyPort'),previous=ntfyValues('ntfyBoat');
- document.querySelector('#ntfyBoat').innerHTML='<option value="*">배 전체</option>'+BOATS.filter(b=>(ports.includes('*')||ports.includes(normalizePort(b.port)))&&!b.canonical_bid).sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(b=>`<option value="${b.bid}">${escapeHtml(b.name)}</option>`).join('');
+ const ports=ntfyValues('ntfyPort'),previous=ntfyValues('ntfyBoat'),names=new Map();
+ BOATS.filter(b=>!b.canonical_bid).forEach(b=>names.set(b.name,(names.get(b.name)||0)+1));
+ document.querySelector('#ntfyBoat').innerHTML='<option value="*">배 전체</option>'+BOATS.filter(b=>(ports.includes('*')||ports.includes(normalizePort(b.port)))&&!b.canonical_bid).sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(b=>`<option value="${b.bid}">${escapeHtml(names.get(b.name)>1?b.name+' ('+normalizePort(b.port)+')':b.name)}</option>`).join('');
  const valid=previous.filter(x=>[...document.querySelector('#ntfyBoat').options].some(o=>o.value===x));ntfySet('ntfyBoat',valid.length?valid:['*']);ntfyPicker('ntfyPort');ntfySelection();
 }
 function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0&&r.scope_all!==false?['*']:[String(r.bid)]);ntfySelection()}
