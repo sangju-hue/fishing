@@ -48,7 +48,7 @@ class Alerts:
         self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[]);self.state.setdefault('receipts',{})
         for receipt in self.state['receipts'].values():receipt.pop('retry_at',None)
         self._file_cache={};self._last_check_signature=None;self._last_saved=None;self._check_day=None
-        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_feed_dirty=True;self.last_topic_feed=0;self.topics_error=''
+        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.on_activate=lambda:None;self.topics_dirty=True;self.topics_feed_dirty=True;self.last_topic_feed=0;self.topics_error=''
         if not os.path.exists(self.key):
             subprocess.run([OPENSSL,'genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',self.key],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             os.chmod(self.key,0o600)
@@ -126,13 +126,13 @@ class Alerts:
                 if old.get('min_seats',1)!=minimum:old['notified']=False
                 old['min_seats']=minimum
                 old['label']=str(payload.get('label',old.get('label',''))).strip()
-                if persist:self.save()
+                if persist:self.save();self.on_change();self.on_activate()
                 return old
             if len(rows)>=50000 or sum(r['owner']==owner for r in rows)>=10000:raise ValueError('등록 수 제한: 사용자당 10000개, 전체 50000개')
             boat=catalog[bid]
             row={'id':secrets.token_hex(8),'owner':owner,'topic':topic,'bid':bid,'date':ds,'label':str(payload.get('label','')),'boat':boat['name'],'port':boat.get('port',''),'enabled':True,'min_seats':minimum,'created_at':stamp(),'last_checked_at':None,'last_sent_at':None,'last_status':'unknown','observed':None,'notified':False,'error':''}
             rows.append(row)
-            if persist:self.save();self.on_change()
+            if persist:self.save();self.on_change();self.on_activate()
             return row
 
     @staticmethod
@@ -160,7 +160,7 @@ class Alerts:
                 self.state['subscriptions']=before
                 raise
             for row in rows:row.update(scope_port='*' if '*' in ports else ', '.join(ports),scope_ports=ports,scope_all=not bids,request_group=group)
-            self.save();self.on_change();return rows
+            self.save();self.on_change();self.on_activate();return rows
 
     def matches(self,r,p):
         if r['owner']!=p.get('owner') or r['topic']!=p.get('topic') or r['date']!=p.get('date'):return False
@@ -194,6 +194,7 @@ class Alerts:
                     raise
             else:raise ValueError('지원하지 않는 동작')
             self.save();self.on_change()
+            if action=='resume':self.on_activate()
 
     def group_key(self,row):
         import hashlib
@@ -230,7 +231,9 @@ class Alerts:
                 if action=='group_delete':self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
                 else:
                     for r in rows:r['enabled']=action=='group_resume'
-                self.save();self.on_change();return
+                self.save();self.on_change()
+                if action=='group_resume':self.on_activate()
+                return
             row=next((r for r in self.state['subscriptions'] if r['id']==identifier),None)
             if not row:raise ValueError('등록 항목 없음')
             if action=='delete':self.state['subscriptions'].remove(row)
@@ -240,6 +243,7 @@ class Alerts:
                 row['last_test_at']=stamp()
             else:raise ValueError('지원하지 않는 동작')
             self.save()
+            if action=='toggle' and row['enabled']:self.on_activate()
 
     def publish(self,topic,title,message,click=None):
         body={'topic':topic,'title':title,'message':message,'tags':['fishing'],'priority':3}

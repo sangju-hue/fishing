@@ -50,6 +50,7 @@ class Scheduler:
     def __init__(self):
         self.lock = threading.Lock()
         self.wake = threading.Event()
+        self.alert_activation_pending = threading.Event()
         self.csrf = secrets.token_urlsafe(32)
         saved = read_json(SETTINGS, {})
         self.paused = bool(saved.get('paused', False))
@@ -175,8 +176,20 @@ class Scheduler:
             if action in ('run','range'):self.save_settings()
         self.wake.set()
 
+    def request_alert_collection(self):
+        # Called while Alerts may hold its own lock: never acquire Scheduler's lock here.
+        if self.settings_only:return
+        self.alert_activation_pending.set()
+        self.wake.set()
+
     def due_mode(self):
         with self.lock:
+            if self.alert_activation_pending.is_set():
+                self.alert_activation_pending.clear()
+                if self.start_required:
+                    self.start_required=False
+                    self.save_settings()
+                self.next_alerts=time.monotonic()
             if self.start_required:return None
             self.active_boat_ids=[];self.active_targets={}
             if self.manual_pending:
@@ -372,6 +385,7 @@ def main():
     def alert_changed():
         s.next_alerts=time.monotonic();s.wake.set()
     s.alerts.on_change=alert_changed
+    s.alerts.on_activate=s.request_alert_collection
     threading.Thread(target=s.alerts.loop, daemon=True).start()
     server = ThreadingHTTPServer(('127.0.0.1', args.port), handler(s, args.port))
     if not args.settings_only:

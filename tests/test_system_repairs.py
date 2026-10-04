@@ -11,6 +11,21 @@ class RepairTests(unittest.TestCase):
     def setUp(self):
         self.f=fixtures.NtfyTests();self.f.setUp();self.a=self.f.a;self.p=self.f.p
     def tearDown(self):self.f.tearDown()
+    def test_mobile_registration_starts_alert_targets_without_general_collection(self):
+        with patch.object(ms,'SETTINGS',self.f.base+'/scheduler.json'):
+            s=ms.Scheduler();s.paused=True;s.start_required=True;s.alerts=self.a
+            self.a.on_activate=s.request_alert_collection
+            self.assertIsNone(s.due_mode())
+            self.a.register_request(self.p)
+            self.assertTrue(s.alert_activation_pending.is_set());self.assertTrue(s.paused)
+            self.assertEqual(s.due_mode(),'range');self.assertFalse(s.start_required);self.assertEqual(s.next_collection_kind,'alerts_auto')
+            self.assertEqual(s.active_targets,{str(self.p['bid']):[self.p['date']]})
+            s.start_required=True
+            self.a.register_request(self.p);self.assertEqual(s.due_mode(),'range');self.assertFalse(s.start_required)
+    def test_settings_only_blocks_alert_activation(self):
+        s=ms.Scheduler();s.settings_only=True;s.start_required=True
+        with patch.object(s,'save_settings') as save:s.request_alert_collection();save.assert_not_called()
+        self.assertTrue(s.start_required)
     def test_latest_valid_backup_sends_and_wrong_ship_is_ignored(self):
         self.a.register(self.p);self.f.result('full',checked=(datetime.now(KST)-timedelta(hours=1)).isoformat())
         fresh={'status':'available','remaining':4,'checked_at':datetime.now(KST).isoformat(),'boat_id':1}
