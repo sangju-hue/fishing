@@ -1,6 +1,8 @@
 import unittest
 from datetime import date
 from custom_booking import parse_bando, parse_fishapp
+from homepage_engine import date_url
+from urllib.parse import urlsplit, parse_qs
 from collect_homepages import sites_from_catalog, resolve_boat_ids
 
 START=date(2026,10,4);END=date(2026,11,30)
@@ -29,6 +31,9 @@ class CustomBookingTests(unittest.TestCase):
     def test_unpublished_past_deleted_and_wrong_ship_not_full(self):
         row=self.row();row.pop('PSGR_CNT')
         self.assertEqual(self.parse([row,self.row(DEL_FLAG='Y'),self.row(SHIP_NAME='다른호'),self.row(SCHD_DATE='20261003')]),{})
+    def test_day_collection_preserves_selected_full_day_ship(self):
+        query=parse_qs(urlsplit(date_url('http://redlight.kr/index.php?mid=bk&PA_N_UID=4885',START)).query)
+        self.assertEqual(query['PA_N_UID'],['4885'])
     def test_trip_selectors_are_not_lost_when_grouping_host(self):
         boats=[{'bid':i,'name':name,'channels':{'homepage':'http://redlight.kr/index.php?mid=bk&PA_N_UID='+uid}} for i,name,uid in [(42,'오전','3179'),(43,'오후','3180'),(44,'종일','4885')]]
         group=sites_from_catalog(boats)['redlight.kr']

@@ -212,7 +212,8 @@ def booking_links(html, base):
 
 def date_url(url, start, days=30):
     p=urlsplit(url);q=dict(parse_qsl(p.query))
-    q.update(year=str(start.year),month=f'{start.month:02}',day=f'{start.day:02}',mode='list',won=str(days),PA_N_UID='0',sel='day')
+    q.update(year=str(start.year),month=f'{start.month:02}',day=f'{start.day:02}',mode='list',won=str(days),sel='day')
+    q.setdefault('PA_N_UID','0')
     return urlunsplit((p.scheme,p.netloc,p.path,urlencode(q),''))
 
 def parse_hanaho(html, boats, today, end):
