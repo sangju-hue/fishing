@@ -85,7 +85,7 @@ class Scheduler:
     def snapshot(self):
         with self.lock:
             now = time.monotonic()
-            snap = dict(self.state, **self.cfg, paused=self.paused, manual_pending=self.manual_pending, pending_range=self.pending_range, active_range=self.active_range, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes,
+            snap = dict(self.state, **self.cfg, paused=self.paused, manual_pending=self.manual_pending, pending_range=self.pending_range, active_range=self.active_range, active_range_ports=self.active_range_ports, auto_range=self.auto_range, auto_range_ports=self.auto_range_ports, range_interval_minutes=self.range_interval_minutes,
                         next_range_in=max(0, round(self.next_range-now)) if self.auto_range else None,
                         next_fast_in=None if self.paused else max(0, round(self.next_fast - now)),
                         next_slow_in=None if self.paused else max(0, round(self.next_slow - now)))
