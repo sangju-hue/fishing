@@ -47,6 +47,9 @@
     .scrape-settings ul{margin:6px 0;padding-left:18px}
     .boat-controls,.operator-controls{display:flex;align-items:center;gap:8px;padding-right:6px}.boat-controls input,.operator-controls input{flex:0 0 auto;width:15px;height:15px;accent-color:var(--sea)}
     .boat-selector,.operator-selector{color:inherit;text-decoration:none}.operator-controls .operator-selector{min-width:0;padding-left:11px}.operator-controls{height:100%}.boat-controls .boat-selector{min-width:0}.boat-controls.is-selected{background:#163b42}.operator-controls.is-selected{background:#164c53}
+    .booking-notice{text-align:left;padding:10px 14px;background:#0d1d27;border-bottom:1px solid #1d3542}
+    .booking-notice-text{position:sticky;left:246px;display:inline-flex;align-items:center;gap:8px;font-weight:700;color:#ffbe76;background:rgba(255,190,118,0.08);padding:6px 14px;border-radius:8px;border:1px solid rgba(255,190,118,0.25);white-space:nowrap}
+    @media (max-width:620px){.booking-notice-text{left:180px;white-space:normal}}
   </style>
 </head>
 <body>
@@ -270,7 +273,7 @@ function statusInfo(boat,date=selectedDate){
   };
   if(row[0]==="f")return {cls:"full",short:isOctopus?"문어(마감)":"마감",text:isOctopus?"🐙 문어 마감":"🔴 마감"};
   if(row[0]==="w")return {cls:"maintenance",short:"기상",text:"⚫ 기상악화"};
-  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:"⚫ 점검"};
+  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:boat.booking_notice?`⚫ ${boat.booking_notice}`:"⚫ 점검"};
   return {cls:"cancelled",short:"취소",text:"⚫ 출항취소"};
 }
 const PORT_ALIASES=[
@@ -416,7 +419,7 @@ function renderMatrix(){
       const boatLabel=`<span class="boat-label">${escapeHtml(boat.name)}</span><span class="port-label">${escapeHtml(boat.region)} · ${escapeHtml(normalizePort(boat.port))}${boatUrl?'':' · 홈페이지 미확인'}${boat.collection_priority==='deferred_daily'?' · 일별 조회 보류':''}</span>`;
       const boatControl=boatUrl?`<a class="boat-selector" href="${escapeHtml(boatUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(boat.name)} 홈페이지 열기">${boatLabel}</a>`:`<span class="boat-selector">${boatLabel}</span>`;
       html+=`<tr class="boat-row ${tone}${isLast?' group-end':''}"><th class="boat-col" scope="row" title="${escapeHtml(boat.name)} · ${escapeHtml(boat.port)}"><div class="boat-controls${isSelected?' is-selected':''}"><input type="checkbox" data-select-boat="${boat.bid}" ${isSelected?'checked':''} aria-label="${escapeHtml(boat.name)} 선택">${boatControl}</div></th>`;
-      if(boat.booking_notice){html+=`<td colspan="${dates.length}" class="booking-notice" style="text-align:left;padding:12px 18px;font-weight:600">${escapeHtml(boat.booking_notice)}</td></tr>`;return;}
+      if(boat.booking_notice){html+=`<td colspan="${dates.length}" class="booking-notice"><span class="booking-notice-text">📢 ${escapeHtml(boat.booking_notice)}</span></td></tr>`;return;}
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
