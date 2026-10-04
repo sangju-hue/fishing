@@ -126,7 +126,7 @@
   </section>
   <section id="ntfySettings" class="ntfy-settings" aria-label="빈자리 알림 설정">
     <h2>🔔 빈자리 알림 설정</h2>
-    <p>날짜·항구·배를 선택하세요. 항구 전체·배 전체로 한 번에 등록할 수 있습니다. 휴대폰 ntfy 앱에서 아래 서버·토픽을 동일하게 구독하세요. 사람마다 다른 토픽을 사용합니다.</p>
+    <p>날짜·항구·배를 선택하세요. 항구 전체·배 전체로 한 번에 등록할 수 있습니다. 아래 내용을 입력하고 구독을 누르면 알림 등록이 완료됩니다. 폰 ntfy 앱에서도 같은 토픽을 처음 한 번 구독해 주세요. 사람마다 다른 토픽을 사용합니다.</p>
     <form id="ntfyForm" class="ntfy-form">
       <label>이름(구분용)<input id="ntfyLabel" maxlength="16" placeholder="예: 내 알림"></label>
       <label>날짜<input id="ntfyDate" type="date" required></label>
@@ -134,7 +134,7 @@
       <label>배<select id="ntfyBoat" required></select></label>
       <label>ntfy 서버<input value="https://ntfy.sh" readonly aria-label="ntfy 서버"></label>
       <label>나의 토픽 (예: fish-why)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" value="fish1" placeholder="fish1" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label>
-      <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><a id="ntfySubscribe" target="_blank" rel="noopener noreferrer">ntfy에서 구독</a><button id="ntfyRegister" type="submit">빈자리 알림 등록</button></div>
+      <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><button id="ntfyRegister" type="submit">구독</button></div>
       <p id="ntfySelection" style="grid-column:1/-1;margin:0"></p>
     </form>
     <p id="ntfyMessage" role="status">알림 연결 확인 중…</p>
@@ -665,7 +665,7 @@ let ntfyConfig=null,ntfyOwner='',ntfyMine=[];
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,mine:ntfyMine}))}catch(e){}}
-function ntfyLink(){const topic=document.querySelector('#ntfyTopic').value;document.querySelector('#ntfySubscribe').href=`https://ntfy.sh/${encodeURIComponent(topic)}`;ntfyRemember()}
+function ntfyLink(){ntfyRemember()}
 function ntfyMessage(text){document.querySelector('#ntfyMessage').textContent=text}
 function ntfySelection(){const boat=document.querySelector('#ntfyBoat');document.querySelector('#ntfySelection').textContent=`선택 범위: ${document.querySelector('#ntfyPort').selectedOptions[0]?.textContent||''} · ${boat.value==='0'?'배 전체 ('+(boat.options.length-1)+'척)':boat.selectedOptions[0]?.textContent||''}`}
 function ntfyBoatOptions(){
@@ -721,7 +721,7 @@ async function initNtfy(){
     const port=document.querySelector('#ntfyPort').value;
     const payload={action:'add',owner:ntfyOwner,bid,port,date:d.value,topic,label:document.querySelector('#ntfyLabel').value.trim()};
     const button=document.querySelector('#ntfyRegister');button.disabled=true;
-    try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'맥 등록 완료':'신청 전달됨 · 폰 등록 완료 알림 확인'};ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'맥에 등록했습니다. 폰에서 같은 토픽을 구독하세요.':'암호화한 신청을 전달했습니다. 맥이 처리하면 폰으로 등록 완료 알림이 옵니다. 맥이 꺼져 있으면 처리되지 않으니 완료 알림을 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
+    try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
   });
   document.querySelector('#ntfyMine').addEventListener('click',async e=>{
     const button=e.target.closest('[data-ntfy-remove]');if(!button)return;const i=Number(button.dataset.ntfyRemove),r=ntfyMine[i];button.disabled=true;
@@ -731,7 +731,7 @@ async function initNtfy(){
     const button=e.target.closest('[data-ntfy-action]');if(!button)return;button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyMessage('폰 ntfy 앱에서 서버 https://ntfy.sh 와 나의 토픽을 구독한 뒤 등록하세요.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json');if(!response.ok)throw Error();ntfyConfig=await response.json();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
