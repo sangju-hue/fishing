@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T18:01:04+09:00",
+ "checked_at": "2026-10-04T18:04:23+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -634,11 +634,7 @@
     "대양호",
     "베테랑호"
    ],
-   "excluded_fish": {
-    "베테랑호": [
-     "광어,우럭"
-    ]
-   },
+   "excluded_fish": {},
    "capacity_rejected": [],
    "errors": []
   },
