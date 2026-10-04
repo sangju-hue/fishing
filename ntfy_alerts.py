@@ -32,7 +32,6 @@ def booking_url(raw, ds):
     if p.scheme not in ('http','https'):return None
     year,month,day=ds.split('-');q=dict(parse_qsl(p.query));path=p.path;fragment=p.fragment
     if p.hostname and p.hostname.endswith('.sunsang24.com'):
-        if '/mypage/reservation_ready/' in path:return raw
         path='/ship/schedule_fleet/'+year+month;q={};fragment='d'+ds
     elif '/niabbs5' in path:
         path=re.sub(r'/(?:inc\.php|doc/sub2_in2?\.htm)$','/doc/sub2_in.htm',path);q={'toYear':year,'toMonth':month,'callday':day};fragment=''
@@ -434,20 +433,19 @@ class Alerts:
                     if state!='available' or known_count and not qualifies:r['notified']=False
                 if qualifies and not r.get('notified'):
                     if info.get('remaining') is not None and info['remaining']<=0:continue
-                    pending.setdefault((r['topic'],ds),[]).append((r,checked,b,info))
+                    pending.setdefault((r['topic'],ds,bid),[]).append((r,checked,b,info))
             self.save()
-        for (topic,ds),items in pending.items():
-            # One delivery per topic/date; cancellation and updates are rechecked.
+        for (topic,ds,bid),items in pending.items():
+            # One delivery per topic/date/boat; cancellation and updates are rechecked.
             with self.lock:
                 items=[(r,checked,b,info) for r,checked,b,info in items if r in self.state['subscriptions'] and r['enabled'] and not r.get('notified') and r.get('observed')==checked]
                 if not items:continue
-                links=[booking_url(info.get('source_url') or b.get('booking_page') or b.get('channels',{}).get('homepage') or b.get('channels',{}).get('sunsang24'),ds) for r,checked,b,info in items]
-                lines=[f"{b.get('port','')} · {b['name']} · 잔여 {info['remaining']}석" for r,checked,b,info in items]
-                title=f"예약일 {ds[5:]} · {items[0][2]['name']} 빈자리" if len(items)==1 else f"예약일 {ds[5:]} · 빈자리 {len(items)}척"
-                # ntfy payload limits: summarize long lists; all selected rows remain visible on site.
-                message=f"{ds}\n"+'\n'.join(lines[:20])+(f"\n외 {len(lines)-20}척" if len(lines)>20 else '')+"\n예약처에서 최종 확인해 주세요."
+                _,_,b,info=items[0]
+                link=booking_url(b.get('booking_page') or info.get('source_url') or b.get('channels',{}).get('sunsang24') or b.get('channels',{}).get('homepage'),ds)
+                title=f"예약일 {ds[5:]} · {b['name']} 빈자리"
+                message=f"{ds}\n{b.get('port','')} · {b['name']} · 잔여 {info['remaining']}석\n예약현황에서 최종 확인해 주세요."
                 try:
-                    self.publish(topic,title,message,links[0] if len(items)==1 else 'https://sangju-hue.github.io/fishing/')
+                    self.publish(topic,title,message,link)
                     for r,checked,b,info in items:r['notified']=True;r['last_sent_at']=stamp();r['error']=''
                 except Exception:
                     for r,checked,b,info in items:r['error']='전송 실패: ntfy 연결·토픽 권한 확인 (다음 확인 때 재시도)'
