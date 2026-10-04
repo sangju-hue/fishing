@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T17:42:56+09:00",
+ "checked_at": "2026-10-04T17:49:01+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -844,10 +844,12 @@
    "entries": 42,
    "boats": [
     "카즈미호",
+    "굿모닝호",
     "꺄오호"
    ],
    "boat_ids": {
     "카즈미호": 19,
+    "굿모닝호": 98,
     "꺄오호": 247
    },
    "missing_boats": [],
@@ -2212,23 +2214,16 @@
    "url": "http://www.ospeed.kr",
    "entries": 28,
    "boats": [
-    "굿모닝호",
-    "뉴스카이호",
     "랜드마크호",
     "스피드호",
-    "썬가드호",
     "어게인호"
    ],
    "boat_ids": {
-    "굿모닝호": 98,
-    "뉴스카이호": 109,
     "랜드마크호": 118,
     "스피드호": 135,
-    "썬가드호": 136,
     "어게인호": 328
    },
    "missing_boats": [
-    "뉴스카이호",
     "랜드마크호",
     "스피드호"
    ],
@@ -2969,17 +2964,13 @@
    "entries": 28,
    "boats": [
     "성령5호",
-    "성령7호",
     "뉴성령호"
    ],
    "boat_ids": {
     "성령5호": 132,
-    "성령7호": 133,
     "뉴성령호": 310
    },
-   "missing_boats": [
-    "성령7호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -3040,9 +3031,9 @@
    ],
    "pages_checked": 8,
    "booking_urls": [
-    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72104489&year=2026&month=10&day=09&mode=list&sel=day&PA_N_UID=3346#list",
-    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72104489&year=2026&month=10&day=10&mode=list&sel=day&PA_N_UID=3346#list",
-    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72104489&year=2026&month=10&day=11&mode=list&sel=day&PA_N_UID=3346#list"
+    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72106228&year=2026&month=10&day=09&mode=list&sel=day&PA_N_UID=3346#list",
+    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72106228&year=2026&month=10&day=10&mode=list&sel=day&PA_N_UID=3346#list",
+    "http://xn--3i4bl3g39q.com/index.php?mid=bk&the=1&tviuid=72106228&year=2026&month=10&day=11&mode=list&sel=day&PA_N_UID=3346#list"
    ],
    "errors": []
   },
@@ -8215,40 +8206,12 @@
     }
    ]
   },
-  "spdman7.fishmap.kr": {
-   "status": "no_data",
-   "url": "http://spdman7.fishmap.kr",
-   "entries": 0,
-   "boats": [
-    "K-1투어호",
-    "뽀빠이호",
-    "육소2호"
-   ],
-   "boat_ids": {
-    "K-1투어호": 96,
-    "뽀빠이호": 131,
-    "육소2호": 151
-   },
-   "missing_boats": [
-    "K-1투어호",
-    "뽀빠이호",
-    "육소2호"
-   ],
-   "deferred_boats": [],
-   "boat_notices": {},
-   "date_notices": {},
-   "observed_ship_labels": [],
-   "pages_checked": 1,
-   "booking_urls": [],
-   "errors": []
-  },
   "yamujinfishing.com": {
    "status": "partial",
    "url": "https://www.yamujinfishing.com/index.php",
    "entries": 69,
    "boats": [
     "두드림호",
-    "럭셔리호",
     "루키호",
     "바다용사호",
     "야무진2호",
@@ -8259,7 +8222,6 @@
    ],
    "boat_ids": {
     "두드림호": 115,
-    "럭셔리호": 119,
     "루키호": 121,
     "바다용사호": 126,
     "야무진2호": 141,
@@ -8427,9 +8389,9 @@
   }
  },
  "summary": {
-  "sites": 143,
+  "sites": 142,
   "entries": 4902,
-  "collected_boats": 223,
-  "missing_boats": 42
+  "collected_boats": 221,
+  "missing_boats": 37
  }
 }
