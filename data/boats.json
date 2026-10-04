@@ -14,7 +14,7 @@
   },
   {
    "name": "오드리피싱",
-   "port": "야미도항",
+   "port": "비응항",
    "region": "전북 군산",
    "price": "",
    "channels": {
@@ -25,7 +25,9 @@
    "bid": 1,
    "booking_names": [
     "오드리피싱"
-   ]
+   ],
+   "catalog_checked_at": "2026-10-04T21:10:43.924303+09:00",
+   "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
    "name": "에버스타호",
@@ -480,13 +482,13 @@
    "region": "충남 보령시",
    "price": "9만원",
    "channels": {
-    "homepage": "https://www.plusfishing.co.kr/index.php?mid=bk",
+    "homepage": "http://plusfishing.co.kr/index.php?mid=bk",
     "phone": "010-3304-7556"
    },
    "tags": [],
    "manual": false,
    "bid": 24,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937100+09:00",
    "catalog_sources": [
     "http://www.plusfishing.co.kr/",
     "http://www.plusfishing.co.kr/index.php?mid=bk",
@@ -499,7 +501,8 @@
     "플러스호"
    ],
    "catalog_status": "booking_verified",
-   "operator": "무창포 플러스피싱"
+   "operator": "무창포 플러스피싱",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "name": "짱가호",
@@ -1129,11 +1132,13 @@
    "price": "3~4만원 (오후 체험배 기준)",
    "capacity": null,
    "channels": {
-    "homepage": "https://ssfishing.kr/index.php?mid=bk",
+    "homepage": "http://ssfishing.kr/index.php?mid=bk",
     "phone": "010-7453-6665"
    },
    "notes": "쭈꾸미·갑오징어·광어·우럭·농어외수질 (낚시쿤 선단; 관리자 010-9729-9649). 2026년 유튜브 쭈꾸미 오후배 체험 영상 확인",
-   "canonical_bid": 79
+   "canonical_bid": 79,
+   "catalog_checked_at": "2026-10-04T21:10:43.937163+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 82,
@@ -1145,13 +1150,14 @@
    "capacity": null,
    "channels": {
     "sunsang24": "https://iron.sunsang24.com/ship/schedule_fleet",
-    "homepage": "https://ssfishing.kr/index.php?mid=bk"
+    "homepage": "http://ssfishing.kr/index.php?mid=bk"
    },
    "notes": "쭈꾸미 (낚시쿤 선단; 2020년 유튜브 쭈꾸미 출조 확인, 최근 운영 미확인)",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937178+09:00",
    "catalog_sources": [
     "https://iron.sunsang24.com/ship/schedule_fleet"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 84,
@@ -1162,10 +1168,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://ssfishing.kr/index.php?mid=bk",
+    "homepage": "http://ssfishing.kr/index.php?mid=bk",
     "phone": "010-9729-9649"
    },
-   "notes": "쭈꾸미 (낚시쿤 선단; FTV THE HIT 333회 쭈꾸미 출조 방송 확인)"
+   "notes": "쭈꾸미 (낚시쿤 선단; FTV THE HIT 333회 쭈꾸미 출조 방송 확인)",
+   "catalog_checked_at": "2026-10-04T21:10:43.937191+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 85,
@@ -1291,11 +1299,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.hyosungho.com/index.php?mid=bk",
+    "homepage": "http://www.hyosungho.com/index.php?mid=bk",
     "phone": "010-3463-8194"
    },
    "notes": "2022년 매일경제 서해 출조 선박 명단에 무창포항 출조 배로 기재. 대상어종·전화번호 미확인",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937217+09:00",
    "catalog_sources": [
     "http://naraefishing.com/index.php?mid=bk",
     "http://naraefishing.com/index.php?mid=bk&the=1",
@@ -1307,7 +1315,8 @@
    "booking_names": [
     "신나래호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 92,
@@ -1408,10 +1417,10 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.ospeed.kr/index.php?mid=bk"
+    "homepage": "http://www.ospeed.kr/index.php?mid=bk"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937240+09:00",
    "catalog_sources": [
     "http://카즈미호.com/",
     "http://카즈미호.com/index.php?mid=bk",
@@ -1420,7 +1429,8 @@
    "catalog_status": "booking_verified",
    "booking_names": [
     "굿모닝호"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 99,
@@ -1574,10 +1584,10 @@
    "capacity": null,
    "channels": {
     "sunsang24": "https://newsky.sunsang24.com/ship/schedule_fleet",
-    "homepage": "https://www.ospeed.kr/index.php?mid=bk"
+    "homepage": "http://www.ospeed.kr/index.php?mid=bk"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937267+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%89%B4%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD",
     "https://newsky.sunsang24.com/",
@@ -1586,7 +1596,8 @@
    "booking_names": [
     "뉴스카이호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 110,
@@ -1699,13 +1710,14 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
    "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937289+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%91%90%EB%93%9C%EB%A6%BC%ED%98%B8"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 116,
@@ -1747,9 +1759,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.ospeed.kr/index.php?mid=bk"
+    "homepage": "http://www.ospeed.kr/index.php?mid=bk"
    },
-   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준"
+   "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
+   "catalog_checked_at": "2026-10-04T21:10:43.937304+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 121,
@@ -1760,13 +1774,14 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
    "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937318+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%A3%A8%ED%82%A4%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 122,
@@ -1830,10 +1845,10 @@
    "capacity": null,
    "channels": {
     "phone": "010-3629-8605",
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
    "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937338+09:00",
    "catalog_sources": [
     "http://www.biteho.kr/",
     "http://www.biteho.kr/index.php?mid=bk",
@@ -1842,7 +1857,8 @@
    "booking_names": [
     "바다용사호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 127,
@@ -1930,14 +1946,16 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.ospeed.kr/index.php?mid=bk",
+    "homepage": "http://ospeed.kr/index.php?mid=bk",
     "phone": "010-5436-0569"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924400+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%8A%A4%ED%94%BC%EB%93%9C%ED%98%B8?id=6510"
-   ]
+   ],
+   "canonical_bid": 328,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "bid": 137,
@@ -2020,13 +2038,14 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
    "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937364+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%95%BC%EB%AC%B4%EC%A7%842%ED%98%B8"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 142,
@@ -2037,14 +2056,15 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk",
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk",
     "phone": "010-2549-5282"
    },
    "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937378+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%95%BC%EB%AC%B4%EC%A7%84%ED%98%B8"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 145,
@@ -2055,10 +2075,10 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.joeunfish.com/index.php?mid=bk"
+    "homepage": "http://www.joeunfish.com/index.php?mid=bk"
    },
    "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937393+09:00",
    "catalog_sources": [
     "http://www.joeunfish.com/?tviuid=59398513",
     "http://www.joeunfish.com/index.php?mid=bk",
@@ -2067,7 +2087,8 @@
    "booking_names": [
     "오디세이호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 146,
@@ -2078,13 +2099,14 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
    "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937408+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%98%A4%EC%85%98%ED%88%AC%EC%96%B4%ED%98%B8?id=2503"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 147,
@@ -2161,12 +2183,17 @@
    "capacity": null,
    "channels": {
     "phone": "010-5436-0569",
-    "homepage": "https://www.joeunfish.com/index.php?mid=bk"
+    "homepage": "http://www.joeunfish.com/index.php?mid=bk"
    },
    "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938238+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%9D%B4%EC%A7%80%EC%8A%A4%ED%98%B8?id=2532"
+   ],
+   "catalog_correction": "예약표 명칭 이지스와 명부 이지스호 연결",
+   "booking_names": [
+    "이지스",
+    "이지스호"
    ]
   },
   {
@@ -2297,11 +2324,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.friendho.com/index.php?mid=bk",
+    "homepage": "http://www.friendho.com/index.php?mid=bk",
     "phone": "010-9484-8627"
    },
    "notes": "[타이푼호·포세이돈호] 광어다운샷·문어·백조기 (블루피싱; 제외 목록의 블루호와 별개 선박). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937468+09:00",
    "catalog_sources": [
     "http://www.friendho.com/",
     "http://www.friendho.com/index.php?mid=bk",
@@ -2312,7 +2339,8 @@
    "booking_names": [
     "타이푼호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 163,
@@ -2323,9 +2351,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
    },
-   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준"
+   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
+   "catalog_checked_at": "2026-10-04T21:10:43.937482+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 164,
@@ -2336,11 +2366,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://www.joeunfish.com/index.php?mid=bk",
+    "homepage": "http://www.joeunfish.com/index.php?mid=bk",
     "phone": "010-9428-5602"
    },
    "notes": "[오디세이호·이지스호·팀오디세이호] 광어다운샷·백조기 (오디세이피싱). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937498+09:00",
    "catalog_sources": [
     "http://www.joeunfish.com/?tviuid=59398513",
     "http://www.joeunfish.com/index.php?mid=bk",
@@ -2350,7 +2380,8 @@
    "catalog_status": "booking_verified",
    "booking_names": [
     "팀오디세이"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 166,
@@ -2362,10 +2393,10 @@
    "capacity": null,
    "channels": {
     "phone": "010-4710-7536",
-    "homepage": "https://www.friendho.com/index.php?mid=bk"
+    "homepage": "http://www.poseidonho.com/index.php?mid=bk"
    },
    "notes": "[타이푼호·포세이돈호] 광어다운샷·문어·백조기 (블루피싱; 제외 목록의 블루호와 별개 선박). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937516+09:00",
    "catalog_sources": [
     "http://bestho.kr/",
     "http://bestho.kr/index.php?mid=bk",
@@ -2376,7 +2407,8 @@
    "booking_names": [
     "포세이돈호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "공식 포세이돈 홈페이지에서 선명·블루피싱·오천항 주소와 기존 전화번호 010-4710-7536 일치 확인. 잘못 연결된 friendho 제거."
   },
   {
    "bid": 167,
@@ -2409,13 +2441,15 @@
    "name": "한프로호",
    "operator": "한프로피싱",
    "region": "충남 보령시",
-   "port": "오천항",
+   "port": "대천항",
    "price": "",
    "capacity": null,
    "channels": {
     "homepage": "http://hanprofishing.com"
    },
-   "notes": "[한프로호·한프로2호] 우럭·광어다운샷 (한프로피싱 선단). 2023년 선사 목록 기준"
+   "notes": "[한프로호·한프로2호] 우럭·광어다운샷 (한프로피싱 선단). 2023년 선사 목록 기준",
+   "catalog_checked_at": "2026-10-04T21:10:43.924291+09:00",
+   "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
    "bid": 171,
@@ -2554,7 +2588,8 @@
     "https://mobum.thefishing.kr/index.php?mid=bk"
    ],
    "booking_names": [
-    "모범낚시호"
+    "모범낚시호",
+    "홍원항 모범낚시"
    ],
    "catalog_status": "booking_verified"
   },
@@ -2618,14 +2653,16 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://hhj.kr/index.php?mid=bk",
+    "homepage": "http://hhj.kr/index.php?mid=bk",
     "phone": "010-3213-3944"
    },
    "notes": "홍원항 형제낚시 선단, 7.93톤 18인승. 2026년 9월 쭈꾸미 조황 확인(장원 130~300수급). 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약",
    "booking_names": [
     "우리호",
     "형제낚시 우리호"
-   ]
+   ],
+   "catalog_checked_at": "2026-10-04T21:10:43.937549+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 182,
@@ -2637,13 +2674,14 @@
    "capacity": null,
    "channels": {
     "phone": "010-3213-3944",
-    "homepage": "https://hhj.kr/index.php?mid=bk"
+    "homepage": "http://hhj.kr/index.php?mid=bk"
    },
    "notes": "홍원항 형제낚시 선단, 9.77톤 22인승. 2022년 매일경제 서해 출조 선박 명단에도 홍원항 출조 배로 기재. 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937564+09:00",
    "catalog_sources": [
     "http://bank.thefishing.kr/index.php?mid=bk"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 183,
@@ -2679,11 +2717,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://hhj.kr/index.php?mid=bk",
+    "homepage": "http://hhj.kr/index.php?mid=bk",
     "phone": "010-3213-3944"
    },
    "notes": "미확인 — 유튜브 쭈꾸미 조황 영상(2026.9, 130수)만 확인. 형제낚시 소속. 예약 채널·요금 미확인",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937583+09:00",
    "catalog_sources": [
     "http://hhj.kr/",
     "http://hhj.kr/index.php?mid=bk",
@@ -2694,7 +2732,8 @@
     "우리호"
    ],
    "catalog_status": "booking_verified",
-   "canonical_bid": 181
+   "canonical_bid": 181,
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 185,
@@ -2705,10 +2744,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://hhj.kr/index.php?mid=bk",
+    "homepage": "http://hhj.kr/index.php?mid=bk",
     "phone": "010-3213-3944"
    },
-   "notes": "홍원항 형제낚시 선단, 9.77톤 22인승. 출조점 충남 서천군 서면 홍원길 54. 예약 010-3213-3944, 선장 010-8668-3944, 매장 041-952-3944. 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약"
+   "notes": "홍원항 형제낚시 선단, 9.77톤 22인승. 출조점 충남 서천군 서면 홍원길 54. 예약 010-3213-3944, 선장 010-8668-3944, 매장 041-952-3944. 선단 홈페이지(hhj.kr)에서 소속 배 전체 예약",
+   "catalog_checked_at": "2026-10-04T21:10:43.937598+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 186,
@@ -2733,10 +2774,10 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://mobum.thefishing.kr/index.php"
+    "homepage": "https://mobum.thefishing.kr/index.php?mid=bk"
    },
    "notes": "미확인 — 자체 홈페이지(네이버 '홍원항 모범낚시' 검색) 예약 가능. 전화 또는 카톡 예약 가능(번호 미확인). 출조점: 홍원항 백두산낚시. 쭈꾸미·갑오징어 출조 확인(블로그 탑승 후기). 봄 갑오징어 평일 5만원/주말 6만원 — 가을 쭈꾸미 요금 미확인. 9.77톤 22인승",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924490+09:00",
    "catalog_sources": [
     "http://mobum.thefishing.kr/",
     "http://mobum.thefishing.kr/index.php?mid=bk",
@@ -2745,7 +2786,9 @@
    "booking_names": [
     "모범낚시호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "canonical_bid": 178,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "bid": 188,
@@ -2839,13 +2882,14 @@
    "capacity": null,
    "channels": {
     "phone": "010-4352-5230",
-    "homepage": "https://haesin.net/index.php?mid=bk"
+    "homepage": "http://haesin.net/index.php?mid=bk"
    },
    "notes": "해신선단 협력선박. 대상 어종 미확인. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937619+09:00",
    "catalog_sources": [
     "http://www.gulamiki.com/index.php?mid=bk"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 193,
@@ -2856,10 +2900,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "해신선단 협력선박. 대상 어종 미확인. 오이도 킹스타호(010-5411-4989)와 동명이나 다른 선박으로 추정됨. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "해신선단 협력선박. 대상 어종 미확인. 오이도 킹스타호(010-5411-4989)와 동명이나 다른 선박으로 추정됨. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937633+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 194,
@@ -2870,10 +2916,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "해신선단 협력선박. 쭈꾸미/갑오징어, 광어다운샷·우럭 병행 추정(미확인). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "해신선단 협력선박. 쭈꾸미/갑오징어, 광어다운샷·우럭 병행 추정(미확인). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937646+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 195,
@@ -2884,10 +2932,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937658+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 196,
@@ -2898,10 +2948,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937670+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 197,
@@ -2912,10 +2964,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "쭈꾸미/갑오징어 시즌 출조, 광어다운샷·우럭·백조기·침선우럭 병행. 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937683+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 198,
@@ -2926,10 +2980,12 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://haesin.net/index.php?mid=bk",
+    "homepage": "http://haesin.net/index.php?mid=bk",
     "phone": "010-4352-5230"
    },
-   "notes": "갑오징어 전문 출조 확인(네이버 출조 후기 다수). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함"
+   "notes": "갑오징어 전문 출조 확인(네이버 출조 후기 다수). 해신낚시 홈페이지(haesin.net)에서 선단 전체를 예약하므로 소속 배 예약 채널이 동일함",
+   "catalog_checked_at": "2026-10-04T21:10:43.937703+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 199,
@@ -3020,9 +3076,11 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "https://changdukho.com"
+    "homepage": "http://changdukho.com"
    },
-   "notes": "광어 다운샷·우럭·쭈꾸미(매경 주간 바다낚시 기사에서 안흥항 출조 배로 수차례 언급, 온라인 예약 제공). 자체 홈페이지 접속 시 403으로 전화번호 미확인."
+   "notes": "광어 다운샷·우럭·쭈꾸미(매경 주간 바다낚시 기사에서 안흥항 출조 배로 수차례 언급, 온라인 예약 제공). 자체 홈페이지 접속 시 403으로 전화번호 미확인.",
+   "catalog_checked_at": "2026-10-04T21:10:43.937723+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 206,
@@ -3273,18 +3331,19 @@
    "price": "",
    "capacity": null,
    "channels": {
-    "phone": "010-6670-2227",
     "homepage": "https://mpoint.thefishing.kr/index.php?mid=bk"
    },
    "notes": "총각피싱 선단 (선장 황시영). 20인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 삼천포 포인트호와 동명이인. 쭈꾸미 출조 미확인.",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924516+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%ED%8F%AC%EC%9D%B8%ED%8A%B8%ED%98%B8?id=6888",
     "https://mpoint.thefishing.kr/index.php?mid=bk"
    ],
    "booking_names": [
     "포인트피싱"
-   ]
+   ],
+   "canonical_bid": 365,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "capacity": null,
@@ -3511,8 +3570,8 @@
    "capacity": null,
    "channels": {
     "phone": "010-8884-2204",
-    "sunsang24": "http://ocpro.sunsang24.com/",
-    "homepage": "https://www.innak.kr/bbs/board.php?bo_table=D21_2021&amp;wr_id=74491"
+    "sunsang24": "https://ocpro.sunsang24.com/ship/schedule_fleet",
+    "homepage": "https://ocpro.sunsang24.com/ship/schedule_fleet"
    },
    "name": "가즈아호",
    "notes": "쭈꾸미 전문. 출처: 선상24 ocpro (2026-09 조황)",
@@ -3521,10 +3580,11 @@
    "price": "",
    "region": "충남 보령시",
    "bid": 231,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924347+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EA%B0%80%EC%A6%88%EC%95%84%ED%98%B8"
-   ]
+   ],
+   "catalog_correction": "조황 게시판 대신 가즈아호가 있는 공식 예약표 연결"
   },
   {
    "capacity": null,
@@ -3753,7 +3813,8 @@
     "https://naksigo.com/boat/%EA%B1%B0%EC%96%91%ED%98%B8?id=207"
    ],
    "booking_names": [
-    "거양호"
+    "거양호",
+    "오천거양호"
    ],
    "catalog_status": "booking_verified"
   },
@@ -4054,6 +4115,7 @@
     "https://naksigo.com/boat/%EC%9B%90%EC%8A%A4%ED%83%80%ED%98%B8?id=1670"
    ],
    "booking_names": [
+    "영스타호",
     "원스타호"
    ],
    "catalog_status": "booking_verified"
@@ -4244,13 +4306,13 @@
    "region": "인천 · 영흥도",
    "price": "",
    "channels": {
-    "homepage": "https://www.taeyeongnaksi.co.kr/index.php?mid=bk"
+    "homepage": "http://www.taeyeongnaksi.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "영흥도 태영낚시",
    "capacity": 12,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937810+09:00",
    "catalog_sources": [
     "http://taeyeongnaksi.co.kr/",
     "http://taeyeongnaksi.co.kr/index.php?mid=bk",
@@ -4261,7 +4323,8 @@
    "booking_names": [
     "21금강호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 264,
@@ -4391,7 +4454,7 @@
   {
    "bid": 269,
    "name": "원산도영종호",
-   "port": "오천항",
+   "port": "원산도 선촌선착장",
    "region": "충남 보령시",
    "price": "",
    "channels": {
@@ -4400,7 +4463,7 @@
    "tags": [],
    "manual": false,
    "operator": "원산도 영종호",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924329+09:00",
    "catalog_sources": [
     "http://원산도영종호.com/",
     "http://원산도영종호.com/index.php?mid=bk",
@@ -4409,7 +4472,8 @@
    "booking_names": [
     "원산도영종호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
    "bid": 270,
@@ -4592,14 +4656,14 @@
    "region": "인천 · 영흥도",
    "price": "",
    "channels": {
-    "homepage": "https://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk",
+    "homepage": "http://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk",
     "phone": "010-5222-6072"
    },
    "tags": [],
    "manual": false,
    "operator": "영흥도 청운호",
    "capacity": 20,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937849+09:00",
    "catalog_sources": [
     "http://xn--289a86en7mpg381a.com",
     "http://xn--289a86en7mpg381a.com/index.php?mid=bk",
@@ -4610,7 +4674,8 @@
    "booking_names": [
     "뉴청운호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 278,
@@ -4986,20 +5051,22 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "sunsang24": "http://keoyang.sunsang24.com/ship/schedule_fleet",
-    "phone": "010-5436-9009"
+    "phone": "010-5436-9009",
+    "sunsang24": "http://keoyang.sunsang24.com/ship/schedule_fleet"
    },
    "tags": [],
    "manual": false,
-   "operator": "오천 거양호",
+   "operator": "피싱아지트",
    "capacity": 11,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924470+09:00",
    "catalog_sources": [
     "http://keoyang.sunsang24.com/",
     "http://keoyang.sunsang24.com/ship/schedule_fleet",
     "https://naksigo.com/boat/%EC%98%A4%EC%B2%9C%EA%B1%B0%EC%96%91%ED%98%B8"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "canonical_bid": 241,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "bid": 296,
@@ -5058,13 +5125,13 @@
    "price": "",
    "channels": {
     "phone": "010-4344-2078",
-    "homepage": "https://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk"
+    "homepage": "http://xn--hq1bw95anpa94qblnrvb.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "영흥도 청운호",
    "capacity": 14,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937897+09:00",
    "catalog_sources": [
     "http://www.youngdong2ho.net/",
     "http://www.youngdong2ho.net/index.php?mid=bk",
@@ -5073,7 +5140,8 @@
    "booking_names": [
     "청운호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 299,
@@ -5277,16 +5345,17 @@
    "price": "",
    "channels": {
     "phone": "010-2743-7155",
-    "homepage": "https://www.taeyeongnaksi.co.kr/index.php?mid=bk"
+    "homepage": "http://www.taeyeongnaksi.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "영흥도 태영낚시",
    "capacity": 12,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937927+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/20%EA%B8%88%EA%B0%95%ED%98%B8"
-   ]
+   ],
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 308,
@@ -5757,18 +5826,21 @@
    },
    "tags": [],
    "manual": false,
-   "operator": "오천항 어게인호",
+   "operator": "스피드피싱",
    "capacity": 20,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924365+09:00",
    "catalog_sources": [
     "http://ospeed.kr/",
     "http://ospeed.kr/index.php?mid=bk",
     "https://naksigo.com/boat/%EC%96%B4%EA%B2%8C%EC%9D%B8%ED%98%B8"
    ],
    "booking_names": [
-    "어게인호"
+    "스피드호",
+    "어게인호",
+    "어게인호(스피드선장)"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "사용자 확인된 개명: 스피드호→어게인호, 스피드피싱 소속"
   },
   {
    "bid": 329,
@@ -5777,16 +5849,18 @@
    "region": "인천 옹진",
    "price": "",
    "channels": {
-    "phone": "010-4645-1525",
-    "homepage": "http://www.paradiseho.com/index.php?mid=bk&amp;year=2027&amp;month=04&amp;day=25&amp;mode=list&amp;won=1&amp;PA_N_UID=0&amp;sel=day"
+    "homepage": "http://www.paradiseho.com/index.php?mid=bk",
+    "phone": "010-4645-1525"
    },
    "tags": [],
    "manual": false,
    "operator": "영흥도 원스타호",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924423+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EC%98%81%EC%8A%A4%ED%83%80%ED%98%B8?port=%EC%98%81%ED%9D%A5%EB%8F%84%20%EC%A7%84%EB%91%90%ED%95%AD"
-   ]
+   ],
+   "canonical_bid": 254,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "bid": 330,
@@ -6043,13 +6117,13 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk"
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 소라피싱",
    "capacity": 22,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.937990+09:00",
    "catalog_sources": [
     "http://www.sorafishing.com/",
     "http://www.sorafishing.com/index.php?mid=bk",
@@ -6058,7 +6132,8 @@
    "booking_names": [
     "뉴써니호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 346,
@@ -6072,14 +6147,17 @@
    "tags": [],
    "manual": false,
    "operator": "무창포 효성낚시",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924382+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%ED%9A%A8%EC%84%B1%EB%AC%B4%EC%B0%BD%ED%8F%AC%ED%98%B8"
    ],
    "booking_names": [
+    "로빈호",
+    "효성",
     "효성(로빈호)"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "홈페이지 효성(로빈호), 효성낚시 소속 확인"
   },
   {
    "bid": 347,
@@ -6130,13 +6208,13 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk"
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 소라피싱",
    "capacity": 22,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938012+09:00",
    "catalog_sources": [
     "http://newsunnyho.com/",
     "http://newsunnyho.com/index.php?mid=bk",
@@ -6147,7 +6225,8 @@
    "booking_names": [
     "써니호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 350,
@@ -6229,14 +6308,14 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.plusfishing.co.kr/index.php?mid=bk",
+    "homepage": "http://plusfishing.co.kr/index.php?mid=bk",
     "phone": "010-8422-0866"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 플러스피싱",
    "capacity": 21,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938035+09:00",
    "catalog_sources": [
     "http://www.apacheho.com/index.php?mid=bk",
     "https://naksigo.com/boat/%EC%95%84%ED%8C%8C%EC%B9%98%ED%98%B8?id=2447"
@@ -6244,7 +6323,8 @@
    "booking_names": [
     "아파치호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 354,
@@ -6290,7 +6370,7 @@
   {
    "bid": 359,
    "name": "글로리호",
-   "port": "무창포항",
+   "port": "대천항",
    "region": "충남 보령시",
    "price": "",
    "channels": {
@@ -6299,7 +6379,7 @@
    "tags": [],
    "manual": false,
    "operator": "대천항 글로리 (구)모항 글로리",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.924187+09:00",
    "catalog_sources": [
     "http://www.gloryho.kr/",
     "http://www.gloryho.kr/index.php?mid=bk",
@@ -6308,7 +6388,8 @@
    "booking_names": [
     "글로리호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
    "bid": 360,
@@ -6317,14 +6398,14 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.plusfishing.co.kr/index.php?mid=bk",
+    "homepage": "http://plusfishing.co.kr/index.php?mid=bk",
     "phone": "010-3304-7556"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 플러스피싱",
    "capacity": 20,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938059+09:00",
    "catalog_sources": [
     "http://suji.thefishing.kr/",
     "http://www.plusfishing.co.kr/",
@@ -6335,7 +6416,8 @@
    "booking_names": [
     "수지호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 361,
@@ -6345,13 +6427,13 @@
    "price": "",
    "channels": {
     "phone": "010-3469-0463",
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk"
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 소라피싱",
    "capacity": 21,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938078+09:00",
    "catalog_sources": [
     "http://mobok.thefishing.kr/",
     "https://mobok.thefishing.kr/index.php?mid=bk",
@@ -6360,7 +6442,8 @@
    "booking_names": [
     "뉴오복호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 363,
@@ -6369,14 +6452,14 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk",
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk",
     "phone": "010-3237-7789"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 소라피싱",
    "capacity": 18,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938097+09:00",
    "catalog_sources": [
     "http://www.sorafishing.com/",
     "http://www.sorafishing.com/index.php?mid=bk",
@@ -6385,7 +6468,8 @@
    "booking_names": [
     "씨마호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 364,
@@ -6434,7 +6518,8 @@
     "https://naksigo.com/boat/%ED%8F%AC%EC%9D%B8%ED%8A%B8%ED%94%BC%EC%8B%B1?id=6401"
    ],
    "booking_names": [
-    "포인트피싱"
+    "포인트피싱",
+    "포인트호"
    ],
    "catalog_status": "booking_verified"
   },
@@ -6632,17 +6717,18 @@
    "price": "",
    "channels": {
     "phone": "010-3304-7556",
-    "homepage": "https://www.plusfishing.co.kr/index.php?mid=bk"
+    "homepage": "http://plusfishing.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
    "operator": "무창포 플러스피싱",
    "capacity": 20,
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938127+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%AC%B4%EC%B0%BD%ED%8F%AC%ED%95%AD%20%ED%94%8C%EB%9F%AC%EC%8A%A4%ED%98%B8"
    ],
-   "canonical_bid": 24
+   "canonical_bid": 24,
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 378,
@@ -6694,13 +6780,12 @@
    "region": "충남 보령시",
    "price": "",
    "channels": {
-    "homepage": "https://www.hyosungho.com/index.php?mid=bk",
-    "phone": "010-4646-7255"
+    "homepage": "http://www.hyosungho.com/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "무창포 나래피싱",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
+   "operator": "무창포 효성낚시",
+   "catalog_checked_at": "2026-10-04T21:10:43.924441+09:00",
    "catalog_sources": [
     "http://naraefishing.com/index.php?mid=bk",
     "http://naraefishing.com/index.php?mid=bk&the=1",
@@ -6712,7 +6797,9 @@
     "효성",
     "로빈호"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "canonical_bid": 346,
+   "catalog_correction": "동일 홈페이지·연락처/예약명 또는 사용자 확인된 동일 배를 대표 항목에 통합"
   },
   {
    "bid": 383,
@@ -7165,7 +7252,7 @@
   },
   {
    "name": "오드리호",
-   "port": "야미도항",
+   "port": "비응항",
    "channels": {
     "sunsang24": "https://af.sunsang24.com/ship/schedule_fleet"
    },
@@ -7173,7 +7260,9 @@
     "오드리호",
     "오드리호"
    ],
-   "bid": 416
+   "bid": 416,
+   "catalog_checked_at": "2026-10-04T21:10:43.924315+09:00",
+   "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
    "name": "스마트호",
@@ -7328,7 +7417,7 @@
    "capacity": 9,
    "price": "",
    "channels": {
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk"
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk"
    },
    "booking_names": [
     "유진호"
@@ -7336,9 +7425,10 @@
    "catalog_sources": [
     "http://www.sorafishing.com/index.php?mid=bk"
    ],
-   "catalog_checked_at": "2026-10-03T09:01:07+09:00",
+   "catalog_checked_at": "2026-10-04T21:10:43.938196+09:00",
    "catalog_status": "booking_verified",
-   "notes": "소라피싱 공식 예약표의 유진호 9인승 확인. 오천항 동명 선박과 별도."
+   "notes": "소라피싱 공식 예약표의 유진호 9인승 확인. 오천항 동명 선박과 별도.",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 971089,
@@ -7350,7 +7440,7 @@
    "price": "",
    "type": "bus",
    "channels": {
-    "homepage": "https://www.sorafishing.com/index.php?mid=bk"
+    "homepage": "http://www.sorafishing.com/index.php?mid=bk"
    },
    "booking_names": [
     "리무진수도권출조 버스(김화열)",
@@ -7360,7 +7450,9 @@
    "catalog_sources": [
     "http://www.sorafishing.com/index.php?mid=bk"
    ],
-   "notes": "소라피싱 선박과 같은 예약표의 수도권 출조 버스. 승선 정원이 아닌 버스 잔여석."
+   "notes": "소라피싱 선박과 같은 예약표의 수도권 출조 버스. 승선 정원이 아닌 버스 잔여석.",
+   "catalog_checked_at": "2026-10-04T21:10:43.938212+09:00",
+   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
   },
   {
    "bid": 971090,
@@ -7495,5 +7587,5 @@
    "catalog_status": "booking_verified"
   }
  ],
- "updated_at": "2026-10-03T09:04:25+09:00"
+ "updated_at": "2026-10-04T21:10:43.938247+09:00"
 }

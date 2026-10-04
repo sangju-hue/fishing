@@ -165,7 +165,7 @@ def subdomain(url):
 def main():
     import argparse
     import concurrent.futures
-    from collect_homepages import Client, atomic_json, months
+    from collect_homepages import Client, atomic_json, months, resolve_boat_ids
     from homepage_engine import match_boat
     parser=argparse.ArgumentParser()
     parser.add_argument('--year',type=int)
@@ -179,6 +179,7 @@ def main():
     start,first,end=season_window(now,year)
     checked_at=now.isoformat(timespec='seconds')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
+    if args.boat_ids:args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
     groups={}
     for b in boats:
         if args.ports and b.get("port") not in args.ports:continue

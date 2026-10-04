@@ -14,7 +14,7 @@ import sys
 import time
 from collections import Counter
 from datetime import datetime, timezone, timedelta
-from collect_homepages import BASE, atomic_json, sites_from_catalog
+from collect_homepages import BASE, atomic_json, sites_from_catalog, resolve_boat_ids
 
 PRIORITY_GROUPS = (('무창포', '무창포'), ('오천항', '오천'), ('영흥도', '영흥'))
 SETTINGS = os.path.join(BASE, 'scrape_settings.json')
@@ -139,6 +139,7 @@ def slow(mode, started, groups):
 def by_range(mode, started, groups, start, end, ports=None, boat_ids=None):
     """지정 날짜 범위를 1회 수집. 선상24는 월 단위 응답이라 전체를 받고, 홈페이지는 범위만 수집한다."""
     failed = 0
+    if boat_ids:boat_ids = resolve_boat_ids(load_boats(), boat_ids)
     port_args = ['--ports', *ports] if ports else []
     if boat_ids:port_args += ['--boat-ids', *map(str,boat_ids)]
     if ports or boat_ids:

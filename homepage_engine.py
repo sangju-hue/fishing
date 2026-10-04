@@ -58,6 +58,7 @@ def match_boat(label, boats, aliases=None):
     # different boat whose name merely starts with the same characters.
     if '오전' not in raw and '오후' not in raw:
         raw = re.split(r'_|(?<=호)\s+(?=[가-힣A-Za-z])', raw)[0]
+    raw = re.split(r'\s+(?:0\d{1,2}[- ]\d{3,4}[- ]\d{4})(?!\d)', raw, maxsplit=1)[0]
     label = compact(raw)
     label = re.sub(r'^(?:\(신조선\)|신조선)','',label)
     aliases = aliases or {}
@@ -286,7 +287,12 @@ def parse_niabbs(html, boats, aliases, today, end):
             cell=cells[0]
             p=next(cell.walk('p'),None)
             if p and re.search('주꾸미|쭈꾸미|쭈갑|갑오징어|문어',p.text()):
-                current_boat=match_boat(p.text(),boats,aliases)
+                heading=p.text().strip()
+                period=re.match(r'^\s*(오전|오후)\s*',heading)
+                ship=re.sub(r'^\s*(?:먼바다\s*고속정|오전|오후|종일|고속정)\s*','',heading)
+                base=re.split(r'\(|\d{1,2}:\d{2}|쭈꾸미|주꾸미|갑오징어|문어',ship)[0].strip()
+                split_name=f'{base}({period.group(1)})' if period else ''
+                current_boat=split_name if split_name in boats else match_boat(base,boats,aliases)
             if current_boat and re.match(r'\s*정원\s*[:：]',cell.text()):
                 remaining=re.search(r'잔여\s*[:：]?\s*(\d+)',cell.text())
                 if remaining:
@@ -296,10 +302,10 @@ def parse_niabbs(html, boats, aliases, today, end):
         heading=cells[0].text().strip()
         if not re.search('주꾸미|쭈꾸미|쭈갑|갑오징어|문어',heading):continue
         period=re.match(r'^\s*(오전|오후)\s*',heading)
-        ship=re.sub(r'^\s*(?:오전|오후|종일|고속정)\s*','',heading)
+        ship=re.sub(r'^\s*(?:먼바다\s*고속정|오전|오후|종일|고속정)\s*','',heading)
         base=re.split(r'\(|\d{1,2}:\d{2}|쭈꾸미|주꾸미|갑오징어|문어',ship)[0].strip()
         split_name=f'{base}({period.group(1)})' if period else ''
-        boat=split_name if split_name in boats else match_boat(ship,boats,aliases)
+        boat=split_name if split_name in boats else match_boat(base,boats,aliases)
         remaining=re.search(r'잔여\s*(\d+)',cells[3].text())
         if boat and remaining:
             n=int(remaining.group(1));merge_trip(out,(boat,current.isoformat()),('available',n) if n else ('full',0))

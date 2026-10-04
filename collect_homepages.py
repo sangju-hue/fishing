@@ -48,6 +48,22 @@ def months(today,end):
         yield d
         d=(d.replace(day=28)+timedelta(days=4)).replace(day=1)
 
+def resolve_boat_ids(boats, ids):
+    """기존 알림의 통합 전 ID를 현재 대표 선박 ID로 연결한다."""
+    catalog = {b['bid']: b for b in boats}
+    resolved = set()
+    for bid in ids:
+        seen = set()
+        while bid in catalog and catalog[bid].get('canonical_bid') is not None:
+            if bid in seen:
+                raise ValueError('선박 통합 ID 순환 참조')
+            seen.add(bid)
+            bid = catalog[bid]['canonical_bid']
+        if bid not in catalog:
+            raise ValueError(f'등록되지 않은 선박 ID: {bid}')
+        resolved.add(bid)
+    return sorted(resolved)
+
 def sites_from_catalog(boats):
     out={}
     for b in boats:
@@ -230,6 +246,7 @@ def main():
     args=parser.parse_args()
     if not 1<=args.workers<=8:parser.error('--workers: 1~8')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
+    if args.boat_ids:args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
     sites=sites_from_catalog(boats)
     all_sites=sites.copy()
     if args.ports or args.boat_ids:sites=sites_from_catalog([b for b in boats if (not args.ports or b.get("port") in args.ports) and (not args.boat_ids or b["bid"] in args.boat_ids)])
