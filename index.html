@@ -953,15 +953,20 @@ async function initNtfy(){
       <p>정보 갱신: ${escapeHtml((plan.updated_at||"").replace("T"," ").slice(0,19))}</p>`;
   }
   function renderScraper(s){
+    const alertMonitoring=!s.settings_only&&!s.start_required&&(s.ntfy?.subscriptions||[]).some(r=>r.enabled&&r.date>=currentSeason().today);
+    const alertWaiting=!s.running&&s.paused&&!s.auto_range&&alertMonitoring;
+    const alertInterval=(s.ntfy?.check_minutes||5)*60;
+    const alertWait=s.next_alerts_in??(s.last_collection_kind==='alerts_auto'&&s.last_finished_at?Math.max(0,Math.ceil(alertInterval-(Date.now()-Date.parse(s.last_finished_at))/1000)):0);
+    const alertNext=alertWait>0?`다음 알림 수집 ${fmtWait(alertWait)} 후`:'알림 수집 시작 대기';
     const recordedKind=s.current_collection_kind||(s.current_mode==="range"?(s.auto_range?"range_repeat":"range_once"):null);
-    const method=s.running?(collectionKindName[recordedKind]||modeName[s.current_mode]||"수집"):s.pending_range?"범위 수집 1회 · 대기":s.manual_pending?"전체 1회 수집 · 대기":s.auto_range?"범위 수집 반복 · 대기":!s.paused?"전체 자동 수집 · 대기":s.last_collection_kind?`${collectionKindName[s.last_collection_kind]||"수집"} · 마지막 실행`:"수집 중지";
+    const method=s.running?(collectionKindName[recordedKind]||modeName[s.current_mode]||"수집"):s.pending_range?"범위 수집 1회 · 대기":s.manual_pending?"전체 1회 수집 · 대기":s.auto_range?"범위 수집 반복 · 대기":alertWaiting?"빈자리 알림 대상 수집 · 반복 대기":!s.paused?"전체 자동 수집 · 대기":s.last_collection_kind?`${collectionKindName[s.last_collection_kind]||"수집"} · 마지막 실행`:"수집 중지";
     $("#progressMethod").textContent=`수집 방식: ${method}`;
     const state=$("#scrapeState");
-    state.className="scrape-state"+(s.running?" running":s.paused?" paused":"");
-    state.textContent=s.running?"수집 중":s.auto_range?"범위 자동":s.paused?"중지됨":"켜짐";
+    state.className="scrape-state"+(s.running||alertMonitoring?" running":s.paused?" paused":"");
+    state.textContent=s.running?"수집 중":s.auto_range?"범위 자동":alertWaiting?"알림 대기":s.paused?"중지됨":"켜짐";
     let msg=s.running?`${method} 진행 중${s.progress?.step?` · ${s.progress.step}`:""} (시작 ${fmtTime(s.last_started_at)})`:"";
     if(s.running&&s.paused)msg+=" · 이 수집 후 일반 자동 수집은 중지 상태";
-    if(!s.running)msg=s.paused?"자동 수집 중지 상태":`다음 빠른 수집 ${fmtWait(s.next_fast_in)} 후 · 느린 수집 ${fmtWait(s.next_slow_in)} 후`;
+    if(!s.running)msg=alertWaiting?`빈자리 알림 자동 수집 켜짐 · ${alertNext} · 전체 자동 수집은 꺼짐`:s.paused?"자동 수집 중지 상태":`다음 빠른 수집 ${fmtWait(s.next_fast_in)} 후 · 느린 수집 ${fmtWait(s.next_slow_in)} 후`;
     if(s.manual_pending)msg+=" · 수동수집 대기 중";
     msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${({failed:' (수집 실패)',partial:' (일부 실패)',skipped:' (실행 보류)'})[s.last_result]||''}`;
     $("#scrapeSettingStatus").textContent=msg;
@@ -989,7 +994,7 @@ async function initNtfy(){
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     const isRange=s.current_mode==="range",range=isRange?s.active_range:null;
     $("#progressScope").textContent=s.running?(range?`범위: ${range[0]} ~ ${range[1]} · ${s.active_range_ports?.length?s.active_range_ports.join(", "):s.active_range_ports?"전체 항구":"항구 정보 확인 중"}`:`방식: ${modeName[s.current_mode]||"수집"}`):s.pending_range?`대기 범위: ${s.pending_range.join(" ~ ")}`:"";
-    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":s.last_finished_at?`마지막 수집 ${({failed:'실패',partial:'완료 · 일부 실패',skipped:'보류',ok:'완료'})[s.last_result]||'대기'}`:"수집 대기 중";
+    const step=s.running?(s.progress?.mode===s.current_mode?s.progress?.step:null)||"수집 준비 중":s.pending_range?"현재 수집이 끝나면 범위 수집을 시작합니다":alertWaiting?`${alertNext} · 완료 후 ${s.ntfy?.check_minutes||5}분 간격`:s.last_finished_at?`마지막 수집 ${({failed:'실패',partial:'완료 · 일부 실패',skipped:'보류',ok:'완료'})[s.last_result]||'대기'}`:"수집 대기 중";
     $("#progressStep").textContent=step;
     const elapsed=s.running&&s.last_started_at?Math.max(0,Math.floor((Date.now()-Date.parse(s.last_started_at))/1000)):null;
     $("#progressElapsed").textContent=elapsed!==null?`시작 ${fmtTime(s.last_started_at)} · 경과 ${fmtWait(elapsed)}`:s.last_finished_at?`완료 시각 ${fmtTime(s.last_finished_at)}`:"";
@@ -997,6 +1002,14 @@ async function initNtfy(){
     $("#collectionFloating").textContent=`${method} · ${step}${elapsed!==null?` · ${fmtWait(elapsed)}`:""}`;
     $("#collectionFloating").hidden=!isLocalHost||!progressRunning||progressVisible;
     document.dispatchEvent(new CustomEvent("bada:collector",{detail:{running:!!s.running,state:state.textContent,step,elapsed:$("#progressElapsed").textContent}}));
+    if(s.settings_only){
+      ["#scrapeResume","#scrapeRun","#rngRun","#rngAuto"].forEach(id=>$(id).disabled=true);
+      $("#scrapeState").textContent="강제 중지";
+      $("#progressMethod").textContent="수집 방식: 설정 확인 모드";
+      $("#progressStep").textContent="수집 중지 · 설정 조회·저장만 가능";
+      $("#scrapeSettingStatus").textContent="수집은 중지돼 있습니다. 저장된 설정을 확인하거나 변경할 수 있습니다.";
+    }
+    $("#cfgSave").disabled=false;
     renderNtfyAdmin(s.ntfy);
     renderPlan(s.plan);
   }
