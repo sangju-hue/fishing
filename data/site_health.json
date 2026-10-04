@@ -8122,7 +8122,6 @@
     "야무진2호",
     "야무진호",
     "오션투어호",
-    "팀베테랑호",
     "핏불호"
    ],
    "boat_ids": {
@@ -8130,12 +8129,9 @@
     "야무진2호": 141,
     "야무진호": 142,
     "오션투어호": 146,
-    "팀베테랑호": 163,
     "핏불호": 286
    },
-   "missing_boats": [
-    "팀베테랑호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -8689,6 +8685,6 @@
   "sites": 142,
   "entries": 5386,
   "collected_boats": 227,
-  "missing_boats": 18
+  "missing_boats": 17
  }
 }

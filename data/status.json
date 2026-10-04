@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-04T21:52:17+09:00",
+ "updated_at": "2026-10-04T21:59:34+09:00",
  "dates": {
   "2026-10-02": {
    "포인트호": {
@@ -1169,14 +1169,6 @@
     "source": "sunsang24",
     "source_url": "https://arirang.sunsang24.com/mypage/reservation_ready/1712628",
     "checked_at": "2026-10-03T22:30:02+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643919",
-    "checked_at": "2026-10-03T20:54:22+09:00"
    }
   },
   "2026-10-04": {
@@ -1198,14 +1190,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920417",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643920",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -1534,14 +1518,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846514",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643920",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -1873,6 +1849,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996471",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643920"
    }
   },
   "2026-10-05": {
@@ -1894,14 +1878,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920418",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "weather",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643921",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -2233,14 +2209,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846526",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "weather",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643921",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "weather",
     "remaining": 0,
@@ -2496,6 +2464,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996472",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "weather",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643921"
    }
   },
   "2026-10-06": {
@@ -2517,14 +2493,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920419",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643922",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -2857,14 +2825,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846513",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643922",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -3194,6 +3154,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996473",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643922"
    }
   },
   "2026-10-07": {
@@ -3215,14 +3183,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920420",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643923",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -3551,14 +3511,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846529",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643923",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -3890,6 +3842,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996474",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643923"
    }
   },
   "2026-10-08": {
@@ -3911,14 +3871,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920421",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 2,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643924",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -4252,14 +4204,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846684",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 2,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643924",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -4589,6 +4533,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996475",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 2,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643924"
    }
   },
   "2026-10-09": {
@@ -4604,14 +4556,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920422",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643925",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -4945,14 +4889,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846496",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643925",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -5282,6 +5218,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996476",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643925"
    }
   },
   "2026-10-10": {
@@ -5297,14 +5241,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920423",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643926",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -5637,14 +5573,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846512",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643926",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -5974,6 +5902,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996477",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643926"
    }
   },
   "2026-10-11": {
@@ -5989,14 +5925,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920424",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 3,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643927",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -6330,14 +6258,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846685",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 1,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643927",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -6667,6 +6587,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996478",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 1,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643927"
    }
   },
   "2026-10-12": {
@@ -6690,14 +6618,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920425",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643928",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -7033,14 +6953,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846686",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643928",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 3,
@@ -7359,6 +7271,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996479",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 16,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643928"
    }
   },
   "2026-10-13": {
@@ -7382,14 +7302,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920426",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643929",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -7723,14 +7635,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846687",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643929",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 15,
@@ -8039,6 +7943,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996480",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643929"
    }
   },
   "2026-10-14": {
@@ -8062,14 +7974,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920427",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643930",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -8406,14 +8310,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846688",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643930",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 18,
@@ -8740,6 +8636,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996481",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 17,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643930"
    }
   },
   "2026-10-15": {
@@ -8763,14 +8667,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920428",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643931",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -9104,14 +9000,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846689",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643931",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -9435,6 +9323,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996482",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 16,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643931"
    }
   },
   "2026-10-16": {
@@ -9458,14 +9354,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920429",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643932",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -9801,14 +9689,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846690",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643932",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -10138,6 +10018,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996483",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643932"
    }
   },
   "2026-10-17": {
@@ -10153,14 +10041,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920430",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643933",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -10493,14 +10373,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846495",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643933",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -10830,6 +10702,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996484",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643933"
    }
   },
   "2026-10-18": {
@@ -10845,14 +10725,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920431",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643934",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -11185,14 +11057,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846511",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643934",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -11522,6 +11386,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996485",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643934"
    }
   },
   "2026-10-19": {
@@ -11545,14 +11417,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920432",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643935",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -11886,14 +11750,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846691",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643935",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -12215,6 +12071,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996486",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643935"
    }
   },
   "2026-10-20": {
@@ -12238,14 +12102,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920433",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643936",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -12579,14 +12435,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846510",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643936",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -12908,6 +12756,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996487",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643936"
    }
   },
   "2026-10-21": {
@@ -12931,14 +12787,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920434",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643937",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -13271,14 +13119,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846692",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643937",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -13609,6 +13449,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996488",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643937"
    }
   },
   "2026-10-22": {
@@ -13632,14 +13480,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920435",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 8,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643938",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -13972,14 +13812,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846509",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 8,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643938",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -14302,6 +14134,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996489",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 8,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643938"
    }
   },
   "2026-10-23": {
@@ -14325,14 +14165,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920436",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643939",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -14663,14 +14495,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846693",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643939",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -15004,6 +14828,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996490",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643939"
    }
   },
   "2026-10-24": {
@@ -15019,14 +14851,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920437",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643940",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -15360,14 +15184,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846528",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643940",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -15698,6 +15514,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996491",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643940"
    }
   },
   "2026-10-25": {
@@ -15713,14 +15537,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920438",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 11,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643941",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -16056,14 +15872,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846694",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 11,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643941",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -16396,6 +16204,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996492",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 11,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643941"
    }
   },
   "2026-10-26": {
@@ -16419,14 +16235,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920439",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643942",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -16762,14 +16570,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846695",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643942",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 18,
@@ -17085,6 +16885,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996493",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643942"
    }
   },
   "2026-10-27": {
@@ -17108,14 +16916,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920440",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643943",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -17452,14 +17252,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846508",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643943",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 20,
@@ -17776,6 +17568,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996494",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643943"
    }
   },
   "2026-10-28": {
@@ -17799,14 +17599,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920441",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643944",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -18145,14 +17937,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846696",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643944",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 20,
@@ -18468,6 +18252,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996495",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643944"
    }
   },
   "2026-10-29": {
@@ -18491,14 +18283,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920442",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643945",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -18834,14 +18618,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846697",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643945",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 20,
@@ -19158,6 +18934,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996496",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643945"
    }
   },
   "2026-10-30": {
@@ -19181,14 +18965,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920443",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643946",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -19521,14 +19297,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846698",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643946",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 12,
@@ -19852,6 +19620,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996497",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643946"
    }
   },
   "2026-10-31": {
@@ -19867,14 +19643,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920444",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 1,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643947",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -20210,14 +19978,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846507",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 1,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643947",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -20547,6 +20307,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996498",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 1,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643947"
    }
   },
   "2026-11-01": {
@@ -20564,14 +20332,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920445",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 6,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643948",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -20900,14 +20660,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846699",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 6,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643948",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -21229,6 +20981,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051929",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 6,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643948"
    }
   },
   "2026-11-02": {
@@ -21246,14 +21006,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920446",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643949",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -21577,14 +21329,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846506",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643949",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -21890,6 +21634,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051930",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 17,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643949"
    }
   },
   "2026-11-03": {
@@ -21907,14 +21659,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920447",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643950",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -22230,14 +21974,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846700",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643950",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -22543,6 +22279,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051931",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643950"
    }
   },
   "2026-11-04": {
@@ -22560,14 +22304,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920448",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643951",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -22880,14 +22616,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846701",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643951",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -23203,6 +22931,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051932",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643951"
    }
   },
   "2026-11-05": {
@@ -23220,14 +22956,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920449",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643952",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -23542,14 +23270,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846702",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643952",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 20,
@@ -23855,6 +23575,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051933",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643952"
    }
   },
   "2026-11-06": {
@@ -23872,14 +23600,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920450",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643953",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -24194,14 +23914,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846505",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643953",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -24507,6 +24219,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051934",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643953"
    }
   },
   "2026-11-07": {
@@ -24516,14 +24236,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920451",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643954",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -24846,14 +24558,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846703",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643954",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -25167,6 +24871,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1799951",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643954"
    }
   },
   "2026-11-08": {
@@ -25184,14 +24896,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920452",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643955",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -25504,14 +25208,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846504",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643955",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -25827,6 +25523,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051935",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643955"
    }
   },
   "2026-11-09": {
@@ -25844,14 +25548,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920453",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643956",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -26166,14 +25862,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846704",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643956",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -26471,6 +26159,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051936",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643956"
    }
   },
   "2026-11-10": {
@@ -26488,14 +26184,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920454",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643957",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -26810,14 +26498,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846705",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643957",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -27115,6 +26795,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051937",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643957"
    }
   },
   "2026-11-11": {
@@ -27132,14 +26820,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920455",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643958",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -27453,14 +27133,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846706",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643958",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -27767,6 +27439,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051938",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643958"
    }
   },
   "2026-11-12": {
@@ -27784,14 +27464,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920456",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643959",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -28105,14 +27777,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846707",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643959",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -28419,6 +28083,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051939",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643959"
    }
   },
   "2026-11-13": {
@@ -28436,14 +28108,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920457",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643960",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -28757,14 +28421,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846503",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643960",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 19,
@@ -29071,6 +28727,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051940",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643960"
    }
   },
   "2026-11-14": {
@@ -29094,14 +28758,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920458",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643961",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -29414,14 +29070,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846708",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643961",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -29738,6 +29386,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1946636",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643961"
    }
   },
   "2026-11-15": {
@@ -29755,14 +29411,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920459",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643962",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -30078,14 +29726,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846709",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643962",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 13,
@@ -30392,6 +30032,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051941",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643962"
    }
   },
   "2026-11-16": {
@@ -30409,14 +30057,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920460",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643963",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -30733,14 +30373,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846710",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643963",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -31048,6 +30680,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051942",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643963"
    }
   },
   "2026-11-17": {
@@ -31065,14 +30705,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920461",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643964",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -31389,14 +31021,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846711",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643964",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -31702,6 +31326,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051943",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643964"
    }
   },
   "2026-11-18": {
@@ -31719,14 +31351,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920462",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643965",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -32042,14 +31666,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846712",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643965",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -32363,6 +31979,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051944",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643965"
    }
   },
   "2026-11-19": {
@@ -32380,14 +32004,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920463",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643966",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -32703,14 +32319,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846713",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643966",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -33016,6 +32624,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051945",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643966"
    }
   },
   "2026-11-20": {
@@ -33033,14 +32649,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920464",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643967",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -33357,14 +32965,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846502",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643967",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -33670,6 +33270,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051946",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643967"
    }
   },
   "2026-11-21": {
@@ -33687,14 +33295,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920465",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643968",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -34014,14 +33614,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846714",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643968",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "full",
     "remaining": 0,
@@ -34335,6 +33927,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1946638",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643968"
    }
   },
   "2026-11-22": {
@@ -34352,14 +33952,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920466",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643969",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -34677,14 +34269,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846501",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643969",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -34991,6 +34575,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051947",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643969"
    }
   },
   "2026-11-23": {
@@ -35008,14 +34600,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920467",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643970",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -35311,14 +34895,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846715",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643970",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -35627,6 +35203,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051948",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643970"
    }
   },
   "2026-11-24": {
@@ -35644,14 +35228,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920468",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643971",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -35959,14 +35535,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846716",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643971",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -36265,6 +35833,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051949",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643971"
    }
   },
   "2026-11-25": {
@@ -36282,14 +35858,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920469",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643972",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -36597,14 +36165,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846717",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643972",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -36903,6 +36463,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051950",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643972"
    }
   },
   "2026-11-26": {
@@ -36920,14 +36488,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920470",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643973",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -37235,14 +36795,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846718",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643973",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -37541,6 +37093,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051951",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643973"
    }
   },
   "2026-11-27": {
@@ -37558,14 +37118,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920471",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643974",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -37873,14 +37425,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846719",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643974",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "맥가이버호": {
     "status": "available",
     "remaining": 21,
@@ -38179,6 +37723,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051952",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643974"
    }
   },
   "2026-11-28": {
@@ -38196,14 +37748,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920472",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643975",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -38509,14 +38053,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846720",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643975",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -38825,6 +38361,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051953",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643975"
    }
   },
   "2026-11-29": {
@@ -38842,14 +38386,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920473",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643976",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -39155,14 +38691,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846721",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643976",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -39473,6 +39001,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051954",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643976"
    }
   },
   "2026-11-30": {
@@ -39490,14 +39026,6 @@
     "boat_id": 154,
     "source": "sunsang24",
     "source_url": "https://jangbogo.sunsang24.com/mypage/reservation_ready/1920474",
-    "checked_at": "2026-10-04T16:18:42+09:00"
-   },
-   "홍원항 팀베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643977",
     "checked_at": "2026-10-04T16:18:42+09:00"
    },
    "아리랑2호": {
@@ -39803,14 +39331,6 @@
     "boat_id": 404,
     "source": "sunsang24",
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846722",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
-   "홍원항 베테랑호": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643977",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
    "맥가이버호": {
@@ -40119,6 +39639,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051955",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "팀베테랑호": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643977"
    }
   }
  },
@@ -40928,14 +40456,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846515",
     "checked_at": "2026-10-03T20:54:22+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643919",
-    "checked_at": "2026-10-03T20:54:22+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -41636,14 +41156,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846514",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643920",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -41973,6 +41485,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996471",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643920"
    }
   },
   "2026-10-05": {
@@ -42313,14 +41833,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846526",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "weather",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643921",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "weather",
     "remaining": 0,
@@ -42576,6 +42088,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996472",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "weather",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643921"
    }
   },
   "2026-10-06": {
@@ -42917,14 +42437,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846513",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643922",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -43254,6 +42766,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996473",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643922"
    }
   },
   "2026-10-07": {
@@ -43593,14 +43113,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846529",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643923",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -43930,6 +43442,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996474",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643923"
    }
   },
   "2026-10-08": {
@@ -44272,14 +43792,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846684",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 2,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643924",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -44609,6 +44121,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996475",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 2,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643924"
    }
   },
   "2026-10-09": {
@@ -44951,14 +44471,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846496",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643925",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -45288,6 +44800,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996476",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643925"
    }
   },
   "2026-10-10": {
@@ -45629,14 +45149,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846512",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643926",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -45966,6 +45478,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996477",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643926"
    }
   },
   "2026-10-11": {
@@ -46308,14 +45828,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846685",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 1,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643927",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -46645,6 +46157,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996478",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 1,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643927"
    }
   },
   "2026-10-12": {
@@ -46997,14 +46517,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846686",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643928",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 3,
@@ -47323,6 +46835,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996479",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 16,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643928"
    }
   },
   "2026-10-13": {
@@ -47673,14 +47193,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846687",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643929",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 15,
@@ -47989,6 +47501,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996480",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643929"
    }
   },
   "2026-10-14": {
@@ -48342,14 +47862,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846688",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643930",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 18,
@@ -48676,6 +48188,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996481",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 17,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643930"
    }
   },
   "2026-10-15": {
@@ -49026,14 +48546,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846689",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 16,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643931",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -49357,6 +48869,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996482",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 16,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643931"
    }
   },
   "2026-10-16": {
@@ -49709,14 +49229,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846690",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643932",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -50046,6 +49558,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996483",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643932"
    }
   },
   "2026-10-17": {
@@ -50387,14 +49907,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846495",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643933",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -50724,6 +50236,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996484",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643933"
    }
   },
   "2026-10-18": {
@@ -51065,14 +50585,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846511",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643934",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -51402,6 +50914,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996485",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643934"
    }
   },
   "2026-10-19": {
@@ -51752,14 +51272,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846691",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643935",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -52081,6 +51593,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996486",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643935"
    }
   },
   "2026-10-20": {
@@ -52431,14 +51951,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846510",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643936",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -52760,6 +52272,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996487",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643936"
    }
   },
   "2026-10-21": {
@@ -53109,14 +52629,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846692",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643937",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -53447,6 +52959,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996488",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643937"
    }
   },
   "2026-10-22": {
@@ -53796,14 +53316,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846509",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 8,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643938",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -54126,6 +53638,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996489",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 8,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643938"
    }
   },
   "2026-10-23": {
@@ -54475,14 +53995,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846693",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643939",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -54814,6 +54326,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996490",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643939"
    }
   },
   "2026-10-24": {
@@ -55156,14 +54676,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846528",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "full",
-    "remaining": 0,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643940",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -55494,6 +55006,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996491",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "full",
+    "remaining": 0,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643940"
    }
   },
   "2026-10-25": {
@@ -55838,14 +55358,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846694",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 11,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643941",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -56178,6 +55690,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996492",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 11,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643941"
    }
   },
   "2026-10-26": {
@@ -56530,14 +56050,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846695",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643942",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 18,
@@ -56853,6 +56365,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996493",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643942"
    }
   },
   "2026-10-27": {
@@ -57206,14 +56726,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846508",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643943",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 20,
@@ -57530,6 +57042,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996494",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643943"
    }
   },
   "2026-10-28": {
@@ -57885,14 +57405,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846696",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643944",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 20,
@@ -58208,6 +57720,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996495",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643944"
    }
   },
   "2026-10-29": {
@@ -58560,14 +58080,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846697",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643945",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 20,
@@ -58884,6 +58396,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996496",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643945"
    }
   },
   "2026-10-30": {
@@ -59233,14 +58753,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846698",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643946",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 12,
@@ -59564,6 +59076,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996497",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643946"
    }
   },
   "2026-10-31": {
@@ -59908,14 +59428,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846507",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 1,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643947",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -60245,6 +59757,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1996498",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 1,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643947"
    }
   },
   "2026-11-01": {
@@ -60590,14 +60110,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846699",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 6,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643948",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -60919,6 +60431,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051929",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 6,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643948"
    }
   },
   "2026-11-02": {
@@ -61259,14 +60779,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846506",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 17,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643949",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -61572,6 +61084,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051930",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 17,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643949"
    }
   },
   "2026-11-03": {
@@ -61904,14 +61424,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846700",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643950",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -62217,6 +61729,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051931",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643950"
    }
   },
   "2026-11-04": {
@@ -62548,14 +62068,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846701",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643951",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -62869,6 +62381,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051932",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643951"
    }
   },
   "2026-11-05": {
@@ -63200,14 +62720,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846702",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643952",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 20,
@@ -63513,6 +63025,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051933",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643952"
    }
   },
   "2026-11-06": {
@@ -63844,14 +63364,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846505",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643953",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -64157,6 +63669,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051934",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643953"
    }
   },
   "2026-11-07": {
@@ -64488,14 +64008,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846703",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 5,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643954",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -64809,6 +64321,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1799951",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 5,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643954"
    }
   },
   "2026-11-08": {
@@ -65140,14 +64660,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846504",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 18,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643955",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -65461,6 +64973,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051935",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 18,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643955"
    }
   },
   "2026-11-09": {
@@ -65792,14 +65312,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846704",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643956",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -66097,6 +65609,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051936",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643956"
    }
   },
   "2026-11-10": {
@@ -66428,14 +65948,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846705",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643957",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -66733,6 +66245,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051937",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643957"
    }
   },
   "2026-11-11": {
@@ -67063,14 +66583,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846706",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643958",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -67377,6 +66889,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051938",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643958"
    }
   },
   "2026-11-12": {
@@ -67707,14 +67227,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846707",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643959",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -68021,6 +67533,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051939",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643959"
    }
   },
   "2026-11-13": {
@@ -68351,14 +67871,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846503",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643960",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 19,
@@ -68665,6 +68177,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051940",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643960"
    }
   },
   "2026-11-14": {
@@ -68996,14 +68516,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846708",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643961",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -69318,6 +68830,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1946636",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643961"
    }
   },
   "2026-11-15": {
@@ -69650,14 +69170,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846709",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643962",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 13,
@@ -69964,6 +69476,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051941",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643962"
    }
   },
   "2026-11-16": {
@@ -70297,14 +69817,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846710",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643963",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -70612,6 +70124,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051942",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643963"
    }
   },
   "2026-11-17": {
@@ -70945,14 +70465,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846711",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643964",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -71258,6 +70770,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051943",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643964"
    }
   },
   "2026-11-18": {
@@ -71590,14 +71110,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846712",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643965",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -71911,6 +71423,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051944",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643965"
    }
   },
   "2026-11-19": {
@@ -72243,14 +71763,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846713",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643966",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -72556,6 +72068,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051945",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643966"
    }
   },
   "2026-11-20": {
@@ -72889,14 +72409,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846502",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 19,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643967",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -73202,6 +72714,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051946",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 19,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643967"
    }
   },
   "2026-11-21": {
@@ -73538,14 +73058,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846714",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643968",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "full",
     "remaining": 0,
@@ -73859,6 +73371,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/1946638",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643968"
    }
   },
   "2026-11-22": {
@@ -74193,14 +73713,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846501",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643969",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -74507,6 +74019,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051947",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643969"
    }
   },
   "2026-11-23": {
@@ -74821,14 +74341,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846715",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643970",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -75135,6 +74647,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051948",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643970"
    }
   },
   "2026-11-24": {
@@ -75459,14 +74979,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846716",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643971",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -75765,6 +75277,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051949",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643971"
    }
   },
   "2026-11-25": {
@@ -76089,14 +75609,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846717",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643972",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -76395,6 +75907,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051950",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643972"
    }
   },
   "2026-11-26": {
@@ -76719,14 +76239,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846718",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643973",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -77025,6 +76537,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051951",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643973"
    }
   },
   "2026-11-27": {
@@ -77349,14 +76869,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846719",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643974",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -77655,6 +77167,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051952",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643974"
    }
   },
   "2026-11-28": {
@@ -77979,14 +77499,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846720",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643975",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -78293,6 +77805,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051953",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643975"
    }
   },
   "2026-11-29": {
@@ -78617,14 +78137,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846721",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643976",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -78933,6 +78445,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051954",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643976"
    }
   },
   "2026-11-30": {
@@ -79257,14 +78777,6 @@
     "source_url": "https://wonjofishing.sunsang24.com/mypage/reservation_ready/1846722",
     "checked_at": "2026-10-04T21:52:17+09:00"
    },
-   "188": {
-    "status": "available",
-    "remaining": 20,
-    "boat_id": 188,
-    "source": "sunsang24",
-    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643977",
-    "checked_at": "2026-10-04T21:52:17+09:00"
-   },
    "206": {
     "status": "available",
     "remaining": 21,
@@ -79571,6 +79083,14 @@
     "source": "sunsang24",
     "source_url": "https://ariul.sunsang24.com/mypage/reservation_ready/2051955",
     "checked_at": "2026-10-04T21:52:17+09:00"
+   },
+   "163": {
+    "status": "available",
+    "remaining": 20,
+    "boat_id": 163,
+    "source": "sunsang24",
+    "checked_at": "2026-10-04T21:59:34+09:00",
+    "source_url": "https://teamveteran.sunsang24.com/mypage/reservation_ready/1643977"
    }
   }
  },

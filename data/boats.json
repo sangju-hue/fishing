@@ -2188,17 +2188,22 @@
   {
    "bid": 163,
    "name": "팀베테랑호",
-   "operator": "야무진피싱",
-   "region": "충남 보령시",
-   "port": "오천항",
+   "operator": "홍원항 팀베테랑호",
+   "region": "충남 서천군",
+   "port": "홍원항",
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "http://www.yamujinfishing.com/index.php?mid=bk"
+    "homepage": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
+    "sunsang24": "https://teamveteran.sunsang24.com/ship/schedule_fleet"
    },
-   "notes": "[야무진호·야무진2호·바다용사호·오션투어호·럭셔리호·루키호·팀베테랑호] 광어다운샷·우럭·문어·백조기 (야무진피싱, 대형 선단). 2023년 선사 목록 기준",
-   "catalog_checked_at": "2026-10-04T21:10:43.937482+09:00",
-   "catalog_correction": "TLS 도메인 불일치 주소를 직접 접속 확인한 HTTP 주소로 변경(선박 신원 판정과 별개)"
+   "notes": "사용자 확인: 홍원항 팀베테랑호, 공식 선상24 예약표 연결.",
+   "catalog_checked_at": "2026-10-04T21:59:34.645279+09:00",
+   "catalog_correction": "사용자 확인으로 홍원항/팀베테랑 공식 주소 반영",
+   "booking_names": [
+    "팀베테랑호",
+    "홍원항 베테랑호"
+   ]
   },
   {
    "bid": 164,
@@ -2624,12 +2629,13 @@
   {
    "bid": 188,
    "name": "홍원항 베테랑호",
-   "operator": null,
+   "operator": "홍원항 팀베테랑호",
    "region": "충남 서천군",
    "port": "홍원항",
    "price": "",
    "capacity": null,
    "channels": {
+    "homepage": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
     "sunsang24": "https://teamveteran.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "미확인 — 네이버 블로그 탑승 후기(2025.10, 쭈꾸미 조황)만 확인. 예약 채널·요금·전화번호 미확인",
@@ -2639,7 +2645,9 @@
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
     "https://teamveteran.sunsang24.com/ship/schedule_fleet"
-   ]
+   ],
+   "canonical_bid": 163,
+   "catalog_correction": "동일 팀베테랑 예약주소 중복 항목을 ID163에 통합"
   },
   {
    "bid": 189,
@@ -7153,5 +7161,5 @@
    "catalog_status": "booking_verified"
   }
  ],
- "updated_at": "2026-10-04T21:56:19+09:00"
+ "updated_at": "2026-10-04T22:00:03+09:00"
 }

@@ -740,24 +740,15 @@
   },
   "teamveteran": {
    "status": "ok",
-   "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
    "entries": 58,
+   "url": "https://teamveteran.sunsang24.com/ship/schedule_fleet",
    "boats": [
-    "홍원항 베테랑호"
+    "팀베테랑호"
    ],
    "boat_ids": {
-    "홍원항 베테랑호": 188
+    "팀베테랑호": 163
    },
    "missing_boats": [],
-   "observed_ship_labels": [
-    "팀베테랑호"
-   ],
-   "all_ship_labels": [
-    "팀베테랑호"
-   ],
-   "selectable_ship_labels": [],
-   "excluded_fish": {},
-   "capacity_rejected": [],
    "errors": []
   },
   "macgyver": {

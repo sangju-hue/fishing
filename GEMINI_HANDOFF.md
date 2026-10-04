@@ -663,3 +663,9 @@ python3 scrape_sunsang24.py --help
 - 실제 별도 등록 배들은 유지. 특히 오드리호416 삭제와 오드리피싱1은 별개.
 - diagnostics/booking_repairs_2026-10-04/delete_requested.py 실행: 명부 삭제 완료, 수집 잠금 확보 후 두 status/두 health 데이터 정리. 삭제 원본은 requested_deletions/deleted_boats_backup.json 로컬 보존, 공개 금지.
 - 16개 삭제 후 예약 상태2개/건강도2개 정리 완료. 명부, canonical 참조, by_boat_id, dates.boat_id, 건강도 boat_ids에 삭제ID가 남지 않았음을 확인.
+
+## 2026-10-04 팀베테랑호 홍원항 확인
+- 사용자가 teamveteran.sunsang24.com/ship/schedule_fleet를 지정하고 홍원항임을 확인. ID163 팀베테랑호의 항구 홍원항/지역 충남서천군/선사 홍원항팀베테랑/홈페이지+선상24 채널을 수정.
+- 기존 ID188 홍원항베테랑호가 같은 예약주소의 중복이므로 canonical_bid=163 통합. 무창포 베테랑호90은 별개로 유지.
+- 공식 페이지 제목 홍원항팀베테랑호, 예약명 팀베테랑호 일치 확인. 전용 수집/병합 diagnostics/booking_repairs_2026-10-04/teamveteran_collect.py.
+- 팀베테랑10/4~11/30 58일 실제 수집·반영 완료, status의 대표ID163으로 저장, 중복ID188 상태 제거. 기존188 구독은 canonical163으로 연결. 상태58일/항구/중복 검증 완료.
