@@ -273,7 +273,7 @@ function statusInfo(boat,date=selectedDate){
   };
   if(row[0]==="f")return {cls:"full",short:isOctopus?"문어(마감)":"마감",text:isOctopus?"🐙 문어 마감":"🔴 마감"};
   if(row[0]==="w")return {cls:"maintenance",short:"기상",text:"⚫ 기상악화"};
-  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:boat.booking_notice?`⚫ ${boat.booking_notice}`:"⚫ 점검"};
+  if(row[0]==="m")return {cls:"maintenance",short:"점검",text:"⚫ 점검"};
   return {cls:"cancelled",short:"취소",text:"⚫ 출항취소"};
 }
 const PORT_ALIASES=[

@@ -432,3 +432,6 @@ python3 scrape_sunsang24.py --help
 - **예약 공지사항(뉴홀랜드호 등) 가로 스크롤 시 화면 고정 (index.html)**:
   - `booking-notice`에 `position: sticky; left: 246px;` 스타일을 적용하여 10월, 11월 어떤 날짜 위치로 가로 스크롤하더라도 공지 뱃지가 화면에 항상 보이도록 개선.
   - 하단 상세 카드에서도 `booking_notice` 문구가 상세 노출되도록 연동.
+
+- **상세 카드 점검 라벨 원복 (index.html)**:
+  - `statusInfo` 함수 내부에서 `boat.booking_notice` 참조에 따른 성능 저하(렌더링 지연) 이슈를 해결하기 위해, 상세 카드 상태 텍스트를 원래의 가벼운 `⚫ 점검`으로 원복. 테이블 내 공지사항의 sticky 고정 표시 기능은 유지.
