@@ -1902,16 +1902,12 @@
    "url": "http://www.boryeongharbor.com/",
    "entries": 14,
    "boats": [
-    "뉴마린스타호",
-    "마린스타1호"
+    "뉴마린스타호"
    ],
    "boat_ids": {
-    "뉴마린스타호": 108,
-    "마린스타1호": 122
+    "뉴마린스타호": 108
    },
-   "missing_boats": [
-    "마린스타1호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -1986,18 +1982,15 @@
    "entries": 0,
    "boats": [
     "뉴일복호",
-    "반도피싱호",
-    "일복호"
+    "반도피싱호"
    ],
    "boat_ids": {
     "뉴일복호": 110,
-    "반도피싱호": 127,
-    "일복호": 153
+    "반도피싱호": 127
    },
    "missing_boats": [
     "뉴일복호",
-    "반도피싱호",
-    "일복호"
+    "반도피싱호"
    ],
    "deferred_boats": [],
    "boat_notices": {},
@@ -2243,19 +2236,16 @@
    "boats": [
     "굿모닝호",
     "뉴스카이호",
-    "랜드마크호",
     "어게인호"
    ],
    "boat_ids": {
     "굿모닝호": 98,
     "뉴스카이호": 109,
-    "랜드마크호": 118,
     "어게인호": 328
    },
    "missing_boats": [
     "굿모닝호",
-    "뉴스카이호",
-    "랜드마크호"
+    "뉴스카이호"
    ],
    "deferred_boats": [],
    "boat_notices": {},
@@ -2876,17 +2866,14 @@
    "url": "https://www.nfishing.net/index.php?mid=bk",
    "entries": 14,
    "boats": [
-    "씨월드호",
     "첼린저호",
     "캡틴호"
    ],
    "boat_ids": {
-    "씨월드호": 139,
     "첼린저호": 157,
     "캡틴호": 158
    },
    "missing_boats": [
-    "씨월드호",
     "캡틴호"
    ],
    "deferred_boats": [],
@@ -3067,16 +3054,12 @@
    "url": "https://thefishing.kr/reservation/list.php?uid=3346",
    "entries": 8,
    "boats": [
-    "영석호",
-    "바다목장호"
+    "영석호"
    ],
    "boat_ids": {
-    "영석호": 323,
-    "바다목장호": 326
+    "영석호": 323
    },
-   "missing_boats": [
-    "바다목장호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -3139,17 +3122,14 @@
    "entries": 14,
    "boats": [
     "대물호",
-    "위더스호",
     "팀대물호"
    ],
    "boat_ids": {
     "대물호": 112,
-    "위더스호": 150,
     "팀대물호": 338
    },
    "missing_boats": [
-    "대물호",
-    "위더스호"
+    "대물호"
    ],
    "deferred_boats": [],
    "boat_notices": {},
@@ -3203,16 +3183,12 @@
    "url": "http://www.kingdomfish.net",
    "entries": 14,
    "boats": [
-    "코리아호",
     "킹덤호"
    ],
    "boat_ids": {
-    "코리아호": 159,
     "킹덤호": 160
    },
-   "missing_boats": [
-    "코리아호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -3467,16 +3443,12 @@
    "url": "http://hanprofishing.com",
    "entries": 14,
    "boats": [
-    "한프로2호",
     "한프로호"
    ],
    "boat_ids": {
-    "한프로2호": 168,
     "한프로호": 169
    },
-   "missing_boats": [
-    "한프로2호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -6080,16 +6052,12 @@
    "url": "http://www.taeyeongnaksi.co.kr/index.php?mid=bk",
    "entries": 14,
    "boats": [
-    "21금강호",
-    "20금강호"
+    "21금강호"
    ],
    "boat_ids": {
-    "21금강호": 263,
-    "20금강호": 307
+    "21금강호": 263
    },
-   "missing_boats": [
-    "20금강호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -7137,31 +7105,6 @@
     "https://www.lightho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=765&sel=day#list",
     "https://www.lightho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=765&sel=day#list"
    ],
-   "errors": []
-  },
-  "xn--oy2bo3o8ybmwrcnh.kr": {
-   "status": "no_data",
-   "url": "http://xn--oy2bo3o8ybmwrcnh.kr/",
-   "entries": 0,
-   "boats": [
-    "시실리2호"
-   ],
-   "boat_ids": {
-    "시실리2호": 330
-   },
-   "missing_boats": [
-    "시실리2호"
-   ],
-   "deferred_boats": [],
-   "boat_notices": {},
-   "date_notices": {},
-   "observed_ship_labels": [
-    "★공지사항☆",
-    "썬가드호",
-    "어게인호(스피드선장)"
-   ],
-   "pages_checked": 5,
-   "booking_urls": [],
    "errors": []
   },
   "aceho.thefishing.kr": {
@@ -8387,9 +8330,9 @@
   }
  },
  "summary": {
-  "sites": 140,
+  "sites": 139,
   "entries": 5013,
   "collected_boats": 219,
-  "missing_boats": 46
+  "missing_boats": 36
  }
 }

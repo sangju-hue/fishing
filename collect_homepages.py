@@ -53,6 +53,9 @@ def resolve_boat_ids(boats, ids):
     catalog = {b['bid']: b for b in boats}
     resolved = set()
     for bid in ids:
+        # 삭제 전 신청 내역이 남아 있어도 다른 배의 수집은 계속한다.
+        if bid not in catalog:
+            continue
         seen = set()
         while bid in catalog and catalog[bid].get('canonical_bid') is not None:
             if bid in seen:
@@ -246,7 +249,11 @@ def main():
     args=parser.parse_args()
     if not 1<=args.workers<=8:parser.error('--workers: 1~8')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
-    if args.boat_ids:args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
+    if args.boat_ids:
+        args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
+        if not args.boat_ids:
+            print("수집 대상 선박이 모두 삭제되어 건너뜁니다.")
+            return
     sites=sites_from_catalog(boats)
     all_sites=sites.copy()
     if args.ports or args.boat_ids:sites=sites_from_catalog([b for b in boats if (not args.ports or b.get("port") in args.ports) and (not args.boat_ids or b["bid"] in args.boat_ids)])

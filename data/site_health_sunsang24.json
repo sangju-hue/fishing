@@ -359,15 +359,12 @@
    "url": "https://fishingfin.sunsang24.com/ship/schedule_fleet",
    "entries": 0,
    "boats": [
-    "돈지호",
     "해성호"
    ],
    "boat_ids": {
-    "돈지호": 45,
     "해성호": 49
    },
    "missing_boats": [
-    "돈지호",
     "해성호"
    ],
    "observed_ship_labels": [],

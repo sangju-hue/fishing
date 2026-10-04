@@ -179,7 +179,11 @@ def main():
     start,first,end=season_window(now,year)
     checked_at=now.isoformat(timespec='seconds')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
-    if args.boat_ids:args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
+    if args.boat_ids:
+        args.boat_ids=resolve_boat_ids(boats,args.boat_ids)
+        if not args.boat_ids:
+            print("수집 대상 선박이 모두 삭제되어 건너뜁니다.")
+            return
     groups={}
     for b in boats:
         if args.ports and b.get("port") not in args.ports:continue

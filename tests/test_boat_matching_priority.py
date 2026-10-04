@@ -27,6 +27,10 @@ class CanonicalSelection(unittest.TestCase):
         ids=resolve_boat_ids(boats,[1,2])
         self.assertEqual(ids,[2])
         self.assertEqual(sites_from_catalog([b for b in boats if b['bid'] in ids])['example.com']['boats'],['현재호'])
+    def test_deleted_subscription_does_not_block_remaining_boats(self):
+        from collect_homepages import resolve_boat_ids
+        self.assertEqual(resolve_boat_ids([{'bid':2}],[1,2]),[2])
+
     def test_invalid_merge_fails_explicitly(self):
         from collect_homepages import resolve_boat_ids
         with self.assertRaises(ValueError):resolve_boat_ids([{'bid':1,'canonical_bid':1}],[1])
@@ -39,3 +43,11 @@ class NiabbsHeading(unittest.TestCase):
         for title,name in [('종일 하나호 04:30~16:00 쭈꾸미/갑오징어','하나호'),('먼바다 고속정 부킹호 04:00~17:00 갑오징어','부킹호'),('오전 해피호 06:30~11:20 쭈꾸미','해피호(오전)')]:
             html='<tr><td>2026-10-09 (금)</td><td><p>'+title+'</p></td></tr><tr><td>정원: 20 잔여: 4</td></tr>'
             self.assertEqual(parse_niabbs(html,[name],{},date(2026,10,9),date(2026,10,9)),{(name,'2026-10-09'):('available',4)})
+
+class DeletedRange(unittest.TestCase):
+    def test_all_deleted_does_not_trigger_full_collection(self):
+        import run_collection
+        from unittest.mock import patch
+        with patch.object(run_collection,'load_boats',return_value=[{'bid':2}]), patch.object(run_collection,'run') as run:
+            self.assertEqual(run_collection.by_range('range','now',[], '2026-10-09','2026-10-09',boat_ids=[1]),0)
+            run.assert_not_called()
