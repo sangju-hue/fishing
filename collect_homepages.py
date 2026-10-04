@@ -12,6 +12,7 @@ from datetime import date, datetime, timedelta, timezone
 from urllib.parse import urlsplit, urlunsplit, urlencode, urljoin, parse_qsl,quote
 from homepage_engine import conditional_notice, booking_notices, match_boat, DOM, parse_booking, parse_hanaho, parse_wz, parse_sunsang, parse_niabbs, booking_links, date_url
 from season import season_window
+from custom_booking import parse_bando, parse_fishapp
 
 BASE=os.path.dirname(os.path.abspath(__file__))
 DATA=os.path.join(os.path.dirname(BASE) if os.path.basename(BASE)=='scrapers' else BASE,'data')
@@ -80,6 +81,9 @@ def sites_from_catalog(boats):
         g['boat_ids'][b['name']]=b.get('bid')
         for label in b.get('booking_names',[]):g['aliases'][label]=b['name']
         for alternate in b.get('booking_fallbacks',[]):g['alternates'].append((alternate,[b['name']]))
+        # Same host can expose each trip through a different ship selector.
+        if u != g['url'] and dict(parse_qsl(urlsplit(u).query)).get('PA_N_UID'):
+            g['alternates'].append((u,[b['name']]))
     return out
 
 # Verified formatting differences, not speculative boat renames.
@@ -138,7 +142,24 @@ def collect_site(host,g,today,end,gap=1):
         try:root=get(url);break
         except Exception as e:errors.append({'url':url,'error':f'{type(e).__name__}: {e}'})
     if root:
-        html,url=root;root_dates=absorb(html,url)
+        html,url=root
+        custom = host == 'bandofish.com' or (host == 'fishapp.co.kr' and '/wp/' in url)
+        if custom:
+            for month in months(today,end):
+                try:
+                    if host == 'bandofish.com':
+                        target=urljoin(url,'board.php')+'?'+urlencode({'bo_table':'schedule','sch_year':month.year,'sch_month':month.month})
+                        h,final=get(target)
+                        v,src=parse_bando(h,g['boats'],aliases,today,end,month,final)
+                    else:
+                        schedule=url.split('/schedule')[0].rstrip('/')+'/schedule'
+                        fields={n.attrs.get('id'):n.attrs.get('value') for n in DOM(html).root.walk('input')}
+                        endpoint=fields.get('scheduleListURL') or urlsplit(schedule).path+'/list.json'
+                        raw,final=client.fetch(urljoin(schedule,endpoint),{'SCHD_MONTH':month.strftime('%Y%m')});visited.append(final)
+                        v,src=parse_fishapp(json.loads(raw),g['boats'],aliases,today,end,schedule,fields.get('waitReserveYn')=='Y')
+                    out.update(v);sources.update(src);seen_boats.update(k[0] for k in v)
+                except Exception as e:errors.append({'url':g['url'],'error':str(e)})
+        root_dates=absorb(html,url) if not custom else {k[1] for k in out}
         queue=booking_links(html,url)
         # Follow frames and then inspect their menus, not just the wrapper page.
         for next_url in list(queue):
@@ -150,14 +171,14 @@ def collect_site(host,g,today,end,gap=1):
         queue=sorted(dict.fromkeys(queue),key=lambda u:0 if re.search(r'mid=bk|hid=status|/reservation|/ship/booking',u) else 1)
         niabbs=bool(re.search(r'/niabbs5m?/',url) and re.search(r'doc/sub[\w-]+_in(?:2)?\.htm',html))
         booking=(html,url) if root_dates or host=='sooyangho.co.kr' or niabbs else None
-        for next_url in (queue[:6] if not booking else []):
+        for next_url in (queue[:6] if not booking and not custom else []):
             try:
                 h,u=get(next_url);ds=absorb(h,u)
                 if ds:booking=(h,u);break
                 if host=='hanaho.net' and '/ship/booking.php' in u:booking=(h,u);break
                 if host=='boryeongharbor.com' and 'hid=status' in u:booking=(h,u);break
             except Exception as e:errors.append({'url':next_url,'error':str(e)})
-        if booking:
+        if booking and not custom:
             h,u=booking
             if host=='sooyangho.co.kr' or niabbs:
                 monthly='doc/sub2_in2.htm' if host=='sooyangho.co.kr' else next(iter(re.findall(r'(doc/sub[\w-]+_in2\.htm)',h)),'doc/sub2_in2.htm')
