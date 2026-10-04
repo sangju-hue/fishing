@@ -403,7 +403,7 @@ function renderMatrix(){
   dates.forEach(item=>{
     const dayName="일월화수목금토"[item.dow],isPast=item.key<todayKey;
     const cls=`date-head ${item.dow===0?'sun':item.dow===6?'sat':''} ${item.key===selectedDate?'selected-col':''} ${isPast?'past':''}`;
-    html+=`<th scope="col"><button class="${cls}" type="button" data-date="${item.key}" aria-label="${item.month+1}월 ${item.d}일 ${dayName}요일 상세 보기"><span>${item.d}</span><span class="dow">${dayName}</span></button><label class="watch-date"><input type="checkbox" data-alert-date="${item.key}" ${alertDates.has(item.key)?"checked":""} aria-label="${item.month+1}월 ${item.d}일 빈자리 알림 날짜 선택"></label></th>`;
+    html+=`<th scope="col"><button class="${cls}" type="button" data-date="${item.key}" aria-label="${item.month+1}월 ${item.d}일 ${dayName}요일 상세 보기"><span>${item.d}</span><span class="dow">${dayName}</span></button><label class="watch-date" title="${item.month+1}월 ${item.d}일 빈자리 알림"><input type="checkbox" data-alert-date="${item.key}" ${alertDates.has(item.key)?"checked":""} aria-label="${item.month+1}월 ${item.d}일 빈자리 알림 날짜 선택"></label></th>`;
   });
   html+='</tr></thead><tbody>';
   groups.forEach(([operator,groupBoats],groupIndex)=>{
@@ -423,7 +423,7 @@ function renderMatrix(){
       dates.forEach(item=>{
         const info=statusInfo(boat,item.key),selected=item.key===selectedDate?' selected-col':'',past=item.key<todayKey?' past':'';
         const opensBooking=info.cls==='available'||!boat.channels.sunsang24;
-        html+=`<td class="${(selected+past).trim()}"><button class="status-cell ${info.cls}" type="button" data-date="${item.key}" data-boat-id="${boat.bid}" data-status="${info.cls}" aria-label="${escapeHtml(boat.name)}, ${item.month+1}월 ${item.d}일, ${info.text}${opensBooking?', 예약 페이지 열기':', 상세 보기'}">${info.short}</button></td>`;
+        html+=`<td class="${(selected+past).trim()}"><button class="status-cell ${info.cls}" type="button" data-date="${item.key}" data-boat-id="${boat.bid}" data-status="${info.cls}" title="${escapeHtml(info.text)}" aria-label="${escapeHtml(boat.name)}, ${item.month+1}월 ${item.d}일, ${info.text}${opensBooking?', 예약 페이지 열기':', 상세 보기'}">${info.short}</button></td>`;
       });
       html+='</tr>';
     });
