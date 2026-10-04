@@ -4,7 +4,7 @@
   document.querySelectorAll('[data-alert-link]').forEach(link => link.addEventListener('click', () => {
     document.getElementById('ntfySettings').open = true;
   }));
-  document.querySelectorAll('[data-reservation-link]').forEach(link => link.addEventListener('click', () => selectSpecies(document.getElementById('tab-jjukkumi'))));
+  document.querySelectorAll('[data-reservation-link],a[href="#reservation"]').forEach(link => link.addEventListener('click', () => selectSpecies(document.getElementById('tab-jjukkumi'))));
   const title = document.getElementById('summaryTitle'), state = document.getElementById('summaryState'), detail = document.getElementById('summaryDetail');
   const summary = document.querySelector('.collection-summary');
   let collectorConnected = false;
