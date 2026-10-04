@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T16:33:38+09:00",
+ "checked_at": "2026-10-04T16:39:03+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -3293,31 +3293,24 @@
   },
   "thefishing.kr": {
    "status": "no_data",
-   "url": "https://thefishing.kr/gallery/ship.php?wr_uid=144217",
+   "url": "https://thefishing.kr/reservation/list.php?uid=1839&amp;type=3",
    "entries": 0,
    "boats": [
-    "반도피싱호",
-    "일복호",
-    "20금강호",
-    "바다목장호"
+    "20금강호"
    ],
    "boat_ids": {
-    "반도피싱호": 127,
-    "일복호": 153,
-    "20금강호": 307,
-    "바다목장호": 326
+    "20금강호": 307
    },
    "missing_boats": [
-    "반도피싱호",
-    "일복호",
-    "20금강호",
-    "바다목장호"
+    "20금강호"
    ],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
-   "observed_ship_labels": [],
-   "pages_checked": 7,
+   "observed_ship_labels": [
+    "금강7호"
+   ],
+   "pages_checked": 8,
    "booking_urls": [],
    "errors": []
   },
@@ -9188,6 +9181,6 @@
   "sites": 150,
   "entries": 5543,
   "collected_boats": 227,
-  "missing_boats": 35
+  "missing_boats": 32
  }
 }
