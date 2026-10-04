@@ -663,7 +663,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[];
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false;
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -709,6 +709,7 @@ async function ntfyRequest(payload){
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
   document.querySelector('#ntfyAdmin').hidden=false;
+  ntfyMinimumReady=!!state?.supports_min_seats;
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
   document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 ${state.check_minutes}분마다 수집${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
@@ -733,6 +734,7 @@ async function initNtfy(){
     e.preventDefault();const bid=Number(document.querySelector('#ntfyBoat').value),boat=BOATS.find(b=>b.bid===bid),topic=document.querySelector('#ntfyTopic').value;
     const port=document.querySelector('#ntfyPort').value;
     if(!ntfyLocal&&ntfyUsedTopics.includes(topic)&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('다른 사용자가 사용 중인 토픽입니다. 다른 이름을 입력해 주세요.');return}
+    if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim()};
     const button=document.querySelector('#ntfyRegister');button.disabled=true;
     try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}

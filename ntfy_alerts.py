@@ -53,7 +53,7 @@ class Alerts:
         config=read(config_path,{})
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
-        self.config={'version':1,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        self.config={'version':1,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
         atomic_json(config_path,self.config)
         self.save()
 
@@ -76,7 +76,7 @@ class Alerts:
             self.topics_error='GitHub 토픽 목록 갱신용 맥 인증정보 없음';return
         before=read(path,{})
         try:
-            push_to_github.publish_files({'data/ntfy_topics.json':path},'update active ntfy topic names')
+            push_to_github.publish_files({'data/ntfy_topics.json':path,'data/ntfy_public.json':os.path.join(self.base,'data','ntfy_public.json')},'update active ntfy topics and capabilities')
             self.topics_dirty=read(path,{})!=before;self.topics_error=''
         except Exception:self.topics_error='GitHub 토픽 목록 갱신 재시도 대기'
 
@@ -202,7 +202,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[{k:v for k,v in r.items() if k!='owner'} for r in self.state['subscriptions']]
-            return {'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
         catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
