@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T22:07:18+09:00",
+ "checked_at": "2026-10-04T22:09:33+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -13738,9 +13738,9 @@
    "errors": []
   },
   "xn--289a86en7cpsmbui4zeca7276a.com": {
-   "status": "partial",
+   "status": "ok",
    "url": "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk",
-   "entries": 88,
+   "entries": 116,
    "boats": [
     "영암호",
     "강팀호"
@@ -13758,8 +13758,24 @@
     "영암호9.77톤11인탑승강진원선장",
     "협력선박"
    ],
-   "pages_checked": 26,
+   "pages_checked": 28,
    "booking_urls": [
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&sel=day&PA_N_UID=5818#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&sel=day&PA_N_UID=1960#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&sel=day&PA_N_UID=5818#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&sel=day&PA_N_UID=1960#list",
@@ -13776,6 +13792,18 @@
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&sel=day&PA_N_UID=5818#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&sel=day&PA_N_UID=1960#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&sel=day&PA_N_UID=5818#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&sel=day&PA_N_UID=1960#list",
+    "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&sel=day&PA_N_UID=5818#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&sel=day&PA_N_UID=1960#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&sel=day&PA_N_UID=5818#list",
     "http://xn--289a86en7cpsmbui4zeca7276a.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&sel=day&PA_N_UID=1960#list",
@@ -13875,7 +13903,7 @@
  },
  "summary": {
   "sites": 143,
-  "entries": 10585,
+  "entries": 10613,
   "collected_boats": 229,
   "missing_boats": 16
  }
