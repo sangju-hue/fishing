@@ -663,7 +663,7 @@ speciesTabs.forEach((tab,index)=>{
 });
   // 맥 수집기 제어 (localhost에서만 표시·동작)
 /* ntfy inbox carries RSA-OAEP encrypted registrations; private topics never enter Git. */
-let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false;
+let ntfyConfig=null,ntfyOwner='',ntfyMine=[],ntfyUsedTopics=[],ntfyMinimumReady=false,ntfyManageReady=false,ntfyEditing=null;
 const ntfyLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function ntfyRandom(){return [...crypto.getRandomValues(new Uint8Array(16))].map(x=>x.toString(16).padStart(2,'0')).join('')}
 function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({owner:ntfyOwner,topic:document.querySelector('#ntfyTopic').value,min_seats:Number(document.querySelector('#ntfyMinSeats').value),mine:ntfyMine}))}catch(e){}}
@@ -685,7 +685,7 @@ async function ntfyRefreshTopics(){
   }catch(e){document.querySelector('#ntfyTopics').textContent='토픽 목록을 불러오지 못했습니다. 잠시 후 다시 확인합니다.'}
 }
 function ntfyRenderMine(){
-  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>토픽: ${escapeHtml(r.topic)} · ${escapeHtml(r.state||'신청 전달됨')}</span><button type="button" data-ntfy-remove="${i}">해제 신청</button></div>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
+  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>토픽: ${escapeHtml(r.topic)} · ${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
 }
 async function ntfyRequest(payload){
   if(ntfyLocal){
@@ -709,7 +709,7 @@ async function ntfyRequest(payload){
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
   document.querySelector('#ntfyAdmin').hidden=false;
-  ntfyMinimumReady=!!state?.supports_min_seats;
+  ntfyMinimumReady=!!state?.supports_min_seats;ntfyManageReady=!!state?.supports_manage;
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
   document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 등록 배·날짜 ${state.check_minutes}분마다 수집${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
@@ -735,13 +735,22 @@ async function initNtfy(){
     const port=document.querySelector('#ntfyPort').value;
     if(!ntfyLocal&&ntfyUsedTopics.includes(topic)&&!ntfyMine.some(r=>r.topic===topic)){ntfyMessage('다른 사용자가 사용 중인 토픽입니다. 다른 이름을 입력해 주세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
-    const payload={action:'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim()};
+    const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim()};
+    if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort];}
     const button=document.querySelector('#ntfyRegister');button.disabled=true;
-    try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
+    try{const direct=await ntfyRequest(payload);const row={bid,date:d.value,topic,boat:bid===0?'배 전체':boat.name,min_seats:payload.min_seats,scopePort:port,port:port==='*'?'항구 전체':bid===0?port:normalizePort(boat.port),state:direct?'구독 완료':'구독 신청 전달됨 · 폰 완료 알림 확인'};if(ntfyEditing){ntfyMine.splice(ntfyEditing.index,1);ntfyEditing=null;button.textContent='구독';}ntfyMine=ntfyMine.filter(r=>!(r.bid===bid&&r.date===d.value&&r.topic===topic&&(bid!==0||r.scopePort===port)));ntfyMine.push(row);ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'구독 완료! 선택한 배에 빈자리가 생기면 이 토픽으로 알립니다.':'구독 신청을 전달했습니다. 맥이 처리하면 폰으로 완료 알림이 옵니다. 폰 ntfy 앱에서 같은 토픽을 구독했는지 확인해 주세요.')}catch(err){ntfyMessage(err.message||'신청 실패: 연결을 확인해 주세요.')}finally{button.disabled=false}
   });
   document.querySelector('#ntfyMine').addEventListener('click',async e=>{
-    const button=e.target.closest('[data-ntfy-remove]');if(!button)return;const i=Number(button.dataset.ntfyRemove),r=ntfyMine[i];button.disabled=true;
-    try{await ntfyRequest({action:'delete',owner:ntfyOwner,topic:r.topic,bid:r.bid,port:r.scopePort,date:r.date});ntfyMine.splice(i,1);ntfyRemember();ntfyRenderMine();ntfyMessage('해제 신청을 전달했습니다. 맥에서 처리되면 알림이 중지됩니다.')}catch(err){ntfyMessage(err.message);button.disabled=false}
+    const button=e.target.closest('[data-ntfy-remove],[data-ntfy-manage],[data-ntfy-edit]');if(!button)return;
+    const i=Number(button.dataset.ntfyRemove??button.dataset.ntfyManage??button.dataset.ntfyEdit),r=ntfyMine[i];
+    if(button.hasAttribute('data-ntfy-edit')){
+      ntfyEditing={index:i};document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;document.querySelector('#ntfyPort').value=r.scopePort||normalizePort(r.port);ntfyBoatOptions();document.querySelector('#ntfyBoat').value=r.bid;document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('위 내용을 수정하고 수정 저장을 누르세요.');return;
+    }
+    const action=button.hasAttribute('data-ntfy-remove')?'delete':r.paused?'resume':'pause';
+    if(action!=='delete'&&!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 중지·재시작 기능 적용을 기다려 주세요.');return}
+    button.disabled=true;
+    try{const direct=await ntfyRequest({action,owner:ntfyOwner,topic:r.topic,bid:r.bid,port:r.scopePort,date:r.date});if(action==='delete')ntfyMine.splice(i,1);else{r.paused=action==='pause';r.state=(r.paused?'중지':'재시작')+(direct?' 완료':' 신청 전달됨');}ntfyRemember();ntfyRenderMine();ntfyMessage(direct?'처리 완료':'신청을 전달했습니다. 맥이 처리하면 적용됩니다.')}catch(err){ntfyMessage(err.message);button.disabled=false}
+
   });
   document.querySelector('#ntfyAdminRows').addEventListener('click',async e=>{
     const button=e.target.closest('[data-ntfy-action]');if(!button)return;button.disabled=true;

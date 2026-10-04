@@ -53,7 +53,7 @@ class Alerts:
         config=read(config_path,{})
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
-        self.config={'version':1,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        self.config={'version':1,'supports_manage':True,'supports_min_seats':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
         atomic_json(config_path,self.config)
         self.save()
 
@@ -141,6 +141,29 @@ class Alerts:
             self.state['subscriptions']=[r for r in self.state['subscriptions'] if not (r['owner']==payload.get('owner') and r['topic']==payload.get('topic') and r['date']==payload.get('date') and (r['bid']==payload.get('bid') or payload.get('bid')==0 and (payload.get('port')=='*' or self.port_name(r.get('port'))==payload.get('port'))))]
             self.save()
 
+    def manage(self,payload):
+        action=payload.get('action')
+        with self.lock:
+            import copy
+            before=copy.deepcopy(self.state['subscriptions'])
+            if action=='update':
+                old=payload.get('old')
+                if not isinstance(old,list) or len(old)!=4:raise ValueError('수정할 신청 정보 없음')
+                selector=dict(payload,bid=old[0],date=old[1],topic=old[2],port=old[3])
+            else:selector=payload
+            rows=[r for r in self.state['subscriptions'] if r['owner']==selector.get('owner') and r['topic']==selector.get('topic') and r['date']==selector.get('date') and (r['bid']==selector.get('bid') or selector.get('bid')==0 and (selector.get('port')=='*' or self.port_name(r.get('port'))==selector.get('port')))]
+            if not rows:raise ValueError('본인이 신청한 알림을 찾지 못했습니다')
+            if action in ('pause','resume'):
+                for r in rows:r['enabled']=action=='resume'
+            elif action=='update':
+                self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
+                try:self.register_request(payload)
+                except Exception:
+                    self.state['subscriptions']=before
+                    raise
+            else:raise ValueError('지원하지 않는 동작')
+            self.save();self.on_change()
+
     def admin(self,action,identifier):
         with self.lock:
             row=next((r for r in self.state['subscriptions'] if r['id']==identifier),None)
@@ -184,6 +207,7 @@ class Alerts:
                     try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
                     except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
                 elif action=='delete':self.remove(p)
+                elif action in ('pause','resume','update'):self.manage(p)
                 else:raise ValueError('지원하지 않는 신청')
             except Exception as e:
                 # Never print an owner key, topic or ciphertext in logs.
@@ -202,7 +226,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[{k:v for k,v in r.items() if k!='owner'} for r in self.state['subscriptions']]
-            return {'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
         catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
@@ -238,7 +262,7 @@ class Alerts:
                 url=booking_url(url,ds)
                 remaining=f"잔여 {info['remaining']}석" if info.get('remaining') is not None else '예약 가능 · 잔여석 미확인'
                 try:
-                    self.publish(r['topic'],f"{ds[5:]} {b['name']} 빈자리 발생",f"{ds} · {b.get('port','')} · {b['name']}\n{remaining}\n예약처에서 최종 확인해 주세요.",url)
+                    self.publish(r['topic'],f"예약일 {ds[5:]} · {b['name']} 빈자리",f"{ds} · {b.get('port','')} · {b['name']}\n{remaining}\n예약처에서 최종 확인해 주세요.",url)
                     r['notified']=True;r['last_sent_at']=stamp();r['error']=''
                 except Exception:r['error']='전송 실패: ntfy 연결·토픽 권한 확인 (다음 확인 때 재시도)'
         self.save()

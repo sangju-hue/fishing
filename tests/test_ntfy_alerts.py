@@ -47,6 +47,17 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_owner_pause_resume_update_rollback(self):
+        self.a.register(self.p)
+        with self.assertRaises(ValueError):self.a.manage(dict(self.p,action='pause',owner='2'*32))
+        self.a.manage(dict(self.p,action='pause'));self.assertEqual(self.a.targets(),([],[]))
+        self.a.manage(dict(self.p,action='resume'));self.assertEqual(self.a.targets()[0],[1])
+        old=[1,self.ds,self.p['topic'],'오천항']
+        self.a.manage(dict(self.p,action='update',old=old,min_seats=4))
+        self.assertEqual(self.a.state['subscriptions'][0]['min_seats'],4)
+        with self.assertRaises(ValueError):self.a.manage(dict(self.p,action='update',old=old,min_seats=0))
+        self.assertEqual(self.a.state['subscriptions'][0]['min_seats'],4)
+
     def test_minimum_seats_crossing_and_unknown_count(self):
         self.a.register(dict(self.p,min_seats=4))
         with patch.object(self.a,'publish') as send:
