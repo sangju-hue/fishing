@@ -329,7 +329,7 @@ def handler(scheduler, port):
                 body = json.loads(self.rfile.read(size))
                 if self.path == '/alerts':
                     if not scheduler.alerts:raise ValueError('알림 연결 준비 중')
-                    if body['action']=='add':scheduler.alerts.register(body)
+                    if body['action']=='add':scheduler.alerts.register_request(body)
                     elif body['action']=='remove':scheduler.alerts.remove(body)
                     else:scheduler.alerts.admin(body['action'],body.get('id'))
                     scheduler.wake.set()

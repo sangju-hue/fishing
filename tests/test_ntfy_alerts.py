@@ -47,6 +47,18 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_port_all_and_boat_all_registration_and_removal(self):
+        self.write('boats.json',{'boats':[self.boat,dict(self.boat,bid=2,name='다른호',port='무창포항'),dict(self.boat,bid=3,name='별칭',canonical_bid=1)]})
+        selected=self.a.register_request(dict(self.p,bid=0,port='오천항'))
+        self.assertEqual([r['bid'] for r in selected],[1])
+        all_boats=self.a.register_request(dict(self.p,bid=0,port='*'))
+        self.assertEqual({r['bid'] for r in all_boats},{1,2})
+        self.assertEqual(len(self.a.state['subscriptions']),2)
+        self.a.remove(dict(self.p,bid=0,port='오천항'))
+        self.assertEqual([r['bid'] for r in self.a.state['subscriptions']],[2])
+        self.a.remove(dict(self.p,bid=0,port='*'))
+        self.assertEqual(self.a.state['subscriptions'],[])
+
     def test_rsa_round_trip_and_reject_invalid_ciphertext(self):
         pub=self.base+'/pub.pem'
         subprocess.run([OPENSSL,'pkey','-in',self.a.key,'-pubout','-out',pub],check=True,capture_output=True)

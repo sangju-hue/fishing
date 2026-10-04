@@ -63,30 +63,58 @@ class Alerts:
 
     def catalog(self):return {int(b['bid']):b for b in read(os.path.join(self.base,'data','boats.json'),{}).get('boats',[])}
 
-    def register(self,payload):
+    def register(self,payload,persist=True,catalog=None):
+        catalog=self.catalog() if catalog is None else catalog
         owner=payload.get('owner','');topic=payload.get('topic','');ds=payload.get('date','');bid=payload.get('bid')
         if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('사용자 식별값 오류')
         if not isinstance(topic,str) or not re.fullmatch(r'[A-Za-z0-9_-]{16,64}',topic) or topic==self.config['inbox']:raise ValueError('토픽은 영문·숫자·_- 16~64자')
-        if not isinstance(bid,int) or isinstance(bid,bool) or bid not in self.catalog():raise ValueError('선박을 선택하세요')
+        if not isinstance(bid,int) or isinstance(bid,bool) or bid not in catalog:raise ValueError('선박을 선택하세요')
         try:d=date.fromisoformat(ds)
         except (TypeError,ValueError):raise ValueError('날짜를 선택하세요')
         _,first,last=season_window()
         if not first<=d<=last:raise ValueError('오늘 이후 9~11월 날짜만 등록할 수 있습니다')
-        if self.catalog()[bid].get('canonical_bid') is not None:raise ValueError('현재 명부의 대표 선박을 선택하세요')
+        if catalog[bid].get('canonical_bid') is not None:raise ValueError('현재 명부의 대표 선박을 선택하세요')
         if len(str(payload.get('label',''))) > 16:raise ValueError('이름은 16자까지')
         with self.lock:
             rows=self.state['subscriptions']
             if any(r['topic']==topic and r['owner']!=owner for r in rows):raise ValueError('다른 사용자가 사용 중인 토픽입니다. 새 토픽을 생성하세요')
             old=next((r for r in rows if r['owner']==owner and r['topic']==topic and r['bid']==bid and r['date']==ds),None)
-            if old:old['enabled']=True;self.save();return old
-            if len(rows)>=500 or sum(r['owner']==owner for r in rows)>=30:raise ValueError('등록 수 제한: 사용자당 30개, 전체 500개')
-            boat=self.catalog()[bid]
+            if old:
+                old['enabled']=True
+                if persist:self.save()
+                return old
+            if len(rows)>=5000 or sum(r['owner']==owner for r in rows)>=500:raise ValueError('등록 수 제한: 사용자당 500개, 전체 5000개')
+            boat=catalog[bid]
             row={'id':secrets.token_hex(8),'owner':owner,'topic':topic,'bid':bid,'date':ds,'label':str(payload.get('label','')),'boat':boat['name'],'port':boat.get('port',''),'enabled':True,'created_at':stamp(),'last_checked_at':None,'last_sent_at':None,'last_status':'unknown','observed':None,'notified':False,'error':''}
-            rows.append(row);self.save();self.on_change();return row
+            rows.append(row)
+            if persist:self.save();self.on_change()
+            return row
+
+    @staticmethod
+    def port_name(raw):
+        raw=str(raw or '').strip()
+        for pattern,name in [(r'^대천항(?:\s*\(|$)','대천항'),(r'^전곡항(?:\s*\(|$)','전곡항'),(r'^신진도$','신진도항'),(r'^비응항(?:\s*\(|$)','비응항'),(r'^남항','남항'),(r'^(?:영흥도|진두선착장|진두항)','영흥도')]:
+            if re.search(pattern,raw):return name
+        return raw
+
+    def register_request(self,payload):
+        if payload.get('bid')!=0:return [self.register(payload)]
+        catalog=self.catalog();port=payload.get('port')
+        if not isinstance(port,str) or not port:raise ValueError('항구를 선택하세요')
+        ids=[bid for bid,b in catalog.items() if b.get('canonical_bid') is None and (port=='*' or self.port_name(b.get('port'))==port)]
+        if not ids:raise ValueError('선택한 항구에 선박이 없습니다')
+        with self.lock:
+            import copy
+            before=copy.deepcopy(self.state['subscriptions'])
+            try:rows=[self.register(dict(payload,bid=bid),persist=False,catalog=catalog) for bid in ids]
+            except Exception:
+                self.state['subscriptions']=before
+                raise
+            self.save();self.on_change();return rows
 
     def remove(self,payload):
         with self.lock:
-            self.state['subscriptions']=[r for r in self.state['subscriptions'] if not (r['owner']==payload.get('owner') and r['topic']==payload.get('topic') and r['bid']==payload.get('bid') and r['date']==payload.get('date'))]
+            self.state['subscriptions']=[r for r in self.state['subscriptions'] if not (r['owner']==payload.get('owner') and r['topic']==payload.get('topic') and r['date']==payload.get('date') and (r['bid']==payload.get('bid') or payload.get('bid')==0 and (payload.get('port')=='*' or self.port_name(r.get('port'))==payload.get('port'))))]
             self.save()
 
     def admin(self,action,identifier):
@@ -127,8 +155,9 @@ class Alerts:
             try:
                 p=self.decrypt(item.get('message'));action=p.get('action')
                 if action=='add':
-                    row=self.register(p)
-                    try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {row['port']} {row['boat']} 감시를 등록했습니다.")
+                    rows=self.register_request(p);row=rows[0]
+                    description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
+                    try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} 감시를 등록했습니다.")
                     except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
                 elif action=='delete':self.remove(p)
                 else:raise ValueError('지원하지 않는 신청')
