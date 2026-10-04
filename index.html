@@ -132,7 +132,6 @@
       <label>날짜<input id="ntfyDate" type="date" required></label>
       <label>항구<select id="ntfyPort" required></select></label>
       <label>배<select id="ntfyBoat" required></select></label>
-      <label>ntfy 서버<input value="https://ntfy.sh" readonly aria-label="ntfy 서버"></label>
       <label>나의 토픽 (예: fish-why)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" value="fish1" placeholder="fish1" title="원하는 이름으로 변경 가능 · 영문, 숫자, -와 _ 사용 (1~64자)" autocomplete="off"></label>
       <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><button id="ntfyRegister" type="submit">구독</button></div>
       <p id="ntfySelection" style="grid-column:1/-1;margin:0"></p>
