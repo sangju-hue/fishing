@@ -1,11 +1,11 @@
 {
- "checked_at": "2026-10-04T21:31:28+09:00",
+ "checked_at": "2026-10-04T21:37:16+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
  },
  "queried_range": {
-  "from": "2026-10-18",
+  "from": "2026-10-04",
   "to": "2026-11-30"
  },
  "sites": {
@@ -5825,9 +5825,9 @@
    "errors": []
   },
   "hanprofishing.com": {
-   "status": "partial",
+   "status": "ok",
    "url": "http://hanprofishing.com",
-   "entries": 14,
+   "entries": 58,
    "boats": [
     "한프로호"
    ],
@@ -5842,7 +5842,7 @@
     "공지",
     "대천  한프로호  (삼두선장)"
    ],
-   "pages_checked": 5,
+   "pages_checked": 11,
    "booking_urls": [
     "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=5493&sel=day#list",
     "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=5493&sel=day#list",
@@ -5857,7 +5857,51 @@
     "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=5493&sel=day#list",
     "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=5493&sel=day#list",
     "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=5493&sel=day#list",
-    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=5493&sel=day#list"
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=21&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=22&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=23&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=24&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=25&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=26&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=27&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=28&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=12&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=13&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=14&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=15&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=16&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=17&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=18&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=19&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=20&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=21&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=22&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=23&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=24&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=25&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=26&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=27&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=28&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=5493&sel=day#list",
+    "http://hanprofishing.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=5493&sel=day#list"
    ],
    "errors": []
   },
@@ -6076,7 +6120,7 @@
   },
   "hhj.kr": {
    "status": "partial",
-   "url": "https://hhj.kr/index.php?mid=bk",
+   "url": "http://hhj.kr/index.php?mid=bk",
    "entries": 116,
    "boats": [
     "우리호",
@@ -6217,12 +6261,7 @@
     "http://hhj.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=4681&sel=day#list",
     "http://hhj.kr/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=5785&sel=day#list"
    ],
-   "errors": [
-    {
-     "url": "https://hhj.kr/index.php?mid=bk",
-     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'hhj.kr'. (_ssl.c:1129)>"
-    }
-   ]
+   "errors": []
   },
   "xn--hy1b43dez8adpc.com": {
    "status": "ok",
@@ -6471,7 +6510,7 @@
   },
   "haesin.net": {
    "status": "partial",
-   "url": "https://haesin.net/index.php?mid=bk",
+   "url": "http://haesin.net/index.php?mid=bk",
    "entries": 290,
    "boats": [
     "구라미끼호",
@@ -6803,12 +6842,7 @@
     "http://haesin.net/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=3862&sel=day#list",
     "http://haesin.net/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=6135&sel=day#list"
    ],
-   "errors": [
-    {
-     "url": "https://haesin.net/index.php?mid=bk",
-     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'haesin.net'. (_ssl.c:1129)>"
-    }
-   ]
+   "errors": []
   },
   "blessho.com": {
    "status": "ok",
@@ -7336,8 +7370,8 @@
    "errors": []
   },
   "changdukho.com": {
-   "status": "partial",
-   "url": "https://changdukho.com",
+   "status": "ok",
+   "url": "http://changdukho.com",
    "entries": 58,
    "boats": [
     "청용호"
@@ -7413,12 +7447,7 @@
     "http://changdukho.com/index.php?mid=bk&year=2026&month=11&day=29&mode=list&won=30&PA_N_UID=271&sel=day#list",
     "http://changdukho.com/index.php?mid=bk&year=2026&month=11&day=30&mode=list&won=30&PA_N_UID=271&sel=day#list"
    ],
-   "errors": [
-    {
-     "url": "https://changdukho.com",
-     "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'changdukho.com'. (_ssl.c:1129)>"
-    }
-   ]
+   "errors": []
   },
   "blueseaho.com": {
    "status": "deferred_daily",
@@ -9463,7 +9492,7 @@
   "xn--hq1b18vy6duxas6dhx8a.com": {
    "status": "ok",
    "url": "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk",
-   "entries": 44,
+   "entries": 58,
    "boats": [
     "원산도영종호"
    ],
@@ -9477,8 +9506,16 @@
    "observed_ship_labels": [
     "원산도영종호"
    ],
-   "pages_checked": 24,
+   "pages_checked": 26,
    "booking_urls": [
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=3101&sel=day#list",
@@ -9487,6 +9524,12 @@
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=3101&sel=day#list",
+    "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=3101&sel=day#list",
     "http://xn--hq1b18vy6duxas6dhx8a.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=3101&sel=day#list",
@@ -12420,7 +12463,7 @@
   "gloryho.kr": {
    "status": "ok",
    "url": "http://www.gloryho.kr/index.php?mid=bk",
-   "entries": 44,
+   "entries": 58,
    "boats": [
     "글로리호"
    ],
@@ -12437,8 +12480,16 @@
     "글로리호",
     "미입금  취소자"
    ],
-   "pages_checked": 26,
+   "pages_checked": 28,
    "booking_urls": [
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&PA_N_UID=1572&sel=day#list",
@@ -12447,6 +12498,12 @@
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&PA_N_UID=1572&sel=day#list",
+    "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&PA_N_UID=1572&sel=day#list",
     "http://www.gloryho.kr/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&PA_N_UID=1572&sel=day#list",
@@ -13351,7 +13408,7 @@
  },
  "summary": {
   "sites": 139,
-  "entries": 10061,
+  "entries": 10133,
   "collected_boats": 220,
   "missing_boats": 35
  }
