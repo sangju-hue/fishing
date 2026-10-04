@@ -316,6 +316,6 @@ def booking_notices(html, boats, aliases=None):
         for cell in cells[1:]:
             for line in cell.text().splitlines():
                 text=re.sub(r'^공지\s*', '', line.strip())
-                if 0<len(text)<=160 and (re.search(r'(?:\d{2,4}년|다음\s*시즌|내년).*뵙',text) or re.search(r'시즌\s*(?:종료|마감)|운항\s*(?:종료|중단)|장기\s*휴항|\d{2,4}년도?.*예약.*받지\s*않',text)):
+                if 0<len(text)<=160 and (re.search(r'(?:\d{2,4}년|다음\s*시즌|내년).*뵙',text) or re.search(r'시즌\s*(?:종료|마감)|운항\s*(?:종료|중단)|장기\s*휴항|\d{2,4}년도?.*예약.*(받지\s*않|상황에\s*따라\s*오픈)',text)):
                     found[boat]=text
     return found

@@ -5477,7 +5477,7 @@
   {
    "bid": 313,
    "name": "뉴홀랜드호",
-   "port": "오천항",
+   "port": "무창포항",
    "region": "충남 보령시",
    "price": "",
    "channels": {
@@ -7406,7 +7406,10 @@
    "port": "무창포항",
    "channels": {
     "homepage": "https://winner.thefishing.kr/index.php?mid=bk"
-   }
+   },
+   "booking_names": [
+    "위너호_나혜훈선장"
+   ]
   }
  ],
  "updated_at": "2026-10-03T09:04:25+09:00"
