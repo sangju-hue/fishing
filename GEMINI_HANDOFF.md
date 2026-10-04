@@ -595,3 +595,4 @@ python3 scrape_sunsang24.py --help
 - 사용자 요청으로 피싱위너 선단의 선장 이름 추가 매핑(booking_names) 일괄 롤백 처리함.
 - 위너호에 booking_names (위너호_나혜훈선장) 추가 및 수집기(homepage_engine.py) 정규식 업데이트하여 예약일정에 공지사항 노출.
 - 뉴홀랜드호 항구를 오천항에서 무창포항으로 수정하여 피싱위너 선단 그룹과 통합.
+- 선단(operator) 소속 배 67척의 홈페이지 예약 링크를 선단 공식 표준 URL로 일괄 통일 (http/https 혼용, 도메인 불일치 등 정비)
