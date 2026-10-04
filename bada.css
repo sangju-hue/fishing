@@ -18,3 +18,5 @@ dialog{width:min(760px,calc(100% - 24px));max-height:85vh;overflow:auto;color:va
 /* Keep the booking grid at the approved 43px row density in either theme. */
 .matrix tbody .boat-col{padding-top:4px;padding-bottom:4px}.boat-label{line-height:18px}.port-label{line-height:12px}.matrix tbody tr.boat-row{height:43px}.matrix tbody tr.boat-row th,.matrix tbody tr.boat-row td{height:43px}.operator-header-row th,.operator-header-row td{height:40px}
 .photo-credits{font-size:11px;color:var(--muted);margin-top:12px}.photo-credits summary{cursor:pointer}.photo-credits li{margin:8px 0}.photo-credits p{margin:8px 0}
+
+.guide-search{position:sticky;top:0;background:var(--surface);padding:12px 0;z-index:1;margin-bottom:8px}.guide-search input{width:100%;min-height:44px}.guide-search p{font-size:12px;color:var(--muted);margin:8px 0 0}.directory-item[hidden]{display:none}

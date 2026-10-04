@@ -74,7 +74,7 @@
     @media(max-width:620px){.ntfy-topic-group{grid-template-columns:1fr}}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
   </style>
-  <link rel="stylesheet" href="bada.css?v=20261005-status">
+  <link rel="stylesheet" href="bada.css?v=20261005-guide-search">
 </head>
 <body>
 <main class="page">
@@ -220,7 +220,7 @@
     }
   </script>
 
-  <dialog id="guideDialog" aria-labelledby="guideTitle"><div class="dialog-heading"><h2 id="guideTitle">선사 안내</h2><button type="button" id="guideClose" aria-label="닫기">닫기</button></div><p class="guide-help">등록된 선사와 예약 채널을 확인하세요.</p><div id="guideList"></div></dialog>
+  <dialog id="guideDialog" aria-labelledby="guideTitle"><div class="dialog-heading"><h2 id="guideTitle">선사 안내</h2><button type="button" id="guideClose" aria-label="닫기">닫기</button></div><p class="guide-help">등록된 선사와 예약 채널을 확인하세요.</p><div class="guide-search field"><label for="guideSearch">선사·선박 검색</label><input type="search" id="guideSearch" placeholder="선사명 또는 배 이름 입력" autocomplete="off" aria-controls="guideList"><p id="guideCount" role="status"></p></div><div id="guideList"></div></dialog>
   <p class="footer-note">바다자리 · 예약 현황은 확인 시점의 정보입니다. 예약처에서 최종 확인해 주세요.</p>
   <details class="photo-credits"><summary>어종 사진 출처</summary><ul>
 <li><a href="https://commons.wikimedia.org/wiki/File:Ocellated_octopus.jpg" target="_blank" rel="noopener noreferrer">쭈꾸미 · Daiju Azuma</a> · <a href="https://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></li>
@@ -1149,6 +1149,6 @@ function startAutoRefresh(){
   document.addEventListener('visibilitychange',()=>{if(!document.hidden){refreshCalendar();checkForUpdates()}});
 }
 </script>
-<script src="bada-ui.js?v=20261005-no-progress"></script>
+<script src="bada-ui.js?v=20261005-guide-search"></script>
 </body>
 </html>

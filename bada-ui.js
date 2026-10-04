@@ -65,9 +65,20 @@
     document.getElementById('collectionToggle').focus({ preventScroll: true });
   });
   const dialog = document.getElementById('guideDialog');
+  const guideSearch = document.getElementById('guideSearch');
+  const guideCount = document.getElementById('guideCount');
+  let guideRows = [];
+  const searchText = value => String(value || '').normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g,'');
+  function filterGuide() {
+    const query=searchText(guideSearch.value);let count=0;
+    guideRows.forEach(({row,text})=>{row.hidden=!text.includes(query);if(!row.hidden)count++;});
+    guideCount.textContent=BOATS.length ? count ? `${count}척 표시 · 전체 ${guideRows.length}척` : '검색 결과가 없습니다.' : '선사 정보를 불러오는 중입니다.';
+  }
+  guideSearch.addEventListener('input',filterGuide);
   document.getElementById('operatorGuide').addEventListener('click', () => {
     const list = document.getElementById('guideList');
     list.replaceChildren();
+    guideRows=[];guideSearch.value='';
     BOATS.slice().sort((a,b) => comparePorts(a,b) || a.name.localeCompare(b.name,'ko')).forEach(boat => {
       const row = document.createElement('article'); row.className = 'directory-item';
       const copy = document.createElement('div');
@@ -76,9 +87,12 @@
       copy.append(name, meta);
       const actions = document.createElement('div'); actions.className = 'directory-actions'; actions.innerHTML = channelButtons(boat);
       row.append(copy, actions); list.append(row);
+      guideRows.push({row,text:searchText([boat.name,operatorName(boat)].join(' '))});
     });
     if (!BOATS.length) list.textContent = '선사 정보를 불러오는 중입니다. 잠시 후 다시 확인해 주세요.';
+    filterGuide();
     dialog.showModal();
+    guideSearch.focus({preventScroll:true});
   });
   document.getElementById('guideClose').addEventListener('click', () => dialog.close());
 })();
