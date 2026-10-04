@@ -76,6 +76,10 @@ class Scheduler:
         self.state = {'running': False, 'current_mode': None, 'last_started_at': None,
                       'last_finished_at': None, 'last_result': None, 'last_mode': None,
                       'last_fast_at': None, 'last_slow_at': None}
+        previous = read_json(RUNTIME, {})
+        # 완료 기록만 복원. 이전 프로세스의 실행 중 표시는 현재 실행으로 오인하지 않는다.
+        for key in ('last_finished_at', 'last_result', 'last_mode', 'last_collection_kind', 'last_range', 'last_range_ports', 'last_fast_at', 'last_slow_at'):
+            if key in previous:self.state[key] = previous[key]
         now = time.monotonic()
         self.next_fast = now  # 시작 직후 첫 수집
         self.next_slow = now
