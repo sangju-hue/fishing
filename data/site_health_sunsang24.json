@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T17:28:39+09:00",
+ "checked_at": "2026-10-04T17:32:01+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -1075,7 +1075,7 @@
   "ebada": {
    "status": "partial",
    "url": "https://ebada.sunsang24.com/ship/schedule_fleet",
-   "entries": 68,
+   "entries": 69,
    "boats": [
     "이바다호",
     "이바다낚시",
