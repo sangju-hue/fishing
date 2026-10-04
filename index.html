@@ -208,9 +208,11 @@ let SUNSANG_STATUS_BY_ID={};
 let LEGACY_BOAT_IDS={};
 async function loadData(){
   try{
-    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetch('data/boats.json'),fetch('data/status.json'),fetch('data/status_homepages.json').catch(()=>null),fetch('data/site_health.json').catch(()=>null)]);
+    const cacheKey=Date.now();
+    const fetchData=path=>fetch(`${path}?v=${cacheKey}`,{cache:'no-store'});
+    const [boatsRes,statusRes,hpRes,healthRes]=await Promise.all([fetchData('data/boats.json'),fetchData('data/status.json'),fetchData('data/status_homepages.json').catch(()=>null),fetchData('data/site_health.json').catch(()=>null)]);
     const boatsData=await boatsRes.json();
-    try{const audit=await fetch('data/scrape_audit_current.json').then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
+    try{const audit=await fetchData('data/scrape_audit_current.json').then(r=>r.ok?r.json():null);AUDIT_REASONS=Object.fromEntries((audit?.boats||[]).map(b=>[b.canonical_bid||b.bid,b]));}catch(e){AUDIT_REASONS={};}
     BOATS=(boatsData.boats||boatsData).filter(boat=>boat.canonical_bid==null);
     BOATS.forEach(boat=>{boat.ambiguous=BOATS.some(item=>item.bid!==boat.bid&&item.name===boat.name)});
     if(healthRes&&healthRes.ok){
@@ -597,6 +599,7 @@ function selectDate(key){
 }
 const smallPorts=new Set();
 function initPorts(){
+  const selected=$("#portFilter").value;
   const counts=new Map();
   BOATS.forEach(boat=>{const port=filterPort(boat.port);counts.set(port,(counts.get(port)||0)+1)});
   smallPorts.clear();
@@ -606,6 +609,7 @@ function initPorts(){
   if(otherCount)options.push({value:'__other__',label:'기타',count:otherCount});
   options.sort((a,b)=>b.count-a.count||a.label.localeCompare(b.label,'ko'));
   $("#portFilter").innerHTML='<option value="">전체 항구</option>'+options.map(({value,label,count})=>`<option value="${escapeHtml(value)}">${escapeHtml(label)} (${count})</option>`).join('');
+  if([...$("#portFilter").options].some(option=>option.value===selected))$("#portFilter").value=selected;
 }
 function initRangePorts(){
   const ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,"ko"));
@@ -921,7 +925,7 @@ async function initNtfy(){
         if(s.last_mode==="range"&&s.last_collection_kind!=="alerts_auto"&&s.last_range&&!rangeResultsLoading){
           rangeResultsLoading=true;
           try{
-            await loadData();
+            await loadData();initPorts();
             rangeResultPorts=new Set(s.last_range_ports||[]);rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
             $("#search").value="";$("#portFilter").value="";
             document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
@@ -1005,7 +1009,7 @@ loadData().then(()=>{
 // 자동 새로고침: 1분마다 데이터 파일의 변경 표시(ETag/Last-Modified)만 확인하고, 바뀌었을 때만 다시 불러온다.
 let dataSignature=null,refreshing=false;
 async function dataStamp(){
-  const files=['data/status.json','data/status_homepages.json'];
+  const files=['data/boats.json','data/status.json','data/status_homepages.json'];
   const parts=await Promise.all(files.map(f=>fetch(f+`?h=${Date.now()}`,{method:'HEAD',cache:'no-store'}).then(r=>r.ok?(r.headers.get('ETag')||'')+(r.headers.get('Last-Modified')||'')+(r.headers.get('Content-Length')||''):'').catch(()=>'')));
   return parts.join('|');
 }
@@ -1019,7 +1023,7 @@ async function checkForUpdates(){
     if(stamp===dataSignature)return;
     dataSignature=stamp;
     const wrap=$("#matrixWrap"),left=wrap?wrap.scrollLeft:0,top=wrap?wrap.scrollTop:0;
-    await loadData();
+    await loadData();initPorts();
     renderMatrix();renderCards();renderAlertBar();
     if(wrap){wrap.scrollLeft=left;wrap.scrollTop=top}
     console.info('새 수집 결과 반영:',new Date().toLocaleTimeString('ko-KR'));
