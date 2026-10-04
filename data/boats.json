@@ -3153,27 +3153,6 @@
    "notes": "블레스 선단 소속. 홈페이지에 선박예약현황 있음(2026 쭈갑시즌 주꾸미 9/1~9/20 공통 출조)"
   },
   {
-   "bid": 203,
-   "name": "해주호 (바다사랑 낚시펜션)",
-   "operator": "바다사랑 낚시펜션",
-   "region": "충남 태안군",
-   "port": "항구 확인 중",
-   "price": "5만원",
-   "capacity": null,
-   "channels": {
-    "phone": "010-2421-7144",
-    "homepage": "https://www.qkektkfkd.com/"
-   },
-   "notes": "공식 홈페이지 확인됨. 전화 예약만 제공하며 날짜별 잔여석은 공개하지 않음. 출항 항구 자료가 옷점항·의점항으로 서로 달라 항구 확인 중.",
-   "catalog_sources": [
-    "https://www.qkektkfkd.com/",
-    "https://www.qkektkfkd.com/%EC%98%88%EC%95%BD-%EC%95%88%EB%82%B4",
-    "https://tour.interpark.com/event/ajax/ajaxEventGoodsGroup.aspx?airSeq=N&seq=11644",
-    "https://naksigo.com/boat/%ED%95%B4%EC%A3%BC%ED%98%B8"
-   ],
-   "catalog_status": "homepage_verified_phone_booking"
-  },
-  {
    "bid": 204,
    "name": "성남호",
    "operator": "안흥성남낚시",
