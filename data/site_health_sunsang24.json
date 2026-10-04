@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T17:48:48+09:00",
+ "checked_at": "2026-10-04T17:54:27+09:00",
  "queried_range": {
   "from": "2026-10-04",
   "to": "2026-11-30"
@@ -670,6 +670,28 @@
     "라벤더호",
     "아침바다호",
     "천해호"
+   ],
+   "selectable_ship_labels": [],
+   "excluded_fish": {},
+   "capacity_rejected": [],
+   "errors": []
+  },
+  "newsky": {
+   "status": "ok",
+   "url": "https://newsky.sunsang24.com/ship/schedule_fleet",
+   "entries": 58,
+   "boats": [
+    "뉴스카이호"
+   ],
+   "boat_ids": {
+    "뉴스카이호": 109
+   },
+   "missing_boats": [],
+   "observed_ship_labels": [
+    "뉴스카이호"
+   ],
+   "all_ship_labels": [
+    "뉴스카이호"
    ],
    "selectable_ship_labels": [],
    "excluded_fish": {},
