@@ -17,7 +17,24 @@ from datetime import datetime, timezone, timedelta
 from collect_homepages import BASE, atomic_json, sites_from_catalog
 
 PRIORITY_GROUPS = (('무창포', '무창포'), ('오천항', '오천'), ('영흥도', '영흥'))
-NEAR_DAYS = 14
+SETTINGS = os.path.join(BASE, 'scrape_settings.json')
+
+
+def load_settings():
+    """화면에서 저장한 날짜·분 설정 (없거나 잘못되면 기본값 14일/5분/30분)."""
+    d = {'near_days': 14, 'fast_minutes': 5, 'slow_minutes': 30}
+    try:
+        saved = json.load(open(SETTINGS, encoding='utf-8'))
+    except (OSError, ValueError):
+        return d
+    for k, (lo, hi) in {'near_days': (1, 60), 'fast_minutes': (1, 120), 'slow_minutes': (1, 120)}.items():
+        v = saved.get(k)
+        if isinstance(v, int) and not isinstance(v, bool) and lo <= v <= hi:
+            d[k] = v
+    return d
+
+
+NEAR_DAYS = load_settings()['near_days']
 PROGRESS = os.path.join(BASE, 'data', 'scrape_progress.json')
 PLAN = os.path.join(BASE, 'data', 'collection_plan.json')
 KST = timezone(timedelta(hours=9))
@@ -45,7 +62,7 @@ def load_boats():
 
 def site_groups(boats=None):
     """홈페이지 도메인을 소속 배의 항구 다수결로 그룹에 배정한다."""
-    boats = boats or load_boats()
+    boats = load_boats() if boats is None else boats
     port_by_bid = {b['bid']: (b.get('port') or b.get('region') or '') for b in boats}
     groups = {name: [] for name, _ in PRIORITY_GROUPS}
     rest = []
@@ -78,7 +95,7 @@ def write_plan():
                        'pages_last': sum(health.get(h, {}).get('pages_checked', 0) for h in hosts)})
     sunsang = [b for b in boats if b.get('canonical_bid') is None and '.sunsang24.com' in (b.get('channels', {}).get('sunsang24') or '')]
     subs = {b['channels']['sunsang24'].split('//')[-1].split('.')[0] for b in sunsang}
-    atomic_json(PLAN, {'near_days': NEAR_DAYS, 'fast_minutes': 5, 'slow_minutes': 30,
+    atomic_json(PLAN, {'near_days': NEAR_DAYS, 'fast_minutes': load_settings()['fast_minutes'], 'slow_minutes': load_settings()['slow_minutes'],
                        'sunsang24': {'boats': len(sunsang), 'fleets': len(subs)},
                        'groups': groups,
                        'total': {'boats': sum(g['boats'] for g in groups), 'sites': len(sites)},
@@ -119,9 +136,30 @@ def slow(mode, started, groups):
     return failed
 
 
+def by_range(mode, started, groups, start, end, ports=None):
+    """지정 날짜 범위를 1회 수집. 선상24는 월 단위 응답이라 전체를 받고, 홈페이지는 범위만 수집한다."""
+    failed = 0
+    port_args = ['--ports', *ports] if ports else []
+    if ports:
+        groups = site_groups([b for b in load_boats() if b.get('port') in ports])
+    progress(mode, '선상24 선택 항구' if ports else '선상24 전체', started)
+    if run('scrape_sunsang24.py', '--incremental', *port_args) == 0:
+        progress(mode, '선상24 업로드', started)
+        failed |= 1 if run('push_to_github.py') else 0
+    else:
+        failed = 1
+    all_hosts = [h for _, hosts in groups for h in hosts]
+    if all_hosts:
+        failed |= collect_group(mode, started, f'홈페이지 범위({start}~{end})', all_hosts, '--from-date', start, '--to-date', end, *port_args)
+    return failed
+
+
 def main():
     parser = argparse.ArgumentParser(description='낚시배 예약현황 수집')
-    parser.add_argument('--mode', choices=('fast', 'slow', 'full'), default='full')
+    parser.add_argument('--mode', choices=('fast', 'slow', 'full', 'range'), default='full')
+    parser.add_argument('--from-date')
+    parser.add_argument('--to-date')
+    parser.add_argument('--ports', nargs='+', help='수집할 항구 (생략하면 전체)')
     args = parser.parse_args()
     with open(os.path.join(BASE, '.scrape.lock'), 'a') as lock:
         try:
@@ -136,6 +174,8 @@ def main():
             print('수집 방법 안내 갱신 실패:', e, flush=True)
         groups = site_groups()
         failed = 0
+        if args.mode == 'range':
+            failed |= by_range(args.mode, started, groups, args.from_date, args.to_date, args.ports)
         if args.mode in ('fast', 'full'):
             failed |= fast(args.mode, started, groups)
         if args.mode in ('slow', 'full'):

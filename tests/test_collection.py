@@ -142,6 +142,72 @@ class SettingsTests(unittest.TestCase):
         # 시작(100) 기준 5분(300초) 뒤인 400초로 계산됨
         self.assertEqual(s.next_fast, 400)
 
+class RangePortTests(unittest.TestCase):
+    def test_selected_ports_reach_collector_and_completion(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')), patch.object(mac_scheduler, 'atomic_json'):
+            s = mac_scheduler.Scheduler()
+            s.control('range', {'from_date':'2026-10-05','to_date':'2026-10-06','ports':['오천항']})
+            self.assertEqual(s.due_mode(), 'range')
+            with patch.object(mac_scheduler.subprocess, 'run') as run:
+                run.return_value.returncode = 0
+                s.run_once('range')
+                self.assertEqual(run.call_args.args[0][-2:], ['--ports', '오천항'])
+            self.assertEqual(s.state['last_range_ports'], ['오천항'])
+            with self.assertRaises(ValueError):
+                s.control('range', {'from_date':'2026-10-05','to_date':'2026-10-06','ports':['없는항구']})
+
+    def test_range_collects_selected_hosts_only(self):
+        import run_collection as rc
+        boats=[dict(bid=1,name='가호',port='오천항',channels={'homepage':'https://one.test'}),dict(bid=2,name='나호',port='무창포항',channels={'homepage':'https://two.test'})]
+        with patch.object(rc,'load_boats',return_value=boats), patch.object(rc,'progress'), patch.object(rc,'run',return_value=0) as run, patch.object(rc,'collect_group',return_value=0) as group:
+            rc.by_range('range','now',[], '2026-10-05','2026-10-06',['오천항'])
+            self.assertEqual(run.call_args_list[0].args,('scrape_sunsang24.py','--incremental','--ports','오천항'))
+            self.assertEqual(group.call_args.args[3],['one.test'])
+            self.assertEqual(group.call_args.args[-2:],('--ports','오천항'))
+            group.reset_mock()
+            rc.by_range('range','now',[], '2026-10-05','2026-10-06',['없는항구'])
+            group.assert_not_called()
+
+class RepeatingRangeTests(unittest.TestCase):
+    def test_interval_persistence_and_due_time(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')):
+            s = mac_scheduler.Scheduler()
+            s.paused = True
+            with patch.object(mac_scheduler.time, 'monotonic', return_value=100):
+                s.control('range_auto', {'from_date': '2026-10-05', 'to_date': '2026-10-06', 'interval_minutes': 7})
+                self.assertEqual(s.due_mode(), 'range')
+                self.assertEqual(s.active_range, ['2026-10-05', '2026-10-06'])
+            self.assertEqual(s.next_range, 520)
+            with patch.object(mac_scheduler.time, 'monotonic', return_value=519):
+                self.assertIsNone(s.due_mode())
+            restored = mac_scheduler.Scheduler()
+            self.assertEqual(restored.auto_range, s.auto_range)
+            self.assertEqual(restored.range_interval_minutes, 7)
+            s.control('range_auto_stop')
+            self.assertIsNone(s.auto_range)
+            self.assertTrue(s.paused)
+
+    def test_reject_invalid_interval_and_pause_stops_repeat(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')):
+            s = mac_scheduler.Scheduler()
+            values = {'from_date': '2026-10-05', 'to_date': '2026-10-06'}
+            for invalid in (0, 121, True, 1.5):
+                with self.assertRaises(ValueError):
+                    s.control('range_auto', dict(values, interval_minutes=invalid))
+            s.control('range_auto', dict(values, interval_minutes=10))
+            s.control('pause')
+            self.assertIsNone(s.auto_range)
+            self.assertIsNone(s.due_mode())
+
+    def test_expired_range_does_not_collect_past_dates(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(mac_scheduler, 'SETTINGS', os.path.join(tmp, 'settings.json')):
+            s = mac_scheduler.Scheduler()
+            s.paused = True
+            s.control('range_auto', {'from_date': '2026-10-05', 'to_date': '2026-10-05', 'interval_minutes': 10})
+            with patch.object(mac_scheduler, 'season_window', return_value=(2026, mac_scheduler.date(2026, 10, 6), mac_scheduler.date(2026, 11, 30))):
+                self.assertIsNone(s.due_mode())
+            self.assertIsNone(s.auto_range)
+
 class UploadTests(unittest.TestCase):
     def test_atomic_fast_forward_upload_and_secret_exclusion(self):
         with tempfile.TemporaryDirectory() as tmp:

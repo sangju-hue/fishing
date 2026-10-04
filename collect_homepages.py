@@ -218,16 +218,20 @@ def main():
     parser.add_argument('--year',type=int,help='시즌 연도 (기본: 올해, 12월이면 다음 해)')
     parser.add_argument('--incremental',action='store_true',help=argparse.SUPPRESS)
     parser.add_argument('--sites',nargs='*',help='점검할 도메인 (생략하면 전체)')
+    parser.add_argument('--ports',nargs='+',help='수집할 항구 (생략하면 전체)')
     parser.add_argument('--workers',type=int,default=8)
     parser.add_argument('--gap',type=float,default=1.0)
     span=parser.add_mutually_exclusive_group()
     span.add_argument('--near-days',type=int,help='오늘부터 N일까지만 수집')
     span.add_argument('--after-days',type=int,help='오늘+N일 이후만 수집')
+    span.add_argument('--from-date',help='지정 범위 수집 시작일 YYYY-MM-DD (--to-date와 함께)')
+    parser.add_argument('--to-date',help='지정 범위 수집 종료일 YYYY-MM-DD')
     args=parser.parse_args()
     if not 1<=args.workers<=8:parser.error('--workers: 1~8')
     boats=json.load(open(os.path.join(DATA,'boats.json'),encoding='utf-8'))['boats']
     sites=sites_from_catalog(boats)
     all_sites=sites.copy()
+    if args.ports:sites=sites_from_catalog([b for b in boats if b.get("port") in args.ports])
     if args.sites:
         selected={h.encode('idna').decode('ascii').removeprefix('www.') for h in args.sites}
         sites={k:v for k,v in sites.items() if k in selected}
@@ -237,6 +241,9 @@ def main():
     range_start,range_end=collection_start,end
     if args.near_days:range_end=min(end,collection_start+timedelta(days=args.near_days-1))
     if args.after_days:range_start=collection_start+timedelta(days=args.after_days)
+    if args.from_date or args.to_date:
+        try:range_start=max(collection_start,date.fromisoformat(args.from_date));range_end=min(end,date.fromisoformat(args.to_date))
+        except (TypeError,ValueError):parser.error('--from-date와 --to-date를 YYYY-MM-DD로 함께 지정하세요')
     if range_start>range_end:
         print(f'수집할 날짜 없음: {range_start}~{range_end}');return
     path=os.path.join(DATA,'status_homepages.json')
@@ -247,7 +254,7 @@ def main():
         for info in day.values():
             if info.get('boat_id') is not None:data['by_boat_id'].setdefault(ds,{})[str(info['boat_id'])]=info.copy()
     health={'checked_at':checked,'range':{'from':today.isoformat(),'to':end.isoformat()},'queried_range':{'from':range_start.isoformat(),'to':range_end.isoformat()},'sites':{}}
-    if args.sites:
+    if args.sites or args.ports:
         try:
             previous=json.load(open(os.path.join(DATA,'site_health.json'),encoding='utf-8'))
             if previous.get('range')==health['range']:

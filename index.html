@@ -73,12 +73,19 @@
       <button id="cfgSave" type="submit">설정 저장</button>
     </form>
     <form id="scrapeRange" class="scrape-config" autocomplete="off">
-      <span>범위 수집 1회:</span>
+      <span>범위 수집:</span>
       <input id="rngFrom" type="date" required aria-label="시작일" style="width:140px;text-align:left"><span>~</span>
       <input id="rngTo" type="date" required aria-label="종료일" style="width:140px;text-align:left">
-      <button id="rngRun" type="submit">범위 수집</button>
-      <span>선상24는 월 단위라 전체, 홈페이지는 이 날짜 범위만 한 번 수집</span>
+      <button id="rngRun" type="submit">범위수집 1회</button>
     </form>
+    <details style="margin:8px 0"><summary>범위 수집 항구 선택</summary><label><input id="rngAllPorts" type="checkbox" checked> 전체 항구</label><div id="rngPortOptions" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px"></div></details>
+    <div class="scrape-config">
+      <input id="rngInterval" type="number" min="1" max="120" step="1" value="10" aria-label="범위 자동 수집 간격(분)" style="width:75px"><span>분마다</span>
+      <button id="rngAuto" type="button">반복 시작</button>
+      <button id="rngAutoStop" type="button" disabled>반복 중지</button>
+      <span id="rngAutoStatus" role="status"></span>
+      <span>선택한 항구만 수집 · 선상24는 월 단위, 홈페이지는 선택한 날짜 범위</span>
+    </div>
     <p>날짜 1~60일, 분 1~120분. 저장하면 진행 중인 수집은 끝까지 하고 다음 회차부터 적용됩니다. 수집중지는 진행 중인 수집을 끝낸 뒤 멈춥니다.</p>
     <details id="scrapePlan">
       <summary>수집 방법 상세 보기</summary>
@@ -210,7 +217,7 @@ const koreaToday=new Intl.DateTimeFormat("sv-SE",{timeZone:"Asia/Seoul",year:"nu
 const seasonYear=Number(koreaToday.slice(0,4))+(Number(koreaToday.slice(5,7))===12?1:0);
 let selectedDate=koreaToday>=`${seasonYear}-09-01`&&koreaToday<=`${seasonYear}-11-30`?koreaToday:`${seasonYear}-09-01`;
 let activeMonth=0;
-let rangeResultFilter=null,rangeAvailableIds=new Set();
+let rangeResultFilter=null,rangeAvailableIds=new Set(),rangeResultPorts=new Set();
 const selectedBoatIds=new Set();
 const alertDates=new Set();
 let alertFeedback="";
@@ -399,7 +406,7 @@ function allDates(){
 }
 function renderMatrix(){
   const dates=allDates();
-  if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
+  if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>(!rangeResultPorts.size||rangeResultPorts.has(boat.port))&&dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
   const groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
   const monthGroups=[];
   dates.forEach(item=>{const label=`${item.month+1}월`,last=monthGroups.at(-1);if(last?.label===label)last.days++;else monthGroups.push({label,days:1})});
@@ -557,7 +564,18 @@ function initPorts(){
   });
   if(otherCount)$("#portFilter").insertAdjacentHTML("beforeend",`<option value="__other__">기타 (${otherCount})</option>`);
 }
-function clearRangeResultFilter(){rangeResultFilter=null;rangeAvailableIds.clear();$("#rangeResults").hidden=true}
+function initRangePorts(){
+  const ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,"ko"));
+  $("#rngPortOptions").innerHTML=ports.map(p=>`<label><input type="checkbox" class="rng-port" value="${escapeHtml(p)}" disabled> ${escapeHtml(p)}</label>`).join("");
+  $("#rngAllPorts").addEventListener("change",e=>document.querySelectorAll(".rng-port").forEach(c=>c.disabled=e.target.checked));
+}
+function selectedRangePorts(){
+  if($("#rngAllPorts").checked)return [];
+  const selected=new Set([...document.querySelectorAll(".rng-port:checked")].map(c=>c.value));
+  if(!selected.size)throw new Error("수집할 항구를 하나 이상 선택해 주세요.");
+  return [...new Set(BOATS.filter(b=>selected.has(normalizePort(b.port))).map(b=>b.port))];
+}
+function clearRangeResultFilter(){rangeResultFilter=null;rangeResultPorts.clear();rangeAvailableIds.clear();$("#rangeResults").hidden=true}
 $("#clearRangeResults").addEventListener("click",()=>{clearRangeResultFilter();renderMatrix();renderCards();renderDirectory();renderAlertBar()});
 document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListener("click",()=>{
   clearRangeResultFilter();
@@ -631,17 +649,20 @@ speciesTabs.forEach((tab,index)=>{
   function renderScraper(s){
     const state=$("#scrapeState");
     state.className="scrape-state"+(s.running?" running":s.paused?" paused":"");
-    state.textContent=s.running?"수집 중":s.paused?"중지됨":"켜짐";
+    state.textContent=s.running?"수집 중":s.auto_range?"범위 자동":s.paused?"중지됨":"켜짐";
     let msg=s.running?`${modeName[s.current_mode]||"수집"} 진행 중${s.progress?.step?` · ${s.progress.step}`:""} (시작 ${fmtTime(s.last_started_at)})`:"";
     if(s.running&&s.paused)msg+=" · 이 수집이 끝나면 멈춥니다";
     if(!s.running)msg=s.paused?"자동 수집 중지 상태":`다음 빠른 수집 ${fmtWait(s.next_fast_in)} 후 · 느린 수집 ${fmtWait(s.next_slow_in)} 후`;
     if(s.manual_pending)msg+=" · 수동수집 대기 중";
     msg+=` · 마지막 완료 ${fmtTime(s.last_finished_at)}${s.last_result==="failed"?" (일부 실패)":""}`;
     $("#scrapeSettingStatus").textContent=msg;
-    $("#scrapePause").disabled=s.paused;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
+    $("#scrapePause").disabled=s.paused&&!s.auto_range;$("#scrapeResume").disabled=!s.paused;$("#scrapeRun").disabled=!!s.manual_pending;
     const rf=$("#rngFrom"),rt=$("#rngTo"),yr=(s.last_started_at||new Date().toISOString()).slice(0,4),today=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
     rf.min=rt.min=today>`${yr}-09-01`?today:`${yr}-09-01`;rf.max=rt.max=`${yr}-11-30`;
     if(!rf.value)rf.value=today;if(!rt.value)rt.value=today;
+    $("#rngAutoStop").disabled=!s.auto_range;
+    $("#rngAutoStatus").textContent=s.auto_range?`${s.auto_range[0]}~${s.auto_range[1]} · ${s.range_interval_minutes}분 자동 · ${s.auto_range_ports?.length?s.auto_range_ports.join(", "):"전체 항구"} · 다음 수집 ${fmtWait(s.next_range_in)} 후`:"자동 범위 수집 꺼짐";
+    if(s.auto_range&&!s.running)$("#scrapeSettingStatus").textContent=`범위 자동 수집 켜짐 · 다음 수집 ${fmtWait(s.next_range_in)} 후`;
     if(s.pending_range)$("#scrapeSettingStatus").textContent+=` · 범위 수집 대기 중(${s.pending_range[0]}~${s.pending_range[1]})`;
     if(s.running&&s.current_mode==="range"&&s.active_range)$("#scrapeSettingStatus").textContent+=` · 범위 ${s.active_range[0]}~${s.active_range[1]}`;
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
@@ -657,10 +678,10 @@ speciesTabs.forEach((tab,index)=>{
           rangeResultsLoading=true;
           try{
             await loadData();
-            rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
+            rangeResultPorts=new Set(s.last_range_ports||[]);rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
             $("#search").value="";$("#portFilter").value="";
             document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
-            $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · 빈자리 있는 배만 표시${s.last_result==="failed"?" (일부 수집 실패)":""}`;
+            $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · ${s.last_range_ports?.length?s.last_range_ports.join(", "):"전체 항구"} · 빈자리 있는 배만 표시${s.last_result==="failed"?" (일부 수집 실패)":""}`;
             $("#rangeResults").hidden=false;
             renderMatrix();renderCards();renderDirectory();renderAlertBar();
             $("#matrixWrap").scrollLeft=0;$("#matrixWrap").scrollTop=0;
@@ -695,15 +716,30 @@ speciesTabs.forEach((tab,index)=>{
       }catch(err){$("#scrapeSettingStatus").textContent="저장 실패: 값 범위(날짜 1~60, 분 1~120)와 수집기 연결을 확인해 주세요.";scraperCsrf=null}
       finally{btn.disabled=false}
     });
+    $("#rngAuto").addEventListener("click",async e=>{
+      const a=$("#rngFrom").value,b=$("#rngTo").value,minutes=Number($("#rngInterval").value),btn=e.currentTarget;
+      if(!Number.isInteger(minutes)||minutes<1||minutes>120){$("#rngAutoStatus").textContent="수집 간격은 1~120분으로 입력해 주세요.";return}
+      if(!a||!b||a>b){$("#rngAutoStatus").textContent="올바른 시작일과 종료일을 선택해 주세요.";return}
+      let ports;try{ports=selectedRangePorts()}catch(err){$("#rngAutoStatus").textContent=err.message;return}
+      btn.disabled=true;
+      try{
+        if(!scraperCsrf)await refreshScraper();
+        const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify({action:"range_auto",from_date:a,to_date:b,interval_minutes:minutes,ports})});
+        renderScraper(s);
+      }catch(err){$("#rngAutoStatus").textContent="자동 범위 수집 설정 실패: 날짜와 맥 수집기 연결을 확인해 주세요."}
+      finally{btn.disabled=false}
+    });
+    $("#rngAutoStop").addEventListener("click",e=>scraperControl("range_auto_stop",e.currentTarget));
     $("#scrapeRange").addEventListener("submit",async e=>{
       e.preventDefault();
       const a=$("#rngFrom").value,b=$("#rngTo").value;
       if(a>b){$("#scrapeSettingStatus").textContent="시작일이 종료일보다 늦습니다.";return}
-      if(!confirm(`${a} ~ ${b} 범위를 한 번 수집할까요?`))return;
+      let ports;try{ports=selectedRangePorts()}catch(err){$("#scrapeSettingStatus").textContent=err.message;return}
+      if(!confirm(`${a} ~ ${b} · ${ports.length?ports.join(", "):"전체 항구"} 범위를 한 번 수집할까요?`))return;
       const btn=$("#rngRun");btn.disabled=true;
       try{
         if(!scraperCsrf)await refreshScraper();
-        const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify({action:"range",from_date:a,to_date:b})});
+        const s=await scraperFetch("/control",{method:"POST",headers:{"Content-Type":"application/json","X-CSRF-Token":scraperCsrf},body:JSON.stringify({action:"range",from_date:a,to_date:b,ports})});
         renderScraper(s);
       }catch(err){$("#scrapeSettingStatus").textContent="범위 수집 요청 실패: 날짜 범위(올해 9~11월, 오늘 이후)와 수집기 연결을 확인해 주세요.";scraperCsrf=null}
       finally{btn.disabled=false;setTimeout(refreshScraper,800)}
@@ -712,7 +748,7 @@ speciesTabs.forEach((tab,index)=>{
     refreshScraper();setInterval(()=>{if(!document.hidden)refreshScraper()},5000);
   }
 loadData().then(()=>{
-  initPorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
+  initPorts();initRangePorts();renderMatrix();renderCards();renderDirectory();renderAlertBar();
   requestAnimationFrame(()=>{
     const btn=$(".date-head.selected-col");
     const selected=btn ? btn.closest("th") : null;
