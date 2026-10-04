@@ -137,6 +137,7 @@ class Alerts:
             except Exception:
                 self.state['subscriptions']=before
                 raise
+            for row in rows:row['scope_port']=port;row['scope_all']=True
             self.save();self.on_change();return rows
 
     def remove(self,payload):
@@ -167,8 +168,20 @@ class Alerts:
             else:raise ValueError('지원하지 않는 동작')
             self.save();self.on_change()
 
+    def group_key(self,row):
+        import hashlib
+        key=[row['owner'],row['topic'],row['date'],row.get('created_at'),row.get('scope_port',self.port_name(row.get('port')))]
+        return hashlib.sha256(json.dumps(key,ensure_ascii=False).encode()).hexdigest()[:24]
+
     def admin(self,action,identifier):
         with self.lock:
+            if action in ('group_delete','group_pause','group_resume'):
+                rows=[r for r in self.state['subscriptions'] if self.group_key(r)==identifier]
+                if not rows:raise ValueError('신청 묶음 없음')
+                if action=='group_delete':self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
+                else:
+                    for r in rows:r['enabled']=action=='group_resume'
+                self.save();self.on_change();return
             row=next((r for r in self.state['subscriptions'] if r['id']==identifier),None)
             if not row:raise ValueError('등록 항목 없음')
             if action=='delete':self.state['subscriptions'].remove(row)
@@ -228,7 +241,7 @@ class Alerts:
 
     def snapshot(self):
         with self.lock:
-            rows=[{k:v for k,v in r.items() if k!='owner'} for r in self.state['subscriptions']]
+            rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
             return {'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):

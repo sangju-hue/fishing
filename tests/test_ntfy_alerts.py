@@ -47,6 +47,21 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_group_cancel_preserves_other_registrant(self):
+        self.write('boats.json',{'boats':[self.boat,dict(self.boat,bid=2,name='두번째호')]})
+        self.a.register_request(dict(self.p,bid=0,port='오천항'))
+        self.a.register(dict(self.p,owner='2'*32,topic='other-person'))
+        rows=self.a.snapshot()['subscriptions'];key=rows[0]['group_id']
+        self.assertEqual(key,rows[1]['group_id'])
+        self.assertNotEqual(key,rows[2]['group_id'])
+        self.a.admin('group_pause',key)
+        self.assertFalse(self.a.state['subscriptions'][0]['enabled'])
+        self.a.admin('group_resume',key)
+        self.assertTrue(self.a.state['subscriptions'][0]['enabled'])
+        self.a.admin('group_delete',key)
+        self.assertEqual(len(self.a.state['subscriptions']),1)
+        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person')
+
     def test_name_required(self):
         for label in ('','   ',None):
             with self.assertRaises(ValueError):self.a.register(dict(self.p,label=label))
