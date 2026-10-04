@@ -20,8 +20,8 @@ class NtfyTests(unittest.TestCase):
     def tearDown(self):self.tmp.cleanup()
     def write(self,path,obj):
         with open(self.base+'/data/'+path,'w') as f:json.dump(obj,f)
-    def result(self,state='available',checked=None):
-        self.write('status.json',{'by_boat_id':{self.ds:{'1':{'status':state,'remaining':2,'checked_at':checked or datetime.now(KST).isoformat(),'source_url':'https://example.com/day'}}}})
+    def result(self,state='available',checked=None,remaining=2):
+        self.write('status.json',{'by_boat_id':{self.ds:{'1':{'status':state,'remaining':remaining,'checked_at':checked or datetime.now(KST).isoformat(),'source_url':'https://example.com/day'}}}})
     def test_two_people_separate_delivery_and_duplicate_suppression(self):
         self.a.register(self.p);self.a.register(dict(self.p,owner='2'*32,topic='fishing-user-'+('b'*16)))
         self.result()
@@ -47,6 +47,18 @@ class NtfyTests(unittest.TestCase):
         with patch.object(self.a,'publish',side_effect=OSError):self.a.check()
         self.assertFalse(row['notified']);self.assertIn('전송 실패',row['error'])
         with patch.object(self.a,'publish') as send:self.a.check();send.assert_called_once()
+    def test_minimum_seats_crossing_and_unknown_count(self):
+        self.a.register(dict(self.p,min_seats=4))
+        with patch.object(self.a,'publish') as send:
+            self.result(remaining=2);self.a.check();send.assert_not_called()
+            self.result(remaining=None);self.a.check();send.assert_not_called()
+            self.result(remaining=4);self.a.check();self.assertEqual(send.call_count,1)
+            self.result(remaining=5);self.a.check();self.assertEqual(send.call_count,1)
+            self.result(remaining=3);self.a.check()
+            self.result(remaining=4);self.a.check();self.assertEqual(send.call_count,2)
+        for invalid in (0,101,True,1.5):
+            with self.assertRaises(ValueError):self.a.register(dict(self.p,min_seats=invalid))
+
     def test_short_custom_topic(self):
         self.assertEqual(self.a.register(dict(self.p,topic='a'))['topic'],'a')
         self.assertEqual(self.a.register(dict(self.p,topic='sam9'))['topic'],'sam9')

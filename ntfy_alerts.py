@@ -45,7 +45,7 @@ class Alerts:
         self.key=os.path.join(self.directory,'private.pem');self.path=os.path.join(self.directory,'state.json')
         self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
         self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[])
-        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None
+        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_error=''
         if not os.path.exists(self.key):
             subprocess.run([OPENSSL,'genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',self.key],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             os.chmod(self.key,0o600)
@@ -60,6 +60,26 @@ class Alerts:
     def save(self):
         with self.lock:
             atomic_json(self.path,self.state);os.chmod(self.path,0o600)
+            today=datetime.now(KST).date().isoformat()
+            topics=sorted({r['topic'] for r in self.state['subscriptions'] if r['date']>=today})
+            public_path=os.path.join(self.base,'data','ntfy_topics.json')
+            old=read(public_path,{})
+            if old.get('topics')!=topics:
+                atomic_json(public_path,{'topics':topics,'updated_at':stamp()})
+                self.topics_dirty=True
+
+    def publish_topics(self):
+        if not self.topics_dirty:return
+        import push_to_github
+        path=os.path.join(self.base,'data','ntfy_topics.json')
+        if not os.path.exists(push_to_github.TOKEN_FILE):
+            self.topics_error='GitHub 토픽 목록 갱신용 맥 인증정보 없음';return
+        before=read(path,{})
+        try:
+            push_to_github.publish_files({'data/ntfy_topics.json':path},'update active ntfy topic names')
+            self.topics_dirty=read(path,{})!=before;self.topics_error=''
+        except Exception:self.topics_error='GitHub 토픽 목록 갱신 재시도 대기'
+
 
     def catalog(self):return {int(b['bid']):b for b in read(os.path.join(self.base,'data','boats.json'),{}).get('boats',[])}
 
@@ -74,6 +94,8 @@ class Alerts:
         _,first,last=season_window()
         if not first<=d<=last:raise ValueError('오늘 이후 9~11월 날짜만 등록할 수 있습니다')
         if catalog[bid].get('canonical_bid') is not None:raise ValueError('현재 명부의 대표 선박을 선택하세요')
+        minimum=payload.get('min_seats',1)
+        if not isinstance(minimum,int) or isinstance(minimum,bool) or not 1<=minimum<=100:raise ValueError('최소 빈자리는 1~100 사이 정수')
         if len(str(payload.get('label',''))) > 16:raise ValueError('이름은 16자까지')
         with self.lock:
             rows=self.state['subscriptions']
@@ -81,11 +103,13 @@ class Alerts:
             old=next((r for r in rows if r['owner']==owner and r['topic']==topic and r['bid']==bid and r['date']==ds),None)
             if old:
                 old['enabled']=True
+                if old.get('min_seats',1)!=minimum:old['notified']=False
+                old['min_seats']=minimum
                 if persist:self.save()
                 return old
             if len(rows)>=5000 or sum(r['owner']==owner for r in rows)>=500:raise ValueError('등록 수 제한: 사용자당 500개, 전체 5000개')
             boat=catalog[bid]
-            row={'id':secrets.token_hex(8),'owner':owner,'topic':topic,'bid':bid,'date':ds,'label':str(payload.get('label','')),'boat':boat['name'],'port':boat.get('port',''),'enabled':True,'created_at':stamp(),'last_checked_at':None,'last_sent_at':None,'last_status':'unknown','observed':None,'notified':False,'error':''}
+            row={'id':secrets.token_hex(8),'owner':owner,'topic':topic,'bid':bid,'date':ds,'label':str(payload.get('label','')),'boat':boat['name'],'port':boat.get('port',''),'enabled':True,'min_seats':minimum,'created_at':stamp(),'last_checked_at':None,'last_sent_at':None,'last_status':'unknown','observed':None,'notified':False,'error':''}
             rows.append(row)
             if persist:self.save();self.on_change()
             return row
@@ -157,7 +181,7 @@ class Alerts:
                 if action=='add':
                     rows=self.register_request(p);row=rows[0]
                     description=f"{p.get('port') if p.get('port')!='*' else '전체 항구'} 전체 {len(rows)}척" if p.get('bid')==0 else f"{row['port']} {row['boat']}"
-                    try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} 감시를 등록했습니다.")
+                    try:self.publish(row['topic'],'빈자리 알림 등록 완료',f"{row['date']} {description} · {row.get('min_seats',1)}자리 이상일 때 알립니다.")
                     except Exception:row['error']='등록 완료 안내 전송 실패: 토픽 권한 또는 ntfy 연결 확인'
                 elif action=='delete':self.remove(p)
                 else:raise ValueError('지원하지 않는 신청')
@@ -178,7 +202,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[{k:v for k,v in r.items() if k!='owner'} for r in self.state['subscriptions']]
-            return {'online':self.online,'error':self.error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
+            return {'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':5}
 
     def check(self):
         catalog=self.catalog();sun=read(os.path.join(self.base,'data','status.json'),{});hp=read(os.path.join(self.base,'data','status_homepages.json'),{});health=read(os.path.join(self.base,'data','site_health.json'),{})
@@ -202,10 +226,13 @@ class Alerts:
             if bid in notices:state='maintenance'
             if ds in date_notices.get(bid,{}):state='conditional'
             r['last_status']=state;r['remaining']=info.get('remaining');r['source_checked_at']=checked
+            count=info.get('remaining')
+            known_count=isinstance(count,int) and not isinstance(count,bool)
+            qualifies=state=='available' and known_count and count>=r.get('min_seats',1)
             if r.get('observed')!=checked:
                 r['observed']=checked
-                if state!='available':r['notified']=False
-            if state=='available' and not r.get('notified'):
+                if state!='available' or known_count and not qualifies:r['notified']=False
+            if qualifies and not r.get('notified'):
                 if info.get('remaining') is not None and info['remaining']<=0:continue
                 url=info.get('source_url') or b.get('booking_page') or b.get('channels',{}).get('homepage') or b.get('channels',{}).get('sunsang24')
                 url=booking_url(url,ds)
@@ -224,4 +251,5 @@ class Alerts:
                 self.online=False;self.error='ntfy 신청 연결 실패 · 30초 후 재시도'
             try:self.check()
             except Exception:self.error='예약 데이터 확인 실패 · 재시도 대기'
+            self.publish_topics()
             time.sleep(30)
