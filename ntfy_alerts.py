@@ -45,7 +45,7 @@ class Alerts:
         self.key=os.path.join(self.directory,'private.pem');self.path=os.path.join(self.directory,'state.json')
         self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
         self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[])
-        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_error=''
+        self.online=False;self.error='';self.last_poll=None;self.on_change=lambda:None;self.topics_dirty=True;self.topics_feed_dirty=True;self.last_topic_feed=0;self.topics_error=''
         if not os.path.exists(self.key):
             subprocess.run([OPENSSL,'genpkey','-algorithm','RSA','-pkeyopt','rsa_keygen_bits:3072','-out',self.key],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
             os.chmod(self.key,0o600)
@@ -66,7 +66,15 @@ class Alerts:
             old=read(public_path,{})
             if old.get('topics')!=topics:
                 atomic_json(public_path,{'topics':topics,'updated_at':stamp()})
-                self.topics_dirty=True
+                self.topics_dirty=True;self.topics_feed_dirty=True
+
+    def publish_topic_feed(self):
+        if not self.topics_feed_dirty and time.monotonic()-self.last_topic_feed<300:return
+        path=os.path.join(self.base,'data','ntfy_topics.json');before=read(path,{})
+        try:
+            self.publish(self.config['inbox']+'-topics','사용 중인 토픽 목록',json.dumps(before,ensure_ascii=False))
+            self.topics_feed_dirty=read(path,{})!=before;self.last_topic_feed=time.monotonic()
+        except Exception:self.topics_error='실시간 토픽 목록 갱신 재시도 대기'
 
     def publish_topics(self):
         if not self.topics_dirty:return
@@ -311,6 +319,7 @@ class Alerts:
                 self.poll()
             except Exception:
                 self.online=False;self.error='ntfy 신청 연결 실패 · 30초 후 재시도'
+            self.publish_topic_feed()
             try:self.check()
             except Exception:self.error='예약 데이터 확인 실패 · 재시도 대기'
             self.publish_topics()

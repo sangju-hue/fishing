@@ -72,6 +72,15 @@ class NtfyTests(unittest.TestCase):
         self.assertEqual(len(self.a.state['subscriptions']),1)
         self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person')
 
+    def test_topic_feed_refreshes_on_registration_and_delete(self):
+        self.a.register(self.p)
+        with patch.object(self.a,'publish') as send:
+            self.a.publish_topic_feed();self.assertEqual(send.call_count,1)
+            self.assertEqual(json.loads(send.call_args.args[2])['topics'],[self.p['topic']])
+            self.a.publish_topic_feed();self.assertEqual(send.call_count,1)
+            self.a.remove(self.p);self.a.publish_topic_feed()
+            self.assertEqual(json.loads(send.call_args.args[2])['topics'],[])
+
     def test_name_required(self):
         for label in ('','   ',None):
             with self.assertRaises(ValueError):self.a.register(dict(self.p,label=label))
