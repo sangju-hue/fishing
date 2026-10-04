@@ -354,11 +354,21 @@ function normalizePort(port){
 const PORT_ORDER=['무창포항','오천항','영흥도','영종도','인천 만석부두','만석부두','남항','오이도','전곡항','장고항','삼길포항','마검포항','백사장항','신진도항','안흥항','안흥외항','태안','남당항','가경주항','구매항','영목항','원산도 선촌항','대천항','홍원항','야미도항','비응항','군산 비응항'];
 function portRank(port){const i=PORT_ORDER.indexOf(normalizePort(port));return i<0?999:i;}
 function comparePorts(a,b){return portRank(a.port)-portRank(b.port)||normalizePort(a.port).localeCompare(normalizePort(b.port),'ko');}
+function boatSearchText(boat){return [boat.name,boat.operator,boat.region,normalizePort(boat.port),boat.notes].filter(Boolean).join(" ").toLowerCase();}
+// 검색어가 배 이름에 걸리면 그 배의 선단(operator) 전체를 함께 보여주기 위한 캐시
+let searchOpCache={q:null,src:null,ops:new Set()};
+function searchOperators(q){
+  if(searchOpCache.q===q&&searchOpCache.src===BOATS)return searchOpCache.ops;
+  const ops=new Set();
+  BOATS.forEach(b=>{if(b.operator&&b.operator!=="기타"&&String(b.name||"").toLowerCase().includes(q))ops.add(b.operator)});
+  searchOpCache={q,src:BOATS,ops};
+  return ops;
+}
 function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
   const port=$("#portFilter").value;
-  const text=[boat.name,boat.operator,boat.region,normalizePort(boat.port),boat.notes].filter(Boolean).join(" ").toLowerCase();
-  return (!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&(!q||text.includes(q))&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
+  const qOk=!q||boatSearchText(boat).includes(q)||(boat.operator&&searchOperators(q).has(boat.operator));
+  return (!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!port||(port==='__other__'?smallPorts.has(normalizePort(boat.port)):normalizePort(boat.port)===port));
 }
 function matrixOperatorName(boat){return boat.operator||boat.name}
 function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
