@@ -720,19 +720,19 @@ function ntfyRemember(){try{localStorage.setItem('fishingNtfy',JSON.stringify({o
 function ntfyLink(){ntfyRemember()}
 function ntfyMessage(text){document.querySelector('#ntfyMessage').textContent=text}
 function ntfyValues(id){return [...document.querySelector('#'+id).selectedOptions].map(o=>o.value)}
-function ntfySet(id,values){const all=id==='ntfyPort'?'*':'0',wanted=new Set(values.map(String));if(wanted.has(all)){wanted.clear();wanted.add(all)}[...document.querySelector('#'+id).options].forEach(o=>o.selected=wanted.has(o.value));ntfyPicker(id)}
+function ntfySet(id,values){const all='*',wanted=new Set(values.map(String));if(wanted.has(all)){wanted.clear();wanted.add(all)}[...document.querySelector('#'+id).options].forEach(o=>o.selected=wanted.has(o.value));ntfyPicker(id)}
 function ntfyPicker(id){
  const select=document.querySelector('#'+id),picker=document.querySelector('#'+id+'Picker'),selected=[...select.selectedOptions];
  picker.querySelector('summary').textContent=selected.length?selected.map(o=>o.textContent).join(', '):'선택해 주세요';
  picker.querySelector('div').innerHTML=[...select.options].map(o=>`<label><input type="checkbox" data-picker="${id}" value="${escapeHtml(o.value)}" ${o.selected?'checked':''}>${escapeHtml(o.textContent)}</label>`).join('');
 }
-function ntfySelection(){const ports=ntfyValues('ntfyPort'),bids=ntfyValues('ntfyBoat');document.querySelector('#ntfySelection').textContent=`선택 범위: ${ports.includes('*')?'항구 전체':ports.join(', ')} · ${bids.includes('0')?'배 전체 ('+(document.querySelector('#ntfyBoat').options.length-1)+'척)':bids.length+'척 선택'}`;ntfyPicker('ntfyBoat')}
+function ntfySelection(){const ports=ntfyValues('ntfyPort'),bids=ntfyValues('ntfyBoat');document.querySelector('#ntfySelection').textContent=`선택 범위: ${ports.includes('*')?'항구 전체':ports.join(', ')} · ${bids.includes('*')?'배 전체 ('+(document.querySelector('#ntfyBoat').options.length-1)+'척)':bids.length+'척 선택'}`;ntfyPicker('ntfyBoat')}
 function ntfyBoatOptions(){
  const ports=ntfyValues('ntfyPort'),previous=ntfyValues('ntfyBoat');
- document.querySelector('#ntfyBoat').innerHTML='<option value="0">배 전체</option>'+BOATS.filter(b=>(ports.includes('*')||ports.includes(normalizePort(b.port)))&&!b.canonical_bid).sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(b=>`<option value="${b.bid}">${escapeHtml(b.name)}</option>`).join('');
- const valid=previous.filter(x=>[...document.querySelector('#ntfyBoat').options].some(o=>o.value===x));ntfySet('ntfyBoat',valid.length?valid:['0']);ntfyPicker('ntfyPort');ntfySelection();
+ document.querySelector('#ntfyBoat').innerHTML='<option value="*">배 전체</option>'+BOATS.filter(b=>(ports.includes('*')||ports.includes(normalizePort(b.port)))&&!b.canonical_bid).sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(b=>`<option value="${b.bid}">${escapeHtml(b.name)}</option>`).join('');
+ const valid=previous.filter(x=>[...document.querySelector('#ntfyBoat').options].some(o=>o.value===x));ntfySet('ntfyBoat',valid.length?valid:['*']);ntfyPicker('ntfyPort');ntfySelection();
 }
-function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0?['0']:[String(r.bid)]);ntfySelection()}
+function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0&&r.scope_all!==false?['*']:[String(r.bid)]);ntfySelection()}
 function ntfyShowTopics(data){
   const version=Date.parse(data.updated_at)||0;if(version<ntfyTopicsVersion)return;ntfyTopicsVersion=version;
   ntfyUsedTopics=data.topics||[];
@@ -848,13 +848,13 @@ async function initNtfy(){
   const season=currentSeason(),d=document.querySelector('#ntfyDate');d.value=season.start;d.min=season.start;d.max=season.last;
   const ports=[...new Set(BOATS.filter(b=>!b.canonical_bid).map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,'ko'));
   document.querySelector('#ntfyPort').innerHTML='<option value="*">항구 전체</option>'+ports.map(p=>`<option value="${escapeHtml(p)}">${escapeHtml(p)}</option>`).join('');
-  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['0']);ntfySelection();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
+  ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['*']);ntfySelection();ntfyLink();ntfyRenderMine();ntfyRefreshTopics();
   window.addEventListener('pagehide',()=>{ntfyTopicStream?.close();ntfyTopicStream=null;ntfyReplyStream?.close();ntfyReplyStream=null});
   window.addEventListener('pageshow',()=>{ntfyConnectTopics();ntfyConnectReplies()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyForm').addEventListener('change',e=>{
     const input=e.target.closest('[data-picker]');if(!input)return;
-    const id=input.dataset.picker,all=id==='ntfyPort'?'*':'0';let values=ntfyValues(id);
+    const id=input.dataset.picker,all='*';let values=ntfyValues(id);
     if(input.value===all)values=input.checked?[all]:[];
     else{values=values.filter(v=>v!==all&&v!==input.value);if(input.checked)values.push(input.value);}
     ntfySet(id,values);if(id==='ntfyPort')ntfyBoatOptions();else ntfySelection();
@@ -867,7 +867,7 @@ async function initNtfy(){
     ntfyEditing=null;document.querySelector('#ntfyRegister').textContent='구독';document.querySelector('#ntfyCancelEdit').hidden=true;document.querySelector('#ntfyForm').reset();ntfySelection();ntfyMessage('수정이 취소되었습니다.');
   });
   document.querySelector('#ntfyForm').addEventListener('submit',async e=>{
-    e.preventDefault();if(!document.querySelector('#ntfyLabel').value.trim()){ntfyMessage('이름을 입력해 주세요. 예: 홍길동');document.querySelector('#ntfyLabel').focus();return}const ports=ntfyValues('ntfyPort'),chosen=ntfyValues('ntfyBoat'),bids=chosen.includes('0')?[]:chosen.map(Number),bid=bids.length===1?bids[0]:0,boat=BOATS.find(b=>b.bid===bid),topic=document.querySelector('#ntfyTopic').value;
+    e.preventDefault();if(!document.querySelector('#ntfyLabel').value.trim()){ntfyMessage('이름을 입력해 주세요. 예: 홍길동');document.querySelector('#ntfyLabel').focus();return}const ports=ntfyValues('ntfyPort'),chosen=ntfyValues('ntfyBoat'),bids=chosen.includes('*')?[]:chosen.map(Number),bid=bids.length===1?bids[0]:0,boat=BOATS.find(b=>b.bid===bid),topic=document.querySelector('#ntfyTopic').value;
     const port=ports.includes('*')?'*':ports.join(', ');
     if(!ports.length||!chosen.length){ntfyMessage('항구와 배를 선택해 주세요.');return}
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
