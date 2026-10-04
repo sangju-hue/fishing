@@ -1,5 +1,5 @@
 {
- "checked_at": "2026-10-04T22:09:33+09:00",
+ "checked_at": "2026-10-04T22:11:27+09:00",
  "range": {
   "from": "2026-09-01",
   "to": "2026-11-30"
@@ -5316,20 +5316,16 @@
    "errors": []
   },
   "xn--c20bm9by0le8h59d54l.com": {
-   "status": "partial",
-   "url": "http://xn--c20bm9by0le8h59d54l.com/",
-   "entries": 44,
+   "status": "ok",
+   "url": "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk",
+   "entries": 58,
    "boats": [
-    "대물호",
     "팀대물호"
    ],
    "boat_ids": {
-    "대물호": 112,
     "팀대물호": 338
    },
-   "missing_boats": [
-    "대물호"
-   ],
+   "missing_boats": [],
    "deferred_boats": [],
    "boat_notices": {},
    "date_notices": {},
@@ -5337,8 +5333,30 @@
     "#공지사항#",
     "팀대물호"
    ],
-   "pages_checked": 9,
+   "pages_checked": 27,
    "booking_urls": [
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=04&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=05&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=06&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=07&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=08&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=09&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=10&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=11&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=12&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=13&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=14&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=15&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=16&mode=list&won=30&sel=day&PA_N_UID=2810#list",
+    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=17&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=18&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=19&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=20&mode=list&won=30&sel=day&PA_N_UID=2810#list",
@@ -5353,14 +5371,6 @@
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=29&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=30&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=10&day=31&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=01&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=02&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=03&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=04&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=05&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=06&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=07&mode=list&won=30&sel=day&PA_N_UID=2810#list",
-    "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=08&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=09&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=10&mode=list&won=30&sel=day&PA_N_UID=2810#list",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk&year=2026&month=11&day=11&mode=list&won=30&sel=day&PA_N_UID=2810#list",
@@ -13903,8 +13913,8 @@
  },
  "summary": {
   "sites": 143,
-  "entries": 10613,
+  "entries": 10627,
   "collected_boats": 229,
-  "missing_boats": 16
+  "missing_boats": 15
  }
 }

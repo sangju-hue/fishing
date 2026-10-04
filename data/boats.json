@@ -1582,20 +1582,21 @@
   {
    "bid": 112,
    "name": "대물호",
-   "operator": "오천항대물낚시",
+   "operator": "오천대물낚시",
    "region": "충남 보령시",
    "port": "오천항",
    "price": "",
    "capacity": null,
    "channels": {
-    "homepage": "http://xn--c20bm9by0le8h59d54l.com/",
-    "phone": "010-5016-1110"
+    "homepage": "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk"
    },
    "notes": "[대물호·위더스호·두드림호] 광어다운샷·참돔타이라바·백조기·농어외수질 (오천항대물낚시, 구 스카이피싱). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%EB%8C%80%EB%AC%BC%ED%98%B8?id=5731"
-   ]
+   ],
+   "canonical_bid": 338,
+   "catalog_correction": "사용자 확인 및 동일 공식 예약표에 따라 기존 대물호를 팀대물호338로 통합"
   },
   {
    "bid": 113,
@@ -5679,14 +5680,19 @@
    },
    "tags": [],
    "manual": false,
-   "operator": "오천항 대물낚시",
-   "catalog_checked_at": "2026-10-03T08:54:18+09:00",
+   "operator": "오천대물낚시",
+   "catalog_checked_at": "2026-10-04T22:11:04+09:00",
    "catalog_sources": [
     "https://naksigo.com/boat/%ED%8C%80%EB%8C%80%EB%AC%BC%ED%98%B8?id=6473",
     "https://thefishing.kr/reservation/list.php?uid=2810",
     "http://xn--c20bm9by0le8h59d54l.com/index.php?mid=bk"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "booking_names": [
+    "팀대물호",
+    "대물호"
+   ],
+   "notes": "사용자 확인: 오천대물낚시 팀대물호. 공식 예약표 이름 팀대물호."
   },
   {
    "bid": 339,
@@ -7144,5 +7150,5 @@
    "catalog_status": "booking_verified"
   }
  ],
- "updated_at": "2026-10-04T22:01:04+09:00"
+ "updated_at": "2026-10-04T22:11:04+09:00"
 }
