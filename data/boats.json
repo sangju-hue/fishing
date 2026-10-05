@@ -1516,14 +1516,13 @@
   {
    "bid": 109,
    "name": "뉴스카이호",
-   "operator": "스피드피싱",
+   "operator": "뉴스카이호",
    "region": "충남 보령시",
    "port": "오천항",
    "price": "",
    "capacity": null,
    "channels": {
-    "sunsang24": "https://newsky.sunsang24.com/ship/schedule_fleet",
-    "homepage": "http://www.ospeed.kr/index.php?mid=bk"
+    "sunsang24": "https://newsky.sunsang24.com/ship/schedule_fleet"
    },
    "notes": "[스피드호·썬가드호·뉴스카이호·랜드마크호·굿모닝호] 쭈꾸미·갑오징어·광어다운샷·문어 (스피드피싱). 2023년 선사 목록 기준",
    "catalog_checked_at": "2026-10-04T21:10:43.937267+09:00",
