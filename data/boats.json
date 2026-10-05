@@ -7699,6 +7699,38 @@
    "booking_names": [
     "천일호"
    ]
+  },
+  {
+   "name": "마성호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "operator": "푸른바다낚시",
+   "channels": {
+    "homepage": "http://www.blueseaho.com/reservation"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971152,
+   "booking_names": [
+    "마성호"
+   ]
+  },
+  {
+   "name": "뉴마성호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "operator": "푸른바다낚시",
+   "channels": {
+    "homepage": "http://www.blueseaho.com/reservation"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971153,
+   "booking_names": [
+    "뉴마성호"
+   ]
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
