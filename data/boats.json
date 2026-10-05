@@ -7669,6 +7669,54 @@
    "booking_names": [
     "뉴행진호"
    ]
+  },
+  {
+   "bid": 971144,
+   "name": "태백호",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://taebaekho.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 태백호",
+   "booking_names": [
+    "태백호"
+   ]
+  },
+  {
+   "bid": 971145,
+   "name": "태백8호",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://taebaekho.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 태백8호",
+   "booking_names": [
+    "태백8호"
+   ]
+  },
+  {
+   "bid": 971146,
+   "name": "대한호",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://taebaekho.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 대한호",
+   "booking_names": [
+    "대한호"
+   ]
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
