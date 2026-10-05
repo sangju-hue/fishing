@@ -237,7 +237,7 @@
 </ul><p>원본 사진을 카드 영역에 맞춰 표시했습니다.</p></details>
 </main>
 <script src="booking_routes.js"></script>
-<script src="alert-relay.js?v=20261005"></script>
+<script src="alert-relay.js?v=20261005-sync-v2"></script>
 <script>
 const TELEGRAM_BOT_USERNAME = "";
 let BOATS=[];
@@ -742,7 +742,7 @@ function ntfyBoatOptions(){
 }
 function ntfyRestore(r){ntfySet('ntfyPort',r.ports||r.scope_ports||[r.scopePort||r.scope_port||normalizePort(r.port)]);ntfyBoatOptions();ntfySet('ntfyBoat',r.bids?.length?r.bids:r.scope_all||r.bid===0&&r.scope_all!==false?['*']:[String(r.bid)]);ntfySelection()}
 function ntfyRenderMine(){
-  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<section class="ntfy-registrant"><h3>${escapeHtml(r.label||'이름 미입력')} · ${escapeHtml(r.topic)}</h3><div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port==='*'?'항구 전체':r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}">수정</button><button type="button" data-ntfy-manage="${i}">${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}">삭제</button></div></div></section>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
+  document.querySelector('#ntfyMine').innerHTML=ntfyMine.length?ntfyMine.map((r,i)=>`<section class="ntfy-registrant"><h3>${escapeHtml(r.label||'이름 미입력')} · ${escapeHtml(r.topic)}</h3><div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(r.port==='*'?'항구 전체':r.port)} · ${escapeHtml(r.boat)} · ${r.min_seats||1}자리 이상<br>${escapeHtml(r.state||'신청 전달됨')}</span><div class="ntfy-actions"><button type="button" data-ntfy-edit="${i}" ${ntfySyncing?'disabled':''}>수정</button><button type="button" data-ntfy-manage="${i}" ${ntfySyncing?'disabled':''}>${r.paused?'재시작':'중지'}</button><button type="button" data-ntfy-remove="${i}" ${ntfySyncing?'disabled':''}>삭제</button></div></div></section>`).join(''):'이 브라우저에서 신청한 알림이 없습니다.';
 }
 function ntfySubmissionGroup(){const form=document.querySelector('#ntfyForm'),key=JSON.stringify([document.querySelector('#ntfyDate').value,ntfyValues('ntfyPort'),ntfyValues('ntfyBoat'),document.querySelector('#ntfyTopic').value,document.querySelector('#ntfyLabel').value,document.querySelector('#ntfyMinSeats').value]);if(form.dataset.submissionKey!==key){form.dataset.submissionKey=key;form.dataset.submissionGroup=ntfyRandom().slice(0,16)}return form.dataset.submissionGroup;}
 let ntfyReplyTopic='',ntfyReplyStream=null;
@@ -797,6 +797,7 @@ async function ntfyRequest(payload){
     const result=await badaAlertRelay.submit({url:ntfyConfig.relay_url,requestId,receiptToken,message});
     localStorage.removeItem(pendingKey);
     if(!result.ok)throw Error(result.error||'신청 거절');
+    if(payload.action==='list')return badaAlertRelay.open(result.data,payload.response_key);
     return true;
   }
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
@@ -808,6 +809,16 @@ async function ntfyRequest(payload){
   if(ntfyReceipts.has(requestId))localStorage.removeItem(pendingKey);
   if(!result.ok)throw Error(result.error||'신청 거절');
   return true;
+}
+let ntfySyncing=false;
+async function ntfySyncMine(){
+ if(ntfyLocal||!ntfyCanConfigure||!ntfyConfig?.relay_url||!ntfyConfig?.supports_sync||ntfySyncing||ntfyEditing)return;
+ ntfySyncing=true;ntfyRenderMine();
+ try{
+  const rows=await ntfyRequest({action:'list',owner:ntfyOwner,response_key:ntfyRandom()+ntfyRandom()+ntfyRandom()+ntfyRandom()});
+  if(!Array.isArray(rows))throw Error('설정 응답 형식 오류');
+  ntfyMine=rows;ntfyRemember();ntfyRenderMine();
+ }catch(e){ntfyMessage('저장된 알림 동기화 실패: '+e.message)}finally{ntfySyncing=false;ntfyRenderMine()}
 }
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
@@ -840,7 +851,8 @@ async function initNtfy(){
   if(!document.querySelector('#ntfyTopic').value)document.querySelector('#ntfyTopic').value='fish-'+ntfyRandom();
   ntfySet('ntfyPort',['*']);ntfyBoatOptions();ntfySet('ntfyBoat',['*']);ntfySelection();ntfyLink();ntfyRenderMine();
   window.addEventListener('pagehide',()=>{ntfyReplyStream?.close();ntfyReplyStream=null});
-  window.addEventListener('pageshow',()=>{ntfyConnectReplies()});
+  window.addEventListener('pageshow',()=>{ntfyConnectReplies();ntfySyncMine()});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden)ntfySyncMine()});
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyForm').addEventListener('change',e=>{
     const input=e.target.closest('[data-picker]');if(!input)return;
@@ -888,7 +900,7 @@ async function initNtfy(){
     }button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
-  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectReplies();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
+  try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectReplies();ntfySyncMine();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);

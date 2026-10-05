@@ -1,8 +1,14 @@
-const assert=require('assert'),fs=require('fs'),{JSDOM}=require('../node_modules/jsdom');
-const w=new JSDOM('',{runScripts:'outside-only'}).window;w.URL=URL;w.AbortSignal=AbortSignal;
+const assert=require('assert'),fs=require('fs'),crypto=require('crypto'),{JSDOM}=require('../node_modules/jsdom');
+const w=new JSDOM('',{runScripts:'outside-only'}).window;w.URL=URL;w.AbortSignal=AbortSignal;w.TextDecoder=TextDecoder;Object.defineProperty(w.crypto,'subtle',{value:crypto.webcrypto.subtle});
 let calls=[],mode='ok';w.fetch=async(url,o)=>{calls.push([url,o]);return {ok:mode!=='deny',status:429,json:async()=>mode==='deny'?{error:'limited'}:url.endsWith('/requests')?{}:{done:true,ok:true}}};
 w.eval(fs.readFileSync('alert-relay.js','utf8'));
 (async()=>{let p={url:'https://fixture.workers.dev',requestId:'a'.repeat(32),receiptToken:'b'.repeat(32),message:'fish1:abc'};
+ const key=Buffer.alloc(64,1),iv=Buffer.alloc(16,2),aes=crypto.createCipheriv('aes-256-cbc',key.subarray(0,32),iv);
+ const cipher=Buffer.concat([aes.update(JSON.stringify([{ports:['무창포항','영흥도']}])) ,aes.final()]);
+ const mac=crypto.createHmac('sha256',key.subarray(32)).update(Buffer.concat([iv,cipher])).digest();
+ const sealed=[iv,cipher,mac].map(x=>x.toString('base64')).join('.');
+ assert.equal((await w.badaAlertRelay.open(sealed,key.toString('hex')))[0].ports[0],'무창포항');
+ await assert.rejects(w.badaAlertRelay.open(sealed,Buffer.alloc(64,3).toString('hex')),/검증/);
  assert.equal((await w.badaAlertRelay.submit(p)).ok,true);
  assert.equal(calls.length,2);assert.equal(calls[1][1].headers.Authorization,'Bearer '+p.receiptToken);
  assert.equal(JSON.parse(calls[0][1].body).message,p.message);

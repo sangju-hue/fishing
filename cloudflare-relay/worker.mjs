@@ -35,7 +35,8 @@ async function fetchHandler(req,env){
   }
   if(path==='/agent/results'&&req.method==='POST'){
    const p=await body(req);if(!ID.test(p.request_id)||typeof p.ok!=='boolean')return response(req,{error:'처리 결과 형식 오류'},400);
-   const result={request_id:p.request_id,ok:p.ok};if(!p.ok)result.error=String(p.error||'신청 처리 오류').slice(0,160);
+   if(p.data!==undefined&&(typeof p.data!=='string'||p.data.length>24000||! /^[A-Za-z0-9+/=.]+$/.test(p.data)))return response(req,{error:'응답 형식 오류'},400);
+   const result={request_id:p.request_id,ok:p.ok};if(p.ok&&p.data!==undefined)result.data=p.data;if(!p.ok)result.error=String(p.error||'신청 처리 오류').slice(0,160);
    await env.DB.prepare('UPDATE requests SET result = ?, message = NULL, done_at = ? WHERE id = ? AND result IS NULL').bind(JSON.stringify(result),now,p.request_id).run();
    return response(req,{ok:true});
   }

@@ -1,5 +1,13 @@
 /* Registration transport: encrypted requests only; ntfy remains phone delivery. */
-window.badaAlertRelay={async submit({url,requestId,receiptToken,message}){
+window.badaAlertRelay={async open(data,key){
+ const secret=Uint8Array.from(key.match(/../g),x=>parseInt(x,16));
+ const [iv,cipher,mac]=data.split('.').map(x=>Uint8Array.from(atob(x),c=>c.charCodeAt(0)));
+ const signed=new Uint8Array(iv.length+cipher.length);signed.set(iv);signed.set(cipher,iv.length);
+ const hmac=await crypto.subtle.importKey('raw',secret.slice(32),{name:'HMAC',hash:'SHA-256'},false,['verify']);
+ if(!await crypto.subtle.verify('HMAC',hmac,mac,signed))throw Error('설정 응답 검증 실패');
+ const aes=await crypto.subtle.importKey('raw',secret.slice(0,32),{name:'AES-CBC'},false,['decrypt']);
+ return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-CBC',iv},aes,cipher)));
+},async submit({url,requestId,receiptToken,message}){
  const endpoint=new URL(url);
  if(endpoint.protocol!=='https:'||!endpoint.hostname.endsWith('.workers.dev')||endpoint.username||endpoint.password||endpoint.search||endpoint.hash||!['','/'].includes(endpoint.pathname))throw Error('알림 중계 주소 오류');
  const base=url.replace(/\/$/,''),deadline=Date.now()+90000;

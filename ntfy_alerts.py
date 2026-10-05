@@ -59,7 +59,7 @@ class Alerts:
         config=read(config_path,{})
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
-        self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'supports_receipts':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'supports_receipts':True,'supports_sync':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
         import alert_relay
         relay=alert_relay.config(base)
         if relay:self.config['relay_url']=relay['url']
@@ -297,6 +297,32 @@ class Alerts:
         if label not in allowed:
             raise ValueError('관리자에 의해 기능이 제한되었습니다.')
 
+    def owned_requests(self,owner):
+        if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('신청자 식별값 오류')
+        groups={}
+        for r in self.state['subscriptions']:
+            if r['owner']!=owner:continue
+            key=(r['topic'],r['date'],r.get('request_group'),r.get('scope_port') or self.port_name(r.get('port')) if not r.get('request_group') else '')
+            groups.setdefault(key,[]).append(r)
+        result=[]
+        for rows in groups.values():
+            r=rows[0];ports=r.get('scope_ports') or [r.get('scope_port') or self.port_name(r.get('port'))]
+            all_boats=all(x.get('scope_all') for x in rows)
+            bids=[] if all_boats else [x['bid'] for x in rows]
+            port='*' if '*' in ports else ', '.join(ports)
+            result.append(dict(topic=r['topic'],date=r['date'],label=r.get('label',''),group=r.get('request_group'),bid=0,ports=ports,bids=bids,scopePort=port,port='항구 전체' if port=='*' else port,boat='배 전체' if all_boats else str(len(rows))+'척 선택',min_seats=r.get('min_seats',1),paused=not any(x['enabled'] for x in rows),state='중지' if not any(x['enabled'] for x in rows) else '구독 완료'))
+        return result
+
+    def sealed_requests(self,p):
+        import hashlib,hmac
+        key=p.get('response_key','')
+        if not isinstance(key,str) or not re.fullmatch(r'[a-f0-9]{128}',key):raise ValueError('응답 암호키 오류')
+        secret=bytes.fromhex(key);iv=secrets.token_bytes(16)
+        raw=json.dumps(self.owned_requests(p.get('owner')),ensure_ascii=False).encode()
+        encrypted=subprocess.run([OPENSSL,'enc','-aes-256-cbc','-K',secret[:32].hex(),'-iv',iv.hex()],input=raw,capture_output=True,check=True).stdout
+        mac=hmac.new(secret[32:],iv+encrypted,hashlib.sha256).digest()
+        return '.'.join(base64.b64encode(x).decode() for x in (iv,encrypted,mac))
+
     def process_relay_request(self,request_id,message):
         if not isinstance(request_id,str) or not re.fullmatch(r'[a-f0-9]{32}',request_id):
             raise ValueError('신청 식별값 오류')
@@ -308,11 +334,14 @@ class Alerts:
                 if p.get('request_id')!=request_id:raise ValueError('신청 식별값 오류')
                 action=p.get('action')
                 if action in ('add','update'):self.validate_public_name(p)
-                if action=='add':self.register_request(p)
+                data=None
+                if action=='list':data=self.sealed_requests(p)
+                elif action=='add':self.register_request(p)
                 elif action=='delete':self.remove(p)
                 elif action in ('pause','resume','update'):self.manage(p)
                 else:raise ValueError('지원하지 않는 신청')
                 result={'request_id':request_id,'ok':True}
+                if data is not None:result['data']=data
             except Exception as e:
                 result={'request_id':request_id,'ok':False,'error':str(e) if isinstance(e,ValueError) else '신청 처리 오류'}
             receipts[request_id]=result

@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch
 from tests import test_ntfy_alerts as fixtures
-from ntfy_alerts import Alerts
+from ntfy_alerts import Alerts,OPENSSL
 class RelayTests(unittest.TestCase):
     setUp=fixtures.NtfyTests.setUp
     tearDown=fixtures.NtfyTests.tearDown
@@ -44,4 +44,17 @@ class RelayTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'찾지 못했습니다'):
             self.a.manage(dict(self.p,action='update',ports=['*'],bids=[],old=[0,self.ds,self.p['topic'],'*','c'*16]))
         self.assertEqual(len(self.a.state['subscriptions']),2)
+    def test_owner_sync_uses_current_ports_and_hides_others(self):
+        rows=self.a.register_request(dict(self.p,ports=['*'],bids=[],group='a'*16))
+        self.a.register(dict(self.p,owner='2'*32,topic='fishing-user-'+('b'*16)))
+        import base64,hashlib,hmac,json,subprocess
+        key='d'*128;rid='e'*32
+        with patch.object(self.a,'decrypt',return_value={'action':'list','owner':self.p['owner'],'request_id':rid,'response_key':key}):
+            result=self.a.process_relay_request(rid,'cipher')
+        self.assertTrue(result['ok']);self.assertNotIn(self.p['topic'],result['data'])
+        iv,cipher,mac=[base64.b64decode(x) for x in result['data'].split('.')]
+        secret=bytes.fromhex(key)
+        self.assertEqual(mac,hmac.new(secret[32:],iv+cipher,hashlib.sha256).digest())
+        raw=subprocess.run([OPENSSL,'enc','-d','-aes-256-cbc','-K',secret[:32].hex(),'-iv',iv.hex()],input=cipher,capture_output=True,check=True).stdout
+        data=json.loads(raw);self.assertEqual(len(data),1);self.assertEqual(data[0]['ports'],['*']);self.assertEqual(data[0]['group'],'a'*16)
 if __name__=='__main__':unittest.main()
