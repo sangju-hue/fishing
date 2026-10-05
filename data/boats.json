@@ -7172,7 +7172,7 @@
    "port": "구매항",
    "region": "충남 태안군",
    "channels": {
-    "sunsang24": "fishinggate"
+    "sunsang24": "https://fishinggate.sunsang24.com/"
    },
    "booking_names": [
     "나무호"
@@ -7187,7 +7187,7 @@
    "port": "구매항",
    "region": "충남 태안군",
    "channels": {
-    "sunsang24": "araon"
+    "sunsang24": "https://araon.sunsang24.com/"
    },
    "booking_names": [
     "아라온3호"
@@ -7202,7 +7202,7 @@
    "port": "구매항",
    "region": "충남 태안군",
    "channels": {
-    "sunsang24": "dream"
+    "sunsang24": "https://dream.sunsang24.com/"
    },
    "booking_names": [
     "꿈에그린호"
@@ -7217,7 +7217,7 @@
    "port": "구매항",
    "region": "충남 태안군",
    "channels": {
-    "sunsang24": "fishbank"
+    "sunsang24": "https://fishbank.sunsang24.com/"
    },
    "booking_names": [
     "피쉬뱅크호"
@@ -7232,7 +7232,7 @@
    "port": "구매항",
    "region": "충남 태안군",
    "channels": {
-    "sunsang24": "akbari"
+    "sunsang24": "https://akbari.sunsang24.com/"
    },
    "booking_names": [
     "악바리호"
@@ -7253,6 +7253,321 @@
     "어울림호"
    ],
    "bid": 971115,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971116,
+   "name": "왔따호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "왔따호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971117,
+   "name": "파라호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "파라호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971118,
+   "name": "아우라호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "아우라호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971119,
+   "name": "오션러브호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "오션러브호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971120,
+   "name": "블랙펄호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "블랙펄호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971121,
+   "name": "플로렌스3호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "플로렌스3호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971122,
+   "name": "블루스카이호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "블루스카이호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971123,
+   "name": "레쓰비호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "레쓰비호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971124,
+   "name": "뉴스타피싱호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "뉴스타피싱호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971125,
+   "name": "안면피싱호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "안면피싱호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971126,
+   "name": "나성호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "나성호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971127,
+   "name": "해미르호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "해미르호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971128,
+   "name": "해풍1호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "해풍1호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971129,
+   "name": "블랙베어호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "블랙베어호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971130,
+   "name": "레드포스호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "레드포스호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971131,
+   "name": "페라리호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "페라리호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971132,
+   "name": "그랜드호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "그랜드호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971133,
+   "name": "피싱킬러호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "피싱킬러호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971134,
+   "name": "리치호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "리치호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971135,
+   "name": "바하호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "바하호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971136,
+   "name": "씽씽이호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "https://fishinggate.sunsang24.com/"
+   },
+   "booking_names": [
+    "씽씽이호"
+   ],
    "manual": true,
    "catalog_status": "booking_verified"
   }
