@@ -25,12 +25,12 @@ def poll_once(alerts,c):
     alerts.last_poll=__import__('ntfy_alerts').stamp();alerts.online=True;alerts.error=''
 
 def loop(alerts):
-    retry=30
+    retry=5
     while True:
         c=config(alerts.base)
         try:
             if not c:raise ValueError('알림 중계 설정 확인 필요')
-            poll_once(alerts,c);retry=30
+            poll_once(alerts,c);retry=5
         except Exception:
             alerts.online=False;alerts.error='알림 신청 중계 연결 재시도 중';retry=min(300,retry*2)
         time.sleep(retry)
