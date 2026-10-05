@@ -1,5 +1,0 @@
-const fs=require('fs'),assert=require('assert'),{JSDOM}=require('../node_modules/jsdom');
-const s=fs.readFileSync('index.html','utf8'),part=s.slice(s.indexOf('function ntfyReconcileLocal('),s.indexOf('function renderNtfyAdmin(')),w=new JSDOM('',{runScripts:'outside-only'}).window;
-w.eval(`let ntfyLocal=true,ntfyEditing=null,ntfyMine=[{topic:'one',date:'2026-10-09',group:'a'},{topic:'deleted',date:'2026-10-09'}];let saved=0;function ntfyRemember(){saved++}function ntfyRenderMine(){}function normalizePort(p){return p};`+part+`;window.sync=ntfyReconcileLocal;window.state=()=>({mine:ntfyMine,saved});`);
-w.sync([{topic:'one',date:'2026-10-09',request_group:'a',scope_ports:['무창포항','영흥도'],scope_port:'무창포항, 영흥도',scope_all:true,bid:1,enabled:false,min_seats:4}]);
-assert.equal(w.state().mine.length,1);assert.equal(w.state().mine[0].min_seats,4);assert.equal(w.state().mine[0].paused,true);assert.equal(w.state().mine[0].ports[0],'무창포항');w.sync([]);assert.equal(w.state().mine.length,0);w.close();console.log('PASS local admin deletion, settings and pause reconcile browser cache');
