@@ -7680,7 +7680,27 @@
    },
    "tags": [],
    "manual": false,
-   "bid": 971147
+   "bid": 971147,
+   "booking_names": [
+    "슈퍼노바호"
+   ],
+   "operator": "슈퍼노바"
+  },
+  {
+   "name": "슈퍼노바2호",
+   "port": "남항",
+   "region": "인천 중구",
+   "price": "",
+   "operator": "슈퍼노바",
+   "channels": {
+    "sunsang24": "https://supernova.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971148,
+   "booking_names": [
+    "슈퍼노바2호"
+   ]
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
