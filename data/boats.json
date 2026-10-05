@@ -7114,6 +7114,57 @@
    ],
    "notes": "사용자 지정 덕적바다낚시 실제 선박. 시간낚시 상품 제외.",
    "catalog_checked_at": "2026-10-04T22:17:27+09:00"
+  },
+  {
+   "bid": 971107,
+   "name": "청남호",
+   "port": "영목항",
+   "region": "충남 태안군",
+   "operator": "영목항 청남피싱",
+   "price": "",
+   "channels": {
+    "phone": "010-8820-6514",
+    "homepage": "http://www.chungnamho.com/index.php?mid=bk"
+   },
+   "booking_names": [
+    "청남호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971108,
+   "name": "뉴청남호",
+   "port": "영목항",
+   "region": "충남 태안군",
+   "operator": "영목항 청남피싱",
+   "price": "",
+   "channels": {
+    "phone": "010-8820-6514",
+    "homepage": "http://www.chungnamho.com/index.php?mid=bk"
+   },
+   "booking_names": [
+    "뉴청남호"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971109,
+   "name": "브라더스호",
+   "port": "영목항",
+   "region": "충남 태안군",
+   "operator": "영목항 청남피싱",
+   "price": "",
+   "channels": {
+    "phone": "010-8820-6514",
+    "homepage": "http://www.chungnamho.com/index.php?mid=bk"
+   },
+   "booking_names": [
+    "브라더스"
+   ],
+   "manual": true,
+   "catalog_status": "booking_verified"
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
