@@ -1,0 +1,10 @@
+const assert=require('assert'),fs=require('fs'),{JSDOM}=require('../node_modules/jsdom');
+const s=fs.readFileSync('index.html','utf8'),w=new JSDOM('<select id="portFilter"></select><select multiple id="ntfyPort"></select>',{runScripts:'outside-only'}).window;
+const block=(a,b)=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));
+const boats=['남항','남항','만석부두','인천 만석부두','오천항','오천항','오천항','영흥도','작은항'].map((port,i)=>({port,bid:i+1}));
+w.eval(`const BOATS=${JSON.stringify(boats)};const $=q=>document.querySelector(q);function escapeHtml(s){return String(s)}function ntfyValues(id){return [...document.querySelector('#'+id).selectedOptions].map(o=>o.value)};`+block('const PORT_ALIASES=','// Preferred ports first')+block('const smallPorts=new Set();','function initRangePorts(){')+block('function ntfyPortChoice(','function ntfyBoatOptions(){')+`;initPorts();document.querySelector('#ntfyPort').innerHTML=ntfyPortOptions();window.expand=ntfyExpandedPorts;`);
+const options=id=>[...w.document.querySelector('#'+id).options].slice(1).map(o=>[o.value,o.textContent]);
+assert.deepEqual(options('portFilter'),options('ntfyPort'));assert.equal(options('portFilter')[0][0],'인천');
+w.document.querySelector('#ntfyPort').value='인천';assert.deepEqual([...w.expand()].sort(),['남항','만석부두','인천 만석부두'].sort());
+w.document.querySelector('#ntfyPort').value='__other__';assert.deepEqual([...w.expand()],['작은항']);
+w.close();console.log('PASS: reservation/notification ports match, count ordering, Incheon and Other expand correctly');
