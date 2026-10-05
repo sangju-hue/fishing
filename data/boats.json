@@ -7688,7 +7688,7 @@
   },
   {
    "bid": 971145,
-   "name": "태백8호·대한호",
+   "name": "태백8호",
    "port": "마검포항",
    "region": "충남 · 태안/안면",
    "price": "",
@@ -7697,9 +7697,24 @@
    },
    "tags": [],
    "manual": false,
-   "operator": "마검포항 태백8호·대한호",
+   "operator": "마검포항 태백8호",
    "booking_names": [
-    "태백8호",
+    "태백8호"
+   ]
+  },
+  {
+   "bid": 971146,
+   "name": "대한호",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://taebaekho.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 태백8호",
+   "booking_names": [
     "대한호"
    ]
   }
