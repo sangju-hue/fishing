@@ -621,18 +621,6 @@
    ]
   },
   {
-   "name": "꿈에그린호",
-   "port": "태안",
-   "region": "충남 태안군",
-   "price": "얼린 2L 생수 지참 공지",
-   "channels": {
-    "sunsang24": "https://dream.sunsang24.com/ship/schedule_fleet"
-   },
-   "tags": [],
-   "manual": false,
-   "bid": 32
-  },
-  {
    "name": "블루오션2호",
    "port": "장고항",
    "region": "충남 당진시",
