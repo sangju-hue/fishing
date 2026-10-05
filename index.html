@@ -872,7 +872,7 @@ async function initNtfy(){
     const button=e.target.closest('[data-ntfy-remove],[data-ntfy-manage],[data-ntfy-edit]');if(!button)return;
     const i=Number(button.dataset.ntfyRemove??button.dataset.ntfyManage??button.dataset.ntfyEdit),r=ntfyMine[i];
     if(button.hasAttribute('data-ntfy-edit')){
-      ntfyEditing={index:i};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;ntfyRestore(r);document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyCancelEdit').hidden=false;document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('위 내용을 수정하고 수정 저장을 누르세요.');return;
+      ntfyEditing={index:i,group:r.group};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;ntfyRestore(r);document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyCancelEdit').hidden=false;document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('위 내용을 수정하고 수정 저장을 누르세요.');return;
     }
     const action=button.hasAttribute('data-ntfy-remove')?'delete':r.paused?'resume':'pause';
     if(action!=='delete'&&!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 중지·재시작 기능 적용을 기다려 주세요.');return}

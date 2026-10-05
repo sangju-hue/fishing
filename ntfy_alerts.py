@@ -190,6 +190,12 @@ class Alerts:
                 selector=dict(payload,bid=old[0],date=old[1],topic=old[2],port=old[3],group=old[4] if len(old)>4 else None)
             else:selector=payload
             rows=[r for r in self.state['subscriptions'] if self.matches(r,selector)]
+            if not rows and action=='update' and (selector.get('group') or selector.get('bid')==0):
+                # An older browser may retain a group ID replaced by a local edit.
+                # Recover only a single unambiguous group owned by this browser.
+                candidates=[r for r in self.state['subscriptions'] if r['owner']==selector.get('owner') and r['topic']==selector.get('topic') and r['date']==selector.get('date')]
+                groups={r.get('request_group') or ('legacy',r.get('scope_port',self.port_name(r.get('port')))) for r in candidates}
+                if len(groups)==1:rows=candidates
             if not rows:raise ValueError('본인이 신청한 알림을 찾지 못했습니다')
             if action in ('pause','resume'):
                 for r in rows:r['enabled']=action=='resume'
@@ -218,6 +224,9 @@ class Alerts:
             self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
             try:
                 p=dict(payload,owner=rows[0]['owner'])
+                groups={r.get('request_group') for r in rows}
+                if len(groups)==1 and next(iter(groups)):
+                    p['group']=next(iter(groups))
                 if 'ports' not in p and p.get('bid')==0 and all(r['date']==p.get('date') and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port')) for r in rows):
                     updated=[self.register(dict(p,bid=r['bid']),persist=False,existing_topics={r['topic'] for r in rows}) for r in rows]
                     for r in updated:r.update(scope_all=True,scope_port=p['port'])
