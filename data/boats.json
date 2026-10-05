@@ -7683,6 +7683,22 @@
    "booking_names": [
     "아리랑2호"
    ]
+  },
+  {
+   "name": "천일호",
+   "port": "방포항",
+   "region": "충남 태안군",
+   "price": "",
+   "operator": "천일피싱",
+   "channels": {
+    "homepage": "http://www.fishing1001.com/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971151,
+   "booking_names": [
+    "천일호"
+   ]
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
