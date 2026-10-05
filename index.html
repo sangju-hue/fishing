@@ -813,12 +813,14 @@ async function ntfyRequest(payload){
 let ntfySyncing=false;
 async function ntfySyncMine(){
  if(ntfyLocal||!ntfyCanConfigure||!ntfyConfig?.relay_url||!ntfyConfig?.supports_sync||ntfySyncing||ntfyEditing)return;
- ntfySyncing=true;ntfyRenderMine();
+ const submit=document.querySelector('#ntfyRegister');if(submit.disabled)return;
+ submit.disabled=true;ntfySyncing=true;ntfyRenderMine();
  try{
   const rows=await ntfyRequest({action:'list',owner:ntfyOwner,response_key:ntfyRandom()+ntfyRandom()+ntfyRandom()+ntfyRandom()});
   if(!Array.isArray(rows))throw Error('설정 응답 형식 오류');
+  if(!rows.length&&ntfyMine.length)throw Error('이 브라우저의 신청자 정보와 Mac의 신청 정보가 일치하지 않습니다. 신청한 브라우저인지 확인해 주세요.');
   ntfyMine=rows;ntfyRemember();ntfyRenderMine();
- }catch(e){ntfyMessage('저장된 알림 동기화 실패: '+e.message)}finally{ntfySyncing=false;ntfyRenderMine()}
+ }catch(e){ntfyMessage('저장된 알림 동기화 실패: '+e.message)}finally{ntfySyncing=false;submit.disabled=false;ntfyRenderMine()}
 }
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
