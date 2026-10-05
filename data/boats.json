@@ -3392,19 +3392,6 @@
   {
    "capacity": null,
    "channels": {
-    "homepage": "http://www.blueseaho.com"
-   },
-   "name": "푸른바다테스호",
-   "notes": "갑오징어/쭈꾸미. 2026년 YouTube 출조 영상 확인. 출처: 유튜브(케이팝스토리TV) + 블로그",
-   "operator": "푸른바다",
-   "port": "오천항",
-   "price": "",
-   "region": "충남 보령시",
-   "bid": 234
-  },
-  {
-   "capacity": null,
-   "channels": {
     "phone": "010-9371-0741",
     "sunsang24": "https://pigho.sunsang24.com/ship/schedule_fleet"
    },
