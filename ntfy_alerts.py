@@ -9,6 +9,7 @@ import secrets
 import subprocess
 import threading
 import time
+import unicodedata
 import urllib.request
 from datetime import date, datetime
 from urllib.parse import urlencode,urlsplit,urlunsplit,parse_qsl
@@ -43,6 +44,9 @@ class Alerts:
     def __init__(self, base):
         self.base=base;self.directory=os.path.join(base,'.ntfy');os.makedirs(self.directory,mode=0o700,exist_ok=True)
         self.key=os.path.join(self.directory,'private.pem');self.path=os.path.join(self.directory,'state.json')
+        # Public Pages requests are checked against this Mac-only file.
+        # Direct localhost /alerts requests deliberately bypass the allowlist.
+        self.public_name_allowlist=os.path.join(self.directory,'public_name_allowlist.json')
         self.topic_changed=threading.Event();self.lock=threading.RLock();self.state=read(self.path,{'subscriptions':[], 'seen':[], 'cursor':None})
         self.state.setdefault('subscriptions',[]);self.state.setdefault('seen',[]);self.state.setdefault('receipts',{})
         for receipt in self.state['receipts'].values():receipt.pop('retry_at',None)
@@ -56,6 +60,9 @@ class Alerts:
         if not config.get('inbox'):config['inbox']='fishing-requests-'+secrets.token_hex(16)
         pub=subprocess.run([OPENSSL,'pkey','-in',self.key,'-pubout','-outform','DER'],check=True,capture_output=True).stdout
         self.config={'version':1,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'supports_receipts':True,'server':SERVER,'inbox':config['inbox'],'public_key':base64.b64encode(pub).decode()}
+        import alert_relay
+        relay=alert_relay.config(base)
+        if relay:self.config['relay_url']=relay['url']
         atomic_json(config_path,self.config)
         self.save()
 
@@ -98,12 +105,12 @@ class Alerts:
 
     def catalog(self):return {int(b['bid']):b for b in read(os.path.join(self.base,'data','boats.json'),{}).get('boats',[])}
 
-    def register(self,payload,persist=True,catalog=None):
+    def register(self,payload,persist=True,catalog=None,existing_topics=()):
         catalog=self.catalog() if catalog is None else catalog
         owner=payload.get('owner','');topic=payload.get('topic','');ds=payload.get('date','');bid=payload.get('bid')
         if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('사용자 식별값 오류')
         if not isinstance(topic,str) or not re.fullmatch(r'[A-Za-z0-9_-]{1,64}',topic) or topic==self.config['inbox']:raise ValueError('토픽은 영문·숫자·_- 1~64자')
-        if len(topic)<24 and not any(r.get('topic')==topic for r in self.state['subscriptions']):raise ValueError('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요')
+        if len(topic)<24 and topic not in existing_topics and not any(r.get('topic')==topic for r in self.state['subscriptions']):raise ValueError('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요')
         if not isinstance(bid,int) or isinstance(bid,bool) or bid not in catalog:raise ValueError('선박을 선택하세요')
         try:d=date.fromisoformat(ds)
         except (TypeError,ValueError):raise ValueError('날짜를 선택하세요')
@@ -142,8 +149,8 @@ class Alerts:
             if re.search(pattern,raw):return name
         return raw
 
-    def register_request(self,payload):
-        if 'ports' not in payload and 'bids' not in payload and payload.get('bid')!=0:return [self.register(payload)]
+    def register_request(self,payload,existing_topics=()):
+        if 'ports' not in payload and 'bids' not in payload and payload.get('bid')!=0:return [self.register(payload,existing_topics=existing_topics)]
         catalog=self.catalog();ports=payload.get('ports',[payload.get('port')]);bids=payload.get('bids',[])
         if not isinstance(ports,list) or len(ports)>1000 or not ports or not all(isinstance(p,str) and p for p in ports):raise ValueError('항구를 선택하세요')
         if not isinstance(bids,list) or len(bids)>1000 or not all(isinstance(i,int) and not isinstance(i,bool) for i in bids):raise ValueError('배 선택 오류')
@@ -155,7 +162,7 @@ class Alerts:
         with self.lock:
             import copy
             before=copy.deepcopy(self.state['subscriptions'])
-            try:rows=[self.register(dict(payload,bid=bid),persist=False,catalog=catalog) for bid in ids]
+            try:rows=[self.register(dict(payload,bid=bid),persist=False,catalog=catalog,existing_topics=existing_topics) for bid in ids]
             except Exception:
                 self.state['subscriptions']=before
                 raise
@@ -188,7 +195,7 @@ class Alerts:
                 for r in rows:r['enabled']=action=='resume'
             elif action=='update':
                 self.state['subscriptions']=[r for r in self.state['subscriptions'] if r not in rows]
-                try:self.register_request(payload)
+                try:self.register_request(payload,existing_topics={r['topic'] for r in rows})
                 except Exception:
                     self.state['subscriptions']=before
                     raise
@@ -212,9 +219,9 @@ class Alerts:
             try:
                 p=dict(payload,owner=rows[0]['owner'])
                 if 'ports' not in p and p.get('bid')==0 and all(r['date']==p.get('date') and (p.get('port')=='*' or self.port_name(r.get('port'))==p.get('port')) for r in rows):
-                    updated=[self.register(dict(p,bid=r['bid']),persist=False) for r in rows]
+                    updated=[self.register(dict(p,bid=r['bid']),persist=False,existing_topics={r['topic'] for r in rows}) for r in rows]
                     for r in updated:r.update(scope_all=True,scope_port=p['port'])
-                else:updated=self.register_request(p)
+                else:updated=self.register_request(p,existing_topics={r['topic'] for r in rows})
                 if not any(r['enabled'] for r in rows):
                     for r in updated:r['enabled']=False
             except Exception:
@@ -271,6 +278,39 @@ class Alerts:
             if result.returncode:raise ValueError('신청 암호화 확인 실패')
         return json.loads(result.stdout)
 
+    def validate_public_name(self,payload):
+        """Restrict public registrations without publishing the allowed names."""
+        names=read(self.public_name_allowlist,[])
+        if not isinstance(names,list):names=[]
+        allowed={unicodedata.normalize('NFC',name.strip()).casefold() for name in names if isinstance(name,str) and name.strip()}
+        label=payload.get('label','')
+        label=unicodedata.normalize('NFC',label.strip()).casefold() if isinstance(label,str) else ''
+        if label not in allowed:
+            raise ValueError('관리자에 의해 기능이 제한되었습니다.')
+
+    def process_relay_request(self,request_id,message):
+        if not isinstance(request_id,str) or not re.fullmatch(r'[a-f0-9]{32}',request_id):
+            raise ValueError('신청 식별값 오류')
+        with self.lock:
+            receipts=self.state.setdefault('relay_receipts',{})
+            if request_id in receipts:return receipts[request_id]
+            try:
+                p=self.decrypt(message)
+                if p.get('request_id')!=request_id:raise ValueError('신청 식별값 오류')
+                action=p.get('action')
+                if action in ('add','update'):self.validate_public_name(p)
+                if action=='add':self.register_request(p)
+                elif action=='delete':self.remove(p)
+                elif action in ('pause','resume','update'):self.manage(p)
+                else:raise ValueError('지원하지 않는 신청')
+                result={'request_id':request_id,'ok':True}
+            except Exception as e:
+                result={'request_id':request_id,'ok':False,'error':str(e) if isinstance(e,ValueError) else '신청 처리 오류'}
+            receipts[request_id]=result
+            self.state['relay_receipts']=dict(list(receipts.items())[-2000:])
+            self.save()
+            return result
+
     def process_item(self,item):
         if item.get('event')=='open':self.poll();return
         if item.get('event')!='message':return
@@ -287,6 +327,8 @@ class Alerts:
                     if prior['owner']!=p.get('owner'):raise ValueError('신청 식별값 오류')
                     response=prior['result'];prior['pending']=True
                 else:
+                    if action in ('add','update','admin_update'):
+                        self.validate_public_name(p)
                     if action=='add':rows=self.register_request(p)
                     elif action=='delete':self.remove(p)
                     elif action in ('pause','resume','update'):self.manage(p)
@@ -455,9 +497,15 @@ class Alerts:
 
 
     def loop(self):
-        threading.Thread(target=self.stream_requests,daemon=True).start()
-        threading.Thread(target=self.topic_updates,daemon=True).start()
+        import alert_relay
+        relay=alert_relay.config(self.base)
+        if relay:threading.Thread(target=alert_relay.loop,args=(self,),daemon=True).start()
+        else:
+            threading.Thread(target=self.stream_requests,daemon=True).start()
+            threading.Thread(target=self.topic_updates,daemon=True).start()
         while True:
-            try:self.deliver_receipts();self.check()
+            try:
+                if not relay:self.deliver_receipts()
+                self.check()
             except Exception:self.error='예약 데이터 확인 실패 · 재시도 대기'
             time.sleep(30)

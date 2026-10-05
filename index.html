@@ -237,6 +237,7 @@
 </ul><p>원본 사진을 카드 영역에 맞춰 표시했습니다.</p></details>
 </main>
 <script src="booking_routes.js"></script>
+<script src="alert-relay.js?v=20261005"></script>
 <script>
 const TELEGRAM_BOT_USERNAME = "";
 let BOATS=[];
@@ -750,11 +751,11 @@ function ntfyReceiveReceipt(raw){
   try{const message=typeof raw==='string'?JSON.parse(raw):raw;if(message.event!=='message')return;const r=JSON.parse(message.message);if(!/^[a-f0-9]{32}$/.test(r.request_id))return;ntfyReceipts.set(r.request_id,r);const waiter=ntfyWaiters.get(r.request_id);if(waiter){ntfyWaiters.delete(r.request_id);waiter(r)};}catch(e){}
 }
 async function ntfyRecoverReceipts(){
-  if(!ntfyConfig||!ntfyReplyTopic)return;
+  if(!ntfyConfig||ntfyConfig.relay_url||!ntfyReplyTopic)return;
   try{const r=await fetch(`${ntfyConfig.server}/${ntfyReplyTopic}/json?poll=1&since=all`,{cache:'no-store',signal:AbortSignal.timeout(6000)});if(r.ok)(await r.text()).split('\n').filter(Boolean).forEach(ntfyReceiveReceipt)}catch(e){}
 }
 function ntfyConnectReplies(){
-  if(!ntfyCanConfigure||ntfyLocal||!ntfyConfig?.supports_receipts||ntfyReplyStream)return;
+  if(!ntfyCanConfigure||ntfyLocal||ntfyConfig?.relay_url||!ntfyConfig?.supports_receipts||ntfyReplyStream)return;
   ntfyReplyStream=new EventSource(`${ntfyConfig.server}/${ntfyReplyTopic}/sse?since=all`);
   ntfyReplyStream.onmessage=e=>ntfyReceiveReceipt(e.data);ntfyReplyStream.onopen=ntfyRecoverReceipts;
 }
@@ -774,7 +775,8 @@ async function ntfyRequest(payload){
   ntfyConnectReplies();
   const pendingKey='fishingNtfyPending',fingerprint=JSON.stringify(payload);let pending;try{pending=JSON.parse(localStorage.getItem(pendingKey)||'null')}catch(e){}
   const requestId=pending?.fingerprint===fingerprint?pending.requestId:ntfyRandom();
-  localStorage.setItem(pendingKey,JSON.stringify({fingerprint,requestId}));
+  const receiptToken=pending?.fingerprint===fingerprint&&pending.receiptToken?pending.receiptToken:ntfyRandom();
+  localStorage.setItem(pendingKey,JSON.stringify({fingerprint,requestId,receiptToken}));
   payload={...payload,request_id:requestId,reply_topic:ntfyReplyTopic};
   const key=await crypto.subtle.importKey('spki',Uint8Array.from(atob(ntfyConfig.public_key),c=>c.charCodeAt(0)),{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
   const raw=new TextEncoder().encode(JSON.stringify(payload));let message;
@@ -788,6 +790,14 @@ async function ntfyRequest(payload){
     const signed=new Uint8Array(iv.length+ciphertext.length);signed.set(iv);signed.set(ciphertext,iv.length);
     const mac=await crypto.subtle.sign('HMAC',macKey,signed),wrapped=await crypto.subtle.encrypt({name:'RSA-OAEP'},key,secret);
     message='fish2:'+ [wrapped,iv,ciphertext,mac].map(b64).join('.');
+  }
+  if(ntfyConfig.relay_url){
+    if(pending?.fingerprint===fingerprint&&pending.message)message=pending.message;
+    localStorage.setItem(pendingKey,JSON.stringify({fingerprint,requestId,receiptToken,message}));
+    const result=await badaAlertRelay.submit({url:ntfyConfig.relay_url,requestId,receiptToken,message});
+    localStorage.removeItem(pendingKey);
+    if(!result.ok)throw Error(result.error||'신청 거절');
+    return true;
   }
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
   try{

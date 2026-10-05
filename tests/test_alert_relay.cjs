@@ -1,0 +1,12 @@
+const assert=require('assert'),fs=require('fs'),{JSDOM}=require('../node_modules/jsdom');
+const w=new JSDOM('',{runScripts:'outside-only'}).window;w.URL=URL;w.AbortSignal=AbortSignal;
+let calls=[],mode='ok';w.fetch=async(url,o)=>{calls.push([url,o]);return {ok:mode!=='deny',status:429,json:async()=>mode==='deny'?{error:'limited'}:url.endsWith('/requests')?{}:{done:true,ok:true}}};
+w.eval(fs.readFileSync('alert-relay.js','utf8'));
+(async()=>{let p={url:'https://fixture.workers.dev',requestId:'a'.repeat(32),receiptToken:'b'.repeat(32),message:'fish1:abc'};
+ assert.equal((await w.badaAlertRelay.submit(p)).ok,true);
+ assert.equal(calls.length,2);assert.equal(calls[1][1].headers.Authorization,'Bearer '+p.receiptToken);
+ assert.equal(JSON.parse(calls[0][1].body).message,p.message);
+ await assert.rejects(w.badaAlertRelay.submit({...p,url:'https://bad.test'}),/주소/);
+ mode='deny';await assert.rejects(w.badaAlertRelay.submit(p),/limited/);
+ w.close();console.log('PASS: browser relay submit, receipt bearer, endpoint validation, denial');
+})().catch(e=>{console.error(e);process.exitCode=1;w.close()});

@@ -12,7 +12,7 @@ class PublicHandler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(BASE),**kwargs)
     def send_head(self):
         path=unquote(urlsplit(self.path).path)
-        allowed=path in ('/','/index.html','/booking_routes.js') or path.startswith('/data/') and path[6:] in PUBLIC_DATA
+        allowed=path in ('/','/index.html','/booking_routes.js','/alert-relay.js','/bada.css','/theme.js','/bada-ui.js') or path in ('/design/assets/Ocellated_octopus.jpg','/design/assets/Sepia_esculenta_Kamo.jpg','/design/assets/Sebastes_schlegelii_by_OpenCage_2.jpg','/design/assets/Trichiurus_lepturus_by_OpenCage.jpg','/design/assets/octopus.jpg') or path.startswith('/data/') and path[6:] in PUBLIC_DATA
         if not allowed or any(part.startswith('.') for part in path.split('/') if part):self.send_error(404);return None
         full=(BASE/path.lstrip('/')).resolve()
         if full!=BASE and BASE not in full.parents:self.send_error(404);return None

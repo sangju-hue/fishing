@@ -15,6 +15,7 @@ class NtfyTests(unittest.TestCase):
         self.tmp=tempfile.TemporaryDirectory();self.base=self.tmp.name;os.mkdir(self.base+'/data')
         self.boat={'bid':1,'name':'화니호','port':'오천항','channels':{'homepage':'https://example.com'}}
         self.write('boats.json',{'boats':[self.boat]});self.a=Alerts(self.base)
+        with open(self.a.public_name_allowlist,'w') as f:json.dump(['홍길동'],f)
         self.ds=(datetime.now(KST)+timedelta(days=1)).date().isoformat()
         self.p={'label':'홍길동','action':'add','owner':'1'*32,'topic':'fishing-user-'+('a'*16),'bid':1,'date':self.ds}
     def tearDown(self):self.tmp.cleanup()
@@ -22,6 +23,27 @@ class NtfyTests(unittest.TestCase):
         with open(self.base+'/data/'+path,'w') as f:json.dump(obj,f)
     def result(self,state='available',checked=None,remaining=2):
         self.write('status.json',{'by_boat_id':{self.ds:{'1':{'status':state,'remaining':remaining,'checked_at':checked or datetime.now(KST).isoformat(),'source_url':'https://example.com/day'}}}})
+    def test_existing_short_topic_can_be_updated_but_new_short_topic_cannot(self):
+        r=self.a.register(self.p);r['topic']='legacy';self.a.save()
+        self.a.manage(dict(self.p,action='update',topic='legacy',min_seats=4,old=[1,self.ds,'legacy','오천항']))
+        self.assertEqual(self.a.state['subscriptions'][0]['min_seats'],4)
+        with self.assertRaises(ValueError):
+            self.a.register(dict(self.p,topic='new-short',existing_topics=['new-short']))
+        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'legacy')
+
+    def test_admin_can_update_legacy_short_topic(self):
+        r=self.a.register(self.p);r['topic']='legacy';self.a.save()
+        self.a.admin_update(dict(self.p,id=self.a.group_key(r),topic='legacy',min_seats=3))
+        self.assertEqual(self.a.state['subscriptions'][0]['min_seats'],3)
+
+    def test_public_names_ignore_case_and_local_registration_bypasses_list(self):
+        with open(self.a.public_name_allowlist,'w') as f:json.dump(['allowed-user'],f)
+        self.a.validate_public_name({'label':' ALLOWED-USER '})
+        with self.assertRaisesRegex(ValueError,'관리자에 의해'):
+            self.a.validate_public_name({'label':'outside-user'})
+        self.a.register(dict(self.p,label='outside-user'))
+        self.assertEqual(len(self.a.state['subscriptions']),1)
+
     def test_two_people_separate_delivery_and_duplicate_suppression(self):
         self.a.register(self.p);self.a.register(dict(self.p,owner='2'*32,topic='fishing-user-'+('b'*16)))
         self.result()
@@ -60,7 +82,7 @@ class NtfyTests(unittest.TestCase):
     def test_group_cancel_preserves_other_registrant(self):
         self.write('boats.json',{'boats':[self.boat,dict(self.boat,bid=2,name='두번째호')]})
         self.a.register_request(dict(self.p,bid=0,port='오천항'))
-        self.a.register(dict(self.p,owner='2'*32,topic='other-person'))
+        self.a.register(dict(self.p,owner='2'*32,topic='other-person-'+'b'*24))
         rows=self.a.snapshot()['subscriptions'];key=rows[0]['group_id']
         self.assertEqual(key,rows[1]['group_id'])
         self.assertNotEqual(key,rows[2]['group_id'])
@@ -70,7 +92,7 @@ class NtfyTests(unittest.TestCase):
         self.assertTrue(self.a.state['subscriptions'][0]['enabled'])
         self.a.admin('group_delete',key)
         self.assertEqual(len(self.a.state['subscriptions']),1)
-        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person')
+        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'other-person-'+'b'*24)
 
     def test_stream_open_reconciles_once_keepalive_does_not_poll(self):
         with patch.object(self.a,'poll') as poll:
@@ -104,30 +126,23 @@ class NtfyTests(unittest.TestCase):
         self.a.topic_changed.clear();self.a.topics_feed_dirty=False
         item('a',self.p);self.assertFalse(self.a.topic_changed.is_set())
         self.a.process_item({'event':'keepalive'});self.assertEqual(self.a.state['cursor'],'a')
-        changed=dict(self.p,action='update',old=[1,self.ds,self.p['topic'],'오천항'],topic='new-topic')
-        item('b',changed);self.assertTrue(self.a.topic_changed.is_set())
-        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'new-topic')
+        changed=dict(self.p,action='update',old=[1,self.ds,self.p['topic'],'오천항'],topic='new-topic-'+'c'*24)
+        item('b',changed);self.assertFalse(self.a.topic_changed.is_set())
+        self.assertEqual(self.a.state['subscriptions'][0]['topic'],'new-topic-'+'c'*24)
         item('c',dict(changed,action='delete'));self.assertEqual(self.a.state['subscriptions'],[])
         self.assertEqual(self.a.state['cursor'],'c')
 
-    def test_feed_failure_retries_and_concurrent_change_survives(self):
-        self.a.register(self.p)
-        with patch.object(self.a,'publish',side_effect=OSError):self.a.publish_topic_feed()
-        self.assertTrue(self.a.topics_feed_dirty)
-        def mutate(*args):self.a.remove(self.p)
-        with patch.object(self.a,'publish',side_effect=mutate):self.a.publish_topic_feed()
-        self.assertTrue(self.a.topics_feed_dirty)
-        with patch.object(self.a,'publish'):self.a.publish_topic_feed()
-        self.assertFalse(self.a.topics_feed_dirty)
-
-    def test_topic_feed_refreshes_on_registration_and_delete(self):
+    def test_private_topics_never_published(self):
         self.a.register(self.p)
         with patch.object(self.a,'publish') as send:
-            self.a.publish_topic_feed();self.assertEqual(send.call_count,1)
-            self.assertEqual(json.loads(send.call_args.args[2])['topics'],[self.p['topic']])
-            self.a.publish_topic_feed();self.assertEqual(send.call_count,1)
-            self.a.remove(self.p);self.a.publish_topic_feed()
-            self.assertEqual(json.loads(send.call_args.args[2])['topics'],[])
+            self.a.publish_topic_feed()
+            data=json.loads(send.call_args.args[2])
+            self.assertEqual(data['topics'],[]);self.assertEqual(data['settings'],{})
+        self.assertNotIn('public_topics',self.a.snapshot())
+        self.a.topics_feed_dirty=False;self.a.topic_changed.clear()
+        self.a.register(dict(self.p,min_seats=4))
+        self.assertFalse(self.a.topics_feed_dirty)
+        self.assertFalse(self.a.topic_changed.is_set())
 
     def test_name_required(self):
         for label in ('','   ',None):
@@ -163,7 +178,9 @@ class NtfyTests(unittest.TestCase):
             with self.assertRaises(ValueError):self.a.register(dict(self.p,min_seats=invalid))
 
     def test_short_custom_topic(self):
-        self.assertEqual(self.a.register(dict(self.p,topic='a'))['topic'],'a')
+        for topic in ('a','sam9'):
+            with self.assertRaises(ValueError):self.a.register(dict(self.p,topic=topic))
+        self.a.state['subscriptions'].append(dict(self.p,topic='sam9',enabled=True,min_seats=1))
         self.assertEqual(self.a.register(dict(self.p,topic='sam9'))['topic'],'sam9')
         for topic in ('','한글','two words','a/b'):
             with self.assertRaises(ValueError):self.a.register(dict(self.p,topic=topic))
