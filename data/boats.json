@@ -602,11 +602,11 @@
   },
   {
    "name": "원피스호",
-   "port": "구매항",
-   "region": "충남 태안군",
+   "port": "남당항",
+   "region": "충남 홍성군",
    "price": "로드 대여/채비 구입 안내",
    "channels": {
-    "homepage": "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation"
+    "homepage": "http://www.agamifishing.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
@@ -615,7 +615,8 @@
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
     "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation"
-   ]
+   ],
+   "operator": "아가미피싱"
   },
   {
    "name": "꿈에그린호",
@@ -7700,6 +7701,38 @@
    "bid": 971153,
    "booking_names": [
     "뉴마성호"
+   ]
+  },
+  {
+   "name": "동백1호",
+   "port": "남당항",
+   "region": "충남 홍성군",
+   "price": "",
+   "operator": "아가미피싱",
+   "channels": {
+    "homepage": "http://www.agamifishing.co.kr/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971154,
+   "booking_names": [
+    "동백1호"
+   ]
+  },
+  {
+   "name": "아가미호",
+   "port": "남당항",
+   "region": "충남 홍성군",
+   "price": "",
+   "operator": "아가미피싱",
+   "channels": {
+    "homepage": "http://www.agamifishing.co.kr/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971155,
+   "booking_names": [
+    "아가미호"
    ]
   }
  ],
