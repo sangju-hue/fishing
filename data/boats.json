@@ -7593,15 +7593,15 @@
   {
    "bid": 971141,
    "name": "하와이호",
-   "port": "남당항",
-   "region": "충남 · 남당항",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
    "price": "",
    "channels": {
     "homepage": "http://www.newhawaii.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "남당항 하와이호",
+   "operator": "마검포항 하와이호",
    "booking_names": [
     "하와이호"
    ]
@@ -7609,15 +7609,15 @@
   {
    "bid": 971142,
    "name": "만선호",
-   "port": "남당항",
-   "region": "충남 · 남당항",
+   "port": "마검포항",
+   "region": "충남 · 태안/안면",
    "price": "",
    "channels": {
     "homepage": "http://www.newhawaii.co.kr/index.php?mid=bk"
    },
    "tags": [],
    "manual": false,
-   "operator": "남당항 만선호",
+   "operator": "마검포항 만선호",
    "booking_names": [
     "만선호"
    ]
