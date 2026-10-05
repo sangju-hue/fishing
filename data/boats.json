@@ -7165,6 +7165,96 @@
    ],
    "manual": true,
    "catalog_status": "booking_verified"
+  },
+  {
+   "name": "나무호",
+   "operator": "구매항 피싱게이트",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "fishinggate"
+   },
+   "booking_names": [
+    "나무호"
+   ],
+   "bid": 971110,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "아라온3호",
+   "operator": "구매항 아라온피싱",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "araon"
+   },
+   "booking_names": [
+    "아라온3호"
+   ],
+   "bid": 971111,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "꿈에그린호",
+   "operator": "구매항 꿈에그린호",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "dream"
+   },
+   "booking_names": [
+    "꿈에그린호"
+   ],
+   "bid": 971112,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "피쉬뱅크호",
+   "operator": "구매항 피쉬뱅크호",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "fishbank"
+   },
+   "booking_names": [
+    "피쉬뱅크호"
+   ],
+   "bid": 971113,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "악바리호",
+   "operator": "구매항 악바리호",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "sunsang24": "akbari"
+   },
+   "booking_names": [
+    "악바리호"
+   ],
+   "bid": 971114,
+   "manual": true,
+   "catalog_status": "booking_verified"
+  },
+  {
+   "name": "어울림호",
+   "operator": "구매항 바다이야기",
+   "port": "구매항",
+   "region": "충남 태안군",
+   "channels": {
+    "homepage": "https://eoulim.thefishing.kr/index.php?mid=bk"
+   },
+   "booking_names": [
+    "어울림호"
+   ],
+   "bid": 971115,
+   "manual": true,
+   "catalog_status": "booking_verified"
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
