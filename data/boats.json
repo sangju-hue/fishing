@@ -7392,21 +7392,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 971125,
-   "name": "안면피싱호",
-   "operator": "구매항 피싱게이트",
-   "port": "구매항",
-   "region": "충남 태안군",
-   "channels": {
-    "sunsang24": "https://fishinggate.sunsang24.com/"
-   },
-   "booking_names": [
-    "안면피싱호"
-   ],
-   "manual": true,
-   "catalog_status": "booking_verified"
-  },
-  {
    "bid": 971126,
    "name": "나성호",
    "operator": "구매항 피싱게이트",
@@ -7483,7 +7468,7 @@
   },
   {
    "bid": 971131,
-   "name": "페라리호",
+   "name": "페라리호 (구)안면피싱호",
    "operator": "구매항 피싱게이트",
    "port": "구매항",
    "region": "충남 태안군",
@@ -7491,7 +7476,9 @@
     "sunsang24": "https://fishinggate.sunsang24.com/"
    },
    "booking_names": [
-    "페라리호"
+    "페라리호 (구)안면피싱호",
+    "페라리호",
+    "안면피싱호"
    ],
    "manual": true,
    "catalog_status": "booking_verified"
