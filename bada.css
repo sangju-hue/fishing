@@ -23,3 +23,21 @@ dialog{width:min(760px,calc(100% - 24px));max-height:85vh;overflow:auto;color:va
 
 .mobile-actions{display:none}#themeSettingsDialog{max-width:420px}#themeSettingsDialog .theme-switch{margin:0;width:100%;display:flex}#themeSettingsDialog .theme-switch button{flex:1;min-height:44px;border-color:var(--line)}
 @media(max-width:620px){.site-header>.theme-switch{display:none}.mobile-actions{display:flex;align-items:center;gap:8px;width:100%}.mobile-actions .mobile-alert,.mobile-actions button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface2);color:var(--text);font-size:13px;white-space:nowrap;cursor:pointer}.mobile-actions #themeSettingsOpen{margin-left:auto;width:44px;padding:10px;flex-shrink:0}}
+
+/* Compact availability cards below the booking table. */
+#availableOperators{padding-top:12px}
+#availableOperators .result-head{margin-bottom:8px;gap:4px}
+#availableOperators .operator-grid{gap:8px;align-items:start}
+#availableOperators .boat-card{padding:10px 12px;gap:0;border-radius:10px}
+#availableOperators h3{margin:0 0 4px;font-size:15px;line-height:1.3}
+#availableOperators .boat-card p{margin:0;padding:4px 0;font-size:12px;line-height:1.4}
+#availableOperators .boat-card p+p{border-top:1px solid var(--line)}
+#availableOperators .channel{min-height:0;padding:0 2px;border:0;background:transparent;border-radius:0;font-size:12px;line-height:1.4;text-decoration:underline;color:var(--sea)}
+@media(max-width:620px){
+#availableOperators{padding-top:8px}
+#availableOperators .result-head h2{font-size:17px}
+#availableOperators .operator-grid{gap:5px}
+#availableOperators .boat-card{padding:7px 9px;border-radius:8px;gap:0}
+#availableOperators h3{margin:0 0 2px;font-size:14px;line-height:1.25}
+#availableOperators .boat-card p{padding:3px 0;line-height:1.3}
+}
