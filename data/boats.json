@@ -3051,23 +3051,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 216,
-   "name": "천일호",
-   "operator": "삼천포 강백호",
-   "region": "충남 보령시",
-   "port": "삼천포항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "https://010-9231-7011.kr/sunsang24/%ED%8F%AD%EB%B0%9C%EC%9D%80-%EC%95%84%EB%8B%88%EC%96%B4%EB%8F%84-%EA%B3%84%EC%86%8D-%EB%82%98%EC%98%A8%EB%8B%A4-%EA%B0%91%EC%98%A4%EC%A7%95%EC%96%B4-%EB%94%B0%EB%B0%95%EB%94%B0%EB%B0%95-%EC%86%90%EB%A7%9B-4/"
-   },
-   "notes": "총각피싱 선단 (선장 박영직). 22인승, 어종/요금 미표시. 홈페이지 폐쇄됨 (2025-07 아카이브 기준). 쭈꾸미 출조 미확인.",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%EC%B2%9C%EC%9D%BC%ED%98%B8?id=2449"
-   ]
-  },
-  {
    "bid": 218,
    "name": "엔조이호",
    "operator": "무창포 엔조이호",
