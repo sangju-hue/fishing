@@ -611,12 +611,14 @@
    "tags": [],
    "manual": false,
    "bid": 31,
-   "collection_priority": "deferred_daily",
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
     "https://ship.gomugomu.pro/bbs/book.php?bo_table=reservation"
    ],
-   "operator": "아가미피싱"
+   "operator": "아가미피싱",
+   "booking_names": [
+    "원피스호(16인승)"
+   ]
   },
   {
    "name": "꿈에그린호",
@@ -7732,7 +7734,7 @@
    "manual": false,
    "bid": 971155,
    "booking_names": [
-    "아가미호"
+    "아가미호(18인승)"
    ]
   }
  ],
