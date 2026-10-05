@@ -1002,13 +1002,13 @@
   {
    "bid": 73,
    "name": "바다하리호",
-   "operator": null,
-   "region": "전북 군산시",
+   "operator": "군산 아리울호",
+   "region": "전북 군산",
    "port": "비응항",
    "price": "",
    "capacity": null,
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/",
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet",
     "phone": "010-4870-4724"
    },
    "notes": "농어·민어·쭈꾸미·돌문어·갑오징어·갈치·광어 (보트피싱 등록, 선상24 아님, 리뷰 0건)",
@@ -6642,37 +6642,43 @@
    "name": "만수르호",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "만수르호",
     "만수르호"
    ],
-   "bid": 408
+   "bid": 408,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "에프원호",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "에프원호",
     "에프원호"
    ],
-   "bid": 409
+   "bid": 409,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "김대영호",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "김대영호",
     "김대영호"
    ],
-   "bid": 410
+   "bid": 410,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "아리울1호",
@@ -6688,43 +6694,51 @@
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
     "https://ariul.sunsang24.com/ship/schedule_fleet"
-   ]
+   ],
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "아리울2호",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "아리울2호",
     "아리울2호"
    ],
-   "bid": 412
+   "bid": 412,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "히트피싱",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "히트피싱",
     "히트피싱"
    ],
-   "bid": 413
+   "bid": 413,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "어비스호",
    "port": "비응항",
    "channels": {
-    "sunsang24": "https://badahariho.sunsang24.com/ship/schedule_fleet"
+    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
    },
    "booking_names": [
     "어비스호",
     "어비스호"
    ],
-   "bid": 414
+   "bid": 414,
+   "operator": "군산 아리울호",
+   "region": "전북 군산"
   },
   {
    "name": "강프로호",
