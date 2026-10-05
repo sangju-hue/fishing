@@ -6713,20 +6713,6 @@
    "region": "전북 군산"
   },
   {
-   "name": "히트피싱",
-   "port": "비응항",
-   "channels": {
-    "sunsang24": "https://ariul.sunsang24.com/ship/schedule_fleet"
-   },
-   "booking_names": [
-    "히트피싱",
-    "히트피싱"
-   ],
-   "bid": 413,
-   "operator": "군산 아리울호",
-   "region": "전북 군산"
-  },
-  {
    "name": "어비스호",
    "port": "비응항",
    "channels": {
