@@ -7669,6 +7669,18 @@
    "booking_names": [
     "대한호"
    ]
+  },
+  {
+   "name": "슈퍼노바",
+   "port": "남항",
+   "region": "인천 중구",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://supernova.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971147
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
