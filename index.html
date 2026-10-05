@@ -212,7 +212,7 @@
       <label>날짜<input id="ntfyDate" type="date" required></label>
       <div>항구<details class="ntfy-picker" id="ntfyPortPicker"><summary>항구 전체</summary><div></div></details><select id="ntfyPort" multiple hidden autocomplete="off"></select></div>
       <div>배<details class="ntfy-picker" id="ntfyBoatPicker"><summary>배 전체</summary><div></div></details><select id="ntfyBoat" multiple hidden autocomplete="off"></select></div>
-        <div class="ntfy-seat-topic"><label>최소 빈자리<input id="ntfyMinSeats" type="number" min="1" max="100" step="1" value="1" required><small>2를 입력하면 2자리 이상일 때 알림</small></label><label>나의 토픽 (비공개)<input id="ntfyTopic" required minlength="1" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="자동 생성된 비공개 토픽" title="새 토픽은 영문, 숫자, -와 _로 24~64자 · 기존 토픽 유지 가능" autocomplete="off"></label></div>
+        <div class="ntfy-seat-topic"><label>최소 빈자리<input id="ntfyMinSeats" type="number" min="1" max="100" step="1" value="1" required><small>2를 입력하면 2자리 이상일 때 알림</small></label><label>나의 토픽 (비공개)<input id="ntfyTopic" required minlength="5" maxlength="64" pattern="[A-Za-z0-9_-]{5,64}" placeholder="자동 생성된 비공개 토픽" title="새 토픽은 영문, 숫자, -와 _로 5~64자 · 기존 토픽 유지 가능" autocomplete="off"></label></div>
       </div>
       <div class="ntfy-actions"><button id="ntfyCopy" type="button">토픽 복사</button><button id="ntfyCancelEdit" type="button" hidden>수정 취소</button><button id="ntfyRegister" type="submit">구독</button></div>
       <p id="ntfySelection" style="grid-column:1/-1;margin:0"></p>
@@ -869,7 +869,7 @@ async function initNtfy(){
     const port=ports.includes('*')?'*':ports.join(', ');
     if(!ports.length||!chosen.length){ntfyMessage('항구와 배를 선택해 주세요.');return}
     if(!(ntfyLocal?ntfyMultiReady:ntfyConfig?.supports_multi)){ntfyMessage('다중 선택 기능의 맥 적용을 기다려 주세요.');return}
-    if(topic.length<24&&!ntfyMine.some(r=>r.topic===topic)&&!(ntfyEditing&&ntfyAdminRows.some(r=>r.topic===topic))){ntfyMessage('새 토픽은 추측하기 어렵게 24자 이상으로 입력하세요.');return}
+    if(topic.length<5&&!ntfyMine.some(r=>r.topic===topic)&&!(ntfyEditing&&ntfyAdminRows.some(r=>r.topic===topic))){ntfyMessage('새 토픽은 5자 이상으로 입력하세요.');return}
     if(Number(document.querySelector('#ntfyMinSeats').value)>1&&!(ntfyLocal?ntfyMinimumReady:ntfyConfig?.supports_min_seats)){ntfyMessage('맥에서 진행 중인 수집이 끝난 뒤 최소 빈자리 기능이 적용됩니다. 잠시 후 새로고침하고 구독해 주세요.');return}
     const payload={action:ntfyEditing?'update':'add',owner:ntfyOwner,bid,port,date:d.value,topic,min_seats:Number(document.querySelector('#ntfyMinSeats').value),label:document.querySelector('#ntfyLabel').value.trim(),ports,bids,group:ntfyEditing?.group||ntfySubmissionGroup()};
     if(ntfyEditing){if(!(ntfyLocal?ntfyManageReady:ntfyConfig?.supports_manage)){ntfyMessage('수집 완료 후 알림 수정 기능 적용을 기다려 주세요.');return}if(ntfyEditing.keys){payload.action='admin_update';payload.id=ntfyEditing.keys;}else{const r=ntfyMine[ntfyEditing.index];payload.old=[r.bid,r.date,r.topic,r.scopePort,r.group||null];}}
