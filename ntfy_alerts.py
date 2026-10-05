@@ -270,6 +270,55 @@ class Alerts:
             result=json.loads(response.read(16384))
             if not result.get('id'):raise ValueError('ntfy 전송 응답 오류')
 
+        chat_id = self.state.get('telegram_topics', {}).get(topic)
+        tg_token_path = os.path.join(self.base, '.telegram_token')
+        if chat_id and os.path.exists(tg_token_path):
+            try:
+                token = open(tg_token_path).read().strip()
+                text = f"*{title}*\n{message}"
+                if click:
+                    text += f"\n\n[예약하러 가기]({click})"
+                url = f"https://api.telegram.org/bot{token}/sendMessage"
+                data = json.dumps({'chat_id': chat_id, 'text': text, 'parse_mode': 'Markdown'}).encode()
+                req = urllib.request.Request(url, data=data, headers={'Content-Type': 'application/json'})
+                urllib.request.urlopen(req, timeout=4)
+            except Exception as e:
+                pass
+
+    def telegram_loop(self):
+        offset = self.state.get('telegram_offset', 0)
+        tg_token_path = os.path.join(self.base, '.telegram_token')
+        while True:
+            try:
+                if not os.path.exists(tg_token_path):
+                    time.sleep(30)
+                    continue
+                token = open(tg_token_path).read().strip()
+                url = f"https://api.telegram.org/bot{token}/getUpdates?timeout=30&offset={offset}"
+                req = urllib.request.urlopen(url, timeout=40)
+                res = json.loads(req.read())
+                for update in res.get('result', []):
+                    offset = update['update_id'] + 1
+                    msg = update.get('message', {})
+                    text = msg.get('text', '')
+                    chat_id = msg.get('chat', {}).get('id')
+                    if text.startswith('/start '):
+                        topic = text.split(' ', 1)[1].strip()
+                        with self.lock:
+                            tg_topics = self.state.setdefault('telegram_topics', {})
+                            tg_topics[topic] = chat_id
+                            self.state['telegram_offset'] = offset
+                            self.save()
+                        send_url = f"https://api.telegram.org/bot{token}/sendMessage"
+                        data = json.dumps({'chat_id': chat_id, 'text': '✅ 텔레그램 알림이 성공적으로 연결되었습니다!\n이제 빈자리가 나면 이곳으로 알려드립니다.'}).encode()
+                        urllib.request.urlopen(urllib.request.Request(send_url, data=data, headers={'Content-Type': 'application/json'}), timeout=4)
+                with self.lock:
+                    if self.state.get('telegram_offset') != offset:
+                        self.state['telegram_offset'] = offset
+                        self.save()
+            except Exception:
+                time.sleep(5)
+
     def decrypt(self,message):
         if not isinstance(message,str) or len(message)>24000:raise ValueError('신청 형식 오류')
         if message.startswith('fish1:'):raw=base64.b64decode(message[6:],validate=True);parts=None
@@ -558,6 +607,8 @@ class Alerts:
         else:
             threading.Thread(target=self.stream_requests,daemon=True).start()
             threading.Thread(target=self.topic_updates,daemon=True).start()
+        
+        threading.Thread(target=self.telegram_loop,daemon=True).start()
         while True:
             try:
                 if not relay:self.deliver_receipts()
