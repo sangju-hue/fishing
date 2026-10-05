@@ -7283,21 +7283,6 @@
    "catalog_status": "booking_verified"
   },
   {
-   "bid": 971119,
-   "name": "오션러브호",
-   "operator": "구매항 피싱게이트",
-   "port": "구매항",
-   "region": "충남 태안군",
-   "channels": {
-    "sunsang24": "https://fishinggate.sunsang24.com/"
-   },
-   "booking_names": [
-    "오션러브호"
-   ],
-   "manual": true,
-   "catalog_status": "booking_verified"
-  },
-  {
    "bid": 971120,
    "name": "블랙펄호",
    "operator": "구매항 피싱게이트",
