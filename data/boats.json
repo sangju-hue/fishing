@@ -4356,7 +4356,7 @@
    },
    "tags": [],
    "manual": false,
-   "operator": "아리랑1호",
+   "operator": "아리랑호",
    "capacity": 21,
    "catalog_checked_at": "2026-10-03T08:54:18+09:00",
    "catalog_sources": [
@@ -7699,6 +7699,22 @@
    "bid": 971149,
    "booking_names": [
     "썬가드호"
+   ]
+  },
+  {
+   "name": "아리랑2호",
+   "port": "오천항",
+   "region": "충남 보령시",
+   "price": "",
+   "operator": "아리랑호",
+   "channels": {
+    "sunsang24": "https://arirang.sunsang24.com/ship/schedule_fleet"
+   },
+   "tags": [],
+   "manual": false,
+   "bid": 971150,
+   "booking_names": [
+    "아리랑2호"
    ]
   }
  ],
