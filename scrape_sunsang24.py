@@ -243,6 +243,17 @@ def main():
                         parsed_list = parse_simple_list(h_list, ym, ship_name)
                         for d, trips in parsed_list.items():
                             parsed.setdefault(d, []).extend(trips)
+                name_to_ship_no = {}
+                from homepage_engine import DOM
+                for button in DOM(h).root.walk('button'):
+                    if 'btn-schedule-ship' in button.attrs.get('class','').split():
+                        sno = button.attrs.get('data-ship-list-no','')
+                        sname = next(button.walk('strong'), button).text().strip()
+                        if sno.isdigit() and int(sno) > 0:
+                            mname = match_boat(sname, names, aliases)
+                            if mname:
+                                name_to_ship_no[mname] = sno
+                
                 observed.update(t[0] for trips in parsed.values() for t in trips if t[0])
                 named=any(t[0] for trips in parsed.values() for t in trips)
                 for ds,trips in parsed.items():
@@ -255,7 +266,10 @@ def main():
                         cap=b.get('capacity')
                         if cap and (state['remaining'] or 0)>cap:
                             capacity_rejected.add(b['name']);continue
-                        surl = f'https://{sub}.sunsang24.com/mypage/reservation_ready/{state.pop("sno")}' if state.get("sno") else url
+                        _ = state.pop('sno', None)
+                        ship_no = name_to_ship_no.get(b['name'])
+                        qs = f"?sch_ship_no={ship_no}" if ship_no else ""
+                        surl = f'https://{sub}.sunsang24.com/ship/schedule_fleet/{ym}{qs}#d{ds}'
                         results[(str(b['bid']),ds)]=dict(state,boat_id=b['bid'],source='sunsang24',source_url=surl,checked_at=checked_at)
             except Exception as e:errors.append(str(e))
         print(sub,len(results),'건',len(errors),'오류',flush=True)
