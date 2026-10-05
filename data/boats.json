@@ -7575,38 +7575,6 @@
    ]
   },
   {
-   "bid": 971138,
-   "name": "뉴서진호",
-   "port": "마검포항",
-   "region": "충남 · 마검포항",
-   "price": "",
-   "channels": {
-    "sunsang24": "https://seojin.sunsang24.com/"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "마검포항 뉴서진호",
-   "booking_names": [
-    "뉴서진호"
-   ]
-  },
-  {
-   "bid": 971139,
-   "name": "서진호",
-   "port": "마검포항",
-   "region": "충남 · 마검포항",
-   "price": "",
-   "channels": {
-    "sunsang24": "https://seojin.sunsang24.com/"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "마검포항 서진호",
-   "booking_names": [
-    "서진호"
-   ]
-  },
-  {
    "bid": 971140,
    "name": "신출항호",
    "port": "마검포항",
@@ -7668,22 +7636,6 @@
    "operator": "영목항 뉴행진호",
    "booking_names": [
     "뉴행진호"
-   ]
-  },
-  {
-   "bid": 971144,
-   "name": "태백호",
-   "port": "마검포항",
-   "region": "충남 · 태안/안면",
-   "price": "",
-   "channels": {
-    "sunsang24": "https://taebaekho.sunsang24.com/"
-   },
-   "tags": [],
-   "manual": false,
-   "operator": "마검포항 태백호",
-   "booking_names": [
-    "태백호"
    ]
   },
   {
