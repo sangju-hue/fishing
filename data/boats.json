@@ -2270,24 +2270,6 @@
    "catalog_correction": "2026-10-04 공식 홈페이지 출조항구/주소 확인"
   },
   {
-   "bid": 171,
-   "name": "해양호",
-   "operator": null,
-   "region": "충남 보령시",
-   "port": "오천항",
-   "price": "",
-   "capacity": null,
-   "channels": {
-    "homepage": "http://ddung.thefishing.kr/",
-    "phone": "010-8686-6262"
-   },
-   "notes": "쭈꾸미·갑오징어·백조기·우럭·광어다운샷. 2023년 선사 목록 기준 (2026년 운영 여부는 홈페이지 확인 필요)",
-   "catalog_checked_at": "2026-10-02T22:41:47+09:00",
-   "catalog_sources": [
-    "https://naksigo.com/boat/%ED%95%B4%EC%96%91%ED%98%B8?id=2486"
-   ]
-  },
-  {
    "bid": 173,
    "name": "나대세호",
    "operator": "씨유만석낚시 선단",
