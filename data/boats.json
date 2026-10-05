@@ -2904,7 +2904,7 @@
    "capacity": null,
    "channels": {
     "naver": "https://naver.me/5PlQGCKQ",
-    "homepage": "http://sangrok.thefishing.kr/index.php?mid=bk"
+    "homepage": "https://sangrok.thefishing.kr/index.php?mid=bk"
    },
    "notes": "쭈꾸미·갑오징어 두족류 전문(유튜브 '영목항 차부낚시(상록호)', 2026-09 조황 영상 확인). 체험낚시(차부낚시) 성격. 요금·연락처·예약 채널 미확인. / 유튜브 쭈꾸미·갑오징어 출조 영상에 '영목항 차부피싱(상록호)' 예약 링크로 naver.me 링크 표기. 네이버 예약 링크로 추정되나 링크 직접 확인 불가(페이지 로드 실패)",
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
@@ -7557,6 +7557,118 @@
    ],
    "manual": true,
    "catalog_status": "booking_verified"
+  },
+  {
+   "bid": 971137,
+   "name": "은가비호",
+   "port": "남당항",
+   "region": "충남 · 남당항",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://eungabi.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "남당항 은가비호",
+   "booking_names": [
+    "은가비호"
+   ]
+  },
+  {
+   "bid": 971138,
+   "name": "뉴서진호",
+   "port": "마검포항",
+   "region": "충남 · 마검포항",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://seojin.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 뉴서진호",
+   "booking_names": [
+    "뉴서진호"
+   ]
+  },
+  {
+   "bid": 971139,
+   "name": "서진호",
+   "port": "마검포항",
+   "region": "충남 · 마검포항",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://seojin.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 서진호",
+   "booking_names": [
+    "서진호"
+   ]
+  },
+  {
+   "bid": 971140,
+   "name": "신출항호",
+   "port": "마검포항",
+   "region": "충남 · 마검포항",
+   "price": "",
+   "channels": {
+    "sunsang24": "https://seojin.sunsang24.com/"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "마검포항 신출항호",
+   "booking_names": [
+    "신출항호"
+   ]
+  },
+  {
+   "bid": 971141,
+   "name": "하와이호",
+   "port": "남당항",
+   "region": "충남 · 남당항",
+   "price": "",
+   "channels": {
+    "homepage": "http://www.newhawaii.co.kr/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "남당항 하와이호",
+   "booking_names": [
+    "하와이호"
+   ]
+  },
+  {
+   "bid": 971142,
+   "name": "만선호",
+   "port": "남당항",
+   "region": "충남 · 남당항",
+   "price": "",
+   "channels": {
+    "homepage": "http://www.newhawaii.co.kr/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "남당항 만선호",
+   "booking_names": [
+    "만선호"
+   ]
+  },
+  {
+   "bid": 971143,
+   "name": "뉴행진호",
+   "port": "영목항",
+   "region": "충남 · 영목항",
+   "price": "",
+   "channels": {
+    "homepage": "https://sangrok.thefishing.kr/index.php?mid=bk"
+   },
+   "tags": [],
+   "manual": false,
+   "operator": "영목항 뉴행진호",
+   "booking_names": [
+    "뉴행진호"
+   ]
   }
  ],
  "updated_at": "2026-10-04T22:17:27+09:00"
