@@ -335,6 +335,9 @@ def handler(scheduler, port):
             return self.headers.get('Host') in {f'127.0.0.1:{port}', f'localhost:{port}'} and (not origin or origin in ORIGINS)
 
         def send(self, status, payload):
+            origin=self.headers.get('Origin')
+            if origin and origin not in {'http://127.0.0.1:8000','http://localhost:8000','http://127.0.0.1:8789','http://localhost:8789'} and isinstance(payload,dict) and isinstance(payload.get('ntfy'),dict):
+                payload=dict(payload,ntfy=dict(payload['ntfy'],recovery_codes=[]))
             body = json.dumps(payload, ensure_ascii=False).encode()
             self.send_response(status)
             origin = self.headers.get('Origin')

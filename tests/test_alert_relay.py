@@ -56,5 +56,19 @@ class RelayTests(unittest.TestCase):
         secret=bytes.fromhex(key)
         self.assertEqual(mac,hmac.new(secret[32:],iv+cipher,hashlib.sha256).digest())
         raw=subprocess.run([OPENSSL,'enc','-d','-aes-256-cbc','-K',secret[:32].hex(),'-iv',iv.hex()],input=cipher,capture_output=True,check=True).stdout
-        data=json.loads(raw);self.assertEqual(len(data),1);self.assertEqual(data[0]['ports'],['*']);self.assertEqual(data[0]['group'],'a'*16)
+        response=json.loads(raw);self.assertTrue(response['known_owner']);data=response['rows'];self.assertEqual(len(data),1);self.assertEqual(data[0]['ports'],['*']);self.assertEqual(data[0]['group'],'a'*16)
+    def test_one_time_recovery_only_transfers_target_rules(self):
+        import json,time,os
+        r=self.a.register(self.p)
+        other=self.a.register(dict(self.p,owner='2'*32,topic='fishing-user-'+('b'*16)))
+        with open(os.path.join(self.a.directory,'recovery.json'),'w') as f:json.dump({'code':'c'*16,'expires_at':time.time()+60,'ids':[r['id']]},f)
+        with self.assertRaises(ValueError):self.a.claim_requests({'owner':'3'*32,'recovery_code':'d'*16})
+        self.a.claim_requests({'owner':'3'*32,'recovery_code':'c'*16})
+        self.assertEqual(r['owner'],'3'*32);self.assertEqual(other['owner'],'2'*32)
+        with self.assertRaises(ValueError):self.a.claim_requests({'owner':'4'*32,'recovery_code':'c'*16})
+    def test_deleted_owner_remains_known_for_empty_list_sync(self):
+        self.a.register(self.p);self.a.remove(self.p)
+        self.assertEqual(self.a.owned_requests(self.p['owner']),[])
+        self.assertIn(self.p['owner'],self.a.state['known_owners'])
+        self.assertNotIn('9'*32,self.a.state['known_owners'])
 if __name__=='__main__':unittest.main()

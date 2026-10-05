@@ -68,6 +68,7 @@ class Alerts:
 
     def save(self):
         with self.lock:
+            self.state['known_owners']=list(dict.fromkeys(self.state.get('known_owners',[])+[r['owner'] for r in self.state['subscriptions']]))[-10000:]
             # Expired rules no longer reserve topics or consume capacity.
             today=datetime.now(KST).date().isoformat()
             self.state['subscriptions']=[r for r in self.state['subscriptions'] if r['date']>=today]
@@ -297,6 +298,21 @@ class Alerts:
         if label not in allowed:
             raise ValueError('관리자에 의해 기능이 제한되었습니다.')
 
+    def claim_requests(self,p):
+        owner=p.get('owner');code=p.get('recovery_code','')
+        if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('신청자 식별값 오류')
+        path=os.path.join(self.directory,'recovery.json');recovery=read(path,{})
+        if not isinstance(code,str) or not secrets.compare_digest(code,str(recovery.get('code',''))) or recovery.get('expires_at',0)<time.time():raise ValueError('복구 코드가 일치하지 않거나 만료되었습니다')
+        ids=set(recovery.get('ids',[]));rows=[r for r in self.state['subscriptions'] if r['id'] in ids]
+        if not rows:raise ValueError('복구할 신청이 없습니다')
+        for r in rows:r['owner']=owner
+        self.save();self.on_change()
+        os.unlink(path)
+
+    def recovery_snapshot(self):
+        r=read(os.path.join(self.directory,'recovery.json'),{})
+        return [{'label':r.get('label',''),'code':r['code']}] if r.get('code') and r.get('expires_at',0)>time.time() else []
+
     def owned_requests(self,owner):
         if not isinstance(owner,str) or not re.fullmatch(r'[a-f0-9]{32}',owner):raise ValueError('신청자 식별값 오류')
         groups={}
@@ -318,7 +334,7 @@ class Alerts:
         key=p.get('response_key','')
         if not isinstance(key,str) or not re.fullmatch(r'[a-f0-9]{128}',key):raise ValueError('응답 암호키 오류')
         secret=bytes.fromhex(key);iv=secrets.token_bytes(16)
-        raw=json.dumps(self.owned_requests(p.get('owner')),ensure_ascii=False).encode()
+        raw=json.dumps({'known_owner':p.get('owner') in self.state.get('known_owners',[]),'rows':self.owned_requests(p.get('owner'))},ensure_ascii=False).encode()
         encrypted=subprocess.run([OPENSSL,'enc','-aes-256-cbc','-K',secret[:32].hex(),'-iv',iv.hex()],input=raw,capture_output=True,check=True).stdout
         mac=hmac.new(secret[32:],iv+encrypted,hashlib.sha256).digest()
         return '.'.join(base64.b64encode(x).decode() for x in (iv,encrypted,mac))
@@ -335,7 +351,8 @@ class Alerts:
                 action=p.get('action')
                 if action in ('add','update'):self.validate_public_name(p)
                 data=None
-                if action=='list':data=self.sealed_requests(p)
+                if action=='claim':self.claim_requests(p)
+                elif action=='list':data=self.sealed_requests(p)
                 elif action=='add':self.register_request(p)
                 elif action=='delete':self.remove(p)
                 elif action in ('pause','resume','update'):self.manage(p)
@@ -461,7 +478,7 @@ class Alerts:
     def snapshot(self):
         with self.lock:
             rows=[dict({k:v for k,v in r.items() if k!='owner'},group_id=self.group_key(r)) for r in self.state['subscriptions']]
-            return {'realtime_topics':False,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
+            return {'recovery_codes':self.recovery_snapshot(),'realtime_topics':False,'supports_receipts':True,'supports_multi':True,'supports_manage':True,'supports_min_seats':True,'online':self.online,'error':self.error or self.topics_error,'last_poll_at':self.last_poll,'last_request_error':self.state.get('last_request_error'),'subscriptions':rows,'check_minutes':10}
 
     def check(self):
         today=datetime.now(KST).date().isoformat()

@@ -214,7 +214,8 @@
     </form>
     <p id="ntfyMessage" role="status">알림 연결 확인 중…</p>
     <p>등록 시 최소 빈자리 조건에 맞으면 한 번 알립니다. 조건을 유지하는 동안 중복 알림을 보내지 않고, 빈자리가 기준 아래로 줄었다가 다시 기준 이상이 되면 재알림합니다. 폰 앱에서 토픽 구독을 완료해야 받을 수 있습니다. 토픽은 다른 사람에게 공개하지 마세요.</p>
-    <details><summary>이 브라우저에서 신청한 알림</summary><div id="ntfyMine"></div></details>
+    <details><summary>이 브라우저에서 신청한 알림</summary><div id="ntfyMine"></div>
+    <details id="ntfyRecoverBox"><summary>기존 신청 연결 복구</summary><p>로컬 Mac에 표시된 일회용 복구 코드를 입력하세요. 기존 알림을 이 브라우저에 연결합니다.</p><input id="ntfyRecoveryCode" maxlength="16" autocomplete="off" placeholder="Mac의 복구 코드"><button id="ntfyRecoveryButton" type="button">신청 연결 복구</button></details></details>
     <details id="ntfyAdmin" hidden><summary>맥 전체 알림 운영 현황</summary><p id="ntfyAdminStatus"></p><div id="ntfyAdminRows"></div></details>
     </div>
   </details>
@@ -825,11 +826,26 @@ async function ntfySyncMine(){
  const submit=document.querySelector('#ntfyRegister');if(submit.disabled)return;
  submit.disabled=true;ntfySyncing=true;ntfyRenderMine();
  try{
-  const rows=await ntfyRequest({action:'list',owner:ntfyOwner,response_key:ntfyRandom()+ntfyRandom()+ntfyRandom()+ntfyRandom()});
+  const response=await ntfyRequest({action:'list',owner:ntfyOwner,response_key:ntfyRandom()+ntfyRandom()+ntfyRandom()+ntfyRandom()});
+  const rows=Array.isArray(response)?response:response.rows;
   if(!Array.isArray(rows))throw Error('설정 응답 형식 오류');
-  if(!rows.length&&ntfyMine.length)throw Error('이 브라우저의 신청자 정보와 Mac의 신청 정보가 일치하지 않습니다. 신청한 브라우저인지 확인해 주세요.');
+  if(!rows.length&&ntfyMine.length&&!response.known_owner)throw Error('이 브라우저의 신청자 정보와 Mac의 신청 정보가 일치하지 않습니다. 신청한 브라우저인지 확인해 주세요.');
   ntfyMine=rows;ntfyRemember();ntfyRenderMine();
  }catch(e){ntfyMessage('저장된 알림 동기화 실패: '+e.message)}finally{ntfySyncing=false;submit.disabled=false;ntfyRenderMine()}
+}
+function ntfyReconcileLocal(rows){
+ if(!ntfyLocal||ntfyEditing)return;
+ const before=JSON.stringify(ntfyMine);
+ ntfyMine=ntfyMine.flatMap(old=>{
+  let found=rows.filter(r=>r.topic===old.topic&&r.date===old.date);
+  if(!found.length)return [];
+  const groups=new Set(found.map(r=>r.request_group||r.group_id));
+  if(old.group&&found.some(r=>r.request_group===old.group))found=found.filter(r=>r.request_group===old.group);
+  else if(groups.size>1)return [old];
+  const r=found[0],ports=r.scope_ports||[r.scope_port||normalizePort(r.port)],all=found.every(x=>x.scope_all);
+  return [{...old,date:r.date,label:r.label||old.label,ports,bids:all?[]:found.map(x=>x.bid),group:r.request_group,bid:0,scopePort:r.scope_port||normalizePort(r.port),port:r.scope_port==='*'?'항구 전체':r.scope_port||normalizePort(r.port),boat:all?'배 전체':found.length+'척 선택',min_seats:r.min_seats||1,paused:!found.some(x=>x.enabled),state:found.some(x=>x.enabled)?'구독 완료':'중지'}];
+ });
+ if(before!==JSON.stringify(ntfyMine)){ntfyRemember();ntfyRenderMine()}
 }
 function renderNtfyAdmin(state){
   if(!ntfyLocal)return;
@@ -838,10 +854,11 @@ function renderNtfyAdmin(state){
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
   document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 자동 수집 결과로 알림 · 범위 밖 또는 자동 수집 꺼짐: 완료 후 ${state.check_minutes||10}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
-  const rows=state.subscriptions||[];ntfyAdminRows=rows;
+  const rows=state.subscriptions||[];ntfyAdminRows=rows;ntfyReconcileLocal(rows);
   const groups=new Map();rows.forEach(r=>{const key=r.group_id||r.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
   const registrants=new Map();for(const [key,list] of groups){const r=list[0],person=`${r.label||'이름 미입력'} · ${r.topic}`;if(!registrants.has(person))registrants.set(person,[]);registrants.get(person).push([key,list])}
   const expanded=new Set([...document.querySelectorAll('#ntfyAdminRows details[open]')].map(d=>d.dataset.person));
+  const recovery=(state.recovery_codes||[]).map(r=>`<section class="ntfy-registrant"><strong>${escapeHtml(r.label)} 폰 연결 복구 코드: <code>${escapeHtml(r.code)}</code></strong><p>폰의 ‘기존 신청 연결 복구’에 입력하세요. 일회용이며 이 Mac에서만 표시됩니다.</p></section>`).join('');
   const markup=rows.length?[...registrants].map(([person,items])=>{
     const list=items.flatMap(x=>x[1]),keys=items.map(x=>x[0]).join(','),enabled=list.filter(r=>r.enabled).length;
     const editScopes=new Map();items.forEach(([key,rs])=>{const r=rs[0],scope=`${r.date} · ${r.scope_port||normalizePort(r.port)}`;if(!editScopes.has(scope))editScopes.set(scope,[]);editScopes.get(scope).push(key)});
@@ -849,7 +866,7 @@ function renderNtfyAdmin(state){
     return `<section class="ntfy-registrant"><h3>${escapeHtml(person)}</h3><div class="ntfy-row"><span>${scopes.map(escapeHtml).join('<br>')} · ${list.length}척<br>${enabled===list.length?'켜짐':enabled===0?'중지':'일부 중지'} · 빈자리 ${list.filter(r=>r.last_status==='available').length}척</span><div class="ntfy-actions">${[...editScopes].map(([scope,ids])=>`<button type="button" data-ntfy-action="edit" data-ntfy-id="${ids.join(',')}">${editScopes.size>1?escapeHtml(scope)+' 수정':'수정'}</button>`).join('')}<button type="button" data-ntfy-action="${enabled?'group_pause':'group_resume'}" data-ntfy-id="${keys}">${enabled?'전체 중지':'전체 재시작'}</button><button type="button" data-ntfy-action="group_delete" data-ntfy-id="${keys}">신청 전체 취소</button></div></div><details data-person="${escapeHtml(person)}" ${expanded.has(person)?'open':''}><summary>개별 배 현황 보기 (${list.length}척)</summary>${list.map(r=>`<div class="ntfy-row"><span>${escapeHtml(r.date)} · ${escapeHtml(normalizePort(r.port))} · ${escapeHtml(r.boat)}<br>${r.enabled?'켜짐':'중지'} · ${r.min_seats||1}자리 이상 · ${escapeHtml(status[r.last_status]||r.last_status)}${r.remaining!=null?' / '+r.remaining+'석':''}${r.error?' · '+escapeHtml(r.error):''}</span><button type="button" data-ntfy-action="delete" data-ntfy-id="${r.id}">개별 취소</button></div>`).join('')}</details></section>`;
   }).join(''):'등록된 알림이 없습니다.';
 
-  if(document.querySelector('#ntfyAdminRows').innerHTML!==markup)document.querySelector('#ntfyAdminRows').innerHTML=markup;
+  if(document.querySelector('#ntfyAdminRows').innerHTML!==recovery+markup)document.querySelector('#ntfyAdminRows').innerHTML=recovery+markup;
   ntfyMine.forEach(r=>{const actual=rows.find(x=>x.topic===r.topic&&(r.group?x.request_group===r.group:(r.bid===0?(r.scopePort==='*'||normalizePort(x.port)===r.scopePort):x.bid===r.bid))&&x.date===r.date);if(actual)r.state=actual.enabled?'맥 등록 완료':'중지'});ntfyRenderMine();
 }
 async function initNtfy(){
@@ -863,6 +880,12 @@ async function initNtfy(){
   window.addEventListener('pagehide',()=>{ntfyReplyStream?.close();ntfyReplyStream=null});
   window.addEventListener('pageshow',()=>{ntfyConnectReplies();ntfySyncMine()});
   document.addEventListener('visibilitychange',()=>{if(!document.hidden)ntfySyncMine()});
+  document.querySelector('#ntfyRecoverBox').hidden=ntfyLocal;
+  document.querySelector('#ntfyRecoveryButton').onclick=async()=>{
+   const button=document.querySelector('#ntfyRecoveryButton');button.disabled=true;
+   try{await ntfyRequest({action:'claim',owner:ntfyOwner,recovery_code:document.querySelector('#ntfyRecoveryCode').value.trim().toLowerCase()});ntfyEditing=null;await ntfySyncMine();ntfyMessage('신청 연결을 복구했습니다. 최신 설정으로 수정할 수 있습니다.');document.querySelector('#ntfyRecoverBox').open=false;}
+   catch(e){ntfyMessage(e.message)}finally{button.disabled=false}
+  };
   document.querySelector('#ntfyPort').addEventListener('change',ntfyBoatOptions);
   document.querySelector('#ntfyForm').addEventListener('change',e=>{
     const input=e.target.closest('[data-picker]');if(!input)return;
