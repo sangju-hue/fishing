@@ -893,7 +893,11 @@ async function initNtfy(){
     if(button.dataset.ntfyAction==='edit'){
       const keys=button.dataset.ntfyId.split(','),list=ntfyAdminRows.filter(r=>keys.includes(r.group_id||r.id)),r=list[0];if(!r)return;
       ntfyEditing={keys:button.dataset.ntfyId};document.querySelector('#ntfyLabel').value=r.label||'';document.querySelector('#ntfyDate').value=r.date;document.querySelector('#ntfyTopic').value=r.topic;ntfyRestore({...r,ports:r.scope_ports||[r.scope_port||normalizePort(r.port)],bids:list.every(x=>x.scope_all)?[]:list.map(x=>x.bid)});document.querySelector('#ntfyMinSeats').value=r.min_seats||1;ntfySelection();document.querySelector('#ntfyRegister').textContent='수정 저장';document.querySelector('#ntfyCancelEdit').hidden=false;document.querySelector('#ntfyForm').scrollIntoView({block:'center'});ntfyMessage('신청 묶음을 수정한 뒤 수정 저장을 누르세요.');return;
-    }button.disabled=true;
+    }
+    const action=button.dataset.ntfyAction;
+    const question={group_pause:'선택한 사용자의 알림을 모두 중지할까요?',group_delete:'선택한 사용자의 알림 신청을 모두 취소할까요? 삭제한 신청은 복구할 수 없습니다.',delete:'이 배의 알림 신청을 취소할까요? 삭제한 신청은 복구할 수 없습니다.'}[action];
+    if(question&&!confirm(question))return;
+    button.disabled=true;
     try{if(!scraperCsrf)await refreshScraper();const s=await scraperFetch('/alerts',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:button.dataset.ntfyAction,id:button.dataset.ntfyId})});renderNtfyAdmin(s.ntfy);ntfyMessage('처리 완료')}catch(err){ntfyMessage('처리 실패: 맥 연결 또는 ntfy 토픽 권한을 확인하세요.')}finally{button.disabled=false}
   });
   try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectReplies();ntfySyncMine();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
