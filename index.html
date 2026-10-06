@@ -153,6 +153,7 @@
   <section id="panel-octopus" class="species-placeholder" role="tabpanel" aria-labelledby="tab-octopus" hidden><h2>문어 예약 현황</h2><p>문어 예약 현황을 준비하고 있습니다.</p></section>
   <section id="scrapeSettings" class="scrape-settings" aria-label="맥 스크래핑 제어" style="display: none;">
     <div id="collectionSettingsGrid" class="collection-grid" hidden>
+    <div style="display:flex;flex-direction:column;gap:16px">
     <section class="collection-box" aria-label="자동 수집 설정">
     <h2>자동 수집</h2>
     <div class="scrape-config">
@@ -172,6 +173,17 @@
       <div id="scrapePlanBody">불러오는 중…</div>
     </details>
     </section>
+    <section class="collection-box" aria-label="알림 수집 설정">
+      <h2>알림 수집</h2>
+      <p>자동 수집이 꺼져 있을 때 등록된 알림 대상만 수집합니다.</p>
+      <form id="alertCollectionConfig" class="scrape-config">
+        <label for="cfgAlertMin">수집 완료 후 간격</label>
+        <input id="cfgAlertMin" type="number" min="1" max="120" step="1" required value="20" style="width:80px"><span>분</span>
+        <button id="cfgAlertSave" type="submit">설정 저장</button>
+      </form>
+      <p id="alertCollectionStatus" aria-live="polite">기본 20분 · 수집 중에도 변경할 수 있습니다.</p>
+    </section>
+    </div>
     <section class="collection-box" aria-label="범위 수집 설정">
     <h2>범위 수집</h2>
     <form id="scrapeRange" class="scrape-config" autocomplete="off">
@@ -815,7 +827,7 @@ function renderNtfyAdmin(state){
   document.querySelector('#ntfyAdmin').hidden=false;
   ntfyMinimumReady=!!state?.supports_min_seats;ntfyManageReady=!!state?.supports_manage;ntfyMultiReady=!!state?.supports_multi;
   if(!state){document.querySelector('#ntfyAdminStatus').textContent='맥 알림 서비스 적용 대기 중입니다. 진행 중 수집이 끝난 뒤 연결됩니다.';return}
-  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 자동 수집 결과로 알림 · 범위 밖 또는 자동 수집 꺼짐: 완료 후 ${state.check_minutes||10}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
+  document.querySelector('#ntfyAdminStatus').textContent=`${state.online?'신청 연결 정상':'신청 연결 확인 중'} · 신청 확인 ${state.last_poll_at||'-'} · 자동 수집 결과로 알림 · 범위 밖 또는 자동 수집 꺼짐: 완료 후 ${state.check_minutes||20}분 간격${state.error?' · '+state.error:''}${state.last_request_error?' · 마지막 신청 오류: '+state.last_request_error:''}`;
   const status={available:'빈자리',full:'마감',unknown:'미확인',stale:'최신 수집 필요',expired:'날짜 지남',cancelled:'취소',maintenance:'점검',conditional:'유동',weather:'기상악화',other_fish:'다른 어종',completed:'출조 완료',unspecified:'어종 확인 필요'};
   const rows=state.subscriptions||[];ntfyAdminRows=rows;ntfyReconcileLocal(rows);
   const groups=new Map();rows.forEach(r=>{const key=r.group_id||r.id;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(r)});
@@ -908,6 +920,7 @@ async function initNtfy(){
   const fmtWait=sec=>sec==null?"-":sec>=60?`${Math.floor(sec/60)}분 ${sec%60}초`:`${sec}초`;
   const modeName={fast:"빠른 수집(주요 3곳 가까운 날짜)",slow:"느린 수집(그 이후 날짜·나머지)",full:"전체 수집",range:"범위 수집"};
   const collectionKindName={range_repeat:"범위 수집 반복",range_once:"범위 수집 1회",full_once:"전체 1회 수집",full_auto:"전체 자동 수집",alerts_auto:"빈자리 알림 대상 수집"};
+  let alertCfgDirty=false;
   let scraperCsrf=null,cfgDirty=false,progressRunning=false,progressVisible=true,scraperSettingsLoaded=false;
   function setCollectionCollapsed(collapsed){
     $("#collectionSettingsGrid").hidden=collapsed;
@@ -1005,6 +1018,8 @@ async function initNtfy(){
     if(s.auto_range&&!s.running)$("#scrapeSettingStatus").textContent=`범위 자동 수집 켜짐 · 다음 수집 ${fmtWait(s.next_range_in)} 후`;
     if(s.pending_range)$("#scrapeSettingStatus").textContent+=` · 범위 수집 대기 중(${s.pending_range[0]}~${s.pending_range[1]})`;
     if(s.running&&s.current_mode==="range"&&s.active_range)$("#scrapeSettingStatus").textContent+=` · 범위 ${s.active_range[0]}~${s.active_range[1]}`;
+    if(!alertCfgDirty)$('#cfgAlertMin').value=s.alert_interval_minutes||20;
+    $('#alertCollectionStatus').textContent=`설정 간격 ${s.alert_interval_minutes||20}분 · ${s.running?'수집 중 · 저장한 간격은 완료 후 적용':s.paused?`다음 알림 대상 수집 ${fmtWait(s.next_alerts_in)} 후`:'자동 수집 결과 사용 중'}`;
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     const isRange=s.current_mode==="range",range=isRange?s.active_range:null;
     $("#progressScope").textContent=s.running?(range?`범위: ${range[0]} ~ ${range[1]} · ${s.active_range_ports?.length?s.active_range_ports.join(", "):s.active_range_ports?"전체 항구":"항구 정보 확인 중"}`:`방식: ${modeName[s.current_mode]||"수집"}`):s.pending_range?`대기 범위: ${s.pending_range.join(" ~ ")}`:"";
@@ -1065,6 +1080,18 @@ async function initNtfy(){
     finally{setTimeout(refreshScraper,800)}
   }
   if(isLocalHost){
+    $('#cfgAlertMin').addEventListener('input',()=>{alertCfgDirty=true});
+    $('#alertCollectionConfig').addEventListener('submit',async e=>{
+      e.preventDefault();const minutes=Number($('#cfgAlertMin').value),button=$('#cfgAlertSave');
+      if(!Number.isInteger(minutes)||minutes<1||minutes>120){$('#alertCollectionStatus').textContent='1~120분 정수로 입력해 주세요.';return}
+      button.disabled=true;
+      try{
+        if(!scraperCsrf)await refreshScraper();
+        if(!scraperCsrf)throw Error('맥 설정 서버에 연결할 수 없습니다.');
+        const s=await scraperFetch('/control',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:'alert_config',alert_interval_minutes:minutes})});
+        alertCfgDirty=false;renderScraper(s);
+      }catch(err){$('#alertCollectionStatus').textContent='저장 실패: '+err.message}finally{button.disabled=false}
+    });
     $("#scrapePause").addEventListener("click",e=>scraperControl("pause",e.currentTarget));
     $("#scrapeResume").addEventListener("click",e=>scraperControl("resume",e.currentTarget));
     ["#cfgNearDays","#cfgFastMin","#cfgSlowMin"].forEach(id=>$(id).addEventListener("input",()=>{cfgDirty=true}));
