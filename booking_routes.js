@@ -13,6 +13,9 @@
       url.protocol='https:';url.pathname='/ship/schedule_fleet/'+year+month;url.search='';url.hash='d'+date;
       return url.href;
     }
+    if(url.hostname.replace(/^www\./,'')==='kukjaenaksi.com'){
+      url.pathname='/niabbs5m/inc.php';url.search='';url.searchParams.set('inc','sub2');url.searchParams.set('toYear',year);url.searchParams.set('toMonth',month);url.hash='';return url.href;
+    }
     if(/\/niabbs5m?\//.test(url.pathname)){
       // inc.php ignores date parameters on these providers. The public day
       // fragment is the exact endpoint requested by their date-click handler.
