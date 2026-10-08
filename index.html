@@ -80,6 +80,7 @@
     #ntfyForm .ntfy-input-box{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:16px;border:1px solid var(--line);border-radius:12px;min-width:0}#ntfyForm .ntfy-seat-topic{grid-column:1/-1;display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;align-items:start}#ntfyForm .ntfy-used-topics{grid-column:1/-1;min-width:0;padding:0}#ntfyForm .ntfy-seat-topic small{font-size:11px;line-height:1.4}@media(max-width:620px){#ntfyForm .ntfy-input-box{grid-template-columns:1fr;padding:12px;gap:12px}#ntfyForm .ntfy-seat-topic{grid-template-columns:90px minmax(0,1fr);gap:12px}}
       #ntfyInstructions a{display:inline;padding:0;margin:0;border:0;border-radius:0;background:none;font-size:inherit;line-height:inherit;box-shadow:none;min-height:0}
     @media(max-width:620px){#ntfySettings > summary{font-size:18px!important}}
+      .reservation-port-picker{margin-top:0;background:var(--surface);min-height:44px}.reservation-port-picker summary{padding:8px 0;cursor:pointer}.reservation-port-picker #portFilterOptions{max-height:260px;overflow:auto}.reservation-port-picker .port-filter-actions{display:flex;gap:8px;padding:6px 0}.reservation-port-picker .port-filter-actions button{padding:6px 10px;font-size:12px}.reservation-port-picker input[type="checkbox"]{width:18px;height:18px;min-height:0;flex:none}
   </style>
   <link rel="stylesheet" href="bada.css?v=20261005-compact-cards">
 </head>
@@ -117,7 +118,7 @@
   <div id="panel-jjukkumi" role="tabpanel" aria-labelledby="tab-jjukkumi">
   <section class="controls" aria-label="선사 필터">
     <div class="field"><label for="search">배 이름 · 선사 · 항구 검색</label><input id="search" type="search" placeholder="예: 오천항, 해모수호"></div>
-    <div class="field"><label for="portFilter">항구</label><select id="portFilter"><option value="">전체 항구</option></select></div>
+    <div class="field"><label for="portFilter">항구</label><details class="ntfy-picker reservation-port-picker" id="portFilterPicker"><summary>전체 항구</summary><div class="port-filter-actions"><button type="button" data-port-action="all">전체 선택</button><button type="button" data-port-action="clear">전체 해제</button></div><div id="portFilterOptions"></div></details><select id="portFilter" multiple hidden><option value="">전체 항구</option></select></div>
   </section>
 
   <div id="rangeResults" hidden style="margin:0 0 12px;color:var(--sea)"><span id="rangeResultsText"></span> <button id="clearRangeResults" class="channel" type="button">전체 목록 보기</button></div>
@@ -426,9 +427,9 @@ function hasConfirmedSeat(boat,date){
 }
 function matches(boat){
   const q=$("#search").value.trim().toLowerCase();
-  const port=$("#portFilter").value;
+  const ports=[...$("#portFilter").selectedOptions].map(o=>o.value).filter(Boolean);
   const qOk=!q||boatSearchText(boat).includes(q)||(boat.operator&&searchOperators(q).has(boat.operator));
-  return (!availabilityDates.size||[...availabilityDates].some(date=>hasConfirmedSeat(boat,date)))&&(!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!port||(port==='__other__'?smallPorts.has(filterPort(boat.port)):filterPort(boat.port)===port));
+  return (!availabilityDates.size||[...availabilityDates].some(date=>hasConfirmedSeat(boat,date)))&&(!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!ports.length||ports.some(port=>port==='__other__'?smallPorts.has(filterPort(boat.port)):filterPort(boat.port)===port));
 }
 function matrixOperatorName(boat){return boat.operator||boat.name}
 function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
@@ -645,11 +646,33 @@ function catalogPortOptions(){
   options.sort((a,b)=>b.count-a.count||a.label.localeCompare(b.label,'ko'));
   return options;
 }
-function initPorts(){
-  const selected=$("#portFilter").value,options=catalogPortOptions();
-  $("#portFilter").innerHTML='<option value="">전체 항구</option>'+options.map(({value,label,count})=>`<option value="${escapeHtml(value)}">${escapeHtml(label)} (${count})</option>`).join('');
-  if([...$("#portFilter").options].some(option=>option.value===selected))$("#portFilter").value=selected;
+function renderPortPicker(){
+  const select=$("#portFilter"),picker=$("#portFilterPicker");if(!picker)return;
+  const chosen=[...select.selectedOptions].filter(o=>o.value),all=!chosen.length;
+  picker.querySelector('summary').textContent=all?'전체 항구':chosen.map(o=>o.textContent.replace(/ \(\d+\)$/,'')).join(', ');
+  $("#portFilterOptions").innerHTML=[...select.options].map(o=>`<label><input type="checkbox" data-port-value="${escapeHtml(o.value)}" ${o.value?(o.selected?'checked':''):(all?'checked':'')}>${escapeHtml(o.textContent)}</label>`).join('');
 }
+function initPorts(){
+  const selected=new Set([...$("#portFilter").selectedOptions].map(o=>o.value).filter(Boolean)),options=catalogPortOptions();
+  $("#portFilter").innerHTML='<option value="">전체 항구</option>'+options.map(({value,label,count})=>`<option value="${escapeHtml(value)}" ${selected.has(value)?'selected':''}>${escapeHtml(label)} (${count})</option>`).join('');
+  renderPortPicker();
+}
+function setPortFilter(values){
+  const wanted=new Set(values);[...$("#portFilter").options].forEach(o=>o.selected=!!o.value&&wanted.has(o.value));
+  renderPortPicker();renderMatrix();renderCards();
+}
+const portPicker=$("#portFilterPicker");
+portPicker?.addEventListener('change',event=>{
+  const input=event.target;if(!input.matches('[data-port-value]'))return;
+  if(!input.dataset.portValue){setPortFilter([]);return}
+  const select=$("#portFilter"),chosen=[...select.selectedOptions].map(o=>o.value).filter(Boolean);
+  const wanted=new Set(chosen);
+  if(input.checked)wanted.add(input.dataset.portValue);else wanted.delete(input.dataset.portValue);
+  setPortFilter([...wanted]);
+});
+portPicker?.addEventListener('click',event=>{
+  const button=event.target.closest('[data-port-action]');if(button)setPortFilter([]);
+});
 function initRangePorts(){
   const ports=[...new Set(BOATS.map(b=>normalizePort(b.port)))].sort((a,b)=>portRank(a)-portRank(b)||a.localeCompare(b,"ko"));
   $("#rngPortOptions").innerHTML=ports.map(p=>`<label><input type="checkbox" class="rng-port" value="${escapeHtml(p)}" disabled> ${escapeHtml(p)}</label>`).join("");
@@ -673,7 +696,7 @@ document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListe
 }));
 let searchT;
 $("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();}, 250);});
-$("#portFilter").addEventListener("change",()=>{renderMatrix();renderCards();});
+$("#portFilter").addEventListener("change",()=>{renderPortPicker();renderMatrix();renderCards();});
 $('#clearAvailabilityDates').addEventListener('click',()=>{availabilityDates.clear();renderMatrix();renderCards()});
 const speciesTabs=[...document.querySelectorAll(".species-tab")];
 function selectSpecies(tab){
@@ -1057,7 +1080,7 @@ async function initNtfy(){
           try{
             await loadData();initPorts();refreshCatalogSelectors();
             rangeResultPorts=new Set(s.last_range_ports||[]);rangeResultFilter=[...s.last_range];selectedDate=rangeResultFilter[0];activeMonth=0;
-            $("#search").value="";$("#portFilter").value="";
+            $("#search").value="";$("#portFilter").value="";renderPortPicker();
             document.querySelectorAll(".month-filter button").forEach(btn=>{const on=btn.dataset.month==="0";btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on))});
             $("#rangeResultsText").textContent=`${s.last_range[0]}~${s.last_range[1]} 수집 결과 · ${s.last_range_ports?.length?s.last_range_ports.join(", "):"전체 항구"} · 빈자리 있는 배만 표시${({failed:' (수집 실패)',partial:' (일부 수집 실패)',skipped:' (실행 보류)'})[s.last_result]||''}`;
             $("#rangeResults").hidden=false;
