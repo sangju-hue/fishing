@@ -4263,28 +4263,31 @@
   {
    "bid": 273,
    "name": "길손호",
-   "port": "인천 만석부두",
+   "port": "만석부두",
    "region": "인천",
    "price": "",
    "channels": {
-    "homepage": "https://xn--wk0bw08aj4ag56b.com/index.php?mid=bk",
+    "homepage": "http://www.aseafish.co.kr/index.php?mid=bk",
     "phone": "010-5408-5767"
    },
    "tags": [],
    "manual": false,
-   "operator": "길손피싱",
+   "operator": "아세아낚시",
    "capacity": 12,
    "catalog_checked_at": "2026-10-02T22:41:47+09:00",
    "catalog_sources": [
     "http://길손피싱.com/",
     "http://길손피싱.com/index.php?mid=bk",
-    "https://naksigo.com/boat/%EA%B8%B8%EC%86%90%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD"
+    "https://naksigo.com/boat/%EA%B8%B8%EC%86%90%ED%98%B8?port=%EC%98%A4%EC%B2%9C%ED%95%AD",
+    "http://www.aseafish.co.kr/index.php?mid=bk",
+    "http://www.aseafish.co.kr/index.php?mid=int2"
    ],
    "booking_names": [
     "길손호",
     "길손호(낚시전용선)"
    ],
-   "catalog_status": "booking_verified"
+   "catalog_status": "booking_verified",
+   "notes": "아세아낚시 출조점의 길손호. 아세아낚시와 길손호 전용 홈페이지의 2026-10-02 저장 예약표에서 출조점·출항지·동일 날짜 예약 내역 일치 확인. 기존 선박 ID 유지하여 알림 연결 보존."
   },
   {
    "bid": 274,
