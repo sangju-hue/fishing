@@ -41,3 +41,10 @@ dialog{width:min(760px,calc(100% - 24px));max-height:85vh;overflow:auto;color:va
 #availableOperators h3{margin:0 0 2px;font-size:14px;line-height:1.25}
 #availableOperators .boat-card p{padding:3px 0;line-height:1.3}
 }
+
+/* Keep the selected reservation scope prominent on desktop and mobile. */
+#matrixCount{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:10px 14px;border:1px solid var(--accent);border-radius:10px;background:var(--accentBg);color:var(--text);font-size:16px;line-height:1.45}
+#matrixCount .matrix-port-label{font-weight:800;color:var(--accent);flex-basis:100%}
+#matrixCount .matrix-count-numbers{font-size:18px;font-weight:700}
+#matrixCount .matrix-date-range{font-size:13px;color:var(--muted)}
+@media(max-width:620px){#matrixCount{width:100%;box-sizing:border-box;font-size:15px;padding:8px 10px}#matrixCount .matrix-count-numbers{font-size:17px}}

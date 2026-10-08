@@ -82,7 +82,7 @@
     @media(max-width:620px){#ntfySettings > summary{font-size:18px!important}}
       .reservation-port-picker{margin-top:0;background:var(--surface);min-height:44px}.reservation-port-picker summary{padding:8px 0;cursor:pointer}.reservation-port-picker #portFilterOptions{max-height:260px;overflow:auto}.reservation-port-picker .port-filter-actions{display:flex;gap:8px;padding:6px 0}.reservation-port-picker .port-filter-actions button{padding:6px 10px;font-size:12px}.reservation-port-picker input[type="checkbox"]{width:18px;height:18px;min-height:0;flex:none}
   </style>
-  <link rel="stylesheet" href="bada.css?v=20261005-compact-cards">
+  <link rel="stylesheet" href="bada.css?v=20261008-port-scope">
 </head>
 <body>
 <main class="page">
@@ -535,6 +535,9 @@ function renderMatrix(){
   if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>(!rangeResultPorts.size||rangeResultPorts.has(boat.port))&&dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
   const groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
   renderAvailabilitySummary(groups);
+  const range=rangeResultFilter?`${rangeResultFilter[0]}~${rangeResultFilter[1]}, ${dates.length}일 · 빈자리 있는 배만`:activeMonth===-1?"10월 1일–11월 30일, 61일":activeMonth?`${activeMonth}월 1일–${activeMonth}월 ${dates.length}일, ${dates.length}일`:`9월 1일–11월 30일, 91일`;
+  const selectedPorts=[...$("#portFilter").selectedOptions].filter(o=>o.value).map(o=>o.textContent.replace(/ \(\d+\)$/,''));
+  $("#matrixCount").innerHTML=`<span class="matrix-port-label">${escapeHtml(selectedPorts.length?selectedPorts.join(' · '):'전체 항구')}</span><span class="matrix-count-numbers"><b>${boats.length}척</b> · <b>${groups.length}개 선사</b></span><span class="matrix-date-range">${escapeHtml(range)} 현황</span>`;
   const layout=JSON.stringify([dates.map(d=>d.key),boats.map(b=>[b.bid,b.name,b.operator,b.port,b.region,b.booking_notice,b.collection_priority,websiteUrl(b)]),rangeResultFilter,activeMonth,[...availabilityDates].sort()]);
   if(layout===matrixLayoutKey&&matrixButtons.size){updateMatrixCells(boats,dates,groups);return;}
   matrixLayoutKey=layout;
@@ -576,8 +579,6 @@ function renderMatrix(){
   $("#matrixTable").innerHTML=html;
   matrixButtons=new Map([...document.querySelectorAll("#matrixTable .status-cell")].map(el=>[el.dataset.boatId+"|"+el.dataset.date,el]));
   $("#matrixTable").style.setProperty("--date-count",dates.length);
-  const range=rangeResultFilter?`${rangeResultFilter[0]}~${rangeResultFilter[1]}, ${dates.length}일 · 빈자리 있는 배만`:activeMonth===-1?"10월 1일–11월 30일, 61일":activeMonth?`${activeMonth}월 1일–${activeMonth}월 ${dates.length}일, ${dates.length}일`:`9월 1일–11월 30일, 91일`;
-  $("#matrixCount").innerHTML=`<b>${boats.length}척</b> · ${groups.length}개 선사 그룹 · ${range} 현황`;
   document.querySelectorAll(".date-head[data-date]").forEach(btn=>btn.addEventListener("click",()=>selectDate(btn.dataset.date)));
   document.querySelectorAll("[data-alert-date]").forEach(input=>input.addEventListener("change",()=>toggleAlertDate(input)));
   document.querySelectorAll("[data-select-group]").forEach(input=>input.addEventListener("change",()=>toggleOperator(groups[Number(input.dataset.selectGroup)][1])));
@@ -650,16 +651,27 @@ function renderPortPicker(){
   const select=$("#portFilter"),picker=$("#portFilterPicker");if(!picker)return;
   const chosen=[...select.selectedOptions].filter(o=>o.value),all=!chosen.length;
   picker.querySelector('summary').textContent=all?'전체 항구':chosen.map(o=>o.textContent.replace(/ \(\d+\)$/,'')).join(', ');
-  $("#portFilterOptions").innerHTML=[...select.options].map(o=>`<label><input type="checkbox" data-port-value="${escapeHtml(o.value)}" ${o.value?(o.selected?'checked':''):(all?'checked':'')}>${escapeHtml(o.textContent)}</label>`).join('');
+  const list=$("#portFilterOptions"),signature=JSON.stringify([...select.options].map(o=>[o.value,o.textContent]));
+  if(list.dataset.options!==signature){
+    list.innerHTML=[...select.options].map(o=>`<label><input type="checkbox" data-port-value="${escapeHtml(o.value)}">${escapeHtml(o.textContent)}</label>`).join('');
+    list.dataset.options=signature;
+  }
+  const selected=new Set(chosen.map(o=>o.value));
+  list.querySelectorAll('[data-port-value]').forEach(input=>{input.checked=input.dataset.portValue?selected.has(input.dataset.portValue):all});
 }
 function initPorts(){
   const selected=new Set([...$("#portFilter").selectedOptions].map(o=>o.value).filter(Boolean)),options=catalogPortOptions();
   $("#portFilter").innerHTML='<option value="">전체 항구</option>'+options.map(({value,label,count})=>`<option value="${escapeHtml(value)}" ${selected.has(value)?'selected':''}>${escapeHtml(label)} (${count})</option>`).join('');
   renderPortPicker();
 }
+let portFilterRenderTimer=null;
+function queuePortFilterRender(){
+  if(portFilterRenderTimer!==null)clearTimeout(portFilterRenderTimer);
+  portFilterRenderTimer=setTimeout(()=>{portFilterRenderTimer=null;renderMatrix();renderCards();},350);
+}
 function setPortFilter(values){
   const wanted=new Set(values);[...$("#portFilter").options].forEach(o=>o.selected=!!o.value&&wanted.has(o.value));
-  renderPortPicker();renderMatrix();renderCards();
+  renderPortPicker();queuePortFilterRender();
 }
 const portPicker=$("#portFilterPicker");
 portPicker?.addEventListener('change',event=>{
@@ -696,7 +708,7 @@ document.querySelectorAll(".month-filter button").forEach(btn=>btn.addEventListe
 }));
 let searchT;
 $("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();}, 250);});
-$("#portFilter").addEventListener("change",()=>{renderPortPicker();renderMatrix();renderCards();});
+$("#portFilter").addEventListener("change",()=>{renderPortPicker();queuePortFilterRender();});
 $('#clearAvailabilityDates').addEventListener('click',()=>{availabilityDates.clear();renderMatrix();renderCards()});
 const speciesTabs=[...document.querySelectorAll(".species-tab")];
 function selectSpecies(tab){
