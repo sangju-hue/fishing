@@ -82,7 +82,7 @@
     @media(max-width:620px){#ntfySettings > summary{font-size:18px!important}}
       .reservation-port-picker{margin-top:0;background:var(--surface);min-height:44px}.reservation-port-picker summary{padding:8px 0;cursor:pointer}.reservation-port-picker #portFilterOptions{max-height:260px;overflow:auto}.reservation-port-picker .port-filter-actions{display:flex;gap:8px;padding:6px 0}.reservation-port-picker .port-filter-actions button{padding:6px 10px;font-size:12px}.reservation-port-picker input[type="checkbox"]{width:18px;height:18px;min-height:0;flex:none}
   </style>
-  <link rel="stylesheet" href="bada.css?v=20261008-port-scope">
+  <link rel="stylesheet" href="bada.css?v=20261008-reservation-sort">
 </head>
 <body>
 <main class="page">
@@ -131,7 +131,7 @@
     </nav>
     <details class="legend-disclosure"><summary>예약 상태 안내 <span>숫자 잔여석 · 마감 · 미확인</span></summary><div class="legend" aria-label="예약 현황 범례"><strong>범례</strong><span class="legend-item">🟢 숫자 = 잔여석</span><span class="legend-item">🐙 문어</span><span class="legend-item">🔴 마감</span><span class="legend-item">⚫ 배점검/출항취소/기상악화</span><span class="legend-item">🟠 유동 = 사정에 따라 예약 오픈</span><span class="legend-item">완료 = 출조 완료</span><span class="legend-item">타종 = 다른 어종</span><span class="legend-item">안내 = 어종 확인 필요</span><span class="legend-item">· 미확인</span></div></details>
     <div class="matrix-meta"><span id="matrixCount"></span><span>선사·배 이름은 홈페이지로 이동합니다. 체크박스로 배를 선택하고, 초록 셀로 해당 날짜 예약을 확인하세요.</span></div>
-    <div class="matrix-meta"><span id="availabilityFilterLabel" aria-live="polite">날짜 아래 체크박스를 선택하면 잔여석 1석 이상인 배만 표시합니다.</span><button type="button" class="channel" id="clearAvailabilityDates" disabled>날짜 선택 해제</button></div>
+    <div class="matrix-meta"><span id="availabilityFilterLabel" aria-live="polite">날짜 아래 체크박스를 선택하면 잔여석 1석 이상인 배만 표시합니다.</span><div class="reservation-sort-actions"><label for="boatSort">배 정렬</label><select id="boatSort" aria-label="배 정렬 기준"><option value="port_count">배가 많은 항구순</option><option value="north">북쪽 → 남쪽순</option><option value="available_days">예약 가능한 날짜 많은 순</option><option value="name">가나다순</option><option value="seats" disabled>잔여석 많은 순</option><option value="available_ports" disabled>빈자리 배 많은 항구순</option></select><button type="button" class="channel" id="clearAvailabilityDates" disabled>날짜 선택 해제</button></div></div>
     <div class="matrix-wrap" id="matrixWrap" tabindex="0" aria-label="가로로 스크롤 가능한 월간 예약 현황표">
       <table class="matrix" id="matrixTable"></table>
     </div>
@@ -432,24 +432,39 @@ function matches(boat){
   return (!availabilityDates.size||[...availabilityDates].some(date=>hasConfirmedSeat(boat,date)))&&(!rangeResultFilter||rangeAvailableIds.has(boat.bid))&&qOk&&(!ports.length||ports.some(port=>port==='__other__'?smallPorts.has(filterPort(boat.port)):filterPort(boat.port)===port));
 }
 function matrixOperatorName(boat){return boat.operator||boat.name}
-function sortedBoats(){return BOATS.filter(matches).slice().sort((a,b)=>{
-  const deferred=(a.collection_priority==='deferred_daily')-(b.collection_priority==='deferred_daily');
-  if(deferred)return deferred;
-  const ports=comparePorts(a,b);if(ports)return ports;
-  const operatorA=matrixOperatorName(a),operatorB=matrixOperatorName(b);
-  if(operatorA==="기타"&&operatorB!=="기타")return 1;
-  if(operatorB==="기타"&&operatorA!=="기타")return -1;
-  return operatorA.localeCompare(operatorB,"ko")||a.name.localeCompare(b.name,"ko");
-})}
+// Stable per-port geographical order; unlisted ports follow alphabetically.
+const NORTH_PORT_ORDER=['영종도','만석부두','인천 만석부두','남항','오이도','영흥도','전곡항','장고항','삼길포항','안흥항','안흥외항','신진도항','마검포항','백사장항','남당항','방포항','태안','구매항','오천항','영목항','원산도 선촌항','원산도 선촌선착장','대천항','무창포항','홍원항','야미도항','비응항','군산 비응항'];
+let reservationBoatOrder=new Map();
+function reservationSortMode(){return $('#boatSort')?.value||'port_count'}
 function groupedOnlineBoats(){
-  const groups=new Map();
-  sortedBoats().forEach(boat=>{
-    const operator=matrixOperatorName(boat);
-    const key=(boat.collection_priority==='deferred_daily'?'deferred\u0000':'')+normalizePort(boat.port)+'\u0000'+operator;
-    if(!groups.has(key))groups.set(key,[operator,[]]);
-    groups.get(key)[1].push(boat);
+  const mode=reservationSortMode(),groups=new Map(),portCounts=new Map(),availablePorts=new Map();
+  const selectedDates=[...availabilityDates],dates=mode==='available_days'?allDates().filter(d=>d.key>=todayKey).map(d=>d.key):selectedDates;
+  const scores=new Map(),needsSeats=mode==='seats'||mode==='available_ports',needsDays=mode==='available_days';
+  if(mode==='port_count')BOATS.forEach(b=>{const p=filterPort(b.port);portCounts.set(p,(portCounts.get(p)||0)+1)});
+  BOATS.filter(matches).forEach(boat=>{
+    let score=0;
+    if(needsSeats||needsDays){
+      for(const date of dates)if(hasConfirmedSeat(boat,date))score=needsDays?score+1:Math.max(score,Number(statusRow(boat,date)[1]));
+      if(needsSeats&&score>0){const p=filterPort(boat.port);availablePorts.set(p,(availablePorts.get(p)||0)+1)}
+    }
+    scores.set(boat.bid,score);
+    const name=matrixOperatorName(boat),key=(boat.collection_priority==='deferred_daily'?'deferred\u0000':'')+normalizePort(boat.port)+'\u0000'+name;
+    if(!groups.has(key))groups.set(key,[name,[]]);groups.get(key)[1].push(boat);
   });
-  return [...groups.values()];
+  const northRank=boat=>{const i=NORTH_PORT_ORDER.indexOf(normalizePort(boat.port));return i<0?999:i};
+  const nameCompare=(a,b)=>a[0].localeCompare(b[0],'ko')||normalizePort(a[1][0].port).localeCompare(normalizePort(b[1][0].port),'ko');
+  const groupScores=new Map([...groups.values()].map(group=>[group,Math.max(0,...group[1].map(b=>scores.get(b.bid)||0))]));
+  const groupScore=group=>groupScores.get(group)||0;
+  const result=[...groups.values()].sort((a,b)=>{
+    const x=a[1][0],y=b[1][0];let difference=0;
+    if(mode==='north')difference=northRank(x)-northRank(y)||normalizePort(x.port).localeCompare(normalizePort(y.port),'ko');
+    else if(mode==='port_count')difference=(portCounts.get(filterPort(y.port))||0)-(portCounts.get(filterPort(x.port))||0)||filterPort(x.port).localeCompare(filterPort(y.port),'ko');
+    else if(mode==='available_ports')difference=(availablePorts.get(filterPort(y.port))||0)-(availablePorts.get(filterPort(x.port))||0)||filterPort(x.port).localeCompare(filterPort(y.port),'ko');
+    else if(mode==='seats'||mode==='available_days')difference=groupScore(b)-groupScore(a);
+    return difference||nameCompare(a,b);
+  });
+  result.forEach(([,boats])=>boats.sort((a,b)=>((mode==='seats'||mode==='available_days')?(scores.get(b.bid)||0)-(scores.get(a.bid)||0):0)||a.name.localeCompare(b.name,'ko')));
+  reservationBoatOrder=new Map(result.flatMap(([,boats])=>boats).map((b,i)=>[b.bid,i]));return result;
 }
 function operatorName(boat){return boat.operator||"기타 선사"}
 function displayNames(boat){return [boat.name]}
@@ -486,7 +501,7 @@ function card(boat){
   </article>`;
 }
 function renderCards(){
-  const selected=BOATS.filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>comparePorts(a,b)||a.name.localeCompare(b.name,"ko"));
+  const selected=BOATS.filter(boat=>selectedBoatIds.has(boat.bid)&&matches(boat)).sort((a,b)=>(reservationBoatOrder.get(a.bid)??9999)-(reservationBoatOrder.get(b.bid)??9999));
   $("#selectedTitle").textContent=`${Number(selectedDate.slice(5,7))}월 ${Number(selectedDate.slice(8,10))}일 선택 선사`;
   $("#resultCount").textContent=selected.length?`선택 ${selected.length}곳 · 예약 데이터 ${selected.filter(b=>statusRow(b,selectedDate)).length}곳`:"";
   $("#boatCards").innerHTML=selected.length?selected.map(card).join(""):'<div class="empty">배 이름 옆 체크박스로 선택해주세요</div>';
@@ -531,6 +546,7 @@ function updateMatrixCells(boats,dates,groups){
   document.querySelectorAll('[data-select-group]').forEach(el=>{const list=groups[Number(el.dataset.selectGroup)]?.[1]||[];el.checked=!!list.length&&list.every(b=>selectedBoatIds.has(b.bid));el.closest('.operator-controls').classList.toggle('is-selected',el.checked)});
 }
 function renderMatrix(){
+  if(!availabilityDates.size&&['seats','available_ports'].includes(reservationSortMode()))$('#boatSort').value='port_count';
   const dates=allDates();
   if(rangeResultFilter)rangeAvailableIds=new Set(BOATS.filter(boat=>(!rangeResultPorts.size||rangeResultPorts.has(boat.port))&&dates.some(item=>statusInfo(boat,item.key).cls==="available")).map(boat=>boat.bid));
   const groups=groupedOnlineBoats(),boats=groups.flatMap(([,list])=>list);
@@ -607,8 +623,13 @@ function toggleAlertDate(input){
 }
 function renderAvailabilitySummary(groups){
  const dates=[...availabilityDates].sort(),active=dates.length>0;
+ const sort=$('#boatSort');
+ if(sort){
+   [...sort.options].forEach(o=>{if(o.value==='seats'||o.value==='available_ports')o.disabled=!active});
+ }
+
  $('#clearAvailabilityDates').disabled=!active;
- $('#availabilityFilterLabel').textContent=active?'빈자리 1석 이상 · 선택 날짜: '+dates.map(d=>d.slice(5).replace('-','/')).join(', '):'날짜 아래 체크박스를 선택하면 잔여석 1석 이상인 배만 표시합니다.';
+ $('#availabilityFilterLabel').textContent=active?'빈자리 1석 이상 · 선택 날짜: '+dates.map(d=>d.slice(5).replace('-','/')).join(', ')+(reservationSortMode()==='seats'&&dates.length>1?' · 잔여석 정렬: 선택 날짜 중 최대 잔여석 기준':''):'날짜 아래 체크박스를 선택하면 잔여석 1석 이상인 배만 표시합니다. 잔여석 정렬도 이 체크박스를 기준으로 합니다.';
  $('#availableOperators').hidden=!active;
  if(!active){$('#availableOperatorsList').innerHTML='';return}
  const combined=new Map();groups.forEach(([name,boats])=>{const key=normalizePort(boats[0].port)+'\0'+name;if(!combined.has(key))combined.set(key,[name,[]]);combined.get(key)[1].push(...boats)});groups=[...combined.values()];
@@ -710,6 +731,7 @@ let searchT;
 $("#search").addEventListener("input",()=>{clearTimeout(searchT);searchT=setTimeout(()=>{renderMatrix();renderCards();}, 250);});
 $("#portFilter").addEventListener("change",()=>{renderPortPicker();queuePortFilterRender();});
 $('#clearAvailabilityDates').addEventListener('click',()=>{availabilityDates.clear();renderMatrix();renderCards()});
+$('#boatSort').addEventListener('change',()=>{renderMatrix();renderCards()});
 const speciesTabs=[...document.querySelectorAll(".species-tab")];
 function selectSpecies(tab){
   speciesTabs.forEach(item=>{
