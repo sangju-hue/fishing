@@ -157,6 +157,8 @@
     <div style="display:flex;flex-direction:column;gap:16px">
     <section class="collection-box" aria-label="자동 수집 설정">
     <h2>자동 수집</h2>
+    <label><input id="operatingHoursEnabled" type="checkbox" checked> 운영시간 제한 사용 · 06:00~23:50 (한국시간)</label>
+    <p id="operatingHoursStatus" aria-live="polite">자동수집·알림 수집에 적용됩니다. 해제하면 24시간 수집할 수 있습니다. 진행 중인 수집은 마무리 후 쉽니다.</p>
     <div class="scrape-config">
     <button id="scrapePause" type="button">⏸ 수집중지</button>
     <button id="scrapeResume" type="button">▶ 수집시작</button>
@@ -1075,8 +1077,12 @@ async function initNtfy(){
     if(s.auto_range&&!s.running)$("#scrapeSettingStatus").textContent=`범위 자동 수집 켜짐 · 다음 수집 ${fmtWait(s.next_range_in)} 후`;
     if(s.pending_range)$("#scrapeSettingStatus").textContent+=` · 범위 수집 대기 중(${s.pending_range[0]}~${s.pending_range[1]})`;
     if(s.running&&s.current_mode==="range"&&s.active_range)$("#scrapeSettingStatus").textContent+=` · 범위 ${s.active_range[0]}~${s.active_range[1]}`;
+    $('#operatingHoursEnabled').checked=s.operating_hours_enabled!==false;
+    $('#operatingHoursStatus').textContent=s.operating_hours_enabled===false?'운영시간 제한 해제 · 24시간 수집 가능':s.outside_operating_hours?`운영시간 외 휴식 · 다음 06:00부터 재개 (한국시간)${s.running?' · 진행 중인 수집 마무리 중':''}`:'운영시간 06:00~23:50 (한국시간) · 자동수집·알림 수집에 적용 · 진행 중인 수집은 마무리 후 휴식';
+    if(s.outside_operating_hours&&!s.running){$('#scrapeState').textContent='시간 외 휴식';$('#scrapeSettingStatus').textContent='운영시간 외 휴식 · 다음 06:00부터 재개 (한국시간)'}
     if(!alertCfgDirty)$('#cfgAlertMin').value=s.alert_interval_minutes||20;
     $('#alertCollectionStatus').textContent=`설정 간격 ${s.alert_interval_minutes||20}분 · ${s.running?'수집 중 · 저장한 간격은 완료 후 적용':s.paused?`다음 알림 대상 수집 ${fmtWait(s.next_alerts_in)} 후`:'자동 수집 결과 사용 중'}`;
+    if(s.outside_operating_hours)$('#alertCollectionStatus').textContent+=' · 운영시간 외 휴식 (06:00 재개)';
     if(!cfgDirty&&s.near_days){$("#cfgNearDays").value=s.near_days;$("#cfgFastMin").value=s.fast_minutes;$("#cfgSlowMin").value=s.slow_minutes}
     const isRange=s.current_mode==="range",range=isRange?s.active_range:null;
     $("#progressScope").textContent=s.running?(range?`범위: ${range[0]} ~ ${range[1]} · ${s.active_range_ports?.length?s.active_range_ports.join(", "):s.active_range_ports?"전체 항구":"항구 정보 확인 중"}`:`방식: ${modeName[s.current_mode]||"수집"}`):s.pending_range?`대기 범위: ${s.pending_range.join(" ~ ")}`:"";
@@ -1137,6 +1143,14 @@ async function initNtfy(){
     finally{setTimeout(refreshScraper,800)}
   }
   if(isLocalHost){
+    $('#operatingHoursEnabled').addEventListener('change',async e=>{
+      const input=e.target,enabled=input.checked;input.disabled=true;
+      try{
+        if(!scraperCsrf)await refreshScraper();
+        const s=await scraperFetch('/control',{method:'POST',headers:{'Content-Type':'application/json','X-CSRF-Token':scraperCsrf},body:JSON.stringify({action:'operating_hours',enabled})});
+        renderScraper(s);
+      }catch(err){input.checked=!enabled;$('#operatingHoursStatus').textContent='저장 실패: '+err.message}finally{input.disabled=false}
+    });
     $('#cfgAlertMin').addEventListener('input',()=>{alertCfgDirty=true});
     $('#alertCollectionConfig').addEventListener('submit',async e=>{
       e.preventDefault();const minutes=Number($('#cfgAlertMin').value),button=$('#cfgAlertSave');
