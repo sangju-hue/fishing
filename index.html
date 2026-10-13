@@ -974,6 +974,231 @@ async function initNtfy(){
   try{const response=await fetch('data/ntfy_public.json?v='+Date.now(),{cache:'no-store'});if(!response.ok)throw Error();ntfyConfig=await response.json();window.badaNtfyConfig=ntfyConfig;document.dispatchEvent(new CustomEvent("bada:ntfy-config",{detail:ntfyConfig}));ntfyConnectReplies();ntfySyncMine();ntfyMessage('날짜·항구·배·토픽을 입력한 뒤 구독을 누르세요. 폰 ntfy 앱의 같은 토픽 설정은 처음 한 번만 필요합니다.')}catch(e){ntfyMessage('알림 연결 준비 중입니다. 연결 설정 배포 후 등록할 수 있습니다.');if(!ntfyLocal)document.querySelector('#ntfyRegister').disabled=true}
 }
 
+function initAndroidAppMode() {
+  if (!window.AndroidApp) return;
+
+  const ntfySettings = document.getElementById('ntfySettings');
+  if (!ntfySettings) return;
+
+  // 1. 상단 타이틀
+  const summary = ntfySettings.querySelector('summary');
+  if (summary) summary.innerHTML = '📱 <strong>안드로이드 실시간 알림 &amp; 수집 설정</strong>';
+
+  // 2. 외부 브라우저 전용 안내들 숨기기
+  const deviceNotice = document.getElementById('ntfyDeviceNotice');
+  if (deviceNotice) deviceNotice.style.display = 'none';
+
+  const body = document.getElementById('ntfySettingsBody');
+  if (body) body.hidden = false;
+
+  const instructions = document.getElementById('ntfyInstructions');
+  if (instructions) instructions.style.display = 'none';
+
+  // 3. 폼 필드 조정 (이름, 토픽 숨김 / 버튼 문구 변경)
+  const labelInput = document.getElementById('ntfyLabel');
+  if (labelInput && labelInput.closest('label')) {
+    labelInput.closest('label').style.display = 'none';
+    labelInput.required = false;
+    labelInput.value = '안드로이드 알림';
+  }
+
+  const topicWrap = document.querySelector('.ntfy-seat-topic');
+  const topicInput = document.getElementById('ntfyTopic');
+  if (topicInput && topicInput.closest('label')) {
+    topicInput.closest('label').style.display = 'none';
+    topicInput.required = false;
+    topicInput.value = 'android_app_alert';
+  }
+  if (topicWrap) {
+    topicWrap.style.gridTemplateColumns = '1fr';
+  }
+
+  const copyBtn = document.getElementById('ntfyCopy');
+  if (copyBtn) copyBtn.style.display = 'none';
+
+  const registerBtn = document.getElementById('ntfyRegister');
+  if (registerBtn) registerBtn.textContent = '🔔 안드로이드 알림 등록';
+
+  // 4. 폰 수집 제어판 삽입
+  let appControls = document.getElementById('androidAppControls');
+  if (!appControls) {
+    appControls = document.createElement('div');
+    appControls.id = 'androidAppControls';
+    appControls.className = 'ntfy-registrant';
+    appControls.style.marginBottom = '20px';
+    appControls.innerHTML = `
+      <h3 style="margin:0 0 10px;color:var(--accent,#00b4d8);font-size:16px">⚙️ 폰 수집기 동작 설정</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:12px">
+        <label style="display:flex;flex-direction:column;gap:4px;font-size:13px">
+          수집 주기
+          <select id="appScrapeInterval" style="padding:8px;border-radius:6px;background:#10232e;color:#fff;border:1px solid var(--line,#24475b)">
+            <option value="10">10분마다</option>
+            <option value="20">20분마다</option>
+            <option value="30" selected>30분마다 (기본/권장)</option>
+            <option value="60">60분마다</option>
+          </select>
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;margin-top:18px">
+          <input type="checkbox" id="appOperatingHours" checked style="width:18px;height:18px">
+          <span>06:00 ~ 23:50 운영시간 제한 (야간 절전)</span>
+        </label>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px">
+        <button type="button" id="appTriggerScrape" style="padding:8px 14px;border-radius:6px;background:#0077b6;color:#fff;border:0;cursor:pointer;font-weight:bold">🔄 지금 즉시 1회 수집</button>
+        <button type="button" id="appTogglePause" style="padding:8px 14px;border-radius:6px;background:#24475b;color:#fff;border:0;cursor:pointer">⏸ 수집 일시정지</button>
+      </div>
+      <p id="appScrapeStatus" style="margin:0;font-size:12px;color:var(--sea,#48cae4)">상태: 확인 중...</p>
+    `;
+
+    const ntfyForm = document.getElementById('ntfyForm');
+    if (ntfyForm && ntfyForm.parentNode) {
+      ntfyForm.parentNode.insertBefore(appControls, ntfyForm);
+    }
+  }
+
+  function syncAppSettings() {
+    try {
+      const raw = window.AndroidApp.getAppSettings();
+      const settings = JSON.parse(raw);
+      const sel = document.getElementById('appScrapeInterval');
+      if (sel && settings.interval_minutes) sel.value = String(settings.interval_minutes);
+      const chk = document.getElementById('appOperatingHours');
+      if (chk) chk.checked = settings.operating_hours_enabled !== false;
+      const pauseBtn = document.getElementById('appTogglePause');
+      if (pauseBtn) pauseBtn.textContent = settings.paused ? '▶ 수집 재개' : '⏸ 수집 일시정지';
+      const statusP = document.getElementById('appScrapeStatus');
+      if (statusP) {
+        statusP.textContent = `수집 상태: ${settings.last_status || '감시 대기 중'}${settings.last_scraped_at ? ' (' + settings.last_scraped_at + ')' : ''}`;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  function renderAppRules() {
+    const mineContainer = document.getElementById('ntfyMine');
+    if (!mineContainer) return;
+    try {
+      const raw = window.AndroidApp.getAlertRules();
+      const rules = JSON.parse(raw || '[]');
+      if (!rules.length) {
+        mineContainer.innerHTML = '<p style="color:var(--muted);font-size:13px">현재 폰에 등록된 알림이 없습니다.</p>';
+        return;
+      }
+      mineContainer.innerHTML = rules.map((r, idx) => `
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--line,#24475b)">
+          <div>
+            <strong style="color:var(--text);font-size:14px">${escapeHtml(r.date)} | ${escapeHtml(r.port)}</strong><br>
+            <span style="font-size:12px;color:var(--muted)">선박: ${escapeHtml(r.boat_name || '전체 배')} · 최소 ${r.min_seats || 1}석 이상</span>
+          </div>
+          <button type="button" data-app-delete-rule="${idx}" style="padding:6px 10px;border-radius:6px;background:#c0392b;color:#fff;border:0;cursor:pointer;font-size:12px">삭제</button>
+        </div>
+      `).join('');
+
+      mineContainer.querySelectorAll('[data-app-delete-rule]').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          const idx = parseInt(e.target.dataset.appDeleteRule, 10);
+          rules.splice(idx, 1);
+          window.AndroidApp.saveAlertRules(JSON.stringify(rules));
+          window.AndroidApp.showToast("알림이 삭제되었습니다.");
+          renderAppRules();
+        });
+      });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  const ntfyForm = document.getElementById('ntfyForm');
+  if (ntfyForm) {
+    ntfyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      const d = document.getElementById('ntfyDate');
+      const dateVal = d.value;
+      if (!dateVal) {
+        alert('날짜를 선택해 주세요.');
+        return;
+      }
+      const ports = ntfyExpandedPorts();
+      const chosen = ntfyValues('ntfyBoat');
+      const portVal = ports.includes('*') ? '전체 항구' : ports.join(', ');
+      const boatVal = chosen.includes('*') ? '전체 배' : chosen.map(id => {
+        const b = BOATS.find(x => x.bid === Number(id));
+        return b ? b.name : id;
+      }).join(', ');
+      const minSeatsVal = parseInt(document.getElementById('ntfyMinSeats').value, 10) || 1;
+
+      try {
+        const raw = window.AndroidApp.getAlertRules();
+        const rules = JSON.parse(raw || '[]');
+        rules.push({
+          id: Date.now().toString(),
+          date: dateVal,
+          port: portVal,
+          boat_name: boatVal,
+          bid: chosen.length === 1 && chosen[0] !== '*' ? Number(chosen[0]) : null,
+          min_seats: minSeatsVal,
+          enabled: true
+        });
+        window.AndroidApp.saveAlertRules(JSON.stringify(rules));
+        window.AndroidApp.showToast("🔔 폰 알림 등록 완료 (" + dateVal + " " + portVal + ")");
+        renderAppRules();
+      } catch (err) {
+        console.error(err);
+      }
+    }, true);
+  }
+
+  document.getElementById('appScrapeInterval')?.addEventListener('change', (e) => {
+    try {
+      const raw = window.AndroidApp.getAppSettings();
+      const settings = JSON.parse(raw);
+      settings.interval_minutes = parseInt(e.target.value, 10);
+      window.AndroidApp.saveAppSettings(JSON.stringify(settings));
+      window.AndroidApp.showToast("수집 간격: " + e.target.value + "분");
+      syncAppSettings();
+    } catch (err) { console.error(err); }
+  });
+
+  document.getElementById('appOperatingHours')?.addEventListener('change', (e) => {
+    try {
+      const raw = window.AndroidApp.getAppSettings();
+      const settings = JSON.parse(raw);
+      settings.operating_hours_enabled = e.target.checked;
+      window.AndroidApp.saveAppSettings(JSON.stringify(settings));
+      window.AndroidApp.showToast(e.target.checked ? "06:00~23:50 운영시간 제한 적용" : "24시간 수집 모드");
+      syncAppSettings();
+    } catch (err) { console.error(err); }
+  });
+
+  document.getElementById('appTogglePause')?.addEventListener('click', () => {
+    try {
+      const raw = window.AndroidApp.getAppSettings();
+      const settings = JSON.parse(raw);
+      settings.paused = !settings.paused;
+      window.AndroidApp.saveAppSettings(JSON.stringify(settings));
+      window.AndroidApp.showToast(settings.paused ? "수집 일시정지됨" : "수집 재개됨");
+      syncAppSettings();
+    } catch (err) { console.error(err); }
+  });
+
+  document.getElementById('appTriggerScrape')?.addEventListener('click', () => {
+    try {
+      window.AndroidApp.triggerSingleScrape();
+      setTimeout(syncAppSettings, 2000);
+    } catch (err) { console.error(err); }
+  });
+
+  syncAppSettings();
+  renderAppRules();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  setTimeout(initAndroidAppMode, 300);
+});
+
   const SCRAPER="http://127.0.0.1:8788",isLocalHost=["localhost","127.0.0.1"].includes(location.hostname);
   const fmtTime=s=>s?s.slice(11,19):"-";
   const fmtWait=sec=>sec==null?"-":sec>=60?`${Math.floor(sec/60)}분 ${sec%60}초`:`${sec}초`;
